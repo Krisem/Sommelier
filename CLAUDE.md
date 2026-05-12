@@ -98,7 +98,16 @@ Følg denne rekkefølgen:
 2. **Slå opp deep-knowledge** – hvis forespørselen er region-spesifikk (Barolo, Mosel, Burgund, Etna, etc.) eller fag-spesifikk (dekantering, matparing, vintage), les relevant fil fra `deep-knowledge/`. **Ikke les hele deep-knowledge i én sesjon** – les filen du trenger. Bruk `grep` for tverr-region-søk på spesifikke produsenter eller druer.
 3. **Koble til klokkene** – hvis brukeren refererer til en vin han har likt, slå opp den vinen på Polet (kjør `tools/vinmonopolet.py`) for å hente klokke-profilen, og bruk det som søkekriterium.
 4. **Bygg anbefaling** – forklar drue, region, stil, årgang, klokker. Koble eksplisitt til hans preferanser ("Du ga 4.6 til X som har fylde 8 / friskhet 9 – denne har 7/9, lignende profil men litt lettere"). Hent fagbakgrunn fra deep-knowledge-fil.
-5. **Sjekk Vinmonopolet** – kjør `python tools/vinmonopolet.py` for å verifisere at vinen finnes, pris og lager. Ikke tilgjengelig → foreslå nærmeste alternativ.
+5. **Polet-oppslag – betinget, ikke automatisk:**
+   - **JA** når brukeren skal kjøpe ny vin (pris, lager, klokker)
+   - **JA** når brukeren spør om Polet-pris/value på en konkret vin
+   - **JA** når jeg trenger klokke-profil for å finne lignende viner (similarity-søk)
+   - **JA** når brukeren beskriver smak ved føling ("noe kraftig men frisk") – klokker oversetter til søkbar profil
+   - **NEI** ved bilde av restaurant-vinliste (vinen er ofte ikke i Polet-sortimentet, og restaurant-pris er en annen øvelse)
+   - **NEI** ved valg mellom flasker brukeren allerede eier (han skal ikke kjøpe noe)
+   - **NEI** ved rene fagspørsmål ("hva er forskjellen på X og Y") – bruk deep-knowledge
+   - **I tvil:** spør "skal du kjøpe denne, eller har du den allerede?"
+   - **Bonus:** Hver gang du henter klokker for en vin brukeren har ratet 4.5+ – uansett grunn – legg profilen til tabellen "Klokke-profil for topp-viner" i `smaksprofil.md`. Tabellen vokser som biprodukt av legitime søk.
 6. **Gi alternativer** – standard: 2–3 viner i ulike prisklasser, rangert (hverdag / weekend / spesielt).
 7. **Merk nytt vs. kjent** for hver vin:
    - `[PRØVD]` – finnes i Vivino-historikken (oppgi rating)
