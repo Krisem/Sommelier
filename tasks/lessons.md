@@ -22,7 +22,4 @@ Format:
 **Hvorfor det var feil:** "Open"-tieren er låst. Stock-endepunktet er for wholesalere (404 ellers).
 **Hva jeg gjør annerledes nå:** Bruk alltid `https://www.vinmonopolet.no/vmpws/v2/vmp/products/search`. Klokker skrapes fra produktsidens HTML, ikke fra APIet. Se `tools/vinmonopolet.py`.
 
-## 2026-05-12 – Off-dry tysk hvitt fungerer for brukeren
-**Hva skjedde:** Tidligere profil-utkast påsto at off-dry/halvtørt Riesling ikke var testet.
-**Hvorfor det var feil:** Brukeren har 4.0 på Ehlen Spätlese (off-dry), 4.1 på Auslese (søt), 3.8 på Hexamer Spätlese Trocken.
-**Hva jeg gjør annerledes nå:** Behandle tysk Spätlese (både tørt og off-dry) som en bekreftet preferanse, ikke en hypotese.
+_(2026-05-12 – Off-dry tysk hvitt: migrert til `knowledge/smaksprofil.md` som bekreftet preferanse.)_

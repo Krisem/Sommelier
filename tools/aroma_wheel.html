@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<title>Sommelier – Smaksprofilhjul</title>
+<style>
+  :root {
+    --bg: #fbf7f1;
+    --ink: #2a1d12;
+    --muted: #7a6a58;
+    --liked: #8a1c2b;
+    --disliked: #4b6b8a;
+    --neutral: #d8cdb9;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 24px 32px 0;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 12px;
+  }
+  .legend {
+    display: flex;
+    gap: 18px;
+    margin: 6px 0 18px;
+    font-size: 13px;
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 0 32px 40px;
+  }
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  .label {
+    font-size: 11px;
+    fill: var(--ink);
+    pointer-events: none;
+  }
+  .label-outer {
+    font-size: 10px;
+    fill: var(--ink);
+    pointer-events: none;
+  }
+  path {
+    stroke: var(--bg);
+    stroke-width: 1.5;
+    cursor: default;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 0 32px 32px;
+  }
+  code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Smaksprofilhjul</h1>
+  <p class="sub">Aromakategorier basert på Noble-hjulet (Davis 1984). Sektorene er fargelagt etter brukerens preferanser fra <code>knowledge/smaksprofil.md</code>. Rediger <code>data.preferences</code> i denne filen for å oppdatere.</p>
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--liked)"></span> liker</span>
+    <span><span class="swatch" style="background:var(--neutral)"></span> nøytral / ukjent</span>
+    <span><span class="swatch" style="background:var(--disliked)"></span> bommer</span>
+  </div>
+</header>
+<main>
+  <svg id="wheel" viewBox="-380 -380 760 760" width="760" height="760"></svg>
+</main>
+<footer>
+  Forenklet Davis/Noble aroma wheel — pedagogisk verktøy, ikke uttømmende.
+</footer>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+// ─── Noble wheel data (forenklet 2-nivå) ──────────────────────────────
+const wheel = {
+  name: "Vin",
+  children: [
+    { name: "Fruktig", children: [
+      { name: "Sitrus" }, { name: "Eple / pære" }, { name: "Steinfrukt" },
+      { name: "Tropisk" }, { name: "Røde bær" }, { name: "Mørke bær" },
+      { name: "Tørket frukt" }
+    ]},
+    { name: "Blomstrer", children: [
+      { name: "Rose / fiol" }, { name: "Hvite blomster" }, { name: "Honning" }
+    ]},
+    { name: "Krydder", children: [
+      { name: "Pepper" }, { name: "Lakris" }, { name: "Nellik / kardemomme" },
+      { name: "Vanilje" }
+    ]},
+    { name: "Urteaktig", children: [
+      { name: "Mynte / eukalyptus" }, { name: "Gress / paprika" }, { name: "Garrigue" }
+    ]},
+    { name: "Eik / fat", children: [
+      { name: "Vanilje (fat)" }, { name: "Røyk / toast" }, { name: "Kokos" },
+      { name: "Kaffe / kakao" }
+    ]},
+    { name: "Mineralsk", children: [
+      { name: "Stein / kritt" }, { name: "Petroleum" }, { name: "Saltlake / jod" }
+    ]},
+    { name: "Jord / tertiær", children: [
+      { name: "Sopp" }, { name: "Lær" }, { name: "Tobakk" },
+      { name: "Skogbunn" }
+    ]},
+    { name: "Modning / lagring", children: [
+      { name: "Tørket frukt (Amarone)" }, { name: "Karamell" },
+      { name: "Brioche / kjeks" }, { name: "Nøtter" }
+    ]},
+    { name: "Reduktiv / off", children: [
+      { name: "Svovel" }, { name: "Gummi" }, { name: "Eddik" }, { name: "Kork" }
+    ]}
+  ]
+};
+
+// ─── Brukerens preferanser ──────────────────────────────────────────
+// Match-strenger sammenlignes med node-navn (case-insensitive substring).
+// Oppdater fra knowledge/smaksprofil.md "Aromaer/smaker du sannsynligvis liker".
+const preferences = {
+  liked: [
+    "Mørke bær", "Tørket frukt", "Lakris", "Pepper",
+    "Stein / kritt", "Petroleum", "Sitrus", "Eple",
+    "Brioche / kjeks", "Vanilje", "Røde bær", "Honning",
+    "Saltlake", "Lær", "Tobakk", "Karamell"
+  ],
+  disliked: [
+    "Svovel", "Eddik", "Kork", "Gummi", "Gress / paprika"
+  ]
+};
+
+function classify(nodeName) {
+  const n = nodeName.toLowerCase();
+  if (preferences.liked.some(k => n.includes(k.toLowerCase()))) return "liked";
+  if (preferences.disliked.some(k => n.includes(k.toLowerCase()))) return "disliked";
+  return "neutral";
+}
+
+const radius = 360;
+const root = d3.hierarchy(wheel)
+  .sum(d => d.children ? 0 : 1)
+  .sort((a, b) => b.value - a.value);
+
+const partition = d3.partition().size([2 * Math.PI, radius]);
+partition(root);
+
+const arc = d3.arc()
+  .startAngle(d => d.x0)
+  .endAngle(d => d.x1)
+  .innerRadius(d => d.y0)
+  .outerRadius(d => d.y1)
+  .padAngle(0.005)
+  .padRadius(radius / 4);
+
+const color = {
+  liked: getComputedStyle(document.documentElement).getPropertyValue("--liked").trim(),
+  disliked: getComputedStyle(document.documentElement).getPropertyValue("--disliked").trim(),
+  neutral: getComputedStyle(document.documentElement).getPropertyValue("--neutral").trim()
+};
+
+function fillFor(d) {
+  if (d.depth === 0) return "transparent";
+  if (d.depth === 1) {
+    // top-level: rolig nøytral, men varier litt i toner basert på barnas preferanse-tetthet
+    const leaves = d.descendants().filter(n => !n.children);
+    const likedCount = leaves.filter(n => classify(n.data.name) === "liked").length;
+    const dislikedCount = leaves.filter(n => classify(n.data.name) === "disliked").length;
+    if (likedCount > dislikedCount && likedCount >= 2) return d3.color(color.liked).copy({ opacity: 0.25 }) + "";
+    if (dislikedCount > likedCount) return d3.color(color.disliked).copy({ opacity: 0.25 }) + "";
+    return color.neutral;
+  }
+  // leaf
+  const kind = classify(d.data.name);
+  return color[kind];
+}
+
+const svg = d3.select("#wheel");
+const g = svg.append("g");
+
+g.selectAll("path")
+  .data(root.descendants().filter(d => d.depth > 0))
+  .join("path")
+  .attr("d", arc)
+  .attr("fill", fillFor)
+  .append("title")
+  .text(d => `${d.ancestors().map(a => a.data.name).reverse().slice(1).join(" › ")}`);
+
+// ─── Labels ──────────────────────────────────────────────────────────
+function labelTransform(d) {
+  const angle = (d.x0 + d.x1) / 2;
+  const r = (d.y0 + d.y1) / 2;
+  const deg = (angle * 180) / Math.PI - 90;
+  const flip = deg > 90 || deg < -90;
+  return `rotate(${deg}) translate(${r},0) rotate(${flip ? 180 : 0})`;
+}
+
+g.selectAll("text.label")
+  .data(root.descendants().filter(d => d.depth > 0 && (d.x1 - d.x0) > 0.05))
+  .join("text")
+  .attr("class", d => d.depth === 1 ? "label" : "label-outer")
+  .attr("transform", labelTransform)
+  .attr("text-anchor", "middle")
+  .attr("dy", "0.32em")
+  .text(d => d.data.name);
+</script>
+</body>
+</html>

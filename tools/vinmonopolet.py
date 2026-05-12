@@ -5,19 +5,56 @@ Bruk dette scriptet i prosjektet for å:
 - Søke etter viner
 - Hente klokker, lukt, smak, drueblanding fra produktsider
 - Sammenligne mot brukerens preferanser
+- Finne nærmeste vin på klokke-profil (find_similar_by_clocks)
 
-Krever ingen API-nøkkel. Vær konservativ med antall kall (~30/sesjon).
+Krever ingen API-nøkkel. Diskcache i ~/.cache/sommelier/ unngår rate-limit.
 """
 
-import requests
+import hashlib
+import json
+import math
 import re
-from typing import Optional
+import time
+from pathlib import Path
+from typing import Iterable, Optional
+
+import requests
 
 BASE = "https://www.vinmonopolet.no"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
+CACHE_DIR = Path.home() / ".cache" / "sommelier"
+SEARCH_TTL = 60 * 60 * 24            # 24 t for søk
+DETAILS_TTL = 60 * 60 * 24 * 7       # 7 dager for produktdetaljer (mer stabilt)
 
-def search(query: str, page_size: int = 10) -> list[dict]:
+
+def _cache_path(namespace: str, key: str) -> Path:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    h = hashlib.sha256(key.encode("utf-8")).hexdigest()[:24]
+    return CACHE_DIR / f"{namespace}_{h}.json"
+
+
+def _cache_get(namespace: str, key: str, ttl: int):
+    p = _cache_path(namespace, key)
+    if not p.exists():
+        return None
+    if (time.time() - p.stat().st_mtime) > ttl:
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _cache_set(namespace: str, key: str, value) -> None:
+    p = _cache_path(namespace, key)
+    try:
+        p.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def search(query: str, page_size: int = 10, use_cache: bool = True) -> list[dict]:
     """
     Søk etter produkter på Vinmonopolet.
 
@@ -27,7 +64,16 @@ def search(query: str, page_size: int = 10) -> list[dict]:
     - main_category, main_country, district, sub_District
     - product_selection, productAvailability
     - url (relativ sti til produktsiden)
+
+    Resultat caches i ~/.cache/sommelier/ i 24 timer. Sett use_cache=False
+    for å force ferskt kall.
     """
+    cache_key = f"q={query}|n={page_size}"
+    if use_cache:
+        cached = _cache_get("search", cache_key, SEARCH_TTL)
+        if cached is not None:
+            return cached
+
     url = f"{BASE}/vmpws/v2/vmp/products/search"
     r = requests.get(
         url,
@@ -36,7 +82,9 @@ def search(query: str, page_size: int = 10) -> list[dict]:
         timeout=10,
     )
     r.raise_for_status()
-    return r.json().get("products", [])
+    products = r.json().get("products", [])
+    _cache_set("search", cache_key, products)
+    return products
 
 
 def filter_results(
@@ -62,14 +110,21 @@ def filter_results(
     return out
 
 
-def get_product_details(product_url: str) -> dict:
+def get_product_details(product_url: str, use_cache: bool = True) -> dict:
     """
     Hent klokker, lukt, smak, drueblanding fra produktsiden.
 
     product_url skal være relativ sti (fra search-resultat).
+    Caches i 7 dager. Sett use_cache=False for å force ferskt kall.
     """
     if not product_url.startswith("http"):
         product_url = BASE + product_url
+
+    if use_cache:
+        cached = _cache_get("details", product_url, DETAILS_TTL)
+        if cached is not None:
+            return cached
+
     r = requests.get(product_url, headers=HEADERS, timeout=10)
     r.raise_for_status()
     r.encoding = "utf-8"
@@ -129,7 +184,88 @@ def get_product_details(product_url: str) -> dict:
     if m:
         result["syre"] = m.group(1).strip()
 
+    _cache_set("details", product_url, result)
     return result
+
+
+# ─── KLOKKE-PROFIL SIMILARITY ────────────────────────────────────────
+
+CLOCK_DIMS = ("Fylde", "Friskhet", "Garvestoffer")
+
+
+def clock_distance(a: dict, b: dict, dims: Iterable[str] = CLOCK_DIMS) -> float:
+    """
+    Euklidsk avstand mellom to klokke-profiler.
+
+    a og b er dicts som returnert fra get_product_details()["klokker"],
+    e.g. {"Fylde": 8, "Friskhet": 9, "Garvestoffer": 7}.
+
+    Manglende dimensjon i én av profilene = ignoreres (asymmetri tas hensyn til).
+    """
+    diffs = []
+    for d in dims:
+        if d in a and d in b:
+            diffs.append((a[d] - b[d]) ** 2)
+    if not diffs:
+        return float("inf")
+    return math.sqrt(sum(diffs) / len(diffs))
+
+
+def find_similar_by_clocks(
+    target_clocks: dict,
+    queries: Iterable[str],
+    *,
+    max_price: Optional[float] = None,
+    min_price: Optional[float] = None,
+    category: Optional[str] = None,
+    country: Optional[str] = None,
+    page_size: int = 30,
+    top_k: int = 10,
+) -> list[dict]:
+    """
+    Finn viner på Polet med nærmest klokke-profil til target_clocks.
+
+    target_clocks: {"Fylde": 8, "Friskhet": 9, "Garvestoffer": 7}
+    queries: liste med søke-strenger (f.eks. ["Barbera d'Alba", "Dolcetto"])
+    Filtre: pris/kategori/land brukes på søketreff før detaljer hentes.
+
+    Returnerer top_k dicts med felter:
+      - product (rådata fra search)
+      - details (klokker, stil, etc.)
+      - distance (euklidsk)
+    Sortert stigende på distance.
+    """
+    seen: set[str] = set()
+    candidates: list[dict] = []
+
+    for q in queries:
+        results = search(q, page_size=page_size)
+        filtered = filter_results(
+            results,
+            max_price=max_price,
+            min_price=min_price,
+            category=category,
+            country=country,
+        )
+        for p in filtered:
+            code = p.get("code")
+            if not code or code in seen:
+                continue
+            seen.add(code)
+            try:
+                details = get_product_details(p["url"])
+            except requests.RequestException:
+                continue
+            clocks = details.get("klokker") or {}
+            if not clocks:
+                continue
+            d = clock_distance(target_clocks, clocks)
+            if math.isinf(d):
+                continue
+            candidates.append({"product": p, "details": details, "distance": d})
+
+    candidates.sort(key=lambda c: c["distance"])
+    return candidates[:top_k]
 
 
 def format_for_recommendation(product: dict, details: Optional[dict] = None) -> str:

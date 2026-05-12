@@ -45,6 +45,6 @@ Last ned ny eksport fra Vivino og overskriv filene i `data/vivino/` (kolonnenavn
 `tools/vinmonopolet.py` snakker med Polets webshop-API (`vmpws/v2`). Hvis Polet endrer HTML-struktur, må regex-mønstrene i `get_product_details()` justeres. Test med:
 
 ```bash
-cd "/Users/kristoffer/Downloads/Sommelier"
+cd "/Users/kristoffer/Claude Code/GitHub/Sommelier"
 python3 tools/vinmonopolet.py
 ```

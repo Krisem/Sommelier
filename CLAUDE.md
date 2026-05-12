@@ -1,6 +1,19 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Digital Sommelier – Claude Code-prosjekt
 
 > Lastes automatisk i hver samtale i denne mappa. Hold kort. Detaljer ligger i `knowledge/` og `deep-knowledge/`.
+
+## Commands
+
+- **Auto-derivér smaksprofil-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
+- **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
+- **Klokke-profil similarity:** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
+- **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
+- **Cache:** Polet-kall caches automatisk i `~/.cache/sommelier/` (search 24t, details 7d). Slett mappa for å resette.
+- Ingen build/lint/test-suite — dette er et kunnskapsbase + helper-repo, ikke en app
 
 ## Rolle
 
@@ -37,7 +50,7 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse 
 
 ### On-demand (`deep-knowledge/` – WSET L3)
 
-Se [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) for full oversikt. Hovedfiler:
+**Kanonisk oppslag:** [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) — les den først ved region-/fag-oppslag (tabellen under kan drifte). Hovedfiler:
 
 | Område | Fil |
 |---|---|
@@ -68,6 +81,13 @@ Se [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) for full oversikt. Hovedfi
 | Fil | Innhold |
 |---|---|
 | `tools/vinmonopolet.py` | vmpws-API helpers (`search`, `get_product_details`) |
+
+### Oppgaver og læring (`tasks/`)
+
+| Fil | Innhold | Når oppdatere |
+|---|---|---|
+| `tasks/todo.md` | Aktive oppgaver / pågående tråder | Når brukeren ber om en ny ikke-triviell oppgave |
+| `tasks/lessons.md` | Læring fra korreksjoner | Umiddelbart etter hver brukerkorreksjon |
 
 ## Workflow for hver anbefaling
 
@@ -133,7 +153,7 @@ Forbindelsen mellom region-fakta og bruker-preferanse skjer på inferens-tid: Cl
 vmpws-APIet er åpent og krever ingen nøkkel. Bruk Bash:
 
 ```bash
-cd "/Users/kristoffer/Downloads/Sommelier"
+cd "/Users/kristoffer/Claude Code/GitHub/Sommelier"
 python3 -c "
 from tools.vinmonopolet import search, filter_results, get_product_details, format_for_recommendation
 results = search('Barbera d Alba', page_size=20)

@@ -307,6 +307,34 @@ To ulike strategier for søtt:
 - **Vekt-match**: Lett vin med lett mat, fyldig vin med fyldig mat. Pinot Grigio + osso buco = katastrofe. Barolo + sjøtunge likeså.
 - **Syre i mat trenger syre i vin**: Vinaigrette, tomatsaus, sitrus, eddik. Sangiovese (høy syre) passer til tomatsaus, ikke Merlot.
 
+### Tilberedningsmetode – en undervurdert dimensjon
+
+Forskning på Maillard- og pyrolyse-kjemi (Spence et al., 2023) viser at *hvordan* en rett er tilberedt skifter parring-kjemien mer enn proteinet selv. Roasting genererer ca. 3,7× mer furaner og 5,2× mer aldehyder enn damping av samme råvare. Disse forbindelsene interagerer direkte med vinens tannin, fat-noter og syre.
+
+Bruk denne tabellen i tillegg til protein-/syre-tankegangen:
+
+| Metode | Kjemi | Tannin | Syre i vin | Fylde i vin | Eik | Klassiske vinvalg |
+|---|---|---|---|---|---|---|
+| **Rå** (tartar, carpaccio, sashimi, ceviche) | Ingen Maillard. Rene, primære smaker. Jod (fisk) reagerer med tannin → metallisk. | Lavt | Høyt | Lavt-medium | Lite/intet | Champagne BdB, Chablis, tørr Riesling, frisk rosé |
+| **Dampet / posjert** (fisk, dim sum, grønnsaker) | Få nye forbindelser. Naturlige aromer dominerer. | Lavt | Høyt | Lavt-medium | Lite | Albariño, Vermentino, Grüner Veltliner, tørr Riesling |
+| **Sautert / wokket** (kort i panne, smør/olje) | Lett Maillard på overflate. Smør gir laktoner. | Lavt-medium | Medium-høyt | Medium | Moderat | Hvit Burgund (lavere nivå), Soave, fyldig Chenin |
+| **Stekt i panne / brunet** (biff medium, kylling sprøstekt) | Tydelig Maillard-skorpe: pyraziner, furaner, aldehyder. | Medium | Medium | Medium-høyt | Moderat | Sangiovese, Barbera, hvit Burgund Premier Cru, lett Bordeaux |
+| **Grillet / kullbrent** (BBQ, asado, yakitori) | Pyrolyse: fenoler (røyk, guaiakol), polysykliske aromater. Bitter på overflaten. | Høyt | Medium | Høyt | Tåler tydelig eik | Malbec, Zinfandel, Shiraz, modent Bordeaux, Aglianico |
+| **Stekt i ovn / langtidsstekt** (helstekt lammelår, helstekt fugl, søndagssteik) | Dyp Maillard, fett-rendering, konsentrasjon. | Medium-høyt | Medium | Høyt | Moderat-tydelig | Rioja Reserva, Châteauneuf, modent Bordeaux, Brunello |
+| **Braisert / langtidskokt** (osso buco, coq au vin, gryteretter) | Kollagen → gelatin = silkeaktig fett. Lange aroma-utviklinger, umami-tett. | Medium-høyt | Medium-høyt | Høyt | Moderat | Barolo modent, Brunello, eldre Burgund, Cornas |
+| **Røkt** (varmrøkt laks, røkt brisket, røkt aubergine) | Fenoler (guaiakol, syringol) er aroma-dominante. | Medium | Medium-høyt | Medium-høyt | Røyket eik kan speile | Off-dry Riesling Spätlese (mot røkt laks), Zinfandel/Shiraz (mot brisket), torrefisert Mosel |
+| **Friert / dypstekt** | Acrylamid, fett-overskudd. Krever syre eller bobler å kutte gjennom. | Lavt | Svært høyt | Lavt-medium | Lite | Champagne, Cava, Grüner, tørr Sherry (Fino/Manzanilla) |
+| **Karamellisert (sukker)** (créme brûlée, glasur, karamellisert løk-saus) | Karbonyl-rike forbindelser, søt-bitter. | Variabel | Trenger å matche søtt | Variabel | Variabel | Sauternes, Tokaji Aszú, Vin Santo, PX (mot dessert); modent Bordeaux med karamellisert side |
+
+**Konsekvens for anbefalinger:** Spør om tilberedningsmetode når den ikke er åpenbar. "Kylling" i seg selv sier lite — pannestekt kyllinglår mot Sangiovese fungerer helt annerledes enn dampet kyllingbryst mot Albariño.
+
+**Spesialtilfeller:**
+
+- **Røyket + søt vin**: Off-dry Riesling Spätlese mot røkt laks er en av de robusteste parringene som finnes. Restsødmen og syren bærer fenolene.
+- **Grillet rødt kjøtt + ungt tannisk rødt**: Pyrolyse-fenoler "matcher" tanninens adstringens (parallellisme), og fett buffrer begge. Klassikeren biff + ung Bordeaux.
+- **Braisert + tertiær rødvin**: Lang koketid utvikler umami; speil det med modnet rødt (umami-mot-umami).
+- **Friert + bobler**: CO₂-bobler og syre kutter fettet mekanisk og kjemisk. Champagne + tempura er ikke tilfeldig.
+
 ## 7.7 Klassiske parringer
 
 | Mat | Klassisk parring | Hvorfor |

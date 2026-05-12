@@ -35,10 +35,32 @@
 
 Vanlige forespørsler og passende deep-dive:
 
-- "Hva drikker jeg til X?" → relevant region-fil (basert på vinforslag) + `servering-og-lagring.md` for parring-kjemi
+- "Hva drikker jeg til X?" → relevant region-fil (basert på vinforslag) + `servering-og-lagring.md` for parring-kjemi + tilberedningsmetode-tabellen
 - "Foreslå en rødvin til Y kr" → region-fil + `norsk-marked.md` for value-strategi
 - "Er denne verdt prisen?" → region-fil for kontekst + `norsk-marked.md` for norsk pris-realisme
 - "Hva er forskjellen mellom X og Y?" → relevant region-fil(er) for klima, jord, vinifisering, lover
 - "Foreslå en ny region jeg vil like" → `pinot-noir.md` / `aromatisk-hvit.md` / `naturvin-orange.md` for utforsknings-bro
+- "Hvor lenge bør jeg lagre denne?" → `servering-og-lagring.md` § 7.5 + region-fil for vintage-vurdering
+- "Bør jeg dekantere?" → `servering-og-lagring.md` § 7.3 (tabell per stil)
+- "Hvilken årgang er best?" → `norsk-marked.md` (vintage-tabell) + region-fil for klimakontekst
+- "Hva med tilberedningsmetoden?" → `servering-og-lagring.md` § 7.6, tilberedningsmetode-tabellen (rå/dampet/stekt/grillet/braisert/røkt/friert)
+
+**Trigger-ord → fil:**
+
+| Triggerord i forespørsel | Les først |
+|---|---|
+| Barolo, Barbaresco, Nebbiolo, Amarone, Ripasso, Chianti, Brunello, Etna | `italia.md` |
+| Riesling, Mosel, Rheingau, Spätburgunder, Spätlese, Auslese, GG | `tyskland.md` |
+| Champagne, Cava, Crémant, BdB, BdN, Franciacorta | `champagne-musserende.md` |
+| Burgund, Bordeaux, Rhône, Loire, Sancerre, Alsace, Jura, Madiran | `frankrike.md` |
+| Rioja, Albariño, Mencía, Bierzo, Priorat, Sherry, Fino | `spania.md` |
+| Douro, Port, Madeira, Vinho Verde, Baga, Dão | `portugal.md` |
+| Naturvin, orange, qvevri, hudkontakt, lavinngrep | `naturvin-orange.md` |
+| Gewürztraminer, Viognier, Torrontés, aromatisk hvit | `aromatisk-hvit.md` |
+| California, Oregon, NZ, Australia, Sør-Afrika, Chile, Argentina, Uruguay | `new-world.md` |
+| Pinot Noir (cross-regional) | `pinot-noir.md` |
+| Hellas, Tokaj, Østerrike, Slovenia, Georgia, Lebanon, Sveits | `ovrige-regioner.md` |
+| Dekanter, temperatur, glass, lagring, parring-kjemi, tilberedning | `servering-og-lagring.md` |
+| Pris, varenummer, lansering, importør, vintage, drikkevindu, Polet | `norsk-marked.md` |
 
 **Pro-tips:** Bruk `grep -r "drue-navn" deep-knowledge/` for kryss-region-søk på en spesifikk drue eller produsent.
