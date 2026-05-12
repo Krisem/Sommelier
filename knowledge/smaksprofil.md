@@ -205,6 +205,7 @@ Når Claude finner viner med kjent klokke-profil, søk etter lignende.
 | Vin | Rating | Fylde | Friskhet | Tannin | Sødme | Stil |
 |---|---|---|---|---|---|---|
 | Fenocchio Barbera d'Alba Sup. 2023 | 4.6 | 8/12 | 9/12 | 7/12 | <3 g/l | Frisk og fruktig |
+| Thymiopoulos Rosé de Xinomavro 2024 | — (foreslått) | 7/12 | 8/12 | — | <3 g/l | Strukturert rosé, Nebbiolo-aktig |
 
 *(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
 
