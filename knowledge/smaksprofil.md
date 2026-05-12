@@ -1,0 +1,204 @@
+# Min smaksprofil
+
+> **LEVENDE DOKUMENT.** Dette er den autoritative kilden til hva Kristoffer liker, ikke liker, og hva som er bevist vs hypotese.
+>
+> **Sist oppdatert:** 2026-05-12
+> **Datagrunnlag:** Vivino-eksport (172 viner, 104 med rating; 12 års historikk).
+>
+> ## Oppdaterings-trigger (Claude må følge disse)
+>
+> Filen skal oppdateres umiddelbart når:
+> 1. **Brukeren bekrefter ny preferanse** – legg til i "Druer du vet du liker" eller "Regioner du dras mot". Hvis blindspot bekreftet, oppdater "Blindspots".
+> 2. **Brukeren rapporterer dårlig opplevelse** – spesifikk vin → "No-go-liste"; mønster → "Druer/regioner som har bommet".
+> 3. **Klokke-profil hentet for en topp-rated vin** – legg til i tabellen under "Klokke-profil for topp-viner".
+> 4. **Ny Vivino-eksport** – re-analyser mønstre, oppdater snitt og sterke trender. Vekt nyere ratings tyngre.
+>
+> ## Vekting-prinsipper
+> - Nyere ratings (siste 2 år) vekter dobbelt så mye som eldre
+> - Én rating er ikke et mønster – krever 2-3 datapunkter for å oppgradere til "bekreftet"
+> - Bekreftede mønstre kan bli "antakelser" igjen hvis ny data motbeviser dem
+
+## Datagrunnlag (kort)
+
+- Aktivt Vivino-bruk siden ~2014, med ratings spredt over 12 år
+- 104 ratede viner, snitt 3.78
+- Tyngdepunkt: rødvin (58), musserende (18), hvitvin (17), rosé (9)
+- **Smaken har modnet:** snitt før 2018 = 3.67, etter 2024 = 3.89 → enten har du blitt bedre på å velge, eller du har blitt mer raus med høyere ratings. Sannsynligvis litt av begge.
+
+## Generelt
+
+- **Erfaringsnivå:** Mellomnivå – over et tiår med jevn dokumentasjon, men ingen formell utdanning
+- **Tilnærming til pris:** Value-fokusert. Ikke fast pristak – men forventer at en vin leverer for det den koster. Eksempel: 200 kr som overrasker positivt er bedre enn 600 kr som bare er "grei".
+
+  Konsekvens for Claude:
+  - Ikke spør om budsjett hver gang – foreslå value-vinner i ulike prisklasser
+  - Når jeg ber om "en hverdagsvin" → 150–300 kr-spennet
+  - Når jeg ber om "noe godt til middag" → 250–500 kr
+  - Når jeg ber om "noe spesielt" → 500+, men forklar hvorfor det er verdt det
+  - Flag dårlig value uavhengig av prisklasse
+
+## Stilpreferanser
+
+### Rødvin (klart hovedkategorien – 58 viner, snitt 3.76)
+
+**Sterke mønstre i dataene:**
+
+- **Italia er hjemmebanen din** – 37 av 104 ratede viner er italienske, og topp-rødvinen er Barbera d'Alba (4.6).
+- **Du elsker viner med struktur og modenhet:**
+  - Ripasso/Amarone gjentas (4.5 Valpolicella Ripasso, 4.2 Amarone × 2 nylig)
+  - Barbera, Nebbiolo, Sangiovese-baserte stiler scorer høyt
+- **Du trives med moderat til høy syre:** Barbera, Nebbiolo og Sangiovese-druer er alle syrlige – du har 4.0+ på flere
+- **Burgund er ujevnt for deg:**
+  - 4.5 Vincent Girardin Bourgogne 2010 – topp
+  - 1.5 Labouré-Roi Bourgogne 2013 – din laveste rating av rødvin
+  - 3.8 Vincent Girardin Bourgogne Pinot Noir 2023 – mer ordinært
+  - **Antakelse:** Du trenger seriøs Burgund for å bli imponert. Generisk billig Bourgogne treffer ikke. Bedre å bruke 400+ på Burgund enn 200, eller hoppe over og velge annen Pinot.
+
+**Antatte preferanser (basert på mønstre):**
+- Fruktig vs. jordpreget: **midt på til jordpreget** (Ripasso/Amarone/Nebbiolo-spor)
+- Lett vs. fyldig: **medium til fyldig** (Amarone-kjærlighet, ingen lette Beaujolais-favoritter)
+- Tannin: **medium til mye** – tåler struktur
+- Eik: **moderat til tydelig** – Amarone og Ripasso har det
+- Syre: **medium til høy** – Barbera/Sangiovese-vinklingen
+- Restsødme: **ikke avklart – test og lær.** Du har scoret høyt på både Amarone (litt glycerolrik fylde) og knusktørr Barbera. Antakelse: tørt er trygt, men du har ikke aversjon mot dybde og fylde.
+
+### Hvitvin (17 viner, snitt 3.85 – overraskende høyt)
+
+**Sterke mønstre:**
+- **Tysk Riesling er en favoritt** – 4.5 Fritz Haag Brauneberger GG, men også svakheter (2.7 Schloss Vollrads)
+- **Off-dry/halvtørt fungerer faktisk:** 4.0 Stephan Ehlen Spätlese (off-dry), 4.1 Auslese (søt). Du tåler restsødme i tysk hvitvin når den er balansert av syre. Ikke avskriv off-dry-stilene.
+- **Jura-Chardonnay treffer deg** – 4.4 og 4.1 på Rolet, to forskjellige årganger
+- **Cloudy Bay 4.5** – men dette er en 2015-rating. Smaken har modnet siden da, så ikke vekt denne tungt.
+- **Sør-Rhône hvit fungerer ikke** – 3.0 og 3.2 på Lirac Blanc fra Ségriés, to årganger på rad
+
+**Antatte preferanser:**
+- Stil: **mineralsk og strukturert** (GG-Riesling, Jura-Chardonnay), men også **god til off-dry tysk** (Spätlese)
+- Eik: **moderat – ikke smør-bomber** (Jura-vinifisering, ikke California-style)
+- Syre: **høy** (Riesling-preferansen er tydelig)
+- Aromatisk vs. diskret: **trolig diskret – mineralsk profil dominerer (GG-Riesling, Jura). Den ene aromatiske favoritten (Cloudy Bay) er gammel rating. Test forsiktig med aromatiske.**
+
+### Musserende (18 viner, snitt 3.96 – din høyeste kategori!)
+
+- Du elsker Champagne, men også Cava (4.5 Juvé & Camps) og Crémant
+- 4.5 Vve Fourny Blanc de Blancs Premier Cru = solid Chardonnay-basert Champagne
+- Du har tre Champagner i kjelleren – musserende er åpenbart viktig for deg
+
+### Rosé (9 viner, snitt 3.22 – sliter mest)
+
+- **Provence-rosé har skuffet flere ganger:** 1.0, 2.0, 2.5, 4.0 – stor varians
+- **Italiensk nebbiolo-rosé fra Piemonte fungerer:** 4.5 Ioppa, 4.0 Cantalupo
+- **Antakelse (vekt høyt):** Du trives bedre med fyldigere, mer strukturerte roséer enn lyse Provence-stiler. Foreslå nebbiolo-rosé, italiensk rosato, eller mørkere Bandol-stil framfor klassisk blek Provence.
+
+### Andre kategorier
+- **Dessertvin:** 1 vin (Sauternes 4.5) – for lite data
+- **Hetvin/fortified:** 1 vin (Chip Dry White Port 4.5) – for lite data
+- **Orange/natur:** Ingen i dataene. Ukjent terreng – kan foreslås som [NYTT] i passende situasjon.
+
+## Klokke-profil for topp-viner (Vinmonopolets system)
+
+Når Claude finner viner med kjent klokke-profil, søk etter lignende.
+
+| Vin | Rating | Fylde | Friskhet | Tannin | Sødme | Stil |
+|---|---|---|---|---|---|---|
+| Fenocchio Barbera d'Alba Sup. 2023 | 4.6 | 8/12 | 9/12 | 7/12 | <3 g/l | Frisk og fruktig |
+
+*(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
+
+## Blindspots (eksplisitt mangel på data)
+
+Disse områdene har for lite eller ingen data til å gi sikre anbefalinger.
+Claude bør markere [NYTT] og lavere konfidens:
+
+- **Asiatisk mat** – ingen viner ratet sammen med thai, indisk, kinesisk osv.
+- **New World rødvin** – minimal erfaring utenfor Italia/Frankrike/Tyskland
+- **Naturvin / orange / hudkontakt** – fraværende i datasettet
+- **Aromatisk hvitvin** – Viognier, Gewürztraminer, Torrontés mangler helt
+- **Spanske rødviner** – kun 4 viner, ingen klart mønster
+- **Pinot Noir generelt** – stor varians (1.5 til 4.5), vanskelig å forutsi
+- **Varmt klima New World** – Australia, Sør-Afrika, Chile, Argentina knapt testet
+
+## Druer du vet du liker (utledet fra mønstre)
+
+- **Barbera** (4.6 topp, flere 4.0+)
+- **Nebbiolo** (både rødt og rosé)
+- **Corvina/Rondinella-blend** (Ripasso, Amarone)
+- **Riesling** (tysk, både tørr og søt)
+- **Chardonnay** (Jura, Burgund, ikke for fet)
+- **Sangiovese** (Chianti Classico, Vino Nobile)
+- **Tannat** (Garzón 4.5)
+
+## Druer/regioner som har bommet
+
+- **Generisk Provence-rosé** (gjentakende skuffelse)
+- **Sør-Rhône hvit** (to lave på Lirac Blanc)
+- **Billig Burgund** (Labouré-Roi 1.5)
+- **Argentinsk Bonarda** (3.0 Chakana)
+- **Sauvignon Blanc:** Bare én i hele dataene (Cloudy Bay 4.5 fra 2015). Ukjent om dette er bevisst fravalg eller bare ikke prøvd. Ikke foreslå klassisk gress/stikkelsbær-SB uten å sjekke først; bedre å gå Sancerre/Pouilly-Fumé hvis SB skal med (mer mineralsk, matcher din hvitvin-profil).
+
+## Regioner du dras mot (basert på frekvens og rating)
+
+1. **Nord-Italia** (Piemonte, Veneto) – tyngdepunktet ditt
+2. **Tyskland** (Mosel, Rheingau – Riesling)
+3. **Champagne**
+4. **Jura** (Chardonnay)
+
+## Regioner verdt å utforske (mine forslag, vi diskuterer)
+
+- **Etna (Sicilia)** – du ga 4.1 til Donnafugata Etna Rosso. Mer i denne stilen?
+- **Galicia (Albariño)** – du ga 4.0 til Torres Pazo das Bruxas
+- **Tyske GG-er bredere** – Spätburgunder, ikke bare Riesling
+- **Mosel-Riesling Spätlese tørr** – du har mønster mot tysk hvitt med syre
+
+## Aromaer/smaker du sannsynligvis liker
+
+Utledet fra hva som dominerer toppen din:
+- Mørke bær (Ripasso, Amarone)
+- Krydder/lakris (Nebbiolo)
+- Mineralsk/steinete (Riesling GG, Jura)
+- Sitrus/grønt eple (musserende-favorittene)
+- Tørket frukt/figen (Amarone)
+
+Disse legges inn som arbeidshypotese – kan justeres etter hvert som vi tester.
+
+## Aromaer/smaker som sannsynligvis ødelegger for deg
+
+Kandidater basert på laveste ratings:
+- Tynn, syrlig billig Pinot Noir (Labouré-Roi)
+- Vannet Provence-rosé (Whispering Angel 2.5, Sulauze 1.0)
+- Overoaket eller varmt-klimask hvitt (Lirac Blanc)
+
+## Praktisk
+
+Allergier, glass, dekanter, lagringsforhold: ikke avklart. Spør i situasjoner der det er kritisk (f.eks. "har du dekanter?" hvis jeg foreslår ung Barolo).
+
+## Mat og drikkesituasjon
+
+Avklares per spørsmål – det er en del av samtaleflyten. Når brukeren spør om en vin, antas det at:
+- Mat ikke er gitt med mindre nevnt
+- Anledning ikke er gitt med mindre nevnt
+- Hvis det er uklart om vinen skal følge mat eller drikkes alene, spør én rask oppfølger
+
+## Kjeller (dokumentert i Vivino)
+
+- Alexandre Bonnet Grande Réserve Brut Champagne (1 fl)
+- Pierre Peters Blanc de Blancs Le Mesnil-sur-Oger (1 fl)
+- Vve Fourny & Fils Blanc de Blancs Vertus Premier Cru (1 fl)
+
+→ Brukeren har også mye annen vin liggende som ikke er dokumentert i cellar-data. Anta ikke at det som er listet over er hele lageret. Spør om kontekst når det er relevant ("har du noe åpent allerede?").
+
+## No-go-liste (konkrete viner)
+
+- Domaine de Sulauze Pomponette Rosé (din eneste 1.0)
+- Labouré-Roi Pinot Noir Bourgogne (1.5)
+- Domaine de la Janasse Côtes du Rhône 2015 (2.0)
+- Whispering Angel Rosé (2.5)
+- Miraval Provence Rosé 2014 (2.0) – men ny årgang kan være annerledes
+- Schloss Vollrads Riesling Kabinett Trocken 2014 (2.7)
+- Francisco Gomez Eco Rojo 2014 (2.5)
+
+## Notater til Claude
+
+- **Vekt nyere ratings høyere:** Smaken min har endret seg fra 2014 til 2026
+- **Gamle 4.5 fra 2014–2016 er ikke nødvendigvis fortsatt favoritter** – bekreft før du baserer mye på dem
+- **Jeg vil ha grundige forklaringer** – ikke kutt på "hvorfor"
+- **Marker alltid [PRØVD] / [LIKNENDE] / [NYTT]** når du anbefaler
