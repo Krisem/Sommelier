@@ -122,6 +122,127 @@
 
 <!-- END AUTO-DERIVED -->
 
+<!-- BEGIN AUTO-DERIVED-BEER (untappd_stats.py) -->
+## Auto-derivert øl-statistikk (Untappd)
+
+> Generert 2026-05-12 av `tools/untappd_stats.py`. Ikke rediger manuelt – kjør på nytt etter ny Untappd-scrape.
+> Grunnlag: 89 ratede check-ins, snitt 3.39.
+> Mangfold: 65 unike bryggerier, 58 unike stiler, 20 stilfamilier.
+> Stildiversitet: 65.2% av check-ins er nye stiler – svært utforskende.
+> Nyere (2024+): 43 check-ins, snitt 3.36.
+> Eldre (før 2024): 46 check-ins, snitt 3.42.
+
+### Per stilfamilie
+
+| Stilfamilie | N | Snitt | Snitt 2024+ |
+|---|---|---|---|
+| Belgian Strong / Trappist | 11 | 3.50 | 3.43 |
+| Brown / Mild / Bitter | 11 | 3.36 | 3.75 |
+| Stout (standard) | 9 | 3.61 | 3.75 |
+| Annet / uklassifisert | 9 | 3.31 | 3.50 |
+| Pilsner | 8 | 2.97 | 2.95 |
+| Helles / Lager | 6 | 3.08 | 3.10 |
+| Porter / Baltic Porter | 5 | 3.75 | 3.88 |
+| Witbier / Belgian Pale | 5 | 3.35 | 3.17 |
+| Lambic / Gueuze / Wild | 4 | 3.88 | 4.25 |
+| NEIPA / Hazy IPA | 4 | 3.31 | 3.08 |
+| Saison / Farmhouse | 4 | 3.00 | 3.50 |
+| Bock / Doppelbock / Eisbock | 3 | 3.33 | 3.38 |
+| Sur (Berliner / Gose / Sour) | 2 | 4.00 | 4.00 |
+| IPA (standard) | 2 | 3.50 | 3.50 |
+| Märzen / Festbier / Vienna | 1 | 4.00 | – |
+| Barleywine / Old Ale / Wee Heavy | 1 | 3.75 | 3.75 |
+| Kölsch / Altbier | 1 | 3.75 | – |
+| Schwarzbier / Dunkel | 1 | 3.50 | – |
+| Rauchbier / Smoked | 1 | 3.00 | 3.00 |
+| Fruit / Spice / Specialty | 1 | 2.50 | 2.50 |
+
+### Per ABV-spenn
+
+| ABV | N | Snitt |
+|---|---|---|
+| 4–5,5 % (standard) | 32 | 3.20 |
+| 5,5–7 % (sterkøl) | 21 | 3.46 |
+| 7–9 % (DIPA/Tripel-range) | 19 | 3.37 |
+| 9–11 % (Imperial/Quad) | 11 | 3.59 |
+| 11+ % (BA / Extreme) | 6 | 3.88 |
+
+### Bekreftede preferanser (n ≥ 2, snitt ≥ 3.8)
+
+- **Lambic / Gueuze / Wild** – n=4, snitt 3.88, nyere 4.25
+- **Sur (Berliner / Gose / Sour)** – n=2, snitt 4.00, nyere 4.00
+
+### Bekymringer (n ≥ 2, snitt < 3.2)
+
+- **Pilsner** – n=8, snitt 2.97
+- **Helles / Lager** – n=6, snitt 3.08
+- **Saison / Farmhouse** – n=4, snitt 3.00
+
+### Blindspots (familier med n ≤ 1)
+
+- Märzen / Festbier / Vienna
+- Barleywine / Old Ale / Wee Heavy
+- Kölsch / Altbier
+- Schwarzbier / Dunkel
+- Rauchbier / Smoked
+- Fruit / Spice / Specialty
+
+### Sesong-mønster (snitt rating per måned)
+
+| Måned | N | Snitt |
+|---|---|---|
+| Jan | 10 | 3.73 |
+| Feb | 4 | 3.62 |
+| Mar | 6 | 3.42 |
+| Apr | 4 | 3.88 |
+| Mai | 1 | 2.00 |
+| Jun | 4 | 3.50 |
+| Jul | 17 | 3.32 |
+| Aug | 2 | 3.62 |
+| Sep | 8 | 3.25 |
+| Okt | 11 | 3.52 |
+| Nov | 7 | 3.36 |
+| Des | 15 | 3.07 |
+
+### Topp 8 ratede ølene
+
+- 4.5 – Omer Vander Ghinste VanderGhinste Roodbruin (Sour - Flanders Oud Bruin) 5.5%
+- 4.5 – Buxton Brewery THE BEER (Stout - Imperial / Double Pastry) 11.0%
+- 4.2 – Samuel Smith Organic Chocolate Stout (Stout - Other) 5.0%
+- 4.2 – BOXCAR Triple Dark Mild (Mild - Dark) 9.0%
+- 4.2 – Brouwerij Het Anker Gouden Carolus Cuvée van de Keizer Imperial Dark (Belgian Strong Dark Ale) 11.0%
+- 4.2 – Brouwerij Mort Subite Lambic Kriek (Lambic - Kriek) 4.0%
+- 4.0 – Brouwerij der Trappisten van Westmalle Westmalle Trappist Tripel (Belgian Tripel) 9.5%
+- 4.0 – LERVIG HOLIDAY HAZE (Pale Ale - New England / Hazy) 4.7%
+
+### Bunn 8 ratede ølene
+
+- 2.0 – Abbaye de Maredsous Maredsous Triple / Tripel (Belgian Tripel) 10.0%
+- 2.0 – Coop Norge Pokal Lys Pilsner (Pilsner - Other) 4.5%
+- 2.2 – Færder Mikrobryggeri Gull (Belgian Dubbel) 8.0%
+- 2.2 – Fuller's Griffin Brewery London Pride (Bitter - Session / Ordinary) 4.1%
+- 2.2 – Wettre Bryggeri AS Passion Silly Saison (Farmhouse Ale - Saison) 4.7%
+- 2.5 – Færder Mikrobryggeri Myrra (Spiced / Herbed Beer) 6.5%
+- 2.5 – Sabeco Bia Saigon Export Premium (Lager - Pale) 4.8%
+- 2.8 – Frydenlund Bryggerier Juicy IPA (IPA - New England / Hazy) 4.6%
+
+### Mest besøkte bryggerier (n ≥ 2)
+
+| Bryggeri | N | Snitt | Snitt 2024+ |
+|---|---|---|---|
+| Nøgne Ø | 7 | 3.43 | 3.56 |
+| Samuel Smith | 3 | 3.92 | – |
+| Små Vesen | 3 | 3.42 | – |
+| Fjordfolk Mikrobryggeri | 3 | 3.33 | – |
+| Frydenlund Bryggerier | 3 | 2.92 | 2.75 |
+| Færder Mikrobryggeri | 3 | 2.58 | 2.58 |
+| BOXCAR | 2 | 4.00 | – |
+| LERVIG | 2 | 3.88 | 3.75 |
+| Omer Vander Ghinste | 2 | 3.88 | – |
+| Brouwerij St. Bernardus | 2 | 3.75 | – |
+
+<!-- END AUTO-DERIVED-BEER -->
+
 ## Datagrunnlag (kort)
 
 - Aktivt Vivino-bruk siden ~2014, med ratings spredt over 12 år

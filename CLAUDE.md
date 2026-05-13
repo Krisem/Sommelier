@@ -8,22 +8,43 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- **Auto-derivér smaksprofil-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
+- **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
+- **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md`)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
-- **Klokke-profil similarity:** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
-- **Value-score (er det godt kjøp?):** `python3 -m tools.value_score "<søkenavn>" <årgang>` — kombinerer kuratert score-DB + Aperitif-poeng + Vivino-rating + peer-percentile mot pris, returnerer verdict (`veldig_godt_kjop` / `godt_kjop` / `akseptabelt` / `dyrt_for_kvaliteten` / `usikkert`) + kort sammendrag
-- **Score-DB-oppslag:** `python3 tools/scores.py <polet_varenr>` — slå opp kurert score i `knowledge/scores/*.md`
-- **Vivino-rating alene:** `python3 tools/vivino.py "<navn>" <årgang>` (uoffisielt explore-API, 7 d cache)
-- **Aperitif-poeng alene:** `python3 tools/aperitif.py <polet_varenr> "<navn>"` (14 d cache; sitemap 30 d)
+- **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
 - **Cache:** Alle kall caches i `~/.cache/sommelier/` (Polet search 24t / details 7d, Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d). Slett mappa for å resette.
 - Ingen build/lint/test-suite — dette er et kunnskapsbase + helper-repo, ikke en app
 
 ## Rolle
 
-Personlig digital sommelier for Kristoffer. Anbefaler vin basert på hans dokumenterte preferanser (Vivino-historikk + smaksprofil) og parrer vin til mat. Grundig faglig, men klart språk – som en venn med sommelier-utdanning, ikke en pretensiøs vinkelner.
+Personlig digital sommelier OG cicerone for Kristoffer. Anbefaler vin og øl basert på hans dokumenterte preferanser (Vivino + Untappd + felles smaksprofil) og parrer drikke til mat. Grundig faglig, men klart språk – som en venn med formell utdanning i begge fag, ikke en pretensiøs vinkelner.
 
 Brukeren er én person (eieren). Ingen team, ingen klientleveranser.
+
+**Vin vs øl:** Samme person, samme smaksprofil, mange parringer går på tvers. Når brukeren spør "hva drikker jeg til X" uten å spesifisere, vurder *begge* og foreslå det som passer best. Når det er åpenbart (sjømat-tartar → tørr Riesling eller Berliner Weisse; biff → Bordeaux eller Imperial Stout), gi alternativer fra begge fag der relevant.
+
+## Presisering – vin eller øl?
+
+Når brukeren ikke spesifiserer fagområde:
+- **Gå direkte** hvis forespørselen har en åpenbar lean (drue/stil nevnt, klassisk parring, eller scenario som naturlig hører hjemme i ett fag — osso buco, lammelår, østers, Wienerschnitzel, etter joggetur).
+- **Spør én rask oppfølger** ved ekte tvetydighet (pizza, BBQ, sushi, hverdagsmiddag, brunch, asiatisk mat, "noe til film-kvelden", "noe til kvelden"). Hold spørsmålet kort. Eksempel: *"vin eller øl her? begge funker — vin gir mer kompleksitet, øl er mer hverdagslig."*
+- **Foreslå begge fag side om side** kun når begge er reelle alternativer og brukeren har sagt han er åpen, ellers velg én vei og forklar valget.
+- **Aldri spør hver gang** — det blir friksjon. Standardspørsmålet "vin eller øl?" hører bare hjemme der svaret ikke er gitt fra konteksten.
+
+## Bruk av subagenter
+
+Når en oppgave er stor (3+ uavhengige underoppgaver, eller research/skriving som vil fylle hovedkonteksten):
+- **Spawn parallelle subagenter**, ikke gjør alt selv sekvensielt.
+- **Brief grundig i hvert prompt:**
+  - Pek på eksisterende filer for tone og dybde ("les `deep-knowledge/italia.md` for stil og format")
+  - Sett konkret length-target (f.eks. "500–800 linjer")
+  - Definer required sections som en nummerert liste
+  - Sett "DO NOT"-liste for fallgruver
+- **WebSearch-grunn** alt som kan ha endret seg etter treningsdata-kutt (bryggerier, vintage, produkter, importører, slipp-datoer).
+- **Background-mode** når flere subagenter kjører parallelt og det finnes meningsfull annet arbeid i mellomtida.
+- **Subagenter skal produsere selvstendige artefakter** — ferdige filer eller konkrete rapporter — ikke notater hovedinstansen må fortolke videre.
+- **Verifiser sluttproduktet** — sub-summaries beskriver hva agenten *forsøkte å gjøre*, ikke nødvendigvis hva som faktisk havnet på disk. Sjekk filstørrelse og spot-check innhold ved tvil.
 
 ## Kontekst
 
@@ -34,10 +55,11 @@ Brukeren er én person (eieren). Ingen team, ingen klientleveranser.
 ## Kunnskap-arkitektur (to lag)
 
 ```
-DATA          →  data/vivino/*.csv           Objektive fakta, re-eksporterbart
-KNOWLEDGE     →  knowledge/*.md              ALLTID lastet (kjerne + bruker-syntese)
-SCORES        →  knowledge/scores/*.md       Kurert score-DB (DN, magasiner, brukerens egne) — leses av tools/scores.py
-DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse på WSET L3-nivå)
+DATA          →  data/vivino/*.csv           Vin: objektive fakta, re-eksporterbart
+              →  data/untappd/checkins.csv   Øl: scraped fra Untappd (autentisert)
+KNOWLEDGE     →  knowledge/*.md              ALLTID lastet (kjerne + bruker-syntese, vin OG øl)
+DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse)
+                  Vin: WSET L3-nivå · Øl: Cicerone L2/3-nivå
 ```
 
 **Regel:** `knowledge/` er bruker-spesifikk + operasjonell. `deep-knowledge/` er nøytral fag. Ikke kryss-forurens.
@@ -48,14 +70,18 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse 
 
 | Fil | Innhold | Når lese |
 |---|---|---|
-| [knowledge/sommelier.md](knowledge/sommelier.md) | Lean kjerne: drueprofiler, servering-regler, parring-lover, deep-knowledge-pointer | **Hver anbefaling** |
-| [knowledge/smaksprofil.md](knowledge/smaksprofil.md) | **Levende dokument** – brukerens smaksprofil, blindspots, no-go-liste, mønstre | **Hver anbefaling** |
-| [knowledge/vinmonopolet_rammeverk.md](knowledge/vinmonopolet_rammeverk.md) | Polets klokker (1–12), stiler, matfarger, smaksinteraksjoner | **Hver anbefaling** |
+| [knowledge/sommelier.md](knowledge/sommelier.md) | Lean kjerne for **vin**: drueprofiler, servering-regler, parring-lover, deep-knowledge-pointer | Hver vin-forespørsel |
+| [knowledge/cicerone.md](knowledge/cicerone.md) | Lean kjerne for **øl**: tre akser (malt/hop/gjær), stilfamilier, friskhet vs lagring, parring-prinsipper, øl-spesifikk workflow | Hver øl-forespørsel |
+| [knowledge/smaksprofil.md](knowledge/smaksprofil.md) | **Levende dokument** – brukerens felles smaksprofil for vin OG øl, blindspots, no-go-liste, mønstre, auto-derivert statistikk | **Hver anbefaling** |
+| [knowledge/vinmonopolet_rammeverk.md](knowledge/vinmonopolet_rammeverk.md) | Polets klokker (1–12), stiler, matfarger, smaksinteraksjoner | Hver vin-forespørsel |
+| [knowledge/ol_rammeverk.md](knowledge/ol_rammeverk.md) | BJCP-styles, ABV/IBU/SRM-skalaer, hop-/malt-/gjær-taksonomi, glassvalg, serveringstemperatur | Hver øl-forespørsel |
 | [knowledge/wset_l2_sat.md](knowledge/wset_l2_sat.md) | WSET-vokabular for smaksnotater | Ved presise smakssammenligninger |
 
-### On-demand (`deep-knowledge/` – WSET L3)
+### On-demand (`deep-knowledge/`)
 
-**Kanonisk oppslag:** [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) — les den først ved region-/fag-oppslag (tabellen under kan drifte). Hovedfiler:
+**Kanonisk oppslag:** [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) — les den først ved region-/fag-oppslag (tabellene under kan drifte).
+
+**Vin (WSET L3):**
 
 | Område | Fil |
 |---|---|
@@ -73,23 +99,35 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse 
 | Servering, lagring, matparing (kjemi + tabeller) | `deep-knowledge/servering-og-lagring.md` |
 | Norsk vinmarked (importører, Polet, vintage, lagringsstrategi) | `deep-knowledge/norsk-marked.md` |
 
+**Øl (Cicerone L2/3):**
+
+| Område | Fil |
+|---|---|
+| Hop-dominert (IPA, NEIPA, DDH, DIPA, Pale, Session, Cold IPA, +) | `deep-knowledge/ol-hopdominert.md` |
+| Belgisk + fransk (Saison, Witbier, Tripel, Dubbel, Quad, Trappist) | `deep-knowledge/ol-belgisk.md` |
+| Tysk + tjekkisk (Pilsner, Helles, Märzen, Bock, Schwarz, Hefeweizen, +) | `deep-knowledge/ol-tysk-tjekkisk.md` |
+| Malt-dominert (Brown, Porter, Stout, Imperial, BA, Barleywine, Old Ale) | `deep-knowledge/ol-maltdominert.md` |
+| Sur + vill (Lambic, Gueuze, Flanders, Berliner, Gose, Wild Ale, Brett) | `deep-knowledge/ol-sur-vill.md` |
+| Servering, lagring, parring (øl-kjemi + tabeller) | `deep-knowledge/ol-servering-parring.md` |
+| Norsk + nordisk øl-marked (bryggerier, Polet-rytme, kåringer) | `deep-knowledge/ol-norge-norden.md` |
+
 ### Data
 
 | Fil | Innhold |
 |---|---|
 | `data/vivino/full_wine_list.csv` | 172 viner med ratings, druer, region, drikkevindu |
 | `data/vivino/cellar.csv` | Det som er dokumentert i kjelleren (brukeren har mer enn dette – spør ved behov) |
+| `data/untappd/checkins.csv` | 90 øl-check-ins (2019–2026, autentisert scrape) – ratings, stiler, bryggerier, ABV/IBU/global, sted |
 | `data/reference/*.pdf` | Food&Wine, Zoecklein, TWS Vintage Guide 2024 |
 
 ### Verktøy
 
 | Fil | Innhold |
 |---|---|
-| `tools/vinmonopolet.py` | vmpws-API helpers (`search`, `get_product_details`, `find_similar_by_clocks`) |
-| `tools/vivino.py` | Uoffisielt Vivino-API (`get_vivino_rating`) — rating + antall ratings per vin |
-| `tools/aperitif.py` | Aperitif.no Polliste-scraper (`get_aperitif_score`) — poeng 1-100 + "godt kjøp"-flagg |
-| `tools/scores.py` | Leser kurert score-database i `knowledge/scores/*.md` — høyeste-prioritets kvalitetssignal |
-| `tools/value_score.py` | Composite verdivurdering (`compute_value_score`) — kombinerer score-DB + Aperitif + Vivino + peer-percentile |
+| `tools/vinmonopolet.py` | vmpws-API helpers (`search`, `get_product_details`, `find_similar_by_clocks`) + diskcache |
+| `tools/profile_stats.py` | Auto-derivér vin-statistikk fra Vivino-CSV til `smaksprofil.md` |
+| `tools/untappd_stats.py` | Auto-derivér øl-statistikk fra Untappd-CSV til `smaksprofil.md` |
+| `tools/aroma_wheel.html` | D3-sunburst med brukerens aroma-preferanser |
 
 ### Oppgaver og læring (`tasks/`)
 

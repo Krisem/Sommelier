@@ -29,6 +29,16 @@ _(2026-05-12 – Off-dry tysk hvitt: migrert til `knowledge/smaksprofil.md` som 
 **Hvorfor det var feil:** Brukeren peker på at scenarier som restaurant-vinliste (bilde), valg mellom flasker han eier, og rene fagspørsmål ikke trenger Polet-oppslag i det hele tatt. Vinen er ofte ikke i Polets sortiment (restaurant), eller han skal ikke kjøpe noe nytt. Polet-oppslag forskyver fokus fra vurdering til verifisering, og bryter samtaleflyt.
 **Hva jeg gjør annerledes nå:** Følg den betingede regelen i `CLAUDE.md` step 5. JA ved kjøp, value-spørsmål, similarity-søk, eller smak ved føling. NEI ved restaurant-vinliste, valg mellom eksisterende flasker, eller fagspørsmål. I tvil – spør "skal du kjøpe eller har du den?".
 
+## 2026-05-12 – Betinget presisering, ikke blanket "vin eller øl?"
+**Hva skjedde:** Etter at øl-systemet ble likestilt med vin-systemet er det ikke gitt hvilket fag brukeren vil ha anbefaling fra. Et tidlig instinkt var "spør alltid om vin eller øl først".
+**Hvorfor det var feil:** Friction-tungt. Mange forespørsler har et åpenbart svar (osso buco → vin-territorium, etter joggetur → øl-territorium). Å spørre hver gang ville bryte samtaleflyt.
+**Hva jeg gjør annerledes nå:** Følg den betingede regelen i `CLAUDE.md` (seksjonen "Presisering – vin eller øl?"). Gå direkte ved klart lean. Spør én rask oppfølger ved ekte tvetydighet (pizza, BBQ, sushi, hverdagsmiddag, brunch). Foreslå begge fag side om side kun når situasjonen reelt støtter det.
+
+## 2026-05-12 – Subagent-bruk skal være eksplisitt, ikke implisitt
+**Hva skjedde:** Ved store oppgaver (utbygging av øl-kunnskap til Cicerone L2/3-nivå) ville en ad hoc-tilnærming vært å gjøre alt selv sekvensielt, og det ville sprengt hovedkonteksten.
+**Hvorfor det var feil:** Subagenter er sterke nettopp her — parallelle, fokuserte, kan WebSearch-grunne fakta, leverer ferdige filer. Men kun hvis de briefes grundig.
+**Hva jeg gjør annerledes nå:** Følg subagent-regelen i `CLAUDE.md` (seksjonen "Bruk av subagenter"). Spawn parallelt ved 3+ uavhengige underoppgaver. Brief hvert prompt med: peke på eksisterende filer for tone, length-target, required sections, "DO NOT"-liste, WebSearch-grunning for ferske fakta, background-mode der det er meningsfull annet arbeid. Verifiser sluttprodukt — sub-summaries beskriver intensjon, ikke resultat.
+
 ## 2026-05-12 – Vokse klokke-profil-tabellen som biprodukt
 **Hva skjedde:** Tabellen "Klokke-profil for topp-viner" i `smaksprofil.md` hadde bare én oppføring etter første runde – for liten ankermasse til at klokke-baserte sammenligninger var presise.
 **Hvorfor det var feil:** Jeg behandlet tabellen som noe brukeren skulle fylle. Den vokser ikke uten arbeid.
