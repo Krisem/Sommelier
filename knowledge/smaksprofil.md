@@ -327,6 +327,8 @@ Når Claude finner viner med kjent klokke-profil, søk etter lignende.
 |---|---|---|---|---|---|---|
 | Fenocchio Barbera d'Alba Sup. 2023 | 4.6 | 8/12 | 9/12 | 7/12 | <3 g/l | Frisk og fruktig |
 | Thymiopoulos Rosé de Xinomavro 2024 | — (foreslått) | 7/12 | 8/12 | — | <3 g/l | Strukturert rosé, Nebbiolo-aktig |
+| Hattingley Valley English Sparkling 2014 | 4.0 | — | — | — | — | Engelsk traditional method (ikke-rosé) |
+| Hattingley Valley Rosé 2021 | — (foreslått) | 7/12 | 10/12 | — | 5,2 g/l | Engelsk traditional method rosé |
 
 *(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
 

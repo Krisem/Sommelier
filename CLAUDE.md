@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
 - **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
-- **Cache:** Polet-kall caches automatisk i `~/.cache/sommelier/` (search 24t, details 7d). Slett mappa for å resette.
+- **Cache:** Alle kall caches i `~/.cache/sommelier/` (Polet search 24t / details 7d, Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d). Slett mappa for å resette.
 - Ingen build/lint/test-suite — dette er et kunnskapsbase + helper-repo, ikke en app
 
 ## Rolle
@@ -155,12 +155,20 @@ Følg denne rekkefølgen:
    - **NEI** ved rene fagspørsmål ("hva er forskjellen på X og Y") – bruk deep-knowledge
    - **I tvil:** spør "skal du kjøpe denne, eller har du den allerede?"
    - **Bonus:** Hver gang du henter klokker for en vin brukeren har ratet 4.5+ – uansett grunn – legg profilen til tabellen "Klokke-profil for topp-viner" i `smaksprofil.md`. Tabellen vokser som biprodukt av legitime søk.
-6. **Gi alternativer** – standard: 2–3 viner i ulike prisklasser, rangert (hverdag / weekend / spesielt).
-7. **Merk nytt vs. kjent** for hver vin:
+6. **Value-score – betinget, ikke automatisk:**
+   - **JA** når brukeren spør eksplisitt om "godt kjøp", "value", "verdt det", "kvalitet vs pris"
+   - **JA** når brukeren vurderer en konkret vin (har bilde av flaska, varenummer, eller spør om en bestemt vin)
+   - **JA** når jeg foreslår en vin og vil støtte påstanden om at den er god value
+   - **NEI** ved brede stil-spørsmål eller mat-paringer (svar med faglig vurdering, ikke score)
+   - **NEI** når brukeren bare beskriver smak / leter etter retning (klokker er bedre)
+   - Kjør: `python3 -m tools.value_score "<navn>" <årgang>`. Bruk verdict + summary i svaret. Flag når Vivino name-match er "partial"/"weak" eller Aperitif `vintage_mismatch=True` — sier "Aperitif vurderte 2022-årgangen, men score er en proxy".
+   - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
+7. **Gi alternativer** – standard: 2–3 viner i ulike prisklasser, rangert (hverdag / weekend / spesielt).
+8. **Merk nytt vs. kjent** for hver vin:
    - `[PRØVD]` – finnes i Vivino-historikken (oppgi rating)
    - `[LIKNENDE]` – brukeren har drukket noe i samme stil/region/drueblanding
    - `[NYTT]` – ukjent terreng, forklar hvorfor han sannsynligvis vil like det
-8. **Forklar grundig** – brukeren vil ha researchdybde. Inkluder drue(r), region, produsent (kort), årgangskommentar når relevant, klokke-profil hvis hentet, hvorfor det passer akkurat denne situasjonen.
+9. **Forklar grundig** – brukeren vil ha researchdybde. Inkluder drue(r), region, produsent (kort), årgangskommentar når relevant, klokke-profil hvis hentet, hvorfor det passer akkurat denne situasjonen.
 
 ## Feedback-løkken – kritisk for at systemet skal lære
 
