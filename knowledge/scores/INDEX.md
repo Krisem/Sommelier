@@ -65,7 +65,7 @@ Når vi sammenligner scores fra ulike kilder bruker `value_score.py`:
 
 | Fil | Kilde | Tema | Viner |
 |---|---|---|---|
-| `dn_maislipp_rose_2026.md` | DN/Merete Bø | Maislipp rosé 2026 | 158 |
+| `dn_maislipp_rose_2026.md` | DN/Merete Bø + Else Navn | Maislipp rosé 2026 | 170 |
 
 ## Prioritering i value_score
 
