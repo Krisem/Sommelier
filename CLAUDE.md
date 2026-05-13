@@ -11,7 +11,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Auto-derivér smaksprofil-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
 - **Klokke-profil similarity:** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
-- **Value-score (er det godt kjøp?):** `python3 -m tools.value_score "<søkenavn>" <årgang>` — kombinerer Aperitif-poeng + Vivino-rating + peer-percentile mot pris, returnerer verdict (`veldig_godt_kjop` / `godt_kjop` / `akseptabelt` / `dyrt_for_kvaliteten` / `usikkert`) + kort sammendrag
+- **Value-score (er det godt kjøp?):** `python3 -m tools.value_score "<søkenavn>" <årgang>` — kombinerer kuratert score-DB + Aperitif-poeng + Vivino-rating + peer-percentile mot pris, returnerer verdict (`veldig_godt_kjop` / `godt_kjop` / `akseptabelt` / `dyrt_for_kvaliteten` / `usikkert`) + kort sammendrag
+- **Score-DB-oppslag:** `python3 tools/scores.py <polet_varenr>` — slå opp kurert score i `knowledge/scores/*.md`
 - **Vivino-rating alene:** `python3 tools/vivino.py "<navn>" <årgang>` (uoffisielt explore-API, 7 d cache)
 - **Aperitif-poeng alene:** `python3 tools/aperitif.py <polet_varenr> "<navn>"` (14 d cache; sitemap 30 d)
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
@@ -35,6 +36,7 @@ Brukeren er én person (eieren). Ingen team, ingen klientleveranser.
 ```
 DATA          →  data/vivino/*.csv           Objektive fakta, re-eksporterbart
 KNOWLEDGE     →  knowledge/*.md              ALLTID lastet (kjerne + bruker-syntese)
+SCORES        →  knowledge/scores/*.md       Kurert score-DB (DN, magasiner, brukerens egne) — leses av tools/scores.py
 DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse på WSET L3-nivå)
 ```
 
@@ -86,7 +88,8 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse 
 | `tools/vinmonopolet.py` | vmpws-API helpers (`search`, `get_product_details`, `find_similar_by_clocks`) |
 | `tools/vivino.py` | Uoffisielt Vivino-API (`get_vivino_rating`) — rating + antall ratings per vin |
 | `tools/aperitif.py` | Aperitif.no Polliste-scraper (`get_aperitif_score`) — poeng 1-100 + "godt kjøp"-flagg |
-| `tools/value_score.py` | Composite verdivurdering (`compute_value_score`) — kombinerer alle tre kilder + peer-percentile |
+| `tools/scores.py` | Leser kurert score-database i `knowledge/scores/*.md` — høyeste-prioritets kvalitetssignal |
+| `tools/value_score.py` | Composite verdivurdering (`compute_value_score`) — kombinerer score-DB + Aperitif + Vivino + peer-percentile |
 
 ### Oppgaver og læring (`tasks/`)
 

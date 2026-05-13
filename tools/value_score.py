@@ -22,6 +22,7 @@ from statistics import median
 from typing import Optional
 
 from tools.aperitif import get_aperitif_score
+from tools.scores import get_user_scores
 from tools.vinmonopolet import filter_results, search
 from tools.vivino import get_vivino_rating
 
@@ -40,9 +41,8 @@ def _clean_for_vivino(name: str) -> str:
     return s
 
 
-def _quality_tier_from_aperitif(score: Optional[int], flag: Optional[str]) -> str:
-    if flag == "veldig_godt_kjop":
-        return "very_high"
+def _quality_tier_from_score_100(score: Optional[float]) -> str:
+    """Konverter 1-100-score (DN, Aperitif, etc) til tier."""
     if score is None:
         return "unknown"
     if score >= 92:
@@ -52,6 +52,12 @@ def _quality_tier_from_aperitif(score: Optional[int], flag: Optional[str]) -> st
     if score >= 82:
         return "medium"
     return "low"
+
+
+def _quality_tier_from_aperitif(score: Optional[int], flag: Optional[str]) -> str:
+    if flag == "veldig_godt_kjop":
+        return "very_high"
+    return _quality_tier_from_score_100(score)
 
 
 def _quality_tier_from_vivino(rating: Optional[float], count: Optional[int]) -> str:
@@ -68,8 +74,10 @@ def _quality_tier_from_vivino(rating: Optional[float], count: Optional[int]) -> 
     return "low"
 
 
-def _combine_quality(aperitif_tier: str, vivino_tier: str) -> str:
-    """Aperitif vektes høyere (faglig), Vivino er sekundær."""
+def _combine_quality(user_tier: str, aperitif_tier: str, vivino_tier: str) -> str:
+    """Kuratert > Aperitif (faglig) > Vivino (crowd)."""
+    if user_tier != "unknown":
+        return user_tier
     if aperitif_tier != "unknown":
         return aperitif_tier
     return vivino_tier
@@ -206,6 +214,9 @@ def compute_value_score(
     polet_id = polet_product.get("code", "")
     price = polet_product.get("price", {}).get("value")
 
+    user_scores = get_user_scores(polet_id)
+    user_score_data = max(user_scores, key=lambda e: e["score"]) if user_scores else None
+
     vivino_data = None
     if fetch_vivino:
         vivino_data = get_vivino_rating(_clean_for_vivino(name), vintage=vintage)
@@ -219,6 +230,9 @@ def compute_value_score(
 
     peer = _peer_percentile(polet_product, peer_search_terms)
 
+    user_score_val = user_score_data["score"] if user_score_data else None
+    user_tier = _quality_tier_from_score_100(user_score_val)
+
     apr_score = aperitif_data.get("score") if aperitif_data else None
     apr_flag = aperitif_data.get("value_flag") if aperitif_data else None
     apr_tier = _quality_tier_from_aperitif(apr_score, apr_flag)
@@ -228,10 +242,13 @@ def compute_value_score(
     viv_count = vivino_data.get("vintage_ratings_count") if viv_usable else None
     viv_tier = _quality_tier_from_vivino(viv_rating, viv_count)
 
-    quality = _combine_quality(apr_tier, viv_tier)
+    quality = _combine_quality(user_tier, apr_tier, viv_tier)
     verdict = _value_verdict(quality, apr_flag, peer, price)
 
     parts = []
+    if user_score_data:
+        kilde = user_score_data.get("kilde", "intern").split("/")[0].strip()
+        parts.append(f"{kilde} {user_score_val:g}/100")
     if aperitif_data and apr_score:
         flag_str = ""
         if apr_flag == "veldig_godt_kjop":
@@ -267,6 +284,7 @@ def compute_value_score(
         "wine_name": name,
         "polet_id": polet_id,
         "price": price,
+        "user_scores": user_scores,
         "vivino": vivino_data,
         "aperitif": aperitif_data,
         "peer": peer,
