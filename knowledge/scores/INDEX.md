@@ -66,6 +66,9 @@ Når vi sammenligner scores fra ulike kilder bruker `value_score.py`:
 | Fil | Kilde | Tema | Viner |
 |---|---|---|---|
 | `dn_maislipp_rose_2026.md` | DN/Merete Bø + Else Navn | Maislipp rosé 2026 | 170 |
+| `dn_maislipp_musserende_2026.md` | DN/Merete Bø + Espen Nersveen | Maislippets musserende nyheter 2026 | 106 |
+| `dn_maislipp_25_beste_2026.md` | DN/Merete Bø + Espen Nersveen | Maislippets 25 beste kjøp 2026 | 25 |
+| `dn_tysklandslipp_2026.md` | DN/Merete Bø + Espen Nersveen | Polets tysklandslipp 2026 | 111 |
 | `dn_17mai_handleliste_2026.md` | DN/Espen Nersveen | Polhyllenes beste drikkevarer til 17. mai 2026 | 10 |
 
 ## Prioritering i value_score
