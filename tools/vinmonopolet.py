@@ -87,6 +87,55 @@ def search(query: str, page_size: int = 10, use_cache: bool = True) -> list[dict
     return products
 
 
+def search_with_facets(
+    facets: dict,
+    page_size: int = 50,
+    use_cache: bool = True,
+) -> list[dict]:
+    """
+    Søk Vinmonopolet med Hybris-style fasett-filter (én strukturert spørring).
+
+    Eksempel:
+        peers = search_with_facets(
+            {"mainCategory": "rødvin", "mainCountry": "italia"},
+            page_size=50,
+        )
+
+    Argumenter:
+        facets: dict med fasett-koder → kode-verdi. Verdier må være `.code`-feltet
+                fra Polets fasett-vokabular (lowercase, underscore for mellomrom):
+                  - mainCategory: 'rødvin' | 'hvitvin' | 'musserende_vin' | 'rosévin' | ...
+                  - mainCountry:  'italia' | 'frankrike' | 'spania' | ...
+                  - district:     'italia_sicilia' | 'frankrike_champagne' | ...
+                Bruk `.code`-feltet direkte fra et tidligere search()-treff.
+        page_size: maks antall produkter (Polets API gir typisk opptil ~100)
+        use_cache: bruk 24t diskcache (namespace "search_facets")
+
+    Returnerer samme produkt-struktur som search().
+    """
+    # Bygg deterministisk query-streng for både cache-key og API
+    parts = [f"{k}:{v}" for k, v in sorted(facets.items())]
+    query = ":relevance:" + ":".join(parts) if parts else ":relevance"
+
+    cache_key = f"facets={query}|n={page_size}"
+    if use_cache:
+        cached = _cache_get("search_facets", cache_key, SEARCH_TTL)
+        if cached is not None:
+            return cached
+
+    url = f"{BASE}/vmpws/v2/vmp/products/search"
+    r = requests.get(
+        url,
+        params={"q": query, "pageSize": page_size},
+        headers=HEADERS,
+        timeout=10,
+    )
+    r.raise_for_status()
+    products = r.json().get("products", [])
+    _cache_set("search_facets", cache_key, products)
+    return products
+
+
 def filter_results(
     results: list[dict],
     max_price: Optional[float] = None,
@@ -110,27 +159,14 @@ def filter_results(
     return out
 
 
-def get_product_details(product_url: str, use_cache: bool = True) -> dict:
+def parse_product_html(html: str) -> dict:
     """
-    Hent klokker, lukt, smak, drueblanding fra produktsiden.
-
-    product_url skal være relativ sti (fra search-resultat).
-    Caches i 7 dager. Sett use_cache=False for å force ferskt kall.
+    Trekk ut klokker, druer, stil, lukt, smak, alkohol, sukker, syre osv. fra
+    rå produktside-HTML. Ren funksjon — ingen I/O. Skilt ut fra
+    `get_product_details` slik at den kan testes mot en pinned HTML-fixture
+    (tests/fixtures/vinmonopolet/) for å fange Polet-DOM-drift.
     """
-    if not product_url.startswith("http"):
-        product_url = BASE + product_url
-
-    if use_cache:
-        cached = _cache_get("details", product_url, DETAILS_TTL)
-        if cached is not None:
-            return cached
-
-    r = requests.get(product_url, headers=HEADERS, timeout=10)
-    r.raise_for_status()
-    r.encoding = "utf-8"
-    html = r.text
-
-    result = {}
+    result: dict = {}
 
     # Klokker (Fylde, Friskhet, Garvestoffer, Sødme – skala 1-12)
     clocks = {}
@@ -149,7 +185,6 @@ def get_product_details(product_url: str, use_cache: bool = True) -> dict:
         result["druer"] = m.group(1)
 
     # Stil – kommer rett før "Drikkeklar"-feltet på produktsiden
-    # Mønster: aria-label="Frisk og fruktig"><div class="icon...
     stil_patterns = [
         "Frisk og fruktig", "Fruktig og mild", "Fruktig og rik",
         "Frisk og bærpreget", "Sval og krydret", "Fruktig og fast",
@@ -164,7 +199,7 @@ def get_product_details(product_url: str, use_cache: bool = True) -> dict:
             result["stil"] = stil
             break
 
-    # Lukt, Smak, Farge, Metode
+    # Lukt, Smak, Farge, Metode, Land/distrikt, Produsent, Årgang, Utvalg
     for felt in ["Lukt", "Smak", "Farge", "Metode", "Land, distrikt", "Produsent", "Årgang", "Utvalg"]:
         m = re.search(
             rf'<span>{felt}</span><span[^>]*>([^<]+)',
@@ -183,6 +218,29 @@ def get_product_details(product_url: str, use_cache: bool = True) -> dict:
     m = re.search(r'<strong>Syre</strong>\s*<span[^>]*>([^<]+)', html)
     if m:
         result["syre"] = m.group(1).strip()
+
+    return result
+
+
+def get_product_details(product_url: str, use_cache: bool = True) -> dict:
+    """
+    Hent klokker, lukt, smak, drueblanding fra produktsiden.
+
+    product_url skal være relativ sti (fra search-resultat).
+    Caches i 7 dager. Sett use_cache=False for å force ferskt kall.
+    """
+    if not product_url.startswith("http"):
+        product_url = BASE + product_url
+
+    if use_cache:
+        cached = _cache_get("details", product_url, DETAILS_TTL)
+        if cached is not None:
+            return cached
+
+    r = requests.get(product_url, headers=HEADERS, timeout=10)
+    r.raise_for_status()
+    r.encoding = "utf-8"
+    result = parse_product_html(r.text)
 
     _cache_set("details", product_url, result)
     return result

@@ -35,7 +35,8 @@ HEADERS = {
 CACHE_DIR = Path.home() / ".cache" / "sommelier" / "aperitif"
 SCORE_TTL = 14 * 24 * 60 * 60       # 14 d for score
 SITEMAP_TTL = 30 * 24 * 60 * 60     # 30 d for sitemap
-REQUEST_DELAY = 1.0                  # sekunder mellom kall (høflighet)
+REQUEST_DELAY = 0.25                 # min sekunder mellom HTTP-kall (ikke før første)
+_LAST_HTTP_AT = 0.0                  # global throttle-state
 
 
 def _cache_path(name: str) -> Path:
@@ -84,11 +85,16 @@ def _set_score_cache(polet_id: str, value) -> None:
 
 
 def _http_get(url: str, timeout: int = 15) -> Optional[str]:
+    global _LAST_HTTP_AT
+    delta = time.time() - _LAST_HTTP_AT
+    if delta < REQUEST_DELAY:
+        time.sleep(REQUEST_DELAY - delta)
     try:
-        time.sleep(REQUEST_DELAY)
         r = requests.get(url, headers=HEADERS, timeout=timeout)
     except requests.RequestException:
+        _LAST_HTTP_AT = time.time()
         return None
+    _LAST_HTTP_AT = time.time()
     if r.status_code != 200:
         return None
     return r.text

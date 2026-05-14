@@ -17,14 +17,45 @@ Eksempel:
     print(v["summary"])
 """
 
+import json
 import re
+import time
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 from statistics import median
 from typing import Optional
 
 from tools.aperitif import get_aperitif_score
 from tools.scores import get_user_scores
-from tools.vinmonopolet import filter_results, search
+from tools.vinmonopolet import filter_results, search, search_with_facets
 from tools.vivino import get_vivino_rating
+
+VALUE_CACHE_DIR = Path.home() / ".cache" / "sommelier" / "value_score"
+VALUE_CACHE_TTL = 24 * 60 * 60  # 24 t — Polet-priser kan endres dag-til-dag
+LOGIC_VERSION = "v1"  # Bump for å invalidere all cache når scoring-logikken endres
+
+
+def _value_cache_path(polet_id: str, vintage: Optional[int]) -> Path:
+    VALUE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    return VALUE_CACHE_DIR / f"{LOGIC_VERSION}_{polet_id}_{vintage or 'NV'}.json"
+
+
+def _value_cache_get(polet_id: str, vintage: Optional[int]):
+    p = _value_cache_path(polet_id, vintage)
+    if not p.exists() or (time.time() - p.stat().st_mtime) > VALUE_CACHE_TTL:
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _value_cache_set(polet_id: str, vintage: Optional[int], value: dict) -> None:
+    p = _value_cache_path(polet_id, vintage)
+    try:
+        p.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+    except OSError:
+        pass
 
 
 def _clean_for_vivino(name: str) -> str:
@@ -83,14 +114,13 @@ def _combine_quality(user_tier: str, aperitif_tier: str, vivino_tier: str) -> st
     return vivino_tier
 
 
-def _peer_percentile(
+def _peer_percentile_legacy(
     polet_product: dict,
     peer_search_terms: Optional[list[str]] = None,
 ) -> Optional[dict]:
     """
-    Sammenlign pris med andre viner i samme kategori + land.
-    Returnerer dict med median, percentile (0-1), n.
-    Percentile: 0.0 = billigst, 1.0 = dyrest.
+    Eldre algoritme: 3 fritekstsøk + lokal filtrering. Brukes som fallback når
+    fasett-API-kallet feiler, eller når caller eksplisitt gir peer_search_terms.
     """
     category = polet_product.get("main_category", {}).get("name")
     country = polet_product.get("main_country", {}).get("name")
@@ -100,14 +130,13 @@ def _peer_percentile(
     if price is None or not category:
         return None
 
-    # Bygg søketermer hvis ikke gitt. Bredere fall-back-rekke.
     if not peer_search_terms:
         peer_search_terms = []
         if district:
             peer_search_terms.append(district)
         if country:
             peer_search_terms.append(country)
-        peer_search_terms.append(category)  # fall-back: kategori alene
+        peer_search_terms.append(category)
 
     seen_codes = set()
     peers: list[float] = []
@@ -116,7 +145,6 @@ def _peer_percentile(
             results = search(term, page_size=50)
         except Exception:
             continue
-        # Først prøv smal filtrering, deretter løsne
         for f_country in (country, None):
             filtered = filter_results(results, category=category, country=f_country)
             for p in filtered:
@@ -143,6 +171,69 @@ def _peer_percentile(
         "median_price": round(median(peers_sorted), 1),
         "sample_size": len(peers_sorted),
         "peer_terms": peer_search_terms,
+    }
+
+
+def _peer_percentile(
+    polet_product: dict,
+    peer_search_terms: Optional[list[str]] = None,
+) -> Optional[dict]:
+    """
+    Sammenlign pris med andre viner i samme kategori + land via Polets fasett-API.
+    Returnerer dict med median, percentile (0-1), sample_size.
+    Percentile: 0.0 = billigst, 1.0 = dyrest.
+
+    Hvis caller passerer peer_search_terms (bakoverkompatibilitet): bruk gammel
+    fritekst-algoritme. Hvis ikke: ett strukturert fasett-kall (mainCategory +
+    mainCountry). Faller tilbake til legacy-algoritmen ved feil.
+    """
+    if peer_search_terms:
+        return _peer_percentile_legacy(polet_product, peer_search_terms)
+
+    category_obj = polet_product.get("main_category") or {}
+    country_obj = polet_product.get("main_country") or {}
+    category_code = category_obj.get("code")
+    country_code = country_obj.get("code")
+    price = polet_product.get("price", {}).get("value")
+
+    # Trenger minst pris + kategori for å sammenligne meningsfullt
+    if price is None or not category_code:
+        return _peer_percentile_legacy(polet_product, peer_search_terms)
+
+    facets: dict = {"mainCategory": category_code}
+    if country_code:
+        facets["mainCountry"] = country_code
+
+    try:
+        results = search_with_facets(facets, page_size=50)
+    except Exception:
+        return _peer_percentile_legacy(polet_product, peer_search_terms)
+
+    own_code = polet_product.get("code")
+    peers: list[float] = []
+    for p in results:
+        if p.get("code") == own_code:
+            continue
+        v = p.get("price", {}).get("value")
+        if v:
+            peers.append(v)
+
+    if len(peers) < 5:
+        # Sjelden — kun for veldig snevre kategori+land-kombinasjoner. Prøv
+        # legacy som fallback (litt bredere fordi fritekst matcher løsere).
+        return _peer_percentile_legacy(polet_product, peer_search_terms)
+
+    peers_sorted = sorted(peers)
+    below = sum(1 for p in peers_sorted if p < price)
+    percentile = below / len(peers_sorted)
+
+    peer_terms = [f"{k}:{v}" for k, v in facets.items()]
+
+    return {
+        "percentile": round(percentile, 2),
+        "median_price": round(median(peers_sorted), 1),
+        "sample_size": len(peers_sorted),
+        "peer_terms": peer_terms,
     }
 
 
@@ -193,6 +284,7 @@ def compute_value_score(
     peer_search_terms: Optional[list[str]] = None,
     fetch_vivino: bool = True,
     fetch_aperitif: bool = True,
+    use_cache: bool = True,
 ) -> dict:
     """
     Beregn samlet verdivurdering for en vin på Polet.
@@ -202,6 +294,7 @@ def compute_value_score(
         vintage: Valgfri årgang (for Vivino-vintage-match)
         peer_search_terms: Override-søketermer for peer-gruppe
         fetch_vivino / fetch_aperitif: Sett False for å hoppe over
+        use_cache: Bruk disk-cache på (polet_id, vintage) — TTL 7d
 
     Returnerer dict med:
         - wine_name, polet_id, price
@@ -214,21 +307,35 @@ def compute_value_score(
     polet_id = polet_product.get("code", "")
     price = polet_product.get("price", {}).get("value")
 
+    # Cache er kun trygt når flagg-kombinasjonen er standard (alle kilder hentet)
+    use_cache_now = use_cache and polet_id and fetch_vivino and fetch_aperitif
+    if use_cache_now:
+        cached = _value_cache_get(polet_id, vintage)
+        if cached is not None:
+            return cached
+
     user_scores = get_user_scores(polet_id)
     user_score_data = max(user_scores, key=lambda e: e["score"]) if user_scores else None
 
-    vivino_data = None
-    if fetch_vivino:
-        vivino_data = get_vivino_rating(_clean_for_vivino(name), vintage=vintage)
-        # Forkast hvis navne-match er svak — det er sannsynligvis en annen vin
-        if vivino_data and vivino_data.get("name_match_confidence") == "weak":
-            vivino_data["_discarded"] = True
+    # Tre uavhengige I/O-bound kall — kjør parallelt (GIL er ikke et problem for requests)
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        fut_vivino = (
+            ex.submit(get_vivino_rating, _clean_for_vivino(name), vintage=vintage)
+            if fetch_vivino else None
+        )
+        fut_aperitif = (
+            ex.submit(get_aperitif_score, polet_id, name)
+            if fetch_aperitif else None
+        )
+        fut_peer = ex.submit(_peer_percentile, polet_product, peer_search_terms)
 
-    aperitif_data = None
-    if fetch_aperitif:
-        aperitif_data = get_aperitif_score(polet_id, wine_name=name)
+        vivino_data = fut_vivino.result() if fut_vivino else None
+        aperitif_data = fut_aperitif.result() if fut_aperitif else None
+        peer = fut_peer.result()
 
-    peer = _peer_percentile(polet_product, peer_search_terms)
+    # Forkast Vivino-treff med svak navne-match — sannsynligvis feil vin
+    if vivino_data and vivino_data.get("name_match_confidence") == "weak":
+        vivino_data["_discarded"] = True
 
     user_score_val = user_score_data["score"] if user_score_data else None
     user_tier = _quality_tier_from_score_100(user_score_val)
@@ -280,7 +387,7 @@ def compute_value_score(
     }
     summary = f"{verdict_text_map[verdict]}. " + ". ".join(parts) + "."
 
-    return {
+    result = {
         "wine_name": name,
         "polet_id": polet_id,
         "price": price,
@@ -292,6 +399,9 @@ def compute_value_score(
         "value_verdict": verdict,
         "summary": summary,
     }
+    if use_cache_now:
+        _value_cache_set(polet_id, vintage, result)
+    return result
 
 
 if __name__ == "__main__":
