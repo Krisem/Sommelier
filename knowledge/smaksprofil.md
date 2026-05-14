@@ -21,7 +21,7 @@
 <!-- BEGIN AUTO-DERIVED (profile_stats.py) -->
 ## Auto-derivert statistikk
 
-> Generert 2026-05-12 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
+> Generert 2026-05-14 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
 > Grunnlag: 104 ratede viner, snitt 3.78.
 > Nyere ratings (2024-01-01+): 17 viner, snitt 3.89.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.

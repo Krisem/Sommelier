@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import statistics
+import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -213,6 +214,16 @@ def main() -> None:
     block = render(rows)
     update_profile(block)
     print(f"Oppdaterte {PROFILE_PATH} med {len(rows)} ratede viner.")
+
+    # Etter at smaksprofil-blokken er regenerert, regenerér user-fit
+    try:
+        if str(ROOT) not in sys.path:
+            sys.path.insert(0, str(ROOT))
+        from tools.user_fit import write_v0_json
+        path = write_v0_json()
+        print(f"User-fit v0 regenerert: {path}")
+    except Exception as e:
+        print(f"User-fit-regenerering hoppet over: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

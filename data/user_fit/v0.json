@@ -1,0 +1,3198 @@
+{
+  "_meta": {
+    "version": "v0",
+    "generated_at": "2026-05-14T17:43:02+00:00",
+    "n_classified": 397,
+    "tier_counts": {
+      "fit": 159,
+      "neutral": 235,
+      "risky": 3
+    }
+  },
+  "10017701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10038101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10043501": {
+    "tier": "risky",
+    "reasons": [
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» matcher «Rigouline Coteaux d'Aix en Provence Rosé 2025»."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring"
+  },
+  "10100001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1010201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10129501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "10205001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10307001": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "10353701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10434901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10435001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10457701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1049101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10702501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "10760501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10876701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10902101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "10939101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "10985405": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11519306": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11703301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11728401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11801101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11814401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11886401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11894701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11907601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11910602": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11928201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11929206": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11937401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11998101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12204401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12412701": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «8.21 Blanc de Blancs de Chardonnay 2022»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "125301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "12563701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12591006": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12655401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12670201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1274606": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Veneto»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "12786401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12786501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1282201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "12865106": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "13015901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "13061101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "13124601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "13124801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "13218101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "13275301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "13474402": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "13870801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14082401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "14146301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14219301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14355201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14373301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14375601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14394701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14400201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14449801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14665101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "14741301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "14954101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "14954201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "14969001": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15018601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Bekreftet drue «Chardonnay» matcher «Pierre Gerbais Champ Viole Chardonnay»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15070201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15172801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15215501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15237901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15375301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15375401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15377801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15377901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15387601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15438201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15505101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15522601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «Gebrüder Mathis Chardonnay St. Morand 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15523201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «Gebrüder Mathis Chardonnay 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15523801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15561601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15602401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15602501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15727901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "15825001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16316801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "16349301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Wintricher Ohligsberg Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "16349401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Piesporter Geyerslay Riesling Kabinett 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "16466101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1661201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16845106": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16896701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16917701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16925906": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "16983301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17041701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17071201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "17071301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17076001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17189601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17338701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "17462501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "18940901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19015201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «Bernhard Huber Malterdingen Bienenberg Chardonnay 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19093501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19095901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19096001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19096301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19142001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19146201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19152301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19245801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19291501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Bekreftet drue «Chardonnay» matcher «Girard-Bonnet Au Bout du Chemin Chardonnay Premier Cru Extra Brut»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19291601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Bekreftet drue «Chardonnay» matcher «Girard-Bonnet A Mi-Chemin Chardonnay Grand Cru Extra Brut»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19316901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Forster Kirchenstück Riesling GG 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19336701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19355201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19355301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19355601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19360902": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19396501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19405601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19405801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "1942301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19432201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19467501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19483301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "19565006": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19577502": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "19941301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20049001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20072201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20090201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Piesporter Ohligsberg Riesling Kabinett Alte Reben 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20090301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20130801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «Morgen Long Chardonnay Koosah Vineyard 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20137401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20228501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20254201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20254401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20272901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20279201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20287401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20291901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20301301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20314101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20314601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "2032401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20358101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20360401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20360406": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20360801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20362101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20370901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20371106": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20380801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20384101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20384601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20385901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20387701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20388101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20389706": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20405901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20408601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20412801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20413101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20413201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20422401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Forster Riesling Sekt Brut»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20426401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20428101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20428601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20430101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20430201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20432001": {
+    "tier": "risky",
+    "reasons": [
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» matcher «Boheme Cotes du Provence rosé 2025»."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring"
+  },
+  "20432801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20436301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2044001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20440501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Chardonnay» matcher «Scagliola Danvian Chardonnay 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20469601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20472501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20484401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: land — best-effort match."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20485201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20487701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura».",
+      "Bekreftet drue «Chardonnay» matcher «Ganevat Les Survivants Chardonnay 2021»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20490601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20505501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20507001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20507501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20510101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20511201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20512601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20516701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20516805": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20517701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20517901": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20518101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20518201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20519401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20520601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20526701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20527501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20531401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20535301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20535401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20535801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20536201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20536301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20541501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20541601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20543901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Grabenwerkstatt Ried Trenning Riesling 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20544001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20544101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20553101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20553801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20554901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Moritz Kissinger Hipping Riesling 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20555501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20555701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20555901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20558601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Monzinger Frühlingsplätzchen Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20558701": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Brauneberger Juffer-Sonnenuhr Riesling Auslese 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20558801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Riesling Trocken EMT 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20558901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Emrich-Schönleber Monzinger Halenberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20559001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Monzinger Halenberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20559101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20559201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Kestener Paulinshofberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20559301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20559401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Bockenauer Stromberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20559501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20561601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Wittmann Riesling La Borne 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20561801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Wittmann Westhofener Brunnenhäuschen Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20561901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20562001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Saarburger Rausch Riesling Kabinett 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20562101": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Saarburger Rausch Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20562201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Westhofener Aulerde Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20564401": {
+    "tier": "risky",
+    "reasons": [
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» matcher «Dom. Oddo Provence Rosé 2025»."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring"
+  },
+  "20565601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Von Buhl Forster Pechstein Riesling Grosse Lage 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20566401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20566501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20569701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20573601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Zilliken Riesling Butterfly 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20574201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20574601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Nebbiolo» matcher «Tenute Sella Majoli Rosato di Nebbiolo 2025»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20574901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20575201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «J. Haart Piesporter Riesling 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20575401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20579001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20579801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20579901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Kruger-Rumpf Abtei 1937 Riesling Tr. 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20580001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20580301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20581401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20581801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20582101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20583301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Keller Westhofener Kirchspiel Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20583401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20585001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20585701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20588301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20588501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20588601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Keller Zellertal Riesling 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20588701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20588801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20591401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20595001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20595101": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «S. Müller Euchariusberg Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20595401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20595501": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «K.H. Schneider Felsenberg Riesling Tr. 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20596001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20596101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20599001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20599201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20599301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20599801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20604001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20607201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20609801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20619501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20630101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20630901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Joh. Jos. Prüm Wehlener Sonnenuhr Riesling Kabinett 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20631001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Joh. Jos. Prüm Zeltinger Sonnenuhr Riesling Spätlese 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20631101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20631201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Joh. Jos. Prüm Wehlener Sonnenuhr Riesling Auslese 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20631301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Joh. Jos. Prüm Wehlener Sonnenuhr Riesling Auslese Goldkapsel 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20631401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Joh. Jos. Prüm Bernkasteler Lay Riesling Auslese GK 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20631901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20632001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Acham-Magin Forster Musenhang Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632101": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Acham-Magin Forster Pechstein Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Acham-Magin Forster Jesuitengarten Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Acham-Magin Forster Kirchenstück Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Acham-Magin Forster Ungeheuer Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632701": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Roxheimer Höllenpfad Riesling Trocken EG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Kahlenberg Riesling Trocken EG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20632901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Niederhäuser Hermannshöhle Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20633001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Oberhäuser Brücke Riesling Spätlese 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20633101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20633201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Felsenberg Riesling trocken GG 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20633301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Niederhäuser Klamm Riesling Kabinett 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20633401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Höllenpfad Im Mühlenberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20633801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Dönnhoff Dellchen Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20634601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20634701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20634801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20634901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20635001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20635701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20636401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20637201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Bründlmayer Zöbinger Heiligenstein Riesling 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20637301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20637601": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Pechstein Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20637801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Ungeheuer Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20637901": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Freundstück Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20638101": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Musenhang Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20638401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Jesuitengarten Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20638501": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Forster Basalt Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20639001": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Deidesheimer Kalkstein Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20639301": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Deidesheimer Kieselberg Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20639401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Deidesheimer Langenmorgen Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20639601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20640101": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20640201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Mosbacher Wachenheimer Buntsandstein Riesling Trocken 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20640601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20640701": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Christmann IDIG Königsbach Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20641501": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Clemens Busch Marienburg Falkenlay Riesling GG 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20642201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20642401": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «P. Lauer Riesling Fass 6 \"Senior\" 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20642801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20643201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20643601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20644901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20645501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "20650201": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Garage Caveau Mittelhaardt Riesling 2023»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "20650301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2115201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2150401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2178901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2197401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "2197701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2252001": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "2262901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2265301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "232101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "2844201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "2895001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "3267701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "3310601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "3390301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "3456101": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "3872205": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Nebbiolo» matcher «Ioppa Colline Novaresi Rusin Nebbiolo 2025 (magnum)»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "3962701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "3965601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "3981201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "4369105": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "4398201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "4410401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "4416401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "4561601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "4723001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "4963201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "496601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "507501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5089301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "511501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5178901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5264201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5518401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5540901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5556801": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5579001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5673901": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5694501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5737401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5737501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5771401": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5873701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5895501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "5904501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "5972301": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "6693501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "6854801": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Riesling» matcher «Gysler Sandstein Riesling Trocken 2025»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "7104501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "7311701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "7425107": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Nebbiolo» matcher «Ioppa Colline Novaresi Rusin Nebbiolo 2025»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "7603601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "7635301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "7703801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "7817701": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Jura» matcher «Jura»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "7829501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "7910201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "8051501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9099801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9120201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9186801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "933801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9745501": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9746001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9747601": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Nebbiolo» matcher «Ioppa Colline Novaresi Nebbiolo Rusin 2025»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "9749601": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9838401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  }
+}
