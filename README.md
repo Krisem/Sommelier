@@ -75,7 +75,8 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 ├── data/
 │   ├── vivino/                        Vivino-eksport (CSV) – 172 viner, 104 ratet
 │   ├── untappd/checkins.csv           Untappd-scrape (90 check-ins, 2019–2026)
-│   └── reference/                     PDF-er (Food&Wine, Zoecklein, TWS Vintage)
+│   ├── reference/                     PDF-er (Food&Wine, Zoecklein, TWS Vintage)
+│   └── user_fit/                      pre-computet fit-klassifisering (regenereres av profile_stats.py)
 │
 ├── tools/
 │   ├── vinmonopolet.py                Polet-API (search, search_with_facets, get_product_details, parse_product_html, find_similar_by_clocks) + diskcache
@@ -85,6 +86,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 │   ├── value_score.py                 Kombinerer kuratert + Aperitif + Vivino + peer-percentile (parallell I/O, 24t cache)
 │   ├── profile_stats.py               auto-derivér vin-statistikk fra Vivino-CSV
 │   ├── untappd_stats.py               auto-derivér øl-statistikk fra Untappd-CSV
+│   ├── user_fit.py                    rule-based fit-classifier mot smaksprofil (v0)
 │   └── aroma_wheel.html               D3-sunburst med Davis/Noble-hjul
 │
 ├── tests/                             pytest-suite (31 tester, ~1s warm)
@@ -130,6 +132,9 @@ python3 tools/profile_stats.py
 
 # Auto-derivér øl-statistikk etter ny Untappd-scrape
 python3 tools/untappd_stats.py
+
+# Regenerér user-fit-klassifisering for hele score-DB-en
+python3 -m tools.user_fit
 
 # Smoke-test Polet-tilkobling
 python3 tools/vinmonopolet.py
@@ -177,6 +182,18 @@ python3 -m pytest tests/test_vinmonopolet_html_fixture.py -v   # bare Polet-drif
 
 **HTML-fixture-test** (`test_vinmonopolet_html_fixture.py`) er drift-vern mot Polet-redesigns: pinnet HTML for én produktside (Fenocchio Barbera, brukerens 4.6-vin) med 14 assertions. Feiler synlig hvis Polets DOM endrer seg. Refresh-script i fil-docstring. Se [ADR-011](docs/ARCHITECTURE.md#adr-011-html-fixture-test-for-polet-drift).
 
+## User-fit-score
+
+Pre-computet fit-klassifisering av alle viner i score-DB-en mot brukerens smaksprofil. Eliminerer behovet for at Claude per-vin resonnerer mot smaksprofilen på batch-spørringer.
+
+**Output:** `data/user_fit/v0.json` med tier (`very_fit / fit / neutral / risky / no_go`) per varenummer.
+
+**Regenereres** automatisk når `profile_stats.py` kjører (etter Vivino-eksport), eller manuelt via `python3 -m tools.user_fit`.
+
+**Versjons-roadmap:** se [`roadmap.md`](roadmap.md). v0 er rule-based; v1/v2 planlagt for kontinuerlig rangering og lærte vekter.
+
+**Designvalg:** se [ADR-015](docs/ARCHITECTURE.md#adr-015-user-fit-score-v0--rule-based-tier-classifier).
+
 ## Cache
 
 Alt eksternt caches på disk i `~/.cache/sommelier/`:
@@ -210,6 +227,7 @@ Etter optimaliserings-økten 2026-05-14:
 1. Overskriv `data/vivino/full_wine_list.csv` (kolonner er stabile).
 2. Kjør `python3 tools/profile_stats.py` – auto-blokken i `smaksprofil.md` regenereres.
 3. Be Claude om å gjennomgå mønstre – nye favoritter / no-go / oppdatert blindspots.
+4. `profile_stats.py` regenererer også `data/user_fit/v0.json` automatisk.
 
 **Etter ny Untappd-scrape:**
 1. Untappd har ingen åpen eksport — full historikk krever autentisert Playwright-scrape (Claude kan kjøre det). Etter at `data/untappd/checkins.csv` er oppdatert:

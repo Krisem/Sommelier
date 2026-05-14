@@ -84,6 +84,11 @@ _(2026-05-12 – Off-dry tysk hvitt: migrert til `knowledge/smaksprofil.md` som 
 **Hvorfor det er en risiko:** Stille feil er dyre å oppdage — brukeren ser bare at en anbefaling mangler klokker, og må gjette hvorfor.
 **Hva jeg gjør annerledes nå:** Pin én rik HTML-fixture som drift-snapshot. 14 assertions mot kjente verdier. Når Polet endrer DOM, feiler pytest synlig med klar melding. Refresh-script dokumentert i fil. Se [ADR-011](../docs/ARCHITECTURE.md#adr-011-html-fixture-test-for-polet-drift). Tester offline, <1 s.
 
+## 2026-05-14 – No-filter-bubble: tier er advarsel, ikke filter
+**Hva skjedde:** Første integrasjon av user-fit-score (v0) hadde workflow-step "Filtrér ut `no_go` og merk `risky` eksplisitt", og demos rangerte tier-first før critic-score. Brukeren reagerte: "jeg ønsker ikke at vi skaper en boble der jeg ikke eksponeres for objektivt gode viner — jeg ønsker bare at de flagges som risky."
+**Hvorfor det var feil:** Filter bubble er et veldokumentert recsys-anti-pattern. For en én-bruker-system uten kollektiv intelligens er det særlig alvorlig — smaksprofilen kan ikke utvides hvis høyt-scorede viner i blindspots aldri blir vist. Filter-instinktet kommer fra "reduser kognitiv last for brukeren", men det fjerner agency.
+**Hva jeg gjør annerledes nå:** Default-rangering er kritiker-score, tier vises som merke. Tier-first-sortering aktiveres KUN ved eksplisitt brukerønske ("noe jeg garantert vil like", "trygge valg"). `risky` og `no_go` vises alltid med tydelig flagg, aldri skjules. Se [ADR-016](../docs/ARCHITECTURE.md#adr-016-no-filter-bubble-prinsippet-for-user-fit-score).
+
 ## 2026-05-14 – Dokumentér WHY, ikke bare WHAT, ved arkitekturvalg
 **Hva skjedde:** Etter en stor audit/refactor-økt hadde vi mange designvalg uten dokumentert begrunnelse. Det ville gjort neste audit unødvendig dyr — vi ville måtte re-derivere konteksten for hvert valg.
 **Hvorfor det er en risiko:** Uten Why-dokumentasjon vil neste refactor enten (a) gjenta gammel feil fordi grunnen ble glemt, eller (b) blokkere på trygg endring fordi ingen vet hvorfor den nåværende formen ble valgt.

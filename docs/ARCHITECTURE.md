@@ -400,6 +400,81 @@ Hver ADR har: **Status** (Accepted / Superseded / Deprecated), **Kontekst**, **B
 
 ---
 
+### ADR-015: User-fit-score v0 — rule-based tier classifier
+
+**Status:** Accepted (2026-05-14)
+
+**Kontekst.** Smaksprofilen er kun konsultert per-vin på inferens-tid. Batch-spørringer ("topp 10 fra slipp", "alle Polet-røde under 400 kr som passer meg") er praktisk umulige. Vi trenger en pre-computet operasjon over smaksprofil × score-DB. Se [roadmap.md](../roadmap.md) for full versjonsplan (v0/v1/v2).
+
+**Beslutning.** Implementér v0 først: en deterministisk regelmotor som parser `knowledge/smaksprofil.md` og klassifiserer hver vin i `data/user_fit/v0.json` i én av fem tier-bøtter (`very_fit | fit | neutral | risky | no_go`). Ingen ML, ingen lærte vekter, ingen feature-vektor. Bare seks regler i prioritets-rekkefølge.
+
+**Hvorfor regelmotor først.** (a) Trivielt å bygge og verifisere, (b) eliminerer åpenbare no-go før Claude reasoning, (c) tier-vokabular matcher eksisterende `[PRØVD]/[LIKNENDE]/[NYTT]`-konvensjon, (d) etablerer pipeline-arkitektur (generator + writer + reader) som v1/v2 kan utvide.
+
+**Konsekvenser.**
+- ✅ Filtrerer ut Provence-rosé / generisk billig Burgund / no-go-liste automatisk
+- ✅ smaksprofil-endringer propagerer til alle 422 viner ved én profile_stats.py-kjøring
+- ✅ Fullt forklarbar per regel (`rule_fired`-felt i output)
+- ⚠️ Bare 5 bøtter — ingen rangering innenfor tier (eksplisitt v0-begrensning, motiverer v1 hvis nødvendig)
+- ⚠️ Bruker ikke klokker (krever Polet-detail-fetch — flyttet til v1)
+
+**Arkitekturføringer.**
+- Ny modul `tools/user_fit.py` — egen modul, ikke utvidelse av `value_score.py`
+- Output i `data/user_fit/v0.json` — strukturert data, ikke `knowledge/scores/` (respekterer ADR-002)
+- Regenereres som biprodukt av `profile_stats.py` (idempotent, samme mønster som auto-derived-blokken i smaksprofil)
+- Versjons-prefiks i filnavn (`v0.json`) — neste versjon skriver til `v1.json` parallelt, enkelt å sammenligne
+- Fit-score er **ortogonalt** til value-score. Ikke bland akser i output.
+
+**Alternativer vurdert.** v1 (weighted sum) og v2 (Ridge-lærte vekter) er dokumentert i roadmap.md som forventede oppfølgings-versjoner. TF-IDF + Rocchio cosine ble vurdert og forkastet — se roadmap.
+
+---
+
+### ADR-016: No-filter-bubble-prinsippet for user-fit-score
+
+**Status:** Accepted (2026-05-14)
+
+**Kontekst.** Den naturlige integrasjons-instinkten ved user-fit-score er å filtrere bort `no_go` og `risky` fra default-resultater — fjerne "dårlige treff" før brukeren ser dem. Dette skaper en *filter bubble*: brukeren eksponeres aldri for objektivt høyt-rangerte viner som ligger i en kategori smaksprofilen er svak på (f.eks. naturvin, Provence-rosé, ukjent New World).
+
+**Beslutning.** Default-oppførsel: rangér batch-spørringer etter **objektiv kvalitet (kritiker-score)**, vis tier som *merke* ved siden av. Aldri auto-filtrér bort `no_go` eller `risky` med mindre brukeren eksplisitt ber om personalisert filtrering.
+
+**Hvorfor.**
+- Brukeren har eksplisitt sagt han ikke vil bli skjermet for "objektivt gode viner"
+- Tier-systemet er bygd for å *advare*, ikke skjule
+- Eksponering for high-score-wines i blindspots er den mest verdifulle utforsknings-mekanismen — det er der smak utvides
+- Filter-bubble-anti-patternet er veldokumentert i recsys-litteratur (Pariser 2011, "The Filter Bubble") og særlig alvorlig for én-bruker-systemer der ingen kollektiv intelligens kompenserer
+
+**Implementering.**
+- Default-rangering: `sorted(wines, key=lambda w: -w.critic_score)` med tier vist som label/merke
+- Tier-first-rangering tillates **kun** når brukeren eksplisitt signaliserer det: "noe jeg garantert vil like", "trygge valg", "ingen risk", "filtrér bort risky" — disse aktiverer en sekundær view
+- Eksplisitt no-go-flagg får aldri skjule en vin fra default-output, men må vises tydelig (`⚠ no_go: matcher no-go-listen`)
+
+**Konsekvenser.**
+- ✅ Brukeren ser hele kataloget med tier-veiledning, beholder agency
+- ✅ Naturlig utforsknings-vektor — høy-score-blindspot-viner forblir synlige
+- ✅ Smaksprofilen kan ikke "blokke" preferanse-utvidelse stille
+- ⚠️ Lister blir lengre / mindre kuraterte i default-view — krever god UI/output-formatering med tydelig tier-merking
+- ⚠️ Brukeren må gjøre den endelige beslutningen — fit-tier reduserer ikke kognitiv last fullt ut
+
+**Eksempel (DN Maislipp rosé):**
+```
+Default (sortert etter critic):
+  92p [fit]      Guy Charlemagne Brut Rosé
+  92p [fit]      Charles Heidsieck Rosé Réserve
+  91p [neutral]  Tschida Himmel auf Erden Rosé 2024   ← naturvin, blindspot
+  90p [fit]      André Clouet Rosé
+  86p [risky]    Dom. Oddo Provence Rosé 2025         ⚠ Provence-snitt 2.38
+
+Personalisert (kun ved eksplisitt request):
+  92p [fit]      Guy Charlemagne
+  92p [fit]      Charles Heidsieck
+  90p [fit]      André Clouet
+```
+
+**Alternativer vurdert.** Mildt penalty på risky (subtract 5 fra critic-score) — forkastet fordi vilkårlig vektingen tilslører hvilken vin som *faktisk* er høyest-rangert. To kolonner side-om-side — forkastet pga informasjons-overload.
+
+**Relatert.** [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier) (user-fit-score-mekanikken som dette prinsippet styrer bruken av).
+
+---
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.

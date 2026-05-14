@@ -10,6 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
 - **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md`)
+- **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
 - **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
@@ -103,6 +104,12 @@ Følg denne rekkefølgen:
    - **NEI** når brukeren bare beskriver smak / leter etter retning (klokker er bedre)
    - Kjør: `python3 -m tools.value_score "<navn>" <årgang>`. Bruk verdict + summary i svaret. Flag når Vivino name-match er "partial"/"weak" eller Aperitif `vintage_mismatch=True` — sier "Aperitif vurderte 2022-årgangen, men score er en proxy".
    - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
+6b. **User-fit-sjekk (rask, alltid lov å gjøre):**
+   - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — slå opp `data/user_fit/v0.json` per varenummer
+   - **No-filter-bubble-prinsippet:** ALDRI auto-filtrér bort `no_go` eller `risky` fra default-rangering. Default = sortér etter objektiv kvalitet (kritiker-score), vis tier som *merke*. Tier er en advarsel, ikke en filter.
+   - Bytt til tier-first-rangering KUN når brukeren eksplisitt ber om personalisering ("noe jeg garantert vil like", "trygge valg for selskapet")
+   - Vis `risky` og `no_go` med tydelig flagg + grunn, men hold dem i listen
+   - Bruk som komplement til, ikke erstatning for, faglig vurdering. Se [ADR-016](docs/ARCHITECTURE.md#adr-016-no-filter-bubble-prinsippet-for-user-fit-score).
 7. **Gi alternativer** – standard: 2–3 viner i ulike prisklasser, rangert (hverdag / weekend / spesielt).
 8. **Merk nytt vs. kjent** for hver vin:
    - `[PRØVD]` – finnes i Vivino-historikken (oppgi rating)
