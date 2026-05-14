@@ -1,6 +1,6 @@
 # Hop-dominerte ølstiler
 
-> Nøytral fagreferanse på Cicerone Level 2/3-nivå for hop-drevne stiler – fra engelsk Bitter til Cold IPA. Bygger på BJCP 2021-rammeverket (kategori 12, 18, 21, 22 og spesialitets-IPA-undersjangrene i 21B). Krysslenkes mot `knowledge/ol_rammeverk.md` (skalaer, glass, malt/gjær) og `deep-knowledge/ol-norge-norden.md` (norske bryggerier, Polets utvalg).
+> Nøytral fagreferanse på Cicerone Level 2/3-nivå for hop-drevne stiler – fra engelsk Bitter til Cold IPA. Bygger på BJCP 2021-rammeverket (kategori 12, 18, 21, 22 og spesialitets-IPA-undersjangrene i 21B). Krysslenkes mot `knowledge/cicerone.md` § "Øl-rammeverk" (skalaer, glass, malt/gjær) og `deep-knowledge/ol-norge-norden.md` (norske bryggerier, Polets utvalg).
 
 ---
 
@@ -35,7 +35,7 @@ Praktisk betyr det: dry-hop **under aktiv gjæring** (typisk dag 2–4, ved høy
 
 ## 2. Humle-taksonomi for hop-dominerte stiler
 
-`ol_rammeverk.md` har grunnsplitten. Her er detalj-nivået sommelieren trenger.
+`knowledge/cicerone.md` § "Øl-rammeverk" har grunnsplitten. Her er detalj-nivået sommelieren trenger.
 
 ### 2.1 Edle europeiske (noble)
 
@@ -521,7 +521,7 @@ Vannprofilen er en av de mest undervurderte stilforskjellene. To bryggerier kan 
 
 ## 12. Krysslink
 
-- `knowledge/ol_rammeverk.md` – ABV/IBU/SRM-skalaer, glassvalg, malt/gjær-grunnlag
+- `knowledge/cicerone.md` § "Øl-rammeverk" – ABV/IBU/SRM-skalaer, glassvalg, malt/gjær-grunnlag
 - `knowledge/cicerone.md` – serveringsregler, ølfeil, smaksvokabular
 - `knowledge/sommelier.md` – matparing-lover (krysslink mellom vin og øl)
 - `deep-knowledge/ol-norge-norden.md` – norske bryggerier, Polets struktur, slipp-rytme, kåringer

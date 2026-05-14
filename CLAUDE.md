@@ -66,75 +66,15 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse)
 
 ## Filer du har tilgang til
 
-### Alltid lastet (`knowledge/`)
+**Alltid lastet (`knowledge/`):** `sommelier.md` (vin-kjerne + drueprofiler + Vinmonopolets rammeverk + deep-knowledge-router), `cicerone.md` (øl-kjerne + BJCP-rammeverk), `smaksprofil.md` (levende bruker-profil — autoritativ for preferanser, blindspots, no-go), `wset_l2_sat.md` (smaksnotater).
 
-| Fil | Innhold | Når lese |
-|---|---|---|
-| [knowledge/sommelier.md](knowledge/sommelier.md) | Lean kjerne for **vin**: drueprofiler, servering-regler, parring-lover, deep-knowledge-pointer | Hver vin-forespørsel |
-| [knowledge/cicerone.md](knowledge/cicerone.md) | Lean kjerne for **øl**: tre akser (malt/hop/gjær), stilfamilier, friskhet vs lagring, parring-prinsipper, øl-spesifikk workflow | Hver øl-forespørsel |
-| [knowledge/smaksprofil.md](knowledge/smaksprofil.md) | **Levende dokument** – brukerens felles smaksprofil for vin OG øl, blindspots, no-go-liste, mønstre, auto-derivert statistikk | **Hver anbefaling** |
-| [knowledge/vinmonopolet_rammeverk.md](knowledge/vinmonopolet_rammeverk.md) | Polets klokker (1–12), stiler, matfarger, smaksinteraksjoner | Hver vin-forespørsel |
-| [knowledge/ol_rammeverk.md](knowledge/ol_rammeverk.md) | BJCP-styles, ABV/IBU/SRM-skalaer, hop-/malt-/gjær-taksonomi, glassvalg, serveringstemperatur | Hver øl-forespørsel |
-| [knowledge/wset_l2_sat.md](knowledge/wset_l2_sat.md) | WSET-vokabular for smaksnotater | Ved presise smakssammenligninger |
+**On-demand fag-referanse (`deep-knowledge/`):** Kanonisk router er [`deep-knowledge/INDEX.md`](deep-knowledge/INDEX.md) — les den ved region-/fag-oppslag.
 
-### On-demand (`deep-knowledge/`)
+**Data:** `data/vivino/full_wine_list.csv` (172 viner med ratings), `data/vivino/cellar.csv`, `data/untappd/checkins.csv` (90 check-ins), `data/critic_scores.csv` per varenummer via `knowledge/scores/*.md` (les `knowledge/scores/INDEX.md`), `data/reference/*.pdf`.
 
-**Kanonisk oppslag:** [deep-knowledge/INDEX.md](deep-knowledge/INDEX.md) — les den først ved region-/fag-oppslag (tabellene under kan drifte).
+**Verktøy:** se "Commands" øverst.
 
-**Vin (WSET L3):**
-
-| Område | Fil |
-|---|---|
-| Italia (Piemonte, Veneto, Toscana, Etna, +) | `deep-knowledge/italia.md` |
-| Tyskland (Mosel, Nahe, Rheingau, Pfalz, +) | `deep-knowledge/tyskland.md` |
-| Champagne + andre musserende | `deep-knowledge/champagne-musserende.md` |
-| Frankrike (utenom Champagne) | `deep-knowledge/frankrike.md` |
-| Spania | `deep-knowledge/spania.md` |
-| Portugal | `deep-knowledge/portugal.md` |
-| Naturvin / orange / lavinngrep | `deep-knowledge/naturvin-orange.md` |
-| Aromatisk hvit (Gewürz, Viognier, Torrontés, +) | `deep-knowledge/aromatisk-hvit.md` |
-| New World (USA, NZ, AU, ZA, CL, AR, UY) | `deep-knowledge/new-world.md` |
-| Pinot Noir på tvers av regioner | `deep-knowledge/pinot-noir.md` |
-| Hellas, Tokaj, Østerrike, Slovenia, Georgia, Lebanon, Sveits | `deep-knowledge/ovrige-regioner.md` |
-| Servering, lagring, matparing (kjemi + tabeller) | `deep-knowledge/servering-og-lagring.md` |
-| Norsk vinmarked (importører, Polet, vintage, lagringsstrategi) | `deep-knowledge/norsk-marked.md` |
-
-**Øl (Cicerone L2/3):**
-
-| Område | Fil |
-|---|---|
-| Hop-dominert (IPA, NEIPA, DDH, DIPA, Pale, Session, Cold IPA, +) | `deep-knowledge/ol-hopdominert.md` |
-| Belgisk + fransk (Saison, Witbier, Tripel, Dubbel, Quad, Trappist) | `deep-knowledge/ol-belgisk.md` |
-| Tysk + tjekkisk (Pilsner, Helles, Märzen, Bock, Schwarz, Hefeweizen, +) | `deep-knowledge/ol-tysk-tjekkisk.md` |
-| Malt-dominert (Brown, Porter, Stout, Imperial, BA, Barleywine, Old Ale) | `deep-knowledge/ol-maltdominert.md` |
-| Sur + vill (Lambic, Gueuze, Flanders, Berliner, Gose, Wild Ale, Brett) | `deep-knowledge/ol-sur-vill.md` |
-| Servering, lagring, parring (øl-kjemi + tabeller) | `deep-knowledge/ol-servering-parring.md` |
-| Norsk + nordisk øl-marked (bryggerier, Polet-rytme, kåringer) | `deep-knowledge/ol-norge-norden.md` |
-
-### Data
-
-| Fil | Innhold |
-|---|---|
-| `data/vivino/full_wine_list.csv` | 172 viner med ratings, druer, region, drikkevindu |
-| `data/vivino/cellar.csv` | Det som er dokumentert i kjelleren (brukeren har mer enn dette – spør ved behov) |
-| `data/untappd/checkins.csv` | 90 øl-check-ins (2019–2026, autentisert scrape) – ratings, stiler, bryggerier, ABV/IBU/global, sted |
-| `data/reference/*.pdf` | Food&Wine, Zoecklein, TWS Vintage Guide 2024 |
-
-### Verktøy
-
-| Fil | Innhold |
-|---|---|
-| `tools/vinmonopolet.py` | vmpws-API helpers (`search`, `get_product_details`, `find_similar_by_clocks`) + diskcache |
-| `tools/profile_stats.py` | Auto-derivér vin-statistikk fra Vivino-CSV til `smaksprofil.md` |
-| `tools/untappd_stats.py` | Auto-derivér øl-statistikk fra Untappd-CSV til `smaksprofil.md` |
-| `tools/aroma_wheel.html` | D3-sunburst med brukerens aroma-preferanser |
-
-### Oppgaver og læring (`tasks/`)
-
-| Fil | Innhold | Når oppdatere |
-|---|---|---|
-| `tasks/todo.md` | Aktive oppgaver / pågående tråder | Når brukeren ber om en ny ikke-triviell oppgave |
-| `tasks/lessons.md` | Læring fra korreksjoner | Umiddelbart etter hver brukerkorreksjon |
+**Oppgaver og læring:** `tasks/todo.md` (aktive tråder), `tasks/lessons.md` (oppdater umiddelbart etter hver brukerkorreksjon).
 
 ## Workflow for hver anbefaling
 
@@ -212,26 +152,12 @@ Filer i `deep-knowledge/` er nøytral fagreferanse. Ingen "brukerens 4.6", ingen
 
 Forbindelsen mellom region-fakta og bruker-preferanse skjer på inferens-tid: Claude leser begge (deep-knowledge OG smaksprofil) og syntetiserer en anbefaling som er informert av begge.
 
-## Hvordan bruke vinmonopolet.py
+## Vinmonopolet-tool — viktig
 
-vmpws-APIet er åpent og krever ingen nøkkel. Bruk Bash:
-
-```bash
-cd "/Users/kristoffer/Claude Code/GitHub/Sommelier"
-python3 -c "
-from tools.vinmonopolet import search, filter_results, get_product_details, format_for_recommendation
-results = search('Barbera d Alba', page_size=20)
-relevant = filter_results(results, max_price=300, category='Rødvin')
-for p in relevant[:3]:
-    print(format_for_recommendation(p))
-"
-```
-
-**Rate limit:** Ikke offisielt dokumentert. Vær konservativ – maks ~30 produkt-oppslag per sesjon. Cache resultater i samtalen. Ikke parallelliser.
-
-**Klokker/lukt/smak** ligger ikke i søke-APIet – `get_product_details(url)` skraper produktsiden. Ikke kall det for alle treff, bare for de 2–3 mest aktuelle.
-
-**IKKE bruk** `apis.vinmonopolet.no` (det "offisielle" APIet). Det er låst til varenummer + kortnavn. Webshop-APIet er det reelle. (Bakgrunn: se `knowledge/_archive/rapport.md`.)
+- **Rate limit:** maks ~30 produkt-oppslag per sesjon. Cache i samtalen.
+- **`get_product_details`** scraper produktsiden — kall kun for 2–3 mest aktuelle treff, ikke alle.
+- **IKKE bruk** `apis.vinmonopolet.no` (begrenset til varenummer+kortnavn) — webshop-APIet er det reelle. Bakgrunn: `knowledge/_archive/rapport.md`.
+- Bruk-eksempel: se docstring + `if __name__ == "__main__"` i `tools/vinmonopolet.py`.
 
 ## Output-format
 
@@ -275,11 +201,4 @@ Flag dårlig value i alle prisklasser.
 
 ## Blindspots
 
-Markér `[NYTT]` med lavere konfidens i disse områdene (se `knowledge/smaksprofil.md` for full liste – det er den autoritative kilden):
-
-- Asiatisk mat
-- New World rødvin utenfor Italia/Frankrike/Tyskland
-- Naturvin / orange / hudkontakt
-- Aromatisk hvitvin (Viognier, Gewürz, Torrontés)
-- Spanske rødviner (kun 4 i datasettet)
-- Pinot Noir generelt (1.5–4.5 spenn)
+Markér `[NYTT]` med lavere konfidens når du anbefaler i et område hvor brukeren har lite data. Autoritativ liste: `knowledge/smaksprofil.md` § Blindspots.

@@ -1,6 +1,6 @@
 # Cicerone-kjerne – sommelier for øl
 
-> Lean kjerne. Lastes ved hver øl-forespørsel sammen med `smaksprofil.md` (felles for vin og øl) og `ol_rammeverk.md`. Dyp regional/stil-kunnskap ligger i `deep-knowledge/ol-*.md`.
+> Lean kjerne. Lastes ved hver øl-forespørsel sammen med `smaksprofil.md` (felles for vin og øl). BJCP-rammeverket (skalaer, hop/malt/gjær-taksonomi, glass) er flettet inn i § "Øl-rammeverk (BJCP)" lenger ned. Dyp regional/stil-kunnskap ligger i `deep-knowledge/ol-*.md`.
 
 ## Forhold til vin-systemet
 
@@ -18,7 +18,7 @@ En IPA er bare "hop-dominert"; en Imperial Stout er "malt-dominert + fat-/gjær-
 
 ## Stilfamilier (kort oversikt)
 
-Mer i `ol_rammeverk.md`. Deep-dive per familie i `deep-knowledge/`:
+Mer detalj (BJCP, skalaer) i § "Øl-rammeverk" lenger ned. Deep-dive per familie i `deep-knowledge/`:
 
 | Familie | Karakter | Klassiske representanter | Deep-knowledge-fil |
 |---|---|---|---|
@@ -52,7 +52,7 @@ Mer i `ol_rammeverk.md`. Deep-dive per familie i `deep-knowledge/`:
 
 ## Servering – temperatur og glass
 
-Detaljer i `deep-knowledge/ol-servering.md` (kommer) og kort tabell i `ol_rammeverk.md`. Tommelfingerregler:
+Detaljer i `deep-knowledge/ol-servering.md` (kommer) og fyldig stil-tabell i § "Øl-rammeverk" lenger ned. Tommelfingerregler:
 
 - **Lyse, hop-dominerte stiler**: 5–8 °C — ikke iskaldt, men kjølig
 - **Belgisk og mørkere ale**: 8–12 °C — varmt nok til at ester og fenoler åpner seg
@@ -102,7 +102,7 @@ Brukeren har sagt at øl er sesongbasert for ham. Tenk:
 
 Mirror av vin-workflow med øl-spesifikke avvik:
 
-0. **Les kjernen** — denne fila + `ol_rammeverk.md` + `smaksprofil.md` (felles).
+0. **Les kjernen** — denne fila (inkluderer BJCP-rammeverket) + `smaksprofil.md` (felles).
 1. **Sjekk Untappd-historikk** — `data/untappd/checkins.csv`. Hva har han sjekket inn? Sortert på rating og dato (vekt nyere tyngre, men husk: han prøver mye nytt så lav rating på én ny stil ≠ permanent no-go).
 2. **Stil-familie først** — identifiser hvilken familie forespørselen lander i, slå opp riktig `deep-knowledge/ol-*.md`.
 3. **Sesong-sjekk** — er stilen i sesong? Hvis nei, foreslå alternativ eller forklar bevisst valg.
@@ -131,12 +131,164 @@ Mirror av vin-workflow med øl-spesifikke avvik:
 - Servering-kjemi og parring-kjemi er **felles fag** — `deep-knowledge/servering-og-lagring.md` har tilberedningsmetode-tabellen som gjelder også for øl.
 - WSET-vokabular (`wset_l2_sat.md`) overlapper delvis (frukt, krydder, eik, mineral) — men hop-aroma og malt-karakter krever ekstra ord (harpiks, citrus rind, gress, biscuit, ristet, mørk sjokolade, "barnyard funk").
 
+## Øl-rammeverk (BJCP, skalaer, taksonomi, glass)
+
+> Nøytral fag-referanse: ABV, IBU, SRM, BJCP-stilkategorier, glassvalg, serveringstemperatur, hop-/malt-/gjær-taksonomi.
+
+### De fire kvantitative aksene
+
+**ABV (Alcohol By Volume).** Volumprosent etanol. Direkte sammenlignbart med vin.
+
+| Spenn | Karakter | Eksempler |
+|---|---|---|
+| 0,0–0,5 % | Alkoholfri | NA Pale Ale, NA Stout |
+| 0,5–3,5 % | Session / lav | Berliner Weisse, Mild, Radler, Gose |
+| 3,5–5,5 % | Standard | Pilsner, Helles, Pale Ale, Stout |
+| 5,5–8,0 % | Sterkøl | IPA, Tripel, Imperial Pilsner, Doppelbock |
+| 8,0–11 % | Imperial / Strong | DIPA, Imperial Stout, Belgian Strong, Barleywine |
+| 11–15+ % | Extreme / BA | BA Imperial Stout, Eisbock, Quadrupel, Barleywine |
+
+**Norsk implikasjon:** Skjeringspunktet 4,7 % bestemmer salgskanal. Over 4,7 % → Polet og sterkøl-utvalg. Under 4,7 % → dagligvare. Mange craft-stiler ligger akkurat over (5,0–6,5 %), så Polet er hovedkanalen for craft.
+
+**IBU (International Bitterness Units).** Måler iso-α-syrer fra hop. Logaritmisk i opplevelse — forskjellen 20→40 IBU er hørbar, 80→100 mindre.
+
+| Spenn | Opplevelse | Stilfølge |
+|---|---|---|
+| 5–15 | Nær umerkbar bitterhet | Hefeweizen, Witbier, Berliner Weisse, Sweet Stout |
+| 15–25 | Subtil balanse | Helles, Kölsch, English Mild, Brown Ale |
+| 25–40 | Tydelig men ikke dominerende | Pilsner, Pale Ale, Saison, Porter |
+| 40–60 | Bittert, balansert mot malt | West Coast IPA klassisk, ESB, Dry Stout |
+| 60–90 | Aggresivt bittert | DIPA klassisk, Imperial IPA |
+| 90+ | Ekstremt bittert (mest teoretisk) | "Triple IPA", utgått trend |
+
+**Viktig:** NEIPA og moderne DIPA bruker ofte sen-tilsetting / whirlpool / dry-hop som gir høy aroma men lav målt IBU. En NEIPA kan ha 35 IBU men oppfattes nesten ikke-bitter pga hop-aromakompleks som maskerer bitterhet. IBU alene er ikke nok — kombiner med stil-kontekst.
+
+**SRM (Standard Reference Method) — farge.** Skala fra ~2 (halmgul) til ~40+ (svart). Approksimativ konvertering: SRM × 1,97 ≈ EBC.
+
+| SRM | Beskrivelse | Stiler |
+|---|---|---|
+| 2–4 | Halm til lys gul | Pilsner, Helles, Witbier, Berliner Weisse |
+| 4–7 | Gylden | Kölsch, Pale Ale, IPA klassisk |
+| 7–14 | Rav til kobber | Märzen, ESB, Brown Ale, Saison |
+| 14–22 | Mørk kobber til brun | English Brown, Dunkel, Bock, Doppelbock |
+| 22–35 | Mørk brun til svart-brun | Porter, Stout, Schwarzbier |
+| 35+ | Helt ugjennomtrengelig svart | Imperial Stout, BA Stout |
+
+Farge predikerer ikke direkte smak (Schwarzbier er svart men lett, Imperial Stout er svart og fyldig), men korrelerer med maltprofil.
+
+**Stamvørter og restsukker (OG/FG).** OG (Original Gravity) er sukkerinnholdet før gjæring, FG etterpå. Forskjellen → ABV. FG forteller om ølet er tørt eller sukker-restende:
+
+- FG 1,000–1,010 = svært tørr (Saison, vill-fermentert øl)
+- FG 1,010–1,018 = standard
+- FG 1,018–1,030 = søtt / fyldig (Imperial Stout, Doppelbock, Sweet Stout)
+- FG 1,030+ = veldig restsukker (BA Imperial Stout, Eisbock)
+
+De fleste etiketter oppgir bare ABV og IBU. OG/FG finnes ofte på bryggeriens nettside eller Untappd-detaljer.
+
+### BJCP 2021 stil-taksonomi (forenklet til 9 praktiske familier)
+
+Den offisielle 2021-guiden har 34 hovedkategorier:
+
+1. **Standard amerikansk lager (Cat 1)** — American Light Lager, American Lager, Cream Ale, American Wheat Beer. Sjelden i craft-spennet, mest industrielt.
+2. **Internasjonal lager (Cat 2)** — International Pale/Amber/Dark Lager. Sommer-grillmat, lett.
+3. **Tysk lager (Cat 3, 4, 5, 7, 8, 9)** — Munich Helles, Festbier, Pilsner (DE+CZ), Märzen, Dunkel, Schwarzbier, Bock, Doppelbock, Eisbock. Klassikere, sesong (Märzen høst, Bock vår, Doppelbock vinter).
+4. **Tysk hvete (Cat 10)** — Weissbier (Hefeweizen), Dunkelweizen, Weizenbock. Sommer, frokost-klassikere, schnitzel.
+5. **Britisk og irsk ale (Cat 11, 13, 14, 15, 16, 17)** — Ordinary/Best Bitter, ESB, English Mild, English Brown, Porter, Irish Stout, Sweet/Oatmeal/Foreign Extra/Imperial Stout, Old Ale, Barleywine. Vinter-pub-stemning, parring til stekt rødt kjøtt og pub-mat.
+6. **Belgisk og fransk (Cat 23, 24, 25, 26)** — Witbier, Belgian Pale, Bière de Garde, Saison, Belgian Tripel/Dubbel/Strong Dark/Golden Strong, Quadrupel. Finstemt parring, mat-vin-erstatter.
+7. **Sur og vill (Cat 23B–F, 27, 28)** — Berliner Weisse, Gose, Lambic, Gueuze, Fruit Lambic, Flanders Red, Flanders Brown / Oud Bruin, Wild Ale, American Brett. Apéritif, sjømat, modne oster.
+8. **Amerikanske ales og IPA (Cat 12, 18, 19, 20, 21, 22, B-categories)** — Blonde Ale, American Pale Ale, American Amber/Brown/Porter/Stout, IPA (West Coast, English, Black, Brown, Red, Rye, White, Brut, NEIPA, Session, DIPA), Imperial IPA. Craft-hjertet.
+9. **Fruktede, krydrede, røkte, eksperimentelle (Cat 29–34)** — Fruit Beer, Spice/Herb/Vegetable Beer, Smoked Beer (Rauchbier), Wood-Aged Beer, Specialty Beer.
+
+Se BJCP 2021 PDF i `data/reference/bjcp_2021.pdf` (bjcp.org/bjcp-style-guidelines).
+
+### Hop-taksonomi (aromakategorier)
+
+- **Klassiske noble (Europa):** Saaz (CZ, Pilsner), Hallertau Mittelfrüh (DE, Helles/Märzen), Tettnang, Spalt (DE), Styrian Goldings (SI, Saison). Karakter: gress, urter, lett krydret, svært subtil.
+- **Britiske:** East Kent Goldings, Fuggles, Challenger, Target, Bramling Cross. Karakter: jord, te, ribsblader, mild krydret.
+- **Amerikanske C-hops (Pacific Northwest):** Cascade, Centennial, Citra, Chinook, Columbus, Crystal, Comet. Karakter: grapefruit, pinje, lett tropisk.
+- **Moderne tropiske:** Mosaic, Galaxy (AU), Nelson Sauvin (NZ), Motueka, Riwaka, Sabro, Idaho 7, Strata, Azacca. Karakter: passion frukt, mango, ananas, white wine grape, kokos (Sabro).
+- **Spesielle:** Simcoe (pinje + katt-pee, polariserende), Amarillo (appelsin), El Dorado (steinfrukt), Cryo / Lupulin Powder (konsentrerte oljer).
+
+Når bryggeriene lister hops på etiketten — sjekk om de er biotransformerte (NEIPA-teknikk: hops + aktiv gjær = nye smaker som ikke finnes i hops alene). Biotransformasjon gir karakteristiske hvitt-vin/tropisk-eksotisk-aromer som er signatur for NEIPA.
+
+### Malt-taksonomi (lys → mørk)
+
+| Malt | Bidrag | Stiler |
+|---|---|---|
+| Pilsner / Pale | Base, lett brød | Alle |
+| Munich | Brød, lett karamell | Helles, Märzen, Bock |
+| Wien | Honning, brød | Märzen, amber |
+| Karamell / Crystal | Karamell, sødme | Brown, ESB, Bock, Imperial Stout |
+| Spesial-B | Rosin, tørket frukt | Belgian Dubbel, Quadrupel |
+| Sjokolade-malt | Sjokolade, kakao | Porter, Stout |
+| Roasted Barley | Brent kaffe, bitter | Irish Stout, Foreign Extra |
+| Black Patent | Aske, ekstrem mørk | Schwarzbier, Black IPA |
+| Røkt malt | Røyk (bøk eller torv) | Rauchbier, Smoked Porter |
+
+### Gjær-familier
+
+| Familie | Stiler | Karakter |
+|---|---|---|
+| **Saccharomyces cerevisiae** (alegjær) | Ale, IPA, Stout, Saison | Variabel — fra rene (US-05) til ester-frukt (English ale) til kryddernellik/banan (Hefeweizen) |
+| **S. pastorianus** (lagergjær) | Pilsner, Helles, Bock | Rene, lite ester, kjølig gjæring 8–13 °C |
+| **Brettanomyces bruxellensis / claussenii** | Lambic, Wild Ale, Saison med Brett | "Funk" — gård, hest, lær, ananas, tropisk |
+| **Lactobacillus** | Berliner Weisse, Gose, Sour Stout | Melkesyre — sitron, yoghurt, friskhet |
+| **Pediococcus** | Lambic blend, Flanders Red | Brettende-funk og melkesyre — også diacetyl (smør) i tidlig fase |
+
+### Glassvalg
+
+| Glasstype | Stiler | Hvorfor |
+|---|---|---|
+| **Tulipan** | NEIPA, IPA, Belgian, Saison, Stout standard | Konsentrerer aroma, holder skum, allroundsvinner |
+| **Snifter / Tasting glass** | Imperial Stout, Barleywine, BA-stiler, Quad | Liten åpning, intensiv aroma, varmer mellom hender |
+| **Pilsner / Pokal** | Pilsner, Helles, Kölsch (Stange-variant) | Høyt, smalt, viser farge og bobler, holder kjølig |
+| **Weizen-glass** | Hefeweizen, Dunkelweizen | Bred topp for skumvolum, smal bunn for stigning |
+| **Pint / Nonic** | English ales, Stout, brown | Praktisk, klassisk pub-format |
+| **Goblet / Chalice** | Trappist (Chimay, Westvleteren, La Trappe) | Bredere åpning slipper aroma og bobler |
+| **Stemless / standard øl-glass** | Lager, lette IPA i avslappet kontekst | OK for hverdag, ikke optimalt |
+
+**Praktisk minimum hjemme:** 4–6 tulipaner (universal craft), 2–4 snifters (for sterke mørke), eventuelt 2 Weizen og 2 Pilsner-glass. Som med vin: form > merkenavn.
+
+### Serveringstemperatur per stil (utvidet)
+
+Bruker tommelfingerreglene i § "Servering – temperatur og glass" øverst som lommekort; her er stil-for-stil:
+
+| Stil | Temp | Notat |
+|---|---|---|
+| Pilsner / Helles / lyse lager | 4–6 °C | Klassisk "kald øl" — ikke iskaldt eller du mister malt-aroma |
+| Hefeweizen / Witbier | 5–7 °C | Aromakompleks åpner ved 7 °C |
+| Pale Ale / IPA klassisk | 6–8 °C | Som hvitvin |
+| NEIPA / DDH | 7–9 °C | For kald = aroma låses, men ikke over 10 °C |
+| Saison / Belgian Pale | 8–10 °C | Som hvit Burgund |
+| Stout / Porter standard | 8–12 °C | Som rosé |
+| Brown Ale / Bock | 10–12 °C | Som lett rødvin |
+| Imperial Stout / Barleywine | 10–14 °C | Som fyldig rødvin |
+| BA-stiler | 12–16 °C | Som modent rødvin — alkohol bærer aroma |
+| Lambic / Gueuze | 8–10 °C | Som tørr Riesling Spätlese |
+
+### Servering-praktisk
+
+- **Helling:** tilt glasset 45°, hell sakte til glasset er halvfullt, rett opp og fortsett — gir 2–3 cm skum (perfekt for å frigjøre aroma).
+- **Ikke fris-glasset** — kalde glass mister hop-aroma og kan brekke ved temperatursjokk fra varmt øl.
+- **Skum er aroma-leverandør** — ikke unngå det. Skum slipper flyktige forbindelser kontinuerlig.
+- **Mørke flasker > klare.** Lys (særlig UV) skuner øl i sekunder gjennom klart eller grønt glass via 3-MBT-reaksjon. Boks er beste UV-vern.
+- **Boks vs flaske:** Boks vinner på UV og oksygenoverføring (lavere). Smaksmessig ingen forskjell hvis presset på flaske er likt.
+
+### Kilder
+
+- BJCP 2021 Style Guidelines (bjcp.org/bjcp-style-guidelines)
+- Garrett Oliver, *The Oxford Companion to Beer* (2011)
+- Randy Mosher, *Tasting Beer* (2nd ed, 2017)
+- John Palmer, *How to Brew* (4th ed)
+- Brewers Association style guidelines (parallell til BJCP)
+
+---
+
 ## Filer du har tilgang til (øl-spesifikt)
 
 | Fil | Innhold | Når lese |
 |---|---|---|
-| `knowledge/cicerone.md` (denne) | Kjerne for øl | Hver øl-forespørsel |
-| `knowledge/ol_rammeverk.md` | BJCP-styles + IBU/ABV/SRM-skalaer + glass | Hver øl-forespørsel |
+| `knowledge/cicerone.md` (denne) | Kjerne for øl + BJCP-rammeverk (skalaer, hop/malt/gjær, glass) | Hver øl-forespørsel |
 | `knowledge/smaksprofil.md` | Felles smaksprofil – også med øl-seksjon | Hver anbefaling |
 | `deep-knowledge/ol-*.md` | Stilfamilie-deep-dives | On-demand per forespørsel |
 | `data/untappd/checkins.csv` | Brukerens 90 check-ins fra Untappd | Hver anbefaling |
