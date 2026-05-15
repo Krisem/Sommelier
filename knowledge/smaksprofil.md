@@ -430,3 +430,4 @@ Avklares per spørsmål – det er en del av samtaleflyten. Når brukeren spør 
 - **Gamle 4.5 fra 2014–2016 er ikke nødvendigvis fortsatt favoritter** – bekreft før du baserer mye på dem
 - **Jeg vil ha grundige forklaringer** – ikke kutt på "hvorfor"
 - **Marker alltid [PRØVD] / [LIKNENDE] / [NYTT]** når du anbefaler
+- **Flagg amerikanske produkter med `[USA]`** når land = United States. Jeg ønsker å unngå dem, men vil bli eksponert med tydelig merking — aldri filtreres bort. Samme prinsipp som tier-flagg (no-filter-bubble, ADR-016).

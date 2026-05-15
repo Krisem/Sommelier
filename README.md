@@ -7,7 +7,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 ## Hva systemet kan
 
 **Anbefale**
-- Foreslå **vin og øl** ut fra dokumenterte preferanser (Vivino + Untappd + felles smaksprofil) – med eksplisitt merking av `[PRØVD]`, `[LIKNENDE]` eller `[NYTT]`.
+- Foreslå **vin og øl** ut fra dokumenterte preferanser (Vivino + Untappd + felles smaksprofil) – med eksplisitt merking av `[PRØVD]`, `[LIKNENDE]` eller `[NYTT]`, samt `[USA]` ved amerikansk opprinnelse (no-filter-bubble-prinsippet: synliggjøres, ikke filtreres bort — se [ADR-016](docs/ARCHITECTURE.md#adr-016-no-filter-bubble-prinsippet-for-user-fit-score)).
 - Verifisere mot Polet (pris, lager, klokker, drueblanding, stil for både vin og øl) – betinget, ikke automatisk: bare ved kjøp, value-spørsmål, eller når klokker faktisk hjelper.
 - Finne lignende viner via klokke-profil-similarity (euklidsk avstand på fylde/friskhet/garvestoff).
 - Be om presisering ("vin eller øl?") kun ved ekte tvetydighet — gå direkte når lean er åpenbar.
