@@ -180,9 +180,9 @@ def parse_product_html(html: str) -> dict:
     result["klokker"] = clocks
 
     # Drueblanding
-    m = re.search(r'aria-label="([^"]+ \d+ prosent)"', html)
-    if m:
-        result["druer"] = m.group(1)
+    druer = re.findall(r'aria-label="([^"]+ \d+ prosent)"', html)
+    if druer:
+        result["druer"] = ", ".join(druer)
 
     # Stil – kommer rett før "Drikkeklar"-feltet på produktsiden
     stil_patterns = [
