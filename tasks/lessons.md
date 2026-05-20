@@ -17,6 +17,11 @@ Format:
 
 ---
 
+## 2026-05-20 – Gjettet drueblanding i stedet for å sjekke
+**Hva skjedde:** OMA Piemonte Rosso 3L — parseren returnerte "Barbera 90 prosent". Jeg skrev "90 % Barbera + (sannsynligvis Nebbiolo/Dolcetto)" uten å åpne HTML-en. Faktisk blanding: 90 % Barbera + 5 % Dolcetto + 5 % Nebbiolo. Brukeren spurte hvorfor jeg ikke hadde sjekket.
+**Hvorfor det var feil:** To feil samtidig. (1) Parser-bug: `re.search` på `aria-label="... \d+ prosent"` returnerer kun første match — alle blendinger ble kuttet til hoveddrue. (2) Selv når output-en ser "rar" ut (90 % uten resten oppgitt), skrev jeg "sannsynligvis X" i stedet for å verifisere mot kilden. Det er hallusinasjon kamuflert som hedging.
+**Hva jeg gjør annerledes nå:** Hvis et drue-felt ender på "X prosent" der X < 100, er det per definisjon en blanding — sjekk produktsiden selv (curl/grep aria-label) før jeg gjetter. Fix: `re.findall` i `parse_product_html` slik at alle druer i blandingen returneres. La til dette som sjekkpunkt: prosent-sum skal være 100 eller blanding er ufullstendig.
+
 ## 2026-05-12 – Bruk vmpws, ikke det "offisielle" APIet
 **Hva skjedde:** Førsteversjon brukte `apis.vinmonopolet.no/products/v0` (subscription-key). Det returnerer kun varenummer + kortnavn – ubrukelig for anbefalinger.
 **Hvorfor det var feil:** "Open"-tieren er låst. Stock-endepunktet er for wholesalere (404 ellers).
