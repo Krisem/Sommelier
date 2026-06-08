@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import statistics
+import sys
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -351,6 +352,17 @@ def main() -> None:
     block = render(rows)
     update_profile(block)
     print(f"Oppdaterte {PROFILE_PATH} med {len(rows)} ratede øl-check-ins.")
+
+    # Regenerér øl-fit-klassifisering (derivert artefakt — feiler ikke hovedjobben)
+    try:
+        if str(ROOT) not in sys.path:
+            sys.path.insert(0, str(ROOT))
+        from tools.beer_fit import write_beer_v0_json
+
+        beer_path = write_beer_v0_json()
+        print(f"Øl-fit beer_v0 regenerert: {beer_path}")
+    except Exception as e:  # noqa: BLE001 — best-effort, skal ikke brekke statistikk
+        print(f"Øl-fit-regenerering hoppet over: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

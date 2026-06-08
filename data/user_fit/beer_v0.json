@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "version": "beer_v0",
+    "generated_at": "2026-06-08T19:02:32+00:00",
+    "source": "data/untappd/checkins.csv (via untappd_stats.agg_by_family)",
+    "n_families": 19,
+    "tier_counts": {
+      "neutral": 14,
+      "risky": 3,
+      "very_fit": 1,
+      "fit": 1
+    }
+  },
+  "Barleywine / Old Ale / Wee Heavy": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 3.75
+  },
+  "Belgian Strong / Trappist": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.50 (n=11) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 11,
+    "snitt": 3.5
+  },
+  "Bock / Doppelbock / Eisbock": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.33 (n=3) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 3,
+    "snitt": 3.33
+  },
+  "Brown / Mild / Bitter": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.36 (n=11) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 11,
+    "snitt": 3.36
+  },
+  "Fruit / Spice / Specialty": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 2.5
+  },
+  "Helles / Lager": {
+    "tier": "risky",
+    "reasons": [
+      "Under bekymrings-terskel: snitt 3.08 (n=6)."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring",
+    "n": 6,
+    "snitt": 3.08
+  },
+  "IPA (standard)": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.50 (n=2) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 2,
+    "snitt": 3.5
+  },
+  "Kölsch / Altbier": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 3.75
+  },
+  "Lambic / Gueuze / Wild": {
+    "tier": "very_fit",
+    "reasons": [
+      "Bekreftet sterk preferanse: snitt 3.88 (n=4, nyere 4.25)."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekreftet_snitt",
+    "n": 4,
+    "snitt": 3.88
+  },
+  "Märzen / Festbier / Vienna": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 4.0
+  },
+  "NEIPA / Hazy IPA": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.31 (n=4) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 4,
+    "snitt": 3.31
+  },
+  "Pilsner": {
+    "tier": "risky",
+    "reasons": [
+      "Under bekymrings-terskel: snitt 2.97 (n=8)."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring",
+    "n": 8,
+    "snitt": 2.97
+  },
+  "Porter / Baltic Porter": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.75 (n=5) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 5,
+    "snitt": 3.75
+  },
+  "Rauchbier / Smoked": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 3.0
+  },
+  "Saison / Farmhouse": {
+    "tier": "risky",
+    "reasons": [
+      "Under bekymrings-terskel: snitt 3.00 (n=4)."
+    ],
+    "confidence": "high",
+    "rule_fired": "bekymring",
+    "n": 4,
+    "snitt": 3.0
+  },
+  "Schwarzbier / Dunkel": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindspot: kun n=1 check-in(s) — for tynt for konklusjon."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot",
+    "n": 1,
+    "snitt": 3.5
+  },
+  "Stout (standard)": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.61 (n=9) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 9,
+    "snitt": 3.61
+  },
+  "Sur (Berliner / Gose / Sour)": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet preferanse: snitt 4.00 (n=2, nyere 4.00)."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_familie",
+    "n": 2,
+    "snitt": 4.0
+  },
+  "Witbier / Belgian Pale": {
+    "tier": "neutral",
+    "reasons": [
+      "Mellom terskler: snitt 3.35 (n=5) — verken bekreftet eller bekymring."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default",
+    "n": 5,
+    "snitt": 3.35
+  }
+}

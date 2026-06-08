@@ -475,6 +475,58 @@ Personalisert (kun ved eksplisitt request):
 
 ---
 
+### ADR-017: Eval-harness før v1 — modell-agnostisk rangerings-måling
+
+**Status:** Accepted (2026-06-08)
+
+**Kontekst.** Roadmap-en eskalerer user-fit fra v0 (regler) til v1 (vektet sum) til v2 (Ridge). Triggeren mellom versjonene var subjektiv ("mangler jeg rangering innenfor tier?"). Uten en måte å måle om en ny modell faktisk *slår* den forrige, ville v1/v2 være vibes-drevet — og med n=111 single-user-ratinger er overfitting-risikoen reell.
+
+**Beslutning.** Bygg evaluerings-harnessen (`tools/eval_fit.py`) som et eget, modell-agnostisk steg *før* v1. En "scorer" er `Callable[[dict], float | None]`. Harnessen måler hver scorer mot brukerens egne `Your rating` via Spearman + NDCG@5 på en tidsbasert train/test-split (`Scan date < 2024-01-01`), med fire baselines (random, vivino_avg, style_avg, critic) og dagens v0-tier konvertert til ordinal score.
+
+**Hvorfor før v1.** Da blir "bygg v1?" et empirisk spørsmål, ikke en magefølelse. v0-vs-baseline-tallene avgjør om v1 i det hele tatt er rettferdiggjort.
+
+**Konsekvenser.**
+- ✅ Første kjøring viste **v0_tier Spearman +0.59** — slår style_avg (+0.06) og random (+0.30). v0 fanger reell signal; **v1-triggeren er ikke oppfylt**.
+- ✅ **vivino_avg (+0.63) er en overraskende sterk baseline** — listen en v1 må slå er høyere enn roadmap antok.
+- ✅ Avslørte at critic-DB-en (Polet-varenr) overlapper **1/111** med brukerens drukne viner — rapportert som warning, ikke skjult.
+- ⚠️ n_test=24 → alle metrikker er indikative, ikke konklusive. Harnessen printer stående advarsel.
+
+**Arkitekturføringer.**
+- Ren stdlib (scipy finnes ikke) — average-rank Spearman håndterer de mange ties i ratingene.
+- Determinisme er hard krav: seedet PRNG for random-baseline, deterministisk lockbox-valg (ingen `random`/`Date.now`). Gjør resultater testbare.
+- Lockbox rapporteres BÅDE som `test_full` og `test_ex_lockbox` — på statisk v0 koster lockbox signal uten å beskytte mot noe; hard utelukkelse håndheves først ved v1-tuning.
+- Critic- og v0-baselines scores on-the-fly på CSV-radene (ingen varenr-join mulig).
+
+**Alternativer vurdert.** Bygge v1 direkte og evaluere etterpå — forkastet: da har man ingen baseline å vurdere v1 mot, og fristelsen til å rasjonalisere et dårlig resultat er stor. p-verdier — forkastet: meningsløst på n=24 uten scipy.
+
+---
+
+### ADR-018: Øl-fit deriverer fra Untappd-CSV, ikke fra smaksprofil-markdown
+
+**Status:** Accepted (2026-06-08)
+
+**Kontekst.** Vin-fit (ADR-015) parser `knowledge/smaksprofil.md` fordi de *kuraterte* preferanse-seksjonene (no-go, druer du liker, regioner) bare finnes der. Øl-fit trenger en analog tier-klassifiser, men øl har ingen Polet-katalog å klassifisere — den klassifiserer selve BJCP-stilfamiliene (~24 fra `untappd_stats.STYLE_FAMILIES`).
+
+**Beslutning.** `tools/beer_fit.py` deriverer familie-statistikken **direkte fra Untappd-CSV** via `untappd_stats.agg_by_family()`, ikke ved å re-parse den rendrede øl-blokken i smaksprofil.md. beer_v0.json og øl-blokken er sibling-artefakter fra samme kilde (CSV), ingen avhenger av å parse den andre.
+
+**Hvorfor avvik fra vin-mønsteret.** Øl-blokken er 100 % auto-derivert — det finnes ingen kuraterte øl-seksjoner å miste ved å hoppe over markdown-parsing. Og re-parsing av rendret markdown var den skjøre veien: doble «Bekymringer»/«Blindspots»-overskrifter (vin + øl) i samme dokument, og vinens tabellparser kaster N-kolonnen som terskel-logikken trenger. Derivering fra CSV gjenbruker testet aggregeringskode og holder beer_v0.json alltid konsistent med kilden.
+
+**Konsekvenser.**
+- ✅ Ingen markdown-parsing-skjørhet, ingen duplikat-heading-felle.
+- ✅ Stilfamilie→tier alltid synkron med CSV; auto-regenereres av `untappd_stats.main()`.
+- ✅ Gjenbruker `classify_style()` som mapper — ingen divergens mellom blokk og fit.
+- ⚠️ Hvis en kuratert øl-seksjon (f.eks. øl-no-go) innføres senere, må den eksponeres *programmatisk* (ikke kun i markdown), ellers ser beer_fit den ikke. `BEER_NO_GO`-konstanten ligger klar for dette.
+- ⚠️ very_fit-terskel løsnet til n≥3 + snitt≥3.85 (fra vinens n≥3 + 4.0) fordi øl-datasettet er tynnere (~90 check-ins) — brukerbeslutning, dokumentert i kode.
+
+**Arkitekturføringer.**
+- Output `data/user_fit/beer_v0.json` indeksert på stilfamilie (ikke varenr) — respekterer ADR-002 (strukturert data i `data/`).
+- `classify_beer()`-bro for batch: manuell innliming av øl → `classify_style` → tier. Ingen scraper i v0 (det finnes ingen øl-katalog å iterere).
+- Blindspot (n≤1) gir aldri very_fit selv ved høyt snitt — samme anti-falsk-presisjon som vin-fit confidence-cap.
+
+**Relatert.** [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier) (vin-fit-mønsteret dette speiler med ett bevisst avvik), [ADR-002](#adr-002-score-db-plasseres-i-knowledge-ikke-data) (data/knowledge-grensen).
+
+---
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.

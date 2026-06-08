@@ -128,7 +128,7 @@
 <!-- BEGIN AUTO-DERIVED-BEER (untappd_stats.py) -->
 ## Auto-derivert øl-statistikk (Untappd)
 
-> Generert 2026-05-12 av `tools/untappd_stats.py`. Ikke rediger manuelt – kjør på nytt etter ny Untappd-scrape.
+> Generert 2026-06-08 av `tools/untappd_stats.py`. Ikke rediger manuelt – kjør på nytt etter ny Untappd-scrape.
 > Grunnlag: 89 ratede check-ins, snitt 3.39.
 > Mangfold: 65 unike bryggerier, 58 unike stiler, 20 stilfamilier.
 > Stildiversitet: 65.2% av check-ins er nye stiler – svært utforskende.

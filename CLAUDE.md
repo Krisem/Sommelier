@@ -9,8 +9,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 - **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
-- **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md`)
+- **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md` + regenererer `beer_v0.json`)
+- **Regenerér øl-fit-klassifisering:** `python3 -m tools.beer_fit` (stilfamilie→tier-tabell; kjøres også automatisk av `untappd_stats.py`). For batch: `from tools.beer_fit import classify_beer` på innlimte øl.
 - **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
+- **Evaluér fit-modeller:** `python3 -m tools.eval_fit` (modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines; `--stdout-only` dropper fil-skriving)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
 - **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)

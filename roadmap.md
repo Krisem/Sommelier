@@ -6,8 +6,77 @@
 
 ## Innhold
 
+- [Vivino auto-sync](#vivino-auto-sync) — direkte lesing av Vivino-profilen via Playwright (ingen manuell eksport)
+- [Evaluerings-harness](#evaluerings-harness) — modell-agnostisk rangerings-eval, bygges før v1
 - [User-fit-score](#user-fit-score) — pre-computet rangering av score-DB-viner mot smaksprofil
+- [Øl-fit — Untappd-paritet](#øl-fit--untappd-paritet) — utvid fit-tankegangen fra vin til øl
 - [Levert](#levert) — features som er implementert (peker til ADR)
+
+---
+
+## Vivino auto-sync
+
+**Status:** Manuell metode bevist 2026-06-08 — klar for å pakkes som `tools/vivino_sync.py`
+
+### Hvorfor
+
+Roadmapen forutsatte tidligere at re-trening skjer «ved hver Vivino-eksport» (se v2). Men Vivino har **ingen åpen API**, og den offisielle CSV-eksporten må trigges manuelt og lander i e-post. Resultatet var at `data/vivino/full_wine_list.csv` lå 3 måneder bak (104 ratede mot 111 reelle) før synken 2026-06-08, og oppdateringen krevde manuell scraping + håndfylling av felter (`Regional wine style`, `Average rating`) — en data-kvalitets-risiko.
+
+**Datatilgang er den egentlige flaskehalsen, ikke modellen.** Dette elementet har høyere prioritet enn v1/v2 av user-fit-score.
+
+### Bevist metode (2026-06-08)
+
+Claude kan nå lese Vivino-historikken **direkte og på egenhånd** via Playwright-MCP — ingen manuell eksport nødvendig:
+
+- **Profil-URL:** `https://www.vivino.com/en/users/kristoffers4` (offentlig, men krever innlogget sesjon — Kristoffer logger inn én gang i Playwright-nettleseren, deretter holder cookien).
+- **Activity-feed:** hver rating er et `.user-activity-item`-element.
+- **Din rating** ligger kodet som stjerne-ikoner — summér `icon-NN-pct`-klassene / 100 (f.eks. 4× `icon-100-pct` + 1× `icon-40-pct` = 4.4).
+- **Eksakt tidsstempel** i `title`-attributtet på `/en/activities/<id>`-lenken.
+- **Vin-metadata** (produsent, navn, årgang, region, land, community-snitt) fra `.activity-wine-card`; `data-vintage_id` på samme element.
+- **Diff** mot CSV på `Winery` + `Wine name` for å finne nye ratinger.
+- Klikk «Show more» for å paginere bakover i historikken ved full re-sync.
+
+### Neste steg — `tools/vivino_sync.py`
+
+Pakk metoden over som et verktøy som speiler `untappd_stats.py`-mønsteret:
+
+1. Playwright-innlogging (gjenbruk lagret sesjon der mulig).
+2. Les activity-feeden, paginer til siste kjente `Scan date`.
+3. Hent **kanoniske** felter fra hver vinside (drue, stil, snitt) — ikke håndgjettet som ved den manuelle synken.
+4. Diff mot CSV, append nye rader.
+5. Kall `profile_stats.py` automatisk til slutt.
+
+**Pros / Cons:**
+
+| Pros | Cons |
+|---|---|
+| Fjerner staleness permanent — synk på kommando | Avhengig av Vivinos DOM (samme drift-risiko som Polet — bør ha fixture-test, jf. ADR-011) |
+| Eliminerer håndfylling → riktig data-provenans | Krever innlogget Playwright-sesjon (cookie kan utløpe) |
+| Gjenbrukbar; speiler eksisterende øl-flyt | ToS-gråsone — kun for egen profil, lavt volum |
+
+**Trigger:** Bygges før neste større user-fit-iterasjon, slik at modellen alltid trenes på fersk data.
+
+---
+
+## Evaluerings-harness
+
+**Status:** Planlagt — bygges som eget steg før user-fit v1
+
+### Hvorfor
+
+v1/v2 av user-fit-score kan ikke stoles på uten en måte å måle om en ny modell faktisk slår den forrige. Eval-planen finnes allerede (Spearman, NDCG@5, tidsbasert split, 15-vin lockbox) men er begravet *inne i* v1-beskrivelsen. Løftet ut som eget, **modell-agnostisk** steg blir «v0 vs v1 vs v2» et empirisk spørsmål i stedet for den subjektive triggeren beslutningstreet bruker i dag.
+
+### Hva
+
+- Tidsbasert train/test-split: før 2024-01-01 = train, etter = test.
+- Primær metrikk: Spearman rank-korrelasjon på testsettet. Sekundær: NDCG@5.
+- Baselines som enhver modell må slå: random, Vivino-avg, stil-snitt-alene, critic-score-alene.
+- 15 viner holdt som final lockbox.
+- Kjør samme harness mot v0-tiers (konvertert til ordinal score) for å få en konkret baseline før v1 i det hele tatt bygges.
+
+**Trigger for v1:** Harnessen viser at v0's fem tier-bøtter er for grove (kan ikke skille rangering brukeren faktisk bryr seg om).
+
+> **LEVERT 2026-06-08** → `tools/eval_fit.py`. Full begrunnelse, resultattabell og konklusjon i [ADR-017](docs/ARCHITECTURE.md#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling). Kort: v0 slår baselines, men vivino_avg (+0.63) er sterkest — **bli i v0, v1-trigger ikke oppfylt.** Kjør `python3 -m tools.eval_fit` for ferske tall.
 
 ---
 
@@ -159,6 +228,40 @@ v0 i bruk → spør: "Mangler jeg rangering innenfor tier?"
 
 ---
 
+## Øl-fit — Untappd-paritet
+
+**Status:** Planlagt — fit-tankegangen er i dag vin-only
+
+### Hvorfor
+
+Prosjektet er eksplisitt dual (vin + øl, felles smaksprofil), men `tools/user_fit.py` og hele user-fit-roadmapen dekker kun vin. `smaksprofil.md` har allerede en auto-derivert øl-blokk (fra `untappd_stats.py` over ~90 check-ins) med stilfamilier, ABV-spenn og sesongmønster — men den er operasjonelt usynlig for batch-spørringer på samme måte som vin-profilen var før user-fit. Øl-anbefalinger hviler i dag på per-forespørsel-resonnement.
+
+### Åpent designspørsmål (ærlig)
+
+Vin-fit pre-computer mot en konkret katalog: Polet score-DB-en (422 entries indeksert på varenummer). **Øl har ingen tilsvarende indeksert katalog** — ingen Polet øl-score-DB. Så øl-fit kan ikke bare speile «pre-compute mot katalog»-mønsteret. To veier:
+
+- **(a) Fit per BJCP-stilfamilie** (~30 faste familier) → billig oppslagstabell, brukes ved anbefalingstid. Lavere oppløsning, men matcher tilgjengelig data og er den naturlige granulariteten for øl-anbefalinger.
+- **(b) Score enkeltøl on-demand** mot øl-blokken (stilfamilie, ABV-spenn, sesong) ved anbefalingstid. Ingen katalog nødvendig, men ingen pre-compute-gevinst.
+
+**Anbefaling:** start med (a). n≈90 check-ins er for tynt for per-øl-scoring, og stilfamilie er uansett riktig nivå for øl-rec.
+
+### v0 — Stilfamilie-tier (speiler vin-v0)
+
+Parser øl-blokken i `smaksprofil.md` → klassifiserer hver BJCP-stilfamilie i `very_fit | fit | neutral | risky | no_go` etter samme early-exit-logikk som vin-v0 (bekreftede mønstre, ABV-spenn-match, sesong, no-go). Output: `data/user_fit/beer_v0.json` indeksert på stilfamilie.
+
+**Caveat:** n≈90 er enda tynnere enn vinens 111. **Kun regel-basert v0** — ingen ML-stige for øl før datagrunnlaget vokser vesentlig. Eval-harnessen (over) gjenbrukes når/hvis øl får kontinuerlig score.
+
+**Trigger:** Når brukeren ber om personaliserte øl-anbefalinger i batch (f.eks. «hvilke av disse 10 på Untappd-lista vil jeg like») og per-forespørsel-resonnement blir for tregt.
+
+> **LEVERT 2026-06-08** → `tools/beer_fit.py`. Begrunnelse for arkitektur-avviket (derivér fra CSV, ikke parse markdown) og innbakte brukerbeslutninger (very_fit løsnet til n≥3/3.85; manuell innliming) i [ADR-018](docs/ARCHITECTURE.md#adr-018-øl-fit-deriverer-fra-untappd-csv-ikke-fra-smaksprofil-markdown). Auto-regenereres av `untappd_stats.main()`. Kjør `python3 -m tools.beer_fit`.
+
+---
+
 ## Levert
 
-(Tom — flytt elementer hit etter implementasjon med peker til ADR.)
+| Element | Dato | Modul | ADR | Nøkkelresultat |
+|---|---|---|---|---|
+| Evaluerings-harness | 2026-06-08 | `tools/eval_fit.py` (15 tester) | [ADR-017](docs/ARCHITECTURE.md#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling) | v0_tier +0.59 Spearman — slår baselines; **v1-trigger ikke oppfylt**. vivino_avg (+0.63) er listen v1 må slå. |
+| Øl-fit v0 | 2026-06-08 | `tools/beer_fit.py` (15 tester) | [ADR-018](docs/ARCHITECTURE.md#adr-018-øl-fit-deriverer-fra-untappd-csv-ikke-fra-smaksprofil-markdown) | Stilfamilie→tier fra Untappd-CSV. 1 very_fit / 1 fit / 3 risky / 14 neutral. |
+
+> Begge har fortsatt fremtidige versjoner beskrevet i seksjonene over (user-fit v1/v2, øl-fit utvidelser) — kun v0/harness er levert.
