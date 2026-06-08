@@ -2,6 +2,8 @@
 
 > Status etter test av API, smaksprofil, og research
 > Dato: 2026-05-12
+>
+> ⚠️ **DELVIS UTDATERT (2026-06-08):** Webshop-APIet (`vmpws`) som denne rapporten anbefaler er nå WAF-blokkert — `requests`-kall gir 403. Den offentlige produkt-CSV-en er avviklet av Vinmonopolet. Rik data krever nå enten presse-API (søknad m/ pressebehov) eller henting via ekte nettleser (Playwright). Se `docs/ARCHITECTURE.md` ADR-019. Resten av rapporten (smaksprofil-funn, blindspots, klokke-rammeverket) står ved lag.
 
 ## Sammendrag
 

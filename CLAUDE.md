@@ -168,9 +168,11 @@ Forbindelsen mellom region-fakta og bruker-preferanse skjer på inferens-tid: Cl
 
 ## Vinmonopolet-tool — viktig
 
+> ⚠️ **2026-06-08: Webshop-APIet (`vmpws`) er WAF-blokkert — `requests`-kall gir nå 403.** Rammer `tools/vinmonopolet.py` (search/get_product_details) og dermed `value_score.py` + klokke-similarity. Fungerende vei er **Playwright (ekte nettleser)**. Den offentlige CSV-en er avviklet av Polet; åpent API gir kun varenr+kortnavn. Se [ADR-019](docs/ARCHITECTURE.md#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf); fiks er planlagt (egen sesjon — se `tasks/todo.md`). **Inntil den delte henter-helperen er bygd:** bruk Playwright-MCP manuelt — naviger til `https://www.vinmonopolet.no/search?q=<søk>&searchType=product`, og parse produktkortene (`a[href*="/p/"]` → varenr + tekst med navn/pris/region).
+
 - **Rate limit:** maks ~30 produkt-oppslag per sesjon. Cache i samtalen.
 - **`get_product_details`** scraper produktsiden — kall kun for 2–3 mest aktuelle treff, ikke alle.
-- **IKKE bruk** `apis.vinmonopolet.no` (begrenset til varenummer+kortnavn) — webshop-APIet er det reelle. Bakgrunn: `knowledge/_archive/rapport.md`.
+- **IKKE bruk** `apis.vinmonopolet.no` (åpent API gir kun varenr+kortnavn, ingen pris/region; presse-API krever pressebehov-søknad). Bakgrunn: `knowledge/_archive/rapport.md` + ADR-019.
 - Bruk-eksempel: se docstring + `if __name__ == "__main__"` i `tools/vinmonopolet.py`.
 
 ## Output-format

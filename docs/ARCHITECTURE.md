@@ -527,12 +527,37 @@ Personalisert (kun ved eksplisitt request):
 
 ---
 
+### ADR-019: Datatilgang via ekte nettleser — Vivino og Polet bak WAF
+
+**Status:** Accepted (2026-06-08)
+
+**Kontekst.** To eksterne kilder prosjektet er bygd på har strammet bot-vernet siden tool-ene ble skrevet:
+- **Vinmonopolet webshop-API** (`vmpws`, anbefalt i `knowledge/_archive/rapport.md`) svarer nå **403** på `requests`-kall — WAF gjenkjenner ikke-nettleser-TLS-fingeravtrykk og header-profil. Rammer `tools/vinmonopolet.py` (search, get_product_details) og alt som bygger på det (`value_score.py`, `find_similar_by_clocks`).
+- **Vivino-profilen** krever innlogget sesjon og blokkerer `WebFetch` (403).
+- Vinmonopolets **offentlige produkt-CSV** er avviklet (2026). Åpent API gir kun varenr + kortnavn (ingen pris/region); presse-API har rik data men krever dokumentert pressebehov; lukket API er kun for grossister.
+
+**Beslutning.** Den fungerende, felles veien til begge kilder er en **ekte nettleser (Playwright)**: korrekt TLS-fingeravtrykk, fullt header-sett, JS-kjøring og cookie-håndtering passerer WAF. Standardiser på ett delt henter-lag som både Vivino-synk og Polet bruker, i to moduser — bulk-sveip (bredde → lokalt snapshot) + on-demand (dybde → produktside). *(Konkret fikse-plan utarbeides i egen sesjon — se `tasks/todo.md`.)*
+
+**Konsekvenser.**
+- ✅ Eneste vei som faktisk virker for rik Polet-data + Vivino-historikk i dag.
+- ✅ Et lokalt katalog-snapshot eliminerer per-spørring-skraping og WAF-eksponering for bredde-spørringer.
+- ⚠️ Webshop-API er ikke en av Polets tre sanksjonerte API-er — bruk er ToS-gråsone. Akseptert for personlig, lavt-volum bruk; den lovlige rik-data-veien (presse-API) er reelt stengt for en privatperson.
+- ⚠️ DOM-avhengig — trenger drift-vern (fixture-test, jf. [ADR-011](#adr-011-html-fixture-test-for-polet-drift)).
+- ⚠️ Playwright er tyngre enn `requests` (browser-oppstart) → snapshot for bredde, ikke per-spørring.
+
+**Alternativer vurdert.** (a) Spoofe browser-headere i `requests` — forkastet: WAF sjekker TLS-fingeravtrykk, blir katt-og-mus. (b) Offisiell åpen CSV / API — forkastet: CSV avviklet, åpent API for tynt (kun varenr+navn). (c) Presse-API — forkastet: krever pressebehov-søknad brukeren ikke kan dokumentere.
+
+**Relatert.** Teknisk gjeld #0 (vmpws WAF-blokk), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (Polet-drift-vern), roadmap § Vivino auto-sync.
+
+---
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.
 
 | # | Gjeld | Hvorfor det er gjeld | Når det blir et problem | Trigger for å adressere |
 |---|---|---|---|---|
+| **0** | **`requests`-laget mot Polet `vmpws` er WAF-blokkert (403)** | Webshop-API gjenkjenner ikke-nettleser-klient; `tools/vinmonopolet.py` + `value_score.py` + klokke-similarity feiler | **Allerede akutt (2026-06-08)** — all live Polet-henting via `requests` er død | Bygg delt Playwright-henter ([ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)); plan i `tasks/todo.md` |
 | 1 | Polet HTML-scraping i `parse_product_html` | 12 regex over Polets DOM — sårbar for redesign | Når Polet kommer med ny webshop (sannsynlig <12 mnd) | Fixture-test feiler (allerede på plass — ADR-011) |
 | 2 | `knowledge/scores/` krysser data/knowledge-grensen (ADR-002) | Strukturelt data, lagret som knowledge | Ved 2000+ entries eller behov for sekundær-indeks | Manuell vurdering hver 6. mnd |
 | 3 | Aperitif sitemap-bootstrap er 34 HTTP-kall | Cold path ved første kjøring eller etter 30 d | Når brukeren stiller første Aperitif-spørsmål på over en måned | Vurder lazy-pre-fetch i `tools/aperitif.py` |
