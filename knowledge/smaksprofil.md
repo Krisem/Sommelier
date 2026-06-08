@@ -21,19 +21,19 @@
 <!-- BEGIN AUTO-DERIVED (profile_stats.py) -->
 ## Auto-derivert statistikk
 
-> Generert 2026-05-14 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
-> Grunnlag: 104 ratede viner, snitt 3.78.
-> Nyere ratings (2024-01-01+): 17 viner, snitt 3.89.
+> Generert 2026-06-08 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
+> Grunnlag: 111 ratede viner, snitt 3.80.
+> Nyere ratings (2024-01-01+): 24 viner, snitt 3.95.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.
 
 ### Per vintype
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Red Wine | 58 | 3.76 | 4.08 |
-| Sparkling | 18 | 3.96 | 4.00 |
+| Red Wine | 60 | 3.77 | 4.03 |
+| Sparkling | 22 | 4.01 | 4.20 |
 | White Wine | 17 | 3.85 | 3.73 |
-| Rosé Wine | 9 | 3.22 | 3.50 |
+| Rosé Wine | 10 | 3.30 | 3.75 |
 | Dessert Wine | 1 | 4.50 | – |
 | Fortified Wine | 1 | 4.50 | – |
 
@@ -41,11 +41,12 @@
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Italy | 37 | 3.85 | 3.90 |
-| France | 31 | 3.51 | 3.70 |
+| Italy | 40 | 3.84 | 3.85 |
+| France | 32 | 3.55 | 3.95 |
 | Spain | 9 | 3.78 | – |
 | Germany | 7 | 3.83 | 3.83 |
 | United States | 5 | 3.84 | 4.00 |
+| United Kingdom | 3 | 4.27 | 4.27 |
 | South Africa | 3 | 4.20 | 4.30 |
 | Argentina | 3 | 3.33 | – |
 | Portugal | 2 | 4.50 | – |
@@ -56,9 +57,9 @@
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
 | French Champagne | 9 | 3.86 | – |
+| Italian Barbera | 6 | 3.90 | 3.80 |
 | Northern Italy Red | 6 | 3.33 | – |
 | Italian Ripasso | 5 | 4.10 | – |
-| Italian Barbera | 5 | 3.92 | – |
 | German Riesling | 5 | 3.82 | 3.80 |
 | Southern Italy Red | 4 | 4.05 | 4.07 |
 | Northern Italy Rosé | 4 | 3.88 | 3.50 |
@@ -66,6 +67,7 @@
 | Spanish Rioja Red | 4 | 3.88 | – |
 | Tuscan Red | 4 | 3.75 | – |
 | Provence Rosé | 4 | 2.38 | – |
+| English Sparkling | 3 | 4.27 | 4.27 |
 | Italian Amarone | 3 | 4.13 | 4.20 |
 | Burgundy Red | 3 | 3.27 | 3.80 |
 | Southern Rhône Red | 3 | 3.00 | – |
@@ -78,6 +80,7 @@
 
 - **Italian Ripasso** – n=5, snitt 4.10
 - **Southern Italy Red** – n=4, snitt 4.05, nyere 4.07
+- **English Sparkling** – n=3, snitt 4.27, nyere 4.27
 - **Italian Amarone** – n=3, snitt 4.13, nyere 4.20
 
 ### Bekymringer (n ≥ 3, snitt < 3.3)
@@ -91,7 +94,6 @@
 - Germany Red Wine (n=1)
 - Italy White Wine (n=1)
 - Austria White Wine (n=1)
-- United Kingdom Sparkling (n=1)
 - United States White Wine (n=1)
 - Lebanon Red Wine (n=1)
 - France Dessert Wine (n=1)
@@ -103,14 +105,15 @@
 - Spain Sparkling (n=1)
 - Portugal Fortified Wine (n=1)
 - South Africa Rosé Wine (n=1)
+- Greece Rosé Wine (n=1)
 
 ### Topp 5 ratede viner
 
+- 4.7 – Bollinger Special Cuvée Brut Aÿ Champagne N.V.
 - 4.6 – Giacomo Fenocchio Barbera d'Alba Superiore 2019
 - 4.5 – Vincent Girardin Bourgogne Terroir Noble 2010
 - 4.5 – Fratta Pasini Valpolicella Superiore Ripasso 2009
 - 4.5 – Taylor's Chip Dry White Port
-- 4.5 – Juvé & Camps Cava Gran Reserva Brut Nature Reserva de la Familia 2010
 
 ### Bunn 5 ratede viner
 
