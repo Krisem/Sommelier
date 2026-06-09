@@ -3,17 +3,25 @@ Refresh-PLUMBING for Polet-snapshotet — ingest + planlegging, IKKE nettverk.
 
 Polets webshop-API (`vmpws`) er WAF-blokkert (ADR-019): en ren Python-prosess
 som `fetch()`-er selv blir 403-et. Den bekreftede transporten er en EKTE
-nettleser drevet av Claude på desktop (Playwright-MCP), som navigerer til
-forsiden (passerer WAF) og kjører `fetch()` i browser-konteksten. Denne modulen
-tar imot det browseren henter og mater det inn i `polet_store` sine
-write-helpers (som gjør all validering). Den planlegger også hvilke søk
-browseren bør sveipe for å holde value_score sin peer-percentile mettet.
+nettleser drevet av Claude (Playwright-MCP), som navigerer til forsiden
+(passerer WAF) og kjører `fetch()` i browser-konteksten. Denne modulen tar imot
+det browseren henter og mater det inn i `polet_store` sine write-helpers (som
+gjør all validering). Den planlegger også hvilke søk browseren bør sveipe for å
+holde value_score sin peer-percentile mettet.
+
+Refresh er DEVICE-AGNOSTISK (ADR-021): den foretrukne veien — på alle enheter,
+også desktop — er å peke Playwright-MCP på en REMOTE browser via CDP
+(`browser.cdpEndpoint`, f.eks. Browserbase). Da skjer browsingen på tjenestens
+rene egress og passerer Cloudflare uavhengig av lokal proxy. Lokal chromium i et
+MITM-proxy-miljø (Claude Code on the web bak Egress Gateway) blir hard-blokkert
+(403) og kan IKKE refreshe. Oppsett: docs/polet_refresh.md.
 
 ──────────────────────────────────────────────────────────────────────────
-RUNBOOK — Claude-drevet refresh (desktop, Playwright-MCP)
+RUNBOOK — Claude-drevet refresh (Playwright-MCP, remote browser via CDP)
 ──────────────────────────────────────────────────────────────────────────
-Forutsetning: kjøres på desktop med Playwright-MCP. Ingen `requests`/Python-
-fetch — den 403-es. All nettverkstrafikk går gjennom den ekte nettleseren.
+Forutsetning: Playwright-MCP koblet til en remote browser (CDP-endpoint).
+Ingen `requests`/Python-fetch — den 403-es. All nettverkstrafikk går gjennom
+den ekte nettleseren.
 
 1. NAVIGER til forsiden for å etablere WAF-godkjent sesjon:
        browser_navigate("https://www.vinmonopolet.no/")

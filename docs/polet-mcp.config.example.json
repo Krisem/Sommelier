@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Playwright-MCP-config for DEVICE-AGNOSTIC Polet-refresh (ADR-021).",
+    "Kopier til 'polet-mcp.config.json' (gitignored) og fyll inn din egen CDP-URL.",
+    "Start MCP-serveren mot denne: npx @playwright/mcp@latest --config polet-mcp.config.json",
+    "cdpEndpoint peker på en REMOTE browser-tjeneste som har ren/residential egress",
+    "og dermed passerer Vinmonopolets Cloudflare-WAF. Selve token er en HEMMELIGHET",
+    "— den bor kun i den gitignored kopien, aldri i repoet.",
+    "",
+    "Browserbase (verifisert 2026-06-09, gratis-tier holder):",
+    "   wss://connect.browserbase.com?apiKey=DIN_BROWSERBASE_API_KEY",
+    "Browserless (alternativ):",
+    "   wss://production-sfo.browserless.io?token=DITT_BROWSERLESS_TOKEN"
+  ],
+  "browser": {
+    "cdpEndpoint": "wss://connect.browserbase.com?apiKey=DIN_BROWSERBASE_API_KEY"
+  }
+}

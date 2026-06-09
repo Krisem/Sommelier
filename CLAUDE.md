@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
 - **Evaluér fit-modeller:** `python3 -m tools.eval_fit` (modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines; `--stdout-only` dropper fil-skriving)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py` (leser snapshot i `data/polet/`)
-- **Refresh Polet-snapshot (KUN desktop, Playwright-MCP):** se runbook [`docs/polet_refresh.md`](docs/polet_refresh.md). Engangs-seed fra gammel cache: `python3 tools/seed_polet_store.py`.
+- **Refresh Polet-snapshot (device-agnostisk, Playwright-MCP + remote browser via CDP):** se runbook [`docs/polet_refresh.md`](docs/polet_refresh.md). Kan kjøres fra alle enheter (desktop/Android/web) når MCP peker på en remote browser (ADR-021). Engangs-seed fra gammel cache: `python3 tools/seed_polet_store.py`.
 - **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand (hopper over viner utenfor snapshot)
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
 - **Polet-data:** repo-committet snapshot i `data/polet/` (ikke `requests`). Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d, value_score 24t caches fortsatt i `~/.cache/sommelier/`.
@@ -98,7 +98,7 @@ Følg denne rekkefølgen:
    - **NEI** ved valg mellom flasker brukeren allerede eier (han skal ikke kjøpe noe)
    - **NEI** ved rene fagspørsmål ("hva er forskjellen på X og Y") – bruk deep-knowledge
    - **I tvil:** spør "skal du kjøpe denne, eller har du den allerede?"
-   - **Oppslag treffer snapshotet** (`data/polet/` via `tools/vinmonopolet.py`). Er vinen ikke i snapshot → `PoletRefreshRequired`: si det til brukeren og pek på desktop-refresh (`docs/polet_refresh.md`) — ikke lat som du fant data du ikke har.
+   - **Oppslag treffer snapshotet** (`data/polet/` via `tools/vinmonopolet.py`). Er vinen ikke i snapshot → `PoletRefreshRequired`: si det til brukeren og pek på refresh (`docs/polet_refresh.md`) — ikke lat som du fant data du ikke har.
    - **Bonus:** Hver gang du henter klokker for en vin brukeren har ratet 4.5+ – uansett grunn – legg profilen til tabellen "Klokke-profil for topp-viner" i `smaksprofil.md`. Tabellen vokser som biprodukt av legitime søk.
 6. **Value-score – betinget, ikke automatisk:**
    - **JA** når brukeren spør eksplisitt om "godt kjøp", "value", "verdt det", "kvalitet vs pris"
@@ -108,7 +108,7 @@ Følg denne rekkefølgen:
    - **NEI** når brukeren bare beskriver smak / leter etter retning (klokker er bedre)
    - Kjør: `python3 -m tools.value_score "<navn>" <årgang>`. Bruk verdict + summary i svaret. Flag når Vivino name-match er "partial"/"weak" eller Aperitif `vintage_mismatch=True` — sier "Aperitif vurderte 2022-årgangen, men score er en proxy".
    - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
-   - **Value er alders-merket** (verdict bærer `snapshot_age_days`/`snapshot_generated_at`). Når snapshotet er gammelt (>14 d), si det i anbefalingen — pris/lager kan ha endret seg, be brukeren verifisere på polet.no. `peer_status=refresh_required` betyr vinen mangler i snapshot: formidl at en desktop-refresh trengs.
+   - **Value er alders-merket** (verdict bærer `snapshot_age_days`/`snapshot_generated_at`). Når snapshotet er gammelt (>14 d), si det i anbefalingen — pris/lager kan ha endret seg, be brukeren verifisere på polet.no. `peer_status=refresh_required` betyr vinen mangler i snapshot: formidl at en refresh trengs.
 6b. **User-fit-sjekk (rask, alltid lov å gjøre):**
    - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — slå opp `data/user_fit/v0.json` per varenummer
    - **No-filter-bubble-prinsippet:** ALDRI auto-filtrér bort `no_go` eller `risky` fra default-rangering. Default = sortér etter objektiv kvalitet (kritiker-score), vis tier som *merke*. Tier er en advarsel, ikke en filter.
@@ -171,10 +171,10 @@ Forbindelsen mellom region-fakta og bruker-preferanse skjer på inferens-tid: Cl
 
 ## Vinmonopolet-tool — viktig
 
-> **Tools leser et repo-committet snapshot** (`data/polet/` via `tools/polet_store.py`), ikke live `requests` — `vmpws` er WAF-blokkert (403). `tools/vinmonopolet.py` (search/get_product_details/similarity) og `value_score.py` slår opp snapshotet. **Cache-miss → `PoletRefreshRequired`** (ingen krasj) med hint om at vinen må hentes fra desktop. Se [ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only).
+> **Tools leser et repo-committet snapshot** (`data/polet/` via `tools/polet_store.py`), ikke live `requests` — `vmpws` er WAF-blokkert (403). `tools/vinmonopolet.py` (search/get_product_details/similarity) og `value_score.py` slår opp snapshotet. **Cache-miss → `PoletRefreshRequired`** (ingen krasj) med hint om at vinen må refreshes. Se [ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modell) + [ADR-021](docs/ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh) (device-agnostisk refresh).
 
-- **Refresh er en DESKTOP-operasjon** (Mac + Playwright-MCP). Android er **read-only** — kan ikke refreshe. Runbook: [`docs/polet_refresh.md`](docs/polet_refresh.md).
-- **`get_product_details`** leser dybde fra snapshot; mangler den, trengs en desktop-refresh av nettopp den vinen.
+- **Refresh er DEVICE-AGNOSTISK** (ADR-021): Playwright-MCP pekt på en **remote browser via CDP** (f.eks. Browserbase gratis-tier) passerer Cloudflare og kan kjøres fra alle enheter (desktop/Android/web) — det er den foretrukne veien. **Auto-registrert:** committet `.mcp.json` setter opp `playwright`-MCP-serveren med `--cdp-endpoint ${POLET_BROWSER_CDP}`; eneste per-enhet-steg er å sette env-var `POLET_BROWSER_CDP` (CDP-URL + token, aldri i repoet). Kobler lazily (null budsjett før faktisk refresh). Lokal chromium bak en MITM-proxy (web-container) hard-blokkeres (403) og kan ikke refreshe; lokal desktop-chromium med direkte egress er bare nød-utvei. Runbook: [`docs/polet_refresh.md`](docs/polet_refresh.md).
+- **`get_product_details`** leser dybde fra snapshot; mangler den, trengs en refresh av nettopp den vinen.
 - **IKKE bruk** `apis.vinmonopolet.no` (åpent API gir kun varenr+kortnavn; presse-API krever pressebehov). Bakgrunn: `knowledge/_archive/rapport.md` + ADR-019/020.
 - Bruk-eksempel: se docstring + `if __name__ == "__main__"` i `tools/vinmonopolet.py`.
 

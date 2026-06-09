@@ -1,22 +1,38 @@
-# Polet-refresh — desktop-runbook
+# Polet-refresh — device-agnostisk runbook
 
 > Praktisk oppskrift for å oppdatere det repo-committede Polet-snapshotet i `data/polet/`.
-> Bakgrunn og designvalg: [ADR-020](ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (les den hvis du lurer på *hvorfor*).
+> Bakgrunn og designvalg: [ADR-020](ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen) og [ADR-021](ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh) (remote browser — *hvorfor* refresh ikke lenger er desktop-bundet).
 
 ## Hvem kan kjøre dette
 
-**Kun desktop.** Refresh krever en ekte nettleser forbi WAF-en — det betyr Claude Code på Mac med **Playwright-MCP + lokal chromium**. Android-enheten er read-only og kan aldri refreshe; den konsumerer bare det committede snapshotet.
+**Alle enheter** — desktop, Android *og* Claude Code on the web — så lenge du kobler refresh-browseren til en **remote browser-tjeneste via CDP**. Selve sidehentingen skjer da på tjenestens rene egress (genuin browser-fingerprint), som passerer Vinmonopolets Cloudflare-WAF. Lokal-enheten din driver bare browseren over en CDP-websocket; den trenger ingen egen chromium.
 
-Forutsetninger:
-- Playwright-MCP koblet til (`browser_navigate`, `browser_evaluate` tilgjengelig).
-- Repoet sjekket ut, du står på en branch der `data/polet/` kan committes.
+> **Hvorfor ikke bare lokal browser overalt?** Cloudflare hard-blokkerer datasenter-IP-er og ikke-browser-TLS. På en **vanlig desktop** når chromium Cloudflare *direkte* med genuin fingerprint → fungerer. Men i et MITM-proxy-miljø (Claude Code on the web går gjennom Anthropics Egress Gateway, likeledes mange bedriftsproxyer) ser Cloudflare proxyens datasenter-fingerprint, ikke chromiums → **hard 403**. Empirisk bekreftet 2026-06-09: lokal chromium i web-containeren fikk 200 på forsiden men 403 «Sorry, you have been blocked» på `/vmpws/` og produktsider. Remote browser via CDP omgår dette fordi WAF-en møter *tjenestens* browser, ikke din proxy. Se [ADR-021](ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh).
+
+## Oppsett
+
+**MCP-registreringen er automatisk** — repoet har en committet [`.mcp.json`](../.mcp.json) som registrerer Playwright-MCP pekt på en remote browser via `--cdp-endpoint ${POLET_BROWSER_CDP}`. Du trenger **ikke** `claude mcp add` eller å kopiere noen config-fil. Det eneste per-enhet-steget er å sette én hemmelig env-variabel:
+
+1. **Skaff en CDP-endpoint** fra en remote browser-tjeneste:
+   - **Browserbase** (verifisert 2026-06-09 — *gratis-tier holder* for lavvolum månedlig refresh): lag konto → API-nøkkel. CDP-URL: `wss://connect.browserbase.com?apiKey=DIN_KEY`. Gratis-tier kjører uten residential-proxy (paid), men Browserbases egen IP + genuin chromium passerer Vinmonopolets Cloudflare likevel.
+   - **Browserless** (alternativ): `wss://production-sfo.browserless.io?token=DITT_TOKEN`.
+2. **Sett `POLET_BROWSER_CDP`** til hele CDP-URL-en (med token). Token er en hemmelighet — den bor KUN i env, aldri i repoet:
+   - **Claude Code on the web:** legg den inn som env-variabel i miljø-konfigurasjonen (env/secrets) for environmentet.
+   - **Desktop/Android (shell):** `export POLET_BROWSER_CDP='wss://connect.browserbase.com?apiKey=DIN_KEY'` i shell-profilen (`~/.zshrc` / `~/.bashrc`).
+3. **Det er alt.** Neste Claude Code-sesjon i repoet får `playwright`-MCP-serveren (`browser_navigate` / `browser_evaluate`) automatisk, koblet mot skybrowseren.
+
+> **Late connect — ingen budsjett-lekkasje:** MCP-serveren kobler seg til skybrowseren først ved *første* browser-tool-kall (verifisert 2026-06-09), ikke ved sesjonsstart. Den bare ligger der dormant i vanlige read-sesjoner og bruker null Browserbase-tid før du faktisk refresher. Er `POLET_BROWSER_CDP` ikke satt, starter serveren rent men dormant (tomt endpoint) — den blokkerer ingenting.
+
+> **Remote-CDP er den foretrukne veien på ALLE enheter — også desktop.** Én refresh-rutine å vedlikeholde, identisk oppførsel overalt, ingen device-branching. Lokal desktop-chromium (Playwright-MCP med default lokal browser) fungerer fortsatt på en vanlig Mac med direkte egress, men er nå kun en **nød-utvei** hvis du midlertidig er uten remote-konto — ikke standardoppsettet.
+>
+> *Alternativ (config-fil i stedet for env-var):* `cp docs/polet-mcp.config.example.json polet-mcp.config.json` (gitignored), fyll inn `cdpEndpoint`, og pek MCP-en på den med `--config`. Nyttig hvis du trenger `cdpHeaders` (f.eks. Browserless token-i-header). Env-var-veien over er enklere og er standarden.
 
 ## Hvorfor browser-fetch (ikke `requests`)
 
-`requests` mot `vmpws` gir 403 (WAF gjenkjenner ikke-nettleser-TLS). Men når du **først har navigert til vinmonopolet.no i en ekte nettleser**, kan du kjøre `fetch()` fra samme origin via `browser_evaluate` — da arver kallet browserens TLS-fingeravtrykk, cookies og headere og slipper gjennom.
+`requests`/`curl` mot `vmpws` gir 403 (WAF gjenkjenner ikke-nettleser-TLS). Når du **først har navigert til vinmonopolet.no i en ekte nettleser**, kan du kjøre `fetch()` fra samme origin via `browser_evaluate` — kallet arver browserens TLS-fingerprint, cookies og headere og slipper gjennom.
 
-Bekreftet 2026-06-08:
-- `fetch('/vmpws/v2/vmp/products/search?…')` → **200** (rik JSON).
+Bekreftet:
+- `fetch('/vmpws/v2/vmp/products/search?…')` → **200** (rik JSON). *(via remote browser 2026-06-09: 200; via lokal chromium bak Egress Gateway: 403)*
 - `?fields=FULL` → **400** (ikke støttet — ikke bruk det).
 - Produktside-HTML → **200**, matcher `parse_product_html`.
 
@@ -39,8 +55,8 @@ fetch('/vmpws/v2/vmp/products/search?q=<søk>&pageSize=<n>')
   .then(r => r.json())
 ```
 
-- Bruk `q`-syntaks / fasetter som i [ADR-009](ARCHITECTURE.md#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) — husk at fasett-verdier er `.code` (lowercase: `rødvin`, `italia`), ikke `.name`.
-- Mat JSON-en inn i write-helperne (`tools/refresh_polet.py` ingest-helpers → `tools/polet_store.py:upsert_products`). Hver linje får `fetched_at`; NDLJSON sorteres deterministisk på `code`.
+- Bruk `q`-syntaks / fasetter som i [ADR-009](ARCHITECTURE.md#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) — husk at fasett-verdier er `.code` (lowercase: `rødvin`, `italia`), ikke `.name`. URL-encode hele `q` (de norske kodene har `ø`/`å`).
+- Mat JSON-en inn i write-helperne (`tools/refresh_polet.py:ingest_search_payload` → `tools/polet_store.py:upsert_products`). Hver linje får `fetched_at`; NDLJSON sorteres deterministisk på `code`.
 
 ### 3. Kjør peer-pool-sveip
 
@@ -54,24 +70,24 @@ For de 2–3 mest aktuelle vinene (ikke alle — se rate-limit):
 fetch('<product_url>').then(r => r.text())
 ```
 
-Send HTML-en gjennom `parse_product_html` (uendret) → write-helper `tools/polet_store.py:save_details`. Hver fil får selv-identifiserende `code`/`url`/`fetched_at`.
+Send HTML-en gjennom `parse_product_html` (uendret) → write-helper `tools/polet_store.py:save_details` (via `tools/refresh_polet.py:ingest_details_html`). Hver fil får selv-identifiserende `code`/`url`/`fetched_at`.
 
-**Re-knytting av orphans:** `_orphan_details.json` inneholder 118 rekonstruerte klokke-poster uten varenr. Når du henter en produktside med kjent varenr som matcher en orphan, flyttes den til `details/<varenr>.json`. Over tid tømmes orphan-fila ved normal finalist-henting.
+**Re-knytting av orphans:** `_orphan_details.json` inneholder rekonstruerte klokke-poster uten varenr. Når du henter en produktside med kjent varenr som matcher en orphan, flyttes den til `details/<varenr>.json`. Over tid tømmes orphan-fila ved normal finalist-henting.
 
 ### 5. Verifiser
 
 - **`save_details` har positiv validering** — den krever forventet varenr + navn + (klokke|pris) og **avviser WAF-challenge-HTML og DOM-drift** før skriving. Får du en avvisning: du fikk sannsynligvis en challenge-side, ikke produktsiden — naviger på nytt (steg 1) og prøv igjen.
 - **Git-diff er linjebasert** (deterministisk serialisering). Sjekk `git diff data/polet/` — endringene skal være lesbare per-linje, ikke en omstokking av hele fila. Stor støy = noe er galt med serialiseringen.
-- Oppdatér `catalog_meta.json` (`generated_at`, `count`, `category_coverage`) skjer via write-helperne — bekreft at `generated_at` har flyttet seg.
+- `catalog_meta.json` (`generated_at`, `count`, `category_coverage`) oppdateres via write-helperne — bekreft at `generated_at` har flyttet seg.
 
 ### 6. Commit
 
-Commit `data/polet/` på en branch. Når Android puller, ser den friskt snapshot. Value-verdict slutter å degradere språket så snart `snapshot_age_days` faller under 14.
+Commit `data/polet/` på en branch. Når en annen enhet puller, ser den friskt snapshot. Value-verdict slutter å degradere språket så snart `snapshot_age_days` faller under 14.
 
 ## Rate-limit
 
-Maks **~30 produktoppslag per sesjon**. Bredde-søk (steg 2/3) er billige (ett kall per søk, mange produkter). Det er dybde-hentingen (steg 4, én produktside per kall) som teller mot grensen — derfor kun finalister, ikke hele trefflista.
+Maks **~30 produktoppslag per sesjon**. Bredde-søk (steg 2/3) er billige (ett kall per søk, mange produkter). Det er dybde-hentingen (steg 4, én produktside per kall) som teller mot grensen — derfor kun finalister, ikke hele trefflista. Browserbase gratis-tier har dessuten ~1 browser-time/mnd; det er rikelig til et månedlig refresh, men ikke til kontinuerlig polling.
 
-## Når snapshotet er gammelt (Android-perspektiv)
+## Når snapshotet er gammelt
 
-Du kan ikke refreshe fra Android. Hvis en vin ikke er i snapshot, får du `PoletRefreshRequired` med hint om å refreshe fra desktop — det er forventet, ikke en feil. Value-anbefalinger på gammelt snapshot er alders-merket; formidle det videre til brukeren («snapshot er X dager gammelt — verifiser pris på polet.no»).
+Hvis en vin ikke er i snapshot, får du `PoletRefreshRequired` med hint om å refreshe — det er forventet, ikke en feil. Value-anbefalinger på gammelt snapshot er alders-merket; formidle det videre til brukeren («snapshot er X dager gammelt — verifiser pris på polet.no»). Med remote-CDP-oppsettet kan refresh nå kjøres fra hvilken som helst enhet, inkludert mobil og web.
