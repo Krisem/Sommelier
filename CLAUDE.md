@@ -13,10 +13,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Regenerér øl-fit-klassifisering:** `python3 -m tools.beer_fit` (stilfamilie→tier-tabell; kjøres også automatisk av `untappd_stats.py`). For batch: `from tools.beer_fit import classify_beer` på innlimte øl.
 - **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
 - **Evaluér fit-modeller:** `python3 -m tools.eval_fit` (modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines; `--stdout-only` dropper fil-skriving)
-- **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py`
-- **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand
+- **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py` (leser snapshot i `data/polet/`)
+- **Refresh Polet-snapshot (KUN desktop, Playwright-MCP):** se runbook [`docs/polet_refresh.md`](docs/polet_refresh.md). Engangs-seed fra gammel cache: `python3 tools/seed_polet_store.py`.
+- **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand (hopper over viner utenfor snapshot)
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
-- **Cache:** Alle kall caches i `~/.cache/sommelier/` (Polet search 24t / details 7d, Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d). Slett mappa for å resette.
+- **Polet-data:** repo-committet snapshot i `data/polet/` (ikke `requests`). Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d, value_score 24t caches fortsatt i `~/.cache/sommelier/`.
 - Ingen build/lint/test-suite — dette er et kunnskapsbase + helper-repo, ikke en app
 
 ## Rolle
@@ -97,6 +98,7 @@ Følg denne rekkefølgen:
    - **NEI** ved valg mellom flasker brukeren allerede eier (han skal ikke kjøpe noe)
    - **NEI** ved rene fagspørsmål ("hva er forskjellen på X og Y") – bruk deep-knowledge
    - **I tvil:** spør "skal du kjøpe denne, eller har du den allerede?"
+   - **Oppslag treffer snapshotet** (`data/polet/` via `tools/vinmonopolet.py`). Er vinen ikke i snapshot → `PoletRefreshRequired`: si det til brukeren og pek på desktop-refresh (`docs/polet_refresh.md`) — ikke lat som du fant data du ikke har.
    - **Bonus:** Hver gang du henter klokker for en vin brukeren har ratet 4.5+ – uansett grunn – legg profilen til tabellen "Klokke-profil for topp-viner" i `smaksprofil.md`. Tabellen vokser som biprodukt av legitime søk.
 6. **Value-score – betinget, ikke automatisk:**
    - **JA** når brukeren spør eksplisitt om "godt kjøp", "value", "verdt det", "kvalitet vs pris"
@@ -106,6 +108,7 @@ Følg denne rekkefølgen:
    - **NEI** når brukeren bare beskriver smak / leter etter retning (klokker er bedre)
    - Kjør: `python3 -m tools.value_score "<navn>" <årgang>`. Bruk verdict + summary i svaret. Flag når Vivino name-match er "partial"/"weak" eller Aperitif `vintage_mismatch=True` — sier "Aperitif vurderte 2022-årgangen, men score er en proxy".
    - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
+   - **Value er alders-merket** (verdict bærer `snapshot_age_days`/`snapshot_generated_at`). Når snapshotet er gammelt (>14 d), si det i anbefalingen — pris/lager kan ha endret seg, be brukeren verifisere på polet.no. `peer_status=refresh_required` betyr vinen mangler i snapshot: formidl at en desktop-refresh trengs.
 6b. **User-fit-sjekk (rask, alltid lov å gjøre):**
    - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — slå opp `data/user_fit/v0.json` per varenummer
    - **No-filter-bubble-prinsippet:** ALDRI auto-filtrér bort `no_go` eller `risky` fra default-rangering. Default = sortér etter objektiv kvalitet (kritiker-score), vis tier som *merke*. Tier er en advarsel, ikke en filter.
@@ -168,11 +171,11 @@ Forbindelsen mellom region-fakta og bruker-preferanse skjer på inferens-tid: Cl
 
 ## Vinmonopolet-tool — viktig
 
-> ⚠️ **2026-06-08: Webshop-APIet (`vmpws`) er WAF-blokkert — `requests`-kall gir nå 403.** Rammer `tools/vinmonopolet.py` (search/get_product_details) og dermed `value_score.py` + klokke-similarity. Fungerende vei er **Playwright (ekte nettleser)**. Den offentlige CSV-en er avviklet av Polet; åpent API gir kun varenr+kortnavn. Se [ADR-019](docs/ARCHITECTURE.md#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf); fiks er planlagt (egen sesjon — se `tasks/todo.md`). **Inntil den delte henter-helperen er bygd:** bruk Playwright-MCP manuelt — naviger til `https://www.vinmonopolet.no/search?q=<søk>&searchType=product`, og parse produktkortene (`a[href*="/p/"]` → varenr + tekst med navn/pris/region).
+> **Tools leser et repo-committet snapshot** (`data/polet/` via `tools/polet_store.py`), ikke live `requests` — `vmpws` er WAF-blokkert (403). `tools/vinmonopolet.py` (search/get_product_details/similarity) og `value_score.py` slår opp snapshotet. **Cache-miss → `PoletRefreshRequired`** (ingen krasj) med hint om at vinen må hentes fra desktop. Se [ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only).
 
-- **Rate limit:** maks ~30 produkt-oppslag per sesjon. Cache i samtalen.
-- **`get_product_details`** scraper produktsiden — kall kun for 2–3 mest aktuelle treff, ikke alle.
-- **IKKE bruk** `apis.vinmonopolet.no` (åpent API gir kun varenr+kortnavn, ingen pris/region; presse-API krever pressebehov-søknad). Bakgrunn: `knowledge/_archive/rapport.md` + ADR-019.
+- **Refresh er en DESKTOP-operasjon** (Mac + Playwright-MCP). Android er **read-only** — kan ikke refreshe. Runbook: [`docs/polet_refresh.md`](docs/polet_refresh.md).
+- **`get_product_details`** leser dybde fra snapshot; mangler den, trengs en desktop-refresh av nettopp den vinen.
+- **IKKE bruk** `apis.vinmonopolet.no` (åpent API gir kun varenr+kortnavn; presse-API krever pressebehov). Bakgrunn: `knowledge/_archive/rapport.md` + ADR-019/020.
 - Bruk-eksempel: se docstring + `if __name__ == "__main__"` i `tools/vinmonopolet.py`.
 
 ## Output-format

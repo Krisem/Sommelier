@@ -551,14 +551,58 @@ Personalisert (kun ved eksplisitt request):
 
 ---
 
+### ADR-020: Repo-committet Polet-snapshot + cross-device (desktop refresh / Android read-only)
+
+**Status:** Accepted (2026-06-08)
+
+**Kontekst.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) etablerte at den eneste fungerende veien forbi WAF-en er en ekte nettleser, og skisserte «lokalt snapshot for bredde + on-demand dybde» — men lot lagringen og henter-mekanismen være uavklart. Samtidig kjører brukeren Claude Code på **to enheter**: desktop (Mac med Playwright-MCP + lokal chromium) og Android (Claude Code + repo, men **ingen nettleser**). Et snapshot i `~/.cache/sommelier/` løser ikke dette — cachen er enhets-lokal og deles ikke, så Android ville stått uten Polet-data overhodet. Den åpne beslutningen fra `tasks/todo.md` (Python-Playwright vs. Claude-drevet Playwright-MCP) måtte også avgjøres.
+
+**Beslutning.** Flytt varig Polet-data **inn i repoet** under `data/polet/`, og driv refresh via **Claude-drevet Playwright-MCP** (ikke en Python-Playwright-avhengighet). Datamodellen er tre-delt og selv-identifiserende:
+
+- `data/polet/catalog.ndjson` — bredde: ett produkt per linje i rik `vmpws`-shape, sortert på `code`, hver med `fetched_at`.
+- `data/polet/catalog_meta.json` — `generated_at`, `count`, `category_coverage`.
+- `data/polet/details/<varenr>.json` — dybde: klokker/druer/stil/lukt/smak, hver med selv-identifiserende `code`/`url`/`fetched_at`.
+- `data/polet/_orphan_details.json` — rekonstruerte klokkedata uten code-mapping, som venter på re-knytting.
+
+`tools/polet_store.py` er det eneste lag-grensesnittet: lesere (`read_catalog`, `lookup`, `query`, `read_details`, `catalog_age_days`, `catalog_generated_at`, `details_fetched_at`), skrive-helpers (`upsert_products`, `save_details`) og exception `PoletRefreshRequired(url, hint)`. Serialiseringen er deterministisk (`sort_keys`, sortert NDJSON) for å unngå git-merge-støy på tvers av enheter.
+
+Cross-device-rollene er asymmetriske og eksplisitte:
+
+- **Desktop = read + REFRESH.** Refresh-ritualet: `browser_navigate` til `https://www.vinmonopolet.no/` (passerer WAF) → `browser_evaluate` med `fetch('/vmpws/v2/vmp/products/search?q=…&pageSize=…')` for bredde (rik JSON) → `fetch(product_url)` for dybde-HTML → mat write-helpers → commit `data/polet/`. Runbook: [`polet_refresh.md`](polet_refresh.md).
+- **Android = READ-ONLY** konsument av committet snapshot. Får bredde/klokker/similarity fritt; vin utenfor snapshot gir `PoletRefreshRequired` med «refresh fra desktop»-hint (ikke krasj).
+
+`tools/vinmonopolet.py` leser nå snapshot i stedet for `requests`; cache-miss → `PoletRefreshRequired`. `parse_product_html` er **uendret** (fortsatt fixture-testet, [ADR-011](#adr-011-html-fixture-test-for-polet-drift)). `tools/value_score.py` bumper `LOGIC_VERSION` v1→v2 ([ADR-004](#adr-004-logic_version-i-value_score-cache-nøkkel)), inkluderer snapshot-`generated_at` i cache-nøkkelen, og alders-merker verdict.
+
+**Konsekvenser.**
+- ✅ Android får full Polet-funksjonalitet (bredde, klokker, similarity, value) uten nettleser — committet snapshot er felles source-of-truth på tvers av enheter.
+- ✅ Ingen ny tung avhengighet: Playwright-MCP finnes allerede på desktop, ingen browser-binær i repoet eller `requirements`.
+- ✅ `save_details` har **positiv validering** — krever forventet varenr + navn + (klokke|pris) og avviser WAF-challenge-HTML og DOM-drift før skriving. Dette supplerer fixture-testen ([ADR-011](#adr-011-html-fixture-test-for-polet-drift)): fixture fanger drift i parseren, positiv validering fanger drift/challenge ved skriving til snapshot.
+- ✅ Deterministisk serialisering gjør snapshot-diffs linjebaserte og merge-vennlige cross-device.
+- ✅ Value-verdict er alders-merket (`snapshot_age_days`, `snapshot_generated_at`); når alderen > 14 dager degraderes språket («Basert på snapshot fra <dato> (X dager gammelt) — pris/lager kan ha endret seg, verifiser på polet.no før kjøp»). `PoletRefreshRequired` svelges ikke — den gir `peer_status=refresh_required` + tydelig summary.
+- ⚠️ Snapshot-ferskhet avhenger av **manuell desktop-refresh**. Android kan aldri refreshe selv. Ingen automatisk cron — bruker må kjøre ritualet bevisst.
+- ⚠️ `find_similar_by_clocks` hopper over viner som ikke er i snapshot — similarity er begrenset av dekningen.
+- ⚠️ Webshop-`vmpws` er fortsatt ToS-gråsone (arvet fra [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)) — akseptert for personlig, lavt-volum bruk.
+
+**Bekreftet transport (2026-06-08).** Browser-`fetch` mot `vmpws`-JSON gir **200 forbi WAF**; `?fields=FULL` gir 400 (droppet); produktside-HTML gir 200 og matcher `parse_product_html`.
+
+**Faktisk seed-resultat.** `tools/seed_polet_store.py` rekonstruerte engangs fra `~/.cache/sommelier/`: **67 katalog-produkter, 4 details mappet, 118 orphans** (de gamle details-URL-ene var overskrevet av cache-TTL, så klokkedata kunne ikke knyttes til varenr automatisk).
+
+**Alternativer vurdert.** **Python-Playwright** (autonomt, headless, testbart) — forkastet: tung avhengighet + browser-binær, og det **hjelper ikke Android** (ingen browser der uansett), så cross-device-problemet ville bestått. **Snapshot i `~/.cache/sommelier/`** — forkastet: enhets-lokal cache deles ikke, Android ville stått uten data. **Polet åpent/presse-API** — fortsatt forkastet av samme grunner som i ADR-019.
+
+**Relatert.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) (etablerte «ekte nettleser»-veien; ADR-020 konkretiserer lagring + cross-device), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (kode≠navn i fasett-oppslag), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (drift-vern, nå supplert av positiv validering i `save_details`), [ADR-004](#adr-004-logic_version-i-value_score-cache-nøkkel) (LOGIC_VERSION-bump), [`polet_refresh.md`](polet_refresh.md) (desktop-runbook), teknisk gjeld #0.
+
+---
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.
 
 | # | Gjeld | Hvorfor det er gjeld | Når det blir et problem | Trigger for å adressere |
 |---|---|---|---|---|
-| **0** | **`requests`-laget mot Polet `vmpws` er WAF-blokkert (403)** | Webshop-API gjenkjenner ikke-nettleser-klient; `tools/vinmonopolet.py` + `value_score.py` + klokke-similarity feiler | **Allerede akutt (2026-06-08)** — all live Polet-henting via `requests` er død | Bygg delt Playwright-henter ([ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)); plan i `tasks/todo.md` |
-| 1 | Polet HTML-scraping i `parse_product_html` | 12 regex over Polets DOM — sårbar for redesign | Når Polet kommer med ny webshop (sannsynlig <12 mnd) | Fixture-test feiler (allerede på plass — ADR-011) |
+| ~~**0**~~ | ~~`requests`-laget mot Polet `vmpws` er WAF-blokkert (403)~~ **ADRESSERT 2026-06-08** | Løst via repo-committet snapshot + Playwright-MCP-refresh ([ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)). `tools/vinmonopolet.py` leser nå `data/polet/` | — | — (se ny gjeld #0a/#0b) |
+| **0a** | **Snapshot-ferskhet avhenger av manuell desktop-refresh** | Android kan ikke refreshe (ingen browser); ingen cron. Verdict alders-merkes, men data eldes til noen kjører ritualet | Når brukeren handler på et snapshot som er uker gammelt (pris/lager kan ha endret seg) | Kjør desktop-refresh ([`polet_refresh.md`](polet_refresh.md)); value-verdict degraderer språket ved alder >14 d |
+| **0b** | **118 orphan-details venter re-knytting** | Rekonstruerte klokkedata uten code-mapping i `_orphan_details.json` (gamle cache-URL-er overskrevet av TTL) | Similarity/dybde mangler for disse vinene til de re-hentes med varenr | Re-hent details for finalister via desktop-refresh; matchede orphans flyttes til `details/<varenr>.json` |
+| 1 | Polet HTML-scraping i `parse_product_html` | 12 regex over Polets DOM — sårbar for redesign | Når Polet kommer med ny webshop (sannsynlig <12 mnd) | Fixture-test feiler (allerede på plass — ADR-011); supplert av positiv validering i `save_details` (ADR-020) |
 | 2 | `knowledge/scores/` krysser data/knowledge-grensen (ADR-002) | Strukturelt data, lagret som knowledge | Ved 2000+ entries eller behov for sekundær-indeks | Manuell vurdering hver 6. mnd |
 | 3 | Aperitif sitemap-bootstrap er 34 HTTP-kall | Cold path ved første kjøring eller etter 30 d | Når brukeren stiller første Aperitif-spørsmål på over en måned | Vurder lazy-pre-fetch i `tools/aperitif.py` |
 | 4 | `tools/scores.index()` re-parser 422 entries per prosess | `lru_cache` er prosess-lokal; Bash-call = ny prosess | Ved 5000+ entries (>500 ms parse-tid) | Bygg `knowledge/scores/_index.json` ved git pre-commit |

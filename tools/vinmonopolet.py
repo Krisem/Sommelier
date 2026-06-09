@@ -1,62 +1,42 @@
 """
-Vinmonopolet helpers – vmpws (webshop) API
+Vinmonopolet helpers – repo-snapshot via polet_store
+
+Polets webshop-API (`vmpws`) er WAF-blokkert (ADR-019/ADR-020) — `requests`-kall
+gir 403. Varig Polet-data ligger derfor git-committet i `data/polet/` og leses
+gjennom `tools.polet_store` (device-agnostisk, portabelt til Android uten
+browser). Refresh av snapshotet skjer separat på desktop via Playwright-MCP
+(se `docs/polet_refresh.md`) — denne modulen er ren read-side.
 
 Bruk dette scriptet i prosjektet for å:
-- Søke etter viner
-- Hente klokker, lukt, smak, drueblanding fra produktsider
+- Søke etter viner (snapshot-katalog)
+- Hente klokker, lukt, smak, drueblanding fra produktdetaljer
 - Sammenligne mot brukerens preferanser
 - Finne nærmeste vin på klokke-profil (find_similar_by_clocks)
 
-Krever ingen API-nøkkel. Diskcache i ~/.cache/sommelier/ unngår rate-limit.
+Cache-miss (vin ikke i snapshotet) → `PoletRefreshRequired` med refresh-hint.
 """
 
-import hashlib
-import json
 import math
 import re
-import time
-from pathlib import Path
 from typing import Iterable, Optional
 
-import requests
+import requests  # beholdt: find_similar_by_clocks fanger requests.RequestException
+
+from tools import polet_store
+from tools.polet_store import PoletRefreshRequired
 
 BASE = "https://www.vinmonopolet.no"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-CACHE_DIR = Path.home() / ".cache" / "sommelier"
-SEARCH_TTL = 60 * 60 * 24            # 24 t for søk
-DETAILS_TTL = 60 * 60 * 24 * 7       # 7 dager for produktdetaljer (mer stabilt)
 
-
-def _cache_path(namespace: str, key: str) -> Path:
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    h = hashlib.sha256(key.encode("utf-8")).hexdigest()[:24]
-    return CACHE_DIR / f"{namespace}_{h}.json"
-
-
-def _cache_get(namespace: str, key: str, ttl: int):
-    p = _cache_path(namespace, key)
-    if not p.exists():
-        return None
-    if (time.time() - p.stat().st_mtime) > ttl:
-        return None
-    try:
-        return json.loads(p.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError):
-        return None
-
-
-def _cache_set(namespace: str, key: str, value) -> None:
-    p = _cache_path(namespace, key)
-    try:
-        p.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
-    except OSError:
-        pass
+def _search_url(query: str) -> str:
+    """Bygg vmpws-søke-URL for query — kun til PoletRefreshRequired-hint."""
+    return f"{BASE}/vmpws/v2/vmp/products/search?q={query}"
 
 
 def search(query: str, page_size: int = 10, use_cache: bool = True) -> list[dict]:
     """
-    Søk etter produkter på Vinmonopolet.
+    Søk etter produkter i repo-snapshotet (fritekst mot produktnavn).
 
     Returnerer liste med dicts som inneholder:
     - code (varenummer), name, price.value
@@ -65,26 +45,20 @@ def search(query: str, page_size: int = 10, use_cache: bool = True) -> list[dict
     - product_selection, productAvailability
     - url (relativ sti til produktsiden)
 
-    Resultat caches i ~/.cache/sommelier/ i 24 timer. Sett use_cache=False
-    for å force ferskt kall.
+    `use_cache` beholdes for bakoverkompat (no-op — snapshotet ER cachen).
+    Tomt resultat → `PoletRefreshRequired` (refresh fra desktop).
     """
-    cache_key = f"q={query}|n={page_size}"
-    if use_cache:
-        cached = _cache_get("search", cache_key, SEARCH_TTL)
-        if cached is not None:
-            return cached
-
-    url = f"{BASE}/vmpws/v2/vmp/products/search"
-    r = requests.get(
-        url,
-        params={"q": query, "pageSize": page_size},
-        headers=HEADERS,
-        timeout=10,
-    )
-    r.raise_for_status()
-    products = r.json().get("products", [])
-    _cache_set("search", cache_key, products)
-    return products
+    products = polet_store.query(name_contains=query)
+    if not products:
+        raise PoletRefreshRequired(
+            f"Ingen snapshot-treff på '{query}'",
+            url=_search_url(query),
+            hint=(
+                "Søket ga ingen treff i repo-snapshotet — refresh katalogen fra "
+                "desktop (se docs/polet_refresh.md)"
+            ),
+        )
+    return products[:page_size]
 
 
 def search_with_facets(
@@ -93,7 +67,7 @@ def search_with_facets(
     use_cache: bool = True,
 ) -> list[dict]:
     """
-    Søk Vinmonopolet med Hybris-style fasett-filter (én strukturert spørring).
+    Søk snapshotet med fasett-filter (kategori/land) — mappet til polet_store.query.
 
     Eksempel:
         peers = search_with_facets(
@@ -102,38 +76,33 @@ def search_with_facets(
         )
 
     Argumenter:
-        facets: dict med fasett-koder → kode-verdi. Verdier må være `.code`-feltet
-                fra Polets fasett-vokabular (lowercase, underscore for mellomrom):
-                  - mainCategory: 'rødvin' | 'hvitvin' | 'musserende_vin' | 'rosévin' | ...
+        facets: dict med fasett-koder → kode-/navn-verdi. `mainCategory` og
+                `mainCountry` mappes til query(category=, country=); begge matcher
+                både `.code` og `.name` (case-insensitivt) i polet_store.
+                  - mainCategory: 'rødvin' | 'hvitvin' | 'musserende_vin' | ...
                   - mainCountry:  'italia' | 'frankrike' | 'spania' | ...
-                  - district:     'italia_sicilia' | 'frankrike_champagne' | ...
-                Bruk `.code`-feltet direkte fra et tidligere search()-treff.
-        page_size: maks antall produkter (Polets API gir typisk opptil ~100)
-        use_cache: bruk 24t diskcache (namespace "search_facets")
+        page_size: maks antall produkter
+        use_cache: beholdt for bakoverkompat (no-op).
 
-    Returnerer samme produkt-struktur som search().
+    Returnerer samme produkt-struktur som search(). Resultatet kan være tynt
+    (value_score håndterer peer-terskelen selv). Tomt → `PoletRefreshRequired`.
     """
-    # Bygg deterministisk query-streng for både cache-key og API
-    parts = [f"{k}:{v}" for k, v in sorted(facets.items())]
-    query = ":relevance:" + ":".join(parts) if parts else ":relevance"
+    category = facets.get("mainCategory")
+    country = facets.get("mainCountry")
 
-    cache_key = f"facets={query}|n={page_size}"
-    if use_cache:
-        cached = _cache_get("search_facets", cache_key, SEARCH_TTL)
-        if cached is not None:
-            return cached
-
-    url = f"{BASE}/vmpws/v2/vmp/products/search"
-    r = requests.get(
-        url,
-        params={"q": query, "pageSize": page_size},
-        headers=HEADERS,
-        timeout=10,
-    )
-    r.raise_for_status()
-    products = r.json().get("products", [])
-    _cache_set("search_facets", cache_key, products)
-    return products
+    products = polet_store.query(category=category, country=country)
+    if not products:
+        parts = [f"{k}:{v}" for k, v in sorted(facets.items())]
+        query = ":relevance:" + ":".join(parts) if parts else ":relevance"
+        raise PoletRefreshRequired(
+            f"Ingen snapshot-treff på fasetter {facets}",
+            url=_search_url(query),
+            hint=(
+                "Fasett-søket ga ingen treff i repo-snapshotet — refresh "
+                "katalogen fra desktop (se docs/polet_refresh.md)"
+            ),
+        )
+    return products[:page_size]
 
 
 def filter_results(
@@ -224,26 +193,37 @@ def parse_product_html(html: str) -> dict:
 
 def get_product_details(product_url: str, use_cache: bool = True) -> dict:
     """
-    Hent klokker, lukt, smak, drueblanding fra produktsiden.
+    Hent klokker, lukt, smak, drueblanding fra repo-snapshotet (details/<code>.json).
 
-    product_url skal være relativ sti (fra search-resultat).
-    Caches i 7 dager. Sett use_cache=False for å force ferskt kall.
+    product_url slutter på `/p/<code>` (relativ eller absolutt). Koden utledes og
+    brukes som oppslagsnøkkel mot polet_store.read_details.
+
+    `use_cache` beholdes for bakoverkompat (no-op). Miss (ikke i snapshot, eller
+    URL uten utledbar kode) → `PoletRefreshRequired`.
     """
-    if not product_url.startswith("http"):
-        product_url = BASE + product_url
+    m = re.search(r"/p/(\d+)", product_url)
+    if not m:
+        raise PoletRefreshRequired(
+            f"Klarte ikke å utlede varenr fra URL '{product_url}'",
+            url=product_url,
+            hint=(
+                "URL mangler /p/<varenr> — refresh produktet fra desktop "
+                "(se docs/polet_refresh.md)"
+            ),
+        )
+    code = m.group(1)
 
-    if use_cache:
-        cached = _cache_get("details", product_url, DETAILS_TTL)
-        if cached is not None:
-            return cached
-
-    r = requests.get(product_url, headers=HEADERS, timeout=10)
-    r.raise_for_status()
-    r.encoding = "utf-8"
-    result = parse_product_html(r.text)
-
-    _cache_set("details", product_url, result)
-    return result
+    details = polet_store.read_details(code)
+    if details is None:
+        raise PoletRefreshRequired(
+            f"Produktdetaljer for varenr {code} finnes ikke i snapshotet",
+            url=product_url,
+            hint=(
+                "Produktsiden er ikke i repo-snapshotet — refresh den fra "
+                "desktop (se docs/polet_refresh.md)"
+            ),
+        )
+    return details
 
 
 # ─── KLOKKE-PROFIL SIMILARITY ────────────────────────────────────────
@@ -297,7 +277,11 @@ def find_similar_by_clocks(
     candidates: list[dict] = []
 
     for q in queries:
-        results = search(q, page_size=page_size)
+        try:
+            results = search(q, page_size=page_size)
+        except PoletRefreshRequired:
+            # Søkestrengen ga ingen snapshot-treff — hopp over, fortsett med resten
+            continue
         filtered = filter_results(
             results,
             max_price=max_price,
@@ -312,7 +296,8 @@ def find_similar_by_clocks(
             seen.add(code)
             try:
                 details = get_product_details(p["url"])
-            except requests.RequestException:
+            except (PoletRefreshRequired, requests.RequestException):
+                # Vin ikke i snapshot — hopp over, similarity over det som finnes
                 continue
             clocks = details.get("klokker") or {}
             if not clocks:
