@@ -9,24 +9,23 @@
 
 > **Hvorfor ikke bare lokal browser overalt?** Cloudflare hard-blokkerer datasenter-IP-er og ikke-browser-TLS. På en **vanlig desktop** når chromium Cloudflare *direkte* med genuin fingerprint → fungerer. Men i et MITM-proxy-miljø (Claude Code on the web går gjennom Anthropics Egress Gateway, likeledes mange bedriftsproxyer) ser Cloudflare proxyens datasenter-fingerprint, ikke chromiums → **hard 403**. Empirisk bekreftet 2026-06-09: lokal chromium i web-containeren fikk 200 på forsiden men 403 «Sorry, you have been blocked» på `/vmpws/` og produktsider. Remote browser via CDP omgår dette fordi WAF-en møter *tjenestens* browser, ikke din proxy. Se [ADR-021](ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh).
 
-## Oppsett (én gang per enhet)
+## Oppsett
+
+**MCP-registreringen er automatisk** — repoet har en committet [`.mcp.json`](../.mcp.json) som registrerer Playwright-MCP pekt på en remote browser via `--cdp-endpoint ${POLET_BROWSER_CDP}`. Du trenger **ikke** `claude mcp add` eller å kopiere noen config-fil. Det eneste per-enhet-steget er å sette én hemmelig env-variabel:
 
 1. **Skaff en CDP-endpoint** fra en remote browser-tjeneste:
    - **Browserbase** (verifisert 2026-06-09 — *gratis-tier holder* for lavvolum månedlig refresh): lag konto → API-nøkkel. CDP-URL: `wss://connect.browserbase.com?apiKey=DIN_KEY`. Gratis-tier kjører uten residential-proxy (paid), men Browserbases egen IP + genuin chromium passerer Vinmonopolets Cloudflare likevel.
    - **Browserless** (alternativ): `wss://production-sfo.browserless.io?token=DITT_TOKEN`.
-2. **Lag den gitignored config-fila** (token er en hemmelighet — aldri i repoet):
-   ```sh
-   cp docs/polet-mcp.config.example.json polet-mcp.config.json
-   # rediger polet-mcp.config.json → sett inn din cdpEndpoint
-   ```
-   `polet-mcp.config.json` står i `.gitignore`.
-3. **Pek Playwright-MCP på den remote browseren.** Enten som MCP-server i Claude Code:
-   ```sh
-   claude mcp add playwright -- npx @playwright/mcp@latest --config "$(pwd)/polet-mcp.config.json"
-   ```
-   (eller legg tilsvarende i `.mcp.json`). Da blir `browser_navigate` / `browser_evaluate` tilgjengelige og kjører mot skybrowserne.
+2. **Sett `POLET_BROWSER_CDP`** til hele CDP-URL-en (med token). Token er en hemmelighet — den bor KUN i env, aldri i repoet:
+   - **Claude Code on the web:** legg den inn som env-variabel i miljø-konfigurasjonen (env/secrets) for environmentet.
+   - **Desktop/Android (shell):** `export POLET_BROWSER_CDP='wss://connect.browserbase.com?apiKey=DIN_KEY'` i shell-profilen (`~/.zshrc` / `~/.bashrc`).
+3. **Det er alt.** Neste Claude Code-sesjon i repoet får `playwright`-MCP-serveren (`browser_navigate` / `browser_evaluate`) automatisk, koblet mot skybrowseren.
 
-> **Remote-CDP er den foretrukne veien på ALLE enheter — også desktop.** Én refresh-rutine å vedlikeholde, identisk oppførsel overalt, ingen device-branching. Lokal desktop-chromium (Playwright-MCP med default lokal browser) fungerer fortsatt på en vanlig Mac med direkte egress, men er nå kun en **nød-utvei** for hvis du midlertidig er uten remote-konto — ikke standardoppsettet.
+> **Late connect — ingen budsjett-lekkasje:** MCP-serveren kobler seg til skybrowseren først ved *første* browser-tool-kall (verifisert 2026-06-09), ikke ved sesjonsstart. Den bare ligger der dormant i vanlige read-sesjoner og bruker null Browserbase-tid før du faktisk refresher. Er `POLET_BROWSER_CDP` ikke satt, starter serveren rent men dormant (tomt endpoint) — den blokkerer ingenting.
+
+> **Remote-CDP er den foretrukne veien på ALLE enheter — også desktop.** Én refresh-rutine å vedlikeholde, identisk oppførsel overalt, ingen device-branching. Lokal desktop-chromium (Playwright-MCP med default lokal browser) fungerer fortsatt på en vanlig Mac med direkte egress, men er nå kun en **nød-utvei** hvis du midlertidig er uten remote-konto — ikke standardoppsettet.
+>
+> *Alternativ (config-fil i stedet for env-var):* `cp docs/polet-mcp.config.example.json polet-mcp.config.json` (gitignored), fyll inn `cdpEndpoint`, og pek MCP-en på den med `--config`. Nyttig hvis du trenger `cdpHeaders` (f.eks. Browserless token-i-header). Env-var-veien over er enklere og er standarden.
 
 ## Hvorfor browser-fetch (ikke `requests`)
 
