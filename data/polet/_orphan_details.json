@@ -1,0 +1,2456 @@
+[
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-15T14:02:31.384399+00:00",
+    "hash": "0411a364125ca8b96bca5394",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Primitivo 100 prosent",
+      "farge": "Dyp rød med blåskjær.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Aroma av modne mørke bær, litt svale urter og tørket frukt, innslag av kamfer, lakris og vanilje.",
+      "smak": "Fruktig, litt sødme og utvikling, preg av røde og mørke bær, litt urt, kamfer, lakris og vanilje.",
+      "stil": "Frisk og fruktig",
+      "sukker": "9,6 g/l",
+      "syre": "6,1 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.372510+00:00",
+    "hash": "04749ff3826251f88fc96c51",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Middels dyp blårød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Fruktig, ferskt og litt undermodent preg av rips, bringebær og grønn urt, litt kamfer og roser.",
+      "metode": "Spontanfermentert.",
+      "smak": "Saftig, nyansert og middels fast, preg av rips, bringebær, litt nype, bladverk og grønne urter.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,9 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:02.969050+00:00",
+    "hash": "04b37a912c35285225776c3c",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 23 prosent",
+      "farge": "Lakserosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av friske røde bær med hint av krydder og gjærbakst.",
+      "metode": "Méthode champenoise.",
+      "smak": "Bringebær og jordbær. Syrefrisk avslutning.",
+      "sukker": "7,2 g/l",
+      "syre": "4,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.301733+00:00",
+    "hash": "0697a34cc70e9ebfc90c6926",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Cappuccio 20 prosent",
+      "farge": "Lys rubinrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Garvestoffer": 8
+      },
+      "lukt": "Florale toner med krydder og urter, røde bær og tørket frukt.",
+      "metode": "Håndhøstede druer, skånsom maserasjon før fermentering i store fat og lagring i store brukte fat.",
+      "smak": "Fast med frisk syre og moden frukt, sval og kompleks med fruktig avslutning.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.818302+00:00",
+    "hash": "0914f2793b60c28c7bdff7e8",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Trepat 20 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Duft av bringebær og jordbær. Tydelig autolyse og mineralitet.",
+      "metode": "Skånsomt presset og maserert i 8-10 timer. Flaskelagring på bunnfall i 12 md. Ingen dosage.",
+      "smak": "Slank munnfølelse med høy, frisk syre. Smak av sitrus og røde bær.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.054662+00:00",
+    "hash": "099765434e4882bda1b57cec",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Pinot Noir 90 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av rips og bringebær, hint av gjærbakst.",
+      "metode": "Håndplukkede druer. Forsiktig pressing og kort skallmasserasjon. Annengangsgjæring i flaske med 12 måneder på bunnfallet.",
+      "smak": "Kjølig bærpreg, rips og bringebær.",
+      "sukker": "8 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.722908+00:00",
+    "hash": "0b3b426678e010f793a8d92e",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Dyp rød med blåskjær.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 8
+      },
+      "lukt": "Ung og litt krydret, toner av bringebær, kirsebær, svale urter og kamfer, litt tjære, roser og fat.",
+      "metode": "Temperaturkontrollert gjæring 23°C. 14d. skinnkontakt, 2 daglige omrøringer. Modning på tre og rustfritt stål i 6-8 md.",
+      "smak": "Saftig, fyldig og litt fast, svalt preg av modne røde bær, nype, innslag av kamfer, lakris og fat.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:15.962110+00:00",
+    "hash": "0e5b194d94bcdb2361e35261",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nero d&#x27;Avola 75 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Fruktig aroma preget av modne røde bær, moreller og litt tørket frukt.",
+      "smak": "Ung, saftig og nyansert, preg av røde bær og urter, fast og frisk ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.419036+00:00",
+    "hash": "0ed4002f9adb0608fd0651c5",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Sødme": 1
+      },
+      "lukt": "Frisk og fruktig aroma av røde bær, aprikos og fersken.",
+      "metode": "Ståltank. Tradisjonell metode, andregangsgjæring på flaske. Dosage 8g/l.",
+      "smak": "Frisk og kremet, balansert. Fruktig smak av friske røde bær.",
+      "sukker": "8 g/l",
+      "syre": "4,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.598907+00:00",
+    "hash": "138b12c539e7bbe44af9ecd6",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Garvestoffer": 9
+      },
+      "lukt": "Sval aroma av mørke bær, te og litt trekrydder.",
+      "metode": "Manuelt høstede druer fra unge vinstokker, 15-18 dagers gjæring og maserasjon, mesteparten av vinen modnes i store fat.",
+      "smak": "Saftig, sval og litt utviklet, preg av mørke bær, krydder og litt tre. Fast ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.475488+00:00",
+    "hash": "13def059c590c924957ca409",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Sval aroma preget av røde bær, modne epler og sitrus, hint av kjeks, nøtt og mineraler.",
+      "metode": "Tradisjonelle fermentasjon .",
+      "smak": "Kremet, litt utviklet og saftig preg av eple, jordbær, sitrus, litt kjeks og mineraler. God lengde.",
+      "sukker": "8,5 g/l",
+      "syre": "4,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.901303+00:00",
+    "hash": "159513c64c904e11fae6285c",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Aroma av kirsebær, rips og krydder.",
+      "smak": "Frisk. Moreller og røde bær.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.542009+00:00",
+    "hash": "16e333f0875381076505f39a",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Preg av syrlige røde bær og blomster på duft.",
+      "metode": "Tradisjonell vinifikasjon, lagres på bunnfall i 20-25 md.",
+      "smak": "Saftig, syrlig med god syre.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:12.738011+00:00",
+    "hash": "1723f4f68003a1e392772c38",
+    "parsed": {
+      "alkohol": "14,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Burgunderrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av sitrus, solbær, fersken og røde bær, hint av appelsinblomst.",
+      "metode": "Maserasjon ca 28 d, 12 md. på fat, 50% tonneaux og 50% fransk eik, 12 md. i rustfritt stål, 12 md. i flaske.",
+      "smak": "Rik, frukt balansert med snev av sødme og vanilje, frisk avslutning.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.469540+00:00",
+    "hash": "190aeda3d49487af4af1b5c2",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Klar rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Frisk aroma av bær.",
+      "metode": "Fermentering i ca. 25 dager, 8 md. på 225, 500 og 1000 liter brukte eikefat etterfulgt av 6 md. flaskemodning.",
+      "smak": "Frisk og fruktig med smak av bær. Tydelige tanniner.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.047837+00:00",
+    "hash": "1ab40b46f1d7ea584c4d08b3",
+    "parsed": {
+      "alkohol": "14,5%",
+      "druer": "Nerello Cappuccio 6 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 6,
+        "Garvestoffer": 8
+      },
+      "lukt": "Frisk aroma av røde bær, litt urter og tre.",
+      "smak": "Fruktig og bærdrevet. Kjernefrukt med frisk syre og saftige tanniner.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "4,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:09.191228+00:00",
+    "hash": "1d01447bfb71d43420638bae",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Nero 56 prosent",
+      "farge": "Lys ferskenrosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Gul frukt, nektariner og litchi. Røde bær, granateple og rosa hylleblomst.",
+      "metode": "Tradisjonell metode.",
+      "smak": "Gul frukt, nektariner og litchi. Røde bær, granateple og rosa hylleblomst.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.561346+00:00",
+    "hash": "1d29ec3b6183c7a3a52e4707",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Klar, middels dyp rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Garvestoffer": 5
+      },
+      "lukt": "Delikat og noe parfymert duft av roser, bringebær, og markjordbær.",
+      "metode": "Ståltank.",
+      "smak": "Aromatisk med svalt preg av røde bær og urter. Balansert med myke tanniner.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:02.917346+00:00",
+    "hash": "1e8cb56499272ed8bc65c97e",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 40 prosent",
+      "farge": "Lakserosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 10,
+        "Sødme": 2
+      },
+      "lukt": "Duft av mørke og røde bær, brioche.",
+      "smak": "Fruktig, frisk og balansert med lang lengde.",
+      "sukker": "10 g/l",
+      "syre": "3,9 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:08.340921+00:00",
+    "hash": "21e543875609bf6085dda8cc",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 25 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Duft av solbær og bringebær.",
+      "metode": "Trad. vinifikasjon.",
+      "smak": "Bløt og balansert syre. Fyldig med frisk avslutning.",
+      "sukker": "3,5 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:19.379380+00:00",
+    "hash": "2806d0d9fc2d04d7815c6db3",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Middels dyp mursteinsrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 8
+      },
+      "lukt": "Nyansert aroma av syltet plomme og røde bær, litt tørket frukt, te, lær og krydder.",
+      "metode": "Tradisjonell gjæring, 12 md på trefat og 3 md på flaske.",
+      "smak": "Litt utviklet med preg av tørket frukt og røde bær, litt fat, te og krydder.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:02.667847+00:00",
+    "hash": "287adc411900c4fcca43d96b",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Chardonnay 20 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 9,
+        "Sødme": 2
+      },
+      "lukt": "Røde bær og toast.",
+      "metode": "Méthode champenoise. Utviklet 5 år på berme.",
+      "smak": "Fruktig smak av røde bær med hint gjærbakst.",
+      "sukker": "11,2 g/l",
+      "syre": "6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:09.012006+00:00",
+    "hash": "2bae79d490787b39c0a99fd8",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 40 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Sødme": 1
+      },
+      "lukt": "Aroma preget av eple, sitrus og litt røde bær, innslag av nøtt og kjeks.",
+      "metode": "Champagnemetoden, 40 md. på berme. 30% Pinot Nero vinifisert i rosè og 30% Pinot Nero vinifisert i hvitvin.",
+      "smak": "Ung, fruktig og kremet, preg av røde bær, sitrus, innslag av urter, blomst og kjeks, god lengde.",
+      "sukker": "5,7 g/l",
+      "syre": "7,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.494789+00:00",
+    "hash": "2dcecfb1284c0dee44d14606",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Aroma av røde bær, urter og mineraler.",
+      "smak": "Strukturert og balansert med hint av jordbær og kirsebær. Kryddertoner av sort pepper.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.747460+00:00",
+    "hash": "2e8cfca9c516019f49bb5c51",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Cabernet Franc 78 prosent",
+      "farge": "Rosa, hint kobber.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Sødme": 2
+      },
+      "lukt": "Duft av fersken.",
+      "smak": "Frisk og fruktig med lang ettersmak.",
+      "sukker": "12 g/l",
+      "syre": "6,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-13T17:40:30.381732+00:00",
+    "hash": "3166794139146f9095c48511",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Middels dyp rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Bærpreget aroma med innslag av bringebær, kirsebær og mineraler.",
+      "metode": "Håndplukket fra 30 år gamle vinstokker. Tradisjonell vinifikasjon i åpne kar. Modning på ståltank.",
+      "smak": "Frisk og fruktig med bærpreg. Balansert, fast ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:08.749954+00:00",
+    "hash": "31b87f76815e7d903f95fabb",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 50 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 8,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av røde bær og kirsebær.",
+      "metode": "Pinot Noir vinifiseres som rosé. Første gjæring i termokondisjonerte ståltanker. Chardonnay lagres på fransk eik.",
+      "smak": "Konsentrert og frukig. Lang avslutning.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.488561+00:00",
+    "hash": "3406a6ff02a70a33c6804281",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 80 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Toner av bær og krydder.",
+      "metode": "Maserasjon på ca 12-15 d i stål. 30 hl Franske eikefat i 24 md. i og 1 år på flaske.",
+      "smak": "Frisk, noe tanniner og lang, mineralsk avslutning.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:09.139824+00:00",
+    "hash": "34416e6c68b9a8542245cb67",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Blanc 10 prosent",
+      "farge": "Lys lakserosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Duft av små røde bær.",
+      "metode": "Fermentering ca. 24 md. på bunnfall.",
+      "smak": "Lang og fruktig.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.173049+00:00",
+    "hash": "349a316a1b5b193fd6d0fcb5",
+    "parsed": {
+      "alkohol": "11%",
+      "druer": "Cabernet Franc 85 prosent",
+      "farge": "Klar lys rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Aromaer fra røde frukter.",
+      "metode": "Tradisjonell metode, andregangsgjæring på flaske i min 12 md.",
+      "smak": "Tydelige og friske aromaer fra røde frukter. Sitter lenge.",
+      "sukker": "10,3 g/l",
+      "syre": "4,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.891814+00:00",
+    "hash": "3518c427454c9f74699cdfff",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Garnacha 80 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 8,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av røde bær, hint av sitrus og urter.",
+      "metode": "Fra 50-80 år gamle stokker, tradisjonell metode med 18 md. på bunnfall.",
+      "smak": "Fruktig og frisk med lang og saftig ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "4,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.849373+00:00",
+    "hash": "3615593f0fcad2bbcb9dcdb5",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av modne røde bær og epler, innslag av epleblomst, nype, nøtt og kjeks.",
+      "metode": "Vinifikasjon av grunnvinen før annengangsgjæring i flasken.",
+      "smak": "Kremet og saftig, preg av modne røde epler, rips og jordbær, innslag av mineraler og kjeks.",
+      "sukker": "Under 3 g/l",
+      "syre": "7,3 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.540575+00:00",
+    "hash": "38cfc456de906ccec31b14c7",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Tett rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 10,
+        "Garvestoffer": 7
+      },
+      "lukt": "Bjørnebær, plommer, tobakk, fioler.",
+      "smak": "Mørke bær, modne plommer, hint av tobakk og fioler.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.120797+00:00",
+    "hash": "39ed7803838aa5084e38497c",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Gamay 10 prosent",
+      "farge": "Middels dyp rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Aroma med fint preg av røde bær og sitrus, hint av mineraler og kjeks.",
+      "metode": "Tradisjonell vinifikasjonsteknikk med bl.a. annengangsgjæring i flasken. Ikke fatlagret, 12 md. flaskemodning før salg.",
+      "smak": "Litt utviklet stil, preg av røde bær og sitrus, innslag av mineraler og kjeks.",
+      "sukker": "15,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.161041+00:00",
+    "hash": "3b9cf8bcd80f3fe9acb9cb50",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Pinot Noir 15 prosent",
+      "farge": "Blek rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 3
+      },
+      "lukt": "Toner av små røde bær, jordbær, bjørnebær og rips, krydder og sitrus.",
+      "metode": "Tradisjonell vinifikasjon på temperaturkontrollerte ståltanker. Annengangsgjæring på flaske, 12 måneder på bunnfall.",
+      "smak": "Fruktig anslag, balansert og elegant. Preg av jordbær og god friskhet.",
+      "sukker": "10,5 g/l",
+      "syre": "6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.953925+00:00",
+    "hash": "3d7aaba888c7e6684ca83a50",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Dyp blårød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Garvestoffer": 6
+      },
+      "lukt": "Ung og fruktig aroma av røde bær, litt krydder og roser, innslag av kirsebær og grønne urter.",
+      "metode": "Spontanfermentert.",
+      "smak": "Saftig og friskt preg av modne røde bær, grønne urter og litt krydder, innslag av te og mineraler.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,7 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.699200+00:00",
+    "hash": "3e952eb609b4f0285e8f8916",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Lys rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 5,
+        "Garvestoffer": 8
+      },
+      "lukt": "Aroma av kirsebær, moreller og hint av lær.",
+      "smak": "Slank og frisk. Bærpreget med god tanninstruktur.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-15T14:02:35.791918+00:00",
+    "hash": "47a03fa790fa2913a69a2936",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Barbera 100 prosent",
+      "farge": "Dyp blårød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Fruktig aroma preget av røde bær, morell, blomst og svale urter, hint av lakris og mandel.",
+      "metode": "Håndplukkede druer, 6-7 dagers temperaturkontrollert gjæring med hyppige.",
+      "smak": "Fruktig, frisk og saftig med god fylde, preg av kirsebær, litt morell, tyttebær, lakris og urt.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,1 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.302461+00:00",
+    "hash": "489b19762cc5f4e7c84a7982",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Chardonnay 20 prosent",
+      "farge": "Middels dyp rosaoransje.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 1
+      },
+      "lukt": "Litt utviklet aroma preget av modne epler og røde bær, litt sitrus, urt og kjeks.",
+      "metode": "Tradisjonell vinifikasjonsprosess med bl.a. annengangsgjæring i flasken.",
+      "smak": "Saftig og kremet med god friskhet, preg av eple, sitrus, rips og jordbær, litt nøtt og kjeks.",
+      "sukker": "6,1 g/l",
+      "syre": "5,8 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:11.589565+00:00",
+    "hash": "497f47a0d9140493b079f69c",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 7 prosent",
+      "farge": "Mørk rød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 6
+      },
+      "lukt": "Fruktig aroma av skogsbær og kirsebær.",
+      "metode": "Gjæret og lagret i ståltank.",
+      "smak": "Fruktig preg av mørke bær, lang ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-15T14:02:37.956113+00:00",
+    "hash": "4af23dc68f455b90f49a0b25",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Malvasia 60 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Aroma med preg av modne mørke bær, litt tørket frukt, trekrydder og urter.",
+      "metode": "Malvasia nera. Laget av druer fra gamle vinstokker (20 - 60 år). Trad. vinifikasjon.",
+      "smak": "Ungdommelig preg av sødmerike mørke bær, litt krydder, tørket frukt, fat og urter, fast ettersmak.",
+      "sukker": "5,4 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:11.907241+00:00",
+    "hash": "4be11f53193ef0e39f3e619a",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 6,
+        "Garvestoffer": 4
+      },
+      "lukt": "Fruktkonsentrasjon med aroma av søte blåbær, rød frukt og noe krydder.",
+      "metode": "Håndplukkede druer. Naturlig malolaktisk gjæring. 6-8 md på lees.",
+      "smak": "Rød frukt med preg av vulkansk jordsmonn. Bløte tanniner, mineralsk, balansert.",
+      "sukker": "Under 3 g/l",
+      "syre": "6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:16.064973+00:00",
+    "hash": "4c24cb8c46640f84241d38fa",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nero d&#x27;Avola 60 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Aroma av røde og mørke bær, hint av vanilje, lakris, røyk og mynte.",
+      "metode": "Stålfermentert, modnes 12 md i botte/tonneaux.",
+      "smak": "Rund og saftig, frisk syre, bær og mineraler, myke tanniner, lang, tørr avslutning.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.693419+00:00",
+    "hash": "52b8a07cc90008bb2e2e331a",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 15 prosent",
+      "farge": "Klar dyp rosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av røde bær, eple og sitrus, hint av toast.",
+      "smak": "Ung, saftig og kremet smak, preg av røde bær og eple, hint av brøddeig i ettersmaken.",
+      "sukker": "9,5 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.314346+00:00",
+    "hash": "5750a98bd302026acc65dae9",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Trepat 40 prosent",
+      "farge": "Kirsebær.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 3,
+        "Sødme": 1
+      },
+      "lukt": "Nese med hint av jordbær og andre røde bær.",
+      "metode": "Lagret 24 måneder på fat.",
+      "smak": "Balansert syrefriskhet, Lang med lette bærsmaker.",
+      "sukker": "4 g/l",
+      "syre": "6,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:15.695953+00:00",
+    "hash": "57b0795f573407143d87971f",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Frappato 40 prosent",
+      "farge": "Kirsebærrød, fiolette nyanser.",
+      "klokker": {
+        "Friskhet": 5,
+        "Fylde": 6,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av kirsebær, bringebær og bjørnebær, innslag av blåbær og krydder.",
+      "smak": "Middels fyldig, røde bær, balansert syre og avrundede tanniner. Fruktig.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,0 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:46:55.609860+00:00",
+    "hash": "5c733895c4544ed4c933b9b2",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Dyp rød med blåskjær.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 8
+      },
+      "lukt": "Ungt og litt krydret preg av jordbær, krekling og tranebær, litt kamfer, lakris, blomster og fat.",
+      "metode": "Lagret i store slavonske eikefat i minst 6 md.",
+      "smak": "Saftig, nyansert og nokså fast, preg av modne røde bær, nype, svale urter, kamfer, litt te og fat.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,4 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.021355+00:00",
+    "hash": "5ed581f0e3c7cfb6659d8546",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 49 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Sødme": 1
+      },
+      "lukt": "Ren, aroma av modne røde bær, epler, kalk, brioche.",
+      "smak": "Frisk, konsentrert. God avslutning.",
+      "sukker": "7,5 g/l",
+      "syre": "6,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:02.731077+00:00",
+    "hash": "60c0400d19b375dbb58e7021",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 20 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Sødme": 4
+      },
+      "lukt": "Aroma av røde bær, innslag av urter og gjærbakst.",
+      "smak": "Kremet munnfølelse, med røde skogsbær, moreller og mineraler.",
+      "sukker": "7 g/l",
+      "syre": "4,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-15T14:02:33.552959+00:00",
+    "hash": "61e6f48e207f4f783c3ba6bc",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nero d&#x27;Avola 100 prosent",
+      "farge": "Middels dyp rød med blåskjær.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma med fruktig og ungdommelig preg av røde bær og plommer, litt blomst, krydder og urt.",
+      "metode": "Gjering på ståltank 5-7 dager, lagring på ståltank.",
+      "smak": "Fruktig og myk med ørlite sødme, preg av modne røde bær og plommer, litt krydder, anis og urt.",
+      "sukker": "9,5 g/l",
+      "syre": "5,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:09.364659+00:00",
+    "hash": "62ba2b7c8641872508a9db21",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 100 prosent",
+      "farge": "Gyllenbrun.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 10,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av sitrus, modne epler og litt krydder, steinfrukt og mineraler.",
+      "metode": "Fermentering på ståltank, deretter minst 60 md. på bunnfall.",
+      "smak": "Kremet og litt utviklet, eple, sitrus, steinfrukt, kjeks og mineraler.",
+      "sukker": "Under 3 g/l",
+      "syre": "6,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:15.856617+00:00",
+    "hash": "660f15927ea34c9ea2c3059c",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Frappato 40 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 5,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Aroma av kirsebær, plomme og bjørnebær, innslag av krydder og lakris.",
+      "smak": "Fyldig og rund smak, preg av modne røde bær, balansert syre og myke tanniner.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,0 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:11.850473+00:00",
+    "hash": "67ceb949bf1a17145e5df97e",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 6,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av tørket kirsebær, granateple, røde bær, røyk, hvit pepper og mineraler.",
+      "metode": "Håndhøstet, høytliggende vinmarker, vulkansk tuffjord. 18 md. i ståltanker.",
+      "smak": "Frisk, tanniner, preg av røde bær, granateple, krydder og mineralitet. God lengde.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.611920+00:00",
+    "hash": "6998e31ae4acca064540525f",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Blårød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 5,
+        "Garvestoffer": 5
+      },
+      "lukt": "Fruktig aroma med hint av kirsebær, basilikum, bringebær, jordbær, krydder og blodappelsin.",
+      "smak": "Fruktig smak med hint av kirsebær, basilikum, bringebær, jordbær og blodappelsin",
+      "sukker": "3,2 g/l",
+      "syre": "3,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.671843+00:00",
+    "hash": "6e822f62d35c2445da53f463",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Cappuccio 2 prosent",
+      "farge": "Klar rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av rød frukt, krydder, urter og mineralske toner.",
+      "smak": "Balansert, elegant, fyldig, frisk og fruktig avslutning.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,9 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.903750+00:00",
+    "hash": "6ecd013693a746e864a11dc7",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Sval aroma preget av røde bær, modne epler og sitrus, hint av kjeks, nøtt og mineraler.",
+      "metode": "Skånsom pressing av druene, kort maserasjon før tradisjonell gjæring i temperaturkontrollerte ståltanker, annengangsgjæring i flasken.",
+      "smak": "Kremet, litt utviklet og saftig preg av eple, jordbær, sitrus, litt kjeks og mineraler. God lengde.",
+      "sukker": "9,7 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.667017+00:00",
+    "hash": "6f343624f04a015d265671ca",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 15 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av fioler, roser og røde bær.",
+      "metode": "Annengangsgjæring på fl. Lagring over 15 md i fl.",
+      "smak": "Smak av røde bær, jordbær og bringebær, god syre og struktur.",
+      "sukker": "8 g/l",
+      "syre": "7,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:08.690713+00:00",
+    "hash": "736929377e33bac05a7d3090",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 45 prosent",
+      "farge": "Gyllen rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 8,
+        "Sødme": 2
+      },
+      "lukt": "Skogsbær, sitrus, blomster, bakverk og vaniljetoner.",
+      "metode": "Håndplukket, myk pressing, temp.kont gjæring på sementtank, 30 md.",
+      "smak": "Røde bær, skogsbær, sitrus og bakverk. Balansert og myk. God lengde.",
+      "sukker": "5,1 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.360730+00:00",
+    "hash": "73dcb74f2eca61eb1e38e838",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 10,
+        "Garvestoffer": 10
+      },
+      "lukt": "Aroma av tørket frukt og bringebær.",
+      "metode": "Gjæring i temperatur kontrollerte ståltanker, 12 md i eikefat.",
+      "smak": "Balansert smak, runde og strukturerte tanniner.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,0 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:07.342102+00:00",
+    "hash": "7601c5925e4b20ba85a56a6a",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Chardonnay 50 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Frisk aroma av røde bær, sitrus og eple, hint av kjeks.",
+      "smak": "Frisk og saftig. Lang, mineralsk avslutning.",
+      "sukker": "7 g/l",
+      "syre": "6,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.067354+00:00",
+    "hash": "77fa1d8afb7f712595d72109",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 25 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av bringebær, jordbær og kirsebær, hint av tørket frukt og kalk.",
+      "metode": "Premier Cru-druer fra Hautvillers. modnet på en blanding av eik og stål. 40/60 årgangsvin/reservevin. Minimum 24 md. på berme.",
+      "smak": "Preg av bringebær, jordbær, kirsebær og karamell. Lang, mineralsk avslutning.",
+      "sukker": "5 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.858003+00:00",
+    "hash": "7805be57a76d0c5ff91ef439",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lys rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Friske bær.",
+      "smak": "Aroma av eple, jordbær, bringebær og rips.",
+      "sukker": "9,2 g/l",
+      "syre": "7,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:12.560954+00:00",
+    "hash": "785402016ed680174ae804db",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Garvestoffer": 4
+      },
+      "lukt": "Fruktig med noe krydder.",
+      "smak": "Bløte tanniner, mineralsk, balansert.",
+      "sukker": "8,9 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:11.704036+00:00",
+    "hash": "7b20035f6f8b039a5d1d20f0",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Lys burgunderrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 6
+      },
+      "lukt": "Duft av mørke bær, mineraler og urter.",
+      "metode": "Gjæring i ståltank, modning i trefat.",
+      "smak": "Fast og frisk med mineralpreg. Lang.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.227302+00:00",
+    "hash": "7b3a30c514761cd0bc71d69f",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Aligoté 60 prosent",
+      "farge": "Lakserosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 5,
+        "Sødme": 4
+      },
+      "lukt": "Sitrus, blomster med hint av bringebær.",
+      "smak": "Frisk og saftig med god frukt og syre.",
+      "sukker": "9 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:15.905026+00:00",
+    "hash": "7eb024ada1a69efc107ed5b6",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nero d&#x27;Avola 60 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 8,
+        "Garvestoffer": 8
+      },
+      "lukt": "Fruktig aroma preget av modne røde bær, litt tørket frukt, krydder og lakris, hint av blomst.",
+      "metode": "Spontanfermentert, gjæring og lagring i store gamle fat og amfora i 20 til 22 md., videre lagring på flaske.",
+      "smak": "Saftig og ørlite utviklet med nyansert preg av røde bær og krydder, frisk og litt fast ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.108546+00:00",
+    "hash": "7edcfd73d541ec244465be7d",
+    "parsed": {
+      "alkohol": "11,5%",
+      "farge": "Ren, delikat og frisk rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 4,
+        "Sødme": 3
+      },
+      "lukt": "Jordbær, bringebær, bjørnebær.",
+      "smak": "Fruktig med bra friskhet og god lengde.",
+      "sukker": "10 g/l",
+      "syre": "5,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:19.190087+00:00",
+    "hash": "8539733c8a2652eb376baaed",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Duft av bær og skogsbær, innslag av roseblader og balsamiske toner.",
+      "smak": "Balansert smak med tanniner, frukt med preg av røde bær. God lengde.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.273848+00:00",
+    "hash": "871f2c952294c0a068532cd3",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Lys rød, blåskjær.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 8
+      },
+      "lukt": "Modne røde bær, som bringebær og kirsebær. Hint av anis.",
+      "metode": "Håndplukkede druer. Skånsom pressing. Ti dager skallmasserasjon, og spontanfermentering på ståltank.",
+      "smak": "Fast og saftig munnfølelse. God friskhet.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:16.010547+00:00",
+    "hash": "8843d5bacdefb2dd107d1b64",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nero d&#x27;Avola 60 prosent",
+      "farge": "Lys rubinrød.",
+      "klokker": {
+        "Friskhet": 5,
+        "Fylde": 9,
+        "Garvestoffer": 8
+      },
+      "lukt": "Unik, fruktig og saftig med poengtert jordbærsaroma.",
+      "smak": "Jordbær, supplert av saftige kirsebær, pepper og hint av salt.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.534410+00:00",
+    "hash": "8a27165174b11dfb0a110c6b",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Lys rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 9,
+        "Garvestoffer": 7
+      },
+      "lukt": "Duft av markjordbær, bringebær og blomstrende roser, lett hint av krydder.",
+      "metode": "Kort maserasjon, ståltanklagring.",
+      "smak": "Lett med saftige røde bær, frisk syre, bløt, mineralsk avslutning.",
+      "sukker": "3,3 g/l",
+      "syre": "5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.641994+00:00",
+    "hash": "8aaccfed97d4b9b82a0f9736",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Klar rød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Aroma av røde bær med hint av krydder og lær.",
+      "metode": "Håndplukket, 12 md. på fat før tapping på flaske.",
+      "smak": "Røde bær, krydder og mokka.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:12.113078+00:00",
+    "hash": "8d5b9d4048917c07c123f3e9",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Klar, rød.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 3,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av kirsebær, toner av kanel og urter.",
+      "smak": "Frisk, fruktig og mineralsk krydret. Godt balansert, lett syre og lang ettersmak.",
+      "sukker": "6,9 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.997602+00:00",
+    "hash": "8d7ae87346c04635b67592dc",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Trousseau (Merenzao) 20 prosent",
+      "farge": "Middels dyp rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Nyansert aroma preget av røde bær, sitrus og blomst, hint av nøtt og kjeks.",
+      "metode": "Håndplukkede druer, tradisjonell gjæring i ståltanker, annengangsgjæring i flasken, 24 md. flaskemodning før salg.",
+      "smak": "Kremet, saftig og ørlite utviklet. Preg av røde bær og kjeks, ettersmak med god lengde.",
+      "sukker": "6 g/l",
+      "syre": "6,0 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.889262+00:00",
+    "hash": "9472ae0b3cf76e34c0f5b7c6",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Mascalese 90 prosent",
+      "farge": "Middels dyp, rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 6
+      },
+      "lukt": "Duft av markjordbær, salvie, fioler og hint av tobakk og pepper.",
+      "metode": "Druene høstes for hånd.",
+      "smak": "Frisk smak av røde bær, godt integrerte tanniner og lang saftig ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:19.437876+00:00",
+    "hash": "95ea65233f07435d8ec84330",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Klar rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 6
+      },
+      "lukt": "Åpen med aroma av florale toner, røde friske bær.",
+      "smak": "God fylde og friskhet, saftig, røde og lyse bær.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.484778+00:00",
+    "hash": "96848805c98a69e40abef6d5",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Macabeo 40 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Aroma med preg av lyse røde bær, sitrus og urter, hint av brødbakst, blomst og mineraler.",
+      "metode": "Tradisjonell annengangsgjæring i flaske, med 15 måneder flaskemodning på bunnfallet.",
+      "smak": "Tørr, frisk med middels fylde, konsentrasjon og frisk avslutning. Kremet.",
+      "sukker": "7,6 g/l",
+      "syre": "6,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.806002+00:00",
+    "hash": "97071f48294ddb955e5a1e61",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lyserosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av jordbær, granateple, rips, steinfrukt, sitrus og bakst.",
+      "metode": "Håndplukket, presses forsiktig, gjæring på ståltank. Min. 15 md. på bunnfall.",
+      "smak": "Røde bær og frukt, sitrus, toast. Lang frisk og mineralsk avslutning.",
+      "sukker": "7 g/l",
+      "syre": "6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:12.688525+00:00",
+    "hash": "997ac2f474032d3027c1d844",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Lys rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Garvestoffer": 6
+      },
+      "lukt": "Fruktig med innslag av røde bær og krydder.",
+      "metode": "Spontanfermentert. Lagret i glassfibertank.",
+      "smak": "Ung, frisk og fruktig med aromaer av mineraler og rips. Lang ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:08.992302+00:00",
+    "hash": "9a641be3c62863bd902fb46a",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Cappuccio 10 prosent",
+      "farge": "Lyst purpur.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 7,
+        "Garvestoffer": 10
+      },
+      "lukt": "Aromatisk og mineralsk med lyse røde bær, urter og hint av pepper.",
+      "smak": "Smaksrik, lang og sitrende med lyse bær, krydder og kjernefrukt. Lang ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:07.237947+00:00",
+    "hash": "9b3046fdbde1588a9693935f",
+    "parsed": {
+      "alkohol": "11%",
+      "druer": "Raboso 3 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 5,
+        "Sødme": 6
+      },
+      "lukt": "Aroma av hvit frukt, solbær, røde bær, floral.",
+      "smak": "Sitrus, røde bær, frisk.",
+      "sukker": "10 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.646588+00:00",
+    "hash": "a070bd6976ee2beb6f735ec5",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Blek rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 3
+      },
+      "lukt": "Aroma av bringebær og kirsebær.",
+      "smak": "Fine små bobler, balansert og smak av bringebær og kirsebær.",
+      "sukker": "12,7 g/l",
+      "syre": "6,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.157757+00:00",
+    "hash": "a0d2a378b07f42e9479ddc16",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "klokker": {
+        "Fylde": 6,
+        "Garvestoffer": 6
+      },
+      "sukker": "Under 3 g/l",
+      "syre": "5,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.805496+00:00",
+    "hash": "a1648643222ce19e7e1195d9",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Dyp mursteinsrød.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Kompleks duft av fioler, krydder og kirsebær.",
+      "metode": "Modning i ståltank.",
+      "smak": "God tanninstruktur og solid munnfølelse med smak av kirsebær. Florale toner i ettersmaken.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.013242+00:00",
+    "hash": "a5fde196ce3ba284b46daeee",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Middels dyp rød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 8,
+        "Garvestoffer": 7
+      },
+      "lukt": "Moreller, tørkede blomster og litt krydder.",
+      "metode": "30 år gamle vinstokker, spontangjæret og lagret på gamle fat av siciliansk kastanjetre.",
+      "smak": "Saftig, myk og frisk med kjølig frukt og litt krydder.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:12.621062+00:00",
+    "hash": "a722f09135c4b08191d1d4b2",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Dyp rubinrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Garvestoffer": 4
+      },
+      "lukt": "Aroma av bringebær og appelsin, toner av blomster, gult eple og tropisk frukt.",
+      "metode": "Maserasjon ca 28 d ved 28-30C, 12 md. på kastanjefat, 12 md. rustfritt stål, 12 md. flaske.",
+      "smak": "Rød frukt, toner av hasselnøtt og vanilje. Lang avslutning med mineralitet, myke tanniner.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6,0 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.752605+00:00",
+    "hash": "a80c60e11b9a8fd09b85d015",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Middels dyp rød med blåskjær.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 6,
+        "Garvestoffer": 5
+      },
+      "lukt": "Ung og fruktig, preg av jordbær, rips og villbringebær, innslag av grønn urt og blomst.",
+      "metode": "Manuell innhøsting. Avstilking, mykpressing, gjæring i ståltank under kontrollerte temp. Skallkontakt 10-13 dg. Malofermentert.",
+      "smak": "Saftig, middels fyldig og friskt preg av jordbær, rips og bringebær, streif av urter og krydder.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,1 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.320804+00:00",
+    "hash": "a92ac02e49e06f120266d6c0",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 5,
+        "Garvestoffer": 3
+      },
+      "lukt": "Fruktig aroma av bringebær, blodappelsin og granateple.",
+      "metode": "Modnes i ståltanker på bunnfallet i 7 md., ytterligere 2 md. på flaske.",
+      "smak": "Frisk og strukturert. Preg av rød frukt. Bløte tanniner, lang avslutning.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.143537+00:00",
+    "hash": "a99b5a437ead76016ebf5fa1",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 80 prosent",
+      "farge": "Rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Floral aroma.",
+      "smak": "Tørr, god fylde og friskhet. Fruktdrevet med tydelig mineralitet. God lengde.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.830561+00:00",
+    "hash": "ad5919fce69d1ac17b3028e2",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Mørk rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 9,
+        "Garvestoffer": 5
+      },
+      "lukt": "Mineralsk, mørke bær og krydder på duft.",
+      "smak": "Mørke bær og krydder, mineraler og urter.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.441452+00:00",
+    "hash": "afa3d62dcb61fc2ef5d4307c",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Pinot Noir 18 prosent",
+      "farge": "Middels dyp rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Aroma med fokusert preg av lyse røde bær, sitrus og urter, hint av brødbakst, blomst og mineraler.",
+      "metode": "Temp.kontr. gjæring fra første pressing. Minst 12 md. trad. annengangsgjæring på flaske.",
+      "smak": "Saftig og litt utviklet preg av sitrus, friske røde bær, litt kjeks, urt og mineraler. Kremet brus.",
+      "sukker": "9 g/l",
+      "syre": "3,9 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:14.145066+00:00",
+    "hash": "afb7dbc6cdaa064eb2fbb1c8",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Purpurrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av bringebær og jordbær.",
+      "smak": "Frisk og fruktig med smak av røde bær. Fine tanniner og frisk ettersmak.",
+      "sukker": "4,5 g/l",
+      "syre": "5,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:08.957047+00:00",
+    "hash": "b153e9f7812bc6e80d07e6db",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Nero 100 prosent",
+      "farge": "Middels dyp rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av moden jordbær og eple, innslag av brødbaks og kjeks, litt svale urter og blomster.",
+      "metode": "Tradisjonell vinifikasjon av basevin på temperaturkontrollerte ståltanker. Andregangsfermentering på flaske. 36 md. på bunnfall.",
+      "smak": "Myk og litt utviklet, preg av rips, jordbærsyltetøy, kjeks og eple, litt svalt krydder og urt.",
+      "sukker": "4,5 g/l",
+      "syre": "8,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-15T14:02:29.225436+00:00",
+    "hash": "b3b07fbc3b7e916f8592d6c6",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Corvina 70 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Litt utviklet og krydret preg av modne røde bær, tørket frukt, litt svale urter, kamfer og vanilje.",
+      "metode": "Tradisjonell vinifikasjon i temperatur kontrollerte ståltanker, lagring på store eikefat.",
+      "smak": "Myk og sødmefull med god fylde, preg av røde bær, tørket frukt, litt urt, krydder og vanilje.",
+      "stil": "Frisk og fruktig",
+      "sukker": "9 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.988591+00:00",
+    "hash": "b512a9ba56be37b3ab11e424",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Blålilla.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 9,
+        "Garvestoffer": 7
+      },
+      "lukt": "Kirsebær, jordbær, rose, mineralsk.",
+      "metode": "Håndplukket, langsom gjæring og skallmaserasjon, lagret i store fat, lett filtrering før tapping.",
+      "smak": "Rund, balansert syre, saftig med en lang ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.347729+00:00",
+    "hash": "b78707d845dbc258436efd50",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Lys rubinrød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 4,
+        "Garvestoffer": 4
+      },
+      "lukt": "Frisk og fruktig aroma av mørke bær, roseknopper, blåbær, bringebær og bjørnebær, fiol og salvie.",
+      "metode": "Temperturkontrollert vinifikasjon med bl.a. gjæring ved 22gr. Modnet i",
+      "smak": "Ung, saftig, preg av røde bær, blomst og urter. God lengde.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,7 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:08.484562+00:00",
+    "hash": "b80b9e8d4f1cd8cac9675284",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Sødme": 1
+      },
+      "lukt": "Aroma av røde bær, røde eple og mineraler.",
+      "metode": "Fermentering på ståltank, deretter minst 36 md. på bunnfall.",
+      "smak": "Saftig, kremet og litt fast, fylde, røde bær og sitrus, litt kjeks og mineraler.",
+      "sukker": "7 g/l",
+      "syre": "6,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:13.693678+00:00",
+    "hash": "b95ddcb00d3378ea1fcc72f7",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Frappato 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 4,
+        "Garvestoffer": 4
+      },
+      "lukt": "Aroma av bringebær og rød frukt, hint av pepper, lakris og nellik.",
+      "metode": "Håndplukket, temperaturkontrollert gjæring i stål. Modnet i 3 md. på stål.",
+      "smak": "Balansert. Preg av røde bær, appelsin, lakris og nellik.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.967134+00:00",
+    "hash": "bc52c1eb4dae9777b8467e53",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Cabernet Franc 90 prosent",
+      "farge": "Lakserosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 6,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av jordbær og bringebær, hint av kirsebær.",
+      "metode": "Håndplukket. Ligget 18 md. på bunnfallet.",
+      "smak": "Balansert og frisk. Lang ettersmak.",
+      "sukker": "11 g/l",
+      "syre": "6,6 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:18.978483+00:00",
+    "hash": "c21fa01ec737f685a796acf1",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Middels dyp rød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 8,
+        "Garvestoffer": 6
+      },
+      "lukt": "Sval aroma preget av røde bær, tørket frukt, hint av te, fiol og lær.",
+      "metode": "Vinmark på 3 ha. Første årgang 2001. Modnet 12 måneder på 25 hl og 50 hl fat.",
+      "smak": "Fint utviklet, preg av tørket frukt, krydder, røde bær, god friskhet og lang ettersmak.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,9 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.540924+00:00",
+    "hash": "c342470c737f5cc34eb1811a",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Chardonnay 15 prosent",
+      "farge": "Klar dyp rosa.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Delikat aroma av røde bær, eple og sitrus, hint av toast.",
+      "smak": "Ung, saftig og kremet smak, preg av røde bær og eple, hint av brøddeig i ettersmaken.",
+      "sukker": "9,5 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.945802+00:00",
+    "hash": "c9a5f3f1dcf32f28301eb5fc",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Cappuccio 5 prosent",
+      "farge": "Dyp rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 9,
+        "Garvestoffer": 9
+      },
+      "lukt": "Aroma med fint preg av røde bær og blomst, innslag av urter, lakris og litt mineraler.",
+      "metode": "Temperaturkontrollert gjæring ved 25-28° C. Spontan malolaktisk gjæring og lagring i store franske eikefat (10-30HL) i 15 mnd.",
+      "smak": "Litt utviklet, preg av modne røde bær, blomst og urter, hint av mineraler, fast ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:34:20.134747+00:00",
+    "hash": "caef23ecbfcf97efaa130494",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Frühburgunder (P Noir Précoce) 2 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Aroma med litt utviklet preg av røde bær, eple, sitrus og kjeks, innslag av mineraler og blomst.",
+      "metode": "Champagnemetode. 10 % av basevinen er fermentert på 4-5 år gamle fat.",
+      "smak": "Frisk, saftig og kremet, preg av moden sitrus, rips og eple, innslag av kjeks, nøtt og mineraler.",
+      "sukker": "5,2 g/l",
+      "syre": "9,8 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:11.648914+00:00",
+    "hash": "cb6b2f343df509d21817e25a",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 5
+      },
+      "lukt": "Aroma av rose og solbær.",
+      "smak": "Røde bær, lang ettersmak.",
+      "sukker": "7,8 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:16.974174+00:00",
+    "hash": "cc1e738432bb74882070e3d4",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Rubin rød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Garvestoffer": 8
+      },
+      "lukt": "Aroma som er frisk og fruktig.",
+      "smak": "Balansert i munnen med bløte tanniner og god syre.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:05.598096+00:00",
+    "hash": "ce16843878bf6a6056a269ae",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 7,
+        "Sødme": 2
+      },
+      "lukt": "Aroma av syrlige røde bær og bringebær med toner av fioler og kjeks.",
+      "smak": "Ung og konsentrert, preg av mørke bær, fat og krydder, ettersmak med god lengde.",
+      "sukker": "9 g/l",
+      "syre": "5,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:07.290362+00:00",
+    "hash": "cec9015b89fceafbd28b6841",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Pinot Meunier 20 prosent",
+      "farge": "Klar, lys rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Frisk og mineralsk duft med preg av røde bær.",
+      "smak": "Tørr og fruktig.",
+      "sukker": "8 g/l",
+      "syre": "4 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:03.116740+00:00",
+    "hash": "d1116dacac7915792d94655d",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Meunier 35 prosent",
+      "farge": "Dyp rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Sødme": 2
+      },
+      "lukt": "Rød frukt og markjordbær.",
+      "metode": "Flaskelagret i 36 md.",
+      "smak": "Fyldig og frisk.",
+      "sukker": "8 g/l",
+      "syre": "4,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:04.797053+00:00",
+    "hash": "d29ebeb786bae90af988e7d7",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Gamay 10 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 7,
+        "Sødme": 1
+      },
+      "lukt": "Moden sitrus, noe røde bær og mineraler.",
+      "smak": "God konsentrasjon med fin lengde.",
+      "sukker": "8 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:17.757266+00:00",
+    "hash": "d983d2c730e47711747d13e9",
+    "parsed": {
+      "alkohol": "14,5%",
+      "druer": "Nebbiolo 100 prosent",
+      "farge": "Lys rød.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 7,
+        "Garvestoffer": 7
+      },
+      "lukt": "Fruktig og kompleks av sødmefulle lyse røde bær og kalkmineraler.",
+      "metode": "Spontanfermentert og modnet i store gamle eikeliggere",
+      "smak": "Frisk og kompleks. Lang og konsentrert.",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.942846+00:00",
+    "hash": "da8b029dd97488790d9f16db",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Pinot Noir 50 prosent",
+      "farge": "Middels dyp oransjerosa.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 5,
+        "Sødme": 2
+      },
+      "lukt": "Aroma preget av modne røde epler og røde bær, litt fersken, blomst og urter.",
+      "metode": "Cavametoden, bl.a. annengangsgjæring på flaske. 15 md. flaskemodning.",
+      "smak": "Litt utviklet, preg av røde bær og eple, litt sitrus, grønn urt og hint kjeks. Myk brus.",
+      "sukker": "5 g/l",
+      "syre": "5,6 g/l",
+      "utvalg": "Basisutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:06.390174+00:00",
+    "hash": "dd9105164b06c7db6d0f5244",
+    "parsed": {
+      "alkohol": "11,5%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Rosa.",
+      "klokker": {
+        "Friskhet": 6,
+        "Fylde": 6,
+        "Sødme": 6
+      },
+      "lukt": "Duft av bjørnebær og bringebær.",
+      "smak": "Tørr med hint av røde bær.",
+      "sukker": "8 g/l",
+      "syre": "6,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.775854+00:00",
+    "hash": "dfb33bac7d473a34fd456d80",
+    "parsed": {
+      "alkohol": "13%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Lys rubinrød.",
+      "klokker": {
+        "Friskhet": 7,
+        "Fylde": 9,
+        "Garvestoffer": 8
+      },
+      "lukt": "Aroma av bær, frukt og urter.",
+      "metode": "Fermentering i temp. kontrollerte ståltanker. Delvis lagret i store eikefat.",
+      "smak": "God frukt og mineralitet. Frisk og lang ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,1 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-14T13:35:07.087242+00:00",
+    "hash": "e1869cf6e4825517669de1f2",
+    "parsed": {
+      "alkohol": "12%",
+      "druer": "Pinot Noir 100 prosent",
+      "farge": "Lys rosa.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Sødme": 2
+      },
+      "lukt": "Ferskentre, jordbær og bringebær.",
+      "metode": "Annengangsgjæring i flaske 24 md.",
+      "smak": "Litt utviklet stil, preg av røde bær og blomst, hint av kjeks i ettersmaken.",
+      "sukker": "4 g/l",
+      "syre": "4,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.426531+00:00",
+    "hash": "e25ca302c1b944688777b533",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 95 prosent",
+      "farge": "Lys rød.",
+      "klokker": {
+        "Friskhet": 10,
+        "Fylde": 10,
+        "Garvestoffer": 8
+      },
+      "lukt": "Tobakk, vanilje og moreller, mineralsk.",
+      "smak": "Tørr og frisk, fyldig med saftige tanniner. Krydret ettersmak.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:10.357757+00:00",
+    "hash": "eca3abcfa6a35bfeb7bd28f1",
+    "parsed": {
+      "alkohol": "14%",
+      "druer": "Nerello Mascalese 80 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 8,
+        "Fylde": 8,
+        "Garvestoffer": 8
+      },
+      "lukt": "Aroma av røde bær, krydder og mineraler.",
+      "metode": "Selekterede druer høstes manuelt. Fermentering i ståltank. 24 måneders lagring i ekfat.",
+      "smak": "Tørr, fyldig og frisk, fast struktur. Mineralsk med fruktighet av røde og mørke bær.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,5 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-12T19:47:09.110928+00:00",
+    "hash": "f1ada17625bff000d02c25e1",
+    "parsed": {
+      "alkohol": "13,5%",
+      "druer": "Nerello Mascalese 100 prosent",
+      "farge": "Rubinrød.",
+      "klokker": {
+        "Friskhet": 4,
+        "Fylde": 5,
+        "Garvestoffer": 3
+      },
+      "lukt": "Modne mørke bær, kirsebær og granateple, hint av pepper, tobakk og vulkansk stein.",
+      "metode": "Håndplukket, gjæres i stål med skallkontakt, deretter 6 md. i stål og 12 md. på store fat av slavonsk eik.",
+      "smak": "Balansert, myke tanniner, frisk syre.",
+      "stil": "Frisk og fruktig",
+      "syre": "5,3 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  },
+  {
+    "_seed": true,
+    "fetched_at": "2026-05-20T18:38:44.140502+00:00",
+    "hash": "f2b674b6a4ffd16751c52087",
+    "parsed": {
+      "alkohol": "12,5%",
+      "druer": "Barbera 90 prosent, Dolcetto 5 prosent, Nebbiolo 5 prosent",
+      "farge": "Purpur.",
+      "klokker": {
+        "Friskhet": 9,
+        "Fylde": 9,
+        "Garvestoffer": 8
+      },
+      "lukt": "Aromatisk og frisk på duft med røde bær, og kjernefrukt, og hint av nøtter.",
+      "smak": "Saftig smak med friske røde bær, kirsebær og skogsbær, hint av urter i ettersmaken.",
+      "stil": "Frisk og fruktig",
+      "sukker": "Under 3 g/l",
+      "syre": "5,2 g/l",
+      "utvalg": "Bestillingsutvalget"
+    }
+  }
+]

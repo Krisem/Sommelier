@@ -1,108 +1,158 @@
 """Kontrakt-tester for verdiscoring og peer-percentile.
 
-Disse krever live HTTP (Polet/Aperitif/Vivino) — markert `network`. Skip dem
-med `pytest -m 'not network'` ved offline-kjøring.
-
-Vi bruker en stabil, kjent vin (Tornatore Etna Rosso, varenr 15012201) som
-fixture. Hvis Polet endrer fritekst-søk drastisk vil testen falle — det er
-en *reell* regression vi vil oppdage, ikke noe vi skal pakke inn.
+Kjøres OFFLINE mot repo-snapshotet: polet_store pekes mot en tmp fixture-katalog
+(samme mønster som tests/test_vinmonopolet.py sin `snapshot`-fixture), og
+Vivino/Aperitif/user-scores monkeypatches. Ingen nettverkskall.
 """
 
 from __future__ import annotations
 
+import json
 import time
 
 import pytest
 
 
-KNOWN_QUERY = "Tornatore Etna Rosso"
 KNOWN_POLET_ID = "15012201"
 KNOWN_VINTAGE = 2022
 
 
-@pytest.fixture(scope="module")
-def polet_product():
+# ─── FIXTURE: liten snapshot-katalog i tmp (≥5 rødvin/italia-peers) ───────
+
+# Egen vin + 5 italienske rødviner som peers + 1 fra annet land/kategori.
+_OWN = {
+    "code": "15012201",
+    "name": "Tornatore Etna Rosso 2022",
+    "price": {"value": 289.0, "formattedValue": "Kr 289,00"},
+    "main_category": {"code": "rødvin", "name": "Rødvin"},
+    "main_country": {"code": "italia", "name": "Italia"},
+    "url": "/Land/Italia/Sicilia/Etna/Tornatore-Etna-Rosso-2022/p/15012201",
+}
+
+_PEERS = [
+    {
+        "code": f"2000000{i}",
+        "name": f"Italiensk Rødvin {i}",
+        "price": {"value": price, "formattedValue": f"Kr {price:.0f},00"},
+        "main_category": {"code": "rødvin", "name": "Rødvin"},
+        "main_country": {"code": "italia", "name": "Italia"},
+        "url": f"/Land/Italia/X/Y/Vin-{i}/p/2000000{i}",
+    }
+    for i, price in enumerate([149.0, 199.0, 259.0, 349.0, 599.0], start=1)
+]
+
+_OTHER = {
+    "code": "30000001",
+    "name": "Fransk Hvitvin",
+    "price": {"value": 250.0, "formattedValue": "Kr 250,00"},
+    "main_category": {"code": "hvitvin", "name": "Hvitvin"},
+    "main_country": {"code": "frankrike", "name": "Frankrike"},
+    "url": "/Land/Frankrike/X/Y/Hvit/p/30000001",
+}
+
+_CATALOG = [_OWN, *_PEERS, _OTHER]
+
+
+def _write_snapshot(monkeypatch, tmp_path, *, generated_at: str | None,
+                    catalog=None):
+    """Skriv fixture-snapshot til tmp og pek polet_store + value_score dit."""
+    from tools import polet_store
+
+    polet_dir = tmp_path / "polet"
+    details_dir = polet_dir / "details"
+    details_dir.mkdir(parents=True, exist_ok=True)
+
+    catalog_path = polet_dir / "catalog.ndjson"
+    catalog_path.write_text(
+        "\n".join(json.dumps(p, ensure_ascii=False) for p in (catalog or _CATALOG)) + "\n",
+        encoding="utf-8",
+    )
+    meta_path = polet_dir / "catalog_meta.json"
+    if generated_at is not None:
+        meta_path.write_text(
+            json.dumps({"generated_at": generated_at, "count": len(catalog or _CATALOG)},
+                       ensure_ascii=False),
+            encoding="utf-8",
+        )
+
+    monkeypatch.setattr(polet_store, "POLET_DIR", polet_dir)
+    monkeypatch.setattr(polet_store, "CATALOG", catalog_path)
+    monkeypatch.setattr(polet_store, "DETAILS_DIR", details_dir)
+    monkeypatch.setattr(polet_store, "META", meta_path)
+    return polet_store
+
+
+@pytest.fixture
+def fresh_snapshot(monkeypatch, tmp_path):
+    """Snapshot generert i dag (ferskt) + isolert value_score-cache i tmp."""
+    from datetime import datetime, timezone
+
+    from tools import value_score
+
+    now = datetime.now(timezone.utc).isoformat()
+    store = _write_snapshot(monkeypatch, tmp_path, generated_at=now)
+
+    # Isolér value_score-cachen til tmp så vi ikke leser/skriver ~/.cache.
+    monkeypatch.setattr(value_score, "VALUE_CACHE_DIR", tmp_path / "value_cache")
+
+    # Stub eksterne kilder (offline).
+    monkeypatch.setattr(value_score, "get_vivino_rating", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_aperitif_score", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_user_scores", lambda *a, **k: [])
+    return store
+
+
+@pytest.fixture
+def polet_product(fresh_snapshot):
     from tools.vinmonopolet import search
 
-    results = search(KNOWN_QUERY)
-    assert results, f"Polet returnerte 0 treff for '{KNOWN_QUERY}'"
-    # Foretrekk eksakt varenr om mulig, ellers første treff.
+    results = search("Tornatore")
+    assert results, "snapshot returnerte 0 treff for 'Tornatore'"
     for r in results:
         if r.get("code") == KNOWN_POLET_ID:
             return r
     return results[0]
 
 
-@pytest.mark.network
+# ─── peer_percentile (offline) ────────────────────────────────────────
+
 def test_peer_percentile_structure(polet_product):
     from tools.value_score import _peer_percentile
 
-    t0 = time.time()
     peer = _peer_percentile(polet_product)
-    elapsed = time.time() - t0
 
-    assert peer is not None, (
-        "_peer_percentile returnerte None — for få peers eller manglende "
-        "kategori/pris. Sjekk Polet-respons."
-    )
-    assert elapsed < 10, f"_peer_percentile tok {elapsed:.1f}s (> 10s)"
-
+    assert peer is not None, "_peer_percentile returnerte None — for få peers"
     assert set(peer.keys()) >= {
         "percentile", "median_price", "sample_size", "peer_terms",
     }, f"Mangler keys i peer-result: {peer.keys()}"
-
-    assert 0.0 <= peer["percentile"] <= 1.0, (
-        f"percentile utenfor [0,1]: {peer['percentile']}"
-    )
-    assert peer["median_price"] > 0, (
-        f"median_price skal være positiv: {peer['median_price']}"
-    )
-    assert peer["sample_size"] >= 5, (
-        f"sample_size skal være ≥5: {peer['sample_size']}"
-    )
-    assert isinstance(peer["peer_terms"], list), (
-        f"peer_terms skal være liste: {type(peer['peer_terms'])}"
-    )
-    assert peer["peer_terms"], "peer_terms skal ikke være tom"
+    assert 0.0 <= peer["percentile"] <= 1.0
+    assert peer["median_price"] > 0
+    assert peer["sample_size"] >= 5
+    assert isinstance(peer["peer_terms"], list) and peer["peer_terms"]
 
 
-@pytest.mark.network
 def test_compute_value_score_end_to_end(polet_product):
     from tools.value_score import compute_value_score
 
     result = compute_value_score(polet_product, vintage=KNOWN_VINTAGE)
 
     expected_keys = {
-        "wine_name",
-        "polet_id",
-        "price",
-        "value_verdict",
-        "summary",
-        "quality_tier",
-        "vivino",
-        "aperitif",
-        "peer",
-        "user_scores",
+        "wine_name", "polet_id", "price", "value_verdict", "summary",
+        "quality_tier", "vivino", "aperitif", "peer", "user_scores",
+        "snapshot_age_days", "snapshot_generated_at", "peer_status",
     }
     missing = expected_keys - set(result.keys())
     assert not missing, f"compute_value_score mangler keys: {missing}"
 
-    assert isinstance(result["summary"], str) and result["summary"].strip(), (
-        "summary skal være ikke-tom streng"
-    )
-    assert result["wine_name"], "wine_name er tom"
-    assert result["polet_id"], "polet_id er tom"
-    assert result["price"] is not None and result["price"] > 0, (
-        f"price skal være positiv: {result['price']}"
-    )
+    assert isinstance(result["summary"], str) and result["summary"].strip()
+    assert result["wine_name"] and result["polet_id"]
+    assert result["price"] is not None and result["price"] > 0
 
 
-@pytest.mark.network
 def test_compute_value_score_is_cached(polet_product):
     """Andre kall skal være rask (cache hit, < 0.5s)."""
     from tools.value_score import compute_value_score
 
-    # Varm cachen
     compute_value_score(polet_product, vintage=KNOWN_VINTAGE)
 
     t0 = time.time()
@@ -111,5 +161,115 @@ def test_compute_value_score_is_cached(polet_product):
 
     assert elapsed < 0.5, (
         f"Cached call tok {elapsed:.2f}s — cache treffer ikke. "
-        "Sjekk _value_cache_get / LOGIC_VERSION."
+        "Sjekk _value_cache_get / LOGIC_VERSION / snapshot-token."
     )
+
+
+# ─── (a) PoletRefreshRequired svelges ikke stille ─────────────────────
+
+def test_refresh_required_surfaces_in_peer_and_summary(monkeypatch, tmp_path):
+    """search_with_facets-miss → peer={status: refresh_required}, ikke None,
+    og summary nevner det eksplisitt."""
+    from tools import value_score
+    from tools.value_score import _peer_percentile, compute_value_score
+
+    # Snapshot der egen vin finnes, men INGEN andre i samme kategori+land
+    # → search_with_facets raiser PoletRefreshRequired for peer-poolen.
+    lonely = dict(_OWN)
+    lonely["main_category"] = {"code": "musserende_vin", "name": "Musserende vin"}
+    lonely["main_country"] = {"code": "ungarn", "name": "Ungarn"}
+    _write_snapshot(monkeypatch, tmp_path, generated_at="2026-06-01T00:00:00+00:00",
+                    catalog=[lonely, _OTHER])
+    monkeypatch.setattr(value_score, "VALUE_CACHE_DIR", tmp_path / "value_cache")
+    monkeypatch.setattr(value_score, "get_vivino_rating", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_aperitif_score", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_user_scores", lambda *a, **k: [])
+
+    peer = _peer_percentile(lonely)
+    assert peer == {"status": "refresh_required"}, (
+        f"Peer skal signalisere refresh_required, ikke svelges. Fikk: {peer}"
+    )
+
+    result = compute_value_score(lonely, vintage=KNOWN_VINTAGE)
+    assert result["peer_status"] == "refresh_required"
+    assert "peer-data mangler i snapshot" in result["summary"]
+    assert "refresh fra desktop" in result["summary"]
+
+
+# ─── (b) Aldersmerking + degradert språk når > 14 d ───────────────────
+
+def test_verdict_has_snapshot_age(polet_product):
+    from tools.value_score import compute_value_score
+
+    result = compute_value_score(polet_product, vintage=KNOWN_VINTAGE)
+    assert result["snapshot_age_days"] is not None
+    assert result["snapshot_age_days"] >= 0
+    assert "snapshot fra" in result["summary"]
+
+
+def test_stale_snapshot_degrades_language(monkeypatch, tmp_path):
+    """catalog_age_days > 14 → summary advarer om at pris/lager kan ha endret seg."""
+    from tools import polet_store, value_score
+    from tools.value_score import compute_value_score
+
+    _write_snapshot(monkeypatch, tmp_path, generated_at="2026-05-01T00:00:00+00:00")
+    monkeypatch.setattr(value_score, "VALUE_CACHE_DIR", tmp_path / "value_cache")
+    monkeypatch.setattr(value_score, "get_vivino_rating", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_aperitif_score", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_user_scores", lambda *a, **k: [])
+    # Tving alder til 30 dager uavhengig av dato.
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 30.0)
+
+    result = compute_value_score(_OWN, vintage=KNOWN_VINTAGE)
+    assert result["snapshot_age_days"] == 30
+    assert "30 dager gammelt" in result["summary"]
+    assert "verifiser på polet.no før kjøp" in result["summary"]
+
+
+def test_fresh_snapshot_no_stale_warning(polet_product):
+    from tools.value_score import compute_value_score
+
+    result = compute_value_score(polet_product, vintage=KNOWN_VINTAGE)
+    assert "verifiser på polet.no før kjøp" not in result["summary"]
+
+
+# ─── (c) Cache-nøkkel endres når catalog_generated_at endres ──────────
+
+def test_cache_key_includes_snapshot_freshness(monkeypatch, tmp_path):
+    from tools import polet_store, value_score
+
+    monkeypatch.setattr(value_score, "VALUE_CACHE_DIR", tmp_path / "value_cache")
+
+    monkeypatch.setattr(polet_store, "catalog_generated_at",
+                        lambda: "2026-06-01T00:00:00+00:00")
+    p1 = value_score._value_cache_path("15012201", 2022)
+
+    monkeypatch.setattr(polet_store, "catalog_generated_at",
+                        lambda: "2026-06-08T00:00:00+00:00")
+    p2 = value_score._value_cache_path("15012201", 2022)
+
+    assert p1 != p2, "Cache-nøkkel skal endres når snapshotet refreshes"
+
+
+def test_cache_invalidated_across_refresh(monkeypatch, tmp_path):
+    """Verdict cachet mot ett snapshot serveres IKKE etter refresh."""
+    from tools import polet_store, value_score
+    from tools.value_score import compute_value_score
+
+    _write_snapshot(monkeypatch, tmp_path, generated_at="2026-06-01T00:00:00+00:00")
+    monkeypatch.setattr(value_score, "VALUE_CACHE_DIR", tmp_path / "value_cache")
+    monkeypatch.setattr(value_score, "get_vivino_rating", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_aperitif_score", lambda *a, **k: None)
+    monkeypatch.setattr(value_score, "get_user_scores", lambda *a, **k: [])
+
+    monkeypatch.setattr(polet_store, "catalog_generated_at",
+                        lambda: "2026-06-01T00:00:00+00:00")
+    r1 = compute_value_score(_OWN, vintage=KNOWN_VINTAGE)
+
+    # Refresh: nytt generated_at → ny cache-nøkkel → ikke serve gammel.
+    monkeypatch.setattr(polet_store, "catalog_generated_at",
+                        lambda: "2026-06-08T00:00:00+00:00")
+    p_new = value_score._value_cache_path(_OWN["code"], KNOWN_VINTAGE)
+    assert not p_new.exists(), "Ny snapshot-nøkkel skal ikke ha en pre-eksisterende cache-fil"
+    r2 = compute_value_score(_OWN, vintage=KNOWN_VINTAGE)
+    assert r1["value_verdict"] == r2["value_verdict"]  # samme data → samme verdict, men ny fil

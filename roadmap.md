@@ -16,7 +16,7 @@
 
 ## Vivino auto-sync
 
-**Status:** Manuell metode bevist 2026-06-08 — klar for å pakkes som `tools/vivino_sync.py`
+**Status:** Manuell metode bevist 2026-06-08 — **bevisst utsatt** til etter Polet-snapshotet er stabilt. Polet-WAF-fiksen (samme «ekte nettleser»-vei, [ADR-019](docs/ARCHITECTURE.md#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)/[ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)) ble prioritert først. Klar for å pakkes som `tools/vivino_sync.py` når den hentes opp igjen.
 
 ### Hvorfor
 

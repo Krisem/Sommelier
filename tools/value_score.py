@@ -25,19 +25,35 @@ from pathlib import Path
 from statistics import median
 from typing import Optional
 
+from tools import polet_store
 from tools.aperitif import get_aperitif_score
+from tools.polet_store import PoletRefreshRequired
 from tools.scores import get_user_scores
 from tools.vinmonopolet import filter_results, search, search_with_facets
 from tools.vivino import get_vivino_rating
 
 VALUE_CACHE_DIR = Path.home() / ".cache" / "sommelier" / "value_score"
 VALUE_CACHE_TTL = 24 * 60 * 60  # 24 t — Polet-priser kan endres dag-til-dag
-LOGIC_VERSION = "v1"  # Bump for å invalidere all cache når scoring-logikken endres
+LOGIC_VERSION = "v2"  # Bump for å invalidere all cache når scoring-logikken endres
+SNAPSHOT_STALE_DAYS = 14  # Eldre snapshot → degradér value-språket (pris/lager kan ha endret seg)
+
+
+def _snapshot_token() -> str:
+    """
+    Ferskhets-token for cache-nøkkelen. Når snapshotet refreshes endres
+    `generated_at` → cache-nøkkelen endres → gamle (pre-refresh) verdicts
+    serveres ikke. Faller til 'na' når meta mangler.
+    """
+    gen = polet_store.catalog_generated_at()
+    if not gen:
+        return "na"
+    # Hold nøkkelen filnavn-trygg: strip kolon/plus fra ISO-stempelet.
+    return re.sub(r"[^0-9A-Za-z]", "", gen)
 
 
 def _value_cache_path(polet_id: str, vintage: Optional[int]) -> Path:
     VALUE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    return VALUE_CACHE_DIR / f"{LOGIC_VERSION}_{polet_id}_{vintage or 'NV'}.json"
+    return VALUE_CACHE_DIR / f"{LOGIC_VERSION}_{_snapshot_token()}_{polet_id}_{vintage or 'NV'}.json"
 
 
 def _value_cache_get(polet_id: str, vintage: Optional[int]):
@@ -56,6 +72,35 @@ def _value_cache_set(polet_id: str, vintage: Optional[int], value: dict) -> None
         p.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
     except OSError:
         pass
+
+
+def _apply_snapshot_age(result: dict) -> dict:
+    """
+    Re-regn snapshot-alder og bygg `summary` fra `_base_summary` ved HVERT retur
+    (også cache-treff). Cachet alder kan ellers fryse på dag 13 (ingen advarsel)
+    og serveres på dag 14+ uten advarsel — det undergraver ærlig-aldersmerking
+    som er hele poenget for Android. Idempotent: bygger alltid fra _base_summary.
+    """
+    base = result.get("_base_summary", result.get("summary", ""))
+    age = polet_store.catalog_age_days()
+    generated_at = polet_store.catalog_generated_at()
+    age_int = int(age) if age is not None else None
+
+    summary = base
+    if age is not None:
+        dato = (generated_at or "")[:10]
+        if age > SNAPSHOT_STALE_DAYS:
+            summary += (
+                f" Basert på snapshot fra {dato} ({age_int} dager gammelt)"
+                " — pris/lager kan ha endret seg, verifiser på polet.no før kjøp."
+            )
+        else:
+            summary += f" Basert på snapshot fra {dato} ({age_int} dager gammelt)."
+
+    result["snapshot_age_days"] = age_int
+    result["snapshot_generated_at"] = generated_at
+    result["summary"] = summary
+    return result
 
 
 def _clean_for_vivino(name: str) -> str:
@@ -140,9 +185,15 @@ def _peer_percentile_legacy(
 
     seen_codes = set()
     peers: list[float] = []
+    refresh_seen = False
     for term in peer_search_terms or []:
         try:
             results = search(term, page_size=50)
+        except PoletRefreshRequired:
+            # Snapshotet mangler treff på dette søket — ikke svelg som om
+            # peer bare var tom. Marker, og prøv øvrige termer.
+            refresh_seen = True
+            continue
         except Exception:
             continue
         for f_country in (country, None):
@@ -160,6 +211,11 @@ def _peer_percentile_legacy(
             break
 
     if len(peers) < 5:
+        # Skill ekte tynn peer-pool (snapshot HAR noen treff) fra
+        # snapshot-miss (alt søk raiset refresh): kun det siste skal
+        # gi refresh-signal. Tynn pool → None (som før).
+        if refresh_seen and not peers:
+            return {"status": "refresh_required"}
         return None
 
     peers_sorted = sorted(peers)
@@ -206,6 +262,12 @@ def _peer_percentile(
 
     try:
         results = search_with_facets(facets, page_size=50)
+    except PoletRefreshRequired:
+        # Snapshotet har ingen viner i denne kategori+land-kombinasjonen.
+        # IKKE svelg som om peer bare var None (det ga enhetsavhengig verdict
+        # uten feilmelding). Signalisér eksplisitt at peer-data mangler så
+        # compute_value_score kan si «refresh fra desktop for prissammenligning».
+        return {"status": "refresh_required"}
     except Exception:
         return _peer_percentile_legacy(polet_product, peer_search_terms)
 
@@ -219,8 +281,10 @@ def _peer_percentile(
             peers.append(v)
 
     if len(peers) < 5:
-        # Sjelden — kun for veldig snevre kategori+land-kombinasjoner. Prøv
-        # legacy som fallback (litt bredere fordi fritekst matcher løsere).
+        # Tynn peer-pool: snapshotet HAR kategorien, men få viner. Dette er en
+        # ekte tynn pool (ikke snapshot-miss) — prøv legacy som litt bredere
+        # fallback (fritekst matcher løsere). Legacy returnerer ev.
+        # refresh_required selv hvis fritekst-søkene også bommer i snapshotet.
         return _peer_percentile_legacy(polet_product, peer_search_terms)
 
     peers_sorted = sorted(peers)
@@ -235,6 +299,11 @@ def _peer_percentile(
         "sample_size": len(peers_sorted),
         "peer_terms": peer_terms,
     }
+
+
+def _peer_has_percentile(peer: Optional[dict]) -> bool:
+    """True kun når peer er en ekte pris-sammenligning (ikke None / refresh-signal)."""
+    return bool(peer) and "percentile" in peer
 
 
 def _value_verdict(
@@ -256,8 +325,9 @@ def _value_verdict(
     if quality == "unknown":
         return "usikkert"
 
-    below_median = peer and peer["percentile"] < 0.4
-    above_median = peer and peer["percentile"] > 0.7
+    usable_peer = _peer_has_percentile(peer)
+    below_median = usable_peer and peer["percentile"] < 0.4
+    above_median = usable_peer and peer["percentile"] > 0.7
 
     if quality == "very_high":
         return "veldig_godt_kjop" if below_median else "godt_kjop"
@@ -294,7 +364,7 @@ def compute_value_score(
         vintage: Valgfri årgang (for Vivino-vintage-match)
         peer_search_terms: Override-søketermer for peer-gruppe
         fetch_vivino / fetch_aperitif: Sett False for å hoppe over
-        use_cache: Bruk disk-cache på (polet_id, vintage) — TTL 7d
+        use_cache: Bruk disk-cache på (polet_id, vintage) — TTL 24t
 
     Returnerer dict med:
         - wine_name, polet_id, price
@@ -308,11 +378,16 @@ def compute_value_score(
     price = polet_product.get("price", {}).get("value")
 
     # Cache er kun trygt når flagg-kombinasjonen er standard (alle kilder hentet)
-    use_cache_now = use_cache and polet_id and fetch_vivino and fetch_aperitif
+    # OG snapshotet har gyldig meta — uten generated_at kan ulike snapshot-tilstander
+    # ikke skilles i cache-nøkkelen, så da hopper vi over cache helt (alltid ferskt).
+    use_cache_now = (
+        use_cache and polet_id and fetch_vivino and fetch_aperitif
+        and polet_store.catalog_generated_at() is not None
+    )
     if use_cache_now:
         cached = _value_cache_get(polet_id, vintage)
         if cached is not None:
-            return cached
+            return _apply_snapshot_age(cached)
 
     user_scores = get_user_scores(polet_id)
     user_score_data = max(user_scores, key=lambda e: e["score"]) if user_scores else None
@@ -372,12 +447,19 @@ def compute_value_score(
         )
     elif vivino_data and vivino_data.get("_discarded"):
         parts.append("Vivino-treff forkastet (feil vin)")
-    if peer:
+
+    peer_refresh_required = bool(peer) and peer.get("status") == "refresh_required"
+    if _peer_has_percentile(peer):
         pct = int(peer["percentile"] * 100)
         parts.append(
             f"pris i {pct}. percentil av {peer['sample_size']} peers (median {peer['median_price']} kr)"
         )
+    elif peer_refresh_required:
+        parts.append(
+            "peer-data mangler i snapshot — refresh fra desktop for prissammenligning"
+        )
 
+    # Base-summary uten aldersmerking. Unngå dobbelt-punktum når parts er tom.
     verdict_text_map = {
         "veldig_godt_kjop": "Veldig godt kjøp",
         "godt_kjop": "Godt kjøp",
@@ -385,7 +467,7 @@ def compute_value_score(
         "dyrt_for_kvaliteten": "Dyrt for kvaliteten",
         "usikkert": "Usikkert — for lite data",
     }
-    summary = f"{verdict_text_map[verdict]}. " + ". ".join(parts) + "."
+    base_summary = verdict_text_map[verdict] + (". " + ". ".join(parts) + "." if parts else ".")
 
     result = {
         "wine_name": name,
@@ -395,10 +477,15 @@ def compute_value_score(
         "vivino": vivino_data,
         "aperitif": aperitif_data,
         "peer": peer,
+        "peer_status": "refresh_required" if peer_refresh_required else "ok",
         "quality_tier": quality,
         "value_verdict": verdict,
-        "summary": summary,
+        "_base_summary": base_summary,
     }
+    # Aldersmerking regnes ved hvert retur (også cache-treff) — se _apply_snapshot_age.
+    # Stale snapshot er nettopp der value/kjøp koster brukeren penger; Android leser
+    # dette uten mulighet til å refreshe, så ærlig degradering er obligatorisk.
+    _apply_snapshot_age(result)
     if use_cache_now:
         _value_cache_set(polet_id, vintage, result)
     return result
@@ -413,7 +500,11 @@ if __name__ == "__main__":
     query = sys.argv[1] if len(sys.argv) > 1 else "Thymiopoulos Rose Xinomavro"
     vintage = int(sys.argv[2]) if len(sys.argv) > 2 else 2024
 
-    results = search(query, page_size=5)
+    try:
+        results = search(query, page_size=5)
+    except PoletRefreshRequired as e:
+        print(f"Ingen treff på Polet-snapshot for '{query}'. {e.hint}")
+        sys.exit(1)
     if not results:
         print(f"Ingen treff på Polet for '{query}'")
         sys.exit(1)
