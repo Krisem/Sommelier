@@ -553,7 +553,7 @@ Personalisert (kun ved eksplisitt request):
 
 ### ADR-020: Repo-committet Polet-snapshot + cross-device (desktop refresh / Android read-only)
 
-**Status:** Accepted (2026-06-08)
+**Status:** Accepted (2026-06-08). **Refresh-asymmetrien delvis superseded av [ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh) (2026-06-09)** — snapshot-modellen (lagring, validering, alders-merking) står uendret, men «desktop = refresh / Android = read-only»-rollene er erstattet av device-agnostisk remote-browser-refresh.
 
 **Kontekst.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) etablerte at den eneste fungerende veien forbi WAF-en er en ekte nettleser, og skisserte «lokalt snapshot for bredde + on-demand dybde» — men lot lagringen og henter-mekanismen være uavklart. Samtidig kjører brukeren Claude Code på **to enheter**: desktop (Mac med Playwright-MCP + lokal chromium) og Android (Claude Code + repo, men **ingen nettleser**). Et snapshot i `~/.cache/sommelier/` løser ikke dette — cachen er enhets-lokal og deles ikke, så Android ville stått uten Polet-data overhodet. Den åpne beslutningen fra `tasks/todo.md` (Python-Playwright vs. Claude-drevet Playwright-MCP) måtte også avgjøres.
 
@@ -589,7 +589,45 @@ Cross-device-rollene er asymmetriske og eksplisitte:
 
 **Alternativer vurdert.** **Python-Playwright** (autonomt, headless, testbart) — forkastet: tung avhengighet + browser-binær, og det **hjelper ikke Android** (ingen browser der uansett), så cross-device-problemet ville bestått. **Snapshot i `~/.cache/sommelier/`** — forkastet: enhets-lokal cache deles ikke, Android ville stått uten data. **Polet åpent/presse-API** — fortsatt forkastet av samme grunner som i ADR-019.
 
-**Relatert.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) (etablerte «ekte nettleser»-veien; ADR-020 konkretiserer lagring + cross-device), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (kode≠navn i fasett-oppslag), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (drift-vern, nå supplert av positiv validering i `save_details`), [ADR-004](#adr-004-logic_version-i-value_score-cache-nøkkel) (LOGIC_VERSION-bump), [`polet_refresh.md`](polet_refresh.md) (desktop-runbook), teknisk gjeld #0.
+**Relatert.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) (etablerte «ekte nettleser»-veien; ADR-020 konkretiserer lagring + cross-device), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (kode≠navn i fasett-oppslag), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (drift-vern, nå supplert av positiv validering i `save_details`), [ADR-004](#adr-004-logic_version-i-value_score-cache-nøkkel) (LOGIC_VERSION-bump), [`polet_refresh.md`](polet_refresh.md) (runbook), teknisk gjeld #0.
+
+---
+
+### ADR-021: Remote browser via CDP — device-agnostisk refresh
+
+**Status:** Accepted (2026-06-09). Superseder refresh-asymmetrien i [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen selv står uendret).
+
+**Kontekst.** ADR-020 låste refresh til **desktop** fordi den krevde lokal chromium som når Cloudflare *direkte* med en genuin browser-TLS-fingerprint (Android hadde ingen browser → read-only). Det etterlot to problemer: (1) Android kunne aldri refreshe, og (2) en **tredje kjørekontekst** har siden blitt sentral — **Claude Code on the web**, som kjører i en sky-container bak Anthropics Egress Gateway.
+
+Empirisk test i web-containeren (2026-06-09): jeg installerte ekte headless chromium og kjørte refresh-ritualet mot Polet. Resultat:
+
+| Test | Container (lokal chromium bak Egress Gateway) | Remote browser (Browserbase, via CDP) |
+|---|---|---|
+| Generell egress (example.com) | ✅ 200 | — |
+| Forside `vinmonopolet.no` | ✅ 200 (ekte innhold) | ✅ 200 |
+| **`/vmpws/` søke-API (bredde)** | ❌ **403 «Sorry, you have been blocked»** | ✅ **200 (rik JSON)** |
+| **Produktside-HTML (dybde)** | ❌ **403 «Attention Required \| Cloudflare»** | ✅ 200 |
+
+**Rotårsak.** Egress tvinges gjennom Anthropics Egress Gateway (`issuer: O=Anthropic; CN=Egress Gateway SDS Issuing CA`), som **terminerer og re-originerer TLS**. Cloudflare ser dermed gatewayens datasenter-IP og TLS-fingerprint, ikke chromiums, og hard-blokkerer de bot-beskyttede `/vmpws/`-endepunktene — nettopp dem refresh trenger. Genuin-fingerprint-trikset virker *kun* når chromiums egen TLS når Cloudflare direkte (vanlig desktop). Samme MITM-problem gjelder mange bedriftsproxyer. Web-research bekrefter at Cloudflare rutinemessig flagger datasenter-IP-er.
+
+**Beslutning.** Frikoble refresh fra enheten ved å drive ritualet mot en **remote browser via CDP**. Selve browsingen (forside-nav + same-origin `fetch`) kjører på en remote browser-tjeneste (Browserbase / Browserless) med ren egress og genuin browser-fingerprint, så Cloudflare møter *tjenestens* browser — ikke din lokale proxy. Claude kobler til via Playwright-MCP sin `browser.cdpEndpoint` (config-fil; `--config polet-mcp.config.json`). Connect-URL + token bor i en **gitignored per-enhet config** (`polet-mcp.config.json`); repoet sjekker bare inn `docs/polet-mcp.config.example.json`. **Refresh-ritualets logikk er uendret** (navigate → `browser_evaluate` fetch → `refresh_polet.py` ingest-helpers → `polet_store` validering); kun *hvor browseren kjører* flyttes. Dette er den **foretrukne veien på alle enheter — også desktop** — slik at det finnes én refresh-rutine, ikke device-branching.
+
+**Bekreftet transport (2026-06-09).** Browserbase **gratis-tier** (uten paid residential-proxy) passerer Vinmonopolets Cloudflare: `wss://connect.browserbase.com?apiKey=…` + `connectOverCDP` → forside 200, `/vmpws/`-API 200 (rik JSON). Den statiske auto-session-URL-formen fungerer direkte som MCP `cdpEndpoint` (ingen REST-pre-steg). `proxies:true` krever betalt plan (402), men trengs *ikke* for Vinmonopolet.
+
+**Konsekvenser.**
+- ✅ **Device-agnostisk:** desktop, Android og Claude Code on the web refresher identisk — enhver enhet som når CDP-websocketen kan refreshe.
+- ✅ **Robust forbi Cloudflare:** WAF-en møter tjenestens genuine browser; uavhengig av lokal egress-vei (MITM-proxy eller ei).
+- ✅ **Snapshot-modellen uendret:** ingest, positiv validering, deterministisk serialisering, alders-merking fra ADR-020 står — kun transporten byttes.
+- ✅ **Token ut av repoet:** gitignored config + `.example.json`-template; ingen hemmelighet committes.
+- ✅ **Gratis i praksis:** Browserbase free-tier (~1 browser-time/mnd) dekker lavvolum månedlig refresh.
+- ⚠️ **Ekstern avhengighet + konto:** krever en remote-browser-konto og en token å forvalte per enhet. Polling/høyt volum vil sprenge gratis-tier.
+- ⚠️ **Lokal chromium i MITM-miljø kan ikke refreshe** — datasenter-IP/fingerprint hard-blokkeres (bevist). Dokumentert så ingen prøver det på nytt.
+- ⚠️ **Desktop med lokal chromium** fungerer fortsatt (genuin fingerprint, direkte egress) og beholdes som no-account nød-utvei, men er ikke standardveien.
+- ⚠️ Webshop-`vmpws` er fortsatt ToS-gråsone (arvet fra [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)) — akseptert for personlig, lavvolum bruk.
+
+**Alternativer vurdert.** **Lokal chromium i sky-containeren** — forkastet: Egress Gateway-MITM gir hard 403 (empirisk bevist). **Endre nettverkspolicy til passthrough** — utilstrekkelig alene: selv uten MITM blokkeres datasenter-IP-en av Cloudflare uten residential-proxy. **Termux + headless chromium på Android** — mulig (residential mobil-IP + genuin chromium), men skjørt oppsett og hjelper *ikke* web/sky-sesjonen; remote-CDP dekker alle tre kontekstene med ett oppsett. **Cloudflare Web Bot Auth** (lansert mai 2026, signerte agent-requests) — lovende fremtidig legit-vei, men krever at Vinmonopolet opt-in-er; ikke tilgjengelig nå.
+
+**Relatert.** [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen denne bygger på), [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) («ekte nettleser»-veien), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (fasett-koder), [`polet_refresh.md`](polet_refresh.md) (runbook), [`polet-mcp.config.example.json`](polet-mcp.config.example.json) (config-template), teknisk gjeld #0a.
 
 ---
 
@@ -600,7 +638,7 @@ Ranket etter risiko × sannsynlighet.
 | # | Gjeld | Hvorfor det er gjeld | Når det blir et problem | Trigger for å adressere |
 |---|---|---|---|---|
 | ~~**0**~~ | ~~`requests`-laget mot Polet `vmpws` er WAF-blokkert (403)~~ **ADRESSERT 2026-06-08** | Løst via repo-committet snapshot + Playwright-MCP-refresh ([ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)). `tools/vinmonopolet.py` leser nå `data/polet/` | — | — (se ny gjeld #0a/#0b) |
-| **0a** | **Snapshot-ferskhet avhenger av manuell desktop-refresh** | Android kan ikke refreshe (ingen browser); ingen cron. Verdict alders-merkes, men data eldes til noen kjører ritualet | Når brukeren handler på et snapshot som er uker gammelt (pris/lager kan ha endret seg) | Kjør desktop-refresh ([`polet_refresh.md`](polet_refresh.md)); value-verdict degraderer språket ved alder >14 d |
+| **0a** | **Snapshot-ferskhet avhenger av manuell refresh** | Ingen cron; data eldes til noen kjører ritualet. (Device-låsen er borte — ADR-021: refresh kan nå kjøres fra alle enheter via remote browser, inkl. Android/web.) Verdict alders-merkes underveis | Når brukeren handler på et snapshot som er uker gammelt (pris/lager kan ha endret seg) | Kjør refresh fra hvilken som helst enhet ([`polet_refresh.md`](polet_refresh.md)); value-verdict degraderer språket ved alder >14 d |
 | **0b** | **118 orphan-details venter re-knytting** | Rekonstruerte klokkedata uten code-mapping i `_orphan_details.json` (gamle cache-URL-er overskrevet av TTL) | Similarity/dybde mangler for disse vinene til de re-hentes med varenr | Re-hent details for finalister via desktop-refresh; matchede orphans flyttes til `details/<varenr>.json` |
 | 1 | Polet HTML-scraping i `parse_product_html` | 12 regex over Polets DOM — sårbar for redesign | Når Polet kommer med ny webshop (sannsynlig <12 mnd) | Fixture-test feiler (allerede på plass — ADR-011); supplert av positiv validering i `save_details` (ADR-020) |
 | 2 | `knowledge/scores/` krysser data/knowledge-grensen (ADR-002) | Strukturelt data, lagret som knowledge | Ved 2000+ entries eller behov for sekundær-indeks | Manuell vurdering hver 6. mnd |

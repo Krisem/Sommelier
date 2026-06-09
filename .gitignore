@@ -1,3 +1,13 @@
 __pycache__/
 *.pyc
 *.bak
+
+# Remote-browser refresh (ADR-021): per-device config med CDP-URL + token er en
+# hemmelighet — committes ALDRI. Bare *.example.json sjekkes inn.
+polet-mcp.config.json
+.bb_key
+
+# Playwright/Node-artefakter fra browser-MCP-oppsett (skal ikke i repoet)
+node_modules/
+package.json
+package-lock.json
