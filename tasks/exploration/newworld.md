@@ -2,7 +2,7 @@
 
 > Formål: løse blindsonen «varmt klima New World» ikke ved å *stryke* den, men ved å teste
 > en konkret hypotese med ekte flasker fra Vinmonopolet. Oppdateres etter hvert som viner rates.
-> Opprettet 2026-07-02. Kilde-seksjon i [`knowledge/smaksprofil.md`](../knowledge/smaksprofil.md) § «New World rødvin – under aktiv utforskning».
+> Opprettet 2026-07-02. Kilde-seksjon i [`knowledge/smaksprofil.md`](../../knowledge/smaksprofil.md) § «New World rødvin – under aktiv utforskning».
 
 ## Hypotesen
 

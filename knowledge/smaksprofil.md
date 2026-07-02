@@ -372,7 +372,7 @@ Evidens så langt:
 
 **Konsekvens for anbefalinger:** New World-rødvin skal ikke lenger flagges som ren blindsone. Foreslå aktivt langs frisk/høyde-aksen (mål: Fylde 7–9, Friskhet 7+, Tannin 6–8, 13–14 %, diskret-moderat eik). Vær fortsatt varsom med den varme, syltete, høy-eik-enden (Barossa-jam, billig varmklima-Cab) – det er der hypotesen kan brekke, og verdt å teste bevisst.
 
-**Utforskningsplan:** se [`tasks/newworld_exploration.md`](../tasks/newworld_exploration.md) – kuratert flight på tvers av Argentina/Chile/Sør-Afrika/Australia for å kartlegge grensene. Oppdater denne seksjonen etter hvert som viner rates.
+**Utforskningsplan:** se [`tasks/exploration/newworld.md`](../tasks/exploration/newworld.md) – kuratert flight på tvers av Argentina/Chile/Sør-Afrika/Australia for å kartlegge grensene. Oppdater denne seksjonen etter hvert som viner rates.
 
 ## Druer du vet du liker (utledet fra mønstre)
 

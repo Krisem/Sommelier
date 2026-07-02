@@ -222,3 +222,5 @@ Flag dårlig value i alle prisklasser.
 ## Blindspots
 
 Markér `[NYTT]` med lavere konfidens når du anbefaler i et område hvor brukeren har lite data. Autoritativ liste: `knowledge/smaksprofil.md` § Blindspots.
+
+Skal en blindsone utforskes aktivt, følg flight-mønsteret (hypotese → verifisert flight på Polet → rate → oppdater smaksprofil + tracking) og se `tasks/exploration/INDEX.md`.

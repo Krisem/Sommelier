@@ -2,11 +2,34 @@
 
 ## Aktivt
 
-*(ingen aktive tråder)*
+### Prosjekt: utvid pool + smartere utforsking (2026-07-02)
+Fra brukerønske. Alle 4 valgt. Subagenter for ren kode/docs + meg for browser-sweep + QA.
+
+**Verifiserte fakta (denne økta):**
+- `vmpws`-API virker fra browser-kontekst (WAF blokkerer `requests` i Python — jf. ADR-019/021; live-query er browser-only + egress-avhengig).
+- Klokke-fasetter er bøtter: `1-2 · 3-4 · 5-6 · 7-8 · 9-10 · 11-12` for `Fylde/Friskhet/Garvestoffer/Soedme/Tannin(Sulfates)/Bitterhet`.
+- Query: `:relevance:Friskhet:9-10:Fylde:7-8:mainCategory:rødvin:mainCountry:argentina`. Kategori/land-koder lowercase.
+- Produkt-JSON fra API = samme shape som `catalog.ndjson`-linjer (upsert lagrer as-is).
+
+**Fase 1 — facet-sweep-mekanikk (kode) [subagent] — gater Fase 2**
+- [ ] `tools/polet_facets.py` (rene funksjoner, ingen nettverk): `build_facet_query(...)` (range→union av bøtter) + `parse_search_products(api_json)` (filtrer `buyable`, felt-shape lik eksisterende catalog-linjer).
+- [ ] `tests/test_polet_facets.py`: query-assembly, bøtte-mapping, buyable-filter, felt-shape.
+
+**Fase 2 — utvid snapshot (browser-sweep) [meg]**
+- [ ] Kategorier: rødvin/hvitvin/musserende_vin. Utforsknings-land full bredde (buyable): argentina, chile, sør-afrika, australia, new-zealand, portugal, østerrike, hellas, usa. Kjerne-land klokke-filtrert (Fylde 5-8 + Friskhet 7-12): italia, frankrike, tyskland, spania. Mål ~1500–2500.
+- [ ] Sweep → `upsert_products` → commit. Verifiser `find_similar_by_clocks` treffer New World.
+
+**Fase 3 — generalisér utforsknings-flight [subagent]**
+- [ ] `tasks/exploration/INDEX.md` (frontier-liste over åpne blindsoner) + flytt `newworld_exploration.md` → `tasks/exploration/newworld.md` + `_TEMPLATE.md` + CLAUDE.md-linje.
+
+**Fase 4 — roadmap/ADR-rydding [subagent, etter 1+2]**
+- [ ] roadmap.md: Vivino auto-sync → Levert. ADR: Vivino-sync levert + live facet-sweep/trait-filtrering.
+
+**QA (til slutt) [meg]**
+- [ ] `pytest` grønn · snapshot-integritet (NDJSON + meta-count) · smoke `vinmonopolet.py` + `find_similar_by_clocks` · rene commits.
 
 ## Backlog
-- [ ] **Vivino-sync** (utsatt — ADR-019/020) — `tools/vivino_sync.py` for direkte lesing av Vivino-profilen via Playwright. Metode bevist 2026-06-08, men bevisst nedprioritert til etter Polet-snapshotet er stabilt. Se roadmap § Vivino auto-sync.
-- [ ] Begynn å bygge klokke-tabell i `knowledge/smaksprofil.md` for topp-viner (kun Fenocchio Barbera er der nå)
+- [ ] Begynn å bygge klokke-tabell i `knowledge/smaksprofil.md` for topp-viner (Fenocchio + Paraje Altamira der nå — fortsett å utvide)
 - [ ] Vurder å legge til et drueblending-kompendium for druer brukeren liker (Barbera, Nebbiolo, Riesling, Sangiovese, Tannat, Corvina-blend)
 - [ ] Test mot 3 reelle scenarier etter strukturskifte: hverdagsrød under 250 kr, osso buco-paring, Etna-utvidelse
 
