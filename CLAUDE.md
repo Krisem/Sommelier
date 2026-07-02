@@ -8,7 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
+- **Oppdater Vivino-ratings (Playwright-MCP, DEFAULT):** når brukeren ber om «oppdater Vivino / de siste vinene jeg har ratet» — skrap innlogget profil-feed og merge nye viner inn i CSV. Runbook: [`docs/vivino_refresh.md`](docs/vivino_refresh.md). Merge-helper: `python3 -m tools.vivino_sync <rows.json>` (idempotent, dedup på winery+wine+vintage). Kjør `profile_stats.py` etterpå.
+- **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport/-sync — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
 - **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md` + regenererer `beer_v0.json`)
 - **Regenerér øl-fit-klassifisering:** `python3 -m tools.beer_fit` (stilfamilie→tier-tabell; kjøres også automatisk av `untappd_stats.py`). For batch: `from tools.beer_fit import classify_beer` på innlimte øl.
 - **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
