@@ -94,6 +94,11 @@ _(2026-05-12 – Off-dry tysk hvitt: migrert til `knowledge/smaksprofil.md` som 
 **Hvorfor det var feil:** Filter bubble er et veldokumentert recsys-anti-pattern. For en én-bruker-system uten kollektiv intelligens er det særlig alvorlig — smaksprofilen kan ikke utvides hvis høyt-scorede viner i blindspots aldri blir vist. Filter-instinktet kommer fra "reduser kognitiv last for brukeren", men det fjerner agency.
 **Hva jeg gjør annerledes nå:** Default-rangering er kritiker-score, tier vises som merke. Tier-first-sortering aktiveres KUN ved eksplisitt brukerønske ("noe jeg garantert vil like", "trygge valg"). `risky` og `no_go` vises alltid med tydelig flagg, aldri skjules. Se [ADR-016](../docs/ARCHITECTURE.md#adr-016-no-filter-bubble-prinsippet-for-user-fit-score).
 
+## 2026-06-13 – Ikke avskriv lett Chardonnay for tidlig
+**Hva skjedde:** Jeg vurderte Famille Morel Les Pierres Dorées (Beaujolais Blanc) som "trolig litt tynn og uinteressant" for brukerens profil, med argumentet at han foretrekker mineralsk-stramt (Jura, Riesling GG). Brukeren ga den 4.1 — godt over forventet.
+**Hvorfor det var feil:** Jeg overekstrapolerte "du liker struktur" til "du liker ikke lett hvitvin". Beaujolais kalkstein-Chardonnay fra biodynamisk produsent kan ha tekstur og presisjon selv uten Jura-fylde. Én datatype (stilpreferanse) trumfet ikke den faktiske vinen.
+**Hva jeg gjør annerledes nå:** Ikke diskvalifiser lettere Chardonnay-stiler fra et godt sted (Pierres Dorées, Mâcon, Chablis) uten konkret info om vinen. Vurder produsent og driftsform. Beaujolais Blanc ≠ generisk light white.
+
 ## 2026-05-14 – Dokumentér WHY, ikke bare WHAT, ved arkitekturvalg
 **Hva skjedde:** Etter en stor audit/refactor-økt hadde vi mange designvalg uten dokumentert begrunnelse. Det ville gjort neste audit unødvendig dyr — vi ville måtte re-derivere konteksten for hvert valg.
 **Hvorfor det er en risiko:** Uten Why-dokumentasjon vil neste refactor enten (a) gjenta gammel feil fordi grunnen ble glemt, eller (b) blokkere på trygg endring fordi ingen vet hvorfor den nåværende formen ble valgt.

@@ -22,17 +22,17 @@
 ## Auto-derivert statistikk
 
 > Generert 2026-07-02 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
-> Grunnlag: 114 ratede viner, snitt 3.81.
-> Nyere ratings (2024-01-01+): 27 viner, snitt 3.97.
+> Grunnlag: 117 ratede viner, snitt 3.82.
+> Nyere ratings (2024-01-01+): 30 viner, snitt 4.00.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.
 
 ### Per vintype
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Red Wine | 63 | 3.78 | 4.05 |
-| Sparkling | 22 | 4.01 | 4.20 |
-| White Wine | 17 | 3.85 | 3.73 |
+| Red Wine | 64 | 3.79 | 4.06 |
+| Sparkling | 23 | 4.03 | 4.23 |
+| White Wine | 18 | 3.87 | 3.77 |
 | Rosé Wine | 10 | 3.30 | 3.75 |
 | Dessert Wine | 1 | 4.50 | – |
 | Fortified Wine | 1 | 4.50 | – |
@@ -42,9 +42,9 @@
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
 | Italy | 40 | 3.84 | 3.85 |
-| France | 33 | 3.56 | 3.96 |
+| France | 35 | 3.60 | 4.04 |
 | Spain | 9 | 3.78 | – |
-| Germany | 7 | 3.83 | 3.83 |
+| Germany | 8 | 3.88 | 3.92 |
 | United States | 5 | 3.84 | 4.00 |
 | Argentina | 5 | 3.66 | 4.15 |
 | United Kingdom | 3 | 4.27 | 4.27 |
@@ -56,7 +56,7 @@
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| French Champagne | 9 | 3.86 | – |
+| French Champagne | 10 | 3.91 | 4.40 |
 | Italian Barbera | 6 | 3.90 | 3.80 |
 | Northern Italy Red | 6 | 3.33 | – |
 | Italian Ripasso | 5 | 4.10 | – |
@@ -73,9 +73,9 @@
 | Southern Rhône Red | 3 | 3.00 | – |
 | Jura White | 2 | 4.25 | 4.10 |
 | Argentinian Malbec | 2 | 4.15 | 4.15 |
+| German Spätburgunder | 2 | 4.05 | 4.05 |
 | Californian Zinfandel | 2 | 4.00 | – |
 | Italian Prosecco | 2 | 4.00 | – |
-| Southern Rhône White | 2 | 3.10 | 3.20 |
 
 ### Bekreftede mønstre (n ≥ 3, snitt ≥ 4.0)
 
@@ -92,7 +92,6 @@
 
 ### Blindspots (kategori-kombinasjoner med n ≤ 2)
 
-- Germany Red Wine (n=1)
 - Italy White Wine (n=1)
 - Austria White Wine (n=1)
 - United States White Wine (n=1)
@@ -107,6 +106,7 @@
 - Portugal Fortified Wine (n=1)
 - South Africa Rosé Wine (n=1)
 - Greece Rosé Wine (n=1)
+- Germany Red Wine (n=2)
 
 ### Topp 5 ratede viner
 
@@ -300,6 +300,7 @@
 - Eik: **moderat til tydelig** – Amarone og Ripasso har det
 - Syre: **medium til høy** – Barbera/Sangiovese-vinklingen
 - Restsødme: **ikke avklart – test og lær.** Du har scoret høyt på både Amarone (litt glycerolrik fylde) og knusktørr Barbera. Antakelse: tørt er trygt, men du har ikke aversjon mot dybde og fylde.
+- **Baden Spätburgunder fungerer:** Florian Philipp Reicholzheimer 2022 → 4.2 (2026-06-13, restaurant, til tørrmodnet ytrefilet). Fyller blindspot for tysk rødvin — mer kropp og mørk frukt enn typisk Burgund-Pinot. Verdt å utforske videre.
 
 ### Hvitvin (17 viner, snitt 3.85 – overraskende høyt)
 
@@ -309,6 +310,7 @@
 - **Jura-Chardonnay treffer deg** – 4.4 og 4.1 på Rolet, to forskjellige årganger
 - **Cloudy Bay 4.5** – men dette er en 2015-rating. Smaken har modnet siden da, så ikke vekt denne tungt.
 - **Sør-Rhône hvit fungerer ikke** – 3.0 og 3.2 på Lirac Blanc fra Ségriés, to årganger på rad
+- **Beaujolais Blanc (Chardonnay) kan funke:** Famille Morel Les Pierres Dorées 2024 → 4.1 (2026-06-13, restaurant). Biodynamisk kalkstein-Chardonnay. Overrasket positivt — lett og frisk, men med nok substans. Ikke avskriv lettere Chardonnay-stiler for tidlig.
 
 **Antatte preferanser:**
 - Stil: **mineralsk og strukturert** (GG-Riesling, Jura-Chardonnay), men også **god til off-dry tysk** (Spätlese)
@@ -321,6 +323,7 @@
 - Du elsker Champagne, men også Cava (4.5 Juvé & Camps) og Crémant
 - 4.5 Vve Fourny Blanc de Blancs Premier Cru = solid Chardonnay-basert Champagne
 - Du har tre Champagner i kjelleren – musserende er åpenbart viktig for deg
+- **Bernard Pitois Brut Réserve → 4.4** (2026-06-13, restaurant). NM-stil, frisk og mineralsk. Bekrefter Champagne-mønsteret.
 
 ### Rosé (9 viner, snitt 3.22 – sliter mest)
 
