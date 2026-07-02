@@ -21,16 +21,16 @@
 <!-- BEGIN AUTO-DERIVED (profile_stats.py) -->
 ## Auto-derivert statistikk
 
-> Generert 2026-06-08 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
-> Grunnlag: 111 ratede viner, snitt 3.80.
-> Nyere ratings (2024-01-01+): 24 viner, snitt 3.95.
+> Generert 2026-07-02 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
+> Grunnlag: 114 ratede viner, snitt 3.81.
+> Nyere ratings (2024-01-01+): 27 viner, snitt 3.97.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.
 
 ### Per vintype
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Red Wine | 60 | 3.77 | 4.03 |
+| Red Wine | 63 | 3.78 | 4.05 |
 | Sparkling | 22 | 4.01 | 4.20 |
 | White Wine | 17 | 3.85 | 3.73 |
 | Rosé Wine | 10 | 3.30 | 3.75 |
@@ -42,13 +42,13 @@
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
 | Italy | 40 | 3.84 | 3.85 |
-| France | 32 | 3.55 | 3.95 |
+| France | 33 | 3.56 | 3.96 |
 | Spain | 9 | 3.78 | – |
 | Germany | 7 | 3.83 | 3.83 |
 | United States | 5 | 3.84 | 4.00 |
+| Argentina | 5 | 3.66 | 4.15 |
 | United Kingdom | 3 | 4.27 | 4.27 |
 | South Africa | 3 | 4.20 | 4.30 |
-| Argentina | 3 | 3.33 | – |
 | Portugal | 2 | 4.50 | – |
 | Austria | 2 | 4.25 | 4.00 |
 
@@ -72,6 +72,7 @@
 | Burgundy Red | 3 | 3.27 | 3.80 |
 | Southern Rhône Red | 3 | 3.00 | – |
 | Jura White | 2 | 4.25 | 4.10 |
+| Argentinian Malbec | 2 | 4.15 | 4.15 |
 | Californian Zinfandel | 2 | 4.00 | – |
 | Italian Prosecco | 2 | 4.00 | – |
 | Southern Rhône White | 2 | 3.10 | 3.20 |
@@ -267,6 +268,16 @@
 
 ## Stilpreferanser
 
+### Kontekst-avhengig syrepreferanse (bekreftet 2026-07-02)
+
+**Kristoffer foretrekker mer syre til mat enn til solo-drikking om kvelden.** Egenobservasjon på Catena Paraje Altamira (frisk høyde-Malbec): god solo, men «enda bedre til mat».
+
+- **Fagbakgrunn:** Høy syre virker best med mat – den kutter fett, matcher syre i retten og friskner opp ganen mellom biter; solo kan samme syre oppleves skarpere/mindre balansert. Klassisk enologi, men her *personlig bekreftet* som noe han faktisk merker og vektlegger.
+- **Slik brukes det i anbefalinger:**
+  - **Til mat / matparing:** push friskhet oppover – Friskhet 8+ er en styrke, ikke en risiko (Granítico 10, Barbera 9, høyde-viner). Jo rikere/fetere rett, jo mer syre tåler og ønsker han.
+  - **Solo «noe til kvelden» uten mat:** len mot litt rundere, mer fruktdrevet profil – Friskhet 6–8, litt mer fylde/glyserol – framfor de mest sylskarpe. Ikke velg bort syre, men ikke maksimér den.
+  - Spør ev. kort «til mat eller solo?» når en høy-syre-kandidat vurderes og konteksten er uklar.
+
 ### Rødvin (klart hovedkategorien – 58 viner, snitt 3.76)
 
 **Sterke mønstre i dataene:**
@@ -332,6 +343,7 @@ Når Claude finner viner med kjent klokke-profil, søk etter lignende.
 | Thymiopoulos Rosé de Xinomavro 2024 | — (foreslått) | 7/12 | 8/12 | — | <3 g/l | Strukturert rosé, Nebbiolo-aktig |
 | Hattingley Valley English Sparkling 2014 | 4.0 | — | — | — | — | Engelsk traditional method (ikke-rosé) |
 | Hattingley Valley Rosé 2021 | — (foreslått) | 7/12 | 10/12 | — | 5,2 g/l | Engelsk traditional method rosé |
+| Catena Zapata Paraje Altamira Malbec 2024 | 4.2 | 8/12 | 7/12 | 7/12 | 3,6 g/l | Uco Valley høyde-Malbec, floral/savory, diskret eik |
 
 *(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
 
@@ -341,12 +353,23 @@ Disse områdene har for lite eller ingen data til å gi sikre anbefalinger.
 Claude bør markere [NYTT] og lavere konfidens:
 
 - **Asiatisk mat** – ingen viner ratet sammen med thai, indisk, kinesisk osv.
-- **New World rødvin** – minimal erfaring utenfor Italia/Frankrike/Tyskland
 - **Naturvin / orange / hudkontakt** – fraværende i datasettet
 - **Aromatisk hvitvin** – Viognier, Gewürztraminer, Torrontés mangler helt
 - **Spanske rødviner** – kun 4 viner, ingen klart mønster
 - **Pinot Noir generelt** – stor varians (1.5 til 4.5), vanskelig å forutsi
-- **Varmt klima New World** – Australia, Sør-Afrika, Chile, Argentina knapt testet
+
+### New World rødvin – under aktiv utforskning (oppgradert fra blindsone 2026-07-02)
+
+**Hypotese (styrket, ikke bekreftet):** Du liker **frisk, høyde-/kjølig-preget, strukturert og savory** New World-rødvin – ikke den syltete, høy-alkohol, eik-tunge varmklima-stereotypien.
+
+Evidens så langt:
+- 4.2 Catena Zapata Paraje Altamira Malbec 2024 (Uco Valley høyde, 13,5 %, klokker 8/7/7, floral/savory, diskret eik)
+- 4.1 Catena The Trilogy Malbec 2024 (høyde-Mendoza, friskere stil)
+- *Kontrast:* 3.5 basis-Catena Malbec 2014 og 3.0 Chakana Bonarda 2014 – flatere/eldre, den varmere/rundere enden traff ikke like godt.
+
+**Konsekvens for anbefalinger:** New World-rødvin skal ikke lenger flagges som ren blindsone. Foreslå aktivt langs frisk/høyde-aksen (mål: Fylde 7–9, Friskhet 7+, Tannin 6–8, 13–14 %, diskret-moderat eik). Vær fortsatt varsom med den varme, syltete, høy-eik-enden (Barossa-jam, billig varmklima-Cab) – det er der hypotesen kan brekke, og verdt å teste bevisst.
+
+**Utforskningsplan:** se [`tasks/newworld_exploration.md`](../tasks/newworld_exploration.md) – kuratert flight på tvers av Argentina/Chile/Sør-Afrika/Australia for å kartlegge grensene. Oppdater denne seksjonen etter hvert som viner rates.
 
 ## Druer du vet du liker (utledet fra mønstre)
 

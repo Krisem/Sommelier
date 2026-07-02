@@ -1,11 +1,11 @@
 {
   "_meta": {
     "version": "v0",
-    "generated_at": "2026-06-08T17:59:37+00:00",
-    "n_classified": 397,
+    "generated_at": "2026-07-02T15:28:49+00:00",
+    "n_classified": 409,
     "tier_counts": {
-      "fit": 159,
-      "neutral": 235,
+      "fit": 164,
+      "neutral": 242,
       "risky": 3
     }
   },
@@ -154,6 +154,39 @@
     "rule_fired": "default"
   },
   "10985405": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "11051501": {
+    "tier": "fit",
+    "reasons": [
+      "Bekreftet drue «Chardonnay» matcher «Simpsons Gravel Castle Chardonnay 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11201001": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Bekreftet drue «Barbera» matcher «Massolino Barbera d'Alba 2024»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11201201": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
+  "11441301": {
     "tier": "neutral",
     "reasons": [
       "Ingen regler traff — default nøytral."
@@ -497,6 +530,14 @@
     "confidence": "medium",
     "rule_fired": "default"
   },
+  "14489401": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
   "14665101": {
     "tier": "fit",
     "reasons": [
@@ -555,6 +596,14 @@
     "rule_fired": "bekreftet_drue"
   },
   "15172801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "15188401": {
     "tier": "neutral",
     "reasons": [
       "Ingen regler traff — default nøytral."
@@ -730,7 +779,31 @@
     "confidence": "medium",
     "rule_fired": "default"
   },
+  "1657001": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
   "1661201": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1665825": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "1665895": {
     "tier": "neutral",
     "reasons": [
       "Ingen regler traff — default nøytral."
@@ -833,6 +906,14 @@
     ],
     "confidence": "medium",
     "rule_fired": "default"
+  },
+  "1760886": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
   },
   "18940901": {
     "tier": "neutral",
@@ -2784,6 +2865,14 @@
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
   },
+  "354501": {
+    "tier": "fit",
+    "reasons": [
+      "Foretrukket region «Champagne» matcher «Champagne»."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekreftet_drue"
+  },
   "3872205": {
     "tier": "fit",
     "reasons": [
@@ -3147,6 +3236,14 @@
     "rule_fired": "default"
   },
   "933801": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral."
+    ],
+    "confidence": "medium",
+    "rule_fired": "default"
+  },
+  "9419701": {
     "tier": "neutral",
     "reasons": [
       "Ingen regler traff — default nøytral."
