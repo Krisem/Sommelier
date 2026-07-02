@@ -1,11 +1,11 @@
 {
   "category_coverage": {
     "brennevin": 2,
-    "hvitvin": 145,
-    "musserende_vin": 96,
-    "rosévin": 49,
-    "rødvin": 224
+    "hvitvin": 152,
+    "musserende_vin": 99,
+    "rosévin": 53,
+    "rødvin": 251
   },
-  "count": 516,
-  "generated_at": "2026-06-09T04:50:09.552743+00:00"
+  "count": 557,
+  "generated_at": "2026-06-20T09:21:18.200731+00:00"
 }
