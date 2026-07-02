@@ -16,7 +16,11 @@
 
 ## Vivino auto-sync
 
-**Status:** Manuell metode bevist 2026-06-08 — **bevisst utsatt** til etter Polet-snapshotet er stabilt. Polet-WAF-fiksen (samme «ekte nettleser»-vei, [ADR-019](docs/ARCHITECTURE.md#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)/[ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)) ble prioritert først. Klar for å pakkes som `tools/vivino_sync.py` når den hentes opp igjen. **NB:** Vivino sitter bak samme type bot-vern, så sync bør bruke den device-agnostiske remote-browser-via-CDP-transporten ([ADR-021](docs/ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh)) — ellers hard-blokkeres den i MITM-proxy-miljøer (web-container) akkurat som Polet.
+**Status:** ✅ **LEVERT 2026-07-02** — se [Levert](#levert)-tabellen nederst. Historikk og designbegrunnelse beholdt under for kontekst.
+
+> **LEVERT 2026-07-02** → `tools/vivino_sync.py` + runbook [`docs/vivino_refresh.md`](docs/vivino_refresh.md). Skraper innlogget profil-feed via Playwright-MCP (egen rating fra `icon-N-pct`-stjerneklasser /100), differ mot CSV, idempotent merge (dedup på winery+wine+vintage), kjører `profile_stats.py` etterpå. Full begrunnelse i [ADR-022](docs/ARCHITECTURE.md#adr-022-vivino-sync-levert--playwright-mcp-skraping-av-innlogget-profil-feed).
+
+Manuell metode ble bevist 2026-06-08 og **bevisst utsatt** til etter Polet-snapshotet var stabilt — Polet-WAF-fiksen (samme «ekte nettleser»-vei, [ADR-019](docs/ARCHITECTURE.md#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)/[ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)) ble prioritert først. **NB:** Vivino sitter bak samme type bot-vern, så sync bruker den device-agnostiske remote-browser-via-CDP-transporten ([ADR-021](docs/ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh)) — ellers hard-blokkeres den i MITM-proxy-miljøer (web-container) akkurat som Polet.
 
 ### Hvorfor
 
@@ -263,5 +267,7 @@ Parser øl-blokken i `smaksprofil.md` → klassifiserer hver BJCP-stilfamilie i 
 |---|---|---|---|---|
 | Evaluerings-harness | 2026-06-08 | `tools/eval_fit.py` (15 tester) | [ADR-017](docs/ARCHITECTURE.md#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling) | v0_tier +0.59 Spearman — slår baselines; **v1-trigger ikke oppfylt**. vivino_avg (+0.63) er listen v1 må slå. |
 | Øl-fit v0 | 2026-06-08 | `tools/beer_fit.py` (15 tester) | [ADR-018](docs/ARCHITECTURE.md#adr-018-øl-fit-deriverer-fra-untappd-csv-ikke-fra-smaksprofil-markdown) | Stilfamilie→tier fra Untappd-CSV. 1 very_fit / 1 fit / 3 risky / 14 neutral. |
+| Vivino auto-sync | 2026-07-02 | `tools/vivino_sync.py` + [`docs/vivino_refresh.md`](docs/vivino_refresh.md) | [ADR-022](docs/ARCHITECTURE.md#adr-022-vivino-sync-levert--playwright-mcp-skraping-av-innlogget-profil-feed) | Skraper innlogget profil-feed via Playwright-MCP; idempotent merge (dedup winery+wine+vintage); staleness fjernet on-demand. |
+| Live facet-sweep + snapshot-ekspansjon | 2026-07-02 | `tools/polet_facets.py` (20 tester) | [ADR-023](docs/ARCHITECTURE.md#adr-023-live-facet-sweep--trait-filtrering--snapshot-ekspansjon) | Trait-fasetter (Fylde/Friskhet/…) med korrekt AND/OR-semantikk; snapshot 557 → 1849, New World nå dekket. |
 
-> Begge har fortsatt fremtidige versjoner beskrevet i seksjonene over (user-fit v1/v2, øl-fit utvidelser) — kun v0/harness er levert.
+> User-fit og øl-fit har fortsatt fremtidige versjoner beskrevet i seksjonene over (user-fit v1/v2, øl-fit utvidelser) — kun v0/harness er levert.

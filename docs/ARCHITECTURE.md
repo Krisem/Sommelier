@@ -633,6 +633,54 @@ MCP-serveren kobler seg til skybrowseren **lazily** — først ved første brows
 
 ---
 
+### ADR-022: Vivino-sync levert — Playwright-MCP-skraping av innlogget profil-feed
+
+**Status:** Accepted (2026-07-02). Realiserer roadmap § «Vivino auto-sync» (planlagt siden 2026-06-08).
+
+**Kontekst.** Roadmapen hadde lenge «Vivino auto-sync» planlagt: metoden var bevist manuelt 2026-06-08, men bevisst utsatt til Polet-snapshotet var stabilt. Den underliggende smerten sto uendret — `data/vivino/full_wine_list.csv` eldes stille fordi Vivino ikke har åpen API, og den offisielle CSV-eksporten må trigges manuelt og lander som e-post-ZIP. Vivino sitter dessuten bak samme type bot-vern som Polet ([ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)): innlogget sesjon kreves og `WebFetch`/`requests` gir 403.
+
+**Beslutning.** Pakk den beviste metoden som `tools/vivino_sync.py` med runbook [`vivino_refresh.md`](vivino_refresh.md). Ritualet skraper den **innloggede** Vivino-profil-feeden via Playwright-MCP (samme «ekte nettleser»-vei som Polet): egen rating leses fra stjerne-ikonene ved å summere `icon-N-pct`-klassene og dele på 100 (f.eks. 4× `icon-100-pct` + 1× `icon-40-pct` = 4.4), diffes mot `data/vivino/full_wine_list.csv`, og nye rader merges idempotent. Merge-helperen dedup-er på **Winery + Wine name + Vintage**, så gjentatte kjøringer er trygge. `profile_stats.py` kjøres etterpå slik at den managed blokka i `smaksprofil.md` (og fit-artefaktene) alltid speiler fersk data.
+
+**Konsekvenser.**
+- ✅ Staleness fjernes on-demand — synk på kommando, ingen ventetid på e-post-eksport.
+- ✅ Idempotent (dedup på winery+wine+vintage) → trygt å re-kjøre uten duplikatrader.
+- ✅ Restaurant-viner og andre kilder utenfor Vivino kan fortsatt logges manuelt via `vivino_sync.py` med JSON-input (samme merge-vei).
+- ⚠️ Avhengig av **innlogget sesjon** — cookien kan utløpe, da må Kristoffer logge inn på nytt i Playwright-nettleseren.
+- ⚠️ DOM-avhengig (stjerne-ikon-klasser, `.user-activity-item`) — samme drift-risiko som Polet ([ADR-011](#adr-011-html-fixture-test-for-polet-drift)); brekker hvis Vivino redesigner feeden.
+- ⚠️ ToS-gråsone — kun egen profil, lavt volum (arvet fra [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)).
+
+**Alternativer vurdert.** **Offisiell GDPR-eksport** — forkastet som primærvei: manuell trigging, lander som e-post-ZIP, samme staleness som før. **`requests`/`WebFetch`** — forkastet: WAF gir 403 (bekreftet, jf. ADR-019).
+
+**Relatert.** [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) («ekte nettleser»-veien som denne bruker), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (DOM-drift-vern), [`vivino_refresh.md`](vivino_refresh.md) (runbook), roadmap § Vivino auto-sync (nå levert).
+
+---
+
+### ADR-023: Live facet-sweep + trait-filtrering + snapshot-ekspansjon
+
+**Status:** Accepted (2026-07-02).
+
+**Kontekst.** Polet-snapshotet var 557 produkter — under 2 % av katalogen (~36k) — og for smalt for reell utforskning. New World-viner manglet helt: søk på Zuccardi/Catena/Mullineux ga `PoletRefreshRequired` fordi de aldri var i snapshotet. Samtidig ville en naiv utvidelse (committe hele katalogen, eller hente details for alt) enten sprenge repoet eller bli rate-limitet ut.
+
+**Funn (verifisert denne økta).** `vmpws`-søke-API-et (virker fra browser-kontekst, jf. [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)/[ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh)) støtter **TRAIT-fasetter**: `Fylde`, `Friskhet`, `Garvestoffer`, `Soedme`, `Tannin` (Sulfates) og `Bitterhet`, hver som **bøtter** `1-2 · 3-4 · 5-6 · 7-8 · 9-10 · 11-12`. **Kritisk funn:** repeterte facet-tokens av *samme* fasett kombineres som **AND, ikke OR** — `:Friskhet:7-8:Friskhet:9-10` gir 0 treff. Et klokke-**intervall** må derfor kjøres som **flere queries** (én per bøtte) og unioneres client-side. Dette formet den nye modulen `tools/polet_facets.py`: `build_facet_query` (én bøtte per dimensjon), `build_facet_queries` (intervall → liste queries, kartesisk over bøtter), `parse_search_products` — ren, med 20 tester.
+
+**Beslutning.**
+- **(a) Utvid snapshot-BREDDEN langs utforsknings-aksene via live facet-sweep.** Kjøpbar rødvin fra Argentina, Chile, Sør-Afrika, Australia, New Zealand, Portugal, Østerrike og Hellas hentet i full bredde → snapshot 557 → **1849** produkter.
+- **(b) Klokke-similarity på den utvidede poolen går via LIVE facet-query** (browser, egress-avhengig per [ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh)), **ikke** offline `find_similar_by_clocks` — fordi katalog-linjene ikke bærer klokker (details er egne filer, ikke hentet for de 1299 nye produktene).
+- **(c) Rollefordeling:** snapshot = bredde + Android-baseline; live facet-query = klokke-rekkevidde på desktop.
+
+**Konsekvenser.**
+- ✅ `search`/`search_with_facets` dekker nå New World — Zuccardi/Catena/Mullineux m.fl. finnes i snapshotet.
+- ✅ Trait-filtrering (Fylde/Friskhet/…) er nå en søkbar dimensjon via `polet_facets.py`, med korrekt AND/OR-semantikk (intervall = union av per-bøtte-queries).
+- ⚠️ Offline `find_similar_by_clocks` er fortsatt begrenset til viner som har details — de 1299 nye linjene har ingen klokker offline.
+- ⚠️ Snapshot ~3× større (repo-størrelse-avveining bevisst akseptert — bredde valgt fremfor slankt repo).
+- ⚠️ Kjerne-land-toppen (IT/FR/DE/ES klokke-filtrert til Fylde 7-8 × Friskhet 9-12) ble rate-limitet ut og er **utsatt**.
+
+**Alternativer vurdert.** **Hente details for alle 1299 nye** — forkastet: rate-limitet, ugjennomførbart. **Committe hele 36k-katalogen** — forkastet: repo-bloat. **Uttrykke klokke-range som repeterte facets i én query** — forkastet: fungerer ikke (samme fasett = AND → 0 treff); må unioneres client-side som flere queries.
+
+**Relatert.** [ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh) (egress-avhengig live facet-query), [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen som utvides), [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) («ekte nettleser»-veien), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (fasett-API i peer-percentile).
+
+---
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.
