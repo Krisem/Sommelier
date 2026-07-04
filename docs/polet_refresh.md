@@ -88,6 +88,38 @@ Commit `data/polet/` på en branch. Når en annen enhet puller, ser den friskt s
 
 Maks **~30 produktoppslag per sesjon**. Bredde-søk (steg 2/3) er billige (ett kall per søk, mange produkter). Det er dybde-hentingen (steg 4, én produktside per kall) som teller mot grensen — derfor kun finalister, ikke hele trefflista. Browserbase gratis-tier har dessuten ~1 browser-time/mnd; det er rikelig til et månedlig refresh, men ikke til kontinuerlig polling.
 
+## Butikk-spesifikt live-oppslag (øl, og «har butikk X varen?»)
+
+Snapshotet er vin-only og har **bevisst ikke** butikk-lager (ADR-020) — lager er
+ferskvare. Nevner brukeren et **konkret pol** (øl *eller* vin), er «er den inne
+der?» selve premisset, ikke en detalj. Da må du gå **live**, ikke gjette fra
+snapshot eller sortimentskunnskap (se `tasks/lessons.md` 2026-07-04).
+
+`tools/polet_live.py` holder den testbare delen (URL-bygging + JSON-parsing);
+nett-hoppet skjer i browseren (samme WAF-omgåelse som over — naviger først, så
+`fetch` same-origin via `browser_evaluate`):
+
+```
+browser_navigate  →  https://www.vinmonopolet.no/          # sett WAF-cookies
+```
+```python
+from tools.polet_live import stores_url, find_store, product_search_url, parse_products
+
+# 1) finn butikk-ID (q-param filtrerer ikke på dette endepunktet — filtrer klient-side)
+#    browser_evaluate: () => fetch('<stores_url()>').then(r => r.json())
+store = find_store(<stores_json>, "Røa")        # → {'id': '335', ...}
+
+# 2) søk filtrert til den butikken (availableInStores-fasett)
+#    browser_evaluate: () => fetch('<product_search_url(...)>').then(r => r.json())
+url = product_search_url("geuze", store_id=store["id"])   # category="øl" er default
+parse_products(<hits_json>)   # → [{code, name, style, abv, volume, price, stock}, …]
+```
+
+`stock` (f.eks. `"5 i butikken"`) kommer kun med når søket er filtrert på
+`store_id`. **Aldri anbefal en vare for et navngitt pol uten bekreftet `stock`
+der.** Fordelen over et øl-snapshot: ett billig kall gir ferskt lager + stil +
+pris, uten detalj-rate-limiten — og lager kan et snapshot uansett ikke holde.
+
 ## Når snapshotet er gammelt
 
 Hvis en vin ikke er i snapshot, får du `PoletRefreshRequired` med hint om å refreshe — det er forventet, ikke en feil. Value-anbefalinger på gammelt snapshot er alders-merket; formidle det videre til brukeren («snapshot er X dager gammelt — verifiser pris på polet.no»). Med remote-CDP-oppsettet kan refresh nå kjøres fra hvilken som helst enhet, inkludert mobil og web.
