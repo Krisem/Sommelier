@@ -2,7 +2,7 @@
 
 > **LEVENDE DOKUMENT.** Dette er den autoritative kilden til hva Kristoffer liker, ikke liker, og hva som er bevist vs hypotese.
 >
-> **Sist oppdatert:** 2026-05-12
+> **Sist oppdatert:** 2026-07-24
 > **Datagrunnlag:** Vivino-eksport (172 viner, 104 med rating; 12 års historikk).
 >
 > ## Oppdaterings-trigger (Claude må følge disse)
@@ -427,6 +427,25 @@ Kandidater basert på laveste ratings:
 ## Praktisk
 
 Allergier, glass, dekanter, lagringsforhold: ikke avklart. Spør i situasjoner der det er kritisk (f.eks. "har du dekanter?" hvis jeg foreslår ung Barolo).
+
+### Fysiologisk toleranse – HYPOTESE (histamin/appassimento-følsomhet)
+
+> **Status: uverifisert, 1 datapunkt (2026-07-24). Ikke bekreftet mønster.**
+
+**Observasjon:** Fikk hodepine av *ett* glass Valpolicella Ripasso (Antiche Terre Venete, 13,5 %, kjøpt taxfree Torp), selv om vinen smakte greit.
+
+**Tolkning (vin-kjemi, ikke diagnose):** Ripasso/Amarone lages ved gjæring/omgjæring på inntørkede Amarone-skall (appassimento). Lang skallkontakt + andregangsgjæring gir **høyere biogene aminer (histamin + tyramin)** enn vanlig rødvin – en klassisk utløser for vinhodepine hos følsomme. Ripassoen er *ikke* spesielt garvestoffrik (Corvina/Rondinella = moderat tannin, ~5–7/12), så tannin er lite sannsynlig som årsak. Det brukeren opplever som "mye garvestoff" er trolig fylde/ekstrakt, ikke tannin.
+
+**Spenning verdt å merke seg:** Ripasso (4,10) og Amarone (4,13) er blant favorittstilene hans – altså kan ganen elske nettopp de vinene som (hypotetisk) gir hodepine.
+
+**Diagnostisk test (foreslått, ikke gjennomført):**
+- Barbaresco/Barolo (høy tannin, *lav* histamin) → ingen hodepine ⇒ bekrefter histamin, ikke tannin.
+- Cantine di Ora Amarone (mer histamin enn Ripasso) → hodepine ⇒ styrker hypotesen.
+
+**Konsekvens for anbefalinger (kun hvis/ når bekreftet):**
+- Flagg Amarone/Ripasso/Recioto/appassimento-stiler med en kort følsomhets-advarsel.
+- Push heller friske, lav-histamin-alternativer til hverdag: Barbera, Nebbiolo, ung Sangiovese, tysk Riesling.
+- Oppdater denne seksjonen når testene over gir data (bekreft/avkreft).
 
 ## Mat og drikkesituasjon
 
