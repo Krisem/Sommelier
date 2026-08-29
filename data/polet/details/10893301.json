@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "10893301",
+  "distrikt": "Pays d'Oc",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 223.87,
+  "lukt": "Ung og fruktig med toner av bringebær og kirsebær, litt blomst, grønn urt og streif av fat.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "2 uker gjæring ved lav temperatur. Noe av vinen deretter på franske eikefat.",
+  "navn": "Cuvée Dissenay Pinot Noir 2025",
+  "parser": "json",
+  "pris": 167.9,
+  "produsent": "Les Producteurs Réunis",
+  "smak": "Saftig og myk med god fylde, preg av kirse- og bringebær, litt grønn urt og hint av fat og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,8 g/l",
+  "syre": "6,9 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Cuv%C3%A9e-Dissenay-Pinot-Noir-2025/p/10893301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10893301",
+  "volum": 75,
+  "årgang": "2025"
+}

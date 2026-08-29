@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "13886901",
+  "distrikt": "Rhône",
+  "druer": "Carignan 10 prosent, Grenache 65 prosent, Syrah 25 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Vaucluse",
+  "literpris": 181.2,
+  "lukt": "Aroma med preg av modne mørke og røde bær, innslag av urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Skånsom pressing av druene før temperaturkontrollert gjæring i ståltanker.",
+  "navn": "Fredag Rødvin 2024",
+  "parser": "json",
+  "pris": 138.9,
+  "produsent": "SAS Rhone Rive Gauche",
+  "smak": "Fruktig, myk og saftig, litt krydret preg av mørke og røde bær, hint av urter og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Vaucluse",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Vaucluse/Fredag-R%C3%B8dvin-2024/p/13886901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13886901",
+  "volum": 75,
+  "årgang": "2024"
+}

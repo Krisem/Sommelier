@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "12801206",
+  "distrikt": "Western Cape",
+  "druer": "Mourvèdre 15 prosent, Shiraz 50 prosent, Cinsault 35 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Western Cape",
+  "literpris": 186.6,
+  "lukt": "Aroma med preg av modne bær og litt syltetøy, innslag av blomster, drops, krydder og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Druene fermenteres seperat, og de ulike bestanddelene blandes deretter.",
+  "navn": "Twiga Hill 2025",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "Les Grands Chais de France",
+  "smak": "Saftig og nokså myk munnfølelse, preg av sødmefulle mørke skogsbær, litt lakris, kamfer og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/S%C3%B8r-Afrika/Western-Cape/Twiga-Hill-2025/p/12801206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12801206",
+  "volum": 150,
+  "årgang": "2025"
+}

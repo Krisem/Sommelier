@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1005301",
+  "distrikt": "Bekaa Valley",
+  "druer": "Carignan 33 prosent, Cabernet Sauvignon 33 prosent, Cinsault 34 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp brunrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 746.53,
+  "lukt": "Sammensatt med utviklet preg av tørket frukt, røde bær, urter, lær og skogbunn over integrert fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket. Spontangjæret i betong, modnet i fat i ca 2 år. Flaskelagret i 4 år.",
+  "navn": "Ch. Musar 2019",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Ch. Musar",
+  "smak": "Fyldig, lang og kompleks, innslag av modne røde bær, rosin og fat, litt tobakk, te, kamfer og urt.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "7 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Ch-Musar-2019/p/1005301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1005301",
+  "volum": 75,
+  "årgang": "2019"
+}

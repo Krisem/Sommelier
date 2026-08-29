@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "1109101",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 194.53,
+  "lukt": "Ungdommelig preg av modne mørke bær, bringebær, litt fat, vanilje, svale urter og kamfer.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæring i 7 dager ved maks 28°C.6 md., lagring i nye amerikanske eikefat.",
+  "navn": "Marqués de la Concordia Tempranillo Rioja Santiago Segundo Año 2023",
+  "parser": "json",
+  "pris": 145.9,
+  "produsent": "Marq. de la Concordia",
+  "smak": "Fyldig og ungdommelig preg av friske kirsebær, rips og bringebær, litt fat, vanilje, tobakk og urt.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Spania/Rioja/Marqu%C3%A9s-de-la-Concordia-Tempranillo-Rioja-Santiago-Segundo-A%C3%B1o-2023/p/1109101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1109101",
+  "volum": 75,
+  "årgang": "2023"
+}

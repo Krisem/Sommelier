@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19453501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 20 prosent, Merlot 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Bordeaux Supérieur",
+  "literpris": 278.67,
+  "lukt": "Aroma av mørke og røde skogsbær og solbær, innslag av fat, tørket frukt, krydder, skogbunn og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Parsellsvis vinifikasjon. Fermentering temp. kontrollerte ståltanker, pumpover. 20% På 225l brukte fat 10 md.",
+  "navn": "Ch. Chapelle d'Aliénor by La Gaffelière 2022",
+  "parser": "json",
+  "pris": 209,
+  "produsent": "Comte Malet de Roquefort",
+  "smak": "Litt utviklet med god fylde og lengde, fast og saftig preg av morell, bringebær, kamfer og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Bordeaux Supérieur",
+  "url": "/Land/Frankrike/Bordeaux/Bordeaux-Sup%C3%A9rieur/Ch-Chapelle-d%27Ali%C3%A9nor-by-La-Gaffeli%C3%A8re-2022/p/19453501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19453501",
+  "volum": 75,
+  "årgang": "2022"
+}

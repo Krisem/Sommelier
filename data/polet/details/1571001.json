@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1571001",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Asti",
+  "literpris": 217.2,
+  "lukt": "Aroma preget av modne røde bær, litt blomst, krydder og tørket urt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Tradisjonell gjæring ved 25-30 C i ståltanker.",
+  "navn": "Dal Nostro Giardino Barbera d'Asti 2022",
+  "parser": "json",
+  "pris": 162.9,
+  "produsent": "WineHouse AS",
+  "smak": "Fruktig og ørlite utviklet preg av røde bær, lakris og krydder, fast og frisk ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Barbera d'Asti",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Asti/Dal-Nostro-Giardino-Barbera-d%27Asti-2022/p/1571001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1571001",
+  "volum": 75,
+  "årgang": "2022"
+}

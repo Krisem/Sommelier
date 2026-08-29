@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19567501",
+  "distrikt": "Central Otago",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "New Zealand, Central Otago, Gibbston",
+  "literpris": 399.87,
+  "lukt": "Litt krydret aroma med toner av kirsebær, markjordbær og plommer, litt fat, blomst og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Druer fra Gibbston. 30 % helklasefermentert. Modnet i 30 % nye franske fat i minst 12 md. Ufiltrert.",
+  "navn": "Brennan B2 Pinot Noir 2025",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Brennan Wines",
+  "smak": "Saftig, nyansert og moderat fast, preg av modne røde bær, litt krekling, bjørnebær, krydder og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Gibbston",
+  "url": "/Land/New-Zealand/Central-Otago/Gibbston/Brennan-B2-Pinot-Noir-2025/p/19567501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19567501",
+  "volum": 75,
+  "årgang": "2025"
+}

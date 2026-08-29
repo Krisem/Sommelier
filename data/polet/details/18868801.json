@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "18868801",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 96 prosent, Merlot 4 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Mendocino",
+  "literpris": 338.53,
+  "lukt": "Ung aroma av modne mørke bær, litt røde bær, syltet frukt og fat, innslag av kamfer, rose og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Ståltank.",
+  "navn": "Girasole Cabernet Sauvignon 2023",
+  "parser": "json",
+  "pris": 253.9,
+  "produsent": "Girasole Vineyards",
+  "smak": "Fyldig, saftig og fast, preg av mørke og litt røde bær, syltet frukt, lakris, urt, kamfer og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,2 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Mendocino",
+  "url": "/Land/USA/California/Mendocino/Girasole-Cabernet-Sauvignon-2023/p/18868801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "18868801",
+  "volum": 75,
+  "årgang": "2023"
+}

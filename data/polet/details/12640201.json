@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "12640201",
+  "distrikt": "Toscana",
+  "druer": "Ciliegiolo 5 prosent, Canaiolo 10 prosent, Sangiovese 85 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti",
+  "literpris": 173.2,
+  "lukt": "Aroma preget av kirsebær, blå plommer, litt svale urter, krydder og hint av fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæret i ståltanker.",
+  "navn": "Castellani Baffo Rosso Chianti 2024",
+  "parser": "json",
+  "pris": 129.9,
+  "produsent": "Castellani",
+  "smak": "Fruktig, ung og kirsebærpreget med middels fylde og god friskhet, innslag av lakris og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "7,5 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Chianti",
+  "url": "/Land/Italia/Toscana/Chianti/Castellani-Baffo-Rosso-Chianti-2024/p/12640201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12640201",
+  "volum": 75,
+  "årgang": "2024"
+}

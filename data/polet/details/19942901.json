@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19942901",
+  "distrikt": "South Australia",
+  "druer": "Grenache 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia, McLaren Vale",
+  "literpris": 315.87,
+  "lukt": "Ungt og litt krydret preg av modne røde bær, litt syltet frukt, jordbær, blomster og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Druer høstet for hånd fra 30 år gamle vinstokker. 30 % helklasefermentert. Lagret 12 md. på fransk eik.",
+  "navn": "Dandelion Vineyards Treasure Trove of McClaren Vale Grenache 2025",
+  "parser": "json",
+  "pris": 236.9,
+  "produsent": "Dandelion Vineyards",
+  "smak": "Saftig, litt balsamisk og fast, preg av modne røde bær, litt syltet frukt, kamfer og hint av fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "McLaren Vale",
+  "url": "/Land/Australia/South-Australia/McLaren-Vale/Dandelion-Vineyards-Treasure-Trove-of-McClaren-Vale-Grenache-2025/p/19942901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19942901",
+  "volum": 75,
+  "årgang": "2025"
+}

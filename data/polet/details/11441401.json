@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "11441401",
+  "distrikt": "Makedonia",
+  "druer": "Xynomavro 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Hellas, Makedonia, Naoussa",
+  "literpris": 326.53,
+  "lukt": "Sammensatt aroma med tydelig bærpreg, innslag av tørket frukt, litt urter, barnål og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Høyestliggende vinmarker (450-650 moh.) Naturlig gjæret. Delvis bruk av helklase. 8md. lagring i eldre fat.",
+  "navn": "Thymiopoulos Naoussa Alta 2024",
+  "parser": "json",
+  "pris": 244.9,
+  "produsent": "Thymiopoulos Vineyards",
+  "smak": "Saftig, balsamisk og fast med preg av modne røde bær, litt tørket frukt, kamfer, te og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Naoussa",
+  "url": "/Land/Hellas/Makedonia/Naoussa/Thymiopoulos-Naoussa-Alta-2024/p/11441401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11441401",
+  "volum": 75,
+  "årgang": "2024"
+}

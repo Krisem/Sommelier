@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "12352501",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Matt, middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Central Coast",
+  "literpris": 546.53,
+  "lukt": "Nyansert og ørlite utviklet preg av jordbær, svale urter, litt appelsin, blomst og kardemomme.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Natt høsting. 35% av druene med stilk. Gjæring med naturlig gjær. 16 md.",
+  "navn": "Birichino Saint Georges Pinot Noir",
+  "parser": "json",
+  "pris": 409.9,
+  "produsent": "Birichino",
+  "smak": "Saftig, myk og lang med litt krydret preg av jordbær, bringebær, svale urter og hint av fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Central Coast",
+  "url": "/Land/USA/California/Central-Coast/Birichino-Saint-Georges-Pinot-Noir/p/12352501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12352501",
+  "volum": 75,
+  "årgang": "2024"
+}

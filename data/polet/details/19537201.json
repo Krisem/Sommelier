@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19537201",
+  "distrikt": "Western Cape",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Western Cape, Cape Coast",
+  "literpris": 299.87,
+  "lukt": "Ungt og litt balsamisk preg av modne røde bær, plommer, litt fat, syltet frukt, urt og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Innhøsting for hånd, helklasefermentert. Lagret på gamle franske eikefat.",
+  "navn": "Radford Dale Vinum Pinot Noir 2024",
+  "parser": "json",
+  "pris": 224.9,
+  "produsent": "Radford Dale",
+  "smak": "Saftig, middels fast og litt krydret preg av jordbær, bringebær, litt syltet frukt, kamfer og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Cape Coast",
+  "url": "/Land/S%C3%B8r-Afrika/Western-Cape/Cape-Coast/Radford-Dale-Vinum-Pinot-Noir-2024/p/19537201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19537201",
+  "volum": 75,
+  "årgang": "2024"
+}

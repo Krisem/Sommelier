@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1303101",
+  "distrikt": "Rioja",
+  "druer": "Mazuelo 10 prosent, Tempranillo (Tinto del Pais) 70 prosent, Garnacha 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 200,
+  "lukt": "Aroma preget av modne røde og mørke bær, innslag av urter, tobakk og fat med vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "7 dg. gjæring under temp.kontr., maserasjonstid 23 dg.",
+  "navn": "Rioja Vega Crianza 2022",
+  "parser": "json",
+  "pris": 150,
+  "produsent": "Rioja Vega",
+  "smak": "Litt utviklet med preg av røde og mørke bær, innslag av urter, vanilje og fat. God fylde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Spania/Rioja/Rioja-Vega-Crianza-2022/p/1303101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1303101",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19675801",
+  "distrikt": "Beira Atlântico",
+  "druer": "Baga 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Beira Atlântico, Bairrada",
+  "literpris": 387.47,
+  "lukt": "Litt utviklet aroma av røde bær, moden krekling, morell, kamfer og grønn urt, litt lakris og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd, over 80 år gamle vinstokker. Fermentering i ståltank, modnet 18 md. i brukte franske eikefat på 400 l.",
+  "navn": "Kompassus Baga Vinhas Velhas Reserva 2021",
+  "parser": "json",
+  "pris": 290.6,
+  "produsent": "Kompassus Vinhos, LDA.",
+  "smak": "Fyldig og fast, preg av modne røde og mørke bær, innslag av krekling, grønn urt, kamfer og litt fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Bairrada",
+  "url": "/Land/Portugal/Beira-Atl%C3%A2ntico/Bairrada/Kompassus-Baga-Vinhas-Velhas-Reserva-2021/p/19675801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19675801",
+  "volum": 75,
+  "årgang": "2021"
+}

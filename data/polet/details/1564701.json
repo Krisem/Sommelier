@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1564701",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 90 prosent, Canaiolo 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti",
+  "literpris": 199.87,
+  "lukt": "Ungdommelig og fruktig aroma preget av røde bær, grønne urter, hint av drops og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Skånsom pressing av druene, temp.kontrollert gjæring i ståltanker, naturlig gjær benyttes. 12 md. lagring.",
+  "navn": "Castellani Poggio al Casone Chianti Superiore 2024",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Castellani",
+  "smak": "Saftig, kirsebærpreget og ungdommelig med middels fylde, innslag av grønne urter og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Chianti",
+  "url": "/Land/Italia/Toscana/Chianti/Castellani-Poggio-al-Casone-Chianti-Superiore-2024/p/1564701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1564701",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "13469701",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sta. Rita Hills",
+  "literpris": 479.87,
+  "lukt": "Nyansert, fruktig og litt krydret aroma av modne jordbær, bringebær, litt fat, skogbunn og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Helklasefermentert på ståltank.",
+  "navn": "Sanford Sta. Rita Hills Pinot Noir",
+  "parser": "json",
+  "pris": 359.9,
+  "produsent": "Sanford Winery",
+  "smak": "Litt utviklet, saftig og nokså myk, preg av modne bringebær, markjordbær, litt fat og krydder. Lang.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Sta. Rita Hills",
+  "url": "/Land/USA/California/Sta-Rita-Hills/Sanford-Sta-Rita-Hills-Pinot-Noir/p/13469701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13469701",
+  "volum": 75,
+  "årgang": "2022"
+}

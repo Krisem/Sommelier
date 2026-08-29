@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "2000601",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 30 prosent, Corvina 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 237.2,
+  "lukt": "Svalt preg av tørket frukt, modne røde bær og kamfer, innslag av krydder, vanilje og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "11 md. Fatlagring, 2 md. flaskemodning.",
+  "navn": "Corte Giara Valpolicella Ripasso La Groletta 2024",
+  "parser": "json",
+  "pris": 177.9,
+  "produsent": "Corte Giara",
+  "smak": "Litt utviklet preg av saftige røde og mørke bær, tørket frukt og fat, innslag av nype og kamfer.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "5 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Corte-Giara-Valpolicella-Ripasso-La-Groletta-2024/p/2000601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2000601",
+  "volum": 75,
+  "årgang": "2024"
+}

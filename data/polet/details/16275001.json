@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "16275001",
+  "distrikt": "Aragon",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Aragon, Bajo Aragón",
+  "literpris": 166.67,
+  "lukt": "Fruktig aroma av mørke og røde skogsbær, litt syltet frukt, drops, fiol, kamfer og svale urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Tempore Garnacha Altos de Cascán 2023",
+  "parser": "json",
+  "pris": 128,
+  "produsent": "Bodegas Tempore",
+  "smak": "Saftig og ungt preg av modne mørke og røde bær, litt blåbær, drops, lakris og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,2 g/l",
+  "underdistrikt": "Bajo Aragón",
+  "url": "/Land/Spania/Aragon/Bajo-Arag%C3%B3n/Tempore-Garnacha-Altos-de-Casc%C3%A1n-2023/p/16275001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16275001",
+  "volum": 75,
+  "årgang": "2023"
+}

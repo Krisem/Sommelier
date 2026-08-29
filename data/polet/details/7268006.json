@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "7268006",
+  "distrikt": "California",
+  "druer": "Pinot Noir 80 prosent, Malbec 14 prosent, Syrah 6 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 173.3,
+  "lukt": "Aroma av moden kirsebær og plommesyltetøy, innslag av kaffe, krydder og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagret 8 mnd på franske og amerikanske eikefat for å oppnå balanse og fruktkonsentrasjon.",
+  "navn": "Gnarly Head Pinot Noir",
+  "parser": "json",
+  "pris": 519.9,
+  "produsent": "Gnarly Head",
+  "smak": "Fruktig og ungdommelig preg av modne røde bær og plomme, litt solbær, trekrydder, lakris og vanilje.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "8 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/USA/California/Gnarly-Head-Pinot-Noir/p/7268006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7268006",
+  "volum": 300,
+  "årgang": "2024"
+}

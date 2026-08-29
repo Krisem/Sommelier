@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "19623501",
+  "distrikt": "Washington",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, Washington, Red Mountain",
+  "literpris": 685.2,
+  "lukt": "Svalt og krydret preg av modne mørke bær, syltet frukt og fat, litt kamfer, lær, kaffe og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Lagret i brukte franske eikfat i 22 md.",
+  "navn": "Ambassador Acte Final Syrah 2022",
+  "parser": "json",
+  "pris": 513.9,
+  "produsent": "Ambassador Winery",
+  "smak": "Fast, ekstraktrik og fyldig, litt syltet preg av bjørnebær, blåbær, fat, litt kamfer, pepper og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Red Mountain",
+  "url": "/Land/USA/Washington/Red-Mountain/Ambassador-Acte-Final-Syrah-2022/p/19623501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19623501",
+  "volum": 75,
+  "årgang": "2022"
+}

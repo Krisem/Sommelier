@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "1565001",
+  "distrikt": "Sicilia",
+  "druer": "Nero d'Avola 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sicilia",
+  "literpris": 193.2,
+  "lukt": "Aroma av modne røde og mørke bær, litt tørket frukt og urter, hint av kamfer og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Håndplukket. Temp.kontr. vinifikasjon i ståltank. En andel av druene er tørket før vinif. i ventilert rom 30 dg.",
+  "navn": "Miopasso Nero d'Avola 2024",
+  "parser": "json",
+  "pris": 144.9,
+  "produsent": "Borgo Imperiale",
+  "smak": "Fyldig og ungdommelig med hint av sødme, preg av modne røde og mørke bær, litt lakris og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "7 g/l",
+  "syre": "6,2 g/l",
+  "url": "/Land/Italia/Sicilia/Miopasso-Nero-d%27Avola-2024/p/1565001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1565001",
+  "volum": 75,
+  "årgang": "2024"
+}

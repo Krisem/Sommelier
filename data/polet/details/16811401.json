@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "16811401",
+  "distrikt": "Sørvest",
+  "druer": "Cabernet Sauvignon 20 prosent, Tannat 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Sørvest, Madiran",
+  "literpris": 415.87,
+  "lukt": "Litt utviklet og krydret preg av mørke bær, tørket frukt, litt kamfer, lakris, blyantstift og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer, vinifisert separat. Etter blanding modnes vinen på franske fat i 12-18 md.",
+  "navn": "Ch. de Crouseilles Madiran 2016",
+  "parser": "json",
+  "pris": 311.9,
+  "produsent": "Cave de Crouseilles",
+  "smak": "Fyldig, fast og litt utviklet, preg av mørke bær, tørket frukt, litt fat, paprika, tobakk og kamfer.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,0 g/l",
+  "underdistrikt": "Madiran",
+  "url": "/Land/Frankrike/S%C3%B8rvest/Madiran/Ch-de-Crouseilles-Madiran-2016/p/16811401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16811401",
+  "volum": 75,
+  "årgang": "2016"
+}

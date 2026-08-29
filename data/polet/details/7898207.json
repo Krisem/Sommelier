@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "7898207",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1190,
+  "lukt": "Aroma av røde bær, lakris, fioler og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Franco Conterno Barolo Panerole 2018",
+  "parser": "json",
+  "pris": 3570,
+  "produsent": "Franco Conterno",
+  "smak": "Frukt, høy konsentrasjon og god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Franco-Conterno-Barolo-Panerole-2018/p/7898207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "7898207",
+  "volum": 300,
+  "årgang": "2018"
+}

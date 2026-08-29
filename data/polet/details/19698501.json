@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "19698501",
+  "distrikt": "Beira Atlântico",
+  "druer": "Baga 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Beira Atlântico, Bairrada",
+  "literpris": 213.2,
+  "lukt": "Fruktig og ungdommelig preg av røde bær, grønne urter, litt blomster, kamfer og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Spontangjæret. Lagret på bunnfall på ståltanker i 6 md. før tapping.",
+  "navn": "Terra by Osvaldo Amado Bairrada Baga 2023",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "Casa Dos Amados Vinhos de Portugal",
+  "smak": "Saftig og litt fast med preg av rips, jordbær og bringebær, hint av krydder og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Bairrada",
+  "url": "/Land/Portugal/Beira-Atl%C3%A2ntico/Bairrada/Terra-by-Osvaldo-Amado-Bairrada-Baga-2023/p/19698501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19698501",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1373701",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 326.67,
+  "lukt": "Ung og fokusert aroma av kirsebær og bjørnebær, litt grønn urt, hint lakris, mandel og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon ved ca. 30°C, maserasjonstid 15 dager. 6 md lagring i nye franske fat for 25% av vinen.",
+  "navn": "Vajra Barbera d'Alba 2025",
+  "parser": "json",
+  "pris": 245,
+  "produsent": "G.D. Vajra",
+  "smak": "Saftig og frisk med litt fasthet, preg av modne mørke og røde bær, litt mandel, krydder og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Vajra-Barbera-d%27Alba-2025/p/1373701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1373701",
+  "volum": 75,
+  "årgang": "2025"
+}

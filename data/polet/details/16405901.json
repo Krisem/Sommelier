@@ -1,0 +1,38 @@
+{
+  "alkohol": "14%",
+  "code": "16405901",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania",
+  "literpris": 182.53,
+  "lukt": "Fruktig aroma preget av modne røde og mørke bær, innslag av blomst, urter, lakris og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Garnacha fra gamle stokker. Ståltank benyttet.",
+  "navn": "Cruzado Garnacha 2025",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Heyday Wines",
+  "smak": "Saftig og myk med god friskhet og lengde, preg av røde og mørke bær, litt krydder og grønne urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Spania/Cruzado-Garnacha-2025/p/16405901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16405901",
+  "volum": 75,
+  "årgang": "2025"
+}

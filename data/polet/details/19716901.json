@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19716901",
+  "distrikt": "Sicilia",
+  "druer": "Nerello Mascalese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sicilia, Etna",
+  "literpris": 326.53,
+  "lukt": "Ungt og litt krydret preg av jordbær, krekling og tranebær, litt kamfer, lakris, blomster og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Lagret i store slavonske eikefat i minst 6 md.",
+  "navn": "Patria Femina Etna Rosso 2025",
+  "parser": "json",
+  "pris": 244.9,
+  "produsent": "Barone di Miceli",
+  "smak": "Saftig, nyansert og nokså fast, preg av modne røde bær, nype, svale urter, kamfer, litt te og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Etna",
+  "url": "/Land/Italia/Sicilia/Etna/Patria-Femina-Etna-Rosso-2025/p/19716901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19716901",
+  "volum": 75,
+  "årgang": "2025"
+}

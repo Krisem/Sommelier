@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16902001",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Mercurey",
+  "literpris": 566.67,
+  "lukt": "Ungdommelig, fruktig og litt krydret preg av modne røde bær, litt kirsebær, fat, blomst og urt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Faiveley Mercurey Vieilles Vignes 2023",
+  "parser": "json",
+  "pris": 425,
+  "produsent": "Dom. Faiveley",
+  "smak": "Saftig, nyansert, kirsebær- og bringebærpreget frukt, litt svale urter, blomst, fat og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6 g/l",
+  "underdistrikt": "Mercurey",
+  "url": "/Land/Frankrike/Burgund/Mercurey/Faiveley-Mercurey-Vieilles-Vignes-2023/p/16902001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16902001",
+  "volum": 75,
+  "årgang": "2023"
+}

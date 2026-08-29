@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "1208801",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 373.2,
+  "lukt": "Nyansert og litt utviklet aroma av modne og syltede røde bær, nype, te, litt lær, rose og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Fermenteres i temp.kontr. ståltanker, etterfulgt av lagring på franske og slavonske eikefat i min. 38 md.",
+  "navn": "Pietro di Campo Scongiuro Barolo 2022",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "Pietro di Campo",
+  "smak": "Fast, utviklet og sammensatt, preg av modne røde bær, nype, litt svale urter, kamfer, te og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Pietro-di-Campo-Scongiuro-Barolo-2022/p/1208801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1208801",
+  "volum": 75,
+  "årgang": "2022"
+}

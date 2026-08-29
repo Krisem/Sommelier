@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "15660206",
+  "distrikt": "Lombardia",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Lombardia, Provincia di Pavia",
+  "literpris": 186.6,
+  "lukt": "Aroma av ferske mørke bær, innslag av kirsebær, bjørnebær, litt drops, blomst og grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "100 % ståltank.",
+  "navn": "Volpi Barbera 2025",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "Cant. Volpi",
+  "smak": "Fruktig og livlig med god friskhet, ungt preg av mørke og litt lyserøde bær, hint av grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Provincia di Pavia",
+  "url": "/Land/Italia/Lombardia/Provincia-di-Pavia/Volpi-Barbera-2025/p/15660206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15660206",
+  "volum": 150,
+  "årgang": "2025"
+}

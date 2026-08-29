@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "1101101",
+  "distrikt": "Rhône",
+  "druer": "Syrah 37 prosent, Grenache 44 prosent, Mourvèdre 14 prosent, Cinsault 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 653.2,
+  "lukt": "Sval og sammensatt aroma av mørke og røde bær, krydder, lær og lakris, litt fat og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Temp.kontrollert gjæring i ståltanker, maserasjonstid: 15-18 dager. 12-18 md. fatlagring + 6 md. flaskemodning før salg.",
+  "navn": "Ch. la Nerthe Châteauneuf-du-Pape 2022",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Ch. la Nerthe",
+  "smak": "Fyldig, lang og litt utviklet, nyansert preg av modne mørke og røde bær, krydder, urter og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Ch-la-Nerthe-Ch%C3%A2teauneuf-du-Pape-2022/p/1101101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1101101",
+  "volum": 75,
+  "årgang": "2022"
+}

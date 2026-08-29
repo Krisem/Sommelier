@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,6%",
+  "code": "18914001",
+  "distrikt": "Oregon",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, Oregon, Willamette valley",
+  "literpris": 399.87,
+  "lukt": "Ungdommelig preg av modne røde bær, litt jordbær, kirsebær, hint av fat, mørk sjokolade og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Longplay Explicit Lyrics Pinot Noir",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Longplay Wine",
+  "smak": "Saftig med god fylde, litt krydret preg av kirsebær, litt jordbær, krekling, fat, sjokolade og te.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Willamette valley",
+  "url": "/Land/USA/Oregon/Willamette-valley/Longplay-Explicit-Lyrics-Pinot-Noir/p/18914001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "18914001",
+  "volum": 75,
+  "årgang": "2023"
+}

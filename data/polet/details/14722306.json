@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "14722306",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 234.95,
+  "lukt": "Krydret og litt utviklet, preg av kirsebær, roser, jordbær og nype, litt kanel, bergamott og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "15 dg. skallmas., 2 - 4 md på fat, bl.av gamle fr. fat 5.000L og nye fr.eikefat 10.000L og ståltank.",
+  "navn": "Giovanni Rosso Langhe Rosso",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Giovanni Rosso",
+  "smak": "Sammensatt og litt utviklet, preg av kirsebær, nype og tørket frukt, litt fat, kanel og svart te.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Giovanni-Rosso-Langhe-Rosso/p/14722306",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14722306",
+  "volum": 200,
+  "årgang": "2023"
+}

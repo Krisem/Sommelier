@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "19899701",
+  "distrikt": "South Australia",
+  "druer": "Grenache 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia, McLaren Vale",
+  "literpris": 326.53,
+  "lukt": "Litt krydret og ungdommelig aroma av moden jordbær, nype, litt syltet frukt, blomst, kamfer og urt.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Druer fra upodede vinstokker fra 60-tallet. Gjæres spontant med min. 20 % hele klaser. Modnes i eikefat og sement.",
+  "navn": "Thistledown Thorny Devil Old Vine Grenache 2024",
+  "parser": "json",
+  "pris": 244.9,
+  "produsent": "Thistledown Wine Company",
+  "smak": "Saftig og fyldig, preg av modne jordbær, bringebær og syltet frukt, litt kamfer, fat, lakris og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "McLaren Vale",
+  "url": "/Land/Australia/South-Australia/McLaren-Vale/Thistledown-Thorny-Devil-Old-Vine-Grenache-2024/p/19899701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19899701",
+  "volum": 75,
+  "årgang": "2024"
+}

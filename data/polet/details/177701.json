@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "177701",
+  "distrikt": "Catalonia",
+  "druer": "Tempranillo (Tinto del Pais) 15 prosent, Cabernet Sauvignon 85 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Catalonia",
+  "literpris": 226.53,
+  "lukt": "Aroma av modne mørke og røde bær, innslag av lær, skogbunn, svale urter, kamfer og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Gjæret i rustfrie ståltanker ved kontrollert temperatur.",
+  "navn": "Gran Coronas Reserva 2023",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Miguel Torres",
+  "smak": "Fyldig med begynnende utvikling, preg av mørke bær, tørket frukt, innslag av fat, kamfer og tobakk.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Spania/Catalonia/Gran-Coronas-Reserva-2023/p/177701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "177701",
+  "volum": 75,
+  "årgang": "2023"
+}

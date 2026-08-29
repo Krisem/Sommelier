@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "15197601",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 266.67,
+  "lukt": "Ørlite utviklet, preg av modne røde bær, kirsebærgelé, litt urt, krydder, tobakk og kamfer.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert på ståltank. 30% av vinen er lagret på store",
+  "navn": "Campomaggio Chianti Classico 2023",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Tenuta di Campomaggio",
+  "smak": "Saftig, kirsebærpreget og litt fast, innslag av syltede bær, te og urt, litt tobakk og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Campomaggio-Chianti-Classico-2023/p/15197601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15197601",
+  "volum": 75,
+  "årgang": "2023"
+}

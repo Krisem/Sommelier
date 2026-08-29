@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "17664401",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Monferrato",
+  "literpris": 179.9,
+  "lukt": "Litt utviklet aroma av modne røde og mørke bær, innslag av roser, lakris, kamfer, urter og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Pietro di Campo Monferrato Nebbiolo",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Pietro di Campo",
+  "smak": "God fylde og friskhet, saftig og fast med preg av modne kirsebær, svale urter, kamfer og lakris.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,5 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Monferrato",
+  "url": "/Land/Italia/Piemonte/Monferrato/Pietro-di-Campo-Monferrato-Nebbiolo/p/17664401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "17664401",
+  "volum": 100,
+  "årgang": "2023"
+}

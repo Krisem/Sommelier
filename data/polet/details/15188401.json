@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "15188401",
+  "distrikt": "Burgund",
+  "druer": "Gamay 40 prosent, Pinot Noir 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Coteaux Bourguignons",
+  "literpris": 306.53,
+  "lukt": "Ung og fruktig, innslag av bringebær, kirsebær, litt krydder, grønne urter og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Druene høstes og vinifiseres separat. Blendes etter malolaktisk gjæring.",
+  "navn": "P.A. Larsen Coteaux Bourguignons 2024",
+  "parser": "json",
+  "pris": 229.9,
+  "produsent": "Albert Bichot",
+  "smak": "Saftig og nyansert preg av friske røde bær, innslag av villbringebær, markjordbær og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Coteaux Bourguignons",
+  "url": "/Land/Frankrike/Burgund/Coteaux-Bourguignons/P-A-Larsen-Coteaux-Bourguignons-2024/p/15188401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15188401",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "14779501",
+  "distrikt": "South E. Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South E. Australia",
+  "literpris": 177.2,
+  "lukt": "Sval og fruktig aroma preget av modne mørke bær, blå plomme, mynte og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæret temperaturkontrollert i ståltanker. Lagret 6 måneder på amerikanske fat.",
+  "navn": "Lindeman's Bin 50 Shiraz",
+  "parser": "json",
+  "pris": 135.9,
+  "produsent": "Lindeman's Winery",
+  "smak": "Ung, myk og fruktig med god fylde, preg av modne mørke skogsbær, litt kamfer, svale urter og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "8,8 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Australia/South-E-Australia/Lindeman%27s-Bin-50-Shiraz/p/14779501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14779501",
+  "volum": 75,
+  "årgang": "2025"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "12338501",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 359.87,
+  "lukt": "Nyansert aroma av røde og mørke bær, litt tørket frukt og nype, te, kvae, blomst og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer, spontanfermentering på ståltank, malolaktisk gjæring og 12 md lagring på store eikefat.",
+  "navn": "Brandini Filari Corti Langhe Nebbiolo 2024",
+  "parser": "json",
+  "pris": 269.9,
+  "produsent": "Agr. Brandini",
+  "smak": "Fast, saftig og nyansert, preg av tørket frukt, modne røde bær og nype, litt te, fat, urt og kamfer.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Brandini-Filari-Corti-Langhe-Nebbiolo-2024/p/12338501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12338501",
+  "volum": 75,
+  "årgang": "2024"
+}

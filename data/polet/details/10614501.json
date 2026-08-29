@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "10614501",
+  "distrikt": "Veneto",
+  "druer": "Corvinone 15 prosent, Corvina 70 prosent, Rondinella 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 226.53,
+  "lukt": "Ungdommelig aroma av ferske røde bær, litt tørket frukt, urt, blomst og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon etter ripassometoden.",
+  "navn": "Casteloro Valpolicella Ripasso Superiore",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Fields Wine Co.",
+  "smak": "Myk munnfølelse og litt sødme, preg av kirsebær, tørket frukt, grønn urt og litt trekrydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "7,8 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Casteloro-Valpolicella-Ripasso-Superiore/p/10614501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10614501",
+  "volum": 75,
+  "årgang": "2023"
+}

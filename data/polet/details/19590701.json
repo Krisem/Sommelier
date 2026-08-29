@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "19590701",
+  "distrikt": "Washington",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, Washington, Red Mountain",
+  "literpris": 681.2,
+  "lukt": "Svalt preg av mørke bær, fat og kamfer, innslag av krekling, bjørnebær, mørke plommer og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Lagret 30 md. i franske fat.",
+  "navn": "Dalset Red Mountain Syrah 2022",
+  "parser": "json",
+  "pris": 510.9,
+  "produsent": "Dalset Wines",
+  "smak": "Fyldig og fast, litt utviklet preg av modne og litt sylta mørke bær, plommer, fat, kamfer og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Red Mountain",
+  "url": "/Land/USA/Washington/Red-Mountain/Dalset-Red-Mountain-Syrah-2022/p/19590701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19590701",
+  "volum": 75,
+  "årgang": "2022"
+}

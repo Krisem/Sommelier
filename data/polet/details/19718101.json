@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "19718101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne Hautes-Côtes de Nuits",
+  "literpris": 346.53,
+  "lukt": "Svalt og ungdommelig preg av røde og mørke bær, litt fat, skogbunn, urt, stilk, kamfer og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Fatlagret i 9 md.",
+  "navn": "Chartron & Trébuchet Bourgogne Hautes Côtes de Nuits 2024",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Francois Martenot",
+  "smak": "Saftig, moderat fast og litt krydret, preg av jordbær, kirsebær, litt rosin, fat, kamfer og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Bourgogne Hautes-Côtes de Nuits",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Hautes-C%C3%B4tes-de-Nuits/Chartron-%26-Tr%C3%A9buchet-Bourgogne-Hautes-C%C3%B4tes-de-Nuits-2024/p/19718101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19718101",
+  "volum": 75,
+  "årgang": "2024"
+}

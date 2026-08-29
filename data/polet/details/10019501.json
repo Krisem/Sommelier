@@ -1,0 +1,39 @@
+{
+  "alkohol": "11,5%",
+  "code": "10019501",
+  "distrikt": "Österreichischer W.",
+  "druer": "St. Laurent 20 prosent, Zweigelt 60 prosent, Pinot Noir 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 5,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Østerrike, Österreichischer W.",
+  "literpris": 300,
+  "lukt": "Ung, bærpreget og fruktig aroma, innslag av bringebær, jordbær og blomst, litt anis og grønn urt.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Grønnsaker"
+  ],
+  "metode": "Manuell innhøsting, spontangjæret.",
+  "navn": "Claus Preisinger Puszta Libre",
+  "parser": "json",
+  "pris": 225,
+  "produsent": "Claus Preisinger",
+  "smak": "Saftig med middels fylde, leskende preg av røde og litt mørke bær, svale urter, hint av blomst.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/%C3%98sterrike/%C3%96sterreichischer-W-/Claus-Preisinger-Puszta-Libre/p/10019501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10019501",
+  "volum": 75,
+  "årgang": "2025"
+}

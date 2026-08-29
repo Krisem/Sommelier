@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1471601",
+  "distrikt": "Puglia",
+  "druer": "Primitivo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Puglia, Primitivo di Manduria",
+  "literpris": 219.87,
+  "lukt": "Ungdommelig aroma av modne mørke bær og tørket frukt, litt lakris, kamfer, sjokolade og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon, maserasjonstid 15 dager. 8 md. fatlagring.",
+  "navn": "Giordano Primitivo di Manduria 2022",
+  "parser": "json",
+  "pris": 164.9,
+  "produsent": "Giordano",
+  "smak": "Fruktig preg av mørke bær, innslag av rosin, lakris, mørk sjokolade og krydder. Fast med god fylde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "9,7 g/l",
+  "syre": "6,7 g/l",
+  "underdistrikt": "Primitivo di Manduria",
+  "url": "/Land/Italia/Puglia/Primitivo-di-Manduria/Giordano-Primitivo-di-Manduria-2022/p/1471601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1471601",
+  "volum": 75,
+  "årgang": "2022"
+}

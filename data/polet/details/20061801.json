@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,4%",
+  "code": "20061801",
+  "distrikt": "British Columbia",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Canada, British Columbia, Naramata Bench",
+  "literpris": 449.33,
+  "lukt": "Litt krydret og utviklet preg av rips, kirsebær og nype, streif av fat, kamfer, røyk og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd. Spontanfermentert i små fat, daglig manuell nedpressing av hatten (punch down av drueskall/faste bestanddeler).",
+  "navn": "Moraine Pinot Noir 2022",
+  "parser": "json",
+  "pris": 337,
+  "produsent": "Moraine Estate Winery",
+  "smak": "Saftig, litt fast og utviklet, preg av rips, kirsebær, litt syltet frukt, jordtoner, urter og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Naramata Bench",
+  "url": "/Land/Canada/British-Columbia/Naramata-Bench/Moraine-Pinot-Noir-2022/p/20061801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20061801",
+  "volum": 75,
+  "årgang": "2022"
+}

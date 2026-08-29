@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "7939006",
+  "distrikt": "Pfalz",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Tyskland, Pfalz",
+  "literpris": 169.97,
+  "lukt": "Aroma med ungdommelig preg av røde bær, litt urter, skogbunn og streif av fat.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Spontangjæret. Tradisjonell vinifikasjon med lagring på en kombinasjon av ståltank og eldre barrique (15 %).",
+  "navn": "Villa Wolf Pinot Noir 2025",
+  "parser": "json",
+  "pris": 509.9,
+  "produsent": "Weing. Villa Wolf",
+  "smak": "Fruktig og myk med saftig preg av jordbær og bringebær, litt krydder, fat, mineraler og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,5 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Tyskland/Pfalz/Villa-Wolf-Pinot-Noir-2025/p/7939006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7939006",
+  "volum": 300,
+  "årgang": "2025"
+}

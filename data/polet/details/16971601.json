@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "16971601",
+  "distrikt": "Aragon",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Aragon, Calatayud",
+  "literpris": 266.67,
+  "lukt": "Sval og ungdommelig aroma av jordbær, rips og kirsebær, litt kamfer, lakris, urter og roser.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Kommer fra høytliggende vinmarker, min. 45 år gamle vinstokker. Spontangjæret med hele klaser, og 12 md. lagring på sement.",
+  "navn": "Cuevas de Arom Altas Parcelas Garnacha 2024",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Bod. San Alejandro",
+  "smak": "Saftig, nyansert og litt fast, preg av jordbær, kirsebær, rips, litt kamfer, stilk og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Calatayud",
+  "url": "/Land/Spania/Aragon/Calatayud/Cuevas-de-Arom-Altas-Parcelas-Garnacha-2024/p/16971601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16971601",
+  "volum": 75,
+  "årgang": "2024"
+}

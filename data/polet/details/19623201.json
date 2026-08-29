@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19623201",
+  "distrikt": "South Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia, Barossa Valley",
+  "literpris": 340,
+  "lukt": "Litt utviklet og krydret preg av modne mørke bær, tobakk, litt eukalyptus, syltet frukt og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Min. 20 år gamle vinstokker. 13 md. på franske fat, hvorav 90 % på 2. og 3. gangs bruk og 10 % på nye.",
+  "navn": "St. John's Road Blood and Courage Shiraz 2023",
+  "parser": "json",
+  "pris": 255,
+  "produsent": "St. John's Road",
+  "smak": "Fyldig, litt fast og krydret preg av mørke bær, svale urter, litt kamfer, pepper og hint av fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barossa Valley",
+  "url": "/Land/Australia/South-Australia/Barossa-Valley/St-John%27s-Road-Blood-and-Courage-Shiraz-2023/p/19623201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19623201",
+  "volum": 75,
+  "årgang": "2023"
+}

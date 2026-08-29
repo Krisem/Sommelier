@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1265301",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 333.2,
+  "lukt": "Nyansert og litt utviklet aroma av modne røde bær, litt tørket frukt, nype, te, kamfer og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Høstes for hånd. Vinifikasjon i sementtanker. Spontangjæring 10-15 dager. Lagres i store 50 hl eikefat. Tappes ufiltrert på flaske.",
+  "navn": "Giovanni Rosso Langhe Nebbiolo 2024",
+  "parser": "json",
+  "pris": 249.9,
+  "produsent": "Giovanni Rosso",
+  "smak": "Moden, sammensatt og fast, svalt preg av røde bær, nype og tørket frukt, litt krydder, te og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Giovanni-Rosso-Langhe-Nebbiolo-2024/p/1265301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1265301",
+  "volum": 75,
+  "årgang": "2024"
+}

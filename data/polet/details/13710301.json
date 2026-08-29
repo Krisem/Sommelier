@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "13710301",
+  "distrikt": "Rhône",
+  "druer": "Grenache 30 prosent, Syrah 50 prosent, Mourvèdre 20 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Ventoux",
+  "literpris": 209.2,
+  "lukt": "Bærpreget og ung aroma, innslag av svale urter, pepper og lakris, hint av oliven, flint og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Innhøstning for hånd. Pressing av druene før temperaturkontrollert spontanfermentering med naturlig gjær. Lagret i ståltanker.",
+  "navn": "Kosevin 2025",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "Dom. Allois, Francois Busi",
+  "smak": "Fast og nyansert med saftig preg av krekling og mørke skogsbær, litt svale urter, kamfer og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Ventoux",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ventoux/Kosevin-2025/p/13710301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13710301",
+  "volum": 75,
+  "årgang": "2025"
+}

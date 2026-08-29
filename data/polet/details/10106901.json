@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "10106901",
+  "distrikt": "Beira Atlântico",
+  "druer": "Baga 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Beira Atlântico, Bairrada",
+  "literpris": 216.9,
+  "lukt": "Ung og fokusert aroma av modne jordbær, bringebær og nype, litt blomst, svale urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer. Tidlig innhøsting. Gjæring med naturlig gjær i sementtanker. Lagring i sementtanker i 9 md. før tapping.",
+  "navn": "Niepoort Drink Me Nat Cool Tinto 2025",
+  "parser": "json",
+  "pris": 216.9,
+  "produsent": "Niepoort",
+  "smak": "Saftig, nyansert og litt fast med preg av jordbær, litt tørket frukt, rips, nype, te og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Bairrada",
+  "url": "/Land/Portugal/Beira-Atl%C3%A2ntico/Bairrada/Niepoort-Drink-Me-Nat-Cool-Tinto-2025/p/10106901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10106901",
+  "volum": 100,
+  "årgang": "2025"
+}

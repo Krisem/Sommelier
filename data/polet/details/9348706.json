@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "9348706",
+  "distrikt": "Rhône",
+  "druer": "Syrah 30 prosent, Grenache 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 194.97,
+  "lukt": "Fruktig aroma preget av modne mørke bær, litt tørket frukt, svale urter, krydder og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Hver druetype vinifieres adskilt, 10-15 dagers gjæring og maserasjon.",
+  "navn": "Chapoutier Côtes du Rhône Belleruche 2024",
+  "parser": "json",
+  "pris": 584.9,
+  "produsent": "M. Chapoutier",
+  "smak": "Ung, fruktig og saftig, preg av mørke bær, krydder og urter, litt fast ettersmak med god lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Chapoutier-C%C3%B4tes-du-Rh%C3%B4ne-Belleruche-2024/p/9348706",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9348706",
+  "volum": 300,
+  "årgang": "2024"
+}

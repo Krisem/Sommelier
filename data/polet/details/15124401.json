@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "15124401",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike",
+  "literpris": 206.53,
+  "lukt": "Ung og fruktig, preg av modne røde og mørke bær, litt krydder, fiol og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell metode.",
+  "navn": "Les Deux Chevaliers Pinot Noir",
+  "parser": "json",
+  "pris": 154.9,
+  "produsent": "Urban Beverages",
+  "smak": "Saftig, bærpreget og leskende med god fylde, toner av kirsebær, litt blåbær, urt og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,2 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/Frankrike/Les-Deux-Chevaliers-Pinot-Noir/p/15124401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15124401",
+  "volum": 75,
+  "årgang": "2024"
+}

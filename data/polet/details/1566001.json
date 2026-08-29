@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1566001",
+  "distrikt": "Valle Central",
+  "druer": "Merlot 87 prosent, Syrah 10 prosent, Alicante Bouschet 3 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Valle Central, Valle del Rapel",
+  "literpris": 173.2,
+  "lukt": "Fruktig og ungdommelig preg av røde og mørke bær, litt grønne urter, paprika, lakris og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsprosess, 8 md. fatlagring for 70 % av vinen.",
+  "navn": "Casillero del Diablo Merlot 2024",
+  "parser": "json",
+  "pris": 129.9,
+  "produsent": "Concha y Toro",
+  "smak": "God fylde og fasthet, fruktig preg av kirsebær, mørke skogsbær, litt paprika og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Valle del Rapel",
+  "url": "/Land/Chile/Valle-Central/Valle-del-Rapel/Casillero-del-Diablo-Merlot-2024/p/1566001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1566001",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "11665301",
+  "distrikt": "Toscana",
+  "druer": "Canaiolo 5 prosent, Sangiovese 95 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp brunrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 346.53,
+  "lukt": "Nyansert og litt utviklet, preg av kirsebær, plomme og tørket frukt, litt te, lær og mynte.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Spontanfermentert. 3 uker med skall. Modnet på miks av betong og fat i min. 12 md.",
+  "navn": "Monterinaldi Chianti Classico 2023",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Monterinaldi",
+  "smak": "Lang, saftig og sammensatt, preg av kirsebær, tørket frukt og svale urter, litt te og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Monterinaldi-Chianti-Classico-2023/p/11665301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11665301",
+  "volum": 75,
+  "årgang": "2023"
+}

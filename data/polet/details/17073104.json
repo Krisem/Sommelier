@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "17073104",
+  "distrikt": "Catalonia",
+  "druer": "Garnatxa 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rødblå.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Catalonia",
+  "literpris": 270,
+  "lukt": "Ung, bærpreget og litt dropsaktig, preg av rips, jordbær, litt krekling, grønn urt og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer som avstilkes, naturlig gjæring i ståltank, ufiltrert.",
+  "navn": "Can-Vi Garnaxta 2023",
+  "parser": "json",
+  "pris": 69.5,
+  "produsent": "Can-Vi",
+  "smak": "Fruktig med saftig preg av rips og jordbær, litt bringebær, drops, blomst og grønn urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "url": "/Land/Spania/Catalonia/Can-Vi-Garnaxta-2023/p/17073104",
+  "utvalg": "Basisutvalget",
+  "varenummer": "17073104",
+  "volum": 25,
+  "årgang": "2023"
+}

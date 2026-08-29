@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "20058201",
+  "distrikt": "Rhône",
+  "druer": "Cinsault 10 prosent, Grenache 70 prosent, Syrah 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 226.53,
+  "lukt": "Nyansert og krydret preg av bringebær, morell og krekling, innslag av svale urter, lakris og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Spontangjæring med 30 % hele klaser, 7 dager i ståltank. Modnet 5 md. i",
+  "navn": "Maxime Brunel de la Gardine Côtes du Rhône 2024",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Brunel Pere et Fils",
+  "smak": "Fyldig, ungt og litt balsamisk preg av modne røde og mørke bær, litt syltet frukt, kamfer og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,0 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Maxime-Brunel-de-la-Gardine-C%C3%B4tes-du-Rh%C3%B4ne-2024/p/20058201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20058201",
+  "volum": 75,
+  "årgang": "2024"
+}

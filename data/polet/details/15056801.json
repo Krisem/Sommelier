@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "15056801",
+  "distrikt": "Baden",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Tyskland, Baden, Oberrotweil",
+  "literpris": 439.87,
+  "lukt": "Ung og sammensatt aroma av bringebær, morell, grønne urter, litt fat, vanilje, kamfer og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "5 dagers kaldmaserasjon og fermentering i trefat. Modnet 12 md. på barrique (30 % nye fat).",
+  "navn": "Landerer Oberrotweiler Schwarze Erde Pinot Noir 2024",
+  "parser": "json",
+  "pris": 329.9,
+  "produsent": "Landerer Kaiserstuhl",
+  "smak": "Lang, saftig og nyansert, preg av bringebær, morell og diskré fat, litt vanilje, kamfer og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,9 g/l",
+  "underdistrikt": "Oberrotweil",
+  "url": "/Land/Tyskland/Baden/Oberrotweil/Landerer-Oberrotweiler-Schwarze-Erde-Pinot-Noir-2024/p/15056801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15056801",
+  "volum": 75,
+  "årgang": "2024"
+}

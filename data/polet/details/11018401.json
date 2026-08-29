@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "11018401",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California",
+  "literpris": 345.33,
+  "lukt": "Aroma med ørlite utviklet preg av modne røde bær, litt fat, vanilje, krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Ca. 5 md. på fat",
+  "navn": "Bread & Butter Pinot Noir",
+  "parser": "json",
+  "pris": 259,
+  "produsent": "Bread & Butter",
+  "smak": "Saftig, fruktig og myk, preg av moden jordbær og bringebær, litt fat, urt og krydder. God lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "7 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/USA/California/Bread-%26-Butter-Pinot-Noir/p/11018401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11018401",
+  "volum": 75,
+  "årgang": "2020"
+}

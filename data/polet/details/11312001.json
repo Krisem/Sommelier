@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "11312001",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 233.33,
+  "lukt": "Litt krydret aroma av modne røde bær, te, litt tørket frukt, kamfer, tobakk, roser og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Manuell innhøsting, temperatur kontrollert gjæring, lagring i store fat.",
+  "navn": "Enzo Bartoli Langhe Nebbiolo",
+  "parser": "json",
+  "pris": 175,
+  "produsent": "MGM Mondo del Vino",
+  "smak": "Fast med god fylde, nyansert preg av jordbær, tørket frukt, litt tobakk, kamfer, te, urter og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,1 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Enzo-Bartoli-Langhe-Nebbiolo/p/11312001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11312001",
+  "volum": 75,
+  "årgang": "2024"
+}

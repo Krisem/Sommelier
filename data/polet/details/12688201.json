@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "12688201",
+  "distrikt": "Jura",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Jura, Côtes du Jura",
+  "literpris": 518.67,
+  "lukt": "Aroma av modne røde bær, litt syltet frukt og svale urter, hint av skogbunn, lakris, blomst og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Ståltankfermentert, lagret 12 md. på brukte fat",
+  "navn": "Le Clos des Grives à Bec Pinot Noir 2023",
+  "parser": "json",
+  "pris": 389,
+  "produsent": "SCEV le Clos des Grives",
+  "smak": "Saftig og moderat fast med friskt preg av rips, jordbær, litt syltet frukt, svale urter og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Côtes du Jura",
+  "url": "/Land/Frankrike/Jura/C%C3%B4tes-du-Jura/Le-Clos-des-Grives-%C3%A0-Bec-Pinot-Noir-2023/p/12688201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12688201",
+  "volum": 75,
+  "årgang": "2023"
+}

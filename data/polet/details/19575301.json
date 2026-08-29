@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19575301",
+  "distrikt": "Roussillon",
+  "druer": "Carignan 10 prosent, Grenache 10 prosent, Syrah 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Roussillon, Côtes du Roussillon-Villages",
+  "literpris": 246.53,
+  "lukt": "Ungdommelig og litt balsamisk preg av mørke skogsbær, litt syltet frukt, lakris, kamfer og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Innhøsting for hånd. 15 dg. maserasjon. Lagring 6 md. på ståltank og 12 md. på betong. Jordsmonn: kalk og leire.",
+  "navn": "Dom Brial Las Coumeilles 2024",
+  "parser": "json",
+  "pris": 184.9,
+  "produsent": "Dom. Brial",
+  "smak": "Saftig, sval, litt fast og fyldig med litt krydret preg av modne mørke bær, syltet frukt og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Côtes du Roussillon-Villages",
+  "url": "/Land/Frankrike/Roussillon/C%C3%B4tes-du-Roussillon-Villages/Dom-Brial-Las-Coumeilles-2024/p/19575301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19575301",
+  "volum": 75,
+  "årgang": "2024"
+}

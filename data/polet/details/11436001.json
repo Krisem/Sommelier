@@ -1,0 +1,37 @@
+{
+  "alkohol": "13%",
+  "code": "11436001",
+  "distrikt": "Pays d'Oc",
+  "druer": "Marselan 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Mørk rødblå.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 182.53,
+  "lukt": "Ung og fruktig aroma med preg av modne mørke bær, svale urter, litt lakris og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Belles de Sud Blend No 4 Marselan 2025",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Belles Du Sud",
+  "smak": "Myk, bærpreget og saftig, innslag av blåbær og krekling, litt svale urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,1 g/l",
+  "syre": "4,1 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Belles-de-Sud-Blend-No-4-Marselan-2025/p/11436001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11436001",
+  "volum": 75,
+  "årgang": "2025"
+}

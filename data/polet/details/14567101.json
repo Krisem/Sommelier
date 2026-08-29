@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "14567101",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 3 prosent, Cabernet Sauvignon 23 prosent, Merlot 74 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med hint av brunt.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Bordeaux Supérieur",
+  "literpris": 233.2,
+  "lukt": "Litt utviklet preg av blå plomme, røde bær og solbær, litt skogbunn, tobakk og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon, gjæring og lagring i en blanding av ståltanker og sementtanker.",
+  "navn": "Ch. Recougne Bordeaux Supérieur 2021",
+  "parser": "json",
+  "pris": 174.9,
+  "produsent": "Ch. Recougne",
+  "smak": "Fyldig, fast og litt utviklet, preg av modne mørke og røde bær, litt krydder, tobakk og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Bordeaux Supérieur",
+  "url": "/Land/Frankrike/Bordeaux/Bordeaux-Sup%C3%A9rieur/Ch-Recougne-Bordeaux-Sup%C3%A9rieur-2021/p/14567101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14567101",
+  "volum": 75,
+  "årgang": "2021"
+}

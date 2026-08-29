@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "12143301",
+  "distrikt": "Veneto",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto",
+  "literpris": 239.33,
+  "lukt": "Ørlite utviklet preg av modne røde bær, innslag av svale urter, skogbunn og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæring i dager på ståltanker. Deretter lagring i 4000 liters eikefat i 6 md.",
+  "navn": "Gianni Tessari Veneto Pinot Noir 2025",
+  "parser": "json",
+  "pris": 179.5,
+  "produsent": "Az. Agr. Gianni Tessari",
+  "smak": "Saftig med nokså myk munnfølelse, leskende preg av kirsebær, jordbær, litt krydder, urter og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,9 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Italia/Veneto/Gianni-Tessari-Veneto-Pinot-Noir-2025/p/12143301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12143301",
+  "volum": 75,
+  "årgang": "2025"
+}

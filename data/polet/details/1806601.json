@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "1806601",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp brunrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 10
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 400,
+  "lukt": "Aroma med utviklet preg av røde bær, litt tørket frukt, blomst og kamfer, innslag av fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk og lagring på store eikefat.",
+  "navn": "Produttori dei Colli Barolo 2022",
+  "parser": "json",
+  "pris": 300,
+  "produsent": "Winehouse Norway",
+  "smak": "Fast med god fylde, utviklet og balsamisk preg av røde bær, tørket frukt, litt nype, kamfer og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Produttori-dei-Colli-Barolo-2022/p/1806601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1806601",
+  "volum": 75,
+  "årgang": "2022"
+}

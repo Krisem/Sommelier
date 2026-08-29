@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "11491702",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne Hautes Côtes de Beaune",
+  "literpris": 287.73,
+  "lukt": "Fruktig aroma preget av røde og mørke bær, urter og litt blomst.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Gjæring i temperaturkontrollerte ståltanker. 40% av vinen modnes i 12",
+  "navn": "Bouchard Âiné & Fils Bourgogne Hautes-Côtes de Beaune",
+  "parser": "json",
+  "pris": 107.9,
+  "produsent": "Bouchard Ainé & Fils",
+  "smak": "Ung og saftig, preg av røde bær, innslag av mørke bær, urter og litt fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,6 g/l",
+  "underdistrikt": "Bourgogne Hautes Côtes de Beaune",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Hautes-C%C3%B4tes-de-Beaune/Bouchard-%C3%82in%C3%A9-%26-Fils-Bourgogne-Hautes-C%C3%B4tes-de-Beaune/p/11491702",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11491702",
+  "volum": 37.5,
+  "årgang": "2019"
+}

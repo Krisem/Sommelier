@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "11983301",
+  "distrikt": "Bekaa Valley",
+  "druer": "Syrah 35 prosent, Cinsault 35 prosent, Carignan 10 prosent, Cabernet Sauvignon 10 prosent, Tempranillo (Tinto del Pais) 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 213.2,
+  "lukt": "Sval aroma av modne mørke og røde bær, litt syltet frukt og innslag av urter, te, lær og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket. Gjæring på ståltank.",
+  "navn": "Le Cedre de Beyrouth 2023",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "Winemarked",
+  "smak": "Saftig, svalt og litt utviklet preg av røde og mørke skogsbær, syltet frukt, tobakk, urt og kamfer.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,6 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Le-Cedre-de-Beyrouth-2023/p/11983301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11983301",
+  "volum": 75,
+  "årgang": "2023"
+}

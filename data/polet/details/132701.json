@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "132701",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 333.2,
+  "lukt": "Ungt preg av modne mørke skogsbær, innslag av krekling, svale urter, lakris, pepper og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Avstilket, villgjær, fermentering og modning på betongegg.",
+  "navn": "Matthieu Barret Petit Ours 2024",
+  "parser": "json",
+  "pris": 249.9,
+  "produsent": "Matthieu Barret",
+  "smak": "Saftig, bærpreget og myk, innslag av bringebær, krekling, litt pepper, blomst og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Matthieu-Barret-Petit-Ours-2024/p/132701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "132701",
+  "volum": 75,
+  "årgang": "2024"
+}

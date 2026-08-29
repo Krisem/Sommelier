@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "9370006",
+  "distrikt": "California",
+  "druer": "Zinfandel 81 prosent, Petite Sirah (Durif, P. Syrah) 19 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California, Lodi",
+  "literpris": 186.63,
+  "lukt": "Fruktig aroma av modne mørke bær og plommer, innslag av lakris, syltet frukt og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Deler av vinen er lagret 7 mnd på franske og amerikanske eikefat for å oppnå balanse og fruktkonsentrasjon.",
+  "navn": "Gnarly Head Old Vine Zin 2024",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Gnarly Head",
+  "smak": "Fyldig og myk med litt sødme, preg av fullmodne mørke bær, litt krydder, lakris og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "7 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Lodi",
+  "url": "/Land/USA/California/Lodi/Gnarly-Head-Old-Vine-Zin-2024/p/9370006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9370006",
+  "volum": 300,
+  "årgang": "2024"
+}

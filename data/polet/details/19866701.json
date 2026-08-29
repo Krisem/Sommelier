@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "19866701",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Bourgogne Hautes-Côtes de Nuits",
+  "literpris": 466.53,
+  "lukt": "Ungdommelig, litt fat- og krydderpreget med røde bær og plommer, litt kamfer, lær, urt og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Høstet for hånd. Spontangjæret, 50 % helklasefermentert. Lagret 11 md. på 33 % nye fat.",
+  "navn": "Jean-Claude Boisset Bourgogne Hautes-Côtes de Nuits Dames Huguettes 2023",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "Jean-Claude Boisset",
+  "smak": "Saftig og middels fast, nyansert preg av bringebær, jordbær og morell, litt fat, kamfer og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Bourgogne Hautes-Côtes de Nuits",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Hautes-C%C3%B4tes-de-Nuits/Jean-Claude-Boisset-Bourgogne-Hautes-C%C3%B4tes-de-Nuits-Dames-Huguettes-2023/p/19866701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19866701",
+  "volum": 75,
+  "årgang": "2023"
+}

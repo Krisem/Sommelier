@@ -1,0 +1,35 @@
+{
+  "alkohol": "13%",
+  "code": "9896306",
+  "druer": "Merlot 10 prosent, Montepulciano 30 prosent, Primitivo 40 prosent, Nero d'Avola 20 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia",
+  "literpris": 149.97,
+  "lukt": "Aroma av fullmodne røde og mørke bær, litt krydder, tørket frukt og hint av vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Druer fra 4 ulike regioner ble vinifiert separat før blanding.",
+  "navn": "Piccini Memoro Rosso",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Tenuta Piccini",
+  "smak": "Fruktig og litt krydret preg av sødmerike røde og mørke bær, litt vanilje, kamfer og lakris.",
+  "sukker": "8,7 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Italia/Piccini-Memoro-Rosso/p/9896306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9896306",
+  "volum": 300
+}

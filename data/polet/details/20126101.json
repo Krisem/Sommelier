@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "20126101",
+  "distrikt": "Rhône",
+  "druer": "Cinsault 5 prosent, Grenache 70 prosent, Mourvèdre 5 prosent, Syrah 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 280,
+  "lukt": "Sval, litt utviklet og krydret, preg av modne røde og mørke bær, litt kamfer, timian og roser.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Spontanfermentert med minimum 25 % hele drueklaser.",
+  "navn": "Simian Combe des Avaux Côtes du Rhône 2024",
+  "parser": "json",
+  "pris": 210,
+  "produsent": "Chateau Simian",
+  "smak": "Litt krydret og fast med saftig og nyansert preg av røde plommer, jordbær, kirsebær og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,6 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Simian-Combe-des-Avaux-C%C3%B4tes-du-Rh%C3%B4ne-2024/p/20126101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20126101",
+  "volum": 75,
+  "årgang": "2024"
+}

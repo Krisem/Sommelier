@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "10334701",
+  "distrikt": "Pfalz",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Tyskland, Pfalz",
+  "literpris": 193.2,
+  "lukt": "Aroma med ungdommelig preg av modne røde bær, innslag av kirsebær, jordbær, litt krydder og blomst.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer fra yngre vinstokker i vinmarker med jordsmonn av kalkstein. 12 mnd på store eikefat.",
+  "navn": "Wageck Kalkstein Pinot Noir 2023",
+  "parser": "json",
+  "pris": 144.9,
+  "produsent": "Weing. Wageck-Pfaffmann",
+  "smak": "Fruktig og myk med god lengde, preg av kirsebær, litt jordbær, grønne urter og hint av mineraler.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Tyskland/Pfalz/Wageck-Kalkstein-Pinot-Noir-2023/p/10334701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10334701",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20080501",
+  "distrikt": "Dão",
+  "druer": "Touriga Nacional 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Dão, Dão-Terras de Senhorim",
+  "literpris": 305.73,
+  "lukt": "Aroma av mørke skogsbær, litt syltet frukt og fat, innslag av grønne urter, kamfer og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra Terras de Senhorim. Kaldmaserasjon i 2 dg., deretter 5 dg. gjæring med maserasjon og temperaturkontroll ved 23°C.",
+  "navn": "Opta Touriga Nacional 2023",
+  "parser": "json",
+  "pris": 229.3,
+  "produsent": "Opta Wines and Coffee LDA",
+  "smak": "God fylde og fasthet, saftig preg av bjørnebær, blåbær, litt fat, grønn urt, lakris og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "4 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Dão-Terras de Senhorim",
+  "url": "/Land/Portugal/D%C3%A3o/D%C3%A3o-Terras-de-Senhorim/Opta-Touriga-Nacional-2023/p/20080501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20080501",
+  "volum": 75,
+  "årgang": "2023"
+}

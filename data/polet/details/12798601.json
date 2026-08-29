@@ -1,0 +1,40 @@
+{
+  "alkohol": "11,5%",
+  "code": "12798601",
+  "distrikt": "Languedoc-Roussillon",
+  "druer": "Cinsault 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Languedoc-Roussillon, Côtes Catalanes",
+  "literpris": 226.53,
+  "lukt": "Ungt, fruktig og litt krydret preg av bringebær, morell, litt svale urter, kamfer og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Uten tilsatt gjær. Kort maserasjon. Kjølig fermentering (ca 20 grader) på sement. 6 md modning på sement.",
+  "navn": "Cazes Samso 2025",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Dom. Cazes",
+  "smak": "Fruktig, middels fyldig og litt krydret preg av modne mørke og røde bær, litt lakris og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Côtes Catalanes",
+  "url": "/Land/Frankrike/Languedoc-Roussillon/C%C3%B4tes-Catalanes/Cazes-Samso-2025/p/12798601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12798601",
+  "volum": 75,
+  "årgang": "2025"
+}

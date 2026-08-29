@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "10264601",
+  "distrikt": "Toscana",
+  "druer": "Merlot 20 prosent, Sangiovese 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana",
+  "literpris": 213.2,
+  "lukt": "Utviklet aroma av røde bær, litt syltet og tørket frukt, innslag av fat, lær, skogbunn og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Temperturkontrollert fermentering.",
+  "navn": "Casa Cavallo 2019",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "Casa Cavallo",
+  "smak": "Tydelig utviklet, preg av tørket og syltet frukt, kirsebær, anis og urter, litt te, fat og vanilje.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "4,6 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Italia/Toscana/Casa-Cavallo-2019/p/10264601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10264601",
+  "volum": 75,
+  "årgang": "2019"
+}

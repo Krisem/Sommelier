@@ -1,0 +1,36 @@
+{
+  "alkohol": "12,5%",
+  "code": "19675701",
+  "druer": "Aladasturi 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Georgia",
+  "literpris": 382.53,
+  "lukt": "Litt utviklet og aromatisk preg av bringebær, jordbær og krekling, litt kamfer, pepper og roser.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Spontanfermentert med skallkontakt i 1 md. Modnet på franske fat i 6 md., deretter kvevri i 4 md.",
+  "navn": "Wineland Aladasturi Qvevri 2024",
+  "parser": "json",
+  "pris": 286.9,
+  "produsent": "LLC Wineland 2024",
+  "smak": "Fruktig og moderat fast, preg av modne røde og litt mørke bær, hint av grønn urt, nype og blomster.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Georgia/Wineland-Aladasturi-Qvevri-2024/p/19675701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19675701",
+  "volum": 75,
+  "årgang": "2024"
+}

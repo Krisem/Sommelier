@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "151301",
+  "distrikt": "South E. Australia",
+  "druer": "Cabernet Sauvignon 35 prosent, Shiraz 65 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South E. Australia",
+  "literpris": 179.87,
+  "lukt": "Aroma preget av modne mørke bær, innslag av mynte, urter, litt trekrydder og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring ved 20-25 C. 6 md. lagring på eikefat.",
+  "navn": "Jacob's Creek Shiraz Cabernet 2022",
+  "parser": "json",
+  "pris": 134.9,
+  "produsent": "Orlando Wines",
+  "smak": "Fruktig, ung og saftig, preg av mørke bær, urter og litt krydder, streif av vanilje.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "4 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Australia/South-E-Australia/Jacob%27s-Creek-Shiraz-Cabernet-2022/p/151301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "151301",
+  "volum": 75,
+  "årgang": "2022"
+}

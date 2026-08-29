@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1197301",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 286.53,
+  "lukt": "Aroma av modne røde og mørke bær, innslag av tørket frukt, urter, litt bark, kamfer, lær og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring ved 25-30 C i 8-10 dager.",
+  "navn": "Cafaggio Chianti Classico 2022",
+  "parser": "json",
+  "pris": 214.9,
+  "produsent": "Basilica Cafaggio",
+  "smak": "Litt utviklet, fast og frisk, preg av modne kirsebær, litt tørket frukt, kamfer, urter, te og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Cafaggio-Chianti-Classico-2022/p/1197301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1197301",
+  "volum": 75,
+  "årgang": "2022"
+}

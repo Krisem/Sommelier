@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "139301",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 95 prosent, Mazuelo 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 206.53,
+  "lukt": "Aroma med litt krydret preg av modne røde bær, lakris og svale urter, innslag av fat og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell 10 md fatlagring på eik og 6 md flaskemodning før salg.",
+  "navn": "Faustino VII 2024",
+  "parser": "json",
+  "pris": 154.9,
+  "produsent": "Bod. Faustino",
+  "smak": "Litt utviklet preg av modne røde bær, krydder og urter, innslag av vanilje, tobakk og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Spania/Rioja/Faustino-VII-2024/p/139301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "139301",
+  "volum": 75,
+  "årgang": "2024"
+}

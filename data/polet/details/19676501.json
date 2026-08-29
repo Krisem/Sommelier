@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "19676501",
+  "distrikt": "Rhône",
+  "druer": "Grenache 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 626.53,
+  "lukt": "Litt utviklet og balsamisk aroma av modne røde og mørke bær, syltet frukt, fat, kamfer og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Utbytte ca. 25 hl/ha, min. 30 år gml. vinstokker, innhøsting for hånd. Trad. vinifikasjon. Lagring i betongtanker og demi-muids i 18 md.",
+  "navn": "Ch. Maucoil Châteauneuf-du-Pape 2024",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Ch. Maucoil",
+  "smak": "Fyldig og lang, litt varmende munnfølelse, preg av modne røde og mørke bær, svale urter og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,2 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Ch-Maucoil-Ch%C3%A2teauneuf-du-Pape-2024/p/19676501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19676501",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1556901",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 94 prosent, Canaiolo 6 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti",
+  "literpris": 233.2,
+  "lukt": "Aroma preget av kirsebæraktig frukt, litt lakris, grønne urter, kamfer og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Trad. vinifikasjon, gjæring ved 24-28 C, maserasjon i 8-10 dg, ståltankmodn. av 80 % av vinen før tapping.",
+  "navn": "Barone Ricasoli Chianti",
+  "parser": "json",
+  "pris": 174.9,
+  "produsent": "Barone Ricasoli",
+  "smak": "Saftig og litt fast, preg av friske kirsebær, litt tørket frukt og røde plommer, lakris og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Chianti",
+  "url": "/Land/Italia/Toscana/Chianti/Barone-Ricasoli-Chianti/p/1556901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1556901",
+  "volum": 75,
+  "årgang": "2024"
+}

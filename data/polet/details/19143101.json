@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "19143101",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 533.2,
+  "lukt": "Litt utviklet og sammensatt aroma av modne røde bær, tørket frukt, te, lær, litt fat og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Spontanfermentert. 3 til 4 uker skallmaserasjon. 3 år i store gamle slavonske eikefat. 2 år i flaske.",
+  "navn": "Progetto Non Dos Barolo La Morra 2020",
+  "parser": "json",
+  "pris": 399.9,
+  "produsent": "Non Dos",
+  "smak": "Fast, fyldig og kompleks, preg av modne jordbær, kirsebær, litt rosin, fat, kamfer, te og tobakk.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Progetto-Non-Dos-Barolo-La-Morra-2020/p/19143101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19143101",
+  "volum": 75,
+  "årgang": "2020"
+}

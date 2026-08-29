@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "11496701",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 15 prosent, Cabernet Sauvignon 20 prosent, Merlot 65 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødbrun.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Côtes de Bordeaux",
+  "literpris": 266.67,
+  "lukt": "Tydelig utviklet preg av tørket frukt, lær, paprika og skogbunn, litt treverk, te, tobakk og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Ch. Malagar 2011",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Ch. Malagar",
+  "smak": "Sammensatt, utviklet og litt fast, preg av røde bær, rosin, litt treverk, paprika, te og tobakk.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Côtes de Bordeaux",
+  "url": "/Land/Frankrike/Bordeaux/C%C3%B4tes-de-Bordeaux/Ch-Malagar-2011/p/11496701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11496701",
+  "volum": 75,
+  "årgang": "2011"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "11681501",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte",
+  "literpris": 186.53,
+  "lukt": "Ung og fruktig aroma med preg av kirsebær, moreller og svale urter, hint av krydder og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagring på ståltank.",
+  "navn": "Barberossa Piemonte Barbera 2024",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Oslo Wine Agency As",
+  "smak": "Middels fyldig, ung og fruktig med innslag av friske kirsebær, moreller og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,9 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Italia/Piemonte/Barberossa-Piemonte-Barbera-2024/p/11681501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11681501",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "1880801",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Collines Rhodaniennes",
+  "literpris": 293.2,
+  "lukt": "Fruktig og litt krydret preg av modne mørke og røde bær, litt skogbunn, fat og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkete druer knuses, avstilkes delvis og ferm. med villgjær. Lagres på 7 md, 50/50 tank og store fat.",
+  "navn": "Cuilleron Les Vignes d'à Côté Syrah 2024",
+  "parser": "json",
+  "pris": 219.9,
+  "produsent": "Yves Cuilleron",
+  "smak": "Saftig, litt pepret og krydret, preg av moden kirsebær, krekling og bringebær, litt fat og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Collines Rhodaniennes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Collines-Rhodaniennes/Cuilleron-Les-Vignes-d%27%C3%A0-C%C3%B4t%C3%A9-Syrah-2024/p/1880801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1880801",
+  "volum": 75,
+  "årgang": "2024"
+}

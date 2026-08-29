@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,1%",
+  "code": "10441001",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Central Coast",
+  "literpris": 426.53,
+  "lukt": "Fruktig og ørlite utviklet aroma av modne røde bær, litt krydder, skogbunn og blomster, hint av fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert med 25% hele klaser. Lagret i nøytrale franske eikefat.",
+  "navn": "Land of Saints Pinot Noir 2024",
+  "parser": "json",
+  "pris": 319.9,
+  "produsent": "Land of Saints Wine Company",
+  "smak": "Saftig og jordbærpreget med myk munnfølelse, innslag av krydder, urter, nype og fat. God lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Central Coast",
+  "url": "/Land/USA/California/Central-Coast/Land-of-Saints-Pinot-Noir-2024/p/10441001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10441001",
+  "volum": 75,
+  "årgang": "2024"
+}

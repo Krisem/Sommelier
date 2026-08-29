@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,3%",
+  "code": "19910701",
+  "distrikt": "Patagonia",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Patagonia",
+  "literpris": 413.2,
+  "lukt": "Aroma med litt krydret og svalt preg av moden jordbær, skogbunn, salvie, fat og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "15% av druene fermenteres som hele klaser. 50% lagres i franske 500l eikefat i 9 md.",
+  "navn": "Weinert Montfleury Pinot Noir Reserve 2026",
+  "parser": "json",
+  "pris": 309.9,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Saftig med myk munnfølelse, preg av modne røde bær, litt svale urter, rosin, fat og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,2 g/l",
+  "url": "/Land/Argentina/Patagonia/Weinert-Montfleury-Pinot-Noir-Reserve-2026/p/19910701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19910701",
+  "volum": 75,
+  "årgang": "2026"
+}

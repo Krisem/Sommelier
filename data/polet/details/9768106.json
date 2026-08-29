@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "9768106",
+  "distrikt": "Veneto",
+  "druer": "Merlot 65 prosent, Cabernet Sauvignon 20 prosent, Corvina 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto",
+  "literpris": 156.63,
+  "lukt": "Aroma med preg av modne bær, litt tørket frukt, urter, lakris og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Vinifikasjon bl.a. med tørking av druene, langsom gjæring, lagret 12 måneder på eikefat.",
+  "navn": "Casalforte Rosso Veneto 2023",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Cant. Riondo",
+  "smak": "Sødmefullt og mykt preg av fullmodne røde bær, litt tørket frukt, urter og krydder. God fylde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "9,2 g/l",
+  "syre": "6,5 g/l",
+  "url": "/Land/Italia/Veneto/Casalforte-Rosso-Veneto-2023/p/9768106",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9768106",
+  "volum": 300,
+  "årgang": "2023"
+}

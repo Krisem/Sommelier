@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "14386705",
+  "distrikt": "Veneto",
+  "druer": "Corvina 50 prosent, Molinara 25 prosent, Rondinella 25 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 266.67,
+  "lukt": "Litt utviklet aroma av modne røde bær og tørket frukt, innslag av nøtt, fat, krydder og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Vinifikasjon etter ripasso-metoden, modnet i botti, deretter på flaske.",
+  "navn": "Castelmondo Ripasso Superiore",
+  "parser": "json",
+  "pris": 400,
+  "produsent": "Winepartners Nordic",
+  "smak": "Litt utviklet, god fylde og ørlite sødme, innslag av rosin, røde bær, sjokolade, krydder og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,8 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Castelmondo-Ripasso-Superiore/p/14386705",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14386705",
+  "volum": 150,
+  "årgang": "2022"
+}

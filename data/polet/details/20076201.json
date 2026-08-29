@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20076201",
+  "distrikt": "Victoria",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, Victoria, Mornington Peninsula",
+  "literpris": 372,
+  "lukt": "Fruktig og litt krydret aroma av modne bringebær, jordbær, litt nype, svale urter, fat og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Spontanfermentert. 10 % helklasefermentert.",
+  "navn": "Yabby Lake Red Claw Pinot Noir 2024",
+  "parser": "json",
+  "pris": 279,
+  "produsent": "Yabby Lake",
+  "smak": "Lang og litt krydret med saftig preg av bringebær, rips og jordbær, litt fat, kamfer og grønn urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Mornington Peninsula",
+  "url": "/Land/Australia/Victoria/Mornington-Peninsula/Yabby-Lake-Red-Claw-Pinot-Noir-2024/p/20076201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20076201",
+  "volum": 75,
+  "årgang": "2024"
+}

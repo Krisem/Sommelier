@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19574401",
+  "distrikt": "Victoria",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, Victoria, Murray Darling",
+  "literpris": 179.87,
+  "lukt": "Ungdommelig og litt krydret preg av modne mørke og røde bær, litt syltet frukt, kamfer og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert produksjon i ståltanker.",
+  "navn": "Qualia Barramundi Shiraz 2024",
+  "parser": "json",
+  "pris": 137.9,
+  "produsent": "Qualia Wines",
+  "smak": "Fruktig og litt balsamisk, god fylde, preg av kirsebær, bringebær og krekling, litt kamfer og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6,7 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Murray Darling",
+  "url": "/Land/Australia/Victoria/Murray-Darling/Qualia-Barramundi-Shiraz-2024/p/19574401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19574401",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "19910001",
+  "distrikt": "Olifants River",
+  "druer": "Cinsault 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Olifants River, Piekenierskloof",
+  "literpris": 466.53,
+  "lukt": "Ung og sval aroma av modne jordbær, rips og rød te, litt urt, kamfer, blomst og hint av fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Spontanfermentert, 20 % helklase. Lagret 14 md. på 500 liters franske fat.",
+  "navn": "Donkiesbaai Cinsault 2023",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "Donkiesbaai",
+  "smak": "Lang, saftig og middels fast, nyansert preg av modne røde bær, svale urter, litt kamfer og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Piekenierskloof",
+  "url": "/Land/S%C3%B8r-Afrika/Olifants-River/Piekenierskloof/Donkiesbaai-Cinsault-2023/p/19910001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19910001",
+  "volum": 75,
+  "årgang": "2023"
+}

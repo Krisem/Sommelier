@@ -1,0 +1,40 @@
+{
+  "alkohol": "11%",
+  "code": "19740001",
+  "distrikt": "Beira Atlântico",
+  "druer": "Baga 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Beira Atlântico, Bairrada",
+  "literpris": 533.33,
+  "lukt": "Utviklet, kompleks og balsamisk aroma av røde bær, morell, litt fat, urt, sedertre, lær og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Fermentering i åpne lagares i 4 uker, deretter fullført malolaktisk i 2500 l fat. 20 md. lagring på fat. Tappet ufiltrert.",
+  "navn": "Niepoort Goncalves Faria 2014",
+  "parser": "json",
+  "pris": 400,
+  "produsent": "Niepoort",
+  "smak": "Fast, lang, utviklet og nyansert preg av rips, morell, litt tørket frukt, fat, kamfer og tobakk.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Bairrada",
+  "url": "/Land/Portugal/Beira-Atl%C3%A2ntico/Bairrada/Niepoort-Goncalves-Faria-2014/p/19740001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19740001",
+  "volum": 75,
+  "årgang": "2014"
+}

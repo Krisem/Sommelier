@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19676101",
+  "distrikt": "South Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia, Barossa Valley",
+  "literpris": 399.87,
+  "lukt": "Sval og litt pepret aroma av solbær- og kreklingaktig frukt, innslag av fat, oliven, lær og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra min. 20 år gamle vinstokker. 15 md. lagring på kun franske eikefat, hvorav maks. 20 % nye.",
+  "navn": "Hewitson The Mad Hatter Shiraz 2023",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Hewitson PDY",
+  "smak": "Fyldig, lang og litt fast, kreklingpreget og mørk frukt, litt fat, lakris, kamfer og pepper.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barossa Valley",
+  "url": "/Land/Australia/South-Australia/Barossa-Valley/Hewitson-The-Mad-Hatter-Shiraz-2023/p/19676101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19676101",
+  "volum": 75,
+  "årgang": "2023"
+}

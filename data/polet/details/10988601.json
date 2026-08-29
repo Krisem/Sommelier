@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "10988601",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte",
+  "literpris": 180,
+  "lukt": "Fruktig og ungdommelig aroma av modne røde bær, litt blomst, krydder, lakris og svale urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon på temperaturkontrollerte ståltanker.",
+  "navn": "La Cantina Delle 7 Donne Piemonte Barbera",
+  "parser": "json",
+  "pris": 135,
+  "produsent": "Gruppo Casaleone Vini",
+  "smak": "Fruktig og saftig med middels fylde og god friskhet, preg av modne røde bær og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,1 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Italia/Piemonte/La-Cantina-Delle-7-Donne-Piemonte-Barbera/p/10988601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10988601",
+  "volum": 75,
+  "årgang": "2023"
+}

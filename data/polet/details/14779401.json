@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "14779401",
+  "distrikt": "South E. Australia",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South E. Australia",
+  "literpris": 182.53,
+  "lukt": "Aroma av modne mørke bær, innslag av svale urter, litt lakris, fat, vanilje og roser.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring. Lagret på fransk og amerikansk eik.",
+  "navn": "Lindeman's Bin 45 Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Lindeman's Winery",
+  "smak": "Ung, fruktig og litt krydret med sødmefullt preg av mørke bær, litt solbær, paprika, fat og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Australia/South-E-Australia/Lindeman%27s-Bin-45-Cabernet-Sauvignon/p/14779401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14779401",
+  "volum": 75,
+  "årgang": "2025"
+}

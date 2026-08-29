@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "1208601",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbaresco",
+  "literpris": 293.2,
+  "lukt": "Nyansert og litt utviklet aroma av modne røde bær og tørket frukt, litt lakris, sopp, urter og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Druene høstes og gjæres i temp.kontr. ståltanker. Videre lagring på tradisjonelle eikeliggere.",
+  "navn": "Pietro di Campo Bugia Barbaresco 2021",
+  "parser": "json",
+  "pris": 219.9,
+  "produsent": "Pietro di Campo",
+  "smak": "Fast og saftig med modent preg av søte røde bær, nype og tørket frukt, litt lakris, fat og vanilje.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Barbaresco",
+  "url": "/Land/Italia/Piemonte/Barbaresco/Pietro-di-Campo-Bugia-Barbaresco-2021/p/1208601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1208601",
+  "volum": 75,
+  "årgang": "2021"
+}

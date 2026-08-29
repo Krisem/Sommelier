@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "10311602",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Bordeaux Supérieur",
+  "literpris": 261.8,
+  "lukt": "Aroma preget av mørke og røde bær, litt paprika, blomst og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæring på ståltank og videre lagring på franske fat.",
+  "navn": "Le Demi Bordeaux 2023",
+  "parser": "json",
+  "pris": 130.9,
+  "produsent": "Les Vignerons de Tutiac",
+  "smak": "Ung og saftig, preg av mørke bær og grønne urter, litt fast ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Bordeaux Supérieur",
+  "url": "/Land/Frankrike/Bordeaux/Bordeaux-Sup%C3%A9rieur/Le-Demi-Bordeaux-2023/p/10311602",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10311602",
+  "volum": 50,
+  "årgang": "2023"
+}

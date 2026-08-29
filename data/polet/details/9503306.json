@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "9503306",
+  "distrikt": "California",
+  "druer": "Zinfandel 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 193.3,
+  "lukt": "Aroma med preg av modne mørke og røde bær, litt syltet frukt, urter og fat med vanilje og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell temperaturkontrollert vinifikasjon i ståltanker, lagret 3 md på eikefat.",
+  "navn": "Cocoon Zinfandel Grand Reserve 2021",
+  "parser": "json",
+  "pris": 579.9,
+  "produsent": "Nordic Sea Winery AB",
+  "smak": "Litt utviklet, bærpreget og myk med hint av sødme, innslag av jordbær, kirsebær, fat og vanilje.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/USA/California/Cocoon-Zinfandel-Grand-Reserve-2021/p/9503306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9503306",
+  "volum": 300,
+  "årgang": "2021"
+}

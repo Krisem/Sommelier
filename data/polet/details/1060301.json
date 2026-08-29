@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1060301",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 346.53,
+  "lukt": "Ung, fruktig og kirsebærpreget med innslag av jordbær, litt krydder, fat, blomst og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "16-18 måneder fatlagring.",
+  "navn": "Jean-Claude Boisset Les Ursulines Bourgogne Pinot Noir 2024",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Jean-Claude Boisset",
+  "smak": "Saftig og friskt preg av moden kirsbær, jordbær, litt rips, grønne urter, fat og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Jean-Claude-Boisset-Les-Ursulines-Bourgogne-Pinot-Noir-2024/p/1060301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1060301",
+  "volum": 75,
+  "årgang": "2024"
+}

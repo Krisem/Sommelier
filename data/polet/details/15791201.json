@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "15791201",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike",
+  "literpris": 179.87,
+  "lukt": "Aroma med ferskt preg av røde bær, litt mørke bær og syltet frukt, hint av urt, krydder og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagring på ståltank.",
+  "navn": "La Falaise Blanche Pinot Noir 2025",
+  "parser": "json",
+  "pris": 137.9,
+  "produsent": "Maison Johanès Boubée",
+  "smak": "Saftig og ungt preg av røde bær, innslag av jordbær, mørke bær, syltet frukt, krydder og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Frankrike/La-Falaise-Blanche-Pinot-Noir-2025/p/15791201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15791201",
+  "volum": 75,
+  "årgang": "2025"
+}

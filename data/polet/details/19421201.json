@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19421201",
+  "distrikt": "South Australia",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia, Adelaide Hills",
+  "literpris": 333.2,
+  "lukt": "Fruktig og litt krydret preg av modne røde og mørke bær, litt drops, urt, eukalyptus og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Avstilket. Spontanfermentert og lagret på ståltank.",
+  "navn": "Riposte The Dagger Pinot Noir 2024",
+  "parser": "json",
+  "pris": 249.9,
+  "produsent": "Riposte Wines",
+  "smak": "Saftig, ung og litt balsamisk, preg av sødmerike mørke skogsbær, jordbær, litt eukalyptus og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Adelaide Hills",
+  "url": "/Land/Australia/South-Australia/Adelaide-Hills/Riposte-The-Dagger-Pinot-Noir-2024/p/19421201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19421201",
+  "volum": 75,
+  "årgang": "2024"
+}

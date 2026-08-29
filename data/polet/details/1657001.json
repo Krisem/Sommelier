@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1657001",
+  "distrikt": "Sicilia",
+  "druer": "Frappato 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sicilia, Vittoria",
+  "literpris": 319.87,
+  "lukt": "Ung og fruktig, preg av jordbær, rips og villbringebær, innslag av grønn urt og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Manuell innhøsting. Avstilking, mykpressing, gjæring i ståltank under kontrollerte temp. Skallkontakt 10-13 dg. Malofermentert.",
+  "navn": "Planeta Frappato 2025",
+  "parser": "json",
+  "pris": 239.9,
+  "produsent": "Planeta",
+  "smak": "Saftig, middels fyldig og friskt preg av jordbær, rips og bringebær, streif av urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Vittoria",
+  "url": "/Land/Italia/Sicilia/Vittoria/Planeta-Frappato-2025/p/1657001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1657001",
+  "volum": 75,
+  "årgang": "2025"
+}

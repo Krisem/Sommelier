@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "12860701",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 799.87,
+  "lukt": "Aroma med ungdommelig og fruktig preg av kirsebær og mørke skogsbær, litt fat, krydder og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Geantet-Pansiot Bourgogne Pinot Fin",
+  "parser": "json",
+  "pris": 599.9,
+  "produsent": "Geantet-Pansiot",
+  "smak": "Ung, saftig og lang, fokusert preg av friske røde og mørke bær, litt krydder, urter og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Geantet-Pansiot-Bourgogne-Pinot-Fin/p/12860701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12860701",
+  "volum": 75,
+  "årgang": "2022"
+}

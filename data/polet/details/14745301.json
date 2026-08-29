@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "14745301",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte",
+  "literpris": 168,
+  "lukt": "Ung og fruktig, preg av morell, kirsebær, innslag av svale urter, litt krydder, anis og blomst.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell produksjon og lagring på ståltank.",
+  "navn": "Piero Martinelli Barbera 2024",
+  "parser": "json",
+  "pris": 168,
+  "produsent": "Oslo Wine Agency As",
+  "smak": "Fruktig, ung og litt krydret, preg av friske kirsebær, morell, hint av jordbær og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,9 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Italia/Piemonte/Piero-Martinelli-Barbera-2024/p/14745301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14745301",
+  "volum": 100,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "11%",
+  "code": "101901",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 85 prosent, Merlot 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Chile, Valle Central",
+  "literpris": 146.53,
+  "lukt": "Aroma med preg av røde og mørke bær, hint av grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon i ståltanker.",
+  "navn": "Concha y Toro Cabernet Sauvignon 2025",
+  "parser": "json",
+  "pris": 109.9,
+  "produsent": "Concha y Toro",
+  "smak": "Ung, myk og fruktig, preg av sødmefulle moreller og solbær, litt krydder og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "5 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Chile/Valle-Central/Concha-y-Toro-Cabernet-Sauvignon-2025/p/101901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "101901",
+  "volum": 75,
+  "årgang": "2025"
+}

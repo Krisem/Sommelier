@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20086301",
+  "distrikt": "Dão",
+  "druer": "Touriga Nacional 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Dão",
+  "literpris": 309.07,
+  "lukt": "Fruktig og litt krydret preg av mørke skogsbær, litt røde bær, syltet frukt, kamfer, urt og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd fra 30-50 år gamle vinstokker i Serra da Estrela og Terras de Senhorim. Lagret på ståltanker i 6 md.",
+  "navn": "Carlos Raposo Impecável 2024",
+  "parser": "json",
+  "pris": 231.8,
+  "produsent": "Carlos Raposo",
+  "smak": "Saftig med litt balsamisk preg av mørke og røde skogsbær, syltet frukt, kamfer og grønne urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Portugal/D%C3%A3o/Carlos-Raposo-Impec%C3%A1vel-2024/p/20086301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20086301",
+  "volum": 75,
+  "årgang": "2024"
+}

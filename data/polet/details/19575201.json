@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19575201",
+  "distrikt": "Roussillon",
+  "druer": "Grenache 20 prosent, Syrah 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Roussillon, Côtes du Roussillon-Villages",
+  "literpris": 291.87,
+  "lukt": "Ungdommelig, nyansert, litt sval og pepret aroma av mørke bær, lakris, litt kamfer, blomst og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "20 % av vinen er helklasefermentert. Spontanfermentert.",
+  "navn": "Dom. Gardies Mas Las Cabes Garance 2024",
+  "parser": "json",
+  "pris": 218.9,
+  "produsent": "Dom. Gardiés",
+  "smak": "Fyldig, litt fast, pepret og balsamisk, preg av krekling, bjørnebær, litt oliven, lakris og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Côtes du Roussillon-Villages",
+  "url": "/Land/Frankrike/Roussillon/C%C3%B4tes-du-Roussillon-Villages/Dom-Gardies-Mas-Las-Cabes-Garance-2024/p/19575201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19575201",
+  "volum": 75,
+  "årgang": "2024"
+}

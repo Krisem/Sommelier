@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19528901",
+  "distrikt": "Niederösterreich",
+  "druer": "Blaufränkisch 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Østerrike, Niederösterreich, Carnuntum",
+  "literpris": 346.53,
+  "lukt": "Nyansert med begynnende utvikling, preg av mørke bær, svale urter, litt fat, kamfer og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Innhøsting for hånd, fottråkket. Spontangjæret og lagret på 3000-liters fat. Ufiltrert.",
+  "navn": "Dorli Muhr Prellenkirchen Samt & Seide Blaufränkisch 2023",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Weingut Dorli Muhr",
+  "smak": "Saftig, fast og nyansert med litt krydret preg av krekling, litt syltet frukt, fat, kamfer og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Carnuntum",
+  "url": "/Land/%C3%98sterrike/Nieder%C3%B6sterreich/Carnuntum/Dorli-Muhr-Prellenkirchen-Samt-%26-Seide-Blaufr%C3%A4nkisch-2023/p/19528901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19528901",
+  "volum": 75,
+  "årgang": "2023"
+}

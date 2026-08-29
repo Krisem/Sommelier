@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "7683107",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 2301.6,
+  "lukt": "Aroma av røde og mørke bær, fioler, krydder og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Paolo Conterno Barolo Ginestra 2012",
+  "parser": "json",
+  "pris": 6904.8,
+  "produsent": "Paolo Conterno",
+  "smak": "Frukt, høy konsentrasjon og god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,2 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Paolo-Conterno-Barolo-Ginestra-2012/p/7683107",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "7683107",
+  "volum": 300,
+  "årgang": "2012"
+}

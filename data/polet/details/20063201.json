@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20063201",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Rully",
+  "literpris": 589.2,
+  "lukt": "Ungt preg av moden morell, bringebær og jordbær, litt fat, kamfer, anis, roser, urter og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Leire-kalksteinjordsmonn, østvendt parsell (climat Chaponnière). Vinstokker plantet på 1980-tallet. 12 md. på franske fat (15 % nye).",
+  "navn": "Dom. Belleville Rully Chaponnière 2023",
+  "parser": "json",
+  "pris": 441.9,
+  "produsent": "Dom. Belleville",
+  "smak": "Lang, ung og saftig, preg av modne bringebær, jordbær, morell, litt fat, grønn urt, anis og kamfer.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Rully",
+  "url": "/Land/Frankrike/Burgund/Rully/Dom-Belleville-Rully-Chaponni%C3%A8re-2023/p/20063201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20063201",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "9217506",
+  "distrikt": "Valencia",
+  "druer": "Tempranillo (Tinto del Pais) 90 prosent, Merlot 10 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia",
+  "literpris": 149.97,
+  "lukt": "Aroma preget av modne bær og tørket frukt, hint av urter og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Lagret på ståltanker før tapping.",
+  "navn": "Radio Boka 2021",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Hammeken Cellars",
+  "smak": "Bløt og ørlite sødmefull, preg av modne røde og mørke bær, hint av urter, svakt bitter ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "6,1 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Spania/Valencia/Radio-Boka-2021/p/9217506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9217506",
+  "volum": 300,
+  "årgang": "2021"
+}

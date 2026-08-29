@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19688701",
+  "distrikt": "Central Otago",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "New Zealand, Central Otago, Bendigo",
+  "literpris": 566.53,
+  "lukt": "Ung, litt krydret og balsamisk aroma av røde bær, litt blåbær, fat, kamfer, svale urter og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd, ca. 7 % hele klaser, presset direkte til franske eikefat. Spontanfermentert og ufiltrert.",
+  "navn": "Quartz Reef Bendigo Pinot Noir 2023",
+  "parser": "json",
+  "pris": 424.9,
+  "produsent": "Quartz Reef Wines",
+  "smak": "God fylde og fasthet, saftig preg av modne røde bær, litt mørke bær, fat, kamfer, tobakk og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Bendigo",
+  "url": "/Land/New-Zealand/Central-Otago/Bendigo/Quartz-Reef-Bendigo-Pinot-Noir-2023/p/19688701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19688701",
+  "volum": 75,
+  "årgang": "2023"
+}

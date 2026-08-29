@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19469701",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, California, Sonoma Coast",
+  "literpris": 773.2,
+  "lukt": "Ung og litt krydret aroma av modne mørke bær, jordbær, litt fat, kamfer og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Fermentert og lagret på franske fat. 50 % hele klaser.",
+  "navn": "Cobb West Sonoma Coast Pinot Noir 2023",
+  "parser": "json",
+  "pris": 579.9,
+  "produsent": "Cobb Wines",
+  "smak": "Saftig, litt sval og balsamisk, preg av bringebær, jordbær og mørke skogsbær, litt fat og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Sonoma Coast",
+  "url": "/Land/USA/California/Sonoma-Coast/Cobb-West-Sonoma-Coast-Pinot-Noir-2023/p/19469701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19469701",
+  "volum": 75,
+  "årgang": "2023"
+}

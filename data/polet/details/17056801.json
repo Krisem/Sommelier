@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "17056801",
+  "distrikt": "Rhône",
+  "druer": "Grenache 75 prosent, Mourvèdre 15 prosent, Syrah 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Costières de Nîmes",
+  "literpris": 265.33,
+  "lukt": "Sval og krydret aroma av modne røde bær, kamfer, litt rosmarin, lakris, blomst og hint av fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Spontanfermentert. 30 % helklasefermentert. 25 % modnet i brukte fat, resten i betongtanker i 12 måneder.",
+  "navn": "Ch. de Nages Héritage Rouge 2022",
+  "parser": "json",
+  "pris": 199,
+  "produsent": "Ch. de Nages",
+  "smak": "Lang, saftig og litt balsamisk, preg av jordbær, bringebær, svale urter, litt kamfer, pepper og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Costières de Nîmes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Costi%C3%A8res-de-N%C3%AEmes/Ch-de-Nages-H%C3%A9ritage-Rouge-2022/p/17056801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "17056801",
+  "volum": 75,
+  "årgang": "2022"
+}

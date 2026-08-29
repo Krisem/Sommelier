@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "9928806",
+  "distrikt": "Douro e Porto",
+  "druer": "Touriga Franca 20 prosent, Tinta Barroca 25 prosent, Touriga Nacional 15 prosent, Tinta Roriz 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Douro e Porto, Douro",
+  "literpris": 166.63,
+  "lukt": "Aroma preget av mørke og røde bær og hint av sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Casa Ferreirinha Papa Figos",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Sogrape",
+  "smak": "Rik og balansert med moden frukt, god syre og runde tanniner. Lang ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Douro",
+  "url": "/Land/Portugal/Douro-e-Porto/Douro/Casa-Ferreirinha-Papa-Figos/p/9928806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9928806",
+  "volum": 300,
+  "årgang": "2024"
+}

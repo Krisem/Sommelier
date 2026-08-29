@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "9468406",
+  "distrikt": "Abruzzo",
+  "druer": "Montepulciano 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Abruzzo, Montepulciano d'Abruzzo",
+  "literpris": 166.63,
+  "lukt": "Ung aroma av ferske røde og mørke bær, litt grønn urt, lakris og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring i 7 dager ved 28 °C i ståltanker.",
+  "navn": "Lupi Reali Montepulciano d'Abruzzo 2024",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Valle Reale",
+  "smak": "Middels fyldig, frisk og saftig med litt undermodent preg av kirsebær, grønn urt og litt krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Montepulciano d'Abruzzo",
+  "url": "/Land/Italia/Abruzzo/Montepulciano-d%27Abruzzo/Lupi-Reali-Montepulciano-d%27Abruzzo-2024/p/9468406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9468406",
+  "volum": 300,
+  "årgang": "2024"
+}

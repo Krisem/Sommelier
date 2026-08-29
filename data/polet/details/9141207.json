@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "9141207",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 800,
+  "lukt": "Mørke bær med kirsebær og vanilje mot slutten.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Costa di Bussia Barolo Luigi Arnulfo 2019",
+  "parser": "json",
+  "pris": 2400,
+  "produsent": "Costa di Bussia",
+  "smak": "God fylde, mørke skogsbær, hasselnøtter og noe lær.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Costa-di-Bussia-Barolo-Luigi-Arnulfo-2019/p/9141207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9141207",
+  "volum": 300,
+  "årgang": "2019"
+}

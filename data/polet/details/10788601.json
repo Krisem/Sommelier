@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "10788601",
+  "distrikt": "Castilla y León",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Castilla y León, Ribera del Duero",
+  "literpris": 246.53,
+  "lukt": "Aroma av modne mørke bær, svale urter, kamfer, vanilje og eikefat, innslag av lakris og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndhøstede druer fra leirholdige vinmarker i Villalba på 820 moh. Kaldmaserasjon og vinifikasjon i stål, 9 mnd på fransk eik.",
+  "navn": "Bela Ribera del Duero",
+  "parser": "json",
+  "pris": 184.9,
+  "produsent": "Anta Banderas",
+  "smak": "Fyldig, ungdommelig og fast, preg av modne mørke bær, fat, litt vanilje, lakris og svale urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Ribera del Duero",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/Ribera-del-Duero/Bela-Ribera-del-Duero/p/10788601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10788601",
+  "volum": 75,
+  "årgang": "2023"
+}

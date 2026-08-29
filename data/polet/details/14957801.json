@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "14957801",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med svakt brunskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 613.2,
+  "lukt": "Sval og ungdommelig, preg av kirsebær, rognebærgelé, litt tørket urt, lær, nypete og roser.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket, selektert. Skånsom pressing. Spontanfermentering og lagring på store slavonske eikeliggere.",
+  "navn": "Brandini Barolo La Morra 2021",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Agr. Brandini",
+  "smak": "Lang, fast og fyldig, preg av modne røde bær, kirsebær og nypete, litt lakris, kamfer og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Brandini-Barolo-La-Morra-2021/p/14957801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14957801",
+  "volum": 75,
+  "årgang": "2021"
+}

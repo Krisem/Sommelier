@@ -1,0 +1,38 @@
+{
+  "alkohol": "12%",
+  "code": "16663801",
+  "distrikt": "South Australia",
+  "druer": "Cabernet Sauvignon 50 prosent, Shiraz 50 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South Australia",
+  "literpris": 181.2,
+  "lukt": "Modent og litt krydret preg av røde og mørke bær, streif av paprika, tørket frukt og grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Camp",
+  "parser": "json",
+  "pris": 138.9,
+  "produsent": "Arcus",
+  "smak": "Fruktig og modent preg av sødmerike skogsbær, kirsebær og solbær, litt rosin, grønn urt og paprika.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "8 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Australia/South-Australia/Camp/p/16663801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "16663801",
+  "volum": 75,
+  "årgang": "2023"
+}

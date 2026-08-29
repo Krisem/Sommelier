@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,4%",
+  "code": "11151201",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 30 prosent, Bonarda 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza, Luján de Cuyo",
+  "literpris": 197.2,
+  "lukt": "Aroma av modne røde og mørke bær, innslag av lakris, krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "metode": "Fermentering i betongtanker i 7-10 dager. Malolaktisk gjæring.",
+  "navn": "Weinert Pedro del Castillo red blend",
+  "parser": "json",
+  "pris": 147.9,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Litt utviklet og fast med preg av modne kirsebær og plommer, litt krydder, lakris og sjokolade.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Luján de Cuyo",
+  "url": "/Land/Argentina/Mendoza/Luj%C3%A1n-de-Cuyo/Weinert-Pedro-del-Castillo-red-blend/p/11151201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11151201",
+  "volum": 75,
+  "årgang": "2025"
+}

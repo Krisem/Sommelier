@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "11039301",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sta. Rita Hills",
+  "literpris": 546.53,
+  "lukt": "Aroma med ungt preg av modne røde og litt mørke bær, innslag av urter, anis og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Fermentert i åpne tanker. Lagret på franske fat i 14 md., hvorav 20% er nye. Ufiltrert.",
+  "navn": "Chanin Sta. Rita Hills Pinot Noir 2023",
+  "parser": "json",
+  "pris": 409.9,
+  "produsent": "Chanin Wines",
+  "smak": "Ung, myk, saftig og bærpreget, innslag av markjordbær, bringebær, litt fat, krydder og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Sta. Rita Hills",
+  "url": "/Land/USA/California/Sta-Rita-Hills/Chanin-Sta-Rita-Hills-Pinot-Noir-2023/p/11039301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11039301",
+  "volum": 75,
+  "årgang": "2023"
+}

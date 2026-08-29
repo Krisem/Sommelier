@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "8299106",
+  "distrikt": "Toscana",
+  "druer": "Canaiolo 10 prosent, Sangiovese 90 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Toscana",
+  "literpris": 166.63,
+  "lukt": "Litt utviklet aroma av sylta røde bær, eple og tørket frukt, hint lær, fat og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Ståltankgjæret med temperaturkontroll ved 26-28 C. Deler av vinen er lagret noen måneder på store, gamle eikefat.",
+  "navn": "Castellani Filicheto VNDM",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Castellani",
+  "smak": "Utviklet preg av røde bær, plommer og eple, litt fat, tørket urt og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "8,1 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Italia/Toscana/Castellani-Filicheto-VNDM/p/8299106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "8299106",
+  "volum": 300,
+  "årgang": "2022"
+}

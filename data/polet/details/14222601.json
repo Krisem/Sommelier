@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "14222601",
+  "distrikt": "Cape South Coast",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Cape South Coast, Elgin",
+  "literpris": 350.53,
+  "lukt": "Ungdommelig og nyansert aroma av modne kirsebær, jordbær, roser og urter, litt fat og kamfer.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Druer høstet for hånd, avstilket. Kaldmaserasjon, 4-6 dg. Spontangjæret, fatlagret på 300-liters franske eikefat i 11 md.",
+  "navn": "Iona Mr. P Knows Pinot Noir 2024",
+  "parser": "json",
+  "pris": 262.9,
+  "produsent": "Iona Vineyards",
+  "smak": "Saftig og litt fast med preg av modne røde bær, litt syltet frukt, fat, grønn urt og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Elgin",
+  "url": "/Land/S%C3%B8r-Afrika/Cape-South-Coast/Elgin/Iona-Mr-P-Knows-Pinot-Noir-2024/p/14222601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "14222601",
+  "volum": 75,
+  "årgang": "2024"
+}

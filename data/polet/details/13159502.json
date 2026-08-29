@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13159502",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 50 prosent, Nebbiolo 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 279.73,
+  "lukt": "Aroma med ørlite utviklet preg av røde bær og plommer, svale urter, litt te, blomster og kamfer.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau"
+  ],
+  "metode": "Lagret på ståltank før den tappes på flaske.",
+  "navn": "Pelassa Langhe Rosso 2023",
+  "parser": "json",
+  "pris": 104.9,
+  "produsent": "Pelassa",
+  "smak": "Saftig, sval og middels fast, preg av jordbær, kirsebær og røde plommer, litt urt, te og lakris.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Pelassa-Langhe-Rosso-2023/p/13159502",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13159502",
+  "volum": 37.5,
+  "årgang": "2023"
+}

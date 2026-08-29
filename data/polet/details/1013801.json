@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1013801",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 306.53,
+  "lukt": "Fruktig aroma av røde bær og svale urter, innslag jordbær, kirsebær, litt fat og krydder.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Dom. Dupasquier Bourgogne Pinot Noir 2024",
+  "parser": "json",
+  "pris": 229.9,
+  "produsent": "Dom. Dupasquier",
+  "smak": "Ungdommelig og saftig preg av jordbær- og kirsebæraktig frukt, grønne urter og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,5 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Dom-Dupasquier-Bourgogne-Pinot-Noir-2024/p/1013801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1013801",
+  "volum": 75,
+  "årgang": "2024"
+}

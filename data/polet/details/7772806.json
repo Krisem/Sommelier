@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "7772806",
+  "distrikt": "Douro e Porto",
+  "druer": "Sousão 20 prosent, Touriga Nacional 45 prosent, Touriga Franca 35 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Douro e Porto",
+  "literpris": 161.63,
+  "lukt": "Fruktig og litt krydret aroma preget av røde og mørke bær, litt tørket frukt og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert fermentering i ståltanker.",
+  "navn": "Porrais Douro 2024",
+  "parser": "json",
+  "pris": 484.9,
+  "produsent": "Quinta de Porrais",
+  "smak": "Ørlite utviklet med god fylde, preg av modne mørke bær, litt tørket frukt og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "3,5 g/l",
+  "syre": "5 g/l",
+  "url": "/Land/Portugal/Douro-e-Porto/Porrais-Douro-2024/p/7772806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7772806",
+  "volum": 300,
+  "årgang": "2024"
+}

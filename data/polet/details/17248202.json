@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "17248202",
+  "distrikt": "Pays d'Oc",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 213.07,
+  "lukt": "Ung og fruktig aroma av modne røde og litt mørke bær, hint av roser og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagring på ståltank.",
+  "navn": "Maison Vignoud Cuvée Camille Pinot Noir 2024",
+  "parser": "json",
+  "pris": 79.9,
+  "produsent": "Maison Johanès Boubée",
+  "smak": "Saftig og ferskt preg av røde bær, innslag av rips, morell, litt mørke bær, syltet frukt og blomst.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Maison-Vignoud-Cuv%C3%A9e-Camille-Pinot-Noir-2024/p/17248202",
+  "utvalg": "Basisutvalget",
+  "varenummer": "17248202",
+  "volum": 37.5,
+  "årgang": "2024"
+}

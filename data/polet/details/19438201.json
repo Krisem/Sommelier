@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19438201",
+  "distrikt": "Trois Lacs",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Sveits, Trois Lacs, Neuchâtel",
+  "literpris": 506.53,
+  "lukt": "Ung og litt krydret aroma av kirsebær, morell og krekling, litt anis, røyk, kamfer og blomster.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Fermentering og lagring på ståltank.",
+  "navn": "Grisoni Cuvée Les Rables Pinot Noir 2023",
+  "parser": "json",
+  "pris": 379.9,
+  "produsent": "Domaine Grisoni",
+  "smak": "Fruktig med god fylde, ferskt og litt krydret preg av røde bær, litt krekling, sevje og kamfer.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Neuchâtel",
+  "url": "/Land/Sveits/Trois-Lacs/Neuch%C3%A2tel/Grisoni-Cuv%C3%A9e-Les-Rables-Pinot-Noir-2023/p/19438201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19438201",
+  "volum": 75,
+  "årgang": "2023"
+}

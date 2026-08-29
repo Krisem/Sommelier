@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19623601",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Rhône, Saint-Joseph",
+  "literpris": 466.53,
+  "lukt": "Svalt preg av krekling, morell og bjørnebær, litt syltet frukt, fat, kamfer, fiol og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Kaldmasereres 1 uke ved 12°C. Maserasjon 3-4 uker, inkl. post- fermentativt. Malo på fat. 100 % helklasegjæret, min. 12 md. fatlagri",
+  "navn": "David Givaudan Saint Joseph 2024",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "David Givaudan",
+  "smak": "Saftig, litt krydret og fast, preg av modne mørke skogsbær, litt fat, syltet frukt og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "8,8 g/l",
+  "underdistrikt": "Saint-Joseph",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Saint-Joseph/David-Givaudan-Saint-Joseph-2024/p/19623601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19623601",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "19099701",
+  "distrikt": "Coastal Region",
+  "druer": "Grenache 15 prosent, Pinotage 85 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Coastal Region",
+  "literpris": 197.2,
+  "lukt": "Ungt preg av modne mørke og røde bær, innslag av anis, bladverk, litt kamfer, grønn urt og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "X",
+  "navn": "Perdeberg Vineyard Collection Pinotage 2024",
+  "parser": "json",
+  "pris": 150.9,
+  "produsent": "Perdeberg Wines",
+  "smak": "Sval og saftig, preg av modne kirsebær og bringebær, litt syltet frukt, anis og grønne urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Perdeberg-Vineyard-Collection-Pinotage-2024/p/19099701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19099701",
+  "volum": 75,
+  "årgang": "2024"
+}

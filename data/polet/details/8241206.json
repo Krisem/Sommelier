@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "8241206",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 54 prosent, Barbera 6 prosent, Dolcetto 31 prosent, Freisa 2 prosent, Slarina og Chatus 5%, Albarossa 2 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 193.3,
+  "lukt": "Ungdommelig og litt krydret aroma av røde og mørke bær, nype, blomst, litt kamfer, te, fat og urt.",
+  "matparring": [
+    "Lyst kjøtt"
+  ],
+  "metode": "Tradisjonell vinifikasjon med temperaturkontrollert gjæring og lagring på eldre fat, druer fra unge vinstokker.",
+  "navn": "Vajra Langhe Rosso",
+  "parser": "json",
+  "pris": 579.9,
+  "produsent": "G.D. Vajra",
+  "smak": "Fast med ørlite utviklet preg av røde og mørke bær, nype, hint av fat, svale urter og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Vajra-Langhe-Rosso/p/8241206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8241206",
+  "volum": 300,
+  "årgang": "2024"
+}

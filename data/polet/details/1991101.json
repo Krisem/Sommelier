@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1991101",
+  "distrikt": "Rioja",
+  "druer": "Graciano (Bovale) 5 prosent, Garnacha 25 prosent, Tempranillo (Tinto del Pais) 65 prosent, Mazuelo 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødbrun.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 426.53,
+  "lukt": "Sammensatt aroma med utviklet preg av tørket frukt, røde bær og fat, innslag av tobakk, urter og te.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "3 år på gamle fat.",
+  "navn": "Viña Cubillo Crianza 2018",
+  "parser": "json",
+  "pris": 319.9,
+  "produsent": "Lopez de Heredia",
+  "smak": "Utviklet med god fylde og friskhet, nyansert preg av røde bær, tørket frukt, fat, tobakk og krydder.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,7 g/l",
+  "url": "/Land/Spania/Rioja/Vi%C3%B1a-Cubillo-Crianza-2018/p/1991101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1991101",
+  "volum": 75,
+  "årgang": "2018"
+}

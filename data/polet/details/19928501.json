@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19928501",
+  "distrikt": "Coastal Region",
+  "druer": "Grenache 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Coastal Region, Stellenbosch",
+  "literpris": 259.33,
+  "lukt": "Sval og ung med markjordbær- og bringebæraktig preg, blomster, urter og hint av fat og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "20 % fermentering med hele klaser. Spontanfermentering over to uker med daglig overpumping.",
+  "navn": "Kleine Zalze Vineyard Selction Grenache 2025",
+  "parser": "json",
+  "pris": 194.5,
+  "produsent": "Kleine Zalze",
+  "smak": "Saftig, ung og fast, fruktig preg av morell, bringebær og rips, innslag av kamfer og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,9 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Stellenbosch",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Stellenbosch/Kleine-Zalze-Vineyard-Selction-Grenache-2025/p/19928501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19928501",
+  "volum": 75,
+  "årgang": "2025"
+}

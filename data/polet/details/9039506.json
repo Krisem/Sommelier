@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "9039506",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 30 prosent, Corvina 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella",
+  "literpris": 166.63,
+  "lukt": "Fruktig aroma med tydelig preg av kirsebær, litt blomst, mandel og grønne urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "metode": "Fermentasjon ved 25-31 grader, fulgt av en uke med maserasjon.",
+  "navn": "Allegrini Valpolicella",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Allegrini",
+  "smak": "Ung og fruktig med litt fasthet, preg av saftige og friske røde bær og litt urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Valpolicella",
+  "url": "/Land/Italia/Veneto/Valpolicella/Allegrini-Valpolicella/p/9039506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "9039506",
+  "volum": 300,
+  "årgang": "2025"
+}

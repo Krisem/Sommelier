@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19623401",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Collines Rhodaniennes",
+  "literpris": 346.53,
+  "lukt": "Sval og litt krydret aroma av kirsebær, krekling, litt bjørnebær, fat og kamfer, hint av pepper.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Min. 50 % helklasefermentering (delvis avstilking). Spontanfermentert. Lang gjæringsprosess, forsiktig pressing. Modnes på gamle fat 12 md.",
+  "navn": "Michel Savel Les Marecos Syrah 2023",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Michel Savel",
+  "smak": "Saftig og litt fast med preg av modne mørke bær, litt syltet frukt, fat, svale urter og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,7 g/l",
+  "underdistrikt": "Collines Rhodaniennes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Collines-Rhodaniennes/Michel-Savel-Les-Marecos-Syrah-2023/p/19623401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19623401",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "13393701",
+  "distrikt": "Thessalía",
+  "druer": "Limniona 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Hellas, Thessalía, Tyrnavos",
+  "literpris": 286.53,
+  "lukt": "Nyansert aroma av modne mørke og røde bær, litt svale urter, tobakk, fat, skogbunn og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd. Spontanfermentert og lagret 12 md. i gamle eikefat (3000l og 5000l).",
+  "navn": "Zafeirakis Limniona Young Vineyards 2024",
+  "parser": "json",
+  "pris": 214.9,
+  "produsent": "Zafeirakis",
+  "smak": "Saftig, bærpreget, nokså fast og litt krydret, toner av bjørnebær, bringebær, fat, lakris og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,4 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Tyrnavos",
+  "url": "/Land/Hellas/Thessal%C3%ADa/Tyrnavos/Zafeirakis-Limniona-Young-Vineyards-2024/p/13393701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13393701",
+  "volum": 75,
+  "årgang": "2024"
+}

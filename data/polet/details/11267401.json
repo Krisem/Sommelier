@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "11267401",
+  "distrikt": "Rhône",
+  "druer": "Syrah 20 prosent, Grenache 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Ventoux",
+  "literpris": 203.87,
+  "lukt": "Ung, fruktig og litt balsamisk, preg av modne mørke bær, litt kamfer, barnål, lakris og grønn urt.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell rødvinsproduksjon.",
+  "navn": "Bonpas Ventoux Grande Réserve des Challières",
+  "parser": "json",
+  "pris": 152.9,
+  "produsent": "Bonpas",
+  "smak": "Saftig med god friskhet, nyansert preg av modne skogsbær og kirsebær, krydder, lakris og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Ventoux",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ventoux/Bonpas-Ventoux-Grande-R%C3%A9serve-des-Challi%C3%A8res/p/11267401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11267401",
+  "volum": 75,
+  "årgang": "2025"
+}

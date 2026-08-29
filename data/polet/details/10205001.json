@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "10205001",
+  "distrikt": "Sicilia",
+  "druer": "Nerello Mascalese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T19:48:08.849604+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sicilia, Etna",
+  "literpris": 426.53,
+  "lukt": "Ung og litt krydret, toner av bringebær, kirsebær, svale urter og kamfer, litt tjære, roser og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring 23°C. 14d. skinnkontakt, 2 daglige omrøringer. Modning på tre og rustfritt stål i 6-8 md.",
+  "navn": "Planeta Etna Rosso Contrada Feudo di Mezzo 2024",
+  "parser": "json",
+  "pris": 319.9,
+  "produsent": "Planeta",
+  "smak": "Saftig, fyldig og litt fast, svalt preg av modne røde bær, nype, innslag av kamfer, lakris og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "underdistrikt": "Etna",
+  "url": "/Land/Italia/Sicilia/Etna/Planeta-Etna-Rosso-Contrada-Feudo-di-Mezzo-2024/p/10205001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10205001",
+  "volum": 75,
+  "årgang": "2024"
+}
