@@ -121,7 +121,11 @@ def test_peer_pool_queries_shape_and_lowercase():
     assert 6 <= len(queries) <= 10
     for q in queries:
         assert set(q.keys()) == {"mainCategory", "mainCountry", "pageSize"}
-        assert q["pageSize"] == 50
+        # 24 er et SERVERTAK målt live 2026-08-29 (24/25/48/50 gir alle
+        # `pagination.pageSize: 24`), ikke et valg. Denne assertion sto på 50
+        # og grønnvasket avkortingen i hvert eneste sveip — ikke sett den
+        # tilbake. Trengs flere enn 24 rader: paginer.
+        assert q["pageSize"] == 24
         assert q["mainCategory"] == q["mainCategory"].lower()
         assert q["mainCountry"] == q["mainCountry"].lower()
 
@@ -142,3 +146,178 @@ def test_peer_pool_queries_static_fallback_when_no_csv(monkeypatch, tmp_path):
     assert ("rødvin", "italia") in combos
     assert ("rødvin", "frankrike") in combos
     assert ("musserende_vin", "frankrike") in combos
+
+
+# ─── spine_queries ───────────────────────────────────────────────────
+
+def test_spine_queries_covers_measured_total_exactly():
+    # Live-målt 2026-08-29: 13 775 røde a 24 = 574 sider, 0-basert.
+    pages = list(refresh_polet.spine_queries())
+    assert len(pages) == 574
+    assert [p["page"] for p in pages] == list(range(574))
+
+
+def test_spine_queries_all_hit_roedvin_and_page_size_24():
+    pages = list(refresh_polet.spine_queries())
+    assert {p["query"] for p in pages} == {":relevance:mainCategory:rødvin"}
+    assert pages[0]["url"].endswith("&pageSize=24&currentPage=0")
+    assert pages[-1]["url"].endswith("&pageSize=24&currentPage=573")
+
+
+def test_spine_queries_accepts_fresher_total():
+    assert len(list(refresh_polet.spine_queries(49))) == 3
+    assert list(refresh_polet.spine_queries(0)) == []
+
+
+def test_spine_queries_is_lazy():
+    # Generator, ikke liste — kalleren skal kunne stoppe midtveis.
+    gen = refresh_polet.spine_queries()
+    assert next(gen)["page"] == 0
+    gen.close()
+
+
+# ─── clock_sweep_queries ─────────────────────────────────────────────
+
+def test_clock_sweep_is_the_full_cartesian_product():
+    entries = list(refresh_polet.clock_sweep_queries())
+    assert len(entries) == 6 * 6 * 6 == 216
+
+
+def test_clock_sweep_triples_are_unique_and_cover_all_buckets():
+    entries = list(refresh_polet.clock_sweep_queries())
+    triples = [(e["fylde"], e["friskhet"], e["tannin"]) for e in entries]
+    assert len(set(triples)) == 216
+    for i in range(3):
+        assert {t[i] for t in triples} == {"1-2", "3-4", "5-6", "7-8", "9-10", "11-12"}
+
+
+def test_clock_sweep_query_uses_tannin_sulfates_not_garvestoffer():
+    entries = list(refresh_polet.clock_sweep_queries())
+    for e in entries:
+        assert "Tannin(Sulfates):" in e["query"]
+        assert "Garvestoffer" not in e["query"]
+        assert e["query"].endswith(":mainCategory:rødvin")
+
+
+def test_clock_sweep_probe_url_is_page_zero():
+    first = next(refresh_polet.clock_sweep_queries())
+    assert first["probe_url"].endswith("&pageSize=24&currentPage=0")
+
+
+def test_clock_sweep_is_cheaper_than_three_separate_sweeps():
+    # Poenget med det kartesiske sveipet: ~460 sider i én passering mot
+    # ~1 370 for tre 1-dim-sveip. Her sjekker vi bare at hver kombinasjon er
+    # ETT presist søk som gir alle tre klokkene samtidig.
+    entries = list(refresh_polet.clock_sweep_queries())
+    assert all({"fylde", "friskhet", "tannin"} <= set(e) for e in entries)
+
+
+# ─── ingest_clock_sweep ──────────────────────────────────────────────
+
+def _sweep(fylde, friskhet, tannin, codes):
+    return {"fylde": fylde, "friskhet": friskhet, "tannin": tannin, "codes": codes}
+
+
+def test_ingest_clock_sweep_builds_store_mapping():
+    report = refresh_polet.ingest_clock_sweep([
+        _sweep("7-8", "9-10", "5-6", ["759901", "10267301"]),
+        _sweep("1-2", "3-4", "1-2", ["111"]),
+    ])
+    assert report["mapping"] == {
+        "759901": {"Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"},
+        "10267301": {"Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"},
+        "111": {"Fylde": "1-2", "Friskhet": "3-4", "Tannin": "1-2"},
+    }
+    assert report["codes"] == 3
+    assert report["buckets_seen"] == 2
+    assert report["collision_count"] == 0
+    assert report["collisions"] == []
+
+
+def test_ingest_clock_sweep_same_triple_twice_is_not_a_collision():
+    # Sveiperen dumper per side — samme trippel opptrer i flere batcher.
+    report = refresh_polet.ingest_clock_sweep([
+        _sweep("7-8", "9-10", "5-6", ["759901"]),
+        _sweep("7-8", "9-10", "5-6", ["759901", "222"]),
+    ])
+    assert report["collision_count"] == 0
+    assert report["codes"] == 2
+    assert report["buckets_seen"] == 1
+
+
+def test_ingest_clock_sweep_detects_code_in_two_triples():
+    # En vin kan ikke ligge i to bøtter (AND-semantikken, ADR-023) — dette er
+    # et datafeil-signal og skal IKKE la siste skriver vinne stille.
+    report = refresh_polet.ingest_clock_sweep([
+        _sweep("7-8", "9-10", "5-6", ["759901", "ok1"]),
+        _sweep("1-2", "1-2", "1-2", ["759901"]),
+    ])
+    assert report["collision_count"] == 1
+    assert report["collisions"][0]["code"] == "759901"
+    assert report["collisions"][0]["buckets"] == [
+        {"Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"},
+        {"Fylde": "1-2", "Friskhet": "1-2", "Tannin": "1-2"},
+    ]
+    # Første trippel vinner, koden går ikke tapt, og naboen er urørt.
+    assert report["mapping"]["759901"] == {
+        "Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"
+    }
+    assert report["mapping"]["ok1"]["Fylde"] == "7-8"
+
+
+def test_ingest_clock_sweep_reports_three_way_collision_once():
+    report = refresh_polet.ingest_clock_sweep([
+        _sweep("7-8", "7-8", "7-8", ["x"]),
+        _sweep("1-2", "1-2", "1-2", ["x"]),
+        _sweep("3-4", "3-4", "3-4", ["x"]),
+    ])
+    assert report["collision_count"] == 1
+    assert len(report["collisions"][0]["buckets"]) == 3
+
+
+def test_ingest_clock_sweep_empty_input():
+    report = refresh_polet.ingest_clock_sweep([])
+    assert report == {
+        "mapping": {},
+        "codes": 0,
+        "buckets_seen": 0,
+        "collisions": [],
+        "collision_count": 0,
+    }
+
+
+def test_ingest_clock_sweep_zero_hit_combo_is_normal():
+    # ~2 750 av de 13 775 røde har ingen klokker — tomme kombinasjoner er
+    # forventet, ikke en feil.
+    report = refresh_polet.ingest_clock_sweep([_sweep("1-2", "1-2", "1-2", [])])
+    assert report["mapping"] == {}
+    assert report["buckets_seen"] == 0
+
+
+def test_ingest_clock_sweep_coerces_numeric_codes_to_str():
+    report = refresh_polet.ingest_clock_sweep([_sweep("7-8", "7-8", "7-8", [759901])])
+    assert list(report["mapping"]) == ["759901"]
+
+
+def test_ingest_clock_sweep_rejects_missing_dimension():
+    entry = _sweep("7-8", "9-10", "5-6", ["1"])
+    del entry["tannin"]
+    with pytest.raises(ValueError):
+        refresh_polet.ingest_clock_sweep([entry])
+
+
+def test_ingest_clock_sweep_rejects_invalid_bucket_code():
+    with pytest.raises(ValueError):
+        refresh_polet.ingest_clock_sweep([_sweep("7-12", "9-10", "5-6", ["1"])])
+
+
+def test_ingest_clock_sweep_rejects_non_list_codes():
+    with pytest.raises(ValueError):
+        refresh_polet.ingest_clock_sweep([_sweep("7-8", "9-10", "5-6", "759901")])
+
+
+def test_ingest_clock_sweep_mapping_keys_match_store_contract():
+    # Signaturen polet_store.set_clock_buckets konsumerer er avtalt — nøklene
+    # er Fylde/Friskhet/Tannin (ikke fasett-koden «Tannin(Sulfates)»).
+    report = refresh_polet.ingest_clock_sweep([_sweep("7-8", "9-10", "5-6", ["1"])])
+    assert set(report["mapping"]["1"]) == {"Fylde", "Friskhet", "Tannin"}

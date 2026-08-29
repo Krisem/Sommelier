@@ -84,9 +84,26 @@ Send HTML-en gjennom `parse_product_html` (uendret) → write-helper `tools/pole
 
 Commit `data/polet/` på en branch. Når en annen enhet puller, ser den friskt snapshot. Value-verdict slutter å degradere språket så snart `snapshot_age_days` faller under 14.
 
-## Rate-limit
+## Rate-limit — målt, ikke gjettet (2026-08-29)
 
-Maks **~30 produktoppslag per sesjon**. Bredde-søk (steg 2/3) er billige (ett kall per søk, mange produkter). Det er dybde-hentingen (steg 4, én produktside per kall) som teller mot grensen — derfor kun finalister, ikke hele trefflista. Browserbase gratis-tier har dessuten ~1 browser-time/mnd; det er rikelig til et månedlig refresh, men ikke til kontinuerlig polling.
+Polet har en **timeskvote på ~800–900 forespørsler**. Målt under den komplette rødvins-sveipen: ~520 sider gikk fint på ~39 min, deretter ga sidene `429` med **`Retry-After: 3399`** — altså 57 minutter, en times-kvote og ikke en kort throttle.
+
+> Den gamle formuleringen her («maks ~30 produktoppslag per sesjon») var et anslag uten måling og er nå erstattet. Den var både for streng for bredde-søk og gjorde det umulig å planlegge dybde.
+
+Praktiske følger:
+- **Bredde og dybde teller likt.** Det er antall HTTP-kall som er valutaen, ikke hva de returnerer. Én katalogside (24 produkter) koster like mye som én produktside (1 produkt) — derfor er bredde ~24× mer effektivt per kall.
+- **Full enumerering av rødvin = 574 sider.** Det er godt innenfor ett vindu.
+- **Dybde for alle 13 775 rødviner = ~16 kvotevinduer (~16 timer).** Details er derfor permanent et *prioritert utsnitt*, ikke noe som tas «senere». Til referanse: alle 3 l + hele Basisutvalget er 694 manglende details — det fyller ett vindu.
+- **Sjekk HTTP-status per side.** En `429` som telles som data gir stille avkorting. Stopp ved første `429`; en retry brenner bare kvote.
+- Browserbase gratis-tier har i tillegg ~1 browser-time/mnd — rikelig til månedlig refresh, ikke til polling.
+
+## Paginering og sortering — to feller
+
+**`pageSize` har et servertak på 24.** Målt: 24/25/48/50 gir alle `pagination.pageSize: 24`. Ber du om 50, får du 24 uten noen feilmelding. Alle sveip kjørt før 2026-08-29 var stille avkortet av dette. Bruk `currentPage` for å paginere — den virker helt ut (side 573 av 574 ga 23 produkter).
+
+**Paginer aldri på `sort=relevance`.** Relevans-rangering er ikke stabil mellom kall, så paginering både dupliserer og **hopper over** produkter. Målt: en full `relevance`-passering ga 13 775 rader, men bare 13 774 unike — ett produkt forsvant. Bruk `name-asc` (deterministisk). Og tell alltid unike koder mot `totalResults` til slutt; et skip er usynlig uten den tellingen.
+
+**Fasett-koder feiler stille.** `facets[]` i søkesvaret er alltid tomt, så du kan ikke oppdage gyldige koder — du må probe. En ugyldig kode blir *ignorert*, ikke avvist, så queryen returnerer hele katalogen mens du tror den filtrerte. Kontrollen er å sammenligne `totalResults` mot det ufiltrerte tallet: er de like, filtrerer ikke fasetten din. For rødvin er kun `Fylde`, `Friskhet` og `Tannin(Sulfates)` gyldige — `Garvestoffer` er navnet i produktsidens JSON, ikke i søke-fasettene.
 
 ## Butikk-spesifikt live-oppslag (øl, og «har butikk X varen?»)
 

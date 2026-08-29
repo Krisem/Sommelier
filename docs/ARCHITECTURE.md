@@ -657,11 +657,13 @@ MCP-serveren kobler seg til skybrowseren **lazily** — først ved første brows
 
 ### ADR-023: Live facet-sweep + trait-filtrering + snapshot-ekspansjon
 
-**Status:** Accepted (2026-07-02).
+**Status:** Accepted (2026-07-02). **Fasett-listen og «full bredde»-påstanden er superseded av ADR-024 (2026-08-29)** — AND/OR-funnet og modulstrukturen står uendret, men tre av de seks oppgitte trait-fasettene virker ikke, og sveipene som ble kjørt under denne ADR-en var stille avkortet av et `pageSize`-tak. Se korreksjonen under «Funn».
 
 **Kontekst.** Polet-snapshotet var 557 produkter — under 2 % av katalogen (~36k) — og for smalt for reell utforskning. New World-viner manglet helt: søk på Zuccardi/Catena/Mullineux ga `PoletRefreshRequired` fordi de aldri var i snapshotet. Samtidig ville en naiv utvidelse (committe hele katalogen, eller hente details for alt) enten sprenge repoet eller bli rate-limitet ut.
 
 **Funn (verifisert denne økta).** `vmpws`-søke-API-et (virker fra browser-kontekst, jf. [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf)/[ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh)) støtter **TRAIT-fasetter**: `Fylde`, `Friskhet`, `Garvestoffer`, `Soedme`, `Tannin` (Sulfates) og `Bitterhet`, hver som **bøtter** `1-2 · 3-4 · 5-6 · 7-8 · 9-10 · 11-12`. **Kritisk funn:** repeterte facet-tokens av *samme* fasett kombineres som **AND, ikke OR** — `:Friskhet:7-8:Friskhet:9-10` gir 0 treff. Et klokke-**intervall** må derfor kjøres som **flere queries** (én per bøtte) og unioneres client-side. Dette formet den nye modulen `tools/polet_facets.py`: `build_facet_query` (én bøtte per dimensjon), `build_facet_queries` (intervall → liste queries, kartesisk over bøtter), `parse_search_products` — ren, med 20 tester.
+
+> **KORREKSJON (2026-08-29, ADR-024).** Fasett-listen over er feil på tre av seks. Målt live mot `mainCategory:rødvin` (13 775 treff): `Garvestoffer` returnerer **13 775 i hver bøtte** — den ignoreres stille, så en query som «filtrerer» på den gir hele katalogen tilbake. `Soedme` og `Bitterhet` gir 0 treff for rødvin. Kun `Fylde`, `Friskhet` og `Tannin(Sulfates)` filtrerer. `Tannin(Sulfates)` *er* garvestoffer — samme klokke heter `Garvestoffer` i produktsidens JSON og `Tannin(Sulfates)` i søke-fasettene, og det er den kollisjonen som skapte feilen. Ingen anbefaling ble påvirket: `polet_facets` hadde null importører utenfor sine egne tester og var aldri wiret inn. Videre var **«hentet i full bredde» i beslutning (a) ikke sant** — `pageSize` har et servertak på 24, mens sveipen brukte 50, så hver kategori×land-sveip stoppet på det API-et ga i stedet for det den ba om. Det forklarer skjevheten i det resulterende snapshotet (Portugal 293 mot Italia 83).
 
 **Beslutning.**
 - **(a) Utvid snapshot-BREDDEN langs utforsknings-aksene via live facet-sweep.** Kjøpbar rødvin fra Argentina, Chile, Sør-Afrika, Australia, New Zealand, Portugal, Østerrike og Hellas hentet i full bredde → snapshot 557 → **1849** produkter.
@@ -678,6 +680,59 @@ MCP-serveren kobler seg til skybrowseren **lazily** — først ved første brows
 **Alternativer vurdert.** **Hente details for alle 1299 nye** — forkastet: rate-limitet, ugjennomførbart. **Committe hele 36k-katalogen** — forkastet: repo-bloat. **Uttrykke klokke-range som repeterte facets i én query** — forkastet: fungerer ikke (samme fasett = AND → 0 treff); må unioneres client-side som flere queries.
 
 **Relatert.** [ADR-021](#adr-021-remote-browser-via-cdp--device-agnostisk-refresh) (egress-avhengig live facet-query), [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen som utvides), [ADR-019](#adr-019-datatilgang-via-ekte-nettleser--vivino-og-polet-bak-waf) («ekte nettleser»-veien), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (fasett-API i peer-percentile).
+
+---
+
+### ADR-024: Komplett rødvins-snapshot — målt API-sannhet, prunet shape, klokker via fasett-sveip
+
+**Status:** Accepted (2026-08-29). Superseder fasett-listen og «full bredde»-påstanden i [ADR-023](#adr-023-live-facet-sweep--trait-filtrering--snapshot-ekspansjon); AND/OR-funnet og modulstrukturen derfra står uendret.
+
+**Kontekst.** Snapshotet var 1 849 produkter, og formen på det speilet ikke brukeren men den siste sveipen som tilfeldigvis ble kjørt: Portugal 293, Sør-Afrika 231, Australia 211 — mot **Italia 83, Frankrike 61, Spania 52, Tyskland 0**. Vivino-historikken sier det motsatte: 50 av 97 ratede rødviner er italienske, og Italia har hans høyeste landssnitt (3,86). Snapshotet var altså tynnest nettopp der han drikker mest. Oppdraget var komplett rødvin — flaske *og* 3 l — med klokker på hele basen, slik at snapshotet kan være utgangspunkt for dybdesøk og ikke bare et oppslagsverk.
+
+**Funn (alle live-målt 2026-08-29, mot `mainCategory:rødvin`).**
+
+| Funn | Måling | Konsekvens |
+|---|---|---|
+| Rødvin totalt | **13 775** (75 cl: 12 498 · 300 cl: 313) | «Komplett» er 574 sider, ikke et skjønnsspørsmål |
+| **`pageSize`-tak** | **24.** 24/25/48/50 → alle `pagination.pageSize: 24` | `_PAGE_SIZE = 50` var en løgn; **hver sveip kjørt under ADR-023 var stille avkortet** |
+| `currentPage` | Virker til siste side (573 ga 23; 600 ga 0) | Full enumerering er mulig; ingen dyp-paginerings-tak |
+| `volume`-fasett | `volume:300` → 313, alle verifisert 300 cl | 3 l er ett presist søk |
+| `facets[]` i svaret | **Alltid tom** | Fasett-koder kan ikke oppdages — de må probes, og en feil kode feiler *stille* |
+| **`Garvestoffer`** | **13 775 i HVER bøtte** | Ignoreres stille — en «filtrert» query gir hele katalogen |
+| `Tannin(Sulfates)` | 5 401 (bøtte 7-8) | Dette *er* garvestoffer i fasett-navnerommet |
+| `Soedme` / `Bitterhet` | 0 treff | Ikke gyldige for rødvin |
+| Klokke-dekning | Fylde 11 029 · Friskhet 10 986 | ~2 750 rødviner har ingen klokker hos Polet i det hele tatt |
+| Produkt-JSON-API | `/vmpws/v2/vmp/products/<kode>` → **404** | Dybde må gå via produktsiden |
+| Produktside-blobb | `<script type="application/json">` finnes | Klokker/druer/stil/matparring/lagring som ren JSON |
+| **Rate-limit** | `429` + **`Retry-After: 3399`** | **Timeskvote på ~800–900 kall**, ikke en kort throttle |
+| Sorterings-stabilitet | `relevance`: 13 775 rader → 13 774 unike | Paginering på relevans **hopper over** produkter |
+
+**Navnerom-kollisjonen som skapte fasett-buggen.** Samme klokke heter `Garvestoffer` i produktsidens JSON og `Tannin(Sulfates)` i søke-fasettene. `tools/vinmonopolet.py` og `tools/polet_details.py` bruker `Garvestoffer` *riktig* — de leser detaljer. `tools/polet_facets.py` brukte den *feil* — den bygger søk. Begge navnene er korrekte i hvert sitt lag, og det er nettopp derfor fella er lett å gå i. `_TRAP_DIMS` kaster nå med en melding som sier hvilket navnerom man er i.
+
+**Ingen anbefaling ble påvirket:** `polet_facets` hadde null importører utenfor sine egne tester — modulen ble bygget 2026-07-02 og aldri wiret inn. Fella var ladd, men aldri utløst.
+
+**Beslutning.**
+
+- **(a) Prun katalog-shapen.** `productAvailability` (30,5 % av bytene), `images` (15,4 %) og `main_sub_category` (alltid `{}`) strippes ved ingest. Ingen kode leste dem fra snapshotet; bilde-URL-er er avledbare fra varenr, og lagerstatus er ferskvare som et snapshot uansett ikke kan holde. Målt på de 1 849 gamle radene: 1 631 → 849 B/rad, **47,6 % spart**. Migrering er idempotent, atomisk og radbevarende (1 849 inn → 1 849 ut, 0 avvik utover prune-lista).
+- **(b) Full enumerering som ryggrad**, ikke land-for-land-sveip. Volum ligger på raden, så 3 l faller ut gratis — ingen egen 3 l-sveip.
+- **(c) Klokker via kartesisk fasett-sveip** Fylde × Friskhet × Tannin(Sulfates) — 216 celler gir alle tre klokkene i én passering (~460 sider) mot ~1 370 for tre 1-dim-sveip. Oppløsningen er bøtte (±1), ikke eksakt heltall; eksakte klokker kommer fra dybde for det utsnittet som får details.
+- **(d) Dybde foretrekker JSON-blobben**, med regex som fallback. `save_details` stempler `parser`-proveniens og avviser en blobb hvis produktobjektets varenr ikke er det vi ba om — den gamle valideringen så bare at koden fantes *et sted* i HTML-en.
+- **(e) Paginer alltid på en deterministisk sortering.** `relevance` er ustabil mellom kall og hopper over produkter. Union av `relevance` + `name-asc` ga 13 775 eksakt; den tapte vinen var `19591401`.
+
+**Konsekvenser.**
+- ✅ Rødvin 1 543 → **13 807**, hele katalogen. Frankrike 61 → 5 959, Italia 83 → 3 763, Spania 52 → 1 111, Tyskland 0 → 368. **3 l: 62 → 314.** Basisutvalget 121 → 468.
+- ✅ To uavhengige målemetoder er enige om målslicene: fasett-`totalResults` og full enumerering gir begge 12 498 på 75 cl og 313 på 3 l.
+- ✅ Snapshot 12 MB i stedet for ~22 MB uprunet. Katalogen er fortsatt deterministisk sortert og linjebasert.
+- ✅ Regex-parseren er ikke lenger eneste dybdevei — og ekvivalenstesten viser at JSON-veien ikke mister noe (`kun_html == {}`).
+- ⚠️ **Rate-limiten er nå det bindende planleggingsgrunnlaget.** ~850 kall/time betyr at dybde for alle 13 775 ville tatt ~16 kvotevinduer. Details er permanent et prioritert utsnitt, ikke noe som «tas senere».
+- ⚠️ Klokker er bøtte-oppløsning (±1) for basen. Eksakt kun der details finnes.
+- ⚠️ ~2 750 rødviner får aldri klokker — Polet har dem ikke.
+- ✅ **Avregistrerte varer slettes nå.** 32 rødviner i snapshotet fantes ikke i den komplette enumereringen (12 `utgatt`, 9 `utsolgt`, 3 `langtidsutsolgt`, 8 `aktiv`) — men sto alle med `buyable: true` og `expired: false`, fordi flaggene var sanne 2026-07-02. Et snapshot akkumulerer altså stille varer som *ser* kjøpbare ut for alltid. `polet_store.prune_delisted` fjerner dem (og deres details-filer). Etter en komplett sveip er fravær informasjon — men **kun i den kategorien som faktisk er enumerert**, og funksjonen nekter å slette mer enn 10 % uten `force=True`, siden en stille avkortet sveip (jf. `pageSize`-taket) ellers ville tømt katalogen. Rødvin i snapshotet er nå eksakt 13 775.
+- ⚠️ Hvit-, rosé- og musserende vin er urørt og har fortsatt den gamle, avkortede dekningen.
+
+**Alternativer vurdert.** **Land-for-land-sveip** (som ADR-023) — forkastet: det var nettopp den metoden som ga skjevheten, og med et `pageSize`-tak på 24 avkortes hvert land stille. **Tre separate 1-dim klokke-sveip** — forkastet: ~1 370 sider mot 676 for kartesisk, og gir samme informasjon. **Details for hele katalogen** — forkastet på et målt tall, ikke en magefølelse: ~16 timer kvote. **Beholde uprunet shape** — forkastet: 46 % av bytene var felt ingen leste, og ved 13 775 rader er det 10 MB. **Fullføre `name-asc`-passeringen etter at unionen traff 13 775** — forkastet: 282 kall av en knapp kvote på et spørsmål som allerede var besvart.
+
+**Relatert.** [ADR-023](#adr-023-live-facet-sweep--trait-filtrering--snapshot-ekspansjon) (superseder fasett-listen), [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (drift-vern; JSON-blobben reduserer eksponeringen), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (kode ≠ navn — samme klasse feil), [`polet_refresh.md`](polet_refresh.md) (runbook), teknisk gjeld #1.
 
 ---
 

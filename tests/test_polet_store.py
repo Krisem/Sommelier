@@ -258,3 +258,374 @@ def test_refresh_required_carries_url_and_hint():
     assert exc.url == "/p/100"
     assert "refresh fra desktop" in exc.hint.lower()
     assert "snapshot" in str(exc).lower()
+
+
+# ─── shape-pruning ved ingest ────────────────────────────────────────
+
+def _fat_product(code="100", **overrides):
+    """Katalog-shape slik den kommer fra vmpws — med de tunge feltene på."""
+    p = _product(code, "Fyldig rød", "rødvin", "Rødvin", "italia", "Italia", 249)
+    p.update(
+        {
+            "productAvailability": {
+                "deliveryAvailability": {"availableForPurchase": True},
+                "storesAvailability": {"infos": [{"readableValue": "5 stk"}]},
+            },
+            "images": [
+                {"format": "product", "imageType": "PRIMARY", "url": f"…/{code}-1.jpg"},
+                {"format": "thumbnail", "imageType": "PRIMARY", "url": f"…/{code}-1.jpg"},
+            ],
+            "main_sub_category": {},
+            "district": {"code": "italia_piemonte", "name": "Piemonte"},
+            "sub_District": {"code": "italia_piemonte_barolo", "name": "Barolo"},
+            "product_selection": "Basisutvalget",
+            "volume": {"formattedValue": "75 cl", "value": 75.0},
+        }
+    )
+    p.update(overrides)
+    return p
+
+
+def test_upsert_prunes_heavy_fields():
+    polet_store.upsert_products(
+        [_fat_product()], fetched_at="2026-08-29T00:00:00+00:00"
+    )
+    rad = polet_store.lookup("100")
+    for felt in polet_store.PRUNED_CATALOG_FIELDS:
+        assert felt not in rad, f"{felt} skulle vært strippet"
+
+
+def test_upsert_preserves_everything_else():
+    fat = _fat_product()
+    polet_store.upsert_products([fat], fetched_at="2026-08-29T00:00:00+00:00")
+    rad = polet_store.lookup("100")
+
+    forventet = {k: v for k, v in fat.items() if k not in polet_store.PRUNED_CATALOG_FIELDS}
+    forventet["fetched_at"] = "2026-08-29T00:00:00+00:00"
+    assert rad == forventet
+    # Eksplisitt: feltene refresh/value/similarity trenger overlever.
+    for felt in ("url", "district", "sub_District", "product_selection", "volume", "price"):
+        assert felt in rad
+
+
+def test_upsert_does_not_mutate_callers_product():
+    # Refresh-ritualet leser lagerstatus fra sitt eget LIVE søkesvar
+    # (polet_live.store_stock) — pruningen skal ikke tømme kallerens dict.
+    fat = _fat_product()
+    polet_store.upsert_products([fat], fetched_at="2026-08-29T00:00:00+00:00")
+    assert "productAvailability" in fat
+    assert "images" in fat
+
+
+def test_upsert_deterministic_after_pruning():
+    produkter = [_fat_product("300"), _fat_product("100"), _fat_product("200")]
+    polet_store.upsert_products(produkter, fetched_at="2026-08-29T00:00:00+00:00")
+    første = polet_store.CATALOG.read_text(encoding="utf-8")
+    polet_store.upsert_products(
+        list(reversed(produkter)), fetched_at="2026-08-29T00:00:00+00:00"
+    )
+    assert polet_store.CATALOG.read_text(encoding="utf-8") == første
+    assert [json.loads(l)["code"] for l in første.splitlines()] == ["100", "200", "300"]
+
+
+# ─── migrate_catalog_shape ───────────────────────────────────────────
+
+@pytest.fixture
+def _fat_catalog():
+    """Skriv en UPRUNET katalog + meta direkte, som en pre-migrasjons-fil."""
+    fete = [_fat_product(c) for c in ("100", "200", "300")]
+    for p in fete:
+        p["fetched_at"] = "2026-07-02T17:27:00+00:00"
+    polet_store._write_catalog(fete)  # serialisering uten prune-steget
+    polet_store._write_meta(fete, generated_at="2026-07-02T17:27:00+00:00")
+    return fete
+
+
+def test_migrate_prunes_and_preserves_rows(_fat_catalog):
+    from tools import migrate_catalog_shape
+
+    før = polet_store.read_catalog()
+    assert all("images" in r for r in før)  # sanity: fila er faktisk fet
+
+    r = migrate_catalog_shape.migrate()
+    assert r["rader_før"] == r["rader_etter"] == 3
+    assert r["bytes_etter"] < r["bytes_før"]
+    assert r["spart_prosent"] > 0
+
+    etter = polet_store.read_catalog()
+    assert [x["code"] for x in etter] == ["100", "200", "300"]
+    for rad, original in zip(etter, før):
+        for felt in polet_store.PRUNED_CATALOG_FIELDS:
+            assert felt not in rad
+        assert rad == {
+            k: v for k, v in original.items() if k not in polet_store.PRUNED_CATALOG_FIELDS
+        }
+
+
+def test_migrate_idempotent(_fat_catalog):
+    from tools import migrate_catalog_shape
+
+    migrate_catalog_shape.migrate()
+    første = polet_store.CATALOG.read_bytes()
+    r2 = migrate_catalog_shape.migrate()
+    assert polet_store.CATALOG.read_bytes() == første
+    assert r2["bytes_før"] == r2["bytes_etter"]
+    assert r2["rader_før"] == r2["rader_etter"] == 3
+
+
+def test_migrate_preserves_generated_at(_fat_catalog):
+    # En shape-migrering er ikke en refresh — den skal ikke friskmelde
+    # pris/lager ved å bumpe tidsstempelet value_score alders-merker på.
+    from tools import migrate_catalog_shape
+
+    migrate_catalog_shape.migrate()
+    assert polet_store.catalog_generated_at() == "2026-07-02T17:27:00+00:00"
+    assert json.loads(polet_store.META.read_text(encoding="utf-8"))["count"] == 3
+
+
+def test_migrate_dry_run_writes_nothing(_fat_catalog):
+    from tools import migrate_catalog_shape
+
+    før = polet_store.CATALOG.read_bytes()
+    meta_før = polet_store.META.read_bytes()
+    r = migrate_catalog_shape.migrate(dry_run=True)
+
+    assert r["dry_run"] is True
+    assert r["bytes_etter"] < r["bytes_før"]  # rapporterer gevinsten …
+    assert polet_store.CATALOG.read_bytes() == før  # … men rører ikke fila
+    assert polet_store.META.read_bytes() == meta_før
+    assert all("images" in x for x in polet_store.read_catalog())
+
+
+def test_migrate_leaves_no_temp_file(_fat_catalog):
+    from tools import migrate_catalog_shape
+
+    migrate_catalog_shape.migrate()
+    assert list(polet_store.POLET_DIR.glob("*.tmp")) == []
+
+
+def test_migrate_missing_catalog_raises():
+    from tools import migrate_catalog_shape
+
+    with pytest.raises(FileNotFoundError):
+        migrate_catalog_shape.migrate()
+
+
+# ─── set_clock_buckets ───────────────────────────────────────────────
+
+@pytest.fixture
+def _seeded_for_buckets():
+    polet_store.upsert_products(
+        [_fat_product("100"), _fat_product("200")],
+        fetched_at="2026-08-29T00:00:00+00:00",
+    )
+
+
+def test_set_clock_buckets_merges(_seeded_for_buckets):
+    rapport = polet_store.set_clock_buckets(
+        {"100": {"Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"}},
+        fetched_at="2026-08-29T12:00:00+00:00",
+    )
+    assert rapport == {"oppdatert": 1, "ukjent_kode": 0, "uendret": 0}
+
+    rad = polet_store.lookup("100")
+    assert rad["clock_buckets"] == {"Fylde": "7-8", "Friskhet": "9-10", "Tannin": "5-6"}
+    assert rad["clock_buckets_fetched_at"] == "2026-08-29T12:00:00+00:00"
+    # Radens eget fetched_at (når produktet ble hentet) røres ikke.
+    assert rad["fetched_at"] == "2026-08-29T00:00:00+00:00"
+    # Nabo-raden er urørt.
+    assert "clock_buckets" not in polet_store.lookup("200")
+
+
+def test_set_clock_buckets_ignores_unknown_codes(_seeded_for_buckets):
+    rapport = polet_store.set_clock_buckets(
+        {"100": {"Fylde": "7-8"}, "99999": {"Fylde": "1-2"}},
+        fetched_at="2026-08-29T12:00:00+00:00",
+    )
+    assert rapport == {"oppdatert": 1, "ukjent_kode": 1, "uendret": 0}
+    # Ukjent kode teller — men skal IKKE opprette en syntetisk rad.
+    assert polet_store.lookup("99999") is None
+    assert {p["code"] for p in polet_store.read_catalog()} == {"100", "200"}
+
+
+def test_set_clock_buckets_unchanged_leaves_file_byte_identical(_seeded_for_buckets):
+    buckets = {"100": {"Fylde": "7-8"}}
+    polet_store.set_clock_buckets(buckets, fetched_at="2026-08-29T12:00:00+00:00")
+    første = polet_store.CATALOG.read_bytes()
+
+    # Samme bøtter, nytt tidsstempel → uendret, og ingen git-diff.
+    rapport = polet_store.set_clock_buckets(
+        buckets, fetched_at="2026-08-30T12:00:00+00:00"
+    )
+    assert rapport == {"oppdatert": 0, "ukjent_kode": 0, "uendret": 1}
+    assert polet_store.CATALOG.read_bytes() == første
+
+
+def test_set_clock_buckets_rejects_invalid_bucket(_seeded_for_buckets):
+    with pytest.raises(ValueError, match="Ugyldig klokke-bøtte"):
+        polet_store.set_clock_buckets(
+            {"100": {"Fylde": "8"}}, fetched_at="2026-08-29T12:00:00+00:00"
+        )
+    with pytest.raises(ValueError):
+        polet_store.set_clock_buckets(
+            {"100": {"Fylde": "7-9"}}, fetched_at="2026-08-29T12:00:00+00:00"
+        )
+
+
+def test_set_clock_buckets_validates_before_writing(_seeded_for_buckets):
+    # Gyldig kode først, ugyldig bøtte etterpå: ingenting skal være skrevet.
+    før = polet_store.CATALOG.read_bytes()
+    with pytest.raises(ValueError):
+        polet_store.set_clock_buckets(
+            {"100": {"Fylde": "7-8"}, "200": {"Fylde": "ugyldig"}},
+            fetched_at="2026-08-29T12:00:00+00:00",
+        )
+    assert polet_store.CATALOG.read_bytes() == før
+    assert "clock_buckets" not in polet_store.lookup("100")
+
+
+def test_set_clock_buckets_rejects_non_dict_value(_seeded_for_buckets):
+    with pytest.raises(ValueError):
+        polet_store.set_clock_buckets(
+            {"100": "7-8"}, fetched_at="2026-08-29T12:00:00+00:00"
+        )
+
+
+def test_set_clock_buckets_deterministic_and_sorted(_seeded_for_buckets):
+    polet_store.set_clock_buckets(
+        {"200": {"Fylde": "11-12"}, "100": {"Fylde": "1-2"}},
+        fetched_at="2026-08-29T12:00:00+00:00",
+    )
+    linjer = polet_store.CATALOG.read_text(encoding="utf-8").splitlines()
+    assert [json.loads(l)["code"] for l in linjer] == ["100", "200"]
+    # Nøklene er fortsatt sortert innenfor hver linje.
+    for linje in linjer:
+        rad = json.loads(linje)
+        assert linje == json.dumps(rad, ensure_ascii=False, sort_keys=True)
+
+
+def test_set_clock_buckets_empty_mapping_is_noop(_seeded_for_buckets):
+    før = polet_store.CATALOG.read_bytes()
+    assert polet_store.set_clock_buckets({}, fetched_at="2026-08-29T12:00:00+00:00") == {
+        "oppdatert": 0,
+        "ukjent_kode": 0,
+        "uendret": 0,
+    }
+    assert polet_store.CATALOG.read_bytes() == før
+
+
+# ─── WIRING: JSON-blobb foretrekkes, regex er fallback (ADR-024) ─────
+
+_FIXTURE = (
+    Path(__file__).resolve().parent
+    / "fixtures" / "vinmonopolet" / "fenocchio_barbera_alba_superiore.html"
+)
+
+
+def test_save_details_prefers_json_blob(tmp_path, monkeypatch):
+    """Ekte produktside har blobb → parser=json og de felt regexen bommer på."""
+    monkeypatch.setattr(polet_store, "DETAILS_DIR", tmp_path / "details")
+    rec = polet_store.save_details(
+        "759901", "/p/759901", _FIXTURE.read_text(encoding="utf-8"),
+        fetched_at="2026-08-29T00:00:00+00:00",
+    )
+    assert rec["parser"] == "json"
+    assert rec["klokker"] == {"Fylde": 8, "Friskhet": 9, "Garvestoffer": 7}
+    # Nøyaktig de tre feltene regex-veien dropper stille:
+    assert rec["produsent"] == "Fenocchio" and rec["årgang"] == "2023"
+    assert rec["land"].startswith("Italia")
+    assert rec["matparring"] == ["Storfe", "Småvilt", "Svin"]
+
+
+def test_save_details_falls_back_to_html_without_blob(tmp_path, monkeypatch):
+    """Blobben strippet → regex-veien tar over, og proveniensen sier fra."""
+    monkeypatch.setattr(polet_store, "DETAILS_DIR", tmp_path / "details")
+    html = _FIXTURE.read_text(encoding="utf-8").replace(
+        '<script type="application/json">{"product"',
+        '<script type="application/json">{"ikkeprodukt"', 1,
+    )
+    rec = polet_store.save_details(
+        "759901", "/p/759901", html, fetched_at="2026-08-29T00:00:00+00:00",
+    )
+    assert rec["parser"] == "html"
+    assert rec["klokker"]  # regex finner fortsatt klokkene
+
+
+def test_save_details_rejects_blob_for_wrong_product(tmp_path, monkeypatch):
+    """Riktig varenr i HTML, men blobben beskriver et annet produkt → avvis."""
+    monkeypatch.setattr(polet_store, "DETAILS_DIR", tmp_path / "details")
+    html = _FIXTURE.read_text(encoding="utf-8").replace('"code":"759901"', '"code":"111111"')
+    html = html.replace("<title>", "<title>Varenummer 759901 ", 1)
+    with pytest.raises(ValueError, match="feil produktside"):
+        polet_store.save_details(
+            "759901", "/p/759901", html, fetched_at="2026-08-29T00:00:00+00:00",
+        )
+
+
+# ─── prune_delisted: fravær etter komplett sveip er informasjon ──────
+
+def _cat_row(code, category="Rødvin", cat_code="rødvin"):
+    return {"code": code, "name": f"Vin {code}", "buyable": True,
+            "main_category": {"code": cat_code, "name": category},
+            "price": {"value": 200}, "volume": {"value": 75}}
+
+
+@pytest.fixture
+def _mixed_catalog(tmp_path, monkeypatch):
+    monkeypatch.setattr(polet_store, "POLET_DIR", tmp_path)
+    monkeypatch.setattr(polet_store, "CATALOG", tmp_path / "catalog.ndjson")
+    monkeypatch.setattr(polet_store, "META", tmp_path / "catalog_meta.json")
+    monkeypatch.setattr(polet_store, "DETAILS_DIR", tmp_path / "details")
+    rows = [_cat_row(f"r{i}") for i in range(10)]
+    rows += [_cat_row(f"h{i}", "Hvitvin", "hvitvin") for i in range(4)]
+    polet_store._write_catalog(rows)
+    polet_store._write_meta(rows, generated_at="2026-01-01T00:00:00+00:00")
+    return tmp_path
+
+
+def test_prune_delisted_removes_only_absent_in_that_category(_mixed_catalog):
+    present = {f"r{i}" for i in range(10)} - {"r3"}
+    r = polet_store.prune_delisted(
+        present, category="rødvin", generated_at="2026-08-29T00:00:00+00:00")
+    assert r["slettet"] == 1 and r["slettede_koder"] == ["r3"]
+    koder = {p["code"] for p in polet_store.read_catalog()}
+    assert "r3" not in koder
+    # Hvitvin er IKKE sveipet — ingen av dem må røres selv om de mangler i present.
+    assert {f"h{i}" for i in range(4)} <= koder
+
+
+def test_prune_delisted_also_removes_orphaned_details(_mixed_catalog):
+    polet_store.DETAILS_DIR.mkdir(parents=True, exist_ok=True)
+    (polet_store.DETAILS_DIR / "r3.json").write_text("{}", encoding="utf-8")
+    (polet_store.DETAILS_DIR / "r4.json").write_text("{}", encoding="utf-8")
+    r = polet_store.prune_delisted(
+        {f"r{i}" for i in range(10)} - {"r3"}, category="rødvin",
+        generated_at="2026-08-29T00:00:00+00:00")
+    assert r["details_fjernet"] == 1
+    assert not (polet_store.DETAILS_DIR / "r3.json").exists()
+    assert (polet_store.DETAILS_DIR / "r4.json").exists()
+
+
+def test_prune_delisted_refuses_mass_deletion_from_truncated_sweep(_mixed_catalog):
+    """En avkortet sveip ser ut som massedød. Nekt, ikke tøm katalogen."""
+    with pytest.raises(ValueError, match="avkortet sveip"):
+        polet_store.prune_delisted(
+            {"r0", "r1"}, category="rødvin",
+            generated_at="2026-08-29T00:00:00+00:00")
+    assert len(polet_store.read_catalog()) == 14  # ingenting slettet
+
+
+def test_prune_delisted_force_overrides_guard(_mixed_catalog):
+    r = polet_store.prune_delisted(
+        {"r0", "r1"}, category="rødvin",
+        generated_at="2026-08-29T00:00:00+00:00", force=True)
+    assert r["slettet"] == 8
+
+
+def test_prune_delisted_rejects_empty_and_unknown_category(_mixed_catalog):
+    with pytest.raises(ValueError, match="tom"):
+        polet_store.prune_delisted(
+            set(), category="rødvin", generated_at="2026-08-29T00:00:00+00:00")
+    with pytest.raises(ValueError, match="feil kategorinavn"):
+        polet_store.prune_delisted(
+            {"r0"}, category="sider", generated_at="2026-08-29T00:00:00+00:00")
