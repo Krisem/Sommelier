@@ -278,6 +278,33 @@
   - **Solo «noe til kvelden» uten mat:** len mot litt rundere, mer fruktdrevet profil – Friskhet 6–8, litt mer fylde/glyserol – framfor de mest sylskarpe. Ikke velg bort syre, men ikke maksimér den.
   - Spør ev. kort «til mat eller solo?» når en høy-syre-kandidat vurderes og konteksten er uklar.
 
+### «Kraftigere» kan IKKE søkes på Fylde-klokka (funn 2026-08-29, n=1)
+
+**Observasjon.** Kristoffer prøvde **Vespa Barbera 3 l** (varenr 5280806, 489,90 kr) på anbefaling og fant den **for lett** – ønsket mer kraft i smaken. Særlig relevant høst/vinter.
+
+**Funnet som gjør dette interessant.** Vinen har *identisk* klokke-profil med hans høyest ratede rødvin:
+
+| | kr/L | Fylde | Friskhet | Garvestoffer | Polets stil |
+|---|---|---|---|---|---|
+| Fenocchio Barbera d'Alba Superiore – **4.6** | **273** | 8 | 9 | 7 | Frisk og fruktig |
+| Vespa Barbera 3 l – **«for lett»** | **163** | 8 | 9 | 7 | Frisk og fruktig |
+
+Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. **Klokkene diskriminerer altså ikke mellom hans beste rødvin og en han avviste.** Å søke «Fylde 9+» for å finne noe kraftigere ville vært feil svar, og ville dessuten sortert bort Fenocchio.
+
+**Hva som faktisk skiller dem:**
+- **Pris per liter: 273 vs 163.** I den nedre enden korrelerer konsentrasjon med literpris – lavere avling, mer seleksjon.
+- **Appellasjon:** *Barbera d'Alba Superiore* (strammere avlingskrav + lagringskrav) vs generisk *Piemonte Barbera*.
+- **Fat og modning:** Fenocchio har 6 mnd fatlagring + 6 mnd flaskemodning. Vespa er ren ståltank, 6–7 dagers gjæring, ingen lagring. Det er her «kraften» ligger – tekstur og lagringspreg, ikke fylde-tall.
+
+**Slik brukes det i anbefalinger:**
+1. **Ikke bruk Fylde alene når han ber om «kraftigere».** Klokka måler noe annet enn det han opplever.
+2. **Les `metode`- og `stil`-feltet i details** – fatlagring, appassimento, ripasso, lang gjæring er signalene.
+3. **Bruk appellasjonsnivå som proxy:** Superiore/Riserva/DOCG over generisk regional DOC.
+4. **Literpris er en reell indikator i lavprisenden**, særlig på 3 l der nesten alt ligger 145–200 kr/L.
+5. **Ikke kjemp mot druen.** Barbera er konstitusjonelt syrerik og lett-til-middels i kropp – det er stilen. Vil han ha kropp, bytt drue/stil, ikke bare produsent: appassimento, ripasso, Primitivo, Nero d'Avola, Aglianico, Montepulciano. Det stemmer med profilen hans allerede (Ripasso 4.5, Amarone 4.2 × 2, «struktur og modenhet»).
+
+**Forbehold:** n=1. Per vektingsprinsippene er dette en **hypotese**, ikke et bekreftet mønster – og det motsier ikke at han elsker Barbera (topp-rødvinen hans *er* en Barbera). Signalet gjelder format og kvalitetsnivå, ikke druen. Bekreftes eller avkreftes ved neste kartong.
+
 ### Rødvin (klart hovedkategorien – 58 viner, snitt 3.76)
 
 **Sterke mønstre i dataene:**
@@ -347,8 +374,11 @@ Når Claude finner viner med kjent klokke-profil, søk etter lignende.
 | Hattingley Valley English Sparkling 2014 | 4.0 | — | — | — | — | Engelsk traditional method (ikke-rosé) |
 | Hattingley Valley Rosé 2021 | — (foreslått) | 7/12 | 10/12 | — | 5,2 g/l | Engelsk traditional method rosé |
 | Catena Zapata Paraje Altamira Malbec 2024 | 4.2 | 8/12 | 7/12 | 7/12 | 3,6 g/l | Uco Valley høyde-Malbec, floral/savory, diskret eik |
+| **Vespa Barbera 3 l** (varenr 5280806) | **avvist – «for lett»** | 8/12 | 9/12 | 7/12 | <3 g/l | Ustøttet ankerpunkt: identiske klokker med Fenocchio 4.6, motsatt dom |
 
 *(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
+
+> **Les tabellen med det negative ankeret i bånn.** Vespa-raden er ikke en topp-vin – den står der fordi den beviser at klokke-similarity alene er utilstrekkelig: to viner med identisk 8/9/7 fikk 4.6 og «for lett». Bruk klokkene til å finne *stil-slektninger*, ikke til å rangere kraft eller kvalitet. Se «Kraftigere kan IKKE søkes på Fylde-klokka» under Stilpreferanser.
 
 ## Blindspots (eksplisitt mangel på data)
 

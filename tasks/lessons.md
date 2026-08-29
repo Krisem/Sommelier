@@ -113,3 +113,29 @@ _(2026-05-12 – Off-dry tysk hvitt: migrert til `knowledge/smaksprofil.md` som 
 **Hva skjedde:** Kristoffer ba om ett øl til en ostetallerken «som de har inne på polet på Røa». Repo-snapshotet er kun vin (ingen øl), så jeg anbefalte Boon Oude Geuze ut fra profil + generell sortimentskunnskap uten å sjekke Røa. Boon var ikke inne på Røa. Først etter det åpnet jeg polet.no live og fant at Røa faktisk hadde **3 Fonteinen Oude Geuze** (varenr 10945401, 5 stk) og Lindemans Oude Kriek Cuvée René (10202401) — begge bedre svar enn gjettet.
 **Hvorfor det var feil:** Når brukeren navngir en konkret butikk, er «er den inne der?» selve premisset for spørsmålet — ikke en detalj som kan hedges. Å anbefale noe som «vanligvis føres» er verdiløst hvis han står på Røa og hylla er tom. Jeg lot fravær av øl i snapshotet bli en unnskyldning for å gjette i stedet for å bruke live-veien jeg faktisk hadde (Playwright mot vmpws).
 **Hva jeg gjør annerledes nå:** Nevner brukeren et spesifikt pol (øl ELLER vin), er butikk-lager en HARD forutsetning: verifiser at anbefalingen er kjøpbar i akkurat den butikken *før* jeg nevner den. Oppskrift: finn store-ID (`/vmpws/v2/vmp/stores?fields=FULL&pageSize=500`, filtrer på navn) → søk med `...:availableInStores:<storeId>` og les `storesAvailability` per produkt. Snapshotet er wine-only og har ikke butikk-lager — for butikk-spesifikke spørsmål (og all øl) må jeg gå live via Playwright/vmpws, ikke gjette fra sortimentskunnskap. Aldri presenter en kandidat for et navngitt pol uten bekreftet lager der.
+
+---
+
+## 2026-08-29 – Anbefalte på klokke-likhet; klokkene skiller ikke kraft
+
+**Hva skjedde:** Vespa Barbera 3 l (5280806) ble anbefalt. Kristoffer fant den for lett og ville
+ha noe kraftigere – særlig relevant høst/vinter. Vinen har *identiske* klokker med hans høyest
+ratede rødvin, Fenocchio Barbera d'Alba Superiore (4.6): Fylde 8, Friskhet 9, Garvestoffer 7,
+samme stilmerkelapp «Frisk og fruktig», samme drue. Klokke-similarity pekte altså rett på den.
+
+**Hvorfor det var feil:** Klokkene måler sensorisk profil, ikke konsentrasjon, fatpreg eller
+kvalitetsnivå. To viner kan være 8/9/7 og likevel være 273 og 163 kr/L, Superiore med 6 mnd fat
++ 6 mnd flaske mot ren ståltank uten lagring. Jeg behandlet klokke-likhet som om den var
+kvalitets- eller kraftlikhet. Den er verken.
+
+**Hva jeg gjør annerledes nå:**
+- Klokker brukes til å finne **stil-slektninger**, aldri til å rangere kraft eller kvalitet.
+- Når han ber om «kraftigere»: les `metode` og `stil` i details (fat, appassimento, ripasso,
+  lang gjæring), bruk appellasjonsnivå (Superiore/Riserva/DOCG > generisk regional DOC), og se på
+  **literpris** – i lavprisenden er den en reell konsentrasjonsindikator.
+- På 3 l spesielt: nesten alt ligger 145–200 kr/L og er bygget lett og lettdrukket. Vil han ha
+  kropp der, bytt stilfamilie (appassimento, ripasso, Primitivo, Nero d'Avola, Aglianico,
+  Montepulciano) framfor å lete etter en kraftigere utgave av en lett drue.
+- **Ikke kjemp mot druen.** Barbera er syrerik og lett-til-middels i kropp per konstruksjon. At
+  han elsker Barbera (4.6) og samtidig avviste denne er ikke en selvmotsigelse – det er formatet
+  og kvalitetsnivået som skiller.
