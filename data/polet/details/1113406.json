@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1113406",
+  "distrikt": "Rhône",
+  "druer": "Syrah 40 prosent, Grenache 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 178.3,
+  "lukt": "Fruktig, litt sval og krydret aroma av modne mørke og røde bær, litt syltet frukt, kamfer og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk, 9 md. fatlagring for 10% av vinen.",
+  "navn": "André Brunel Côtes du Rhône Signature Series",
+  "parser": "json",
+  "pris": 534.9,
+  "produsent": "Best Buys",
+  "smak": "Ung og saftig med god fylde, preg av kirsebær og mørke skogsbær, streif av urter, kamfer og pepper.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Andr%C3%A9-Brunel-C%C3%B4tes-du-Rh%C3%B4ne-Signature-Series/p/1113406",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1113406",
+  "volum": 300
+}

@@ -1,0 +1,37 @@
+{
+  "alkohol": "15%",
+  "code": "10868907",
+  "distrikt": "Sicilia",
+  "druer": "Nerello Mascalese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 3329.67,
+  "lukt": "Aromatisk, rød og mørk frukt, mineraler.",
+  "matparring": [
+    "Storvilt"
+  ],
+  "navn": "Cornelissen Magma 2016",
+  "parser": "json",
+  "pris": 9989,
+  "produsent": "Frank Cornelissen",
+  "smak": "Strukturert, med frukt og mineraler, lang ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "7 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/Cornelissen-Magma-2016/p/10868907",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "10868907",
+  "volum": 300,
+  "årgang": "2016"
+}

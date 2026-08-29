@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "12309606",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 259.97,
+  "lukt": "Aroma med utviklet preg av tørket frukt, kirsebær, litt eplekjerne, lær, te, fat og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Høstet siste del av oktober. 8-10 dagers gjæring og maserering. Oppbevaring i botte i over et års tid, før tapping på bib.",
+  "navn": "Massolino Langhe Rosso",
+  "parser": "json",
+  "pris": 779.9,
+  "produsent": "Massolino",
+  "smak": "Fyldig og fast, preg av kirsebær, tørket frukt, litt eplekjerne, trekrydder, lakris og tørket urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Massolino-Langhe-Rosso/p/12309606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12309606",
+  "volum": 300,
+  "årgang": "2024"
+}

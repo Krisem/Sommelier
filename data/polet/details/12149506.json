@@ -1,0 +1,36 @@
+{
+  "alkohol": "12,5%",
+  "code": "12149506",
+  "distrikt": "Rheingau",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Tyskland, Rheingau",
+  "literpris": 161.63,
+  "lukt": "Ungdommelig og fruktig preg av modne røde bær, hint av blomster, skogbunn og urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Jordsmonn av fyllitskifer og kalkstein. Håndplukkede druer, skånsomt presset, kaldmaserasjon. Gjæret og modnet på 1200l eikefat.",
+  "navn": "Künstler Inspiration Pinot Noir",
+  "parser": "json",
+  "pris": 484.9,
+  "produsent": "Weing. Künstler",
+  "smak": "Myk, bærpreget og saftig, innslag av kirsebær og jordbær, hint av krydder og urter.",
+  "sukker": "5,4 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Tyskland/Rheingau/K%C3%BCnstler-Inspiration-Pinot-Noir/p/12149506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12149506",
+  "volum": 300
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "10570306",
+  "distrikt": "Atlantique",
+  "druer": "Cabernet Sauvignon 30 prosent, Merlot 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Atlantique",
+  "literpris": 141.63,
+  "lukt": "Ungt og fruktig preg av mørke og røde bær, innslag av grønne urter, paprika og litt lakris.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Fra vinmarker med sand og steinholdig jordsmonn. Lagret på ståltank.",
+  "navn": "Le Vigneron 2024",
+  "parser": "json",
+  "pris": 424.9,
+  "produsent": "Heyday Wines",
+  "smak": "Fruktig, litt undermoden og fast stil, preg av kirsebær, paprika, litt lakris og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,8 g/l",
+  "syre": "4,6 g/l",
+  "url": "/Land/Frankrike/Atlantique/Le-Vigneron-2024/p/10570306",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10570306",
+  "volum": 300,
+  "årgang": "2024"
+}

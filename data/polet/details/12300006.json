@@ -1,0 +1,37 @@
+{
+  "alkohol": "12,5%",
+  "code": "12300006",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia",
+  "literpris": 188.3,
+  "lukt": "Ungdommelig og litt krydret preg av modne kirsebær, innslag av røde plommer og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer, fermentert på ståltank og betong. Minimal filtrering.",
+  "navn": "I Cipressi di Fèlsina",
+  "parser": "json",
+  "pris": 564.9,
+  "produsent": "Fèlsina",
+  "smak": "Nyansert med god lengde, preg av friske kirsebær, hint av tørket frukt, bringebær, krydder og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Italia/I-Cipressi-di-F%C3%A8lsina/p/12300006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12300006",
+  "volum": 300
+}

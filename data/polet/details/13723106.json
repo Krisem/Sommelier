@@ -1,0 +1,37 @@
+{
+  "alkohol": "13%",
+  "code": "13723106",
+  "druer": "Saperavi 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Georgia",
+  "literpris": 206.63,
+  "lukt": "Fruktig og ungdommelig preg av modne mørke skogsbær, litt krekling, fiol, lakris og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Gura Saperavi Qvevri 2024",
+  "parser": "json",
+  "pris": 619.9,
+  "produsent": "Gura",
+  "smak": "Fruktig, ung og fast, saftig preg av mørke skogsbær, frisk kirsebær, litt lakris, kamfer og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Georgia/Gura-Saperavi-Qvevri-2024/p/13723106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13723106",
+  "volum": 300,
+  "årgang": "2024"
+}

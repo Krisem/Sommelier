@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13945707",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 65 prosent, Merlot 30 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 1386.33,
+  "lukt": "Aroma av mørke bær, urter, krydder, integrert fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Dom. de Chevalier Rouge 2018",
+  "parser": "json",
+  "pris": 4159,
+  "produsent": "Dom. de Chevalier",
+  "smak": "Konsentrert, ung, lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Dom-de-Chevalier-Rouge-2018/p/13945707",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13945707",
+  "volum": 300,
+  "årgang": "2018"
+}

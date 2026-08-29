@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "12367906",
+  "distrikt": "Bekaa Valley",
+  "druer": "Carignan 13 prosent, Cinsault 48 prosent, Syrah 23 prosent, Cabernet Sauvignon 16 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 176.63,
+  "lukt": "Fruktig, litt krydret og sval aroma, preg av modne røde og mørke bær, urt, nype, kamfer og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Innhøsting for hånd, fermentering med villgjær på gamle betongtanker. Modning også på betong.",
+  "navn": "Dom. des Tourelles Bekaa Valley Red 2023",
+  "parser": "json",
+  "pris": 529.9,
+  "produsent": "Symposium Wines",
+  "smak": "Litt utviklet og myk med god fylde, preg av kirsebær, jordbær, litt rosin, nype, urt, te og kamfer.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Dom-des-Tourelles-Bekaa-Valley-Red-2023/p/12367906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12367906",
+  "volum": 300,
+  "årgang": "2023"
+}

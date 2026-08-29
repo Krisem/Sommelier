@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "11294007",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 44 prosent, Cabernet Franc 10 prosent, Merlot 44 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Listrac-Médoc",
+  "literpris": 599.17,
+  "lukt": "Mørke bær, mineralsk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Ch. Fourcas Dupré 2018",
+  "parser": "json",
+  "pris": 1797.5,
+  "produsent": "Ch. Fourcas Dupré",
+  "smak": "Mørke bær, mineralsk, god struktur.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Listrac-Médoc",
+  "url": "/Land/Frankrike/Bordeaux/Listrac-M%C3%A9doc/Ch-Fourcas-Dupr%C3%A9-2018/p/11294007",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11294007",
+  "volum": 300,
+  "årgang": "2018"
+}

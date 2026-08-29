@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "125806",
+  "distrikt": "Toscana",
+  "druer": "Merlot 10 prosent, Cabernet Sauvignon 20 prosent, Sangiovese 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Toscana",
+  "literpris": 146.63,
+  "lukt": "Modent preg av røde bær, litt tørket frukt og svale urter, hint av skogbunn og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Vinen fermenteres i ståltank i 10 dager, stilk og skall blir fjernet, før malolatisk gjæring.",
+  "navn": "Piccini Rosso di Toscana",
+  "parser": "json",
+  "pris": 439.9,
+  "produsent": "Tenuta Piccini",
+  "smak": "Litt utviklet og nyansert med god fylde, preg av modne røde bær, litt rosin, nype og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "6,5 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Italia/Toscana/Piccini-Rosso-di-Toscana/p/125806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "125806",
+  "volum": 300
+}

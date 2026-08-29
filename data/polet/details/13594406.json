@@ -1,0 +1,38 @@
+{
+  "alkohol": "14%",
+  "code": "13594406",
+  "distrikt": "Jumilla",
+  "druer": "Monastrell 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Jumilla",
+  "literpris": 156.63,
+  "lukt": "Fruktig og aromatisk med duft av mørke røde bær og hint av urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Girasol Organic Monastrell",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Hacienda 200 Barricas",
+  "smak": "Ren, fruktig og balansert med myke tanniner og smak mørke røde bær.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Spania/Jumilla/Girasol-Organic-Monastrell/p/13594406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13594406",
+  "volum": 300,
+  "årgang": "2020"
+}

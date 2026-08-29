@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "12586906",
+  "distrikt": "Valencia",
+  "druer": "Syrah 30 prosent, Monastrell 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia, Alicante",
+  "literpris": 166.4,
+  "lukt": "Aroma av kirsebær, skogsbær og morell, litt krydder, lær, skogbunn og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Kaldmasserasjon ved 8-10 °C i 2-3 dager. Druesorter gjæret separat på ståltank.",
+  "navn": "Bod. Francisco Gomez VID-A",
+  "parser": "json",
+  "pris": 499.2,
+  "produsent": "Francisco Gómez",
+  "smak": "Fruktig, litt utviklet, krydret og fast, preg av kirsebær, morell og krekling, hint av svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Alicante",
+  "url": "/Land/Spania/Valencia/Alicante/Bod-Francisco-Gomez-VID-A/p/12586906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12586906",
+  "volum": 300
+}

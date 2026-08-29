@@ -1,0 +1,36 @@
+{
+  "alkohol": "13,5%",
+  "code": "13032506",
+  "distrikt": "California",
+  "druer": "Zinfandel 20 prosent, Cabernet Sauvignon 35 prosent, Syrah 10 prosent, Merlot 35 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 186.63,
+  "lukt": "Aroma av fat, mørke bær og vanilje, hint av mint.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Ståltank, amerikansk og fransk eik (staver).",
+  "navn": "Apothic Red California",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Apothic",
+  "smak": "Rik og fruktig med noe sødme. Bjørnebær, blåbær og sjokolade.",
+  "sukker": "12 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/USA/California/Apothic-Red-California/p/13032506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13032506",
+  "volum": 300
+}

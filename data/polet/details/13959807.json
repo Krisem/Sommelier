@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13959807",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Beaune Premier Cru",
+  "literpris": 999.67,
+  "lukt": "Duft av moreller, bringebær og sedertre.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Dom. Jessiaume Beaune 1er Cru Les Cents Vignes 2022",
+  "parser": "json",
+  "pris": 2999,
+  "produsent": "Dom. Jessiaume",
+  "smak": "Mørke bær og plommer. Hint av eik. Lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Beaune Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Beaune-Premier-Cru/Dom-Jessiaume-Beaune-1er-Cru-Les-Cents-Vignes-2022/p/13959807",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13959807",
+  "volum": 300,
+  "årgang": "2022"
+}

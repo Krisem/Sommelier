@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "11042806",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte",
+  "literpris": 159.97,
+  "lukt": "Aroma preget av røde og mørke bær, litt tørket frukt og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon med temperaturkontrollert gjæring i ståltank, lagring på brukte eikefat i 7-8 md.",
+  "navn": "Monte Luzzo Piemonte Barbera 2025",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Cant. Povero",
+  "smak": "Ung og fruktig, preg av røde og mørke bær, hint tørket frukt og urter, litt fast ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,8 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Italia/Piemonte/Monte-Luzzo-Piemonte-Barbera-2025/p/11042806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "11042806",
+  "volum": 300,
+  "årgang": "2025"
+}

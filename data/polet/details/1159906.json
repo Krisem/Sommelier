@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "1159906",
+  "distrikt": "Lisboa",
+  "druer": "Shiraz 60 prosent, Touriga Nacional 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Lisboa",
+  "literpris": 159.97,
+  "lukt": "Ungdommelig aroma av modne mørke bær, innslag av vanilje, kanel og fatkrydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Vinifiert av avstilkede druer, temperaturkontrollert gjæring ved 28-30 °C, maserasjonstid 28 dager, 6 md. på eikefat.",
+  "navn": "Casa Santos Lima Cigarra Reserva Shiraz Touriga Nacional 2024",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Casa Santos Lima",
+  "smak": "Saftig og myk med god lengde, preg av mørke og røde bær, litt vanilje og fat, streif av sødme.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "8,5 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Portugal/Lisboa/Casa-Santos-Lima-Cigarra-Reserva-Shiraz-Touriga-Nacional-2024/p/1159906",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1159906",
+  "volum": 300,
+  "årgang": "2024"
+}

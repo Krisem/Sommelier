@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "12641306",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 20 prosent, Barbera 80 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte",
+  "literpris": 159.97,
+  "lukt": "Aroma med ungt preg av modne kirsebær, litt krydder, syltet frukt, vanilje, lakris og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring, lagret i stål og noe fat.",
+  "navn": "Enzo Bartoli Piemonte Rosso",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "MGM Mondo del Vino",
+  "smak": "Fruktig med god fylde og friskhet, preg av kirsebær, litt syltet frukt, krydder, vanilje og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,6 g/l",
+  "syre": "6,1 g/l",
+  "url": "/Land/Italia/Piemonte/Enzo-Bartoli-Piemonte-Rosso/p/12641306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12641306",
+  "volum": 300,
+  "årgang": "2024"
+}

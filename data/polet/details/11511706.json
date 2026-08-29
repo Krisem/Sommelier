@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "11511706",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels lys rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 209.97,
+  "lukt": "Bærpreget med kirsebær, rose og noe krydder.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Gjæring i ståltanker, modning 12 mnd på en blanding av slavonske botti grande og ståltanker.",
+  "navn": "Viberti Giovanni Lampia 2024",
+  "parser": "json",
+  "pris": 629.9,
+  "produsent": "Viberti Giovanni",
+  "smak": "Mineralsk, friskt bærpreg.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Viberti-Giovanni-Lampia-2024/p/11511706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11511706",
+  "volum": 300,
+  "årgang": "2024"
+}

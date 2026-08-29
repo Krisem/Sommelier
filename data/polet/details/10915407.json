@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "10915407",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mørkerød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 4059.73,
+  "lukt": "Aroma av krydder og balsamico, mineralske undertoner.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Paolo Conterno Barolo Ginestra Riserva 2005",
+  "parser": "json",
+  "pris": 12179.2,
+  "produsent": "Paolo Conterno",
+  "smak": "Kraftig, varm og balansert med toner av mørk frukt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Paolo-Conterno-Barolo-Ginestra-Riserva-2005/p/10915407",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "10915407",
+  "volum": 300,
+  "årgang": "2005"
+}

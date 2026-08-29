@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "11365207",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Colli della Toscana Centrale",
+  "literpris": 1499.97,
+  "lukt": "Mørke bær, krydder, litt lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Fontodi Flaccianello 2022",
+  "parser": "json",
+  "pris": 4499.9,
+  "produsent": "Az. Agr. Fontodi",
+  "smak": "Rik, balansert med bær krydder og mineraler.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Colli della Toscana Centrale",
+  "url": "/Land/Italia/Toscana/Colli-della-Toscana-Centrale/Fontodi-Flaccianello-2022/p/11365207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11365207",
+  "volum": 300,
+  "årgang": "2022"
+}

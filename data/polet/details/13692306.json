@@ -1,0 +1,37 @@
+{
+  "alkohol": "13,5%",
+  "code": "13692306",
+  "druer": "Sangiovese 40 prosent, Primitivo 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rødblå.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia",
+  "literpris": 153.3,
+  "lukt": "Krydret og ungdommelig preg av morell, modne mørke bær og plommer, litt fat og sjokolade.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Etter malolaktisk fermentering modnes vinen i 6 md i en kombinasjon av ståltank og eik.",
+  "navn": "Lisa 1503 Rosso d'Artista",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Oenoforos",
+  "smak": "God fylde og fasthet, litt sødme, preg av modne mørke bær, plommer, litt tørket frukt, fat og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "12,5 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Italia/Lisa-1503-Rosso-d%27Artista/p/13692306",
+  "utvalg": "Basisutvalget",
+  "varenummer": "13692306",
+  "volum": 300
+}

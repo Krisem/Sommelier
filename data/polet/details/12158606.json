@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "12158606",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 30 prosent, Molinara 10 prosent, Corvina 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 5,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Bardolino",
+  "literpris": 166.63,
+  "lukt": "Fruktig og ungdommelig aroma av kirsebær, litt jordbær og rips, hint av krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "metode": "12 dager fermentering i ståltank ved 23 C og kort (remontage) pumping. 4 måneder modning på ståltank før tapping.",
+  "navn": "Tommasi Bardolino",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Tommasi",
+  "smak": "Saftig, kirsebærpreget og litt krydret med innslag av jordbær, hint av lakris og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,1 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Bardolino",
+  "url": "/Land/Italia/Veneto/Bardolino/Tommasi-Bardolino/p/12158606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12158606",
+  "volum": 300,
+  "årgang": "2024"
+}

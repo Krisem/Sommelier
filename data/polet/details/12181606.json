@@ -1,0 +1,38 @@
+{
+  "alkohol": "13,5%",
+  "code": "12181606",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 166.67,
+  "lukt": "Fruktig og litt krydret aroma av moden jordbær, kirsebær, svale urter, litt rose, fat og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Innhøsting om natten. Gjæring på ståltanker, skallmasserasjon i 8-10 dager. Lagres i 3 måneder på franske og amerikanske fat.",
+  "navn": "Lynx Pinot Noir",
+  "parser": "json",
+  "pris": 500,
+  "produsent": "Vinimundi AB",
+  "smak": "Myk og fruktig med litt sødme, preg av moden kirsebær, jordbær, litt fat, krydder og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "6,3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/USA/California/Lynx-Pinot-Noir/p/12181606",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12181606",
+  "volum": 300,
+  "årgang": "2024"
+}

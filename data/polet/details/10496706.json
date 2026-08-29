@@ -1,0 +1,36 @@
+{
+  "alkohol": "13,5%",
+  "code": "10496706",
+  "distrikt": "California",
+  "druer": "Zinfandel 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 176.63,
+  "lukt": "Aroma av modne mørke bær, plomme og syltet frukt, innslag av tørket urt, blomst og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Skånsom pressing, gjæret temperaturkontrollert i ståltanker, 6 md.",
+  "navn": "Cline Zinfandel",
+  "parser": "json",
+  "pris": 529.9,
+  "produsent": "California House",
+  "smak": "Saftig, myk og ungdommelig, preg av søtlige mørke og røde bær, litt tørket frukt, krydder og urt.",
+  "sukker": "5,1 g/l",
+  "syre": "6,3 g/l",
+  "url": "/Land/USA/California/Cline-Zinfandel/p/10496706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "10496706",
+  "volum": 300
+}

@@ -1,0 +1,35 @@
+{
+  "alkohol": "12%",
+  "code": "10379006",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania",
+  "literpris": 129.97,
+  "lukt": "Ungt preg modne mørke og røde bær, plommer, litt jordbær, blomster, lakris og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Ståltankfermentert, ueiket.",
+  "navn": "Thr3 Monkeys Red",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "Enjoy Wine & Spirits",
+  "smak": "Myk, fersk og fruktig med litt sødme, preg av modne røde og mørke bær, litt krydder og urter.",
+  "sukker": "15,6 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Spania/Thr3-Monkeys-Red/p/10379006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "10379006",
+  "volum": 300
+}

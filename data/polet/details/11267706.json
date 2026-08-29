@@ -1,0 +1,35 @@
+{
+  "alkohol": "11,5%",
+  "code": "11267706",
+  "druer": "Montepulciano 5 prosent, Sangiovese 95 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 5,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia",
+  "literpris": 129.97,
+  "lukt": "Litt utviklet aroma med preg av røde bær, hint syltetøy, lakris og urter.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Relativ kjølig gjæring i ståltanker. Lagres i ståltanker.",
+  "navn": "Tavernello Rosso",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "Caviro",
+  "smak": "Fruktig preg av røde bær og litt eple, innslag av krydder, tørket frukt og urter.",
+  "sukker": "4 g/l",
+  "syre": "6,5 g/l",
+  "url": "/Land/Italia/Tavernello-Rosso/p/11267706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11267706",
+  "volum": 300
+}

@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "12046507",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Volnay",
+  "literpris": 1092.9,
+  "lukt": "Aroma av røde bær, anis og skogbunn, florale toner.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau"
+  ],
+  "navn": "Seguin Manuel Volnay Vieilles Vignes 2018",
+  "parser": "json",
+  "pris": 3278.7,
+  "produsent": "Dom. Seguin-Manuel",
+  "smak": "Elegant med frukt og lang lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "underdistrikt": "Volnay",
+  "url": "/Land/Frankrike/Burgund/Volnay/Seguin-Manuel-Volnay-Vieilles-Vignes-2018/p/12046507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12046507",
+  "volum": 300,
+  "årgang": "2018"
+}

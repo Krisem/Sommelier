@@ -1,0 +1,38 @@
+{
+  "alkohol": "14%",
+  "code": "13711106",
+  "distrikt": "Jumilla",
+  "druer": "Monastrell 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Jumilla",
+  "literpris": 159.97,
+  "lukt": "Aroma med ungdommelig preg av modne og sylta røde bær, litt urter, blomster, drops og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i ståltanker.",
+  "navn": "Farmers Market",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Viñedos y Bodegas J.M. Martínez V",
+  "smak": "Fokusert, saftig, litt fast og krydret, preg av fullmodne røde og mørke bær, litt lakris og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Spania/Jumilla/Farmers-Market/p/13711106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13711106",
+  "volum": 300
+}

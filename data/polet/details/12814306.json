@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "12814306",
+  "distrikt": "Rheinhessen",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Tyskland, Rheinhessen",
+  "literpris": 199.67,
+  "lukt": "Litt utviklet aroma av modne røde bær, innslag av syltet frukt, jordbær, litt treverk og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i ståltank og eldre eikefat.",
+  "navn": "Geil Pinot Noir",
+  "parser": "json",
+  "pris": 599,
+  "produsent": "Weing. Johann Geil",
+  "smak": "Saftig og nokså myk, preg av moden jordbær, rørte bringebær, litt svale urter og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Tyskland/Rheinhessen/Geil-Pinot-Noir/p/12814306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12814306",
+  "volum": 300,
+  "årgang": "2022"
+}

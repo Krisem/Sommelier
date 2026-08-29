@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "12121006",
+  "distrikt": "Castilla La Mancha",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Castilla La Mancha, La Mancha",
+  "literpris": 129.97,
+  "lukt": "Aroma av ferske røde og mørke bær, litt krydder, blå plommer, urt og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæring på åbne beholder. Lagring på ståltank.",
+  "navn": "Bod. Entremontes Tempranillo 2023",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "Bodegas Entremontes",
+  "smak": "Saftig med god fylde, ungt preg av kirsebær, bringebær, litt krekling, krydder og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "La Mancha",
+  "url": "/Land/Spania/Castilla-La-Mancha/La-Mancha/Bod-Entremontes-Tempranillo-2023/p/12121006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12121006",
+  "volum": 300,
+  "årgang": "2023"
+}

@@ -1,0 +1,35 @@
+{
+  "alkohol": "13%",
+  "code": "12201306",
+  "druer": "Castelão 50 prosent, Alfrocheiro Preto 50 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal",
+  "literpris": 149.97,
+  "lukt": "Ungdommelig preg av røde og mørke bær, innslag av fat, urter, drops, litt kamfer og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i ståltanker.",
+  "navn": "Terra d'Alter ALF",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Ímpar Vinhas & Vinhos",
+  "smak": "Fyldig og saftig med fruktig preg av fullmodne mørke og røde bær, litt fat, kamfer og urt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Portugal/Terra-d%27Alter-ALF/p/12201306",
+  "utvalg": "Basisutvalget",
+  "varenummer": "12201306",
+  "volum": 300
+}

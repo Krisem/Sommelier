@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "10761406",
+  "distrikt": "Castilla La Mancha",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Castilla La Mancha, Castilla",
+  "literpris": 173.3,
+  "lukt": "Toner av mørke bær med hint av vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Belo Tempranillo",
+  "parser": "json",
+  "pris": 519.9,
+  "produsent": "Los Tinos",
+  "smak": "Frisk og balansert, middels fylde. Hint av mørke bær.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Castilla",
+  "url": "/Land/Spania/Castilla-La-Mancha/Castilla/Belo-Tempranillo/p/10761406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "10761406",
+  "volum": 300,
+  "årgang": "2024"
+}

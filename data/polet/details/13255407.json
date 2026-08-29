@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13255407",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 2164.7,
+  "lukt": "Utviklet aroma av røde bær, sopp, skogbunn, lakris og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Franco Conterno Barolo Riserva 7 anni 2014",
+  "parser": "json",
+  "pris": 6494.1,
+  "produsent": "Franco Conterno",
+  "smak": "Utviklet med modne tanniner, god konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,1 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Franco-Conterno-Barolo-Riserva-7-anni-2014/p/13255407",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13255407",
+  "volum": 300,
+  "årgang": "2014"
+}

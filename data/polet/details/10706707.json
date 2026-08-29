@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "10706707",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rubinrød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Gattinara",
+  "literpris": 566.63,
+  "lukt": "Høstløv, røde bær, frukt, krekling, tørket frukt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Travaglini Gattinara 2022",
+  "parser": "json",
+  "pris": 1699.9,
+  "produsent": "Giancarlo Travaglini",
+  "smak": "Røde bær, villbringebær, fiken og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Gattinara",
+  "url": "/Land/Italia/Piemonte/Gattinara/Travaglini-Gattinara-2022/p/10706707",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "10706707",
+  "volum": 300,
+  "årgang": "2022"
+}

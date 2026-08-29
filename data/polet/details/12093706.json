@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "12093706",
+  "distrikt": "Jumilla",
+  "druer": "Monastrell 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Jumilla",
+  "literpris": 166.63,
+  "lukt": "Aroma med ørlite utviklet preg av modne mørke bær, trekrydder og vanilje, hint av svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "2 md. lagring på amerikansk eikefat og 3 md. lagring på flaske.",
+  "navn": "Finca Bacara 3015 Monastrell",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Finca Bacara",
+  "smak": "Fyldig og litt fast, preg av kirsebær, litt krekling og fat, innslag av lakris, vanilje og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Spania/Jumilla/Finca-Bacara-3015-Monastrell/p/12093706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12093706",
+  "volum": 300,
+  "årgang": "2024"
+}

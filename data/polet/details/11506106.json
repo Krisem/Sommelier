@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "11506106",
+  "distrikt": "Sicilia",
+  "druer": "Frappato 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 147.67,
+  "lukt": "Fruktig og litt krydret aroma preget av modne røde og mørke bær, litt blomst, skogbunn og urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Lagret på ståltanker.",
+  "navn": "Cant. Ermes Frappato",
+  "parser": "json",
+  "pris": 443,
+  "produsent": "Cantine Ermes Soc.",
+  "smak": "Bærpreget og ørlite utviklet, innslag av morell, kirsebær, litt tørket urt, jordbær og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3,6 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/Cant-Ermes-Frappato/p/11506106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11506106",
+  "volum": 300,
+  "årgang": "2022"
+}

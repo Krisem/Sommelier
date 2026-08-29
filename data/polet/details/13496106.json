@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "13496106",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 60 prosent, Cabernet Sauvignon 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Bordeaux, Bordeaux Supérieur",
+  "literpris": 188.63,
+  "lukt": "Nyansert og litt utviklet aroma av modne mørke og røde bær, krydder, tørket urt og tobakk.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Trad. Bordeaux-metode i ståltanker. Naturlig malolak. gjæring. Lagret.",
+  "navn": "Ch. Le Grand Verdus Bordeaux Supérieur 2022",
+  "parser": "json",
+  "pris": 565.9,
+  "produsent": "Ch. Le Grand Verdus",
+  "smak": "Litt utviklet med preg av modne røde bær og plommer, litt grønn urt, paprika, te og tobakk.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,0 g/l",
+  "underdistrikt": "Bordeaux Supérieur",
+  "url": "/Land/Frankrike/Bordeaux/Bordeaux-Sup%C3%A9rieur/Ch-Le-Grand-Verdus-Bordeaux-Sup%C3%A9rieur-2022/p/13496106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13496106",
+  "volum": 300,
+  "årgang": "2022"
+}

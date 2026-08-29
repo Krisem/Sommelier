@@ -1,0 +1,36 @@
+{
+  "alkohol": "12,5%",
+  "code": "11151206",
+  "druer": "Bonarda 70 prosent, Malbec 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Argentina",
+  "literpris": 153.3,
+  "lukt": "Aroma av modne røde og mørke bær, innslag av lakris, krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "metode": "Fermentering i betongtanker i 7-10 dgr. Malolaktisk gjæring.",
+  "navn": "Weinert Pedro del Castillo red blend",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Litt utviklet og fast med preg av modne kirsebær og plommer, litt krydder, lakris og sjokolade.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Argentina/Weinert-Pedro-del-Castillo-red-blend/p/11151206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11151206",
+  "volum": 300,
+  "årgang": "2025"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13946107",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 5 prosent, Cabernet Sauvignon 55 prosent, Merlot 35 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 2115.33,
+  "lukt": "Mørk frukt, toner av jord, tobakk og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Haut-Bailly 2018",
+  "parser": "json",
+  "pris": 6346,
+  "produsent": "Ch. Haut-Bailly",
+  "smak": "Konsentrert og fyldig. Frukt med krydder og myke tanniner. Lang avslutning.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Haut-Bailly-2018/p/13946107",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13946107",
+  "volum": 300,
+  "årgang": "2018"
+}

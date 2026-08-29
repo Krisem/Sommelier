@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,4%",
+  "code": "11585607",
+  "distrikt": "Oregon",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, Oregon, Chehalem",
+  "literpris": 1714.43,
+  "lukt": "Aroma av røde bær, skogbunn og fat, floral tone.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Bergström Silice Pinot Noir 2016",
+  "parser": "json",
+  "pris": 5143.3,
+  "produsent": "Bergström Wines",
+  "smak": "Ren med god frukt og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,6 g/l",
+  "underdistrikt": "Chehalem",
+  "url": "/Land/USA/Oregon/Chehalem/Bergstr%C3%B6m-Silice-Pinot-Noir-2016/p/11585607",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11585607",
+  "volum": 300,
+  "årgang": "2016"
+}

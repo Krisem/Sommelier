@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "11201406",
+  "distrikt": "Castilla y León",
+  "druer": "Mencia 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Castilla y León, El Bierzo",
+  "literpris": 173.3,
+  "lukt": "Ung og saftig, preg av mørke og røde bær, innslag av urter og lakris, god lengde.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Vinstokker 30 år. Manuell innhøsting. Min 10% helklasefermentering. Malolaktisk fermentering på ståltank. 3 md. på franske fat.",
+  "navn": "Pilgrim Mencia",
+  "parser": "json",
+  "pris": 519.9,
+  "produsent": "Bod. Godelia",
+  "smak": "Ung og saftig, preg av mørke og røde bær, innslag av urter og lakris, god lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "El Bierzo",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/El-Bierzo/Pilgrim-Mencia/p/11201406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "11201406",
+  "volum": 300,
+  "årgang": "2025"
+}

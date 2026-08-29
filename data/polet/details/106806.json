@@ -1,0 +1,37 @@
+{
+  "alkohol": "13%",
+  "code": "106806",
+  "distrikt": "Sicilia",
+  "druer": "Nero d'Avola 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 159.97,
+  "lukt": "Aroma av fullmodne mørke bær og litt tørket frukt, innslag av svale urter, trevirke og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Etter innhøsting ble druene skånsomt presset og gjæret i ståltanker.",
+  "navn": "Barone Montalto Passivento",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Barone Montalto",
+  "smak": "Saftig med streif av sødme og litt fasthet, preg av sødmerike bær, krydder, sevje, urt og lakris.",
+  "sukker": "7 g/l",
+  "syre": "6,7 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/Barone-Montalto-Passivento/p/106806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "106806",
+  "volum": 300
+}

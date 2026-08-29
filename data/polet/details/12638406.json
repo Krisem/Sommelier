@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "12638406",
+  "distrikt": "Douro e Porto",
+  "druer": "Tinto Cão 5 prosent, Touriga Franca 20 prosent, Tinta Roriz 20 prosent, Tinta Barroca 10 prosent, Touriga Nacional 10 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Douro e Porto, Douro",
+  "literpris": 166.63,
+  "lukt": "Fruktig og ungdommelig aroma preget av mørke bær, svale urter, litt lakris, fat og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Fermentert i ståltank, deler av vinen gjennomgår malolaktisk gjæring og modning 6mnd på eik.",
+  "navn": "Niepoort Fabelaktig",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Niepoort",
+  "smak": "Saftig med god fasthet, preg av modne mørke bær og krydder, hint av lakris, svale urter og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Douro",
+  "url": "/Land/Portugal/Douro-e-Porto/Douro/Niepoort-Fabelaktig/p/12638406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "12638406",
+  "volum": 300,
+  "årgang": "2023"
+}

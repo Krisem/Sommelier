@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13389606",
+  "distrikt": "Burgenland",
+  "druer": "Blaufränkisch 34 prosent, St. Laurent 66 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med lilla toner.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Østerrike, Burgenland, Neusiedlersee",
+  "literpris": 211.67,
+  "lukt": "Rik duft av modne mørke bjørnebær og moreller, hibiskus og noe kirsebær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Heidi Schröck & Söhne Junge Löwen Red",
+  "parser": "json",
+  "pris": 635,
+  "produsent": "Weing. Heidi Schröck",
+  "smak": "Konsentrert og rik med god fylde. Saftig bærpreg av røde og mørke bær, lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Neusiedlersee",
+  "url": "/Land/%C3%98sterrike/Burgenland/Neusiedlersee/Heidi-Schr%C3%B6ck-%26-S%C3%B6hne-Junge-L%C3%B6wen-Red/p/13389606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "13389606",
+  "volum": 300,
+  "årgang": "2023"
+}

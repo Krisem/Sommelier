@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "10405707",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:30:53.257873+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 3528.77,
+  "lukt": "Aroma av røde bær, lakris, fioler og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Franco Conterno 7 Anni Barolo Riserva 2012",
+  "parser": "json",
+  "pris": 10586.3,
+  "produsent": "Franco Conterno",
+  "smak": "Frukt, konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Franco-Conterno-7-Anni-Barolo-Riserva-2012/p/10405707",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "10405707",
+  "volum": 300,
+  "årgang": "2012"
+}
