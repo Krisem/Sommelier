@@ -1,0 +1,37 @@
+{
+  "alkohol": "12,5%",
+  "code": "20852506",
+  "druer": "Garnacha 90 prosent, Tempranillo (Tinto del Pais) 10 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania",
+  "literpris": 159.97,
+  "lukt": "Aroma av bringebær og jordbær, med innslag av svale urter.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Ost"
+  ],
+  "navn": "P. A. Larsens Utvalgte Røde 2025",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "P. A. Larsen Vinhandel AS",
+  "smak": "Saftig munnfølelse med røde bær og urter. Fin lengde med moderate tanniner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4 g/l",
+  "url": "/Land/Spania/P-A-Larsens-Utvalgte-R%C3%B8de-2025/p/20852506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20852506",
+  "volum": 300,
+  "årgang": "2025"
+}

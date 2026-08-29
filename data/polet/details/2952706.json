@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "2952706",
+  "distrikt": "Lombardia",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Lombardia, Provincia di Pavia",
+  "literpris": 146.63,
+  "lukt": "Aroma med ungdommelig preg av røde bær, hint av mørke bær, urter og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Tradisjonell gjæring i ståltanker. Maserasjonstid i 8 dager.",
+  "navn": "La Bella Barbera",
+  "parser": "json",
+  "pris": 439.9,
+  "produsent": "Arcus Wine Brands",
+  "smak": "Saftig og ung med god friskhet, preg av røde bær og urter, innslag av kirsebær og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Provincia di Pavia",
+  "url": "/Land/Italia/Lombardia/Provincia-di-Pavia/La-Bella-Barbera/p/2952706",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2952706",
+  "volum": 300,
+  "årgang": "2022"
+}

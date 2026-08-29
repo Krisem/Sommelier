@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "19343806",
+  "distrikt": "Emilia-Romagna",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Emilia-Romagna, Rubicone",
+  "literpris": 156.63,
+  "lukt": "Aroma med fruktig og litt krydret preg av kirsebær, fiol, litt lakris og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Produsert på ståltank.",
+  "navn": "Luigi Leonardo Sangiovese Rubicone",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Cant. Luigi Sgarzi",
+  "smak": "Saftig, frisk og litt fast, preg av modne kirsebær, innslag av villbringebær, lakris og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Rubicone",
+  "url": "/Land/Italia/Emilia-Romagna/Rubicone/Luigi-Leonardo-Sangiovese-Rubicone/p/19343806",
+  "utvalg": "Testutvalget",
+  "varenummer": "19343806",
+  "volum": 300
+}

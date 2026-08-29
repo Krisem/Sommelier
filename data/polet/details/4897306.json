@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "4897306",
+  "distrikt": "Abruzzo",
+  "druer": "Montepulciano 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Abruzzo, Montepulciano d'Abruzzo",
+  "literpris": 166.63,
+  "lukt": "Aroma preget av mørke bær, litt blomst og krydder, hint av urter og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Håndhøstet, gjæret og modnet i ståltank.",
+  "navn": "Zaccagnini Cantina Rossa Montepulciano d'Abruzzo 2024",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Zaccagnini",
+  "smak": "Ungdommelig, fruktig og litt krydret med preg av mørke og røde bær, litt lakris og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "5,5 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Montepulciano d'Abruzzo",
+  "url": "/Land/Italia/Abruzzo/Montepulciano-d%27Abruzzo/Zaccagnini-Cantina-Rossa-Montepulciano-d%27Abruzzo-2024/p/4897306",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4897306",
+  "volum": 300,
+  "årgang": "2024"
+}

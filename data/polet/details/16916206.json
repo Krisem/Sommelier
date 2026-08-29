@@ -1,0 +1,34 @@
+{
+  "alkohol": "12%",
+  "code": "16916206",
+  "druer": "Aragónez 40 prosent, Castelão 30 prosent, Trincadeira 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal",
+  "literpris": 126.63,
+  "lukt": "Fruktig aroma av røde og mørke bær, hint av urter og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Grande Real",
+  "parser": "json",
+  "pris": 379.9,
+  "produsent": "Nova Beverage Group",
+  "smak": "God fylde, frisk, hint modne mørke bær, lakris og urter. Tørr og fast ettersmak.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Portugal/Grande-Real/p/16916206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16916206",
+  "volum": 300
+}

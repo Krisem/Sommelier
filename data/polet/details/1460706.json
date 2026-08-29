@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1460706",
+  "distrikt": "Breede River Valley",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Breede River Valley, Robertson",
+  "literpris": 154.63,
+  "lukt": "Sval aroma preget av mørke bær, tjære og lakris, hint av fat og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell gjæringsprosess ved 28 C i ståltanker. 5 md. lagring.",
+  "navn": "Robertson Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 463.9,
+  "produsent": "Robertson Winery",
+  "smak": "Bløt og fruktig start, preg av mørke bær, tjære og lakris, svakt bitter ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "4 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Robertson",
+  "url": "/Land/S%C3%B8r-Afrika/Breede-River-Valley/Robertson/Robertson-Cabernet-Sauvignon/p/1460706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1460706",
+  "volum": 300,
+  "årgang": "2024"
+}

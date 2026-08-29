@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "6018506",
+  "distrikt": "Rhône",
+  "druer": "Syrah 35 prosent, Grenache 55 prosent, Mourvèdre 10 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 166.63,
+  "lukt": "Fruktig aroma preget av mørke og røde bær, svale urter og krydder, litt fat, lær og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Druene ble avstilket før pressing, noen dagers karbonmaserasjon, langsom gjæring i gamle liggere (60-80 hl).",
+  "navn": "Ogier Artesis Côtes du Rhône",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Ogier",
+  "smak": "Ung, fruktig og saftig, preg av mørke bær og litt tørket frukt, innslag av fat, krydder og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Ogier-Artesis-C%C3%B4tes-du-Rh%C3%B4ne/p/6018506",
+  "utvalg": "Basisutvalget",
+  "varenummer": "6018506",
+  "volum": 300,
+  "årgang": "2025"
+}

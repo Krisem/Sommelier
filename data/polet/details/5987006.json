@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "5987006",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte",
+  "literpris": 203.3,
+  "lukt": "Fruktig aroma av røde og mørke bær, innslag av litt lakris, fiol og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Håndplukkede druer, naturlig gjæring, modning i betong.",
+  "navn": "Selezione di Luca Roagna Piemonte Barbera 2024",
+  "parser": "json",
+  "pris": 609.9,
+  "produsent": "Vignaioli Piemontesi",
+  "smak": "Ung, frisk og saftig, kirsebær- og morellpreget frukt, hint av lakris, litt grønne og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Italia/Piemonte/Selezione-di-Luca-Roagna-Piemonte-Barbera-2024/p/5987006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5987006",
+  "volum": 300,
+  "årgang": "2024"
+}

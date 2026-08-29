@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "1965806",
+  "distrikt": "Dão",
+  "druer": "Jaen 50 prosent, Touriga Nacional 20 prosent, Alfrocheiro Preto 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Dão",
+  "literpris": 150,
+  "lukt": "Aroma med preg av mørke og røde bær, morell og litt blomst, innslag av urter og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk.",
+  "navn": "Niepoort Rótulo Dão 2020",
+  "parser": "json",
+  "pris": 450,
+  "produsent": "Niepoort",
+  "smak": "Litt utviklet og fast med saftig preg av røde bær, litt mørke bær, krydder og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Portugal/D%C3%A3o/Niepoort-R%C3%B3tulo-D%C3%A3o-2020/p/1965806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1965806",
+  "volum": 300,
+  "årgang": "2020"
+}

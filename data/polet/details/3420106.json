@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3420106",
+  "distrikt": "Aragon",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Aragon, Calatayud",
+  "literpris": 153.3,
+  "lukt": "Bærpreget og fruktig aroma med innslag av lakris, svale urter, litt blomst og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Gjæring ved lav temperatur, maserasjon over flere dager. Ingen fatlagring.",
+  "navn": "Marqués de Nombrevilla Garnacha 2025",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Bod. San Alejandro",
+  "smak": "Ungdommelig, fruktig og litt krydret med preg av mørke og røde bær, grønne urter og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Calatayud",
+  "url": "/Land/Spania/Aragon/Calatayud/Marqu%C3%A9s-de-Nombrevilla-Garnacha-2025/p/3420106",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3420106",
+  "volum": 300,
+  "årgang": "2025"
+}

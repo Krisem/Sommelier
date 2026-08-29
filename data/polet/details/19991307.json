@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "19991307",
+  "distrikt": "Jura",
+  "druer": "Trousseau (Merenzao) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Jura, Arbois",
+  "literpris": 831.63,
+  "lukt": "Duft av røde og mørke bær, krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Tissot Singulier Trousseau 2022",
+  "parser": "json",
+  "pris": 2494.9,
+  "produsent": "André et Mireille Tissot",
+  "smak": "Saftig og frisk smak med god konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6 g/l",
+  "underdistrikt": "Arbois",
+  "url": "/Land/Frankrike/Jura/Arbois/Tissot-Singulier-Trousseau-2022/p/19991307",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19991307",
+  "volum": 300,
+  "årgang": "2022"
+}

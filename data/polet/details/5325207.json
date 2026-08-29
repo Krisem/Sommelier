@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "5325207",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp mursteinsrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 563.3,
+  "lukt": "Preg av tørkete røde bær, lær, lakris og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Giacosa Fratelli Barolo Bussia 2020",
+  "parser": "json",
+  "pris": 1689.9,
+  "produsent": "Giacosa Fratelli",
+  "smak": "Fint utviklet preg av tørket frukt. Fast, ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Giacosa-Fratelli-Barolo-Bussia-2020/p/5325207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5325207",
+  "volum": 300,
+  "årgang": "2020"
+}

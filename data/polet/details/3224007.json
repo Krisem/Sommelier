@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "3224007",
+  "distrikt": "Toscana",
+  "druer": "Brunello 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 996.67,
+  "lukt": "Fruktig og kompleks bouquet, fioler, bringebær, vanilje og lakris.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Banfi Brunello di Montalcino 2020",
+  "parser": "json",
+  "pris": 2990,
+  "produsent": "Cast. Banfi",
+  "smak": "Fyldig og krydret smak med silkemyke tanniner og lang ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Banfi-Brunello-di-Montalcino-2020/p/3224007",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3224007",
+  "volum": 300,
+  "årgang": "2020"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "11%",
+  "code": "3339706",
+  "distrikt": "Pays d'Oc",
+  "druer": "Syrah 30 prosent, Cabernet Sauvignon 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 149.97,
+  "lukt": "Aroma preget av mørke bær og litt urter, hint av paprika og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Gjæret temperaturkontrollert. Modnet på ståltank.",
+  "navn": "J.P. Chenet Cabernet Syrah 2024",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Les Caves de Landiras",
+  "smak": "Fruktig og saftig med ørlite sødme, preg av mørke og røde bær, hint paprika og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "7,2 g/l",
+  "syre": "4,4 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/J-P-Chenet-Cabernet-Syrah-2024/p/3339706",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3339706",
+  "volum": 300,
+  "årgang": "2024"
+}

@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "5985206",
+  "distrikt": "Catalonia",
+  "druer": "Cabernet Sauvignon 14 prosent, Tempranillo (Tinto del Pais) 86 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Catalonia",
+  "literpris": 161.63,
+  "lukt": "Aroma med litt utviklet preg av mørke og røde bær, litt urter, kamfer og trekrydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Torres Coronas 2022",
+  "parser": "json",
+  "pris": 484.9,
+  "produsent": "Miguel Torres",
+  "smak": "Litt utviklet med preg av moden frukt, innslag av kirsebær, blå plommer, krydder og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Spania/Catalonia/Torres-Coronas-2022/p/5985206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5985206",
+  "volum": 300,
+  "årgang": "2022"
+}

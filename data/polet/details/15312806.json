@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "15312806",
+  "distrikt": "Toscana",
+  "druer": "Merlot 30 prosent, Sangiovese 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Toscana",
+  "literpris": 176.63,
+  "lukt": "Litt utviklet preg av kirsebær og tørket frukt, innslag av røde bær, plommer, kamfer og anis.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Druene fermentert separat og blendet før tapping. Lagring på ståltank.",
+  "navn": "Truls & Hellstrøm Toscana Rosso",
+  "parser": "json",
+  "pris": 529.9,
+  "produsent": "Rebel Group",
+  "smak": "Nyansert og litt utviklet med god friskhet, preg av kirsebær, blå plommer, krydder og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Italia/Toscana/Truls-%26-Hellstr%C3%B8m-Toscana-Rosso/p/15312806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15312806",
+  "volum": 300,
+  "årgang": "2024"
+}

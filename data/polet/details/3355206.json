@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "3355206",
+  "distrikt": "Lisboa",
+  "druer": "Camarate 20 prosent, Periquita 50 prosent, Tinta Miuda 15 prosent, Touriga Nacional 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Lisboa",
+  "literpris": 149.97,
+  "lukt": "Ungdommelig og litt krydret aroma av mørke og røde bær, innslag av urter, fat, kamfer og lakris.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Gjæret temperaturkontrollert ved 28-30 C i ståltanker, maserasjonstid 30 dager. 3 md. fatlagring.",
+  "navn": "Bons-Ventos",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Casa Santos Lima",
+  "smak": "Fruktig og saftig med god fylde, preg av sødmerike mørke bær, litt krydder, fat, vanilje og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "9,7 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Portugal/Lisboa/Bons-Ventos/p/3355206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3355206",
+  "volum": 300,
+  "årgang": "2024"
+}

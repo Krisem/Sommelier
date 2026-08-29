@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20010907",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 34 prosent, Cabernet Sauvignon 31 prosent, Merlot 35 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion Grand Cru",
+  "literpris": 5604.17,
+  "lukt": "Aroma av mørke bær og frukt, krydder, sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Figeac 2022",
+  "parser": "json",
+  "pris": 16812.5,
+  "produsent": "Ch. Figeac",
+  "smak": "Konsentrert og fyldig med lengde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Saint-Emilion Grand Cru",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion-Grand-Cru/Ch-Figeac-2022/p/20010907",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20010907",
+  "volum": 300,
+  "årgang": "2022"
+}

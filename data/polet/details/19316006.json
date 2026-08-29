@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19316006",
+  "distrikt": "Castilla y León",
+  "druer": "Mencia 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Castilla y León, El Bierzo",
+  "literpris": 189.97,
+  "lukt": "Litt krydret preg av modne mørke bær, innslag av morell, bjørnebær, litt urter, pepper og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Spontan gjæring med naturlig gjær i rustfri ståltank. Gjennomsnittsalder på vinmarkene: 75 år.",
+  "navn": "Unum Mencía 2023",
+  "parser": "json",
+  "pris": 569.9,
+  "produsent": "Estévez Bodegas y Viñedos",
+  "smak": "Ungdommelig, fast og litt rustikk stil, preg av bjørnebær, krekling, litt sevje, pepper og kamfer.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "El Bierzo",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/El-Bierzo/Unum-Menc%C3%ADa-2023/p/19316006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19316006",
+  "volum": 300,
+  "årgang": "2023"
+}

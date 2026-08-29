@@ -1,0 +1,36 @@
+{
+  "alkohol": "13%",
+  "code": "15827306",
+  "distrikt": "Languedoc-Roussillon",
+  "druer": "Grenache 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rød, blålilla kant.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Languedoc-Roussillon, Pays d'Hérault",
+  "literpris": 286.63,
+  "lukt": "Røde bær og skogsbær.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Catherine Bernard La Route des Crêtes",
+  "parser": "json",
+  "pris": 859.9,
+  "produsent": "Catherine Bernard",
+  "smak": "Ren, sødmefull frukt med modne bær.",
+  "sukker": "3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Pays d'Hérault",
+  "url": "/Land/Frankrike/Languedoc-Roussillon/Pays-d%27H%C3%A9rault/Catherine-Bernard-La-Route-des-Cr%C3%AAtes/p/15827306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "15827306",
+  "volum": 300
+}

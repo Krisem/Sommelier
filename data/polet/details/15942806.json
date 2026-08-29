@@ -1,0 +1,38 @@
+{
+  "alkohol": "14,5%",
+  "code": "15942806",
+  "distrikt": "Aragon",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Aragon, Calatayud",
+  "literpris": 166.63,
+  "lukt": "Ren og frisk, mørke bær med hint av anis og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Querencia Garnacha",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Bod. San Alejandro",
+  "smak": "Fyldig og saftig, modne mørke bær, svale urter, lang bløt avslutning.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "3,1 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Calatayud",
+  "url": "/Land/Spania/Aragon/Calatayud/Querencia-Garnacha/p/15942806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "15942806",
+  "volum": 300
+}

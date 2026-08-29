@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "20937906",
+  "distrikt": "Sicilia",
+  "druer": "Frappato 40 prosent, Nero d'Avola 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 203.3,
+  "lukt": "Fruktig aroma preget av modne røde bær, litt tørket frukt, krydder og lakris, hint av blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Tradisjonell fermentering, lagring i store slavonske fat, amfora og sementtanker.",
+  "navn": "COS Nero d'Avola e Frappato",
+  "parser": "json",
+  "pris": 609.9,
+  "produsent": "Az. Agr. Cos",
+  "smak": "Saftig og ørlite utviklet, nyansert preg av røde bær og krydder, frisk og litt fast ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/COS-Nero-d%27Avola-e-Frappato/p/20937906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20937906",
+  "volum": 300
+}

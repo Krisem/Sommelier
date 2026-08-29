@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "16746707",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1555,
+  "lukt": "Duft av tørket frukt, toner av vanilje og røde bær.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Håndplukket, modnet på store eikefat i 18-24 md.",
+  "navn": "Ettore Germano Barolo Prapò 2008",
+  "parser": "json",
+  "pris": 4665,
+  "produsent": "Ettore Germano",
+  "smak": "Fyldig med strukturerte tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Ettore-Germano-Barolo-Prap%C3%B2-2008/p/16746707",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16746707",
+  "volum": 300,
+  "årgang": "2008"
+}

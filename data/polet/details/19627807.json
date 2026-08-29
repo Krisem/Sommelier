@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "19627807",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 1590,
+  "lukt": "Duft av mørke bær, fiol, lær, lakris og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Altesino Brunello Di Montalcino Montosoli 2020",
+  "parser": "json",
+  "pris": 4770,
+  "produsent": "Altesino",
+  "smak": "Fyldig og strukturert, modne tanniner, balansert syre og lang avslutning.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Altesino-Brunello-Di-Montalcino-Montosoli-2020/p/19627807",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19627807",
+  "volum": 300,
+  "årgang": "2020"
+}

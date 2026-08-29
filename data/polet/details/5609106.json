@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "5609106",
+  "distrikt": "Alentejo",
+  "druer": "Aragónez 40 prosent, Syrah 20 prosent, Trincadeira 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Alentejo",
+  "literpris": 166.63,
+  "lukt": "Aroma av kirsebær, bjørnebær og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Avstilkes før pre-fermentiv masserasjon og fermentering på ståltank.",
+  "navn": "Ramos Reserva",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Joao Portugal Ramos",
+  "smak": "Fruktig og krydret med myke og vedvarende tanniner. God friskhet og lengde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Portugal/Alentejo/Ramos-Reserva/p/5609106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5609106",
+  "volum": 300,
+  "årgang": "2024"
+}

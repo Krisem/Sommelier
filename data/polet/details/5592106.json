@@ -1,0 +1,35 @@
+{
+  "alkohol": "12%",
+  "code": "5592106",
+  "distrikt": "South E. Australia",
+  "druer": "Cabernet Sauvignon 40 prosent, Shiraz 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Frisk og ungdommelig rød farge.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South E. Australia",
+  "literpris": 149.97,
+  "lukt": "Krydret og aromatisk med hint av eukalyptus.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Crocodile Rock Shiraz Cabernet",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Vinordia",
+  "smak": "Relativt smaksrik, godt balansert.",
+  "sukker": "10,7 g/l",
+  "syre": "3,5 g/l",
+  "url": "/Land/Australia/South-E-Australia/Crocodile-Rock-Shiraz-Cabernet/p/5592106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5592106",
+  "volum": 300
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "4171406",
+  "distrikt": "Pays d'Oc",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp mørkerød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 156.63,
+  "lukt": "Aroma av røde og mørke bær, grønn paprika, skogbunn og krydder.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i ståltanker.",
+  "navn": "Grand Sud Merlot 2024",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "Les Caves de Landiras",
+  "smak": "Balansert og bærpreget med god intensitet, middels fylde og lengde, myke tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "6,9 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Grand-Sud-Merlot-2024/p/4171406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "4171406",
+  "volum": 300,
+  "årgang": "2024"
+}

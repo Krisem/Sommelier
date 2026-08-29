@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "19950107",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Échézeaux",
+  "literpris": 3598.63,
+  "lukt": "Duft av mørke og røde bær, litt krydder.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Dom. Gerard Julien Echèzeaux Grand Cru 2023",
+  "parser": "json",
+  "pris": 10795.9,
+  "produsent": "Domaine Gerard Julien",
+  "smak": "Konsentrert frukt, lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Échézeaux",
+  "url": "/Land/Frankrike/Burgund/%C3%89ch%C3%A9zeaux/Dom-Gerard-Julien-Ech%C3%A8zeaux-Grand-Cru-2023/p/19950107",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19950107",
+  "volum": 300,
+  "årgang": "2023"
+}

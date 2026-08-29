@@ -1,0 +1,39 @@
+{
+  "alkohol": "11,5%",
+  "code": "1807406",
+  "distrikt": "Burgenland",
+  "druer": "St. Laurent 10 prosent, Zweigelt 60 prosent, Blaufränkisch 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Østerrike, Burgenland",
+  "literpris": 186.63,
+  "lukt": "Fruktig aroma preget av røde bær, litt krydder og grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert og lagret i ståltanker.",
+  "navn": "Meinklang Burgenland Red",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Meinklang",
+  "smak": "Ung, saftig og frisk med god lengde, jordbær- og kirsebæraktig frukt, grønne urter og litt krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/%C3%98sterrike/Burgenland/Meinklang-Burgenland-Red/p/1807406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1807406",
+  "volum": 300,
+  "årgang": "2024"
+}

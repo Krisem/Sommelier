@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "3866006",
+  "distrikt": "Piemonte",
+  "druer": "Dolcetto 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte",
+  "literpris": 182.27,
+  "lukt": "Fruktig aroma preget av kirsebær, moreller og litt urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Grønnsaker"
+  ],
+  "metode": "Malolaktisk fermentering på ståltanker.",
+  "navn": "Franco Francesco Dolcetto",
+  "parser": "json",
+  "pris": 546.8,
+  "produsent": "Franco Francesco",
+  "smak": "Saftig, frisk og leskende. Masse røde bær.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Italia/Piemonte/Franco-Francesco-Dolcetto/p/3866006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3866006",
+  "volum": 300,
+  "årgang": "2025"
+}

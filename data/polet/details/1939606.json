@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1939606",
+  "distrikt": "Lisboa",
+  "druer": "Cabernet Sauvignon 40 prosent, Touriga Nacional 20 prosent, Syrah 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Lisboa",
+  "literpris": 161.63,
+  "lukt": "Aroma med preg av mørke bær og modne plommer, litt lakris og grønne urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Total avstilking. Fermentering i 26.500 liter tanker. Temp.kontr. fermentering ved 28-30 grader.",
+  "navn": "Casa Santos Lima Lab Reserva 2024",
+  "parser": "json",
+  "pris": 484.9,
+  "produsent": "Casa Santos Lima",
+  "smak": "Ung og fruktig med sødmefullt preg av mørke bær, innslag av urter og lakris i litt fast avslutning.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "7,3 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Portugal/Lisboa/Casa-Santos-Lima-Lab-Reserva-2024/p/1939606",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1939606",
+  "volum": 300,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "2904806",
+  "distrikt": "Navarra",
+  "druer": "Tempranillo (Tinto del Pais) 30 prosent, Cabernet Sauvignon 40 prosent, Merlot 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Navarra",
+  "literpris": 146.63,
+  "lukt": "Aroma med litt utviklet preg av modne røde og mørke bær, litt sjokolade, svale urter og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Kaldmaserasjon i 48 timer ved 6 grader. Fermentering på selektert gjær ved 27 grader i 7 dager.",
+  "navn": "Principe de Viana The Vintage Cab",
+  "parser": "json",
+  "pris": 439.9,
+  "produsent": "Bod. Príncipe de Viana",
+  "smak": "God fylde og lengde, preg av mørke skogsbær, kirsebær, litt paprika, rosin, vanilje og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,8 g/l",
+  "syre": "6,1 g/l",
+  "url": "/Land/Spania/Navarra/Principe-de-Viana-The-Vintage-Cab/p/2904806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "2904806",
+  "volum": 300,
+  "årgang": "2023"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "20982306",
+  "distrikt": "Languedoc-Roussillon",
+  "druer": "Cinsault 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Languedoc-Roussillon, Côtes Catalanes",
+  "literpris": 166.6,
+  "lukt": "Ung, fruktig. Litt krydret preg av bringebær, morell, litt svale urter, kamfer og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "Cazes Samso Cinsault",
+  "parser": "json",
+  "pris": 499.8,
+  "produsent": "Dom. Cazes",
+  "smak": "Fruktig, middels fyldig og litt krydret preg av modne mørke og røde bær, litt lakris og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3 g/l",
+  "underdistrikt": "Côtes Catalanes",
+  "url": "/Land/Frankrike/Languedoc-Roussillon/C%C3%B4tes-Catalanes/Cazes-Samso-Cinsault/p/20982306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20982306",
+  "volum": 300,
+  "årgang": "2025"
+}

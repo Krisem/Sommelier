@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "5219906",
+  "distrikt": "Veneto",
+  "druer": "Corvina 60 prosent, Corvinone 20 prosent, Rondinella 20 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella",
+  "literpris": 166.33,
+  "lukt": "Ungdommelig aroma av kirsebær og bringebær.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Forsiktig pressing etterfulgt av temperaturkontrollert gjæring på ståltank.",
+  "navn": "Antiche Terre Valpolicella",
+  "parser": "json",
+  "pris": 499,
+  "produsent": "Antiche Terre Venete",
+  "smak": "Ung, frisk og saftig, preg av kirsebær og moreller. Balansert, saftig, myke tanniner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Valpolicella",
+  "url": "/Land/Italia/Veneto/Valpolicella/Antiche-Terre-Valpolicella/p/5219906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5219906",
+  "volum": 300,
+  "årgang": "2023"
+}

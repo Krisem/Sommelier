@@ -1,0 +1,36 @@
+{
+  "alkohol": "11,5%",
+  "code": "1406706",
+  "distrikt": "Valencia",
+  "druer": "Bobal 85 prosent, Tempranillo (Tinto del Pais) 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia",
+  "literpris": 136.63,
+  "lukt": "Litt krydret aroma av modne røde bær og plommer, litt jordbærsyltetøy, lær og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Grønnsaker"
+  ],
+  "metode": "Temperaturkontrollert vinifikasjon i ståltanker.",
+  "navn": "El Copero",
+  "parser": "json",
+  "pris": 409.9,
+  "produsent": "Bod. Murviedro",
+  "smak": "Myk og litt utviklet med streif av sødme, preg av modne røde bær, krydder, litt lakris og urt.",
+  "sukker": "7,1 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Spania/Valencia/El-Copero/p/1406706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1406706",
+  "volum": 300
+}

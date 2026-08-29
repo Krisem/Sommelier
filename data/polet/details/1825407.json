@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "1825407",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 466.63,
+  "lukt": "Aroma med preg av mørke og røde bær, litt tørket frukt, urter, litt treverk og blomst.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Trad. vinifkasjon med bl.a. temp.kontr. gjæring i 9-11 dg., 6 md lagring på fat, 1 md flaskemodning.",
+  "navn": "Borgogno Barbera d'Alba 2023",
+  "parser": "json",
+  "pris": 1399.9,
+  "produsent": "Giacomo Borgogno & Figli",
+  "smak": "Saftig og ungdommelig med god friskhet, preg av kirsebær, litt tørket frukt, urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Borgogno-Barbera-d%27Alba-2023/p/1825407",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1825407",
+  "volum": 300,
+  "årgang": "2023"
+}

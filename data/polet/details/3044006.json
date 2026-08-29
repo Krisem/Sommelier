@@ -1,0 +1,37 @@
+{
+  "alkohol": "13%",
+  "code": "3044006",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Ren rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 5,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike",
+  "literpris": 166.63,
+  "lukt": "Røde bær, lett krydret.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "Georges Duboeuf Pinot Noir",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Georges Duboeuf",
+  "smak": "Middels fyldig med myke tanniner, god syre og frisk fruktighet.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Frankrike/Georges-Duboeuf-Pinot-Noir/p/3044006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3044006",
+  "volum": 300,
+  "årgang": "2023"
+}

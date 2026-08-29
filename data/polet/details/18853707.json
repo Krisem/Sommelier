@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "18853707",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 11 prosent, Cabernet Sauvignon 38 prosent, Merlot 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 9804.17,
+  "lukt": "Aroma av mørke bær, sedertre og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Haut-Brion 2021",
+  "parser": "json",
+  "pris": 29412.5,
+  "produsent": "Ch. Haut-Brion",
+  "smak": "Strukturert, mørke bær, konsentrasjon.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Haut-Brion-2021/p/18853707",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18853707",
+  "volum": 300,
+  "årgang": "2021"
+}

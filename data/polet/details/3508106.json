@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "3508106",
+  "distrikt": "South Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South Australia",
+  "literpris": 189.3,
+  "lukt": "Aromaer av modne bringebær og bjørnebær, krydret frukt kake og noe lett fransk eik.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Semi-tørkede druer blir fermentert alene. Deretter blir vanlig shiraz tilsatt i en double pass teknikk.",
+  "navn": "Byrne Aussiemento Double Pass Shiraz 2024",
+  "parser": "json",
+  "pris": 567.9,
+  "produsent": "Byrne Vineyards",
+  "smak": "Rik på smak, fyldig, hint av sjokolade og mokka, lang ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "5,8 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Australia/South-Australia/Byrne-Aussiemento-Double-Pass-Shiraz-2024/p/3508106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3508106",
+  "volum": 300,
+  "årgang": "2024"
+}

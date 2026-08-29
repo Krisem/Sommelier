@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "1564606",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rød, lilla toner.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte",
+  "literpris": 168.3,
+  "lukt": "Bjørnebær, modne kirsebær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæret temperaturkontrollert ved 20°C, maserasjonstid etter gjæring: 4 dg. Ikke fatlagret.",
+  "navn": "La Familia Piemonte Barbera",
+  "parser": "json",
+  "pris": 504.9,
+  "produsent": "R.F. SAS Alba",
+  "smak": "God friskhet, fin avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "7 g/l",
+  "syre": "6,5 g/l",
+  "url": "/Land/Italia/Piemonte/La-Familia-Piemonte-Barbera/p/1564606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1564606",
+  "volum": 300,
+  "årgang": "2025"
+}

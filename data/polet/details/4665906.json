@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "4665906",
+  "distrikt": "Puglia",
+  "druer": "Primitivo 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Puglia, Salento",
+  "literpris": 163.3,
+  "lukt": "Aroma av modne mørke bær, litt svale urter og tørket frukt, innslag av kamfer, lakris og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Doppio Passo Salento Primitivo",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Casa Vin. Carlo Botter",
+  "smak": "Fruktig, litt sødme og utvikling, preg av røde og mørke bær, litt urt, kamfer, lakris og vanilje.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "9,6 g/l",
+  "syre": "6,1 g/l",
+  "underdistrikt": "Salento",
+  "url": "/Land/Italia/Puglia/Salento/Doppio-Passo-Salento-Primitivo/p/4665906",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4665906",
+  "volum": 300
+}

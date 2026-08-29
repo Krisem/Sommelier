@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "5221206",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Argentina, Mendoza",
+  "literpris": 166.63,
+  "lukt": "Ung og litt syltet aroma av modne mørke bær og plommer, litt krydder og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell temperaturkontrollert gjæring i 14 dager ved 26 °C.",
+  "navn": "Alamos Malbec 2023",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Alamos",
+  "smak": "Nokså fast og fyldig med litt syltet preg av kirsebær, plommer, litt trevirke, lakris og grønn urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3,3 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Argentina/Mendoza/Alamos-Malbec-2023/p/5221206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5221206",
+  "volum": 300,
+  "årgang": "2023"
+}

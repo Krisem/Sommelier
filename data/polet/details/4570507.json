@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "4570507",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rødlig.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbaresco",
+  "literpris": 666.63,
+  "lukt": "Duft av sursøte kirsebær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Prod. del Barbaresco 2022",
+  "parser": "json",
+  "pris": 1999.9,
+  "produsent": "Prod. del Barbaresco",
+  "smak": "Fin fruktkarakter, godt balansert syre og tanninstruktur.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barbaresco",
+  "url": "/Land/Italia/Piemonte/Barbaresco/Prod-del-Barbaresco-2022/p/4570507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "4570507",
+  "volum": 300,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "20128907",
+  "distrikt": "Rhône",
+  "druer": "Grenache 50 prosent, Syrah 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk lilla.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 1325,
+  "lukt": "Duft av bringebær, blomster og fiken, hint av pepper.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Dom. la Barroche Fiancée Châteauneuf-du-Pape 2022",
+  "parser": "json",
+  "pris": 3975,
+  "produsent": "Dom. La Barroche",
+  "smak": "Fast med runde tanniner, lang avslutning.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "2,9 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Dom-la-Barroche-Fianc%C3%A9e-Ch%C3%A2teauneuf-du-Pape-2022/p/20128907",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20128907",
+  "volum": 300,
+  "årgang": "2022"
+}

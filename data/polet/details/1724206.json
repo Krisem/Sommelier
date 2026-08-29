@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "1724206",
+  "distrikt": "California",
+  "druer": "Zinfandel 15 prosent, Ruby Cabernet 85 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 162.3,
+  "lukt": "Aroma av fullmodne mørke og røde bær, innslag av svale urter, litt vanilje, lakris og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon med temperaturkontroll, tankmodnet en kort periode.",
+  "navn": "Ruby Zin",
+  "parser": "json",
+  "pris": 486.9,
+  "produsent": "Arcus Wine Brands",
+  "smak": "Saftig og myk med litt sødme, preg av modne mørke og røde bær, litt urter, vanilje og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "12,6 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/USA/California/Ruby-Zin/p/1724206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1724206",
+  "volum": 300,
+  "årgang": "2025"
+}

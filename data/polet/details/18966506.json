@@ -1,0 +1,34 @@
+{
+  "alkohol": "13%",
+  "code": "18966506",
+  "druer": "Quagliano 100%",
+  "emballasje": "Bag-in-box",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 5,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia",
+  "literpris": 170.27,
+  "lukt": "Aroma av solbær og lakris.",
+  "matparring": [
+    "Aperitiff",
+    "Ost",
+    "Grønnsaker"
+  ],
+  "navn": "Braccia Rese Vino Rosso",
+  "parser": "json",
+  "pris": 510.8,
+  "produsent": "Braccia Rese",
+  "smak": "Røde bær og bark.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Italia/Braccia-Rese-Vino-Rosso/p/18966506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18966506",
+  "volum": 300
+}

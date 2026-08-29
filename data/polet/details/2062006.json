@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "2062006",
+  "distrikt": "Veneto",
+  "druer": "Corvina 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 5,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Verona (Veronese)",
+  "literpris": 153.3,
+  "lukt": "Aroma preget av røde bær, blomst, litt tørket frukt, grønne urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring av delvis tørkede druer ved 22-28 grader.",
+  "navn": "Torre del Falasco Corvina",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Cant. Valpantena",
+  "smak": "Saftig, kirsebærpreget og middels fyldig med ørlite sødme, innslag av urt, litt jordbær og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "6,7 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Verona (Veronese)",
+  "url": "/Land/Italia/Veneto/Verona-%28Veronese%29/Torre-del-Falasco-Corvina/p/2062006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "2062006",
+  "volum": 300
+}

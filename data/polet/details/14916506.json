@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "14916506",
+  "distrikt": "Valencia",
+  "druer": "Bobal 80 prosent, Shiraz 20 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia, Utiel-Requena",
+  "literpris": 113.3,
+  "lukt": "Fruktig aroma av mørke bær, innslag av kirsebær, bjørnebær, litt lakris, skogbunn og grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "X",
+  "navn": "Cast. de Liria Bobal Shiraz",
+  "parser": "json",
+  "pris": 339.9,
+  "produsent": "Vicente Gandia",
+  "smak": "Fruktig, friskt og ungdommelig preg av kirsebær, litt krekling, bjørnebær, lakris og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,5 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Utiel-Requena",
+  "url": "/Land/Spania/Valencia/Utiel-Requena/Cast-de-Liria-Bobal-Shiraz/p/14916506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14916506",
+  "volum": 300
+}

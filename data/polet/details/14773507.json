@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "14773507",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød, brunskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1987.77,
+  "lukt": "Aroma av røde bær, hint av krydder og lakris.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Håndplukket, modnet på store eikefat i 36 md., gamle vinstokker.",
+  "navn": "Ettore Germano Barolo Lazzarito Riserva 2007",
+  "parser": "json",
+  "pris": 5963.3,
+  "produsent": "Ettore Germano",
+  "smak": "Myk med søtlig avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Ettore-Germano-Barolo-Lazzarito-Riserva-2007/p/14773507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14773507",
+  "volum": 300,
+  "årgang": "2007"
+}

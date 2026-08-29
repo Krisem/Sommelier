@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "16745907",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Granatrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbaresco",
+  "literpris": 1526.33,
+  "lukt": "Aroma av bringebær, rose, fiol, lær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer, modnet 22 md. på store fat + min 12 md. på flaske.",
+  "navn": "Giuseppe Cortese Barbaresco Rabaja' 2020",
+  "parser": "json",
+  "pris": 4579,
+  "produsent": "Giuseppe Cortese",
+  "smak": "Fyldig og robust, faste tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,7 g/l",
+  "underdistrikt": "Barbaresco",
+  "url": "/Land/Italia/Piemonte/Barbaresco/Giuseppe-Cortese-Barbaresco-Rabaja%27-2020/p/16745907",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16745907",
+  "volum": 300,
+  "årgang": "2020"
+}

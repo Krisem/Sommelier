@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20235507",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 3 prosent, Cabernet Sauvignon 66 prosent, Merlot 26 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 1320.83,
+  "lukt": "Aroma av mørke bær, tobakk og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Talbot 2011",
+  "parser": "json",
+  "pris": 3962.5,
+  "produsent": "Ch. Talbot",
+  "smak": "Preg av mørke bær og frukter, konsentrert og lang.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Talbot-2011/p/20235507",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20235507",
+  "volum": 300,
+  "årgang": "2011"
+}

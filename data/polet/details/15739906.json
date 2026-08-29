@@ -1,0 +1,36 @@
+{
+  "alkohol": "13,5%",
+  "code": "15739906",
+  "distrikt": "Abruzzo",
+  "druer": "Montepulciano 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Abruzzo, Montepulciano d'Abruzzo",
+  "literpris": 166.6,
+  "lukt": "Preg av mørke bær. Fruktig med innslag av røde bær.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Torri Cantine Montepulciano d'Abruzzo",
+  "parser": "json",
+  "pris": 499.8,
+  "produsent": "Torri Cantine",
+  "smak": "Ung og saftig med fast ettersmak, god lengde.",
+  "sukker": "5,5 g/l",
+  "syre": "2,8 g/l",
+  "underdistrikt": "Montepulciano d'Abruzzo",
+  "url": "/Land/Italia/Abruzzo/Montepulciano-d%27Abruzzo/Torri-Cantine-Montepulciano-d%27Abruzzo/p/15739906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "15739906",
+  "volum": 300
+}

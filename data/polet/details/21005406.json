@@ -1,0 +1,37 @@
+{
+  "alkohol": "14,5%",
+  "code": "21005406",
+  "distrikt": "Puglia",
+  "druer": "Cabernet Sauvignon 15 prosent, Merlot 15 prosent, Negroamaro 50 prosent, Primitivo 20 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Puglia",
+  "literpris": 148.3,
+  "lukt": "Fruktig og sødmefull, innslag av modne jordbær, blåbær, krydder og bjørnebær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Casa Alloro Appasimento",
+  "parser": "json",
+  "pris": 444.9,
+  "produsent": "Globus Wine",
+  "smak": "Fruktig og sødmefull, innslag av modne jordbær, blåbær, krydder og bjørnebær.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "10,2 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Italia/Puglia/Casa-Alloro-Appasimento/p/21005406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "21005406",
+  "volum": 300
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "19483006",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp lilla.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 5,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Collines Rhodaniennes",
+  "literpris": 199.97,
+  "lukt": "Duft av mørke bær, milde krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Cuilleron Syrah",
+  "parser": "json",
+  "pris": 599.9,
+  "produsent": "Heritage Wines",
+  "smak": "Saftig preg av mørk frukt, lette tanniner og lang, frisk ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Collines Rhodaniennes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Collines-Rhodaniennes/Cuilleron-Syrah/p/19483006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19483006",
+  "volum": 300,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "19817707",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp oransjerød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Roero",
+  "literpris": 999.67,
+  "lukt": "Utviklet aroma, røde og mørke bær, krydder, balsam, pinjekjerner og oliven.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Malvirà Roero Riserva S.S. Trinità 2012",
+  "parser": "json",
+  "pris": 2999,
+  "produsent": "Az. Agr. Malvirà",
+  "smak": "Saftig, konsentrert, preg av røde bær, tørket frukt, sopp og oliven. Lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Roero",
+  "url": "/Land/Italia/Piemonte/Roero/Malvir%C3%A0-Roero-Riserva-S-S-Trinit%C3%A0-2012/p/19817707",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19817707",
+  "volum": 300,
+  "årgang": "2012"
+}

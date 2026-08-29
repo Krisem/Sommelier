@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "5849806",
+  "distrikt": "Campania",
+  "druer": "Aglianico 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Campania, Benevento",
+  "literpris": 176.63,
+  "lukt": "Aroma av modne mørke bær og tørket frukt, litt lakris, lær, trevirke, kamfer og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Gjæres på 25 grader og lagres i ståltank før den tappes.",
+  "navn": "Tombacco Aglianico del Beneventano",
+  "parser": "json",
+  "pris": 529.9,
+  "produsent": "Vinicola Tombacco Srl",
+  "smak": "Modent preg av sødmefulle mørke bær og tørket frukt, litt svale urter, trevirke, krydder og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6,7 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Benevento",
+  "url": "/Land/Italia/Campania/Benevento/Tombacco-Aglianico-del-Beneventano/p/5849806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5849806",
+  "volum": 300
+}

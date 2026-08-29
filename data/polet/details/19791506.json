@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19791506",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 20 prosent, Merlot 80 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød, mursteinskant.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion",
+  "literpris": 213.3,
+  "lukt": "Aroma av bjørnebær, karamell og mørk frukt, noe fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Fermentering i sementtank. 15% blir lagret i franske eikefat i 10 md.",
+  "navn": "Ch. Fourney Saint-Émilion 2023",
+  "parser": "json",
+  "pris": 639.9,
+  "produsent": "Vign. Rollet",
+  "smak": "Fruktdreven og konsentrert med full kropp og myke tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion/Ch-Fourney-Saint-%C3%89milion-2023/p/19791506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19791506",
+  "volum": 300,
+  "årgang": "2023"
+}

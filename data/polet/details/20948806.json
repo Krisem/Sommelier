@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20948806",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California, Paso Robles",
+  "literpris": 186.63,
+  "lukt": "Aroma med ferskt preg av kirsebær- og solbæraktig frukt, innslag av paprika, nesle og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæring på temperaturkontrollerte ståltanker. Uten bruk av faterstatning.",
+  "navn": "Ellison Crest Cabernet Sauvignon 2024",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Bozzano & Company",
+  "smak": "Fast med god fylde, litt syltet preg av røde bær, toner av grønne urter, litt nesle og paprika.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Paso Robles",
+  "url": "/Land/USA/California/Paso-Robles/Ellison-Crest-Cabernet-Sauvignon-2024/p/20948806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20948806",
+  "volum": 300,
+  "årgang": "2024"
+}

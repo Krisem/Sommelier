@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "14118006",
+  "distrikt": "Western Cape",
+  "druer": "Shiraz 40 prosent, Pinotage 30 prosent, Cabernet Sauvignon 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Western Cape",
+  "literpris": 170,
+  "lukt": "Frisk, krydderaromaer, med hint av modne plommer, modne mørke frukter, litt fataroma.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer. Modnet i 6 md. på franske eikefat.",
+  "navn": "Umbala Grand Reserve",
+  "parser": "json",
+  "pris": 510,
+  "produsent": "Oenoforos",
+  "smak": "God fylde, myke tanniner, frisk aroma fra solbær, plommer, litt fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "5,1 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/S%C3%B8r-Afrika/Western-Cape/Umbala-Grand-Reserve/p/14118006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14118006",
+  "volum": 300,
+  "årgang": "2021"
+}

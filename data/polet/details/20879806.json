@@ -1,0 +1,36 @@
+{
+  "alkohol": "11,5%",
+  "code": "20879806",
+  "druer": "Malbec 50 prosent, Sangiovese 25 prosent, Syrah 25 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Argentina",
+  "literpris": 133.33,
+  "lukt": "Aroma preget av modne røde og mørke bær, hint av plomme, blomst og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Hereford",
+  "parser": "json",
+  "pris": 400,
+  "produsent": "Bod. la Rosa",
+  "smak": "Ung og saftig, fruktig preg av røde bær og litt mørke bær, litt lakris og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Argentina/Hereford/p/20879806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20879806",
+  "volum": 300
+}

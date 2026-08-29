@@ -1,0 +1,33 @@
+{
+  "alkohol": "13%",
+  "code": "19766406",
+  "druer": "Montepulciano 30 prosent, Primitivo 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 7,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia",
+  "literpris": 129.97,
+  "lukt": "Duft av røde, mørke kirsebær og plommer.",
+  "matparring": [
+    "Storfe",
+    "Ost"
+  ],
+  "navn": "Il Capolavoro Selezione Delicata",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "Globus Wine",
+  "smak": "Smak av røde, mørke kirsebær og plommer. Mørk frukt, kaffe og lakris i ettersmaken.",
+  "sukker": "14 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Italia/Il-Capolavoro-Selezione-Delicata/p/19766406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19766406",
+  "volum": 300
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "14112306",
+  "distrikt": "Sicilia",
+  "druer": "Nero d'Avola 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia",
+  "literpris": 166.63,
+  "lukt": "Ungt og fruktig preg av kirsebær, krekling, litt jordbær, fiol, svale urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer, gjæring på temperaturregulerte ståltanker, modning på betong.",
+  "navn": "Inspira Sicilia Nero d'Avola",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Enoitalia",
+  "smak": "Saftig, middels fasthet og fylde, nokså friskt preg av røde og mørke bær, hint av urt og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3,8 g/l",
+  "syre": "6,2 g/l",
+  "url": "/Land/Italia/Sicilia/Inspira-Sicilia-Nero-d%27Avola/p/14112306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14112306",
+  "volum": 300,
+  "årgang": "2024"
+}

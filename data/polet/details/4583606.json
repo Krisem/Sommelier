@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "4583606",
+  "distrikt": "Trevenezie",
+  "druer": "Raboso 15 prosent, Refosco 70 prosent, Merlot 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Trevenezie",
+  "literpris": 166.63,
+  "lukt": "Fruktig og ungdommelig aroma av modne røde og mørke bær, hint av fiol, lakris og svale urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Temp.kontr. vinifikasjon i ståltanker, fullstendig malolaktisk gjæring. Lagret i store slavonske eikefat 6-10 md.",
+  "navn": "Masi Modello Rosso 2025",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Masi Agr.",
+  "smak": "Saftig og myk med ørlite sødme, ungt preg av kirsebær, krekling, litt svale urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "8,5 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Italia/Trevenezie/Masi-Modello-Rosso-2025/p/4583606",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4583606",
+  "volum": 300,
+  "årgang": "2025"
+}

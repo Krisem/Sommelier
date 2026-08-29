@@ -1,0 +1,40 @@
+{
+  "alkohol": "15,5%",
+  "code": "15354507",
+  "distrikt": "Rhône",
+  "druer": "Cinsault 1 prosent, Counoise 1 prosent, Grenache 60 prosent, Mourvèdre 8 prosent, Syrah 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 866.33,
+  "lukt": "Aroma med litt utviklet preg av fullmodne mørke bær, urter, innslag av blyantstift, krydder og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Tradisjonell maserasjon. Lagring 50% på fat og 50% på ståltank i 12 md.",
+  "navn": "Ch. Mont-Redon Châteauneuf-du-Pape 2021",
+  "parser": "json",
+  "pris": 2599,
+  "produsent": "Ch. Mont-Redon",
+  "smak": "Fyldig og lang med god fasthet, preg av mørke bær, svale urter, litt fat og krydder, hint av pepper.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Ch-Mont-Redon-Ch%C3%A2teauneuf-du-Pape-2021/p/15354507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "15354507",
+  "volum": 300,
+  "årgang": "2021"
+}

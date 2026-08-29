@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "15140807",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 1224.97,
+  "lukt": "Røde bær, krydder og lær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Il Poggione Brunello di Montalcino Vigna Paganelli Riserva 2016",
+  "parser": "json",
+  "pris": 3674.9,
+  "produsent": "Ten. Il Poggione",
+  "smak": "Saftig, fruktig konsentrert med krydder og mørke bær. Lang, kraftig avslutning.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Il-Poggione-Brunello-di-Montalcino-Vigna-Paganelli-Riserva-2016/p/15140807",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15140807",
+  "volum": 300,
+  "årgang": "2016"
+}

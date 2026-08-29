@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "19753506",
+  "druer": "Blaufränkisch 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Østerrike",
+  "literpris": 166.63,
+  "lukt": "Aroma av modne kirsebær, bjørnebær, plomme, pepper, krydder og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Bruk av ståltank.",
+  "navn": "Schandl's Blaufränkisch 2024",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "HoR Schandl's Weing. GmbH",
+  "smak": "Saftig og frisk munnfølelse, konsentrert. Høy friskhet og myke tanniner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,2 g/l",
+  "url": "/Land/%C3%98sterrike/Schandl%27s-Blaufr%C3%A4nkisch-2024/p/19753506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19753506",
+  "volum": 300,
+  "årgang": "2024"
+}

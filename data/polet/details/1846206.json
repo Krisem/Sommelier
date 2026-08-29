@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "1846206",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 15 prosent, Merlot 83 prosent, Cabernet Sauvignon 2 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Bordeaux",
+  "literpris": 183.3,
+  "lukt": "Ung og fruktig aroma av morell, solbær og grønn urt, litt jord, krydder og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Spontanfermentert på sementtank, videre lagring på sement.",
+  "navn": "Ch. Dudon 2022",
+  "parser": "json",
+  "pris": 549.9,
+  "produsent": "Ch. Dudon",
+  "smak": "Ung, fast og litt undermoden med fruktig preg av mørke bær, grønn urt, litt paprika og mineraler.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Frankrike/Bordeaux/Ch-Dudon-2022/p/1846206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1846206",
+  "volum": 300,
+  "årgang": "2022"
+}

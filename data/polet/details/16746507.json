@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "16746507",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød, oransjeskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1991.23,
+  "lukt": "Aroma av små røde bær, hint av krydder og lakris.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Håndplukket, modnet på store eikefat i 36 md., gamle vinstokker.",
+  "navn": "Ettore Germano Barolo Lazzarito Riserva 2008",
+  "parser": "json",
+  "pris": 5973.7,
+  "produsent": "Ettore Germano",
+  "smak": "Myk med søtlig avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Ettore-Germano-Barolo-Lazzarito-Riserva-2008/p/16746507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16746507",
+  "volum": 300,
+  "årgang": "2008"
+}

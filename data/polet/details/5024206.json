@@ -1,0 +1,36 @@
+{
+  "alkohol": "12,5%",
+  "code": "5024206",
+  "distrikt": "Pays d'Oc",
+  "druer": "Carignan 30 prosent, Merlot 30 prosent, Grenache 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 166.63,
+  "lukt": "Aroma med preg av modne røde og mørke bær, litt urter og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "navn": "Chapelle du Bois 2025",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "LGI-Wines",
+  "smak": "Fruktig med myk munnfølelse, preg av mørke og røde bær, litt grønn urt og krydder, hint sødme.",
+  "sukker": "8 g/l",
+  "syre": "3,5 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Chapelle-du-Bois-2025/p/5024206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5024206",
+  "volum": 300,
+  "årgang": "2025"
+}

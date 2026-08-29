@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "18903907",
+  "distrikt": "Rioja",
+  "druer": "Garnacha 25 prosent, Tempranillo (Tinto del Pais) 75 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 391.6,
+  "lukt": "Aroma av røde bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "3 dagers maserasjon på ståltank. 12 md. på franske eikefat.",
+  "navn": "Gómez Cruzado Crianza 2020",
+  "parser": "json",
+  "pris": 1174.8,
+  "produsent": "Gómez Cruzado S.A.",
+  "smak": "Kirsebær, solbær, frisk syre, runde tanniner.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Spania/Rioja/G%C3%B3mez-Cruzado-Crianza-2020/p/18903907",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18903907",
+  "volum": 300,
+  "årgang": "2020"
+}

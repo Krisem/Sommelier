@@ -1,0 +1,30 @@
+{
+  "alkohol": "12%",
+  "code": "1558806",
+  "druer": "Cabernet Sauvignon 50 prosent, Shiraz 50 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia",
+  "literpris": 131.63,
+  "lukt": "Aroma av modne røde bær og plommer, litt syltet frukt, jordbær, mynte, skogbunn og lakris.",
+  "metode": "Tradisjonell vinifikasjonsteknikk. Ikke fat- eller flaskemodnet.",
+  "navn": "My World Australia Shiraz Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 394.9,
+  "produsent": "Arcus",
+  "smak": "Fruktig med myk munnfølelse, preg av modne og søtlige røde bær, paprika, svale urter og krydder.",
+  "sukker": "6 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Australia/My-World-Australia-Shiraz-Cabernet-Sauvignon/p/1558806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1558806",
+  "volum": 300
+}

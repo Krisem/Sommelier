@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "3290407",
+  "distrikt": "Toscana",
+  "druer": "Cabernet Sauvignon 5 prosent, Merlot 10 prosent, Sangiovese 85 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana",
+  "literpris": 251.97,
+  "lukt": "Modne og litt syltede røde og mørke bær, innslag av urter, litt røyk og fat.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Håndplukket, spontangjæring i store eikefatene. Modning i store eikefatene og i barriques. Total 3 år.",
+  "navn": "Monte Antico",
+  "parser": "json",
+  "pris": 755.9,
+  "produsent": "Empson",
+  "smak": "Litt utviklet preg av modne bær og og tørket frukt, innslag av krydder, urter, tobakk og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Italia/Toscana/Monte-Antico/p/3290407",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "3290407",
+  "volum": 300,
+  "årgang": "2021"
+}

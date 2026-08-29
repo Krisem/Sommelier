@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "14307406",
+  "distrikt": "Puglia",
+  "druer": "Zinfandel 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Puglia",
+  "literpris": 153.3,
+  "lukt": "Litt krydret aroma av fullmodne mørke bær, tørket frukt, litt skogbunn, lær, lakris og kamfer.",
+  "matparring": [
+    "Lam og sau",
+    "Storvilt",
+    "Svin"
+  ],
+  "navn": "Epicuro Zinfandel",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Femar Vini",
+  "smak": "Fyldig med sødmefullt preg av modne mørke bær, plommer, litt kamfer, lakris og svale urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "6,2 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Italia/Puglia/Epicuro-Zinfandel/p/14307406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14307406",
+  "volum": 300,
+  "årgang": "2024"
+}

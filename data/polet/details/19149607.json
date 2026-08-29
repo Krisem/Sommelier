@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19149607",
+  "distrikt": "Toscana",
+  "druer": "Merlot 5 prosent, Sangiovese 95 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 399.97,
+  "lukt": "Toner av bjørnebær og kirsebær, innslag av krydder og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "16 md på fransk eik (både nye og ett år gamle fat).",
+  "navn": "Castello di Gabbiano Chianti Classico Riserva 2021",
+  "parser": "json",
+  "pris": 1199.9,
+  "produsent": "Cast. di Gabbiano",
+  "smak": "Balansert frukt, myke tanniner og frisk avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Castello-di-Gabbiano-Chianti-Classico-Riserva-2021/p/19149607",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19149607",
+  "volum": 300,
+  "årgang": "2021"
+}

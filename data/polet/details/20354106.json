@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20354106",
+  "distrikt": "South Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South Australia, Limestone Coast",
+  "literpris": 142.7,
+  "lukt": "Ungt og fruktig preg av bringebær, bjørnebær og grønne urter, litt drops, eukalyptus og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring, lagret på ståltank.",
+  "navn": "Peace and Prosper Shiraz 2025",
+  "parser": "json",
+  "pris": 428.1,
+  "produsent": "Urban Beverages",
+  "smak": "Saftig med moderat fasthet, litt dropsaktig preg av mørke og røde bær, litt kamfer og svale urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Limestone Coast",
+  "url": "/Land/Australia/South-Australia/Limestone-Coast/Peace-and-Prosper-Shiraz-2025/p/20354106",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20354106",
+  "volum": 300,
+  "årgang": "2025"
+}

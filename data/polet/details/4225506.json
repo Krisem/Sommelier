@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "4225506",
+  "distrikt": "South E. Australia",
+  "druer": "Shiraz 60 prosent, Cabernet Sauvignon 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South E. Australia",
+  "literpris": 146.63,
+  "lukt": "Sval aroma av modne mørke og røde bær, innslag av solbær, paprika, litt mynte og eukalyptus.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon med temperaturkontrollert gjæring.",
+  "navn": "Lindeman's Shiraz Cabernet 2025",
+  "parser": "json",
+  "pris": 439.9,
+  "produsent": "Lindeman's Winery",
+  "smak": "Fruktig, litt sval og krydret, preg av modne røde bær, litt solbær, eukalyptus, paprika og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6,4 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Australia/South-E-Australia/Lindeman%27s-Shiraz-Cabernet-2025/p/4225506",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4225506",
+  "volum": 300,
+  "årgang": "2025"
+}

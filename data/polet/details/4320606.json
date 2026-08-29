@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "4320606",
+  "distrikt": "Western Cape",
+  "druer": "Shiraz 85 prosent, Grenache 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 11,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Western Cape",
+  "literpris": 166.63,
+  "lukt": "Mørke bær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Darling Cellars Tabiso Shiraz 2024",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Darling Cellars",
+  "smak": "Fyldig og bløt, lang krydret ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/S%C3%B8r-Afrika/Western-Cape/Darling-Cellars-Tabiso-Shiraz-2024/p/4320606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "4320606",
+  "volum": 300,
+  "årgang": "2024"
+}

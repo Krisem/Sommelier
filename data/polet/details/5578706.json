@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "5578706",
+  "distrikt": "Península de Setúbal",
+  "druer": "Castelão 56 prosent, Touriga Nacional 22 prosent, Touriga Franca 22 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Península de Setúbal",
+  "literpris": 156.63,
+  "lukt": "Aroma med preg av modne røde og mørke bær, urter, litt trekrydder og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Etter pressing kaldmasereres mosten før gjæring, temp.kontr. gjæring ved 25-28C i 7 dg. med skallkontakt, 8 md. fatlagring.",
+  "navn": "Periquita Reserva 2023",
+  "parser": "json",
+  "pris": 469.9,
+  "produsent": "J.M. da Fonseca",
+  "smak": "Ung og fruktig, preg av røde og mørke bær, ettersmak med innslag av krydder, fat og vanilje.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "5 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Portugal/Pen%C3%ADnsula-de-Set%C3%BAbal/Periquita-Reserva-2023/p/5578706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5578706",
+  "volum": 300,
+  "årgang": "2023"
+}

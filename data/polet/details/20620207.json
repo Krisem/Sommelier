@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20620207",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød, brunskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana",
+  "literpris": 1333.3,
+  "lukt": "Litt utviklet aroma av kirsebær, tørket frukt, skogbunn, lær, svalt krydder og anis.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra eldre vinstokker, 280-400 moh. Gjæres på bunnfall i åpne franske eikefat, 18 md modning i franske eikefat.",
+  "navn": "Bibi Graetz Testamatta 2018",
+  "parser": "json",
+  "pris": 3999.9,
+  "produsent": "Bibi Graetz",
+  "smak": "Fast, saftig, friske kirsebær, hint av svalt krydder, kamfer og anis.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Italia/Toscana/Bibi-Graetz-Testamatta-2018/p/20620207",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20620207",
+  "volum": 300,
+  "årgang": "2018"
+}

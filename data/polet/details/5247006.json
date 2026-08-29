@@ -1,0 +1,36 @@
+{
+  "alkohol": "13%",
+  "code": "5247006",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 52 prosent, Syrah 20 prosent, Merlot 28 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Chile, Valle Central",
+  "literpris": 179.63,
+  "lukt": "Aroma preget av solbær, grønn paprika, krydder og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk i temperaturkontrollerte ståltanker.",
+  "navn": "Odfjell Armador",
+  "parser": "json",
+  "pris": 538.9,
+  "produsent": "Odfjell Vineyards",
+  "smak": "Ung og fruktig, preg av mørke bær, krydder og urter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,1 g/l",
+  "url": "/Land/Chile/Valle-Central/Odfjell-Armador/p/5247006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5247006",
+  "volum": 300
+}

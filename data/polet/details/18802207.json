@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "18802207",
+  "distrikt": "Castilla y León",
+  "druer": "Cabernet Sauvignon 6 prosent, Tempranillo (Tinto del Pais) 94 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Castilla y León, Ribera del Duero",
+  "literpris": 599.97,
+  "lukt": "Aroma med preg av blåbær, kirsebær og fat.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "16 md. på fat både fransk og amerikansk.",
+  "navn": "Arzuaga Navarro Crianza 2019",
+  "parser": "json",
+  "pris": 1799.9,
+  "produsent": "Bod. Arzuaga Navarro",
+  "smak": "Konsentrert, frisk, myk og lang.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Ribera del Duero",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/Ribera-del-Duero/Arzuaga-Navarro-Crianza-2019/p/18802207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18802207",
+  "volum": 300,
+  "årgang": "2019"
+}

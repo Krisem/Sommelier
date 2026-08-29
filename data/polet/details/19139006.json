@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "19139006",
+  "distrikt": "California",
+  "druer": "Petite Sirah (Durif, P. Syrah) 24 prosent, Zinfandel 76 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 146.63,
+  "lukt": "Fruktig duft av skogsbær, plommer og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Fermentert i temperaturkontrollerte ståltanker.",
+  "navn": "Glory Days Old Vines Zinfandel",
+  "parser": "json",
+  "pris": 439.9,
+  "produsent": "Just Brands AS",
+  "smak": "Fyldig og bløt, lett fruktsødme og mørke bær.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,6 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/USA/California/Glory-Days-Old-Vines-Zinfandel/p/19139006",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19139006",
+  "volum": 300,
+  "årgang": "2023"
+}

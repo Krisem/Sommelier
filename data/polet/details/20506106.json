@@ -1,0 +1,38 @@
+{
+  "alkohol": "14%",
+  "code": "20506106",
+  "distrikt": "South Australia",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South Australia, Barossa",
+  "literpris": 206.63,
+  "lukt": "Aroma med hint av bjørnebær, fioler, mørke kirsebær, plommer, vanilje og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Barossa Shiraz By Brian Dominic",
+  "parser": "json",
+  "pris": 619.9,
+  "produsent": "Dominic Wines",
+  "smak": "Smak med fatkarakter, hint av bjørnebær, fioler, mørke kirsebær, plommer, vanilje og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Barossa",
+  "url": "/Land/Australia/South-Australia/Barossa/Barossa-Shiraz-By-Brian-Dominic/p/20506106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20506106",
+  "volum": 300
+}

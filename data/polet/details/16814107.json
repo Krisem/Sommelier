@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16814107",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 60 prosent, Merlot 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mørkerød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 7,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, St. Estèphe",
+  "literpris": 3325,
+  "lukt": "Aroma av solbær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Calon Ségur 2005",
+  "parser": "json",
+  "pris": 9975,
+  "produsent": "Ch. Calon Ségur",
+  "smak": "Konsentrert og rund, god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "St. Estèphe",
+  "url": "/Land/Frankrike/Bordeaux/St-Est%C3%A8phe/Ch-Calon-S%C3%A9gur-2005/p/16814107",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16814107",
+  "volum": 300,
+  "årgang": "2005"
+}

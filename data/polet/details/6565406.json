@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "6565406",
+  "distrikt": "Rhône",
+  "druer": "Grenache 60 prosent, Carignan 30 prosent, Syrah 10 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 199.97,
+  "lukt": "Aroma av modne røde og mørke skogsbær, litt krydder og urter, streif av lær, kamfer og pepper.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Vinifikasjon med bl.a. spontangjæring i sementtanker, naturlig gjær benyttet.",
+  "navn": "Natural Selections Dom. le Garrigon Côtes du Rhône",
+  "parser": "json",
+  "pris": 599.9,
+  "produsent": "Dom. le Garrigon",
+  "smak": "Ung, fruktig og litt fast, god fylde, preg av mørke skogsbær, jordbær, litt pepper, kamfer og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Natural-Selections-Dom-le-Garrigon-C%C3%B4tes-du-Rh%C3%B4ne/p/6565406",
+  "utvalg": "Basisutvalget",
+  "varenummer": "6565406",
+  "volum": 300
+}

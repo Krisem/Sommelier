@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "5660506",
+  "distrikt": "California",
+  "druer": "Ruby Cabernet 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 153.3,
+  "lukt": "Aroma av modne røde og mørke bær, hint av grønne urter og krydder.",
+  "matparring": [
+    "Storfe",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "metode": "Temperaturkontrollert fermentering i ståltank.",
+  "navn": "Falling Feather Ruby Cabernet 2025",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Arcus",
+  "smak": "Myk og fruktig med litt sødme, preg av røde bær, grønne urter og hint av vanilje og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "9,9 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/USA/California/Falling-Feather-Ruby-Cabernet-2025/p/5660506",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5660506",
+  "volum": 300,
+  "årgang": "2025"
+}

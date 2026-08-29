@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "15324306",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 10 prosent, Cabernet Sauvignon 15 prosent, Merlot 75 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 11,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Bordeaux",
+  "literpris": 173.3,
+  "lukt": "Frisk og fruktig med mørke bær, bjørnebær, noe lær og hint av krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Moderne vinifikasjon på ståltank med moderat maserasjon.",
+  "navn": "J. Lebègue Bordeaux 2021",
+  "parser": "json",
+  "pris": 519.9,
+  "produsent": "Jules Lebegue",
+  "smak": "Anslag av mørk frukt, røde bær, hint av kakao og lær. Lang og fast avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,1 g/l",
+  "url": "/Land/Frankrike/Bordeaux/J-Leb%C3%A8gue-Bordeaux-2021/p/15324306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "15324306",
+  "volum": 300,
+  "årgang": "2021"
+}

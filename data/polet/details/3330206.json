@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "3330206",
+  "distrikt": "Valencia",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia, Utiel-Requena",
+  "literpris": 139.97,
+  "lukt": "Litt krydret og modent preg av røde og mørke bær, litt tørket frukt, lakris, fat og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring ved 25 C. Vinen modnes på fat i 8 md.",
+  "navn": "Marqués de Chivé Tempranillo Crianza 2025",
+  "parser": "json",
+  "pris": 419.9,
+  "produsent": "Vicente Gandia",
+  "smak": "Litt utviklet og rustikk, preg av modne røde og mørke bær, litt tørket frukt, fat og vanilje.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Utiel-Requena",
+  "url": "/Land/Spania/Valencia/Utiel-Requena/Marqu%C3%A9s-de-Chiv%C3%A9-Tempranillo-Crianza-2025/p/3330206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3330206",
+  "volum": 300,
+  "årgang": "2025"
+}

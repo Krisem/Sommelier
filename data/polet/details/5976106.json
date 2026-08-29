@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "5976106",
+  "distrikt": "Catalonia",
+  "druer": "Garnacha 65 prosent, Cariñena 35 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Catalonia",
+  "literpris": 149.97,
+  "lukt": "Fruktig og ørlite utviklet aroma av modne røde og mørke bær, litt grønne urter og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæret temperaturkontrollert i ståltanker ved 28-30 °C, 6 md. modning i amerikanske og franske eikefat.",
+  "navn": "Sangre de Toro 2024",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Miguel Torres",
+  "smak": "Ungdommelig, myk og litt krydret med preg av modne røde og mørke bær, litt lakris og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,0 g/l",
+  "url": "/Land/Spania/Catalonia/Sangre-de-Toro-2024/p/5976106",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5976106",
+  "volum": 300,
+  "årgang": "2024"
+}

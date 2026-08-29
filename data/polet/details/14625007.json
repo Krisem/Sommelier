@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "14625007",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 56 prosent, Merlot 39 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mørkerød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 979.17,
+  "lukt": "Mørke bær, sedertre, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Branaire-Ducru 2019",
+  "parser": "json",
+  "pris": 2937.5,
+  "produsent": "Ch. Branaire-Ducru",
+  "smak": "Konsentrerte mørke bær, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Branaire-Ducru-2019/p/14625007",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14625007",
+  "volum": 300,
+  "årgang": "2019"
+}

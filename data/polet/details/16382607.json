@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "16382607",
+  "distrikt": "Rhône",
+  "druer": "Cinsault 6 prosent, Grenache 60 prosent, Mourvèdre 19 prosent, Syrah 13 prosent, Vaccarese 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp lilla.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 992.33,
+  "lukt": "Duft av mørke bær, lakris og pepper med hint av timian og rosmarin.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket, delvis fra 100 år gamle vinstokker. Vinifikasjon 4 uker sammen med skinn. 18 md. på gamle eikefat. Ufiltrert.",
+  "navn": "Dom. la Barroche Julien Barrot Châteauneuf-du-Pape 2022",
+  "parser": "json",
+  "pris": 2977,
+  "produsent": "Dom. La Barroche",
+  "smak": "Mørk frukt som kirsebær. Krydder og hint av eiketoner. Fast avslutning.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "2,8 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Dom-la-Barroche-Julien-Barrot-Ch%C3%A2teauneuf-du-Pape-2022/p/16382607",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16382607",
+  "volum": 300,
+  "årgang": "2022"
+}

@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "19714006",
+  "distrikt": "Languedoc-Roussillon",
+  "druer": "Grenache 20 prosent, Syrah 80 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Languedoc-Roussillon, Languedoc",
+  "literpris": 153.3,
+  "lukt": "Ungt og litt balsamisk preg av mørke skogsbær, grønn urt og lakris, hint av kamfer og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Lagret på ståltank.",
+  "navn": "Maison Bellamy Vieilles Vignes 2025",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Les Chais du Plan Carré",
+  "smak": "Fruktig, bærpreget og ferskt preg av bjørnebær, litt solbær, lakris og grønne urter. God fylde.",
+  "sukker": "3,1 g/l",
+  "syre": "4,5 g/l",
+  "underdistrikt": "Languedoc",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Languedoc/Maison-Bellamy-Vieilles-Vignes-2025/p/19714006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "19714006",
+  "volum": 300,
+  "årgang": "2025"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "16304906",
+  "distrikt": "Castilla La Mancha",
+  "druer": "Syrah 30 prosent, Tempranillo (Tinto del Pais) 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blålilla.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Castilla La Mancha, Castilla",
+  "literpris": 136.53,
+  "lukt": "Fruktig ungdommelig duft, innslag av jordbær, fiol, kirsebær og bringebær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Fermentering i ståltanker.",
+  "navn": "El Gran Botánico",
+  "parser": "json",
+  "pris": 409.6,
+  "produsent": "Bod. Gardel",
+  "smak": "Balansert, fruktig, ungdommelig med innslag av bjørnebær, fiol og røde bær.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Castilla",
+  "url": "/Land/Spania/Castilla-La-Mancha/Castilla/El-Gran-Bot%C3%A1nico/p/16304906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16304906",
+  "volum": 300,
+  "årgang": "2023"
+}

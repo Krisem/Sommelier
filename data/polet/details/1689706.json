@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "1689706",
+  "distrikt": "Lisboa",
+  "druer": "Touriga Nacional 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rødblå.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Lisboa",
+  "literpris": 149.97,
+  "lukt": "Aroma preget av modne mørke bær, litt tørket frukt, lakris, urter og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Vinifiert tradisjonelt i temperaturkontrollerte ståltanker ved 22-28 °C i 21 dager.",
+  "navn": "Escada Touriga Nacional",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "DFJ Vinhos",
+  "smak": "Ungdommelig med litt sødme, preg av fullmodne mørke bær, urter og lakris, litt fast ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "14,9 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Portugal/Lisboa/Escada-Touriga-Nacional/p/1689706",
+  "utvalg": "Basisutvalget",
+  "varenummer": "1689706",
+  "volum": 300,
+  "årgang": "2024"
+}

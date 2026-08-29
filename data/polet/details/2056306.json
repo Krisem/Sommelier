@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "2056306",
+  "distrikt": "Alentejo",
+  "druer": "Syrah 85 prosent, Trincadeira 15 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Alentejo",
+  "literpris": 149.97,
+  "lukt": "Innslag av bjørnebær, kirsebær, blåbær, mot slutten hint av vanilje og fioler.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druene høstes i september, mesteparten for hånd.",
+  "navn": "João Portugal Ramos Villa Santa 2025",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Joao Portugal Ramos",
+  "smak": "Blåbær, bjørnebær og plommer, sjokoladetoner i avslutningen.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "8 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Portugal/Alentejo/Jo%C3%A3o-Portugal-Ramos-Villa-Santa-2025/p/2056306",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "2056306",
+  "volum": 300,
+  "årgang": "2025"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "5588706",
+  "distrikt": "Sicilia",
+  "druer": "Nero d'Avola 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia",
+  "literpris": 159.97,
+  "lukt": "Aroma med fruktig og ungdommelig preg av røde bær og plommer, litt blomst, krydder og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Gjering på ståltank 5-7 dager, lagring på ståltank.",
+  "navn": "Settesoli Nero d'Avola",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Cant. Settesoli",
+  "smak": "Fruktig og myk med ørlite sødme, preg av modne røde bær og plommer, litt krydder, anis og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "9,5 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Italia/Sicilia/Settesoli-Nero-d%27Avola/p/5588706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5588706",
+  "volum": 300,
+  "årgang": "2025"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "14739907",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 4353.3,
+  "lukt": "Kirsebær, hint av trøffel og mineral. Ung og dyp.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Massolino Barolo Vigna Rionda Riserva 2016",
+  "parser": "json",
+  "pris": 13059.9,
+  "produsent": "Massolino",
+  "smak": "Fyldig, gode tanniner og frukt, nyansert og lang.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,1 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Massolino-Barolo-Vigna-Rionda-Riserva-2016/p/14739907",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "14739907",
+  "volum": 300,
+  "årgang": "2016"
+}

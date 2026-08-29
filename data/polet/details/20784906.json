@@ -1,0 +1,35 @@
+{
+  "alkohol": "11%",
+  "code": "20784906",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania",
+  "literpris": 133.3,
+  "lukt": "Aroma av rød frukt. Snev av krydret balsamico.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Vinifikasjon uten bruk av kunstgjødsel eller kunstige plantevernmidler.",
+  "navn": "Johan Uten Land Red Label Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 399.9,
+  "produsent": "Bod. Cerón",
+  "smak": "Balansert, rund, saftig og syrlig. Integrerte tanniner og stram avslutning.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Spania/Johan-Uten-Land-Red-Label-Cabernet-Sauvignon/p/20784906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20784906",
+  "volum": 300
+}

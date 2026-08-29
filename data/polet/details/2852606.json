@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "2852606",
+  "distrikt": "Lombardia",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Lombardia, Provincia di Pavia",
+  "literpris": 166.63,
+  "lukt": "Ungdommelig preg av kirsebær og mørke skogsbær, litt blomst, lakris og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk, langsom gjæring og lang maserasjon.",
+  "navn": "Giovanni Barcelli Barbera",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Domaine Wines",
+  "smak": "Fruktig preg av friske røde og mørke bær, streif av sødme, lakris, krydder og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,5 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Provincia di Pavia",
+  "url": "/Land/Italia/Lombardia/Provincia-di-Pavia/Giovanni-Barcelli-Barbera/p/2852606",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2852606",
+  "volum": 300,
+  "årgang": "2025"
+}

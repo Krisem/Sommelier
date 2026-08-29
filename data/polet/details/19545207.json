@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19545207",
+  "distrikt": "Rheinhessen",
+  "druer": "Spätburgunder 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Tyskland, Rheinhessen, Gau-Odernheim",
+  "literpris": 533.3,
+  "lukt": "Aroma av bjørnebær og solbær, hint av mandler.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Krebs-Grode Gau-Odernheimer Herrgottspfad Spätburgunder Kalkstein",
+  "parser": "json",
+  "pris": 1599.9,
+  "produsent": "Weingut Krebs-Grode",
+  "smak": "Preg av mørke bær, myk avslutning.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Gau-Odernheim",
+  "url": "/Land/Tyskland/Rheinhessen/Gau-Odernheim/Krebs-Grode-Gau-Odernheimer-Herrgottspfad-Sp%C3%A4tburgunder-Kalkstein/p/19545207",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19545207",
+  "volum": 300,
+  "årgang": "2018"
+}

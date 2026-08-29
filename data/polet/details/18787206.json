@@ -1,0 +1,33 @@
+{
+  "alkohol": "13,5%",
+  "code": "18787206",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Romania",
+  "literpris": 136.63,
+  "lukt": "Ung aroma av røde bær, litt krydret og jordlig preg.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "I Prefer Merlot",
+  "parser": "json",
+  "pris": 409.9,
+  "produsent": "Cramele Recas",
+  "smak": "Fruktig, preg av mørke bær, litt syltet frukt og paprika.",
+  "sukker": "6 g/l",
+  "syre": "4,5 g/l",
+  "url": "/Land/Romania/I-Prefer-Merlot/p/18787206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18787206",
+  "volum": 300
+}

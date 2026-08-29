@@ -1,0 +1,36 @@
+{
+  "alkohol": "11%",
+  "code": "16899706",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 5,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania",
+  "literpris": 133.3,
+  "lukt": "Aroma av rød frukt, hint av krydder og balsamico.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Johan Uten Land Red Label Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 399.9,
+  "produsent": "Bodegas Celaya S.A.",
+  "smak": "Rund, saftig og frisk med strukturert avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Spania/Johan-Uten-Land-Red-Label-Cabernet-Sauvignon/p/16899706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16899706",
+  "volum": 300
+}

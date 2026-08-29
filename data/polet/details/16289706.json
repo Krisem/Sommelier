@@ -1,0 +1,34 @@
+{
+  "alkohol": "13,5%",
+  "code": "16289706",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia",
+  "literpris": 189.8,
+  "lukt": "Duft av kirsebær og plomme.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Boeri Delicious Vino Rosso",
+  "parser": "json",
+  "pris": 569.4,
+  "produsent": "Alfonso Boeri",
+  "smak": "Smak av kirsebær og plomme.",
+  "sukker": "8 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Italia/Boeri-Delicious-Vino-Rosso/p/16289706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "16289706",
+  "volum": 300
+}

@@ -1,0 +1,35 @@
+{
+  "alkohol": "12,5%",
+  "code": "19768806",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika",
+  "literpris": 133.3,
+  "lukt": "Aroma av mørke bær, med innslag av krydder og pepper. Hint av vanilje og urter.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Delvis lagret på eik.",
+  "navn": "Crazy Cat Shiraz",
+  "parser": "json",
+  "pris": 399.9,
+  "produsent": "Vinimundi AB",
+  "smak": "Balansert og rund med moreller, mørke bær, pepper og hint av kaffe, kakao og vanilje.",
+  "sukker": "5 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/S%C3%B8r-Afrika/Crazy-Cat-Shiraz/p/19768806",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19768806",
+  "volum": 300
+}

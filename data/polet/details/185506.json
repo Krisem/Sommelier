@@ -1,0 +1,38 @@
+{
+  "alkohol": "13,5%",
+  "code": "185506",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med hint av blått.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Toscana",
+  "literpris": 186.63,
+  "lukt": "Ung aroma av modne mørke bær og plommer, litt svale urter, kamfer og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Kun få måneders lagringstid på store, gamle eikefat.",
+  "navn": "Rosso dei Barbi Toscana",
+  "parser": "json",
+  "pris": 559.9,
+  "produsent": "Fatt. dei Barbi",
+  "smak": "Ung, frisk og litt undermoden med god fasthet og preg av kirsebær og grønn urt, hint trekrydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,9 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Italia/Toscana/Rosso-dei-Barbi-Toscana/p/185506",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "185506",
+  "volum": 300
+}

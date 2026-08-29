@@ -95,6 +95,9 @@ Praktiske følger:
 - **Full enumerering av rødvin = 574 sider.** Det er godt innenfor ett vindu.
 - **Dybde for alle 13 775 rødviner = ~16 kvotevinduer (~16 timer).** Details er derfor permanent et *prioritert utsnitt*, ikke noe som tas «senere». Til referanse: alle 3 l + hele Basisutvalget er 694 manglende details — det fyller ett vindu.
 - **Sjekk HTTP-status per side.** En `429` som telles som data gir stille avkorting. Stopp ved første `429`; en retry brenner bare kvote.
+- **Produktsider er en EGEN bøtte med egen straff.** Søk gir `Retry-After: 3399` (57 min); produktsider gir `Retry-After: 300` (5 min). Ikke bland dem i et estimat — det var nettopp det som ga et 16-timers-anslag der det riktige er ~24.
+- **Ikke stol på `Retry-After` for produktsider — vent ~7,5 min, ikke de 5 den ber om.** Målt over tre sykluser: 5,3 min pause → 83 sider, 5,4 min → 34, 7,3 min → 82. Bøtta er ikke fylt opp igjen når headeren sier den er det, så bokstavelig lydighet gir ustabilt og omtrent halvert utbytte. Vedvarende takt med riktig pause: **~82 sider per syklus, ~10 sider i minuttet.**
+- **Burst-and-wait slår jevn pacing.** Hent til `429`, vent ut cooldownen, fortsett. Hvert `browser_evaluate` er uansett begrenset av et tidstak, så jevn pacing koster flere verktøykall uten å gi mer data.
 - Browserbase gratis-tier har i tillegg ~1 browser-time/mnd — rikelig til månedlig refresh, ikke til polling.
 
 ## Paginering og sortering — to feller

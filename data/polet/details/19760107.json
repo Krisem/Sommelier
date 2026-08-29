@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,4%",
+  "code": "19760107",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza",
+  "literpris": 1220,
+  "lukt": "Aroma av plomme og moreller, hint av sjokolade, krydder, eik og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "10 dagers maserasjon. Lagret i 18 år i franske 6000 liters fat.",
+  "navn": "Weinert Tonel Unico Malbec 2007",
+  "parser": "json",
+  "pris": 3660,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Rund og fyldig med fruktig smak. Tanniner og lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Argentina/Mendoza/Weinert-Tonel-Unico-Malbec-2007/p/19760107",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19760107",
+  "volum": 300,
+  "årgang": "2007"
+}

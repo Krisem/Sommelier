@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "20982406",
+  "distrikt": "Pays d'Oc",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 163.3,
+  "lukt": "Ung og fruktig, preg av bringebær, kirsebær, litt markjordbær, grønne urter, roser og mineraler.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon. 8 md. lagring på ståltank. Malolaktisk fermentering.",
+  "navn": "Laroche Pinot Noir",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Dom. Laroche",
+  "smak": "Saftig og frisk med middels fylde, ungt preg av kirsebær, jordbær og bringebær, hint av mineraler.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/Laroche-Pinot-Noir/p/20982406",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20982406",
+  "volum": 300,
+  "årgang": "2025"
+}

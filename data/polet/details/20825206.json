@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "20825206",
+  "distrikt": "South Australia",
+  "druer": "Cabernet Sauvignon 40 prosent, Shiraz 60 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South Australia, Limestone Coast",
+  "literpris": 173.3,
+  "lukt": "Rik fruktig aroma, hint av fat, solbær, plommer, sjokolade, blåbær og mynte.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Maze Shiraz Cabernet Sauvignon",
+  "parser": "json",
+  "pris": 519.9,
+  "produsent": "Domaine Wines Sweden AB",
+  "smak": "Smaksrik, hint av fat, solbær, plomme, sjokolade, pepper, urter, blåbær og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Limestone Coast",
+  "url": "/Land/Australia/South-Australia/Limestone-Coast/Maze-Shiraz-Cabernet-Sauvignon/p/20825206",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20825206",
+  "volum": 300,
+  "årgang": "2024"
+}

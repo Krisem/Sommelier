@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "5077806",
+  "distrikt": "Rhône",
+  "druer": "Merlot 10 prosent, Carignan 20 prosent, Grenache 70 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Vaucluse",
+  "literpris": 148.33,
+  "lukt": "Aroma preget av røde bær og plommer, hint av krydder, tørket frukt og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Druene høstes for hånd og avstilkes på vineriet. Tradisjonell vinifikasjon og lagring i ståltank.",
+  "navn": "André Brunel Les Rives d'Alcion",
+  "parser": "json",
+  "pris": 445,
+  "produsent": "André Brunel",
+  "smak": "Fruktig med god fylde og ungdommelig preg av røde bær, plommer, litt krydder, kirsebær og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Vaucluse",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Vaucluse/Andr%C3%A9-Brunel-Les-Rives-d%27Alcion/p/5077806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5077806",
+  "volum": 300
+}

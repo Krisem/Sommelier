@@ -1,0 +1,38 @@
+{
+  "alkohol": "14%",
+  "code": "20825706",
+  "distrikt": "South Australia",
+  "druer": "Cabernet Sauvignon 60 prosent, Merlot 40 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South Australia",
+  "literpris": 161.63,
+  "lukt": "Aroma av mørke bær, solbær, kirsebær og plommer, kombinert med krydder, mørk sjokolade, hint urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Mira Bold and Balanced",
+  "parser": "json",
+  "pris": 484.9,
+  "produsent": "Domaine Wines Sweden AB",
+  "smak": "Rund og myk, modne mørke bær og plomme. Myke tanniner og balansert syre.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "7 g/l",
+  "syre": "6,2 g/l",
+  "url": "/Land/Australia/South-Australia/Mira-Bold-and-Balanced/p/20825706",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "20825706",
+  "volum": 300,
+  "årgang": "2024"
+}

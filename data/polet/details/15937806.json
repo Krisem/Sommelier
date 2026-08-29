@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "15937806",
+  "distrikt": "Bekaa Valley",
+  "druer": "Cabernet Sauvignon 15 prosent, Cinsault 20 prosent, Syrah 65 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 179.97,
+  "lukt": "Sval aroma av modne mørke og røde bær, litt syltet frukt og innslag av urter, te, lær og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer. Gjæring på ståltank.",
+  "navn": "Ch. Kefraya Le Cèdre de Beyrouth 2023",
+  "parser": "json",
+  "pris": 539.9,
+  "produsent": "Winemarket",
+  "smak": "Saftig, svalt og litt utviklet preg av røde og mørke skogsbær, syltet frukt, tobakk, urt og kamfer.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Ch-Kefraya-Le-C%C3%A8dre-de-Beyrouth-2023/p/15937806",
+  "utvalg": "Basisutvalget",
+  "varenummer": "15937806",
+  "volum": 300,
+  "årgang": "2023"
+}

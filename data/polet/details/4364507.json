@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "4364507",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 20 prosent, Petit Verdot 5 prosent, Cabernet Sauvignon 75 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Haut-Médoc",
+  "literpris": 846.63,
+  "lukt": "Mørke bær, vanilje og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Cissac 2018",
+  "parser": "json",
+  "pris": 2539.9,
+  "produsent": "Louis Vialard",
+  "smak": "Solbær, kirsebær, vanilje, tobakk, rik, fyldig.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Haut-Médoc",
+  "url": "/Land/Frankrike/Bordeaux/Haut-M%C3%A9doc/Ch-Cissac-2018/p/4364507",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "4364507",
+  "volum": 300,
+  "årgang": "2018"
+}

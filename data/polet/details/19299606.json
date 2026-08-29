@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "19299606",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California, Central Coast",
+  "literpris": 233.3,
+  "lukt": "Fruktig og litt utviklet aroma av modne røde bær, svale urter og krydder, litt fat, te og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagret med bunnfallet (lees) i ca. 9 md. på fransk eik.",
+  "navn": "Tyler Pinot Noir",
+  "parser": "json",
+  "pris": 699.9,
+  "produsent": "Tyler Winery",
+  "smak": "Saftig, myk og bærpreget, toner av moden jordbær, kirsebær og urter, litt fat, te og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Central Coast",
+  "url": "/Land/USA/California/Central-Coast/Tyler-Pinot-Noir/p/19299606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "19299606",
+  "volum": 300,
+  "årgang": "2024"
+}

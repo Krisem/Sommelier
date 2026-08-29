@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "5812407",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mursteinsrød, oransje kant.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Spania, Rioja",
+  "literpris": 359.3,
+  "lukt": "Aroma av røde bær, bringebær og kirsebær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "18 md. på nye franske eikefat etterfulgt av 3 md. i store eiketønner.",
+  "navn": "Altanza Reserva 2019",
+  "parser": "json",
+  "pris": 1077.9,
+  "produsent": "Bod. Altanza",
+  "smak": "Pepper, balsamico, toast og røyk. Runde tanniner. Middels syrlig ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Spania/Rioja/Altanza-Reserva-2019/p/5812407",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "5812407",
+  "volum": 300,
+  "årgang": "2019"
+}

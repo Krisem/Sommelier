@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "4273606",
+  "distrikt": "South E. Australia",
+  "druer": "Shiraz 58 prosent, Cabernet Sauvignon 42 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South E. Australia",
+  "literpris": 163.3,
+  "lukt": "Fruktig aroma preget av mørke bær, mynte og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon med temperaturkontrollert gjæring.",
+  "navn": "Rosemount Shiraz Cabernet 2025",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Rosemount Est.",
+  "smak": "Ung og fruktig, preg av modne mørke bær, krydder og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "13 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Australia/South-E-Australia/Rosemount-Shiraz-Cabernet-2025/p/4273606",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "4273606",
+  "volum": 300,
+  "årgang": "2025"
+}

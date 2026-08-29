@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "1571107",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 278.3,
+  "lukt": "Preg av mørke og røde bær, hint urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Tradisjonell gjæring og maserasjon i 15 dg. ved maks. 28 C.",
+  "navn": "Giacosa Fratelli Barbera d Alba Bussie 2022",
+  "parser": "json",
+  "pris": 834.9,
+  "produsent": "Giacosa Fratelli",
+  "smak": "Ung, frisk og saftig, god lengde i ettersmaken.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Giacosa-Fratelli-Barbera-d-Alba-Bussie-2022/p/1571107",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "1571107",
+  "volum": 300,
+  "årgang": "2022"
+}

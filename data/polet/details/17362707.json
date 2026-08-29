@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "17362707",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 45 prosent, Merlot 55 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Haut-Médoc",
+  "literpris": 988,
+  "lukt": "Aroma av mørke bær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Citran 2016",
+  "parser": "json",
+  "pris": 2964,
+  "produsent": "Ch. Citran",
+  "smak": "God konsentrasjon, struktur og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Haut-Médoc",
+  "url": "/Land/Frankrike/Bordeaux/Haut-M%C3%A9doc/Ch-Citran-2016/p/17362707",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17362707",
+  "volum": 300,
+  "årgang": "2016"
+}

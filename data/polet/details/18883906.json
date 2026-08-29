@@ -1,0 +1,37 @@
+{
+  "alkohol": "12,5%",
+  "code": "18883906",
+  "druer": "Carignan 10 prosent, Cinsault 10 prosent, Grenache 50 prosent, Syrah 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-29T17:54:12.308192+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike",
+  "literpris": 170.67,
+  "lukt": "Aroma av røde og mørke bær, innslag av urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "La Vieille Ferme Rouge 2023",
+  "parser": "json",
+  "pris": 512,
+  "produsent": "Famille Perrin",
+  "smak": "Saftig med god friskhet og fylde, preg av røde og mørke bær, urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/Frankrike/La-Vieille-Ferme-Rouge-2023/p/18883906",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "18883906",
+  "volum": 300,
+  "årgang": "2023"
+}
