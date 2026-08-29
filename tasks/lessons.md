@@ -139,3 +139,19 @@ kvalitets- eller kraftlikhet. Den er verken.
 - **Ikke kjemp mot druen.** Barbera er syrerik og lett-til-middels i kropp per konstruksjon. At
   han elsker Barbera (4.6) og samtidig avviste denne er ikke en selvmotsigelse – det er formatet
   og kvalitetsnivået som skiller.
+
+---
+
+## 2026-08-29 – Defaultet til «noe han liker» i stedet for å utfordre briefen
+
+**Hva skjedde:** Kristoffer påpekte at «jeg trenger en flaske rødvin» ikke burde gi en anbefaling
+basert på hva han erfaringsmessig liker, men et returspørsmål om hva han faktisk er ute etter.
+
+**Hvorfor det var feil:** En vag brief har mange gyldige svar, og «trygt valg fra historikken» er
+bare ett av dem – ofte det som bommer på situasjonen. Vespa Barbera-bommen samme dag var like mye
+en brief-svikt som en modellsvikt: klokke-similarity pekte rett, men ingen hadde spurt om han ville
+ha noe kraftig. Å hoppe rett til anbefaling føles hjelpsomt og er det motsatte.
+
+**Hva jeg gjør annerledes nå:** Se «Utfordre vage briefer» i `CLAUDE.md`. Kort: 2–3 spørsmål i ÉN
+melding (mat/solo, lett/kraftig, hverdag/anledning), alltid med et default han kan si ja til, aldri
+om det briefen allerede besvarer. Ett presist spørsmål slår tre generiske.

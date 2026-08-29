@@ -37,6 +37,8 @@ Når brukeren ikke spesifiserer fagområde:
 - **Foreslå begge fag side om side** kun når begge er reelle alternativer og brukeren har sagt han er åpen, ellers velg én vei og forklar valget.
 - **Aldri spør hver gang** — det blir friksjon. Standardspørsmålet "vin eller øl?" hører bare hjemme der svaret ikke er gitt fra konteksten.
 
+> Dette gjelder *fagvalget* (vin vs øl). Er faget gitt men situasjonen vag («en flaske rødvin»), se **«Utfordre vage briefer»** under — der er 2–3 spørsmål i én melding riktig, ikke friksjon. Regelen er den samme i begge tilfeller: spør kun om det konteksten ikke allerede har svart på.
+
 ## Bruk av subagenter
 
 Når en oppgave er stor (3+ uavhengige underoppgaver, eller research/skriving som vil fylle hovedkonteksten):
@@ -81,9 +83,43 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse)
 
 **Oppgaver og læring:** `tasks/todo.md` (aktive tråder), `tasks/lessons.md` (oppdater umiddelbart etter hver brukerkorreksjon).
 
+## Utfordre vage briefer – FØR du anbefaler
+
+**«Jeg trenger en flaske rødvin» er ikke en brief, det er en åpning.** Å defaulte til noe han
+erfaringsmessig liker gir en trygg anbefaling som like gjerne bommer på *situasjonen*. Bommen på
+Vespa Barbera 3 l ([lessons.md 2026-08-29](tasks/lessons.md)) er eksempelet: klokke-similarity
+pekte rett på den, men ingen hadde spurt om han ville ha noe kraftig – og det var hele poenget.
+
+**Still 2–3 korte spørsmål i ÉN melding.** Aldri en utspørring over flere runder.
+
+De tre som snevrer søket mest, i prioritert rekkefølge:
+
+1. **Til mat eller solo?** Hans egen bekreftede akse (se «Kontekst-avhengig syrepreferanse» i
+   `smaksprofil.md`): mer syre til mat, rundere og mer fruktdrevet solo.
+2. **Lett eller kraftig?** Aksen som bommet. **NB:** «kraftig» oversettes *ikke* til høy Fylde –
+   se «Kraftigere kan IKKE søkes på Fylde-klokka». Oversett til fatlagring/appassimento/ripasso,
+   appellasjonsnivå (Superiore/Riserva > generisk DOC) og literpris.
+3. **Hverdag eller anledning?** Setter prissonen (se Pris-soner).
+
+Et fjerde, kun når det er relevant og ikke oppgitt: **flaske eller kartong?** Snapshotet har 313
+røde på 3 l, og de ligger på en helt annen kvalitetskurve enn 75 cl (145–200 kr/L, bygget lette).
+
+**Ikke spør om det briefen allerede svarer på.** «Vin til osso buco i kveld» har mat og anledning
+gitt – da gjenstår høyst lett/kraftig, ofte ikke engang det. **Ett presist spørsmål slår tre
+generiske.** Dette er samme prinsipp som vin/øl-presiseringen over, ikke et unntak fra den.
+
+**Gi alltid et default å si ja til**, så det koster ham ett ord å svare:
+> «Til mat eller solo i sofaen? Og jeg tenker kraftig gitt årstiden – si ifra hvis du vil ha noe lettere.»
+
+**Skriv svarene tilbake** når de avslører noe stabilt (sesongmønster, format, en situasjon som
+gjentar seg) – inn i `smaksprofil.md`, ikke bare i denne samtalen.
+
 ## Workflow for hver anbefaling
 
 Følg denne rekkefølgen:
+
+0b. **Er briefen god nok?** Hvis situasjonen er uklar – se «Utfordre vage briefer» over. Spør før
+    du søker, ikke etter at du har brukt et søk på feil premiss.
 
 0. **Les alltid-fila** – `knowledge/sommelier.md` er kjernen + drueprofiler + pointer-system. `knowledge/smaksprofil.md` er bruker-preferansene.
 1. **Sjekk historikk** – les `data/vivino/full_wine_list.csv` (Bash + grep/awk eller Python). Hva har brukeren drukket av lignende? Hva ga han? Sorter på `Your rating`, vekt nyere `Scan date` høyere.
