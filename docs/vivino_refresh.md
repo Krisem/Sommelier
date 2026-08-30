@@ -19,7 +19,10 @@ laster offentlig, **men egne stjerne-ratings vises bare når du er innlogget**.
 ## Steg 1 — skrap feeden
 
 På den innloggede profilsiden, kjør denne via `browser_evaluate`. Egen rating er kodet som
-`<i class="icon-N-pct">` (N = fyllprosent per stjerne) inne i `.activity-rating .rating.rating-xs`:
+`<i class="icon-N-pct">` (N = fyllprosent per stjerne) inne i `.activity-rating .rating.rating-xs`.
+Aktivitetslenka bærer et `title`-attributt med **eksakt UTC-tidsstempel** — bruk det, ikke den
+relative teksten («27 days ago»). CSV-ens `Scan date` er UTC (verifisert 2026-08-30: Hattingley
+Rosé-aktiviteten står som `Mon, Jun 8th at 17:50:03 UTC`, CSV-raden som `2026-06-08 17:50:03`).
 
 ```js
 () => {
@@ -38,21 +41,27 @@ På den innloggede profilsiden, kjør denne via `browser_evaluate`. Egen rating 
     if (b.querySelectorAll('.activity-rating .rating.rating-xs').length !== 1) return;
     const href = link.getAttribute('href');
     if (seen.has(href)) return; seen.add(href);
-    const yr = href.match(/year=(\d{4})/);
+    const act = b.querySelector('a[href*="/activities/"]');
     rows.push({
       href,
       winery: (b.querySelector('a[href*="/wineries/"]')||{}).textContent?.trim() || null,
-      year: yr ? yr[1] : '',
+      year: (href.match(/year=(\d{4})/)||[])[1] || '',
       myRating: pct(rEl),
-      when: (b.querySelector('a[href*="/activities/"]')||{}).textContent?.trim() || null,
+      exactTime: act ? act.getAttribute('title') : null,   // "Mon, Aug 3rd at 18:21:16 UTC"
+      relative: act ? act.textContent.trim().replace(/\s+/g,' ') : null,
     });
   });
   return rows;
 }
 ```
 
-Feeden viser de ~10 nyeste. Trenger du eldre (mange nye siden sist), klikk **"Show more"**
-(`browser_click`) og kjør snippeten på nytt.
+Feeden viser de ~10 nyeste. Trenger du eldre, klikk **"Show more"** (`browser_click` på
+`button.btn-flow`) og kjør snippeten på nytt — det gir 20.
+
+> **Gjør dette uansett, minst én gang.** Overlappet er kontrollen din: de eldre radene skal
+> matche CSV-en på rating, desimal for desimal. Gjør de det, er skrapingen intakt, og en tom
+> diff betyr «ingen nye ratinger». Gjør de det ikke, har DOM-en driftet — og da ser en brukket
+> skraping ut nøyaktig som en tom diff. Uten denne kontrollen kan du ikke skille de to.
 
 ## Steg 2 — finn de nye
 
@@ -70,28 +79,67 @@ Alt eldre enn forrige `Scan date` er allerede inne. Bare viner som mangler skal 
 
 ## Steg 3 — hent metadata per ny vin
 
-Feeden mangler region/stil/label/vintage-id. For **hver ny** vin: `browser_navigate` til
-`href` og kjør:
+Feeden mangler region/stil/label/vintage-id. For **hver ny** vin: `browser_navigate` til `href`
+og hent alt fra sidens egen `"vintage":{…}`-JSON-blokk. **Ikke bruk løse regexer mot HTML-en.**
+Den tidligere `html.match(/"year"\s*:\s*"?(\d{4})"?/)` traff `2025` på Land of Saints — en
+årgangsløs oppføring — fordi treffet kom fra «Compare Vintages»-blokka lenger nede på siden.
+Brace-match objektet i stedet:
 
 ```js
 () => {
   const html = document.documentElement.innerHTML;
-  const g = {};
-  g.regionalStyle = (document.querySelector('a[href*="/wine-styles/"]')||{}).textContent?.trim() || null;
-  g.label = (document.querySelector('img[src*="/labels/"], img[src*="thumbs"]')||{}).src || null;
-  const vm = html.match(/"vintage"\s*:\s*\{[^}]*"id"\s*:\s*(\d+)/) || html.match(/\/wines\/(\d+)/);
-  g.vintageId = vm ? vm[1] : null;                       // → Link to wine: /wines/<id>
-  g.wineTypeId = (html.match(/"wine_type_id"\s*:\s*(\d+)/)||[])[1] || null;  // 1=Red 2=White 3=Sparkling 4=Rosé 7=Dessert 24=Fortified
+  const i = html.indexOf('"vintage":{');
+  if (i < 0) return {error: 'ingen vintage-blokk — DOM-drift, inspiser siden'};
+  const start = i + '"vintage":'.length;
+  let d = 0, end = -1, inStr = false, esc = false;
+  for (let j = start; j < html.length; j++) {
+    const c = html[j];
+    if (esc) { esc = false; continue; }
+    if (c === '\\') { esc = true; continue; }
+    if (c === '"') { inStr = !inStr; continue; }
+    if (inStr) continue;
+    if (c === '{') d++;
+    else if (c === '}') { d--; if (d === 0) { end = j + 1; break; } }
+  }
+  let v;
+  try { v = JSON.parse(html.slice(start, end)); } catch (e) { return {error: 'parse: ' + e.message}; }
+  const w = v.wine || {};
   const facts = {};
   document.querySelectorAll('table tr').forEach(tr => {
     if (tr.children.length === 2) facts[tr.children[0].textContent.trim()] = tr.children[1].textContent.trim();
   });
-  g.facts = facts;  // Region: "France / Bordeaux / Médoc" → Country=France, Region=siste ledd
-  return g;
+  return {
+    vintageId: v.id,                          // → Link to wine: /wines/<id>
+    seoName: v.seo_name,                      // slutter på "-uv" = årgangsløs → Vintage "N.V."
+    year: v.year || 'N.V.',                   // → Vintage
+    avg: v.statistics?.ratings_average,       // → Average rating
+    winery: w.winery?.name,                   // → Winery
+    wineName: w.name,                         // → Wine name
+    region: w.region?.name,                   // → Region (siste ledd, ikke hele stien)
+    country: w.region?.country?.name,         // → Country
+    style: w.style?.name,                     // → Regional wine style
+    wineTypeId: w.type_id,                    // → Wine type, se tabell
+    label: 'https:' + v.image?.location.replace('_pl_480x640.png', '_pb_x600.png'),
+    facts,
+  };
 }
 ```
 
-Wine type-id → CSV `Wine type`: `1=Red Wine, 2=White Wine, 3=Sparkling, 4=Rosé, 7=Dessert Wine, 24=Fortified`.
+Wine type-id → CSV `Wine type`, med CSV-ens **eksakte** strenger:
+`1=Red Wine, 2=White Wine, 3=Sparkling, 4=Rosé Wine, 7=Dessert Wine, 24=Fortified Wine`.
+Merk «Wine»-suffikset på Rosé og Fortified — uten det brekker gruppering i `profile_stats.py`.
+(Kun 1 og 2 er verifisert mot levende sider; de øvrige er lest ut av CSV-ens eksisterende verdier.)
+
+**En `-uv`-oppføring er Vivinos årgangsløse aggregat** over alle årganger av vinen. Den skal inn
+som `Vintage: N.V.`, men vær klar over at den ikke kan knyttes til en bestemt årgang — eller til
+et Vinmonopol-varenummer. Noter det hvis vinen senere skal klokke-matches.
+
+**Verifiser før du merger:**
+- At hver label-URL faktisk laster. CORS blokkerer `fetch` mot `images.vivino.com`, så bruk
+  `new Image()` med `onload`/`onerror`. Transformen `_pl_480x640.png` → `_pb_x600.png` gir samme
+  form som DOM-ens `<img src>` og som radene forrige synk la inn.
+- At hver `https://www.vivino.com/wines/<vintageId>` gir 200 og riktig sidetittel. Same-origin
+  `fetch` fungerer mot `vivino.com`.
 
 ## Steg 4 — merge inn i CSV
 
@@ -107,9 +155,9 @@ echo '[{"Winery":"Catena","Wine name":"The Trilogy Malbec","Vintage":"2024",
   | python3 -m tools.vivino_sync -
 ```
 
-- **Scan date**: feeden gir kun relativ dato («4 days ago»). Regn om til `YYYY-MM-DD HH:MM:SS`
-  fra dagens dato — dag-presisjon er godt nok (brukes bare til «vekt nyere høyere»). Noter at
-  den er omtrentlig hvis det er tvil.
+- **Scan date**: bruk `exactTime` fra steg 1, konvertert til `YYYY-MM-DD HH:MM:SS`. Verdien er
+  allerede UTC og skal **ikke** regnes om til norsk tid — CSV-en er UTC. Fall bare tilbake på
+  omregning fra relativ dato hvis `title`-attributtet skulle forsvinne.
 - Tomme kolonner (Your review, Personal Note, Drinking Window, Scan/Review Location) kan stå tomme.
 
 ## Steg 5 — regenerer statistikk
