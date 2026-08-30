@@ -16,7 +16,6 @@
       ikke «finner noe like godt» — Vespa-bommen 2026-08-29 var nettopp klokke-similarity som pekte på
       en vin med identiske klokker og motsatt dom.
 - [x] ~~**Kjerne-land klokke-topp (utsatt fra 2026-07-02)**~~ — superseded av «Komplett rødvins-snapshot» over; den gamle formuleringen bygde dessuten på `Garvestoffer`-fasetten, som ikke filtrerer. Opprinnelig: — utvid snapshot med IT/FR/DE/ES rødvin i sweet-spoten (Fylde 7-8 × Friskhet 9-12, ~723 røde). Ble rate-limitet ut i facet-sweepen; kjør senere med gentle backoff (`polet_facets.build_facet_queries`).
-- [ ] **Hvit/musserende-ekspansjon** — samme facet-sweep for aromatisk hvit (østerrike/tyskland/new_zealand) når den frontier-fila bygges, + musserende. Utsatt for å holde snapshot bundet denne runden.
 - [ ] Begynn å bygge klokke-tabell i `knowledge/smaksprofil.md` for topp-viner (Fenocchio + Paraje Altamira der nå — fortsett å utvide)
 - [ ] Vurder å legge til et drueblending-kompendium for druer brukeren liker (Barbera, Nebbiolo, Riesling, Sangiovese, Tannat, Corvina-blend)
 - [ ] Test mot 3 reelle scenarier etter strukturskifte: hverdagsrød under 250 kr, osso buco-paring, Etna-utvidelse
