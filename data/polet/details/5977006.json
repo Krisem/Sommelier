@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "5977006",
+  "distrikt": "Pays d'Oc",
+  "druer": "Cabernet Sauvignon 70 prosent, Syrah 30 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Pays d'Oc",
+  "literpris": 309.63,
+  "lukt": "Aroma preget av mørke bær og litt urter, hint av paprika og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "J.P. Chenet Cabernet Syrah",
+  "parser": "json",
+  "pris": 57.9,
+  "produsent": "Les Grands Chais de France",
+  "smak": "Fruktig og saftig med ørlite sødme, preg av modne mørke og røde bær, hint paprika og grønn urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "7,2 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/Frankrike/Pays-d%27Oc/J-P-Chenet-Cabernet-Syrah/p/5977006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5977006",
+  "volum": 18.7,
+  "årgang": "2024"
+}

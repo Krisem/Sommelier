@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "5178901",
+  "distrikt": "Sicilia",
+  "druer": "Frappato 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 333.33,
+  "lukt": "Ung og fruktig aroma av røde bær, litt krydder og roser, innslag av kirsebær og grønne urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert.",
+  "navn": "COS Frappato 2025",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Az. Agr. Cos",
+  "smak": "Saftig og friskt preg av modne røde bær, grønne urter og litt krydder, innslag av te og mineraler.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/COS-Frappato-2025/p/5178901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5178901",
+  "volum": 75,
+  "årgang": "2025"
+}

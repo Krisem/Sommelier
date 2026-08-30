@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "684801",
+  "distrikt": "Navarra",
+  "druer": "Cabernet Sauvignon 15 prosent, Merlot 20 prosent, Tempranillo (Tinto del Pais) 65 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Navarra",
+  "literpris": 219.87,
+  "lukt": "Aroma av modne mørke bær, litt fat, krydder og fiol, innslag av tobakk, svale urter og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon med lang maserasjonstid. 18 md. i franske og amerikanske eikefat.",
+  "navn": "Gran Feudo Reserva 2021",
+  "parser": "json",
+  "pris": 164.9,
+  "produsent": "Bod. Julián Chivite",
+  "smak": "Fyldig og litt utviklet preg av mørke bær, tørket frukt og fat, innslag av lakris, tobakk og urt.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Spania/Navarra/Gran-Feudo-Reserva-2021/p/684801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "684801",
+  "volum": 75,
+  "årgang": "2021"
+}

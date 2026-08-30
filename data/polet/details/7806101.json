@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "7806101",
+  "distrikt": "Alentejo",
+  "druer": "Petit Verdot 15 prosent, Touriga Nacional 40 prosent, Alicante Bouschet 10 prosent, Syrah 35 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Alentejo",
+  "literpris": 186.53,
+  "lukt": "Litt utviklet preg av modne mørke bær og tørket frukt, litt svale urter, fat, vanilje og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Avstilking. Temp. kontr. ferm. i ståltanker ved 27gr. i 12 dg. Lagret på franske og am. fat.",
+  "navn": "Fortissimo 2023",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Casa Santos Lima",
+  "smak": "Fyldig og litt krydret preg av sødmerike mørke og røde bær, innslag av lakris, litt kamfer og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,4 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Portugal/Alentejo/Fortissimo-2023/p/7806101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7806101",
+  "volum": 75,
+  "årgang": "2023"
+}

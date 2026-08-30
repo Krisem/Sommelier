@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "7791001",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California",
+  "literpris": 266.53,
+  "lukt": "Aroma av fullmodne røde bær og litt syltet frukt, innslag av grønne urter, lakris og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Gjæret på ståltanker, lagret på nye og gamle eikefat.",
+  "navn": "Cline Nancy's Vines Pinot Noir 2023",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "Cline",
+  "smak": "Ungdommelig, myk og saftig med jordbær- og bringebæraktig frukt, litt urt, krydder, fat og vanilje.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,2 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/USA/California/Cline-Nancy%27s-Vines-Pinot-Noir-2023/p/7791001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7791001",
+  "volum": 75,
+  "årgang": "2023"
+}

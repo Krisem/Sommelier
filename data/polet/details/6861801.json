@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "6861801",
+  "distrikt": "Rhône",
+  "druer": "Mourvèdre 15 prosent, Syrah 20 prosent, Grenache 65 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 246.67,
+  "lukt": "Aroma med ungdommelig preg av mørke bær og plommer, innslag av bjørnebær, svale urter og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Fermentering i temeraturkontrollerte ståltanker. Modnet i sementkar.",
+  "navn": "Brunel de la Gardine Côtes du Rhône 2023",
+  "parser": "json",
+  "pris": 185,
+  "produsent": "Brunel Pere et Fils",
+  "smak": "Fyldig, litt myk og krydret med god lengde, preg av modne mørke bær, svale urter og hint av pepper.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Brunel-de-la-Gardine-C%C3%B4tes-du-Rh%C3%B4ne-2023/p/6861801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "6861801",
+  "volum": 75,
+  "årgang": "2023"
+}

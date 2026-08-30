@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "5715701",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 80 prosent, Mammolo 5 prosent, Canaiolo 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Vino Nobile di Montepulciano",
+  "literpris": 412,
+  "lukt": "Aroma preget av modne røde og mørke bær, litt tørket frukt, urt og fat, hint av lær og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Ståltankgjæret med temperaturkontroll ved 26-28 C, maserasjonstid: 15-20 dager. 24 md. lagring i slavonske eikeliggere (33 hl), 6 md. flaskemodning.",
+  "navn": "Dei Vino Nobile di Montepulciano 2020",
+  "parser": "json",
+  "pris": 309,
+  "produsent": "Cant. Dei",
+  "smak": "Litt utviklet, fast og fyldig, preg av modne røde og mørke bær, tørket frukt, urter, tobakk og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Vino Nobile di Montepulciano",
+  "url": "/Land/Italia/Toscana/Vino-Nobile-di-Montepulciano/Dei-Vino-Nobile-di-Montepulciano-2020/p/5715701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5715701",
+  "volum": 75,
+  "årgang": "2020"
+}

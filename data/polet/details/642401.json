@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "642401",
+  "distrikt": "Rioja",
+  "druer": "Mazuelo, Tempranillo (Tinto del Pais) 97 prosent, Graciano (Bovale)",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 393.2,
+  "lukt": "Preg av modne røde og mørke bær, tørket frukt, fat og vanilje, innslag av kokos, lakris og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell 24/30 md. i eikefat + 6 md. flaskemodning før salg.",
+  "navn": "Marqués de Riscal Reserva 2021",
+  "parser": "json",
+  "pris": 294.9,
+  "produsent": "Marq. de Riscal",
+  "smak": "Litt utviklet preg av modne røde og mørke bær, tørket frukt, kamfer, fat og vanilje, god lengde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Spania/Rioja/Marqu%C3%A9s-de-Riscal-Reserva-2021/p/642401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "642401",
+  "volum": 75,
+  "årgang": "2021"
+}

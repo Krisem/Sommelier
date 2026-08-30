@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "629901",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 30 prosent, Corvinone 15 prosent, Corvina 50 prosent, Oseleta 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella Classico",
+  "literpris": 653.2,
+  "lukt": "Aroma med litt krydret preg av tørket frukt, modne røde og mørke bær, litt fat, lær og sjokolade.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "metode": "Druer tørkes i 5 md. før pressing. 36 md. fatlagring på 350l slavonske fat.",
+  "navn": "Tommasi Amarone della Valpolicella Classico 2021",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Tommasi",
+  "smak": "Fyldig og myk, preg av modne røde bær, rosin, te, sjokolade, urt og fat. Ettersmak med god lengde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,5 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Amarone della Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella-Classico/Tommasi-Amarone-della-Valpolicella-Classico-2021/p/629901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "629901",
+  "volum": 75,
+  "årgang": "2021"
+}

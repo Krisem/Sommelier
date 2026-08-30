@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "5541401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 399.87,
+  "lukt": "Fruktig og ungdommelig preg av bringebær, kirsebær og svale urter, hint av skogbunn og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukket, 30 år gamle vinstokker. Vinifikasjon i åpne kar. Modning på ståltank.",
+  "navn": "Louis Latour Bourgogne Pinot Noir 2023",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Maison Louis Latour",
+  "smak": "Frisk, fruktig og nokså fast, preg av kirsebær, bringebær, hint av krydder, blomst og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Louis-Latour-Bourgogne-Pinot-Noir-2023/p/5541401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5541401",
+  "volum": 75,
+  "årgang": "2023"
+}

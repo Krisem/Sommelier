@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "5936201",
+  "distrikt": "Toscana",
+  "druer": "Brunello 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp brunrød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 573.2,
+  "lukt": "Aroma preget av modne mørke bær, innslag av tørket frukt, te, urter, fat og litt tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk.",
+  "navn": "Il Poggione Brunello di Montalcino 2020",
+  "parser": "json",
+  "pris": 429.9,
+  "produsent": "Ten. Il Poggione",
+  "smak": "Fyldig og fast med utviklet preg av røde og mørke bær, litt tørket frukt, trekrydder, fat og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Il-Poggione-Brunello-di-Montalcino-2020/p/5936201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5936201",
+  "volum": 75,
+  "årgang": "2020"
+}

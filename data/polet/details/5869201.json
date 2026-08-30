@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "5869201",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Corvina 65 prosent, Corvinone 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 420,
+  "lukt": "Litt utviklet preg av modne røde bær, plommer og syltet frukt, litt fat, lakris, vanilje og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Antiche Terre Amarone della Valpolicella 2022",
+  "parser": "json",
+  "pris": 315,
+  "produsent": "Antiche Terre Venete",
+  "smak": "Fyldig og konsentrert preg av sødmerike røde bær, rosin, litt fat, kamfer, tobakk og lakris.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,7 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Antiche-Terre-Amarone-della-Valpolicella-2022/p/5869201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5869201",
+  "volum": 75,
+  "årgang": "2022"
+}

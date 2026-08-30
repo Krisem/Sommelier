@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "67801",
+  "distrikt": "Rioja",
+  "druer": "Graciano (Bovale) 9 prosent, Tempranillo (Tinto del Pais) 86 prosent, Mazuelo 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med svakt brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 386.53,
+  "lukt": "Krydret aroma preget av modne røde og mørke bær, tørket frukt, urter og kamfer, lær og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Gjæring i temperaturkontrollerte ståltanker i 15 dager. 24 md lagring.",
+  "navn": "Faustino I Gran Reserva 2016",
+  "parser": "json",
+  "pris": 289.9,
+  "produsent": "Bod. Faustino",
+  "smak": "Fyldig og lang, utviklet preg av røde og mørke bær, tørket frukt, urter, krydder, sjokolade og fat.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "url": "/Land/Spania/Rioja/Faustino-I-Gran-Reserva-2016/p/67801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "67801",
+  "volum": 75,
+  "årgang": "2016"
+}

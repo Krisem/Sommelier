@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "4987001",
+  "distrikt": "Rhône",
+  "druer": "Grenache 75 prosent, Syrah 10 prosent, Mourvèdre 10 prosent, Counoise 2 prosent, Cinsault 3 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 553.2,
+  "lukt": "Sval aroma preget av fullmodne mørke og røde bær, litt tørket frukt, skogbunn, krydder og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Maserasjon i en md. Trad. vinifikasjon på sementtank. Delvis lagret store fat i 3 år, delvis på sementtank.",
+  "navn": "Clos des Brusquières Châteauneuf-du-Pape 2023",
+  "parser": "json",
+  "pris": 414.9,
+  "produsent": "Clos des Brusquières",
+  "smak": "Fyldig, lang og litt utviklet med moden frukt, innslag av krydder, svale urter, kamfer og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4 g/l",
+  "syre": "3,4 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Clos-des-Brusqui%C3%A8res-Ch%C3%A2teauneuf-du-Pape-2023/p/4987001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4987001",
+  "volum": 75,
+  "årgang": "2023"
+}

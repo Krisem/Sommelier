@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "7771201",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 25 prosent, Merlot 75 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux",
+  "literpris": 253.2,
+  "lukt": "Sammensatt aroma av modne røde og mørke bær, litt tørket frukt, paprika, skogbunn, lær og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Spontangjæret. Ett års modning, hvorav 1/3 på hovedsaklig brukte fat.",
+  "navn": "Ch. Rioublanc 2020",
+  "parser": "json",
+  "pris": 189.9,
+  "produsent": "Ch. Rioublanc - Carretero",
+  "smak": "Fyldig og nyansert, litt utviklet preg av mørke og røde bær, litt fat, tobakk, tørket frukt og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Frankrike/Bordeaux/Ch-Rioublanc-2020/p/7771201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7771201",
+  "volum": 75,
+  "årgang": "2020"
+}

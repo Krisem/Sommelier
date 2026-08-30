@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "4962301",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 266.53,
+  "lukt": "Sval og fruktig aroma preget av røde og mørke bær, innslag av urter, blomst og lakris.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Vinifisert separat, gjæret naturlig i sementfat og lagret ufiltrert på botti i 810 måneder.",
+  "navn": "Giovanni Rosso Barbera d'Alba Donna Margherita 2025",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "Giovanni Rosso",
+  "smak": "Frisk og fruktig, preg av saftige røde og mørke bær, hint av urter og krydder, litt fast ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,8 g/l",
+  "syre": "6,2 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Giovanni-Rosso-Barbera-d%27Alba-Donna-Margherita-2025/p/4962301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4962301",
+  "volum": 75,
+  "årgang": "2025"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "5841101",
+  "distrikt": "Castilla y León",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Spania, Castilla y León, Ribera del Duero",
+  "literpris": 286.53,
+  "lukt": "Aroma av fullmodne mørke bær, fat, vanilje og tobakk, hint av lakris og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "metode": "Lagret 18 md. på amerikansk eik.",
+  "navn": "Condado de Haza Crianza 2023",
+  "parser": "json",
+  "pris": 214.9,
+  "produsent": "Bod. Condado de Haza",
+  "smak": "Fyldig og fast med begynnende utvikling, preg av modne mørke bær, fat, vanilje, tobakk og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Ribera del Duero",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/Ribera-del-Duero/Condado-de-Haza-Crianza-2023/p/5841101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5841101",
+  "volum": 75,
+  "årgang": "2023"
+}

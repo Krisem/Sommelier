@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "4807601",
+  "distrikt": "Rhône",
+  "druer": "Syrah 10 prosent, Grenache 80 prosent, Mourvèdre 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 259.87,
+  "lukt": "Sval aroma preget av røde og mørke bær, innslag av urter, blomst, skogbunn og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Håndplukkede druer. 80% avstilkes før gjæring. Vinifikasjon i ståltank. 4 uker gjæring og maserasjon. Lagres 6 md på ståltank.",
+  "navn": "Dom. André Brunel Côtes du Rhône Cuvée Sommelongue 2025",
+  "parser": "json",
+  "pris": 194.9,
+  "produsent": "André Brunel",
+  "smak": "Fruktig og saftig, preg av modne mørke bær, grønne urter og krydder, lang og litt fast ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Dom-Andr%C3%A9-Brunel-C%C3%B4tes-du-Rh%C3%B4ne-Cuv%C3%A9e-Sommelongue-2025/p/4807601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4807601",
+  "volum": 75,
+  "årgang": "2025"
+}

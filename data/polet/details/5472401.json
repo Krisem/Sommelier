@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "5472401",
+  "distrikt": "Veneto",
+  "druer": "Molinara 5 prosent, Corvina 80 prosent, Rondinella 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto",
+  "literpris": 226.53,
+  "lukt": "Aroma av mørke bær, tørket frukt, litt fat, vanilje, skogbunn, lakris og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonelle vinifikasjon. Laget av tørkete druer.",
+  "navn": "Cant. di Ora Amicale Veneto Rosso 2020",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Cant. di Ora",
+  "smak": "Fyldig med litt sødme, preg av modne mørke bær, litt rosin, krydder, lakris, vanilje og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "9,5 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Italia/Veneto/Cant-di-Ora-Amicale-Veneto-Rosso-2020/p/5472401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5472401",
+  "volum": 75,
+  "årgang": "2020"
+}

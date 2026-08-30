@@ -97,6 +97,7 @@ Praktiske følger:
 - **Sjekk HTTP-status per side.** En `429` som telles som data gir stille avkorting. Stopp ved første `429`; en retry brenner bare kvote.
 - **Produktsider er en EGEN bøtte med egen straff.** Søk gir `Retry-After: 3399` (57 min); produktsider gir `Retry-After: 300` (5 min). Ikke bland dem i et estimat — det var nettopp det som ga et 16-timers-anslag der det riktige er ~24.
 - **Ikke stol på `Retry-After` for produktsider — vent ~7,5 min, ikke de 5 den ber om.** Målt over tre sykluser: 5,3 min pause → 83 sider, 5,4 min → 34, 7,3 min → 82. Bøtta er ikke fylt opp igjen når headeren sier den er det, så bokstavelig lydighet gir ustabilt og omtrent halvert utbytte. Vedvarende takt med riktig pause: **~82 sider per syklus, ~10 sider i minuttet.**
+- **Bøtta har et tak rundt 65–85 sider — å vente lenger enn 7,5 min gir ingenting.** Målt: etter en pause på flere timer (maskinen sov natten over) ga første kall 64 sider, altså samme størrelsesorden som etter 7,5 minutter. Det er altså en kapasitetsgrense per syklus, ikke en lineært opptjent kvote. Praktisk: 7,5 min er både minimum og optimum — lengre pauser er bortkastet tid, kortere gir halvert utbytte.
 - **Burst-and-wait slår jevn pacing.** Hent til `429`, vent ut cooldownen, fortsett. Hvert `browser_evaluate` er uansett begrenset av et tidstak, så jevn pacing koster flere verktøykall uten å gi mer data.
 - Browserbase gratis-tier har i tillegg ~1 browser-time/mnd — rikelig til månedlig refresh, ikke til polling.
 

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "6942501",
+  "distrikt": "California",
+  "druer": "Pinot Noir 90 prosent, Mondeuse 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Santa Barbara County",
+  "literpris": 526.53,
+  "lukt": "Ungdommelig aroma av modne røde bær, innslag av blomst, bringebær, litt fat, krydder og urt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "navn": "Au Bon Climat Santa Barbara Pinot Noir 2024",
+  "parser": "json",
+  "pris": 394.9,
+  "produsent": "Au Bon Climat Clenenden Family Vine",
+  "smak": "Saftig og myk med god lengde og fylde, preg av modne røde bær, litt krydder, fat og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,1 g/l",
+  "underdistrikt": "Santa Barbara County",
+  "url": "/Land/USA/California/Santa-Barbara-County/Au-Bon-Climat-Santa-Barbara-Pinot-Noir-2024/p/6942501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "6942501",
+  "volum": 75,
+  "årgang": "2024"
+}

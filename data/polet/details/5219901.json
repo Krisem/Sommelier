@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "5219901",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Corvina 60 prosent, Corvinone 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella",
+  "literpris": 200,
+  "lukt": "Ungdommelig aroma av kirsebær og bringebær, litt blomst og grønn urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Forsiktig pressing etterfulgt av temperaturkontrollert gjæring på ståltank.",
+  "navn": "Antiche Terre Valpolicella 2025",
+  "parser": "json",
+  "pris": 150,
+  "produsent": "Antiche Terre Venete",
+  "smak": "Ung, frisk og saftig, fokusert preg av kirsebær og morell, litt grønn urt og hint av mineraler.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,1 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Valpolicella",
+  "url": "/Land/Italia/Veneto/Valpolicella/Antiche-Terre-Valpolicella-2025/p/5219901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5219901",
+  "volum": 75,
+  "årgang": "2025"
+}

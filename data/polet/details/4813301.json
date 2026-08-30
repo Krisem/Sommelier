@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "4813301",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Burgund, Beaujolais-Villages",
+  "literpris": 319.87,
+  "lukt": "Ung og fruktig, preg av kirsebær, bringebær og mørke skogsbær, litt grønne urter og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Delvis karbonmaserasjon, resten fermenteres på ståltank. Modnes på stål før flasketapping.",
+  "navn": "Louis Jadot Beaujolais Villages 2025",
+  "parser": "json",
+  "pris": 239.9,
+  "produsent": "Maison Louis Jadot",
+  "smak": "Saftig og bærpreget, toner av frisk kirsebær, bringebær og blåbær, litt krydder og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Beaujolais-Villages",
+  "url": "/Land/Frankrike/Burgund/Beaujolais-Villages/Louis-Jadot-Beaujolais-Villages-2025/p/4813301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4813301",
+  "volum": 75,
+  "årgang": "2025"
+}

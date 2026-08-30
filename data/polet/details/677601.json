@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "677601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 466.53,
+  "lukt": "Sval aroma preget av bringebær, blomst og urter, innslag av litt jordbær, grønn urt og lakris.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Lam og sau"
+  ],
+  "metode": "Sortering, enkel avstilking. Produsert på ståltank og brukte fat.",
+  "navn": "Joseph Faiveley Bourgogne Pinot Noir 2023",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "Dom. Faiveley",
+  "smak": "Fruktig, forfriskende og saftig med god lengde, preg av ferske røde bær, urter og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Joseph-Faiveley-Bourgogne-Pinot-Noir-2023/p/677601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "677601",
+  "volum": 75,
+  "årgang": "2023"
+}

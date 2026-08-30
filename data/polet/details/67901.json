@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "67901",
+  "distrikt": "Rioja",
+  "druer": "Graciano (Bovale) 5 prosent, Tempranillo (Tinto del Pais) 85 prosent, Mazuelo 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 199.87,
+  "lukt": "Litt utviklet aroma preget av modne røde bær, svale urter, krydder og fat.",
+  "matparring": [
+    "Lam og sau",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Gjennomgått fullstendig malolaktisk gjæring 12 md. på fat og 12 md. på flaske.",
+  "navn": "Campo Viejo Crianza 2022",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Bod. Campo Viejo",
+  "smak": "Fokusert og saftig med god friskhet, preg av røde bær, innslag av urter, fat og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Spania/Rioja/Campo-Viejo-Crianza-2022/p/67901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "67901",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "5049201",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 10
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 553.33,
+  "lukt": "Nyansert og litt utviklet aroma av tørket frukt og røde bær, litt skogbunn, fat, kamfer og urter.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Håndhøstet, avstilket, 25d. skallkontakt i betong, daglig overpumping, 18–36 md. på 50 hl eikefat.",
+  "navn": "Giovanni Rosso Barolo Serralunga 2021",
+  "parser": "json",
+  "pris": 415,
+  "produsent": "Giovanni Rosso",
+  "smak": "Saftig, fast og sammensatt med preg av rosin, jordbær og nype, litt fat, tobakk, lakris og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Giovanni-Rosso-Barolo-Serralunga-2021/p/5049201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5049201",
+  "volum": 75,
+  "årgang": "2021"
+}

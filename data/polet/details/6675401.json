@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "6675401",
+  "distrikt": "Rioja",
+  "druer": "Graciano (Bovale) 3 prosent, Garnacha 20 prosent, Tempranillo (Tinto del Pais) 70 prosent, Mazuelo 7 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 559.87,
+  "lukt": "Litt utviklet aroma av modne mørke bær og plommer, fat, litt vanilje, tobakk, kamfer og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Spontangjæret i eikekar, modnet 28 mnd i hovedsakelig franske fat, 1 år på flaske.",
+  "navn": "Muga Seleccion Especial Reserva 2021",
+  "parser": "json",
+  "pris": 419.9,
+  "produsent": "Bod. Muga",
+  "smak": "Fyldig preg av sødmerike mørke bær, fat og tobakk, innslag av solbær, kamfer, mynte og svart te.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Spania/Rioja/Muga-Seleccion-Especial-Reserva-2021/p/6675401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "6675401",
+  "volum": 75,
+  "årgang": "2021"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "7811601",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Beaujolais-Villages",
+  "literpris": 266.53,
+  "lukt": "Ungdommelig og bærpreget aroma med toner av villbringebær, kirsebær, fiol og grønne urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Tradisjonell klasefermentering på sementtanker og videre modning i 6 måneder på sement før tapping.",
+  "navn": "Mommessin Beaujolais-Villages 2025",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "Mommessin",
+  "smak": "Fruktig med god friskhet, preg av bringebær og kirsebær, litt paprika, lakris og grønn urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Beaujolais-Villages",
+  "url": "/Land/Frankrike/Burgund/Beaujolais-Villages/Mommessin-Beaujolais-Villages-2025/p/7811601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7811601",
+  "volum": 75,
+  "årgang": "2025"
+}

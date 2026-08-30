@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "5496501",
+  "distrikt": "Navarra",
+  "druer": "Merlot 5 prosent, Garnacha 95 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Navarra",
+  "literpris": 224.67,
+  "lukt": "Ung og fokusert aroma av mørke og røde bær, innslag av svale urter, krydder, balsam og lakris.",
+  "matparring": [
+    "Aperitiff",
+    "Fisk",
+    "Lyst kjøtt"
+  ],
+  "metode": "Malolaktisk fermentering i 12.000 l fat. Ikke tilsatt sulfitt.",
+  "navn": "Aroa Le Naturel Tinto 2025",
+  "parser": "json",
+  "pris": 168.5,
+  "produsent": "Bod. Aroa",
+  "smak": "Saftig og svalt preg av modne mørke bær, lakris, litt balsam og urter, med god fasthet og lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Spania/Navarra/Aroa-Le-Naturel-Tinto-2025/p/5496501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5496501",
+  "volum": 75,
+  "årgang": "2025"
+}

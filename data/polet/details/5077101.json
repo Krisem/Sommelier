@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "5077101",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Beaujolais",
+  "literpris": 359.87,
+  "lukt": "Fruktig aroma av modne røde bær, innslag av kirsebær, blåbær, svale urter, kamfer og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Håndhøstet fra gamle stokker. Spontangjæring og modning på bunnfall i betongtanker i 8 md.",
+  "navn": "Jean-Paul Brun L'Ancien Beaujolais 2024",
+  "parser": "json",
+  "pris": 269.9,
+  "produsent": "Jean-Paul Brun",
+  "smak": "Ung, saftig og fruktig, preg av friske jordbær, bringebær, innslag av kirsebær, urt og blomst.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,1 g/l",
+  "underdistrikt": "Beaujolais",
+  "url": "/Land/Frankrike/Burgund/Beaujolais/Jean-Paul-Brun-L%27Ancien-Beaujolais-2024/p/5077101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5077101",
+  "volum": 75,
+  "årgang": "2024"
+}

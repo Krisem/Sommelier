@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "7774801",
+  "distrikt": "Veneto",
+  "druer": "Corvina 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Verona (Veronese)",
+  "literpris": 179.87,
+  "lukt": "Aroma med preg av røde bær, litt syltet frukt, grønne urter og hint av lakris og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring av delvis tørkede druer.",
+  "navn": "Valpantena Corvina 2025",
+  "parser": "json",
+  "pris": 134.9,
+  "produsent": "Cant. Valpantena",
+  "smak": "Middels fyldig med streif av sødme og myk munnfølelse, preg av røde bær, litt urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Verona (Veronese)",
+  "url": "/Land/Italia/Veneto/Verona-%28Veronese%29/Valpantena-Corvina-2025/p/7774801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7774801",
+  "volum": 75,
+  "årgang": "2025"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "7824201",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 20 prosent, Merlot 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødbrun.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion Grand Cru",
+  "literpris": 410.53,
+  "lukt": "Sammensatt aroma av mørke bær, rosin og integrert fat, toner av lær, sopp, sedertre og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell gjæring og modning i sementtanker.",
+  "navn": "Ch. Simard 2011",
+  "parser": "json",
+  "pris": 307.9,
+  "produsent": "Vignobles Vauthier Mazière",
+  "smak": "Utviklet med god fylde og lengde, preg av mørke bær, tørket frukt, litt kamfer, te, sopp og tobakk.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Saint-Emilion Grand Cru",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion-Grand-Cru/Ch-Simard-2011/p/7824201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7824201",
+  "volum": 75,
+  "årgang": "2011"
+}

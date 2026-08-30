@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "5771001",
+  "distrikt": "Lisboa",
+  "druer": "Castelão 40 prosent, Tinta Roriz 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Lisboa",
+  "literpris": 199.87,
+  "lukt": "Aroma av modne røde bær og plommer, streif av fat, tobakk og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæring i ståltanker med 28 dagers skallmaserasjon. Lagring i 4 md. på portugisiske og amerikanske eikefat på 250 liter.",
+  "navn": "Espírito Santo 2022",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Casa Santos Lima",
+  "smak": "Litt utviklet med god fylde og litt fasthet, preg av modne mørke bær, litt fat, urter og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "3,2 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Portugal/Lisboa/Esp%C3%ADrito-Santo-2022/p/5771001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5771001",
+  "volum": 75,
+  "årgang": "2022"
+}

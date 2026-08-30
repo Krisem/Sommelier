@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "7749201",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 265.33,
+  "lukt": "Litt utviklet aroma av modne plommer, røde bær, litt trekrydder og morell , hint vanilje og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer, myk pressing og filtrering, lagret 1 år på store fat.",
+  "navn": "Kompis Barbera d'Alba Superiore 2022",
+  "parser": "json",
+  "pris": 199,
+  "produsent": "Casa di Saga",
+  "smak": "Fruktig og rund med middels fylde, preg av røde bær og plommer, litt lakris, urter og hint fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Kompis-Barbera-d%27Alba-Superiore-2022/p/7749201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7749201",
+  "volum": 75,
+  "årgang": "2022"
+}

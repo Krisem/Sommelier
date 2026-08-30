@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "5312101",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 84 prosent, Nebbiolo 16 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 253.2,
+  "lukt": "Fruktig og litt krydret aroma av kirsebær, fiol og svale urter, innslag av lakris og mandel.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Kun ståltank. 3 måneders modning i flaske før tapping.",
+  "navn": "Wongraven Alleanza Langhe Rosso 2024",
+  "parser": "json",
+  "pris": 189.9,
+  "produsent": "Wongraven Wines",
+  "smak": "Ung, frisk og saftig med god lengde, preg av kirsebær, bringebær, litt krydder, blomst og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Wongraven-Alleanza-Langhe-Rosso-2024/p/5312101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5312101",
+  "volum": 75,
+  "årgang": "2024"
+}

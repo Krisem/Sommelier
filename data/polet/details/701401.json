@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "701401",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 10
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 493.2,
+  "lukt": "Aroma av modne røde og mørke bær, litt tørket frukt, blomst og urt, svart te, kamfer og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Temp.kontr. (22-29°C) gjæring. Lagret i store eikeliggere i 3 år.",
+  "navn": "Borgogno No Name 2023",
+  "parser": "json",
+  "pris": 369.9,
+  "produsent": "Giacomo Borgogno & Figli",
+  "smak": "Litt utviklet, nyansert og fast, fyldig preg av røde bær, tørket frukt, litt kamfer, te og lakris.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Borgogno-No-Name-2023/p/701401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "701401",
+  "volum": 75,
+  "årgang": "2023"
+}

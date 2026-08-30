@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "5869101",
+  "distrikt": "Veneto",
+  "druer": "Corvina 60 prosent, Rondinella 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 253.2,
+  "lukt": "Aroma preget av røde bær og tørket frukt, innslag av urter, mandel og trekrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon etter ripasso-metoden som innebærer bl.a. at ferdig vin legges på restene etter amaroneproduksjonen.",
+  "navn": "Antiche Terre Valpolicella Ripasso Superiore 2022",
+  "parser": "json",
+  "pris": 189.9,
+  "produsent": "Antiche Terre Venete",
+  "smak": "Litt utviklet, preg av røde og mørke bær, tobakk og tørket frukt, litt fast ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "6,6 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Antiche-Terre-Valpolicella-Ripasso-Superiore-2022/p/5869101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5869101",
+  "volum": 75,
+  "årgang": "2022"
+}

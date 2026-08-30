@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "631301",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 266.53,
+  "lukt": "Fruktig og litt fatpreget aroma med innslag av røde og mørke bær, urter og dill.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Gjæret i ståltaker, skånsom maserasjon, 18 md. på nye am. Eikefat deretter 19 md. på flaske.",
+  "navn": "Coto de Imaz Reserva 2020",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "El Coto de Rioja",
+  "smak": "Fint utviklet, preg av røde og mørke bær over fat og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "url": "/Land/Spania/Rioja/Coto-de-Imaz-Reserva-2020/p/631301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "631301",
+  "volum": 75,
+  "årgang": "2020"
+}

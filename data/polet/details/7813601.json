@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "7813601",
+  "distrikt": "South E. Australia",
+  "druer": "Shiraz 67 prosent, Merlot 12 prosent, Cabernet Sauvignon 21 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South E. Australia",
+  "literpris": 209.2,
+  "lukt": "Fruktig og litt krydret aroma, innslag av bjørnebær, blå plommer, fat, sjokolade og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Lagret på 100% amerikanske fat.",
+  "navn": "19 Crimes The Banished Dark Red 2024",
+  "parser": "json",
+  "pris": 156.9,
+  "produsent": "19 Crimes",
+  "smak": "Fyldig med litt sødme, preg av bjørnebær, morell og fat, innslag av tørket frukt og sjokolade.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "13,4 g/l",
+  "syre": "6,7 g/l",
+  "url": "/Land/Australia/South-E-Australia/19-Crimes-The-Banished-Dark-Red-2024/p/7813601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7813601",
+  "volum": 75,
+  "årgang": "2024"
+}

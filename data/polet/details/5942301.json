@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,8%",
+  "code": "5942301",
+  "distrikt": "New South Wales",
+  "druer": "Pinot Noir 87 prosent, Pinot Meunier 5 prosent, Shiraz 8 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, New South Wales, Orange",
+  "literpris": 286.53,
+  "lukt": "Ung, litt krydret og syltet aroma av modne røde bær, innslag av blomst, kamfer, anis og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndsorterte druer. Spontanfermentert. Fermentering på ståltanker.",
+  "navn": "Philip Shaw The Wire Walker Pinot Noir 2024",
+  "parser": "json",
+  "pris": 214.9,
+  "produsent": "Philip Shaw Wines",
+  "smak": "Saftig preg av modne bringebær, jordbær, litt syltet frukt, kamfer og urt, hint av anis og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Orange",
+  "url": "/Land/Australia/New-South-Wales/Orange/Philip-Shaw-The-Wire-Walker-Pinot-Noir-2024/p/5942301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5942301",
+  "volum": 75,
+  "årgang": "2024"
+}

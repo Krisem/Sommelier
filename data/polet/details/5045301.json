@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "5045301",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Crozes-Hermitage",
+  "literpris": 399.87,
+  "lukt": "Aroma med ungdommelig preg av modne mørke skogsbær, svale urter, krydder, litt pepper og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk 9 md. fatlagring, 6 md. flaskemodning.",
+  "navn": "Dom. du Colombier Crozes-Hermitage 2024",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Dom. du Colombier",
+  "smak": "Ung, livlig og saftig med toner av moden kirsebær og krekling, litt svale urter, pepper og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,2 g/l",
+  "underdistrikt": "Crozes-Hermitage",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Crozes-Hermitage/Dom-du-Colombier-Crozes-Hermitage-2024/p/5045301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5045301",
+  "volum": 75,
+  "årgang": "2024"
+}

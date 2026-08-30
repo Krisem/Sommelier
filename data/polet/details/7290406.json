@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "7290406",
+  "distrikt": "Rhône",
+  "druer": "Syrah 70 prosent, Grenache 30 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 199.93,
+  "lukt": "Aroma med litt utviklet preg av røde og mørke bær, innslag av lakris, krydder og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæret 20 dager under temperaturkontroll i ståltanker, tankmodnet før tapping.",
+  "navn": "Cuvée Adèle Côtes du Rhône",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Vign. du Soleil",
+  "smak": "Fruktig med god fylde, preg av modne mørke bær, hint av tørket frukt, urter og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Cuv%C3%A9e-Ad%C3%A8le-C%C3%B4tes-du-Rh%C3%B4ne/p/7290406",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7290406",
+  "volum": 150,
+  "årgang": "2025"
+}

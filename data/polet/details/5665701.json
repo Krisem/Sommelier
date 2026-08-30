@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "5665701",
+  "distrikt": "Toscana",
+  "druer": "Canaiolo 10 prosent, Sangiovese 90 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Vino Nobile di Montepulciano",
+  "literpris": 239.87,
+  "lukt": "Svalt og litt utviklet preg av modne mørke og røde bær, litt tørket frukt, urter, fat og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Skånsom membranpressing før temp.kontr. gjæring.",
+  "navn": "Filicheto Vino Nobile di Montepulciano 2021",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Castellani",
+  "smak": "Litt utviklet preg av moden frukt, fat og vanilje, litt tørket frukt, kamfer, te og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "4,8 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Vino Nobile di Montepulciano",
+  "url": "/Land/Italia/Toscana/Vino-Nobile-di-Montepulciano/Filicheto-Vino-Nobile-di-Montepulciano-2021/p/5665701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5665701",
+  "volum": 75,
+  "årgang": "2021"
+}

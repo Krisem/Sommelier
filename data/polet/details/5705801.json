@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "5705801",
+  "distrikt": "Rioja",
+  "druer": "Mazuelo 5 prosent, Tempranillo (Tinto del Pais) 85 prosent, Graciano (Bovale) 5 prosent, Garnacha 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 283.87,
+  "lukt": "Aroma med preg av modne røde og mørke bær, litt tørket frukt, lær, skogbunn og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Manuelt høstede druer, avstilking før pressing, kort maserasjon.",
+  "navn": "Cune Reserva 2020",
+  "parser": "json",
+  "pris": 212.9,
+  "produsent": "CVNE",
+  "smak": "Litt utviklet med sammensatt preg av sødmerike røde og mørke bær, krydder, litt vanilje og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Spania/Rioja/Cune-Reserva-2020/p/5705801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "5705801",
+  "volum": 75,
+  "årgang": "2020"
+}

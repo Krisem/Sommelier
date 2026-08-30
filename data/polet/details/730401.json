@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "730401",
+  "distrikt": "Rhône",
+  "druer": "Mourvèdre 10 prosent, Syrah 50 prosent, Grenache 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:07:25.854851+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 273.2,
+  "lukt": "Aroma preget av modne mørke bær, plomme og krydder over innslag av fat og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druene vinifiseres individuelt i temperaturkontrollerte ståltanker og lagres i 12 md. på 60 % ståltank og 40 % store eikefat.",
+  "navn": "Guigal Côtes du Rhône Rouge 2023",
+  "parser": "json",
+  "pris": 204.9,
+  "produsent": "E. Guigal",
+  "smak": "Ørlite utviklet, preg av mørke bær, litt tørket frukt, krydder og urter, fast ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Guigal-C%C3%B4tes-du-Rh%C3%B4ne-Rouge-2023/p/730401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "730401",
+  "volum": 75,
+  "årgang": "2023"
+}
