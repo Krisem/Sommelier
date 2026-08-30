@@ -29,6 +29,14 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Gjør fila kjørbar både som modul (`python3 -m tools.vinmonopolet`) og som skript
+# (`python3 tools/vinmonopolet.py`) — sistnevnte er kommandoen CLAUDE.md dokumenterer.
+import sys as _sys
+from pathlib import Path as _Path
+_ROOT = _Path(__file__).resolve().parent.parent
+if str(_ROOT) not in _sys.path:
+    _sys.path.insert(0, str(_ROOT))
+
 from tools import polet_store
 
 CACHE_DIR = Path.home() / ".cache" / "sommelier"

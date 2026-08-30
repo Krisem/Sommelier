@@ -143,6 +143,8 @@ python3 tools/vinmonopolet.py
 python3 -m tools.value_score "Tornatore Etna Rosso" 2022
 
 # Klokke-profil similarity (vin)
+# NB: finner STIL-SLEKTNINGER, ikke «noe like godt» (ADR-025 — klokkene korrelerer ~0 med rating).
+# Leser klokker fra details/ OG katalogens clock_buckets; bøtte-treff merkes «±1 (bøtte)».
 python3 -c "
 from tools.vinmonopolet import find_similar_by_clocks
 hits = find_similar_by_clocks(
