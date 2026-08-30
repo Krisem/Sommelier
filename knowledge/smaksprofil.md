@@ -21,18 +21,18 @@
 <!-- BEGIN AUTO-DERIVED (profile_stats.py) -->
 ## Auto-derivert statistikk
 
-> Generert 2026-07-02 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
-> Grunnlag: 117 ratede viner, snitt 3.82.
-> Nyere ratings (2024-01-01+): 30 viner, snitt 4.00.
+> Generert 2026-08-30 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
+> Grunnlag: 122 ratede viner, snitt 3.82.
+> Nyere ratings (2024-01-01+): 35 viner, snitt 3.99.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.
 
 ### Per vintype
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Red Wine | 64 | 3.79 | 4.06 |
+| Red Wine | 67 | 3.79 | 4.02 |
 | Sparkling | 23 | 4.03 | 4.23 |
-| White Wine | 18 | 3.87 | 3.77 |
+| White Wine | 20 | 3.88 | 3.82 |
 | Rosé Wine | 10 | 3.30 | 3.75 |
 | Dessert Wine | 1 | 4.50 | – |
 | Fortified Wine | 1 | 4.50 | – |
@@ -41,11 +41,11 @@
 
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
-| Italy | 40 | 3.84 | 3.85 |
+| Italy | 41 | 3.84 | 3.84 |
 | France | 35 | 3.60 | 4.04 |
-| Spain | 9 | 3.78 | – |
+| Spain | 12 | 3.83 | 3.97 |
 | Germany | 8 | 3.88 | 3.92 |
-| United States | 5 | 3.84 | 4.00 |
+| United States | 6 | 3.87 | 4.00 |
 | Argentina | 5 | 3.66 | 4.15 |
 | United Kingdom | 3 | 4.27 | 4.27 |
 | South Africa | 3 | 4.20 | 4.30 |
@@ -57,14 +57,14 @@
 | Kategori | N | Snitt | Snitt 2024+ |
 |---|---|---|---|
 | French Champagne | 10 | 3.91 | 4.40 |
+| Italian Ripasso | 6 | 4.03 | 3.70 |
 | Italian Barbera | 6 | 3.90 | 3.80 |
+| Spanish Rioja Red | 6 | 3.90 | 3.95 |
 | Northern Italy Red | 6 | 3.33 | – |
-| Italian Ripasso | 5 | 4.10 | – |
 | German Riesling | 5 | 3.82 | 3.80 |
 | Southern Italy Red | 4 | 4.05 | 4.07 |
 | Northern Italy Rosé | 4 | 3.88 | 3.50 |
 | French Crémant | 4 | 3.88 | – |
-| Spanish Rioja Red | 4 | 3.88 | – |
 | Tuscan Red | 4 | 3.75 | – |
 | Provence Rosé | 4 | 2.38 | – |
 | English Sparkling | 3 | 4.27 | 4.27 |
@@ -74,12 +74,12 @@
 | Jura White | 2 | 4.25 | 4.10 |
 | Argentinian Malbec | 2 | 4.15 | 4.15 |
 | German Spätburgunder | 2 | 4.05 | 4.05 |
+| Californian Santa Barbara County Chardonnay White | 2 | 4.00 | 4.00 |
 | Californian Zinfandel | 2 | 4.00 | – |
-| Italian Prosecco | 2 | 4.00 | – |
 
 ### Bekreftede mønstre (n ≥ 3, snitt ≥ 4.0)
 
-- **Italian Ripasso** – n=5, snitt 4.10
+- **Italian Ripasso** – n=6, snitt 4.03, nyere 3.70
 - **Southern Italy Red** – n=4, snitt 4.05, nyere 4.07
 - **English Sparkling** – n=3, snitt 4.27, nyere 4.27
 - **Italian Amarone** – n=3, snitt 4.13, nyere 4.20
@@ -94,7 +94,6 @@
 
 - Italy White Wine (n=1)
 - Austria White Wine (n=1)
-- United States White Wine (n=1)
 - Lebanon Red Wine (n=1)
 - France Dessert Wine (n=1)
 - Portugal Red Wine (n=1)
@@ -107,6 +106,7 @@
 - South Africa Rosé Wine (n=1)
 - Greece Rosé Wine (n=1)
 - Germany Red Wine (n=2)
+- United States White Wine (n=2)
 
 ### Topp 5 ratede viner
 
@@ -129,7 +129,7 @@
 <!-- BEGIN AUTO-DERIVED-BEER (untappd_stats.py) -->
 ## Auto-derivert øl-statistikk (Untappd)
 
-> Generert 2026-06-08 av `tools/untappd_stats.py`. Ikke rediger manuelt – kjør på nytt etter ny Untappd-scrape.
+> Generert 2026-08-30 av `tools/untappd_stats.py`. Ikke rediger manuelt – kjør på nytt etter ny Untappd-scrape.
 > Grunnlag: 89 ratede check-ins, snitt 3.39.
 > Mangfold: 65 unike bryggerier, 58 unike stiler, 20 stilfamilier.
 > Stildiversitet: 65.2% av check-ins er nye stiler – svært utforskende.
@@ -250,8 +250,8 @@
 ## Datagrunnlag (kort)
 
 - Aktivt Vivino-bruk siden ~2014, med ratings spredt over 12 år
-- 104 ratede viner, snitt 3.78
-- Tyngdepunkt: rødvin (58), musserende (18), hvitvin (17), rosé (9)
+- 122 ratede viner, snitt 3.82
+- Tyngdepunkt: rødvin (67), musserende (23), hvitvin (20), rosé (10)
 - **Smaken har modnet:** snitt før 2018 = 3.67, etter 2024 = 3.89 → enten har du blitt bedre på å velge, eller du har blitt mer raus med høyere ratings. Sannsynligvis litt av begge.
 
 ## Generelt
@@ -305,13 +305,15 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 
 **Forbehold:** n=1. Per vektingsprinsippene er dette en **hypotese**, ikke et bekreftet mønster – og det motsier ikke at han elsker Barbera (topp-rødvinen hans *er* en Barbera). Signalet gjelder format og kvalitetsnivå, ikke druen. Bekreftes eller avkreftes ved neste kartong.
 
-### Rødvin (klart hovedkategorien – 58 viner, snitt 3.76)
+### Rødvin (klart hovedkategorien – 67 viner, snitt 3.79)
 
 **Sterke mønstre i dataene:**
 
-- **Italia er hjemmebanen din** – 37 av 104 ratede viner er italienske, og topp-rødvinen er Barbera d'Alba (4.6).
+- **Italia er hjemmebanen din** – 41 av 122 ratede viner er italienske, og topp-rødvinen er Barbera d'Alba (4.6).
 - **Du elsker viner med struktur og modenhet:**
   - Ripasso/Amarone gjentas (4.5 Valpolicella Ripasso, 4.2 Amarone × 2 nylig)
+    - **Ripasso er ikke gjenbekreftet** (funn 2026-08-30). Fem av de seks Ripasso-ratingene er fra 2014–2015, deretter elleve år uten én eneste. Den ene moderne dataen — Antiche Terre Venete Valpolicella Ripasso, **3.7** den 2026-07-21 — er den svakeste av de seks. Produsenten er ratet før, med **4.0** i 2014, men det er en *annen* årgang og en annen Vivino-oppføring (2012-årgangen, `/wines/2360530`, mot den årgangsløse `/wines/1532847`) — to viner ti år fra hverandre, ikke én vin vurdert ned. Spriket mellom dem er ikke et funn og trenger ingen forklaring. Mønsteret er ikke dødt — n=6, snitt 4.03, og Fratta Pasini 2009 står fortsatt på 4.5 — men det er gammelt, og det som taler mot å lese det som gjenbekreftet er elleve års opphold med den ferskeste dataen som svakest. Vekt det ned til det er testet på nytt.
+    - Amarone i samme kulepunkt er derimot **gjenbekreftet**: n=3, snitt 4.13, hvorav to ratinger fra 2025 med snitt 4.20. De to stilene skal ikke leses som ett mønster lenger.
   - Barbera, Nebbiolo, Sangiovese-baserte stiler scorer høyt
 - **Du trives med moderat til høy syre:** Barbera, Nebbiolo og Sangiovese-druer er alle syrlige – du har 4.0+ på flere
 - **Burgund er ujevnt for deg:**
@@ -329,7 +331,7 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 - Restsødme: **ikke avklart – test og lær.** Du har scoret høyt på både Amarone (litt glycerolrik fylde) og knusktørr Barbera. Antakelse: tørt er trygt, men du har ikke aversjon mot dybde og fylde.
 - **Baden Spätburgunder fungerer:** Florian Philipp Reicholzheimer 2022 → 4.2 (2026-06-13, restaurant, til tørrmodnet ytrefilet). Fyller blindspot for tysk rødvin — mer kropp og mørk frukt enn typisk Burgund-Pinot. Verdt å utforske videre.
 
-### Hvitvin (17 viner, snitt 3.85 – overraskende høyt)
+### Hvitvin (20 viner, snitt 3.88 – overraskende høyt)
 
 **Sterke mønstre:**
 - **Tysk Riesling er en favoritt** – 4.5 Fritz Haag Brauneberger GG, men også svakheter (2.7 Schloss Vollrads)
@@ -345,14 +347,14 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 - Syre: **høy** (Riesling-preferansen er tydelig)
 - Aromatisk vs. diskret: **trolig diskret – mineralsk profil dominerer (GG-Riesling, Jura). Den ene aromatiske favoritten (Cloudy Bay) er gammel rating. Test forsiktig med aromatiske.**
 
-### Musserende (18 viner, snitt 3.96 – din høyeste kategori!)
+### Musserende (23 viner, snitt 4.03 – din høyeste kategori!)
 
 - Du elsker Champagne, men også Cava (4.5 Juvé & Camps) og Crémant
 - 4.5 Vve Fourny Blanc de Blancs Premier Cru = solid Chardonnay-basert Champagne
 - Du har tre Champagner i kjelleren – musserende er åpenbart viktig for deg
 - **Bernard Pitois Brut Réserve → 4.4** (2026-06-13, restaurant). NM-stil, frisk og mineralsk. Bekrefter Champagne-mønsteret.
 
-### Rosé (9 viner, snitt 3.22 – sliter mest)
+### Rosé (10 viner, snitt 3.30 – sliter mest)
 
 - **Provence-rosé har skuffet flere ganger:** 1.0, 2.0, 2.5, 4.0 – stor varians
 - **Italiensk nebbiolo-rosé fra Piemonte fungerer:** 4.5 Ioppa, 4.0 Cantalupo
@@ -375,8 +377,57 @@ Når Claude finner viner med kjent klokke-profil, søk etter lignende.
 | Hattingley Valley Rosé 2021 | — (foreslått) | 7/12 | 10/12 | — | 5,2 g/l | Engelsk traditional method rosé |
 | Catena Zapata Paraje Altamira Malbec 2024 | 4.2 | 8/12 | 7/12 | 7/12 | 3,6 g/l | Uco Valley høyde-Malbec, floral/savory, diskret eik |
 | **Vespa Barbera 3 l** (varenr 5280806) | **avvist – «for lett»** | 8/12 | 9/12 | 7/12 | <3 g/l | Ustøttet ankerpunkt: identiske klokker med Fenocchio 4.6, motsatt dom |
+| Ch. Kefraya Les Bretèches (8136501) `[≠ 2016→2023]` | 4.5 | 9/12 | 8/12 | 6/12 | <3 g/l | Krydret og sødmefull |
+| Vincent Girardin Terroir Noble Bourgogne (9111501) `[≠ 2010→2024]` | 4.5 | 7/12 | 8/12 | 7/12 | <3 g/l | Frisk og fruktig — **motsigelse A** |
+| Valpantena Amarone della Valpolicella (4612201) `[? →2023]` | 4.2 | 10/12 | 8/12 | 8/12 | 4,7 g/l | Krydret og sødmefull |
+| Patria Femina Etna Rosso (19716901) `[? →2025]` | 4.1 | 8/12 | 8/12 | 8/12 | <3 g/l | Frisk og fruktig — **motsigelse C** |
+| Carpineto Dogajolo Rosso (1788401) `[≠ 2016→2023]` | 4.0 | 8/12 | 9/12 | 8/12 | <3 g/l | Fast og fruktig — **motsigelse B** |
+| Castellani Filicheto Vino Nobile, 3 l (8299106) `[≠ 2013→2022]` | 4.0 | 7/12 | 7/12 | 7/12 | 8,1 g/l | Fast og fruktig (ratet på flaske, klokker fra 3 l) |
+| Ch. de Ségriès Lirac Rouge (3133501) `[≠ 2014→2023]` | 4.0 | 9/12 | 8/12 | 8/12 | <3 g/l | Fyldig og saftig — **motsigelse D** |
+| Antiche Terre Venete Valpolicella Ripasso (5220001) `[≠ 2012→2022]` | 4.0 | 8/12 | 7/12 | 7/12 | 5 g/l | Krydret og sødmefull (SKU-usikkerhet, se note 3) |
+| Borgogno No Name (701401) `[≠ 2011→2023]` | 4.0 | 9/12 | 9/12 | 10/12 | <3 g/l | Fast og fruktig, Nebbiolo 100 % — høyeste tannin i settet |
+| Castelmondo Valpolicella Ripasso Superiore (11186901) `[≠ 2017→2023]` | 3.9 | 8/12 | 8/12 | 6/12 | 4,1 g/l | Krydret og sødmefull — **motsigelse E** |
+| Vincent Girardin Bourgogne Pinot Noir (9111501) `[≠ 2023→2024]` | 3.8 | 7/12 | 8/12 | 7/12 | <3 g/l | Samme varenummer som 4.5-raden over — **motsigelse A** |
+| Pietro di Campo Silenzio Barbera (1208701) `[≠ 2012→2024]` | 3.8 | 7/12 | 9/12 | 7/12 | 5 g/l | Frisk og fruktig |
+| Weinert Carrascal (3240401) `[≠ 2013→2022]` | 3.5 | 9/12 | 8/12 | 8/12 | <3 g/l | Fyldig og saftig — **motsigelse D** |
+| Vajra Langhe Rosso (3123601) `[≠ 2016→2025]` | 3.5 | 7/12 | 8/12 | 8/12 | <3 g/l | Fast og fruktig |
+| Campo Viejo Reserva (344401) `[≠ 2009→2018]` | 3.5 | 8/12 | 8/12 | 6/12 | <3 g/l | Utviklet og nyansert — **motsigelse E** |
+| Bread & Butter Pinot Noir (11018401) `[? →2020]` | 3.2 | 7/12 | 7/12 | 5/12 | 7 g/l | Frisk og fruktig — laveste tannin i settet |
+| Villa Antinori Rosso (279201) `[≠ 2015→2024]` | 3.0 | 8/12 | 9/12 | 8/12 | <3 g/l | Fast og fruktig — **motsigelse B** |
+| Chapoutier Belleruche Côtes du Rhône, 3 l (9348706) `[≠ 2013→2024]` | 3.0 | 8/12 | 8/12 | 8/12 | <3 g/l | Fyldig og saftig — **motsigelse C** |
+| **Dom. de la Janasse Côtes du Rhône (3241501)** `[≠ 2015→2024]` | **2.0** | 8/12 | 8/12 | 8/12 | <3 g/l | Negativt anker: laveste rødvins-rating i settet, midt i klokke-skyen — **motsigelse C** |
 
 *(Tabellen utvides etter hvert som Claude slår opp viner i bekjent-historikken)*
+
+**Årgangsmerking:** `[≠ a→b]` = ratingen gjelder årgang *a*, klokkene er lest fra årgang *b* i Polet-snapshotet — **ikke** samme flaske. `[? →b]` = Vivino-oppføringen mangler årgang, klokkene er fra årgang *b*. **Ingen av de 19 nye radene har klokker fra den årgangen som faktisk ble ratet** (snapshotet fører dagens årganger; avstanden rated årgang → snapshot-årgang er 1–14 år). Det er en reell svakhet ved hele tabellen, ikke en detalj.
+
+**Noter:**
+1. Alle klokke-verdier er lest direkte fra `data/polet/details/<varenr>.json`. Ingen er estimert. Manglende dimensjon vises som `—`.
+2. Fenocchio-raden øverst er verifisert mot varenr **759901** (Fylde 8 / Friskhet 9 / Garvestoffer 7 — stemmer). Snapshotet fører nå **2024**-årgangen, og Vivino-ratingen 4.6 gjelder **2019** — «2023» i radetiketten er altså ikke årgangen klokkene kommer fra.
+3. Antiche Terre Venete fører **to** Ripasso-SKU-er i katalogen (5220001 til 169,90 og 17228201 til 315,-). Bare 5220001 har details. Hvilken av dem 4.0-ratingen fra 2012 gjelder, er ukjent. **Oppdatert 2026-08-30:** spørsmålet er smalere enn noten antyder. **4.0-ratingen kan ikke tilhøre noen av SKU-ene** — den gjelder 2012-årgangen (Vivino `/wines/2360530`), mens begge varenumrene fører **2022**. Det som faktisk er i spill er en *nyere* rating på samme vinnavn: **3.7**, ratet 2026-07-21 — men den er en årgangsløs Vivino-aggregat-entitet (`/wines/1532847`, `seo_name` slutter på `-uv`), så den har ingen årgang å knytte til et varenummer heller. De to ratingene er altså to ulike viner, ikke én vin over tid.
+   Details for 17228201 er nå hentet. Drueblanding, årgang, alkohol, sukker og syre er **identiske** med 5220001, mens klokkene avviker: **Fylde 10 / Friskhet 7 / Garvestoffer 5** mot 5220001s **8 / 7 / 7**. Alt som kommer fra produsent og lab er likt; alt som kommer fra Polets sensoriske panel spriker. Det er forenlig både med to panelrunder på samme vin og med to beslektede cuvéer. Feltet som ville avgjort det, `metode`, mangler på 17228201 (5220001 har «vinifikasjon etter ripasso-metoden…»). Spørsmålet står altså fortsatt åpent — men nå med data i stedet for antagelser.
+4. Utelatt fra tabellen: viner der Vivino-oppføringen matchet en **annen** vin fra samme produsent (Marchesi di Barolo *Reis* vs *Ruvei*, Ricasoli *Brolio Chianti Classico* vs generisk Chianti, Ioppa *Rusin* rosé vs Colline Novaresi **rød**, Chakana *Estate* vs *Sobrenatural*) — produsent-treff er ikke vin-treff.
+
+### Diskriminerer klokkene i det hele tatt? (n=20, målt 2026-08-30)
+
+Nei — ikke på dette datagrunnlaget. Korrelasjonen mellom rating og hver enkelt klokke er ~0:
+
+| Klokke | Korrelasjon med rating | Spredning i settet |
+|---|---|---|
+| Fylde | **+0,16** | 7–10 |
+| Friskhet | **+0,09** | 7–9 |
+| Garvestoffer | **−0,10** | 5–10 |
+
+Verre: **hver eneste gruppe med identiske klokker spenner over ratingskalaen.**
+
+- **Motsigelse A — samme varenummer, to dommer.** 9111501 Vincent Girardin Terroir Noble er ratet **4.5** (2010) og **3.8** (2023). Identiske klokker per definisjon; 0,7 poeng fra hverandre. Årgang/moden alder forklarer det klokkene ikke kan.
+- **Motsigelse B — 8/9/8:** Carpineto Dogajolo **4.0** vs Villa Antinori **3.0**. Samme stilmerkelapp «Fast og fruktig», samme land, samme sukker.
+- **Motsigelse C — 8/8/8 (den vanligste trippelen han har):** Patria Femina Etna Rosso **4.1**, Chapoutier Belleruche **3.0**, Janasse Côtes du Rhône **2.0**. Tre viner, identiske klokker, **2,1 poeng spenn**. Dette er den sterkeste enkeltobservasjonen i tabellen.
+- **Motsigelse D — 9/8/8:** Ch. de Ségriès **4.0** vs Weinert Carrascal **3.5**.
+- **Motsigelse E — 8/8/6:** Castelmondo Ripasso **3.9** vs Campo Viejo Reserva **3.5** (svakest av de fem).
+- **Det opprinnelige ankeret — 8/9/7:** Fenocchio **4.6** vs Vespa Barbera 3 l **«for lett»**.
+
+**Konsekvens.** Alle 6 klokke-gruppene i settet er selvmotsigende, og de tre klokkene forklarer til sammen nesten ingenting av ratingvariasjonen. Klokke-similarity er brukbar til **én ting**: å finne viner som *smaker i samme retning* (stil-slektninger). Den er ubrukelig til å forutsi om han vil like en vin, hvor kraftig den er, eller hvor god den er. Rangér på det som faktisk skilte i motsigelsene over — appellasjonsnivå, fat/metode, literpris, årgang og drue — og bruk klokkene bare som grovfilter. Se «Kraftigere kan IKKE søkes på Fylde-klokka».
 
 > **Les tabellen med det negative ankeret i bånn.** Vespa-raden er ikke en topp-vin – den står der fordi den beviser at klokke-similarity alene er utilstrekkelig: to viner med identisk 8/9/7 fikk 4.6 og «for lett». Bruk klokkene til å finne *stil-slektninger*, ikke til å rangere kraft eller kvalitet. Se «Kraftigere kan IKKE søkes på Fylde-klokka» under Stilpreferanser.
 
