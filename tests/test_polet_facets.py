@@ -139,15 +139,74 @@ def test_garvestoffer_rejected_in_range_builder_too():
 
 
 @pytest.mark.parametrize("dim", ["Soedme", "Bitterhet"])
-def test_zero_hit_dims_rejected(dim):
+def test_zero_hit_dims_rejected_for_roedvin(dim):
     # Ga 0 treff for rødvin — å filtrere alt bort er ikke et gyldig sveip.
     with pytest.raises(ValueError) as exc:
         polet_facets.build_facet_query(category="rødvin", clocks={dim: "7-8"})
     assert "0 treff" in str(exc.value)
 
 
-def test_clock_dims_are_exactly_the_three_measured_ones():
-    assert polet_facets._CLOCK_DIMS == ("Fylde", "Friskhet", "Tannin(Sulfates)")
+@pytest.mark.parametrize("kategori", ["hvitvin", "musserende_vin", "rosévin"])
+@pytest.mark.parametrize("dim", ["Tannin(Sulfates)", "Bitterhet"])
+def test_zero_hit_dims_rejected_for_the_other_categories(kategori, dim):
+    # Speilbildet: for hvit/musserende/rosé er det TANNIN som er tom.
+    with pytest.raises(ValueError) as exc:
+        polet_facets.build_facet_query(category=kategori, clocks={dim: "7-8"})
+    assert "0 treff" in str(exc.value)
+
+
+def test_clock_dims_are_category_dependent():
+    """Den tredje klokka bytter identitet mellom kategoriene. En global liste
+    kunne ikke uttrykke det, og antok stille at katalogen var homogen —
+    en antagelse som holdt kun så lenge bare rødvin var kartlagt."""
+    assert polet_facets.clock_dims_for_category("rødvin") == (
+        "Fylde", "Friskhet", "Tannin(Sulfates)"
+    )
+    for kat in ("hvitvin", "musserende_vin", "rosévin"):
+        assert polet_facets.clock_dims_for_category(kat) == (
+            "Fylde", "Friskhet", "Soedme"
+        )
+    # Uten kategori kan bare de universelle brukes.
+    assert polet_facets.clock_dims_for_category(None) == ("Fylde", "Friskhet")
+
+
+def test_soedme_builds_a_query_for_hvitvin():
+    """Den nye halvdelen: Soedme er GYLDIG for hvitvin (8 348 treff), og ble
+    avvist globalt fram til 2026-08-30."""
+    q = polet_facets.build_facet_query(category="hvitvin", clocks={"Soedme": "1-2"})
+    assert q == ":relevance:Soedme:1-2:mainCategory:hvitvin"
+
+
+def test_unprobed_category_is_rejected_not_guessed():
+    """Sterkvin er aldri probet. «Sannsynligvis som hvitvin» er nøyaktig den
+    gjetningen som skapte denne feilklassen."""
+    with pytest.raises(ValueError) as exc:
+        polet_facets.build_facet_query(category="sterkvin", clocks={"Soedme": "1-2"})
+    assert "ikke probet" in str(exc.value)
+    # Uten klokker er kategorien uproblematisk — ingenting å validere.
+    assert polet_facets.build_facet_query(category="sterkvin") == (
+        ":relevance:mainCategory:sterkvin"
+    )
+
+
+def test_category_specific_dim_needs_a_category():
+    """Uten kategori kan gyldigheten ikke slås opp — da skal den ikke gjettes."""
+    with pytest.raises(ValueError) as exc:
+        polet_facets.build_facet_query(clocks={"Soedme": "1-2"})
+    assert "krever at du oppgir kategori" in str(exc.value)
+    # De universelle går fint uten.
+    assert polet_facets.build_facet_query(clocks={"Fylde": "7-8"}) == ":relevance:Fylde:7-8"
+
+
+def test_rejection_message_names_the_category():
+    """«At» koden ble avvist hjelper ingen. «Hvorfor, i hvilken kategori, og
+    hva er riktig i stedet» gjør."""
+    with pytest.raises(ValueError) as exc:
+        polet_facets.build_facet_query(category="hvitvin", clocks={"Tannin(Sulfates)": "7-8"})
+    msg = str(exc.value)
+    assert "hvitvin" in msg
+    assert "rødvin" in msg, "må si hvor koden FAKTISK er gyldig"
+    assert "Soedme" in msg, "må si hva som er riktig for hvitvin"
 
 
 def test_tannin_sulfates_builds_a_query():
