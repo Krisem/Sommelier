@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "3171201",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 433.2,
+  "lukt": "Ungdommelig aroma av modne bringebær og jordbær, litt trekrydder, lakris og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Most gjæres og modnes separat, malolaktisk gjæring. 40 % lagres på eik i 6 md.",
+  "navn": "Louis Jadot Bourgogne Couvent des Jacobins Pinot Noir 2023",
+  "parser": "json",
+  "pris": 324.9,
+  "produsent": "Maison Louis Jadot",
+  "smak": "Saftig, fokusert og livlig med god friskhet, preg av sødmerike røde bær, litt krydder og hint fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Louis-Jadot-Bourgogne-Couvent-des-Jacobins-Pinot-Noir-2023/p/3171201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3171201",
+  "volum": 75,
+  "årgang": "2023"
+}

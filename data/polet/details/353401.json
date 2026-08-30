@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "353401",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 80 prosent, Garnacha 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp brunrød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 519.87,
+  "lukt": "Sammensatt aroma preget av røde bær, tørket frukt og urter, innslag av fat, tobakk og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Gjæret i ståltanker 12 md. i eikeliggere + 30 md. i amerikanske eikefat.",
+  "navn": "Viña Ardanza Reserva 2020",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "La Rioja Alta",
+  "smak": "Kompleks, fatpreget og utviklet, preg av modne mørke og røde bær, rosin, tobakk, vanilje og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Spania/Rioja/Vi%C3%B1a-Ardanza-Reserva-2020/p/353401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "353401",
+  "volum": 75,
+  "årgang": "2020"
+}

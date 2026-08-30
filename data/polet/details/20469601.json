@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20469601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 74 prosent, Merlot 24 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 893.2,
+  "lukt": "Nyansert, balsamisk og litt krydret preg av mørke bær, fat, sedertre, blyantstift, kamfer og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Bordeaux-vinfikasjon. Lagret på 50 % nye franske eikefat i 18 md.",
+  "navn": "Chateau Lagrange Saint-Julien 2021",
+  "parser": "json",
+  "pris": 669.9,
+  "produsent": "Ch. Lagrange",
+  "smak": "Fyldig og fast med begynnende utvikling, preg av mørke skogsbær, krekling, fat, kamfer og tobakk.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Chateau-Lagrange-Saint-Julien-2021/p/20469601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20469601",
+  "volum": 75,
+  "årgang": "2021"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "3468701",
+  "distrikt": "Veneto",
+  "druer": "Molinara 5 prosent, Corvina 80 prosent, Rondinella 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 366.53,
+  "lukt": "Sval aroma med preg av modne røde og mørke bær, tørket frukt, urter, litt vanilje og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Ripassoteknikk. 2. gangs gjæring ved 18-20 C i rundt 20 dager. Lagret 18 md. på eikefat.",
+  "navn": "Zenato Valpolicella Superiore Ripassa 2021",
+  "parser": "json",
+  "pris": 274.9,
+  "produsent": "Zenato",
+  "smak": "God fylde, litt fasthet og sødme, med modent preg av røde og mørke bær, tørket frukt og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "7,2 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Zenato-Valpolicella-Superiore-Ripassa-2021/p/3468701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3468701",
+  "volum": 75,
+  "årgang": "2021"
+}

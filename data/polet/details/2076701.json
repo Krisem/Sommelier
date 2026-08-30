@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "2076701",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza",
+  "literpris": 166.53,
+  "lukt": "Ung, bærpreget og fruktig aroma av mørke skogsbær, kirsebær, litt fiol, fatkrydder og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Druene avstilkes og masereres i 24t ved 10-12°C før gjæring. Malolaktisk gjæring. 6 md. lagring på fransk eik.",
+  "navn": "Trivento Reserve Malbec 2024",
+  "parser": "json",
+  "pris": 124.9,
+  "produsent": "Trivento",
+  "smak": "Saftig, fruktig og avrundet, preg av modne mørke og røde bær, litt fat, svale urter og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "url": "/Land/Argentina/Mendoza/Trivento-Reserve-Malbec-2024/p/2076701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2076701",
+  "volum": 75,
+  "årgang": "2024"
+}

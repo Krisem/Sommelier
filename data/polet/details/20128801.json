@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "20128801",
+  "distrikt": "Coastal Region",
+  "druer": "Pinotage 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Coastal Region, Paarl",
+  "literpris": 253.2,
+  "lukt": "Sval og litt krydret aroma av modne røde og mørke bær, tørket urt og kamfer, litt drops og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Druer høstet for hånd. Kaldmaserasjon i 2 dager før gjæring i 5 dager på fat og ståltank. 16 md. lagring på franske 500 l fat.",
+  "navn": "Saam The Collaboration Series Pinotage 2024",
+  "parser": "json",
+  "pris": 189.9,
+  "produsent": "SAAM Mountain Vineyards",
+  "smak": "Saftig og fast, god fylde og lengde, litt krydret preg av røde og mørke bær, fat, kamfer og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Paarl",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Paarl/Saam-The-Collaboration-Series-Pinotage-2024/p/20128801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20128801",
+  "volum": 75,
+  "årgang": "2024"
+}

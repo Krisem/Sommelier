@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "2097301",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 499.87,
+  "lukt": "Sval, nyansert og ungdommelig aroma preget av røde bær, litt tørket frukt, blomst, fat og tjære.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Manuell innhøsting, tradisjonell gjæringsprosess, modnet i 40-50 hl.",
+  "navn": "Viberti Giovanni Barolo Buon Padre 2022",
+  "parser": "json",
+  "pris": 374.9,
+  "produsent": "Viberti Giovanni",
+  "smak": "Saftig og nyansert preg av modne røde bær og rosin, litt urt, lakris, te og fat, fast ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Viberti-Giovanni-Barolo-Buon-Padre-2022/p/2097301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2097301",
+  "volum": 75,
+  "årgang": "2022"
+}

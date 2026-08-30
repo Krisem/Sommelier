@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "20722901",
+  "distrikt": "Marche",
+  "druer": "Montepulciano 20 prosent, Sangiovese 80 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Marche",
+  "literpris": 185.33,
+  "lukt": "Ungt og fruktig preg av moreller og mørke skogsbær, hint av urter, lakris og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon.",
+  "navn": "Zensa Rosso Marche Organico 2025",
+  "parser": "json",
+  "pris": 142,
+  "produsent": "Orion Wines",
+  "smak": "Saftig, fruktig og litt fast med preg av morell, kirsebær, litt mørke skogsbær, lakris og grønn urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Italia/Marche/Zensa-Rosso-Marche-Organico-2025/p/20722901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20722901",
+  "volum": 75,
+  "årgang": "2025"
+}

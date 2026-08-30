@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "279201",
+  "distrikt": "Toscana",
+  "druer": "Syrah 5 prosent, Sangiovese 55 prosent, Cabernet Sauvignon 25 prosent, Merlot 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana",
+  "literpris": 305.33,
+  "lukt": "Aroma av røde og mørke bær, innslag av kirsebær, lakris, svalt krydder og fat, hint av vanilje.",
+  "matparring": [
+    "Lam og sau",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Avstilkes, knuses forsiktig, gjæres i temp.kont. ståltanker 5-7d. Maserasjon med skinn 8-12d. Modning på franske fat.",
+  "navn": "Villa Antinori 2024",
+  "parser": "json",
+  "pris": 229,
+  "produsent": "March. Antinori",
+  "smak": "Ungdommelig, fast og fyldig, preg av kirsebær, mørke skogsbær, innslag av urter, vanilje og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "url": "/Land/Italia/Toscana/Villa-Antinori-2024/p/279201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "279201",
+  "volum": 75,
+  "årgang": "2024"
+}

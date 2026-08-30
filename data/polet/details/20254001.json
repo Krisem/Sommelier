@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20254001",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Rosso di Montalcino",
+  "literpris": 386.53,
+  "lukt": "Svalt og ungdommelig preg av kirsebær, jordbær, innslag av svale urter, lakris, te og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Lagret 6 md. i eik og 6 md. i flaske.",
+  "navn": "Camigliano Rosso di Montalcino 2024",
+  "parser": "json",
+  "pris": 289.9,
+  "produsent": "Cast. di Camigliano",
+  "smak": "Frisk, saftig og litt krydret, preg av jordbær, kirsebær, svale urter, litt kamfer og lakris.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Rosso di Montalcino",
+  "url": "/Land/Italia/Toscana/Rosso-di-Montalcino/Camigliano-Rosso-di-Montalcino-2024/p/20254001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20254001",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "3461001",
+  "distrikt": "Rioja",
+  "druer": "Mazuelo 5 prosent, Tempranillo (Tinto del Pais) 75 prosent, Garnacha 15 prosent, Graciano (Bovale) 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 613.2,
+  "lukt": "Kompleks aroma preget av røde og mørke bær, tørket frukt, lær, kjøtt og dill over integrert fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Omstukket 2 ganger årlig. Tappes ufiltrert.6 år på store gamle fat. Ca. 3 års flaskemodning.",
+  "navn": "Viña Tondonia Reserva 2013",
+  "parser": "json",
+  "pris": 459.9,
+  "produsent": "Lopez de Heredia",
+  "smak": "Utviklet med konsentrert preg av moden og tørket frukt, lær, urter og fat, god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "6 g/l",
+  "url": "/Land/Spania/Rioja/Vi%C3%B1a-Tondonia-Reserva-2013/p/3461001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3461001",
+  "volum": 75,
+  "årgang": "2013"
+}

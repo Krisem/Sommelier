@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20313401",
+  "distrikt": "Sardinia",
+  "druer": "Cannonau 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sardinia, Barbagia",
+  "literpris": 479.87,
+  "lukt": "Litt utviklet, jordbær- og bringebærpreget aroma, innslag av blåbær, tørket urt, kamfer og mynte.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra Mamoiada, håndhøstet, spontanfermentert, lagret ett år i 50 hl. slavonske eikefat, ett år i ståltanker og ett år i flaske.",
+  "navn": "Vike Vike Ghirada Fittiloghe 2022",
+  "parser": "json",
+  "pris": 359.9,
+  "produsent": "Cantina Vike Vike",
+  "smak": "Fast med god fylde, saftig og svalt preg av jordbær, bringebær, litt nype, kamfer og tørket urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Barbagia",
+  "url": "/Land/Italia/Sardinia/Barbagia/Vike-Vike-Ghirada-Fittiloghe-2022/p/20313401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20313401",
+  "volum": 75,
+  "årgang": "2022"
+}

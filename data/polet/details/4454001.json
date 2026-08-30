@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "4454001",
+  "distrikt": "Toscana",
+  "druer": "Brunello 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 566.67,
+  "lukt": "Utviklet og nyansert, preg av modne røde bær, nype og rosin, litt tørket urt, lær, sedertre og fat.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Gjæres 18-20 dager på ståltank (30 °C), lagres 3 år på slovensk og fransk eik (botti) og 1 år på flaske.",
+  "navn": "Col d'Orcia Brunello di Montalcino 2021",
+  "parser": "json",
+  "pris": 425,
+  "produsent": "Col d'Orcia",
+  "smak": "Fast og litt utviklet, preg av røde bær, tørket frukt, fat og krydder, litt te og tobakk. Lang.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Col-d%27Orcia-Brunello-di-Montalcino-2021/p/4454001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4454001",
+  "volum": 75,
+  "årgang": "2021"
+}

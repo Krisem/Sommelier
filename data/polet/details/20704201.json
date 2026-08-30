@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20704201",
+  "distrikt": "Kanariøyene",
+  "druer": "Listán Negro 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Kanariøyene, Valle de la Orotava (Tenerife)",
+  "literpris": 411.87,
+  "lukt": "Litt pepret og utviklet aroma av røde bær, syltet frukt, urter og roser, hint av stall og flintrøyk.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Druer fra 150 år gamle vinstokker på Tenerife. Spontanfermentert.",
+  "navn": "Atlante Listán Negro 2022",
+  "parser": "json",
+  "pris": 308.9,
+  "produsent": "Jesus Gonzalez de Chavez Trujillo",
+  "smak": "Saftig, jordbær- og kirsebæraktig med innslag av pepper, mineraler, litt flintrøyk, urt og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Valle de la Orotava (Tenerife)",
+  "url": "/Land/Spania/Kanari%C3%B8yene/Valle-de-la-Orotava-%28Tenerife%29/Atlante-List%C3%A1n-Negro-2022/p/20704201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20704201",
+  "volum": 75,
+  "årgang": "2022"
+}

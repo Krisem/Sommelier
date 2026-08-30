@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3241501",
+  "distrikt": "Rhône",
+  "druer": "Mourvèdre 15 prosent, Carignan 10 prosent, Cinsault 5 prosent, Syrah 30 prosent, Grenache 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 253.2,
+  "lukt": "Aroma preget av røde og mørke bær, hint av tørket frukt, krydder og lær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "Manuell innhøstning, 80% avstilkning, maserasjon 12-15 dager, spontan gjæring og videre lagring i 6-9 mnd på sement tanker.",
+  "navn": "Dom. de la Janasse Côtes du Rhône 2024",
+  "parser": "json",
+  "pris": 189.9,
+  "produsent": "Dom. de la Janasse",
+  "smak": "Ung og fruktig, preg av modne mørke bær, krydder og urter, litt fast ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Dom-de-la-Janasse-C%C3%B4tes-du-Rh%C3%B4ne-2024/p/3241501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3241501",
+  "volum": 75,
+  "årgang": "2024"
+}

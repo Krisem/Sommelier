@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "20650501",
+  "distrikt": "Cape South Coast",
+  "druer": "Grenache 5 prosent, Syrah 95 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Cape South Coast, Bot River",
+  "literpris": 333.33,
+  "lukt": "Ungt preg av mørke skogsbær, morell, grønn urt og kamfer, innslag av sjokolade og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd, spontangjæret med ca 40 % hele klaser, modnet 10 md. i brukte franske eikefat.",
+  "navn": "Gabriëlskloof Swartrivier Syrah 2024",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Gabrielskloof",
+  "smak": "Fyldig, saftig og fast, krydret preg av moden og boysenbæraktig frukt, urter, litt lakris og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Bot River",
+  "url": "/Land/S%C3%B8r-Afrika/Cape-South-Coast/Bot-River/Gabri%C3%ABlskloof-Swartrivier-Syrah-2024/p/20650501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20650501",
+  "volum": 75,
+  "årgang": "2024"
+}

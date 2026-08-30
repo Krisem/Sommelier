@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "3123601",
+  "distrikt": "Piemonte",
+  "druer": "Dolcetto 31 prosent, Nebbiolo 54 prosent, Barbera 6 prosent, Freisa 2 prosent, Slarina og Chatus 5%, Albarossa 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 213.2,
+  "lukt": "Ungdommelig og litt krydret aroma av røde og mørke bær, nype, blomst, litt kamfer, te, fat og urt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæret ved maks 28 - 29 C, maserasjonstid 10 dager. Ståltankoppbevart i 12-16 md. før tapping, flaskemodnet 3 md. før salg.",
+  "navn": "Vajra Langhe Rosso 2025",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "G.D. Vajra",
+  "smak": "Fast med ørlite utviklet preg av røde og mørke bær, nype, hint av fat, svale urter og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Vajra-Langhe-Rosso-2025/p/3123601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3123601",
+  "volum": 75,
+  "årgang": "2025"
+}

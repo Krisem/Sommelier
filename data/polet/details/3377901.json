@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "3377901",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 399.87,
+  "lukt": "Aroma av modne mørke bær og tørket frukt, innslag av svale urter, tobakk og lær over fat og kokos.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "Gjæret temperaturkontrollert i ståltanker ved 30 C i 24 md. lagring i i nye amerikanske og franske eikefat, 36 md. flaskemodning.",
+  "navn": "Baron de Ley Gran Reserva 2019",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Baron de Ley",
+  "smak": "Litt utviklet preg av mørke bær, tørket frukt, urter, tobakk og fat. God fasthet, fylde og lengde.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Spania/Rioja/Baron-de-Ley-Gran-Reserva-2019/p/3377901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3377901",
+  "volum": 75,
+  "årgang": "2019"
+}

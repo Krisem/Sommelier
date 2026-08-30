@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20853202",
+  "distrikt": "Rhône",
+  "druer": "Grenache 80 prosent, Mourvèdre 5 prosent, Syrah 15 prosent",
+  "emballasje": "Emballasje med pant",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 213.07,
+  "lukt": "Ungt, fruktig og litt krydret preg av morell, bjørnebær og solbær, litt lakris, kamfer og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon, uten bruk av fat",
+  "navn": "Louis Bellevue Côtes-du-Rhône 2025",
+  "parser": "json",
+  "pris": 81.9,
+  "produsent": "SAS Saint Andéol",
+  "smak": "Fast og fruktig med god fylde, ungdommelig preg av modne mørke bær, litt lakris, kamfer og blomst.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Louis-Bellevue-C%C3%B4tes-du-Rh%C3%B4ne-2025/p/20853202",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20853202",
+  "volum": 37.5,
+  "årgang": "2025"
+}

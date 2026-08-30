@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20598206",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Frankrike, Burgund, Beaujolais-Villages",
+  "literpris": 209.93,
+  "lukt": "Ungdommelig og fruktig preg av kirsebær, krekling og rips, litt grønn urt, mineraler og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Kun druer høstet for hånd. Vinifisert etter den tradisjonelle Beaujolais-metoden, uten bruk av fat.",
+  "navn": "Cuvée Leonore Beaujolais-Lancié 2024",
+  "parser": "json",
+  "pris": 314.9,
+  "produsent": "Giles Gelin",
+  "smak": "Fruktig, saftig og litt fast, preg av friske røde og mørke bær, litt anis og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "underdistrikt": "Beaujolais-Villages",
+  "url": "/Land/Frankrike/Burgund/Beaujolais-Villages/Cuv%C3%A9e-Leonore-Beaujolais-Lanci%C3%A9-2024/p/20598206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20598206",
+  "volum": 150,
+  "årgang": "2024"
+}

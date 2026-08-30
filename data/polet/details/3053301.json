@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "3053301",
+  "distrikt": "Veneto",
+  "druer": "Corvina 60 prosent, Molinara 10 prosent, Rondinella 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 5,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella",
+  "literpris": 259.87,
+  "lukt": "Fruktig aroma preget av røde bær og litt drops, innslag av blomster og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "12 md. fatlagring i slavonsk eik.",
+  "navn": "Tommasi Valpolicella 2024",
+  "parser": "json",
+  "pris": 194.9,
+  "produsent": "Tommasi",
+  "smak": "Ung, slank og saftig med myk munnfølelse, preg av ferske røde bær og litt grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,9 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Valpolicella",
+  "url": "/Land/Italia/Veneto/Valpolicella/Tommasi-Valpolicella-2024/p/3053301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3053301",
+  "volum": 75,
+  "årgang": "2024"
+}

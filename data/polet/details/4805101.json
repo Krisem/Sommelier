@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "4805101",
+  "distrikt": "Puglia",
+  "druer": "Primitivo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Puglia, Salento",
+  "literpris": 186.53,
+  "lukt": "Aroma av modne mørke bær, litt svale urter og tørket frukt, innslag av kamfer, lakris og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Vinifikasjon i stål under temperaturkontroll.",
+  "navn": "Doppio Passo Salento Primitivo 2025",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "C.V.B.C. & C.S.P.A.",
+  "smak": "Fruktig, litt sødme og utvikling, preg av røde og mørke bær, litt urt, kamfer, lakris og vanilje.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "9,3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Salento",
+  "url": "/Land/Italia/Puglia/Salento/Doppio-Passo-Salento-Primitivo-2025/p/4805101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4805101",
+  "volum": 75,
+  "årgang": "2025"
+}

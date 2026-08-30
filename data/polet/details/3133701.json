@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "3133701",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 266.53,
+  "lukt": "Fruktig aroma preget av modne mørke skogsbær, litt pepper, lær, fiol og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon i ståltanker, tappet ufiltrert.",
+  "navn": "Dom. d'Andézon 2024",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "Les Vignerons d'Estézargues",
+  "smak": "Ung og fruktig, preg av saftige og modne mørke bær, litt urter og krydder, god lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Dom-d%27And%C3%A9zon-2024/p/3133701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3133701",
+  "volum": 75,
+  "årgang": "2024"
+}

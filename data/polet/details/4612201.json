@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "4612201",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 15 prosent, Corvina 70 prosent, Molinara 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 400,
+  "lukt": "Aroma av røde og mørke bær, plomme og tørket frukt, innslag av urter, lakris, trekrydder og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "metode": "4 md. tørking av druene, to års lagring på en blanding av små og store fat.",
+  "navn": "Valpantena Amarone della Valpolicella 2023",
+  "parser": "json",
+  "pris": 300,
+  "produsent": "Cant. Valpantena",
+  "smak": "Fyldig og ørlite sødmefull, preg av modne bær, tørket frukt, urter, litt sjokolade, tobakk og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,7 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Valpantena-Amarone-della-Valpolicella-2023/p/4612201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4612201",
+  "volum": 75,
+  "årgang": "2023"
+}

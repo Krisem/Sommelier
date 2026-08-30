@@ -1,0 +1,39 @@
+{
+  "alkohol": "11%",
+  "code": "295301",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Chile, Valle Central",
+  "literpris": 155.87,
+  "lukt": "Aroma med preg av mørke og røde bær, hint av urter, røyk og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Tradisjonell.",
+  "navn": "Gato Negro Cabernet Sauvignon 2024",
+  "parser": "json",
+  "pris": 116.9,
+  "produsent": "San Pedro",
+  "smak": "Ung, bæraktig og fruktig, preg av kirsebær og solbær, litt paprika, grønne urter og lakris.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Chile/Valle-Central/Gato-Negro-Cabernet-Sauvignon-2024/p/295301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "295301",
+  "volum": 75,
+  "årgang": "2024"
+}

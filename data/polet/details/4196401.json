@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "4196401",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 233.2,
+  "lukt": "Ung, fruktig og litt krydret med preg av røde og mørke bær, hint av fiol, urter og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsprosess 6 md. fatlagring, 12 md. flaskemodning før salg.",
+  "navn": "Carretta Barbera d'Alba 2025",
+  "parser": "json",
+  "pris": 174.9,
+  "produsent": "Ten. Carretta",
+  "smak": "Ung, kirsebæraktig og saftig, innslag av moden jordbær, grønne urter, litt lakris og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,8 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Carretta-Barbera-d%27Alba-2025/p/4196401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4196401",
+  "volum": 75,
+  "årgang": "2025"
+}

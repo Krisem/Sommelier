@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "380601",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 219.87,
+  "lukt": "Sval aroma av modne mørke og røde bær, litt grønne urter, lakris, fiol og fatkrydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæret temp.kont. i ståltanker ved 28-30 °C, 8 dagers maserasjon, deler fatlagret i ca. 6 md., 2 fl.modning.",
+  "navn": "Cantarini Barbera d'Alba 2023",
+  "parser": "json",
+  "pris": 164.9,
+  "produsent": "Winehouse Norway",
+  "smak": "Ungdommelig og saftig preg av friske mørke og røde bær, litt grønne urter, lakris og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Cantarini-Barbera-d%27Alba-2023/p/380601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "380601",
+  "volum": 75,
+  "årgang": "2023"
+}

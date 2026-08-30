@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "4583801",
+  "distrikt": "Veneto",
+  "druer": "Corvina 60 prosent, Rondinella 30 prosent, Molinara 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Bardolino",
+  "literpris": 199.87,
+  "lukt": "Fruktig, ung og kirsebærpreget, innslag grønne urter, fiol, hint av lakris, flint og kamfer.",
+  "matparring": [
+    "Aperitiff",
+    "Fisk",
+    "Lyst kjøtt"
+  ],
+  "metode": "Druer avstilkes, gjæres ved 25–28°C, deretter 18–20°C, malolaktisk gjæring, lagres på ståltank med bunnfall til tapping.",
+  "navn": "Cavalchina Bardolino",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Cavalchina",
+  "smak": "Ung, middels fyldig og fruktig, saftig og friskt preg av kirsebær, bringebær, litt lakris og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4,9 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Bardolino",
+  "url": "/Land/Italia/Veneto/Bardolino/Cavalchina-Bardolino/p/4583801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4583801",
+  "volum": 75,
+  "årgang": "2025"
+}

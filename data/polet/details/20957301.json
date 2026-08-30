@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "20957301",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Argentina, Mendoza",
+  "literpris": 185.2,
+  "lukt": "Ungt og litt dropsaktig preg av morell, bjørnebær, litt bringebær, grønne urter og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Fermentert og lagret i betongbeholder. 25 % helklasefermentasjon.",
+  "navn": "Antigal Aquí Organic Malbec 2024",
+  "parser": "json",
+  "pris": 138.9,
+  "produsent": "Antigal Winery & Estates",
+  "smak": "Nokså fast med god lengde, saftig preg av mørke bær, innslag av grønne urter, litt drops og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "0,6 g/l",
+  "url": "/Land/Argentina/Mendoza/Antigal-Aqu%C3%AD-Organic-Malbec-2024/p/20957301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20957301",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20341001",
+  "distrikt": "Sardinia",
+  "druer": "Cannonau 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Sardinia, Barbagia",
+  "literpris": 335.87,
+  "lukt": "Svalt preg av jordbær, kirsebær, tørket urt og kamfer, streif av pepper, flintrøyk og roser.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Druer fra Mamoiada. Spontanfermentert. Lagret i store slavonske eikefat i minst 6 md.",
+  "navn": "Teularju Barbagia 2024",
+  "parser": "json",
+  "pris": 251.9,
+  "produsent": "Soc. Agr. Teularju",
+  "smak": "Saftig, nokså fast og fyldig, preg av jordbær, rips og bringebær, litt fat, svale urter og blomster.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Barbagia",
+  "url": "/Land/Italia/Sardinia/Barbagia/Teularju-Barbagia-2024/p/20341001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20341001",
+  "volum": 75,
+  "årgang": "2024"
+}

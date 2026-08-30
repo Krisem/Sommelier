@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20397701",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Blaye-Côtes de Bordeaux",
+  "literpris": 400,
+  "lukt": "Ungdommelig preg av bjørnebær, solbær, litt bringebær, blå plommer, fat, blyantstift, tobakk og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Lagret på fat i 12 md.",
+  "navn": "Ch. Le Camplat Cuvée Tradition 2023",
+  "parser": "json",
+  "pris": 300,
+  "produsent": "Vignobles Reculet",
+  "smak": "Saftig med god fylde og fasthet, ungt preg av mørke bær, fat, grønn urt, kamfer, tobakk og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,2 g/l",
+  "underdistrikt": "Blaye-Côtes de Bordeaux",
+  "url": "/Land/Frankrike/Bordeaux/Blaye-C%C3%B4tes-de-Bordeaux/Ch-Le-Camplat-Cuv%C3%A9e-Tradition-2023/p/20397701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20397701",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "3278801",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 439.87,
+  "lukt": "Fokusert aroma preget av røde og mørke bær, tørket frukt, lakris, litt vanilje og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon, 14 dagers spontangjæring (kun naturlig gjær).",
+  "navn": "Fontodi Chianti Classico 2022",
+  "parser": "json",
+  "pris": 329.9,
+  "produsent": "Az. Agr. Fontodi",
+  "smak": "Litt utviklet, preg av røde og mørke bær, tørket frukt, urter og fat. Fast, lang ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Fontodi-Chianti-Classico-2022/p/3278801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3278801",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "11%",
+  "code": "3212501",
+  "distrikt": "Lisboa",
+  "druer": "Castelão 50 prosent, Camarate 25 prosent, Tinta Miuda 25 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 5,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Lisboa",
+  "literpris": 146.53,
+  "lukt": "Litt utviklet preg av modne røde bær og plommer, litt tørket frukt, kamfer, lakris og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon, gjæret 10 dager ved 30 C og 5 dager ved 20 C. Ikke fatlagret, kun flaskemodnet i 1 md. før salg.",
+  "navn": "Coreto 2023",
+  "parser": "json",
+  "pris": 109.9,
+  "produsent": "DFJ Vinhos",
+  "smak": "Middels fylde og litt sødme, preg av modne røde og mørke bær, litt tørket frukt, kamfer og urt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6,6 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Portugal/Lisboa/Coreto-2023/p/3212501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3212501",
+  "volum": 75,
+  "årgang": "2023"
+}

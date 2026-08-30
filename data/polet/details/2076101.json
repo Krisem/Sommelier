@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "2076101",
+  "druer": "Malbec 50 prosent, Syrah 25 prosent, Sangiovese 25 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Argentina",
+  "literpris": 159.87,
+  "lukt": "Fruktig aroma preget av modne røde og mørke bær, hint av plomme, blomst og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Ost"
+  ],
+  "metode": "Fermentering i ståltank.",
+  "navn": "Hereford 2025",
+  "parser": "json",
+  "pris": 119.9,
+  "produsent": "Bod. la Rosa",
+  "smak": "Ung og saftig, fruktig preg av røde bær og litt mørke bær, litt lakris og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Argentina/Hereford-2025/p/2076101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2076101",
+  "volum": 75,
+  "årgang": "2025"
+}

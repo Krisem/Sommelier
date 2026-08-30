@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "4513001",
+  "distrikt": "Abruzzo",
+  "druer": "Montepulciano 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Abruzzo, Montepulciano d'Abruzzo",
+  "literpris": 239.87,
+  "lukt": "Ung og bærpreget med innslag av morell, lakris og urter, hint av fiol, trevirke og svalt krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i rustfrie ståltanker. 4 md. lagring i flaske.",
+  "navn": "Zaccagnini Montepulciano d'Abruzzo 2024",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Zaccagnini",
+  "smak": "Saftig med god fasthet, preg av friske mørke bær, grønne urter, litt lakris og krydder.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "4,5 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Montepulciano d'Abruzzo",
+  "url": "/Land/Italia/Abruzzo/Montepulciano-d%27Abruzzo/Zaccagnini-Montepulciano-d%27Abruzzo-2024/p/4513001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4513001",
+  "volum": 75,
+  "årgang": "2024"
+}

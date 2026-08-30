@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "3133501",
+  "distrikt": "Rhône",
+  "druer": "Grenache 60 prosent, Syrah 20 prosent, Carignan 10 prosent, Cinsault 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Lirac",
+  "literpris": 313.2,
+  "lukt": "Aroma preget av modne mørke bær og litt tørket frukt, innslag av kamfer og salvie.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon i sementtanker, tappet ufiltrert. flaskemodnet i min. 9 md.",
+  "navn": "Ch. de Ségriès 2023",
+  "parser": "json",
+  "pris": 234.9,
+  "produsent": "Henri de Lanzac",
+  "smak": "Saftig og fyldig preg av sødmerike mørke bær, innslag av krydder og tørket urt. God lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,7 g/l",
+  "underdistrikt": "Lirac",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Lirac/Ch-de-S%C3%A9gri%C3%A8s-2023/p/3133501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3133501",
+  "volum": 75,
+  "årgang": "2023"
+}

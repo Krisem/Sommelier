@@ -1,0 +1,39 @@
+{
+  "alkohol": "11%",
+  "code": "3101801",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Chile, Valle Central",
+  "literpris": 146.53,
+  "lukt": "Aroma preget av røde og mørke bær, litt grønne urter og trekrydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Vinifikasjon i ståltanker i 10 dg. 3 md. fatlagring for 20%.",
+  "navn": "Out of Office Cabernet Sauvignon 2025",
+  "parser": "json",
+  "pris": 109.9,
+  "produsent": "Concha y Toro",
+  "smak": "Ung og fruktig, preg av røde og mørke bær, innslag av urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "5,2 g/l",
+  "syre": "4,5 g/l",
+  "url": "/Land/Chile/Valle-Central/Out-of-Office-Cabernet-Sauvignon-2025/p/3101801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3101801",
+  "volum": 75,
+  "årgang": "2025"
+}

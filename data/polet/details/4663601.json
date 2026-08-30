@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "4663601",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 333.33,
+  "lukt": "Aroma med preg av mørke og røde bær, litt tørket frukt, urter, litt treverk og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Trad. vinifikasjon med bl.a. temp. kontr. gjæring ved 25 °C i 9-11 dgr.",
+  "navn": "Borgogno Barbera d'Alba 2024",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Giacomo Borgogno & Figli",
+  "smak": "Saftig og ungdommelig med god friskhet, preg av kirsebær, litt tørket frukt, urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Borgogno-Barbera-d%27Alba-2024/p/4663601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4663601",
+  "volum": 75,
+  "årgang": "2024"
+}

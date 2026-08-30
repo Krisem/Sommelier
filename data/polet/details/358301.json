@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "358301",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Molinara 10 prosent, Corvina 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 5,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella Classico",
+  "literpris": 217.2,
+  "lukt": "Aroma med fruktig preg av røde bær, innslag av urter, lakris og blomst.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Gjæret ved 28 C, maserasjonstid 14 dager.",
+  "navn": "Villa Borghetti Valpolicella Classico 2025",
+  "parser": "json",
+  "pris": 162.9,
+  "produsent": "Pasqua",
+  "smak": "Ung og fruktig med myk munnfølelse, preg av saftige røde bær, innslag av urter og litt krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,5 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Classico/Villa-Borghetti-Valpolicella-Classico-2025/p/358301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "358301",
+  "volum": 75,
+  "årgang": "2025"
+}

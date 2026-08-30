@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "3314001",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Corvinone 15 prosent, Corvina 60 prosent, Molinara 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso Classico",
+  "literpris": 319.87,
+  "lukt": "Aroma preget av modne mørke bær, litt tørket frukt og urter, innslag av lakris, fat og vanilje.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Gjæres kaldt i februar, stabiliseres på stål til mai, lagres på små trefat i 12 mnd., og så ytterligere på flaske før salg.",
+  "navn": "Accordini Acinatico Valpolicella Ripasso Classico Superiore 2024",
+  "parser": "json",
+  "pris": 239.9,
+  "produsent": "Az. Agr. Stefano Accordini",
+  "smak": "Fyldig og litt utviklet med hint av sødme, preg av modne mørke bær, tørket frukt, vanilje og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "6,2 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Valpolicella Ripasso Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso-Classico/Accordini-Acinatico-Valpolicella-Ripasso-Classico-Superiore-2024/p/3314001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3314001",
+  "volum": 75,
+  "årgang": "2024"
+}

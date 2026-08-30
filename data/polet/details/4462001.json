@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "4462001",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 306,
+  "lukt": "Aroma med preg av modne røde bær, urter og litt blomst, hint av trekrydder, lær og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring ved 26-28C i 18-20dg..12 md. lagring i store slavonske eikefat, 2 md. på flaske.",
+  "navn": "Palladino Barbera d'Alba Superiore 2022",
+  "parser": "json",
+  "pris": 229.5,
+  "produsent": "Az. Vin. Palladino",
+  "smak": "Litt utviklet og saftig preg av kirsebær, urter og trekrydder, innslag av mandel, god friskhet.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Palladino-Barbera-d%27Alba-Superiore-2022/p/4462001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4462001",
+  "volum": 75,
+  "årgang": "2022"
+}

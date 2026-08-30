@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "3974401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 319.87,
+  "lukt": "Fruktig aroma preget av lyse røde bær, litt syltet frukt, blomst og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukket. 7 md. på eik, hvorav 30% nye fat.",
+  "navn": "Jaffelin Bourgogne Pinot Noir 2024",
+  "parser": "json",
+  "pris": 239.9,
+  "produsent": "Jaffelin",
+  "smak": "Ung og fruktig, preg av saftige røde bær, innslag av blomst og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Jaffelin-Bourgogne-Pinot-Noir-2024/p/3974401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3974401",
+  "volum": 75,
+  "årgang": "2024"
+}

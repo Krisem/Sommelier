@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "4440401",
+  "distrikt": "Rhône",
+  "druer": "Syrah 50 prosent, Grenache 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Côtes du Rhône",
+  "literpris": 206.53,
+  "lukt": "Fruktig, litt sval og krydret aroma av mørke bær og plommer, litt kamfer, pepper, lakris og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Druene vinifiseres separat. Tradisjonell vinifikasjon i ståltank. Lagring på ståltank.",
+  "navn": "André Brunel CDR Côtes du Rhône",
+  "parser": "json",
+  "pris": 154.9,
+  "produsent": "André Brunel",
+  "smak": "Ung, fruktig og litt pepret, preg av modne mørke skogsbær, kirsebær, litt kamfer og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Côtes du Rhône",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/C%C3%B4tes-du-Rh%C3%B4ne/Andr%C3%A9-Brunel-CDR-C%C3%B4tes-du-Rh%C3%B4ne/p/4440401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4440401",
+  "volum": 75
+}

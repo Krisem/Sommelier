@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "333901",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 25 prosent, Corvina 70 prosent, Molinara 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Verona (Veronese)",
+  "literpris": 239.87,
+  "lukt": "Aroma preget av modne mørke og røde bær, litt tørket frukt, urter og fat, hint av te og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Dobbel fermentering. 24 md. fatlagring, 6 md. flaskemodning før salg.",
+  "navn": "Masi Campofiorin 2023",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Masi Agr.",
+  "smak": "Nyansert og litt utviklet med preg av syrlige røde bær og litt rosin, innslag av krydder og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Verona (Veronese)",
+  "url": "/Land/Italia/Veneto/Verona-%28Veronese%29/Masi-Campofiorin-2023/p/333901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "333901",
+  "volum": 75,
+  "årgang": "2023"
+}

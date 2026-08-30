@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20485301",
+  "distrikt": "Coastal Region",
+  "druer": "Grenache 15 prosent, Syrah 85 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Coastal Region, Voor-Paardeberg",
+  "literpris": 333.33,
+  "lukt": "Litt krydret og pepret preg av mørke bær og plommer, svale urter, litt kamfer, lakris og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Naturlig gjæring i ståltank av hele drueklaser før pressing, 80 % modning i gamle fat, 20 % i ståltank.",
+  "navn": "Leeuwenkuil Reserve Red Blend 2024",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Leeuwenkuil Family Estate",
+  "smak": "Saftig med god fylde og fasthet, preg av mørke bær, grønne urter, litt pepper, paprika og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "4,1 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Voor-Paardeberg",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Voor-Paardeberg/Leeuwenkuil-Reserve-Red-Blend-2024/p/20485301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20485301",
+  "volum": 75,
+  "årgang": "2024"
+}

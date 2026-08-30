@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3569501",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sonoma Coast",
+  "literpris": 333.33,
+  "lukt": "Aroma preget av røde bær, litt tørket og syltet frukt, urter, skogbunn, nøtt, fat og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæret på stål, lagret 6 mnd. på en blanding av ny og gammel eik.",
+  "navn": "Cline Sonoma Coast Pinot Noir 2021",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Cline",
+  "smak": "Ung, myk og saftig, preg av modne røde bær, litt tørket frukt, fat og vanilje, god fylde og lengde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3,3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Sonoma Coast",
+  "url": "/Land/USA/California/Sonoma-Coast/Cline-Sonoma-Coast-Pinot-Noir-2021/p/3569501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3569501",
+  "volum": 75,
+  "årgang": "2021"
+}

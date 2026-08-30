@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20838501",
+  "distrikt": "Coastal Region",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Sør-Afrika, Coastal Region, Franschhoek (Valley)",
+  "literpris": 195.2,
+  "lukt": "Ung og litt krydret aroma av solbær, bjørnebær, urt og lakris, hint av blyantstift, kaffe og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Ingen bruk av fat eller faterstatninger.",
+  "navn": "Porcupine Ridge Cabernet Sauvignon 2025",
+  "parser": "json",
+  "pris": 146.4,
+  "produsent": "Boekenhoutskloof",
+  "smak": "Fruktig, ung og fast, preg av mørke skogsbær, solbær, litt syltet frukt, trevirke og grønn urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Franschhoek (Valley)",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Franschhoek-%28Valley%29/Porcupine-Ridge-Cabernet-Sauvignon-2025/p/20838501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20838501",
+  "volum": 75,
+  "årgang": "2025"
+}

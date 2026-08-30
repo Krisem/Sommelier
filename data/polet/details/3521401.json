@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "3521401",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Santa Barbara County",
+  "literpris": 493.2,
+  "lukt": "Fruktig aroma preget av røde bær og grønne urter, streif av krydder, fat og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon med bl.a. temperaturkontrollert gjæring i ståltanker, lagret i franske eikefat før tapping.",
+  "navn": "Tyler Santa Barbara County Pinot Noir 2023",
+  "parser": "json",
+  "pris": 369.9,
+  "produsent": "Tyler Winery",
+  "smak": "Ung, myk og bærpreget, innslag av jordbær, bringebær og urter, hint av fat og krydder. God lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Santa Barbara County",
+  "url": "/Land/USA/California/Santa-Barbara-County/Tyler-Santa-Barbara-County-Pinot-Noir-2023/p/3521401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3521401",
+  "volum": 75,
+  "årgang": "2023"
+}

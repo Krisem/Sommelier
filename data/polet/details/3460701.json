@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "3460701",
+  "distrikt": "Veneto",
+  "druer": "Molinara 5 prosent, Rondinella 25 prosent, Corvina 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella Classico",
+  "literpris": 200,
+  "lukt": "Aroma med ørlite utviklet preg av røde bær, svale urter og blomster, streif av rosin, fat og te.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert vinifikasjon, maserasjonstid 5-7 dg. 4 md. fatlagring, 3 md. flaskemodning før salg.",
+  "navn": "Domìni Veneti Valpolicella Classico Superiore 2023",
+  "parser": "json",
+  "pris": 150,
+  "produsent": "Cant. Valpolicella Negrar",
+  "smak": "Saftig, myk og middels fyldig med god friskhet, preg av modne røde bær, hint av fat og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,5 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Classico/Dom%C3%ACni-Veneti-Valpolicella-Classico-Superiore-2023/p/3460701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3460701",
+  "volum": 75,
+  "årgang": "2023"
+}

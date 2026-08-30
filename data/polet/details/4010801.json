@@ -1,0 +1,38 @@
+{
+  "alkohol": "11%",
+  "code": "4010801",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 85 prosent, Merlot 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Chile, Valle Central",
+  "literpris": 146.53,
+  "lukt": "Ung og litt solbærpreget aroma med innslag av av lakris, svale urter, sjokolade og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau"
+  ],
+  "metode": "Vinifikasjon i ståltanker, maserasjonstid 6-8 dager, 100% malolaktisk.",
+  "navn": "Viña Maipo Mi Pueblo Cabernet Sauvignon 2025",
+  "parser": "json",
+  "pris": 109.9,
+  "produsent": "Viña Maipo",
+  "smak": "Fruktig preg av modne solbær og plommer, innslag av paprika, sjokolade og grønne urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/Chile/Valle-Central/Vi%C3%B1a-Maipo-Mi-Pueblo-Cabernet-Sauvignon-2025/p/4010801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4010801",
+  "volum": 75,
+  "årgang": "2025"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "3551901",
+  "distrikt": "Valle Central",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Valle Central, Valle de Colchagua",
+  "literpris": 186.53,
+  "lukt": "Fruktig aroma preget av modne røde bær og svale urter, litt lakris, krydder, fat og blomst.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Storfe"
+  ],
+  "metode": "Temp.kont. gjæring, 20% ståltankmodnet i 10 md. 80% lagret i franke eikefat før blanding og tapping.",
+  "navn": "Cono Sur Organic Pinot Noir 2024",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Viña Cono Sur",
+  "smak": "Saftig og fruktig med god fylde, preg av moden jordbær, bringebær, litt fat, krydder og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6 g/l",
+  "underdistrikt": "Valle de Colchagua",
+  "url": "/Land/Chile/Valle-Central/Valle-de-Colchagua/Cono-Sur-Organic-Pinot-Noir-2024/p/3551901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3551901",
+  "volum": 75,
+  "årgang": "2024"
+}

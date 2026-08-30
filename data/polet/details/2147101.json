@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "2147101",
+  "distrikt": "Pfalz",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Tyskland, Pfalz",
+  "literpris": 233.2,
+  "lukt": "Aroma med preg av røde bær, litt urter, skogbunn og streif av fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Avstilkning før pressing. Gjæring i ståltank. 12 md lagring, 50% i ståltanker, 50% i eikefatg (30% nye).",
+  "navn": "Villa Wolf Pinot Noir 2024",
+  "parser": "json",
+  "pris": 174.9,
+  "produsent": "Weing. Villa Wolf",
+  "smak": "Fruktig og myk med saftig preg av jordbær og bringebær, litt krydder, fat, mineraler og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3,7 g/l",
+  "syre": "4,7 g/l",
+  "url": "/Land/Tyskland/Pfalz/Villa-Wolf-Pinot-Noir-2024/p/2147101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2147101",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "3240401",
+  "distrikt": "Mendoza",
+  "druer": "Cabernet Sauvignon 40 prosent, Merlot 20 prosent, Malbec 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza",
+  "literpris": 266.67,
+  "lukt": "Preg av modne mørke bær, tørket frukt, svale urter, skogbunn og lakris, litt te, tobakk og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring ved 26-28 C. 24 md. lagring.",
+  "navn": "Weinert Carrascal 2022",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Fyldig og lang, utviklet preg av tørket frukt, svale urter, lakris, te, litt fat, kamfer og tobakk.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Argentina/Mendoza/Weinert-Carrascal-2022/p/3240401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3240401",
+  "volum": 75,
+  "årgang": "2022"
+}

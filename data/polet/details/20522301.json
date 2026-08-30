@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20522301",
+  "distrikt": "Aconcagua",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Aconcagua, Valle de Leyda",
+  "literpris": 239.87,
+  "lukt": "Ungdommelig og litt dropsaktig preg av bringebær, rips og jordbær, litt svale urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Lagret minimum 6 måneder på franske eikefat.",
+  "navn": "MontGras Amaral Pinot Noir 2024",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Agrícola San José de Peralillo S.A.",
+  "smak": "Fruktig og moderat fast, preg av røde bær, toner av bringebærdrops, rips, litt fat og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Valle de Leyda",
+  "url": "/Land/Chile/Aconcagua/Valle-de-Leyda/MontGras-Amaral-Pinot-Noir-2024/p/20522301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20522301",
+  "volum": 75,
+  "årgang": "2024"
+}

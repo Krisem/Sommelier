@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "2049801",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 279.87,
+  "lukt": "Aroma preget av modne røde bær, litt tørket frukt, nype, svale urter, blomst, rød te og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Gjæret i 10 dg. ved 30 C, gjennomgått fullstendig malolaktisk gjæring.",
+  "navn": "Fontanafredda Ebbio Langhe Nebbiolo 2023",
+  "parser": "json",
+  "pris": 209.9,
+  "produsent": "Fontanafredda",
+  "smak": "Ørlite utviklet, fast og nyansert, preg av røde bær, litt nypete, lakris, kamfer, fat og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Fontanafredda-Ebbio-Langhe-Nebbiolo-2023/p/2049801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2049801",
+  "volum": 75,
+  "årgang": "2023"
+}

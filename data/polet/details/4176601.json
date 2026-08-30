@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "4176601",
+  "distrikt": "Veneto",
+  "druer": "Molinara 10 prosent, Rondinella 20 prosent, Corvina 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso Classico",
+  "literpris": 339.87,
+  "lukt": "Aroma med modent preg av røde og mørke bær, tørket frukt og urter, litt fat og vanilje.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon i temperatur kontrollerte ståltanker, lagring på store eikefat.",
+  "navn": "Tommasi Valpolicella Ripasso Classico Superiore 2022",
+  "parser": "json",
+  "pris": 254.9,
+  "produsent": "Tommasi",
+  "smak": "Saftig, myk og litt utviklet, preg av modne bær, tørket frukt, litt urter, vanilje, fat og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "6,2 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Valpolicella Ripasso Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso-Classico/Tommasi-Valpolicella-Ripasso-Classico-Superiore-2022/p/4176601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4176601",
+  "volum": 75,
+  "årgang": "2022"
+}

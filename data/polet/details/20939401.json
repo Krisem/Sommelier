@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20939401",
+  "distrikt": "Western Australia",
+  "druer": "Syrah 98 prosent, Viognier 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, Western Australia, Frankland River",
+  "literpris": 439.87,
+  "lukt": "Nyansert og litt utviklet aroma av mørke bær, svale urter, litt pepper, fat, kamfer og blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer høstet for hånd. Spontangjæret. 15 % helklasefermentering. 13 md. på gamle eikefat.",
+  "navn": "Frankland Estate Isolation Ridge Syrah 2023",
+  "parser": "json",
+  "pris": 329.9,
+  "produsent": "Frankland Estate",
+  "smak": "Lang, saftig, litt animalsk og pepret, preg av mørke bær, svale urter, litt hengt kjøtt og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Frankland River",
+  "url": "/Land/Australia/Western-Australia/Frankland-River/Frankland-Estate-Isolation-Ridge-Syrah-2023/p/20939401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20939401",
+  "volum": 75,
+  "årgang": "2023"
+}

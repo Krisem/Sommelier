@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "260501",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 86 prosent, Syrah 6 prosent, Cabernet Franc 2 prosent, Petit Verdot 3 prosent, Petite Sirah (Durif, P. Syrah) 3 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Valle Central",
+  "literpris": 173.2,
+  "lukt": "Aroma med preg av solbær, grønne urter og litt lakris og tjære.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Gjæret i 1 uke, deretter skinnkontakt i ytterligere 2 uker.",
+  "navn": "Casillero del Diablo Cabernet Sauvignon 2023",
+  "parser": "json",
+  "pris": 129.9,
+  "produsent": "Concha y Toro",
+  "smak": "Fruktig og ung, preg av mørke bær, innslag av paprika, krydder og urter, litt fast ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Chile/Valle-Central/Casillero-del-Diablo-Cabernet-Sauvignon-2023/p/260501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "260501",
+  "volum": 75,
+  "årgang": "2023"
+}

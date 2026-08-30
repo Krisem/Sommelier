@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "3327501",
+  "distrikt": "Toscana",
+  "druer": "Merlot 8 prosent, Sangiovese 92 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Colli Senesi",
+  "literpris": 235.87,
+  "lukt": "Litt balsamisk aroma av modne røde bær, tørket frukt og svale urter, innslag av lær, te og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Tradisjonell temperaturkontrollert gjæring med 10-12 dg. maserasjon. 10 md fatlagring.",
+  "navn": "Castello di Farnetella Chianti Colli Senesi 2024",
+  "parser": "json",
+  "pris": 176.9,
+  "produsent": "Fèlsina",
+  "smak": "Nyansert og litt utviklet preg av modne røde bær, svale urter, litt fat, kamfer, te og tørket frukt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Chianti Colli Senesi",
+  "url": "/Land/Italia/Toscana/Chianti-Colli-Senesi/Castello-di-Farnetella-Chianti-Colli-Senesi-2024/p/3327501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3327501",
+  "volum": 75,
+  "årgang": "2024"
+}

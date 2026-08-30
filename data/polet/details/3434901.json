@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3434901",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødblå.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 266.67,
+  "lukt": "Fruktig og ung aroma preget av mørke og røde bær, plomme, svale urter, hint av fiol og mandel.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Gjæret temp.kontrollert i ståltanker med 7 dg. maserasjon.",
+  "navn": "Ratti Barbera d'Alba 2024",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Renato Ratti",
+  "smak": "Ung og saftig med god friskhet og fylde, preg av kirsebær, litt blåbær, lakris og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Ratti-Barbera-d%27Alba-2024/p/3434901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3434901",
+  "volum": 75,
+  "årgang": "2024"
+}

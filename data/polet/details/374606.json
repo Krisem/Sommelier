@@ -1,0 +1,36 @@
+{
+  "alkohol": "13,5%",
+  "code": "374606",
+  "distrikt": "Valencia",
+  "druer": "Tempranillo (Tinto del Pais) 40 prosent, Shiraz 10 prosent, Cabernet Sauvignon 50 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Spania, Valencia",
+  "literpris": 167.45,
+  "lukt": "Aroma med preg av modne mørke og røde bær, litt fat, blomst og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon i temperaturkontrollerte ståltanker, 2 md. fatlagring før tapping.",
+  "navn": "Icono Seleccion Especial",
+  "parser": "json",
+  "pris": 334.9,
+  "produsent": "Anecoop-La Viña",
+  "smak": "Ungdommelig, myk og saftig med ørlite sødme, preg av modne mørke bær, urter, litt fat og lakris.",
+  "sukker": "8 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Spania/Valencia/Icono-Seleccion-Especial/p/374606",
+  "utvalg": "Basisutvalget",
+  "varenummer": "374606",
+  "volum": 200
+}

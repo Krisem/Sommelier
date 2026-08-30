@@ -1,0 +1,37 @@
+{
+  "alkohol": "13%",
+  "code": "3954702",
+  "distrikt": "Veneto",
+  "druer": "Corvina 50 prosent, Rondinella 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Tett rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Recioto di Valpolicella",
+  "literpris": 558,
+  "lukt": "Aroma preget av modne og sursøte mørke bær, tørket frukt og urter, innslag av lakris og kaffe.",
+  "matparring": [
+    "Ost",
+    "Dessert"
+  ],
+  "metode": "Håndplukkede druer tørkes, dertter gjæring som stanses. 6 md. flaskemodning.",
+  "navn": "Casotto del Merlo Recioto della Valpolicella Classico 2017",
+  "parser": "json",
+  "pris": 279,
+  "produsent": "Campagnola",
+  "smak": "Rik og søt, preg av mørke bær, tørket frukt, krydder og kaffe. Lang og svakt bitter ettersmak.",
+  "sukker": "126 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Recioto di Valpolicella",
+  "url": "/Land/Italia/Veneto/Recioto-di-Valpolicella/Casotto-del-Merlo-Recioto-della-Valpolicella-Classico-2017/p/3954702",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3954702",
+  "volum": 50,
+  "årgang": "2017"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20474401",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Blaye-Côtes de Bordeaux",
+  "literpris": 233.07,
+  "lukt": "Ungdommelig preg av modne røde og mørke bær, litt syltet frukt, plommer, fat, svale urter og fiol.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "100 % av vinen er lagret på eik i 6 måneder.",
+  "navn": "Chateau Laccanaud Merlot 2023",
+  "parser": "json",
+  "pris": 174.8,
+  "produsent": "Vignobles Luc Schweitzer",
+  "smak": "Saftig og litt fast, preg av moden morell, jordbær, litt bjørnebær, urter, kamfer, fat og tobakk.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Blaye-Côtes de Bordeaux",
+  "url": "/Land/Frankrike/Bordeaux/Blaye-C%C3%B4tes-de-Bordeaux/Chateau-Laccanaud-Merlot-2023/p/20474401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20474401",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "15,5%",
+  "code": "4141201",
+  "distrikt": "Veneto",
+  "druer": "Corvina 75 prosent, Molinara 5 prosent, Rondinella 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunlig kant.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 11,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella Classico",
+  "literpris": 566.67,
+  "lukt": "Sammensatt og litt utviklet preg av modne røde bær, kirsebær, litt fat, tobakk, lær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Håndplukkede druer, tørkes på loft. Presses og gjæres ved 12 grader i 30 dager. Legges på fat i 2 år, så 8-12 md. på flaske.",
+  "navn": "Accordini Acinatico Amarone della Valpolicella Classico 2021",
+  "parser": "json",
+  "pris": 425,
+  "produsent": "Az. Agr. Stefano Accordini",
+  "smak": "Fyldig, ekstraktrik og sødmefull, preg av modne røde og mørke bær, fat, kamfer, rosin og tobakk.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "5,4 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Amarone della Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella-Classico/Accordini-Acinatico-Amarone-della-Valpolicella-Classico-2021/p/4141201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4141201",
+  "volum": 75,
+  "årgang": "2021"
+}

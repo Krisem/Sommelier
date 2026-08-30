@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "2844901",
+  "distrikt": "Makedonia",
+  "druer": "Xynomavro 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Hellas, Makedonia, Amyndeon",
+  "literpris": 373.2,
+  "lukt": "Litt utviklet og krydret aroma av kirsebær, krekling og nype, litt kamfer, svart te, rose og salvie.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Kaldmaserert i 6 dg., før fermentering i 2 uker. 14 md. fatlagring, med malolaktisk gjæring.",
+  "navn": "Kir-Yianni Kali Riza Xinomavro Vielles Vignes 2023",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "Kir-Yianni",
+  "smak": "Nyansert, saftig og fast med kirsebær- og kreklingpreget frukt, innslag av fat, oliven og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "7,7 g/l",
+  "underdistrikt": "Amyndeon",
+  "url": "/Land/Hellas/Makedonia/Amyndeon/Kir-Yianni-Kali-Riza-Xinomavro-Vielles-Vignes-2023/p/2844901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2844901",
+  "volum": 75,
+  "årgang": "2023"
+}

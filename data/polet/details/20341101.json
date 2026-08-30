@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20341101",
+  "distrikt": "Marlborough",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "land": "New Zealand, Marlborough, Wairau Valley",
+  "literpris": 267.87,
+  "lukt": "Aroma av friske røde bær, svale urter og kamfer, hint av fat, flintstein og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Gjæring i ståltank, delvis i åpne tanker. Malolaktisk gjæring og kort modning på nøytrale, franske eikefat.",
+  "navn": "Wither Hills Marlborough Pinot Noir 2025",
+  "parser": "json",
+  "pris": 200.9,
+  "produsent": "Wither Hills Vineyards",
+  "smak": "Fruktig, ung og saftig, preg av modne jordbær, kirsebær, litt grønne urter og hint av fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Wairau Valley",
+  "url": "/Land/New-Zealand/Marlborough/Wairau-Valley/Wither-Hills-Marlborough-Pinot-Noir-2025/p/20341101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20341101",
+  "volum": 75,
+  "årgang": "2025"
+}

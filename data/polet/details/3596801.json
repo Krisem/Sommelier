@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3596801",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Asti",
+  "literpris": 238.67,
+  "lukt": "Ung aroma preget av mørke bær, innslag av lakris, tørket frukt, urter og litt vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsteknikk i temperaturkontrollerte ståltanker.",
+  "navn": "Santero Dilé Barbera d'Asti 2023",
+  "parser": "json",
+  "pris": 179,
+  "produsent": "Santero - I.V.A.S.S.",
+  "smak": "Fersk og saftig med preg av modne moreller og kirsebær, litt tørket frukt, krydder og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "6,2 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Barbera d'Asti",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Asti/Santero-Dil%C3%A9-Barbera-d%27Asti-2023/p/3596801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3596801",
+  "volum": 75,
+  "årgang": "2023"
+}

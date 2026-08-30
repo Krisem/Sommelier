@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3463701",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 15 prosent, Merlot 85 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Haut-Médoc",
+  "literpris": 466.53,
+  "lukt": "Sval aroma av modne mørke bær, litt plomme og urter over fint integrert sedertre, hint av lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Tradisjonell. Ca. 18 md. fatlagring.",
+  "navn": "Ch. Coufran 2010",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "Ch. Coufran",
+  "smak": "Litt utviklet, fint preg av mørke bær, tørket frukt, sedertre og lær, fast ettersmak med god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,6 g/l",
+  "underdistrikt": "Haut-Médoc",
+  "url": "/Land/Frankrike/Bordeaux/Haut-M%C3%A9doc/Ch-Coufran-2010/p/3463701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3463701",
+  "volum": 75,
+  "årgang": "2010"
+}

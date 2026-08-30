@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3438701",
+  "distrikt": "Valle Central",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Valle Central, Valle del Maipo",
+  "literpris": 222.53,
+  "lukt": "Litt krydret aroma preget av moden solbær, grønn paprika, tørket urt og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Avstilking av druene før pressing, 4-5 dg. masereasjon ved lav temperatur før gjæring, gjæret ved ca. 25 C.",
+  "navn": "Odfjell Armador Cabernet Sauvignon 2024",
+  "parser": "json",
+  "pris": 166.9,
+  "produsent": "Odfjell Vineyards",
+  "smak": "Ung og fruktig med god fylde, preg av moden solbær og morell, innslag av krydder, lakris og urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Valle del Maipo",
+  "url": "/Land/Chile/Valle-Central/Valle-del-Maipo/Odfjell-Armador-Cabernet-Sauvignon-2024/p/3438701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3438701",
+  "volum": 75,
+  "årgang": "2024"
+}

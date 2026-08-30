@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "4182301",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 85 prosent, Corvina 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza, Valle de Uco",
+  "literpris": 203.87,
+  "lukt": "Aroma av modne mørke bær, litt tørket frukt, svale urter, lakris og skogbunn, hint av tobakk og fat.",
+  "matparring": [
+    "Lam og sau",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Delvis tørkede druer. 9 måneder lagring i fransk eikefat.",
+  "navn": "Masi Passo Doble 2023",
+  "parser": "json",
+  "pris": 152.9,
+  "produsent": "Masi Agr.",
+  "smak": "Smaksrik, fyldig, litt fast og utviklet, preg av modne mørke bær, tørket frukt, litt lakris og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "8 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Valle de Uco",
+  "url": "/Land/Argentina/Mendoza/Valle-de-Uco/Masi-Passo-Doble-2023/p/4182301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4182301",
+  "volum": 75,
+  "årgang": "2023"
+}

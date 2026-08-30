@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "20768101",
+  "distrikt": "Minho",
+  "druer": "Touriga Nacional 30 prosent, Vinhão (Sousón) 10 prosent, Brancellao (Alvarelhao) 30 prosent, Padeiro (P.de Basto, T.Matias) 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Minho, Vinho Verde",
+  "literpris": 289.2,
+  "lukt": "Ferskt, litt dropsaktig og fruktig preg av røde bær, innslag av bladverk og blomster.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert. Temperaturkontrollert gjæring i ståltank. Ingen fatlagring. Kort lagring på tank før tapping.",
+  "navn": "Flor de Linho Atlantimor Vinho Verde 2025",
+  "parser": "json",
+  "pris": 216.9,
+  "produsent": "Três Rostos LDA",
+  "smak": "Ung, fruktig og dropsaktig med saftig preg av bringebær og rips, innslag av sevje og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6 g/l",
+  "underdistrikt": "Vinho Verde",
+  "url": "/Land/Portugal/Minho/Vinho-Verde/Flor-de-Linho-Atlantimor-Vinho-Verde-2025/p/20768101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20768101",
+  "volum": 75,
+  "årgang": "2025"
+}

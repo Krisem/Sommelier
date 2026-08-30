@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "4411201",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Asti",
+  "literpris": 266.67,
+  "lukt": "Fruktig og ung aroma av kirsebær, mørke skogsbær, litt lakris, fiol og svale urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer presses, og gjæres på ståltank. Lagres på ståltank i 6 md før tapping.",
+  "navn": "Olim Bauda La Villa Barbera d'Asti 2025",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Ten. Olim Bauda",
+  "smak": "Ung, myk og saftig med god fylde, innslag av kirsebær, litt blåbær, krekling, lakris og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3 g/l",
+  "syre": "7,4 g/l",
+  "underdistrikt": "Barbera d'Asti",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Asti/Olim-Bauda-La-Villa-Barbera-d%27Asti-2025/p/4411201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4411201",
+  "volum": 75,
+  "årgang": "2025"
+}

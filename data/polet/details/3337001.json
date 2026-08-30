@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3337001",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 5 prosent, Cabernet Sauvignon 35 prosent, Merlot 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Médoc",
+  "literpris": 466.53,
+  "lukt": "Aroma med litt utviklet preg av røde bær, tørket frukt, litt lær, trevirke, paprika og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Vinifikasjon med lang maserasjonstid.",
+  "navn": "Ch. Lafitte-Tramier 2015",
+  "parser": "json",
+  "pris": 349.9,
+  "produsent": "Adrien Tramier",
+  "smak": "Sammensatt, nokså utviklet og fast, preg av modne røde bær, litt rosin, lær, paprika og te.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Médoc",
+  "url": "/Land/Frankrike/Bordeaux/M%C3%A9doc/Ch-Lafitte-Tramier-2015/p/3337001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3337001",
+  "volum": 75,
+  "årgang": "2015"
+}

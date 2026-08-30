@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "3468801",
+  "distrikt": "Veneto",
+  "druer": "Corvina 80 prosent, Molinara 5 prosent, Sangiovese 5 prosent, Rondinella 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Classico",
+  "literpris": 286.53,
+  "lukt": "Aroma preget av modne røde bær og litt tørket frukt, innslag av urter, lakris og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Ost",
+    "Svin"
+  ],
+  "metode": "Trad. vinifikasjon i ståltanker, maserasjonstid 6-7 dager. 8-12 md lagring i eikeliggere (33-50 hl), 3-6 md fl.",
+  "navn": "Zenato Valpolicella Classico Superiore 2022",
+  "parser": "json",
+  "pris": 214.9,
+  "produsent": "Zenato",
+  "smak": "Myk med hint av sødme, litt utviklet preg av røde bær, tørket frukt, litt fat og urt.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5,6 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Classico/Zenato-Valpolicella-Classico-Superiore-2022/p/3468801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3468801",
+  "volum": 75,
+  "årgang": "2022"
+}

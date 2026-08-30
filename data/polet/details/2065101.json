@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "2065101",
+  "distrikt": "Castilla y León",
+  "druer": "Tinta del Toro (Tempranillo) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Castilla y León, Toro",
+  "literpris": 246.4,
+  "lukt": "Aroma preget av modne mørke bær, innslag av urter, blomster og lyng, hint av fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Druer fra 50-70 år gamle stokker. Spontanferm. 15.000L sementtanker. Lagret 3 md på fransk eik. Ufiltrert.",
+  "navn": "Matsu El Picaro 2025",
+  "parser": "json",
+  "pris": 184.8,
+  "produsent": "Matsu",
+  "smak": "Ung, fyldig, bærpreget og saftig, innslag av morell og blåbær, litt svale urter, fat og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Toro",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/Toro/Matsu-El-Picaro-2025/p/2065101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2065101",
+  "volum": 75,
+  "årgang": "2025"
+}

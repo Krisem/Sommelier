@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "4235401",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Corvina 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med brunskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella Classico",
+  "literpris": 399.87,
+  "lukt": "Utviklet aroma preget av modne mørke bær og tørket frukt, hint av skogbunn, lær, vanilje og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Capitel de Roari Amarone della Valpolicella Classico",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Luigi Righetti",
+  "smak": "Modent og utviklet preg av sødmerike bær, rosin og fat, innslag av vanilje, lakris, te og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,7 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Amarone della Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella-Classico/Capitel-de-Roari-Amarone-della-Valpolicella-Classico/p/4235401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4235401",
+  "volum": 75,
+  "årgang": "2022"
+}

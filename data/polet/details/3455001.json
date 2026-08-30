@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "3455001",
+  "distrikt": "Rioja",
+  "druer": "Cabernet Sauvignon 10 prosent, Tempranillo (Tinto del Pais) 90 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 293.2,
+  "lukt": "Litt utviklet preg av røde og mørke bær, tørket frukt, fat og vanilje, litt tobakk, kamfer og te.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell. 12 md. fatlagring, 24 md. flaskemodning.",
+  "navn": "Baron de Ley Reserva 2021",
+  "parser": "json",
+  "pris": 219.9,
+  "produsent": "Baron de Ley",
+  "smak": "Sammensatt, fast og nokså utviklet, preg av røde og mørke bær, rosin, fat, kamfer, vanilje og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Spania/Rioja/Baron-de-Ley-Reserva-2021/p/3455001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3455001",
+  "volum": 75,
+  "årgang": "2021"
+}

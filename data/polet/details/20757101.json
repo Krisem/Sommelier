@@ -1,0 +1,38 @@
+{
+  "alkohol": "13,5%",
+  "code": "20757101",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Tsjekkia",
+  "literpris": 438.53,
+  "lukt": "Ungdommelig aroma av modne røde bær, grønne urter, litt fat, paprika, sedertre og blomst.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Druer fra Velkopavlovická, håndhøstet.Naturgjær i barrique. 50% fatfermentert. Lagring på barrique i 12 md. hvorav 50% er nye.",
+  "navn": "Jaroslav Springer Pinot Noir 2024",
+  "parser": "json",
+  "pris": 328.9,
+  "produsent": "Stapleton Springer",
+  "smak": "Saftig, litt fast og nokså ferskt preg av jordbær, litt syltet frukt, fat, blomster og grønne urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "url": "/Land/Tsjekkia/Jaroslav-Springer-Pinot-Noir-2024/p/20757101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20757101",
+  "volum": 75,
+  "årgang": "2024"
+}

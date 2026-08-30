@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "4582301",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Crozes-Hermitage",
+  "literpris": 413.2,
+  "lukt": "Nyansert og ørlite utviklet aroma av mørke bær, blå plommer, litt skogbunn, krydder og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Avstilkes. Lagring i 24 md. på 85% brukte 228l eikefat og 15% foudres. Filtrert, men ikke klaret.",
+  "navn": "Guigal Crozes-Hermitage 2022",
+  "parser": "json",
+  "pris": 309.9,
+  "produsent": "E. Guigal",
+  "smak": "Sammensatt med begynnende utvikling, preg av modne mørke bær, litt urt, fat og krydder. God fylde.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Crozes-Hermitage",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Crozes-Hermitage/Guigal-Crozes-Hermitage-2022/p/4582301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4582301",
+  "volum": 75,
+  "årgang": "2022"
+}

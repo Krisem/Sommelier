@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "2205001",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 318.67,
+  "lukt": "Aroma med ørlite utviklet preg av røde og mørke bær, litt blomst, urter og krydder, hint av fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Håndplukkes og selekteres. Lagres 4 md. på temperaturkontrollert ståltank, deretter 12 md. på slavonske fat.",
+  "navn": "Franco Conterno Cascina Sciulun Barbera d'Alba Superiore 2024",
+  "parser": "json",
+  "pris": 239,
+  "produsent": "Franco Conterno",
+  "smak": "Fruktig med god friskhet og fylde, preg av kirsebær, morell, litt grønne urter, fat, te og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Franco-Conterno-Cascina-Sciulun-Barbera-d%27Alba-Superiore-2024/p/2205001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2205001",
+  "volum": 75,
+  "årgang": "2024"
+}

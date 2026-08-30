@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20843101",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza, Los Chacayes",
+  "literpris": 266.67,
+  "lukt": "Ungdommelig og litt krydret aroma av bjørnebær, blåbær og fiol, litt urter, blyantstift og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "100 % av vinen er fermentert og lagret i betongbeholder, 25 % helklasefermentasjon.",
+  "navn": "Piedra Negra Alta Colección Malbec 2024",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Bod. Piedra Negra",
+  "smak": "Saftig og nokså fast med litt krydret preg av mørke skogsbær, hint av urter, lakris og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Los Chacayes",
+  "url": "/Land/Argentina/Mendoza/Los-Chacayes/Piedra-Negra-Alta-Colecci%C3%B3n-Malbec-2024/p/20843101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20843101",
+  "volum": 75,
+  "årgang": "2024"
+}

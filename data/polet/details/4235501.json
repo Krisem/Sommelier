@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "4235501",
+  "distrikt": "Veneto",
+  "druer": "Corvina 75 prosent, Molinara 5 prosent, Rondinella 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso Classico",
+  "literpris": 237.2,
+  "lukt": "Litt utviklet og krydret preg av fullmodne røde bær, tørket frukt, kamfer, litt lakris og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Campolieti Valpolicella Ripasso Classico Superiore",
+  "parser": "json",
+  "pris": 177.9,
+  "produsent": "Luigi Righetti",
+  "smak": "Fyldig, litt vaniljeaktig og utviklet, preg av sødmerike bær, tørket frukt, litt tobakk og krydder.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Valpolicella Ripasso Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso-Classico/Campolieti-Valpolicella-Ripasso-Classico-Superiore/p/4235501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4235501",
+  "volum": 75,
+  "årgang": "2024"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "4552101",
+  "distrikt": "South E. Australia",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Australia, South E. Australia",
+  "literpris": 183.87,
+  "lukt": "Fruktig aroma preget av modne solbær, mynte og svale urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Ikke fat- eller flaskemodnet før salg.",
+  "navn": "Jacob's Creek Merlot 2025",
+  "parser": "json",
+  "pris": 137.9,
+  "produsent": "Orlando Wines",
+  "smak": "Saftig, rund og fruktig med litt krydret preg av sødmerike mørke bær, lakris og svale urter.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,8 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Australia/South-E-Australia/Jacob%27s-Creek-Merlot-2025/p/4552101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4552101",
+  "volum": 75,
+  "årgang": "2025"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "4399301",
+  "distrikt": "California",
+  "druer": "Zinfandel 90 prosent, Petite Sirah (Durif, P. Syrah) 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sonoma County",
+  "literpris": 439.87,
+  "lukt": "Ungt og fruktig preg av modne mørke og røde bær, plomme, litt syltet frukt, fat, krydder og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Gjæret delvis i vertikale roterende tanker og tradisjonelle horisontale.",
+  "navn": "Seghesio Sonoma Zinfandel 2023",
+  "parser": "json",
+  "pris": 329.9,
+  "produsent": "Seghesio Family Vineyards",
+  "smak": "Fyldig, mykt og sødmefullt preg av fullmodne mørke og røde bær, svale urter, litt lakris og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Sonoma County",
+  "url": "/Land/USA/California/Sonoma-County/Seghesio-Sonoma-Zinfandel-2023/p/4399301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "4399301",
+  "volum": 75,
+  "årgang": "2023"
+}

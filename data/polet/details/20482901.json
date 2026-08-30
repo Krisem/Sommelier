@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "20482901",
+  "distrikt": "Savoie",
+  "druer": "Mondeuse 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Savoie, Vin de Savoie-Arbin",
+  "literpris": 346.53,
+  "lukt": "Litt krydret preg av bjørnebær, blåbær og hyllebær, litt lakris, pepper, fiol og hint av fat.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Druer høstet for hånd, delvis avstilket. Maserasjon i 8-10 dager. Omstikking, alkohol-/malolaktisk gjæring i ståltank. 6 md. lag",
+  "navn": "J. Perrier Graine de Terroir Arbin Mondeuse 2024",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Maison Jean Perrier et Fils",
+  "smak": "Fast, krydret og fruktig, preg av mørke bær, litt tyttebær, lakris, urter, hint av pepper og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Vin de Savoie-Arbin",
+  "url": "/Land/Frankrike/Savoie/Vin-de-Savoie-Arbin/J-Perrier-Graine-de-Terroir-Arbin-Mondeuse-2024/p/20482901",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20482901",
+  "volum": 75,
+  "årgang": "2024"
+}

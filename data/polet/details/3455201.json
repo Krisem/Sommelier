@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "3455201",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 226.53,
+  "lukt": "Aroma preget av røde og mørke bær, tørket frukt og krydder, innslag av lakris, svale urter og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Tradisjonell temperaturkontrollert vinifikasjon med lang maserasjonstid. 12 md. flaskelagring, 6 md. flaskemodning.",
+  "navn": "El Coto Crianza 2022",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "El Coto de Rioja",
+  "smak": "Litt utviklet preg av modne røde bær og litt tørket frukt, innslag av urter, vanilje og fat.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "url": "/Land/Spania/Rioja/El-Coto-Crianza-2022/p/3455201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3455201",
+  "volum": 75,
+  "årgang": "2022"
+}

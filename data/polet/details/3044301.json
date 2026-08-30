@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "3044301",
+  "distrikt": "Sicilia",
+  "druer": "Frappato 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 239.87,
+  "lukt": "Fruktig, ferskt og litt undermodent preg av rips, bringebær og grønn urt, litt kamfer og roser.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert.",
+  "navn": "Santa Tresa Rina Russa Frappato 2025",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Santa Tresa",
+  "smak": "Saftig, nyansert og middels fast, preg av rips, bringebær, litt nype, bladverk og grønne urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/Santa-Tresa-Rina-Russa-Frappato-2025/p/3044301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3044301",
+  "volum": 75,
+  "årgang": "2025"
+}

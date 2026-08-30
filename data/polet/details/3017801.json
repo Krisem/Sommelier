@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "3017801",
+  "distrikt": "South E. Australia",
+  "druer": "Cabernet Sauvignon 24 prosent, Shiraz 76 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Australia, South E. Australia",
+  "literpris": 206.27,
+  "lukt": "Tydelig aroma av fullmodne mørke bær, litt eukalyptus og lær, innslag av oliven, anis og rosmarin.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Temperaturkontrollert gjæring. Lagret 10 md på gamle fat.",
+  "navn": "Penfolds Koonunga Hill Shiraz Cabernet 2024",
+  "parser": "json",
+  "pris": 154.7,
+  "produsent": "Penfolds",
+  "smak": "Saftig og ungdommelig med god fylde, preg av sødmerike mørke bær, krydder, litt sjokolade og fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Australia/South-E-Australia/Penfolds-Koonunga-Hill-Shiraz-Cabernet-2024/p/3017801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3017801",
+  "volum": 75,
+  "årgang": "2024"
+}

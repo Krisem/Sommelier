@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20593401",
+  "distrikt": "Coastal Region",
+  "druer": "Shiraz 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Sør-Afrika, Coastal Region, Voor-Paardeberg",
+  "literpris": 266.53,
+  "lukt": "Ung og litt krydret aroma av modne mørke bær, blå plommer, litt urt, kamfer, pepper og fiol.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Spontanfermentert/naturlig gjæring. Lagret på 3. og 4. gangs brukte franske eikefat.",
+  "navn": "Wild Bouquet Erica Reserve Shiraz 2024",
+  "parser": "json",
+  "pris": 199.9,
+  "produsent": "The Grape Grinder",
+  "smak": "Litt balsamisk og pepret preg av modne mørke skogsbær, krekling og svale urter, litt fat og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "4,9 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Voor-Paardeberg",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Voor-Paardeberg/Wild-Bouquet-Erica-Reserve-Shiraz-2024/p/20593401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "20593401",
+  "volum": 75,
+  "årgang": "2024"
+}

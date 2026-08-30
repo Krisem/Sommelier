@@ -1,0 +1,40 @@
+{
+  "alkohol": "12%",
+  "code": "2941101",
+  "distrikt": "Beira Atlântico",
+  "druer": "Baga 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Beira Atlântico, Bairrada",
+  "literpris": 519.87,
+  "lukt": "Ørlite utviklet aroma av morell, jordbær og syltede røde bær, litt tørket urt, krydder og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "94 år gml. vinstokker. 4 ukers gjæring i åpne lagares og ståltank, karbonisk maserasjon, malolaktisk gjæring i 20 md. på 2500 l fat. Ufiltrert.",
+  "navn": "Niepoort Poeirinho Baga 2022",
+  "parser": "json",
+  "pris": 389.9,
+  "produsent": "Niepoort",
+  "smak": "Fast og saftig, middels fylde, toner av jordbær, tyttebær og morell, litt tørket frukt, urt og fat.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Bairrada",
+  "url": "/Land/Portugal/Beira-Atl%C3%A2ntico/Bairrada/Niepoort-Poeirinho-Baga-2022/p/2941101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2941101",
+  "volum": 75,
+  "årgang": "2022"
+}

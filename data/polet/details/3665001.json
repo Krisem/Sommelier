@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "3665001",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Colline Novaresi",
+  "literpris": 199.87,
+  "lukt": "Nyansert aroma av modne røde bær, litt syltet frukt, nype, roser og hint av kamfer og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Naturgjæret. Gjæret og lagret på ståltank.",
+  "navn": "Ioppa Colline Novaresi Nebbiolo 2023",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Ioppa",
+  "smak": "Fast, saftig og nyansert, preg av modne røde bær, litt kirsebær, kamfer og svale urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Colline Novaresi",
+  "url": "/Land/Italia/Piemonte/Colline-Novaresi/Ioppa-Colline-Novaresi-Nebbiolo-2023/p/3665001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "3665001",
+  "volum": 75,
+  "årgang": "2023"
+}

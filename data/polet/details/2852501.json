@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "2852501",
+  "distrikt": "Veneto",
+  "druer": "Corvinone 30 prosent, Corvina 40 prosent, Rondinella 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med hint av brunt.",
+  "fetched_at": "2026-08-30T05:05:36.841399+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 439.87,
+  "lukt": "Litt utviklet, preg av røde og mørke bær, innslag av tørket frukt, svale urter, fat og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tørking av druene, lang maserasjonn, langsom gjæring, 18 md. på eikefat og 10 md. på flaske.",
+  "navn": "Ca'Vendri Amarone della Valpolicella 2023",
+  "parser": "json",
+  "pris": 329.9,
+  "produsent": "Le Ville di Antane",
+  "smak": "Fyldig preg av modne bær og tørket frukt, innslag av fat, sjokolade, litt sødme, krydder og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "8 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Ca%27Vendri-Amarone-della-Valpolicella-2023/p/2852501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "2852501",
+  "volum": 75,
+  "årgang": "2023"
+}
