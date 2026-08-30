@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "20312501",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne Hautes-Côtes de Nuits",
+  "literpris": 1465.33,
+  "lukt": "Mørke bær og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "navn": "Sylvain Cathiard Bourgogne Hautes Cotes de Nuits Rouge 2022",
+  "parser": "json",
+  "pris": 1099,
+  "produsent": "Sylvain Cathiard",
+  "smak": "Dyp, rød frukt. Lang, krydret avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Bourgogne Hautes-Côtes de Nuits",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Hautes-C%C3%B4tes-de-Nuits/Sylvain-Cathiard-Bourgogne-Hautes-Cotes-de-Nuits-Rouge-2022/p/20312501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20312501",
+  "volum": 75,
+  "årgang": "2022"
+}

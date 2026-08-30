@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "4514002",
+  "distrikt": "Rhône",
+  "druer": "Grenache 60 prosent, Shiraz 20 prosent, Cinsault 5 prosent, Mourvèdre 10 prosent, Counoise 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 613.07,
+  "lukt": "Aroma med fruktig og krydret preg av modne mørke og røde bær, litt tørket frukt, lakris, urt og fat.",
+  "matparring": [
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Avstilking før tradisjonell vinifikasjon i 2-3 uker og 12-20 mnd. lagring i fat og eikeliggere.",
+  "navn": "Dom. du Vieux Lazaret Châteauneuf-du-Pape",
+  "parser": "json",
+  "pris": 229.9,
+  "produsent": "Vign. Jérôme Quiot",
+  "smak": "Fyldig og krydret, preg av røde og mørke bær, litt tørket frukt, svale urter og fat, hint av pepper.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Dom-du-Vieux-Lazaret-Ch%C3%A2teauneuf-du-Pape/p/4514002",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "4514002",
+  "volum": 37.5,
+  "årgang": "2023"
+}

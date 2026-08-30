@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "20032807",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 651.8,
+  "lukt": "Utviklet og nyansert, preg av modne røde bær, nype og rosin, litt tørket urt, lær, sedertre og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Col d'Orcia Brunello di Montalcino 2020",
+  "parser": "json",
+  "pris": 3259,
+  "produsent": "Col d'Orcia",
+  "smak": "Fast og litt utviklet, preg av røde bær, tørket frukt, fat og krydder, litt te og tobakk. Lang.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Col-d%27Orcia-Brunello-di-Montalcino-2020/p/20032807",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20032807",
+  "volum": 500,
+  "årgang": "2020"
+}

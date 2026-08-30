@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19980901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Givry",
+  "literpris": 844.8,
+  "lukt": "Duft av bringebær, rips, moreller, blomster og tre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Joblot Givry Rouge 1er Cru Servoisine",
+  "parser": "json",
+  "pris": 633.6,
+  "produsent": "Joblot",
+  "smak": "Smak av bringebær, rips, moreller, kirsebærstein og pepper. Lang mineralsk ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,7 g/l",
+  "underdistrikt": "Givry",
+  "url": "/Land/Frankrike/Burgund/Givry/Joblot-Givry-Rouge-1er-Cru-Servoisine/p/19980901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19980901",
+  "volum": 75,
+  "årgang": "2023"
+}

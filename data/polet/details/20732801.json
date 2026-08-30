@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20732801",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin",
+  "literpris": 1132.13,
+  "lukt": "Duft av bringebær, rips, moreller, mørke bær, fiol og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Forey Gevry-Chambertin La Justice",
+  "parser": "json",
+  "pris": 849.1,
+  "produsent": "Dom. Forey",
+  "smak": "Smak av bringebær, rips, moreller, kirsebærstein og krydder. Lang, mineralsk avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,8 g/l",
+  "underdistrikt": "Gevrey-Chambertin",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin/Forey-Gevry-Chambertin-La-Justice/p/20732801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20732801",
+  "volum": 75,
+  "årgang": "2023"
+}

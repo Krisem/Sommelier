@@ -1,0 +1,38 @@
+{
+  "alkohol": "15%",
+  "code": "20376605",
+  "distrikt": "Veneto",
+  "druer": "Corvina 70 prosent, Croatina 10 prosent, Rondinella 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 11,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Veneto, Valpolicella",
+  "literpris": 1933.33,
+  "lukt": "Moreller, jordbær, vanilje og plommer. Mineralsk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Dal Forno Romano Valpolicella Superiore",
+  "parser": "json",
+  "pris": 2900,
+  "produsent": "Dal forno Romano",
+  "smak": "Tørr og frisk, intens fyldighet med saftige tanniner.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3,2 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Valpolicella",
+  "url": "/Land/Italia/Veneto/Valpolicella/Dal-Forno-Romano-Valpolicella-Superiore/p/20376605",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20376605",
+  "volum": 150
+}

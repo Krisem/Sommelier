@@ -1,0 +1,37 @@
+{
+  "alkohol": "11%",
+  "code": "19824501",
+  "druer": "Cinsault 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rubinrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike",
+  "literpris": 440,
+  "lukt": "Frisk aroma av rød frukt, steinfrukt og blomster. Jordlig og mineraler.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "navn": "Vincent Ruiz À L'Ami Faust Cinsault 2023",
+  "parser": "json",
+  "pris": 330,
+  "produsent": "Dom. du Gringet",
+  "smak": "Fruktig. Lette tanniner, krydder og salin mineralitet. Frisk avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Frankrike/Vincent-Ruiz-%C3%80-L%27Ami-Faust-Cinsault-2023/p/19824501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19824501",
+  "volum": 75,
+  "årgang": "2023"
+}

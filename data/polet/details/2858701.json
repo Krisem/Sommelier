@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "2858701",
+  "distrikt": "Toscana",
+  "druer": "Merlot 40 prosent, Cabernet Sauvignon 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk plommerød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Bolgheri",
+  "literpris": 773.2,
+  "lukt": "Konsentrert frukt av plommer urter og solbær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Høstet for hånd og gjæret under temperaturkontroll. 15 dagers maserasjonstid og lagret 15 md. på barrique og 3 md. på fat.",
+  "navn": "Ten. San Guido Guidalberto 2022",
+  "parser": "json",
+  "pris": 579.9,
+  "produsent": "Ten. San Guido",
+  "smak": "Moden frukt med solbær og plommer. Balansert med modne tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Bolgheri",
+  "url": "/Land/Italia/Toscana/Bolgheri/Ten-San-Guido-Guidalberto-2022/p/2858701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "2858701",
+  "volum": 75,
+  "årgang": "2022"
+}

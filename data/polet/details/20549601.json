@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20549601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 52 prosent, Merlot 48 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Margaux",
+  "literpris": 719.6,
+  "lukt": "Mørke bær og frukter, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Blason d'Issan 2016",
+  "parser": "json",
+  "pris": 539.7,
+  "produsent": "Ch. d'Issan",
+  "smak": "Struktur og konsentrasjon, noe utviklet med lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Margaux",
+  "url": "/Land/Frankrike/Bordeaux/Margaux/Blason-d%27Issan-2016/p/20549601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20549601",
+  "volum": 75,
+  "årgang": "2016"
+}

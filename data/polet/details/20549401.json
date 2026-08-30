@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20549401",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 9 prosent, Cabernet Sauvignon 62 prosent, Merlot 27 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 1255.47,
+  "lukt": "Mørke frukter og bær, tobakk, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. d'Armailhac 2019",
+  "parser": "json",
+  "pris": 941.6,
+  "produsent": "Ch. D'Armailhac",
+  "smak": "Mørke bær, konsentrasjon, lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-d%27Armailhac-2019/p/20549401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20549401",
+  "volum": 75,
+  "årgang": "2019"
+}

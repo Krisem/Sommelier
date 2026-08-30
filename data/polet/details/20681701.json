@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,2%",
+  "code": "20681701",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sonoma Coast",
+  "literpris": 1198.67,
+  "lukt": "Aroma av røde bær, urter og krydder, overtoner av blomst.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Littorai Sonoma Coast Pinot Noir 2024",
+  "parser": "json",
+  "pris": 899,
+  "produsent": "Littorai",
+  "smak": "Ung og saftig, preg av mørke og røde bær og urter, innslag av fat, lang avslutning.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Sonoma Coast",
+  "url": "/Land/USA/California/Sonoma-Coast/Littorai-Sonoma-Coast-Pinot-Noir-2024/p/20681701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20681701",
+  "volum": 75,
+  "årgang": "2024"
+}

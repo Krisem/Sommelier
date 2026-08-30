@@ -1,0 +1,38 @@
+{
+  "alkohol": "16,5%",
+  "code": "20376505",
+  "distrikt": "Veneto",
+  "druer": "Corvina 60 prosent, Croatina 10 prosent, Rondinella 20 prosent, Oseleta 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 11,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 5266.67,
+  "lukt": "Kirsebær, morell, plomme og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Dal Forno Romano Amarone della Valpolicella",
+  "parser": "json",
+  "pris": 7900,
+  "produsent": "Dal forno Romano",
+  "smak": "Modne tanniner, fyldig og intens rød frukt i ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "6,1 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Dal-Forno-Romano-Amarone-della-Valpolicella/p/20376505",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20376505",
+  "volum": 150
+}

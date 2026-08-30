@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "7620905",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Côte de Brouilly",
+  "literpris": 726.6,
+  "lukt": "Aroma av kirsebær og plommer.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Ch. Thivin Cuvée Zaccharie Côte de Brouilly 2024",
+  "parser": "json",
+  "pris": 1089.9,
+  "produsent": "Ch. Thivin",
+  "smak": "Fyldig og strukturert.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Côte de Brouilly",
+  "url": "/Land/Frankrike/Burgund/C%C3%B4te-de-Brouilly/Ch-Thivin-Cuv%C3%A9e-Zaccharie-C%C3%B4te-de-Brouilly-2024/p/7620905",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "7620905",
+  "volum": 150,
+  "årgang": "2024"
+}

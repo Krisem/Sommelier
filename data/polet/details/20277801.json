@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "20277801",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Pomerol",
+  "literpris": 43866.67,
+  "lukt": "Aroma av mørke bær, sedertre og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Le Pin 2022",
+  "parser": "json",
+  "pris": 32900,
+  "produsent": "Ch. Le Pin",
+  "smak": "Konsentrert frukt, strukturert med lenge.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pomerol",
+  "url": "/Land/Frankrike/Bordeaux/Pomerol/Ch-Le-Pin-2022/p/20277801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20277801",
+  "volum": 75,
+  "årgang": "2022"
+}

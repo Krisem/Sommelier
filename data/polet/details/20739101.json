@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "20739101",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 20 prosent, Cabernet Sauvignon 20 prosent, Merlot 70 prosent",
+  "emballasje": "Glass",
+  "farge": "Mursteinsrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Puisseguin-St. Emilion",
+  "literpris": 1301.07,
+  "lukt": "Sedertre, tobakk, mørke bær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Beausejour 1966",
+  "parser": "json",
+  "pris": 975.8,
+  "produsent": "Ch. Beausejour",
+  "smak": "Utviklet, konsentrert, mørke bær.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Puisseguin-St. Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Puisseguin-St-Emilion/Ch-Beausejour-1966/p/20739101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20739101",
+  "volum": 75,
+  "årgang": "1966"
+}

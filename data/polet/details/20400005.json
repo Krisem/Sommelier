@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "20400005",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød, noe fiolett.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Crozes-Hermitage",
+  "literpris": 466.6,
+  "lukt": "Pepper og hengt kjøtt med friske toner.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Manuell innhøstning, spontan gjæring, avstilkning, lagres 70% i betong, 30% i fat i 8-10 mnd.",
+  "navn": "Combier Crozes-Hermitage Cuveé Laurent Combier 2023",
+  "parser": "json",
+  "pris": 699.9,
+  "produsent": "Laurent Combier",
+  "smak": "Rund i anslag med frukt og moderat tannin, balansert.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Crozes-Hermitage",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Crozes-Hermitage/Combier-Crozes-Hermitage-Cuve%C3%A9-Laurent-Combier-2023/p/20400005",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20400005",
+  "volum": 150,
+  "årgang": "2023"
+}

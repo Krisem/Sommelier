@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "5355101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Échézeaux",
+  "literpris": 3263.6,
+  "lukt": "Mørke bær og frukter, anis, skogbunn, krydder og ristet brød.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Seguin-Manuel Echézeaux Grand Cru 2019",
+  "parser": "json",
+  "pris": 2447.7,
+  "produsent": "Dom. Seguin-Manuel",
+  "smak": "Balansert med god struktur og lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,0 g/l",
+  "underdistrikt": "Échézeaux",
+  "url": "/Land/Frankrike/Burgund/%C3%89ch%C3%A9zeaux/Seguin-Manuel-Ech%C3%A9zeaux-Grand-Cru-2019/p/5355101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "5355101",
+  "volum": 75,
+  "årgang": "2019"
+}

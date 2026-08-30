@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20422901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Klar rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Nuits-Saint-Georges Premier Cru",
+  "literpris": 1999.87,
+  "lukt": "Aroma av røde bær, krydret med noe fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Lucien le Moine Nuits-Saint-Georges 1er Cru Les Vaucrains 2023",
+  "parser": "json",
+  "pris": 1499.9,
+  "produsent": "Lucien le Moine",
+  "smak": "Middels fyldig, lett krydret.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,0 g/l",
+  "underdistrikt": "Nuits-Saint-Georges Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Nuits-Saint-Georges-Premier-Cru/Lucien-le-Moine-Nuits-Saint-Georges-1er-Cru-Les-Vaucrains-2023/p/20422901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20422901",
+  "volum": 75,
+  "årgang": "2023"
+}

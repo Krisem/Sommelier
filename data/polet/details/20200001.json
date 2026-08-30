@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20200001",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Morey-Saint-Denis Premier Cru",
+  "literpris": 2126.53,
+  "lukt": "Duft av bringebær, rips, moreller, fiol og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Lamarche Morey-Saint-Denis Rouge 1er Cru Monts Luissants",
+  "parser": "json",
+  "pris": 1594.9,
+  "produsent": "Dom. Lamarche",
+  "smak": "Smak av bringebær, rips, moreller, kirsebærstein og krydder. Lang, mineralsk avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,8 g/l",
+  "underdistrikt": "Morey-Saint-Denis Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Morey-Saint-Denis-Premier-Cru/Lamarche-Morey-Saint-Denis-Rouge-1er-Cru-Monts-Luissants/p/20200001",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20200001",
+  "volum": 75,
+  "årgang": "2023"
+}

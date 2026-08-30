@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "19748401",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 10 prosent, Merlot 90 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion",
+  "literpris": 1449.6,
+  "lukt": "Mørke bær og moden frukt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Ch. Belair 2000",
+  "parser": "json",
+  "pris": 1087.2,
+  "produsent": "Ch. Bélair-Monange",
+  "smak": "Fyldig og lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,9 g/l",
+  "underdistrikt": "Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion/Ch-Belair-2000/p/19748401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19748401",
+  "volum": 75,
+  "årgang": "2000"
+}

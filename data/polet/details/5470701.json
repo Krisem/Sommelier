@@ -1,0 +1,40 @@
+{
+  "alkohol": "16,5%",
+  "code": "5470701",
+  "distrikt": "Veneto",
+  "druer": "Oseleta 10 prosent, Croatina 10 prosent, Rondinella 20 prosent, Corvina 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Intens rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 11,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 4266.67,
+  "lukt": "Kirsebær, morell, plomme og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "metode": "Manuell innhøsting, 3 uker med tørking ved temperaturkontrollert. 18 mnd i fransk fat.",
+  "navn": "Dal forno Romano Amarone della Valpolicella 2015",
+  "parser": "json",
+  "pris": 3200,
+  "produsent": "Dal forno Romano",
+  "smak": "Modne tanniner, fyldig og intens rød frukt i ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "6,1 g/l",
+  "syre": "6,4 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Dal-forno-Romano-Amarone-della-Valpolicella-2015/p/5470701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "5470701",
+  "volum": 75,
+  "årgang": "2015"
+}

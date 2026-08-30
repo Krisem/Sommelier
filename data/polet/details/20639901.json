@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20639901",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 12 prosent, Merlot 81 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion Grand Cru",
+  "literpris": 734.67,
+  "lukt": "Sedertre, tobakk, utviklet.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Trianon 2010",
+  "parser": "json",
+  "pris": 551,
+  "produsent": "Ch. Trianon",
+  "smak": "Mørke bær, konsentrasjon, god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Saint-Emilion Grand Cru",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion-Grand-Cru/Ch-Trianon-2010/p/20639901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20639901",
+  "volum": 75,
+  "årgang": "2010"
+}

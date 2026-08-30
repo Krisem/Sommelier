@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20569601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Volnay",
+  "literpris": 1465.33,
+  "lukt": "Røde bær og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "Jean-Marc Bouley Volnay 2019",
+  "parser": "json",
+  "pris": 1099,
+  "produsent": "Jean-Marc Bouley",
+  "smak": "Fyldig, røde bær med konsentrert, mineralsk avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Volnay",
+  "url": "/Land/Frankrike/Burgund/Volnay/Jean-Marc-Bouley-Volnay-2019/p/20569601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20569601",
+  "volum": 75,
+  "årgang": "2019"
+}

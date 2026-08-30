@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "4594301",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Crozes-Hermitage",
+  "literpris": 587.6,
+  "lukt": "Mørke bær, urter, pepper og florale toner.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Yann Chave Crozes-Hermitage 2017",
+  "parser": "json",
+  "pris": 440.7,
+  "produsent": "Yann Chave",
+  "smak": "Elegant med frukt og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Crozes-Hermitage",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Crozes-Hermitage/Yann-Chave-Crozes-Hermitage-2017/p/4594301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "4594301",
+  "volum": 75,
+  "årgang": "2017"
+}

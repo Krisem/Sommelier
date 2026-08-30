@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "5756901",
+  "distrikt": "California",
+  "druer": "Zinfandel 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Rockpile",
+  "literpris": 853.2,
+  "lukt": "Sval og litt krydret aroma av mørke bær med innslag av tørket frukt, litt lær, kamfer, fat og urt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Håndplukket, gjæret i store åpne ståltanker. 11 md lagring i 30% nye eikefat (75% amerikansk eik, 25% fransk eik).",
+  "navn": "Seghesio Rockpile Zinfandel 2021",
+  "parser": "json",
+  "pris": 639.9,
+  "produsent": "Seghesio Family Vineyards",
+  "smak": "Litt utviklet, fast og fyldig med preg av mørke bær, innslag av rosin, fat, krydder og tørket urt.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,1 g/l",
+  "syre": "6 g/l",
+  "underdistrikt": "Rockpile",
+  "url": "/Land/USA/California/Rockpile/Seghesio-Rockpile-Zinfandel-2021/p/5756901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "5756901",
+  "volum": 75,
+  "årgang": "2021"
+}

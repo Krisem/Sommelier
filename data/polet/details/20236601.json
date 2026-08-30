@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20236601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 20 prosent, Cabernet Sauvignon 20 prosent, Merlot 60 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Montagne Saint-Emilion",
+  "literpris": 388,
+  "lukt": "Aroma av mørke bær, jordtoner, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Messile-Aubert 2016",
+  "parser": "json",
+  "pris": 291,
+  "produsent": "Vignobles Aubert",
+  "smak": "Preg av mørke bær, strukturert og lang.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Montagne Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Montagne-Saint-Emilion/Ch-Messile-Aubert-2016/p/20236601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20236601",
+  "volum": 75,
+  "årgang": "2016"
+}

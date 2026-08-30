@@ -110,6 +110,40 @@ Praktiske følger:
 
 **Fasett-koder feiler stille.** `facets[]` i søkesvaret er alltid tomt, så du kan ikke oppdage gyldige koder — du må probe. En ugyldig kode blir *ignorert*, ikke avvist, så queryen returnerer hele katalogen mens du tror den filtrerte. Kontrollen er å sammenligne `totalResults` mot det ufiltrerte tallet: er de like, filtrerer ikke fasetten din. For rødvin er kun `Fylde`, `Friskhet` og `Tannin(Sulfates)` gyldige — `Garvestoffer` er navnet i produktsidens JSON, ikke i søke-fasettene.
 
+## Stort datasett INN i en CSP-låst side (uten å betale i kontekst)
+
+Skal du drive et sveip fra en arbeidsliste (f.eks. 1 153 kode/URL-par, 140 KB), må lista inn i
+sidekonteksten for å kunne `fetch`-es same-origin. To åpenbare veier feiler:
+
+- **Lime lista inn som `browser_evaluate`-argument** — virker, men koster ~60 000 tokens kontekst.
+- **Lokal HTTP-server med `Access-Control-Allow-Origin: *`** — nås ikke. Vinmonopolets
+  `connect-src 'self' https://ingest.skyra.no/ …` blokkerer den. **Feilen er CSP, ikke CORS**, den
+  logges kun i konsollen, og `fetch` kaster et intetsigende `TypeError: Failed to fetch`.
+
+**Løsningen:** `page.request` kjører i Playwrights Node-prosess og er derfor *ikke* bundet av sidens
+CSP. HTTP-hoppet gjøres av Node, ikke av siden:
+
+```js
+// browser_run_code_unsafe
+async (page) => {
+  const resp = await page.request.get('http://127.0.0.1:8899/fase4_work.json');
+  const work = await resp.json();
+  return await page.evaluate((w) => {        // 2. argument leveres inn i sidekonteksten
+    window.__work = w.map(x => [x.code, x.url]);
+    return {n: window.__work.length};
+  }, work);
+}
+```
+
+Server: `python3 -m http.server`-variant som setter CORS-headeren (et 8-linjers script holder).
+**`require` og `await import('node:fs')` virker IKKE** i den konteksten — `fs` er utilgjengelig, så
+fila må gå via HTTP selv om den ligger lokalt.
+
+Generell regel: **stort datasett inn i CSP-låst side = `page.request.get()` + `page.evaluate(fn, data)`.**
+Kontekstkostnad: null. Samme mønster gjelder motsatt vei — bruk `filename`-parameteren på
+`browser_evaluate` for å få store payloads UT uten å fylle konteksten. Merk at `filename` skriver til
+Claude Code-arbeidsmappa, ikke til scratchpad; flytt filene fortløpende.
+
 ## Butikk-spesifikt live-oppslag (øl, og «har butikk X varen?»)
 
 Snapshotet er vin-only og har **bevisst ikke** butikk-lager (ADR-020) — lager er

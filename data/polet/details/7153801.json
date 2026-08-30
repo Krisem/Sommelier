@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "7153801",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 50 prosent, Merlot 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana",
+  "literpris": 1732.53,
+  "lukt": "Aroma av bjørnebær, tobakk og kirsebær, hint av urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "18 md. i små franske eikefat (70% nye) deretter blandes de i 4 md. i sementtanker.",
+  "navn": "Castello di Fonterutoli Siepi",
+  "parser": "json",
+  "pris": 1299.4,
+  "produsent": "March. Mazzei",
+  "smak": "Mørke bær og plomme, konsentrert med bløte tanniner og myk avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Italia/Toscana/Castello-di-Fonterutoli-Siepi/p/7153801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "7153801",
+  "volum": 75,
+  "årgang": "2023"
+}

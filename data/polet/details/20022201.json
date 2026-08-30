@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20022201",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 60 prosent, Merlot 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, St. Estèphe",
+  "literpris": 520.27,
+  "lukt": "Aroma av mørke bær og frukt og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. St-Estéphe 2022",
+  "parser": "json",
+  "pris": 390.2,
+  "produsent": "Vignobles Arnaud",
+  "smak": "Konsentrert, fyldig, balansert og lang.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "St. Estèphe",
+  "url": "/Land/Frankrike/Bordeaux/St-Est%C3%A8phe/Ch-St-Est%C3%A9phe-2022/p/20022201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20022201",
+  "volum": 75,
+  "årgang": "2022"
+}

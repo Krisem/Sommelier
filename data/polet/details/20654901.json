@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20654901",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 5 prosent, Cabernet Sauvignon 50 prosent, Merlot 40 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rubinrød, fiolett skjær.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 733.33,
+  "lukt": "Mørke kirsebær, bjørnebær, solbær, søt tobakk, mint, lær og krydret vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Carbonnieux",
+  "parser": "json",
+  "pris": 550,
+  "produsent": "Ch. Carbonnieux",
+  "smak": "Mørke og røde bær, tobakk, sedertre, vanilje, lær, mørk sjokolade, tertiæraromaer, lang avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Carbonnieux/p/20654901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20654901",
+  "volum": 75,
+  "årgang": "2020"
+}

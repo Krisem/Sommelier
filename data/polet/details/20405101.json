@@ -1,0 +1,37 @@
+{
+  "alkohol": "13,5%",
+  "code": "20405101",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 42 prosent, Cabernet Sauvignon 31 prosent, Merlot 27 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødlilla.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 2826.4,
+  "lukt": "Mørke bær, tobakk og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Les Carmes Haut-Brion 2019",
+  "parser": "json",
+  "pris": 2119.8,
+  "produsent": "Ch. les Carmes Haut Brion",
+  "smak": "Konsentrert med fylde, god lengde.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Les-Carmes-Haut-Brion-2019/p/20405101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20405101",
+  "volum": 75,
+  "årgang": "2019"
+}

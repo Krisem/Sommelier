@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20888701",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 6 prosent, Cabernet Sauvignon 55 prosent, Merlot 34 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 876.8,
+  "lukt": "Mørke bær og frukter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Gloria",
+  "parser": "json",
+  "pris": 657.6,
+  "produsent": "Ch. Gloria",
+  "smak": "Konsentrert, mørke bær, god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Gloria/p/20888701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20888701",
+  "volum": 75,
+  "årgang": "2019"
+}

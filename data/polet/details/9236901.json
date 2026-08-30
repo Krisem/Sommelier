@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "9236901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Grande Rue (La)",
+  "literpris": 4416.67,
+  "lukt": "Duft av bringebær, skogsbær, moreller, fiol, underskog og treverk.",
+  "matparring": [
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Lamarche Grand Cru La Grande Rue 2011",
+  "parser": "json",
+  "pris": 3312.5,
+  "produsent": "Dom. François Lamarche",
+  "smak": "Smak av røde bær, stenfrukt, moreller. Strukturert med lang smak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Grande Rue (La)",
+  "url": "/Land/Frankrike/Burgund/Grande-Rue-%28La%29/Lamarche-Grand-Cru-La-Grande-Rue-2011/p/9236901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "9236901",
+  "volum": 75,
+  "årgang": "2011"
+}

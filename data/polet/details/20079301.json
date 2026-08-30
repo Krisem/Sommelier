@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,1%",
+  "code": "20079301",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Russian River Valley",
+  "literpris": 1173.2,
+  "lukt": "Floral, krydret, røde bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "DuMol Wester Reach Pinot Noir 2023",
+  "parser": "json",
+  "pris": 879.9,
+  "produsent": "DuMOL Winery",
+  "smak": "Tørr med tanniner, balansert syre og frisk fruktighet med innslag av krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Russian River Valley",
+  "url": "/Land/USA/California/Russian-River-Valley/DuMol-Wester-Reach-Pinot-Noir-2023/p/20079301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20079301",
+  "volum": 75,
+  "årgang": "2023"
+}

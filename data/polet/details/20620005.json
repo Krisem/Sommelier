@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,7%",
+  "code": "20620005",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sonoma Coast",
+  "literpris": 1999.93,
+  "lukt": "Aroma av røde bær, fiol og bringebær.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Hirsch East Ridge Pinot Noir 2023",
+  "parser": "json",
+  "pris": 2999.9,
+  "produsent": "Hirsch Vineyards",
+  "smak": "Preg av kirsebær, blomster og mineraler.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Sonoma Coast",
+  "url": "/Land/USA/California/Sonoma-Coast/Hirsch-East-Ridge-Pinot-Noir-2023/p/20620005",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20620005",
+  "volum": 150,
+  "årgang": "2023"
+}

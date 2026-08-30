@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20709301",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød, klar.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 6,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Rosso di Montalcino",
+  "literpris": 666.53,
+  "lukt": "Aroma av granateple, tørkede urter, bringebær og balsamico.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Pieve Santa Restituta Rosso di Montalcino 2024",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Pieve Santa Restituta",
+  "smak": "Frisk, preg av rød kirsebærfrukt, integrerte tanniner, lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,2 g/l",
+  "underdistrikt": "Rosso di Montalcino",
+  "url": "/Land/Italia/Toscana/Rosso-di-Montalcino/Pieve-Santa-Restituta-Rosso-di-Montalcino-2024/p/20709301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20709301",
+  "volum": 75,
+  "årgang": "2024"
+}

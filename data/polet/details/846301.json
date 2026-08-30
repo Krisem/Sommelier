@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "846301",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Napa Valley",
+  "literpris": 4666.67,
+  "lukt": "Duft av tobakk, lær, vanilla og sjokolade.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Stag's Leap Cask 23 Cabernet Sauvignon 2019",
+  "parser": "json",
+  "pris": 3500,
+  "produsent": "Stag's Leap Wine Cellars",
+  "smak": "Tørr med saftig tanniner, lang krydder ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Napa Valley",
+  "url": "/Land/USA/California/Napa-Valley/Stag%27s-Leap-Cask-23-Cabernet-Sauvignon-2019/p/846301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "846301",
+  "volum": 75,
+  "årgang": "2019"
+}

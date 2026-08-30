@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "20772001",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1465.33,
+  "lukt": "Krydret aroma av røde bær og nøtter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "E. Pira di Chiara Boschis Barolo Mosconi 2016",
+  "parser": "json",
+  "pris": 1099,
+  "produsent": "E. Pira & Figli",
+  "smak": "Roseblader og kirsebær med frisk syre og jevne tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/E-Pira-di-Chiara-Boschis-Barolo-Mosconi-2016/p/20772001",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20772001",
+  "volum": 75,
+  "årgang": "2016"
+}

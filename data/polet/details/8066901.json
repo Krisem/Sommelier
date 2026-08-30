@@ -1,0 +1,37 @@
+{
+  "alkohol": "13,5%",
+  "code": "8066901",
+  "distrikt": "Oregon",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, Oregon, Willamette valley",
+  "literpris": 1421.33,
+  "lukt": "Utviklede aromaer av røde bær, modne frukter, skogbunn, urter og florale toner.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Eyrie Vineyards Pinot Noir 2009",
+  "parser": "json",
+  "pris": 1066,
+  "produsent": "Eyrie Vineyards",
+  "smak": "God frukt, høy konsentrasjon og lang ettersmak.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Willamette valley",
+  "url": "/Land/USA/Oregon/Willamette-valley/Eyrie-Vineyards-Pinot-Noir-2009/p/8066901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "8066901",
+  "volum": 75,
+  "årgang": "2009"
+}

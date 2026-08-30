@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "8071101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Pommard",
+  "literpris": 683.07,
+  "lukt": "Duft av mørke og røde bær, steinfrukt og fiol.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Latour-Giraud Cuvée Carmen Pommard",
+  "parser": "json",
+  "pris": 512.3,
+  "produsent": "Dom. Latour-Giraud",
+  "smak": "Frisk og saftig med smak av røde og mørke bær. Lang med myke tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Pommard",
+  "url": "/Land/Frankrike/Burgund/Pommard/Latour-Giraud-Cuv%C3%A9e-Carmen-Pommard/p/8071101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "8071101",
+  "volum": 75,
+  "årgang": "2018"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "20549501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 6 prosent, Cabernet Sauvignon 65 prosent, Merlot 27 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Rødbrun.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 3239.6,
+  "lukt": "Sedertre, tobakk, utviklet.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Gruaud Larose 1989",
+  "parser": "json",
+  "pris": 2429.7,
+  "produsent": "Ch. Gruaud Larose",
+  "smak": "Utviklet, mørk frukt, god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Gruaud-Larose-1989/p/20549501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20549501",
+  "volum": 75,
+  "årgang": "1989"
+}

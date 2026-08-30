@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20199901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Givry",
+  "literpris": 830.4,
+  "lukt": "Duft av bringebær, moreller, mørke bær, blomster og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Lumpp Givry 1er Cru La Brûlée",
+  "parser": "json",
+  "pris": 622.8,
+  "produsent": "Lumpp",
+  "smak": "Smak av bringebær, morell, kirsebærstein og krydder. Lang, mineralsk avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,8 g/l",
+  "underdistrikt": "Givry",
+  "url": "/Land/Frankrike/Burgund/Givry/Lumpp-Givry-1er-Cru-La-Br%C3%BBl%C3%A9e/p/20199901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20199901",
+  "volum": 75,
+  "årgang": "2023"
+}

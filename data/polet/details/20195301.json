@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "20195301",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød, lillaskjær.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin Premier Cru",
+  "literpris": 1720.8,
+  "lukt": "Ferskt bærpreg, fruktdrevet, hint av mineral, krydder og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "metode": "Vinstokker fra 1922. 16-18 md lagring. Max 30% nye eikefat. Naturlig gjær. Ufiltrert.",
+  "navn": "Dom. Lucien Boillot Gevrey-Chambertin 1er Cru Les Cherbaudes 2023",
+  "parser": "json",
+  "pris": 1290.6,
+  "produsent": "Lucien Boillot",
+  "smak": "Preg av modne bringebær og krydder, lang ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Gevrey-Chambertin Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin-Premier-Cru/Dom-Lucien-Boillot-Gevrey-Chambertin-1er-Cru-Les-Cherbaudes-2023/p/20195301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20195301",
+  "volum": 75,
+  "årgang": "2023"
+}

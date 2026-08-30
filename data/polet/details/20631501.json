@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20631501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 2 prosent, Cabernet Sauvignon 57 prosent, Merlot 41 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 1066.67,
+  "lukt": "Mørke og røde bær, tobakk, sedertre, mynte og lakris, hint av mørk sjokolade.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Langoa Barton",
+  "parser": "json",
+  "pris": 800,
+  "produsent": "Ch. Langoa-Barton",
+  "smak": "Mørke og røde bær, tobakk, sedertre, vanilje, lær og mørk sjokolade, lang avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Langoa-Barton/p/20631501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20631501",
+  "volum": 75,
+  "årgang": "2022"
+}

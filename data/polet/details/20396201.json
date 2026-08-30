@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20396201",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin",
+  "literpris": 2932,
+  "lukt": "Krydret aroma av rød frukt og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "navn": "Dom. Fourrier Gevrey-Chambertin Aux Echezeaux Vielles Vignes 2023",
+  "parser": "json",
+  "pris": 2199,
+  "produsent": "Dom. Fourrier",
+  "smak": "Fyldig og frisk med lang, parfymert avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Gevrey-Chambertin",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin/Dom-Fourrier-Gevrey-Chambertin-Aux-Echezeaux-Vielles-Vignes-2023/p/20396201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20396201",
+  "volum": 75,
+  "årgang": "2023"
+}

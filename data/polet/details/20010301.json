@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20010301",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 94 prosent, Merlot 6 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 14816.67,
+  "lukt": "Aroma av mørke bær og frukt, krydder og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Mouton Rothschild 2010",
+  "parser": "json",
+  "pris": 11112.5,
+  "produsent": "Ch. Mouton Rothschild",
+  "smak": "Konsentrert og fyldig, balansert med lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Mouton-Rothschild-2010/p/20010301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20010301",
+  "volum": 75,
+  "årgang": "2010"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20235301",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 66 prosent, Merlot 29 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 1323.6,
+  "lukt": "Aroma av mørke bær, tobakk og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Talbot 2018",
+  "parser": "json",
+  "pris": 992.7,
+  "produsent": "Ch. Talbot",
+  "smak": "Konsentrert og fyldig, lang avslutning.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Talbot-2018/p/20235301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20235301",
+  "volum": 75,
+  "årgang": "2018"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "20189501",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Nuits-Saint-Georges Premier Cru",
+  "literpris": 2310.8,
+  "lukt": "Duft av bringebær, moreller, mørke bær, blomster og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Chevillon Nuits-Saint-Georges 1er Cru Cailles",
+  "parser": "json",
+  "pris": 1733.1,
+  "produsent": "Robert Chevillon",
+  "smak": "Smak av røde bær, moreller, mørke bær og krydder. Konsentrert og lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "underdistrikt": "Nuits-Saint-Georges Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Nuits-Saint-Georges-Premier-Cru/Chevillon-Nuits-Saint-Georges-1er-Cru-Cailles/p/20189501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20189501",
+  "volum": 75,
+  "årgang": "2023"
+}

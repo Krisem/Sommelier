@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "20379001",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 79 prosent, Merlot 21 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød, lillaskjær.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 1500,
+  "lukt": "Aroma av solbær, blyantspiss, krydder og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Grand-Puy-Lacoste 2022",
+  "parser": "json",
+  "pris": 1125,
+  "produsent": "Ch. Grand-Puy-Lacoste",
+  "smak": "Konsentrert med rike mørke bær, faste tanniner og en frisk, lang avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,6 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Grand-Puy-Lacoste-2022/p/20379001",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20379001",
+  "volum": 75,
+  "årgang": "2022"
+}

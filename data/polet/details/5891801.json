@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "5891801",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 20 prosent, Corvina 55 prosent, Corvinone 25 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella Classico",
+  "literpris": 733.2,
+  "lukt": "Aroma av moden frukt, moreller og kakao.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "navn": "Cesari Amarone della Valpolicella Classico 2019",
+  "parser": "json",
+  "pris": 549.9,
+  "produsent": "Cesari",
+  "smak": "Smak av røde frukter, kakao og kaffe.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "4,2 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Amarone della Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella-Classico/Cesari-Amarone-della-Valpolicella-Classico-2019/p/5891801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "5891801",
+  "volum": 75,
+  "årgang": "2019"
+}

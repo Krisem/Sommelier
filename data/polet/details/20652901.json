@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "20652901",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Nizza",
+  "literpris": 530.27,
+  "lukt": "Preg av mørke bær, plomme og lær, innslag av krydder og lett fatpreg.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "metode": "Min. 30 md. lagring, hvorav min. 12 md. på eikefat.",
+  "navn": "Verdevios Nizza 2023",
+  "parser": "json",
+  "pris": 397.7,
+  "produsent": "Cascina Verdevios",
+  "smak": "Konsentrert og balansert, milde tanniner, frisk syre og lang ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Nizza",
+  "url": "/Land/Italia/Piemonte/Nizza/Verdevios-Nizza-2023/p/20652901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20652901",
+  "volum": 75,
+  "årgang": "2023"
+}

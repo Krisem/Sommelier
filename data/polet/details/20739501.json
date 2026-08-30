@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "20739501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 15 prosent, Cabernet Sauvignon 5 prosent, Merlot 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Mursteinsrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Puisseguin-St. Emilion",
+  "literpris": 1164.8,
+  "lukt": "Sedertre, tobakk, utviklet.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Langlais 1975",
+  "parser": "json",
+  "pris": 873.6,
+  "produsent": "Ch. Langlais",
+  "smak": "Utviklet, konsentrert, mørke bær.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Puisseguin-St. Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Puisseguin-St-Emilion/Ch-Langlais-1975/p/20739501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "20739501",
+  "volum": 75,
+  "årgang": "1975"
+}

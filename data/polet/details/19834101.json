@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19834101",
+  "distrikt": "Loire",
+  "druer": "Cabernet Franc 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Loire, Saumur",
+  "literpris": 506.53,
+  "lukt": "Kjølig aroma av mørke og røde bør, urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Théo Blet Le Corbin Saumur Rouge 2024",
+  "parser": "json",
+  "pris": 379.9,
+  "produsent": "Blet-Ollivier",
+  "smak": "Sval, frisk, kjølig, mørke og røde bær, moden tannin, god konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Saumur",
+  "url": "/Land/Frankrike/Loire/Saumur/Th%C3%A9o-Blet-Le-Corbin-Saumur-Rouge-2024/p/19834101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19834101",
+  "volum": 75,
+  "årgang": "2024"
+}

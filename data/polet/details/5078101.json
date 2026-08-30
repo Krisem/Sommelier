@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "5078101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp burgunderrød.",
+  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Marsannay",
+  "literpris": 946.53,
+  "lukt": "Aroma av røde og mørke bær, hint av blomster og fatkrydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "Håndhøstet fra gamle stokker. Spontangjæret, modnet 12 md. i fat, hvorav",
+  "navn": "Audoin Marsannay Clos du Roy 2023",
+  "parser": "json",
+  "pris": 709.9,
+  "produsent": "Dom. Charles Audoin",
+  "smak": "Ung, fast og saftig, preg av røde bær og fat, streif av mineraler.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Marsannay",
+  "url": "/Land/Frankrike/Burgund/Marsannay/Audoin-Marsannay-Clos-du-Roy-2023/p/5078101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "5078101",
+  "volum": 75,
+  "årgang": "2023"
+}
