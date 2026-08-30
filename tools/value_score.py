@@ -29,12 +29,11 @@ from tools import polet_store
 from tools.aperitif import get_aperitif_score
 from tools.polet_store import PoletRefreshRequired
 from tools.scores import get_user_scores
-from tools.vinmonopolet import filter_results, search, search_with_facets
 from tools.vivino import get_vivino_rating
 
 VALUE_CACHE_DIR = Path.home() / ".cache" / "sommelier" / "value_score"
 VALUE_CACHE_TTL = 24 * 60 * 60  # 24 t — Polet-priser kan endres dag-til-dag
-LOGIC_VERSION = "v2"  # Bump for å invalidere all cache når scoring-logikken endres
+LOGIC_VERSION = "v3"  # Bump for å invalidere all cache når scoring-logikken endres
 SNAPSHOT_STALE_DAYS = 14  # Eldre snapshot → degradér value-språket (pris/lager kan ha endret seg)
 
 
@@ -159,144 +158,85 @@ def _combine_quality(user_tier: str, aperitif_tier: str, vivino_tier: str) -> st
     return vivino_tier
 
 
-def _peer_percentile_legacy(
-    polet_product: dict,
-    peer_search_terms: Optional[list[str]] = None,
-) -> Optional[dict]:
-    """
-    Eldre algoritme: 3 fritekstsøk + lokal filtrering. Brukes som fallback når
-    fasett-API-kallet feiler, eller når caller eksplisitt gir peer_search_terms.
-    """
-    category = polet_product.get("main_category", {}).get("name")
-    country = polet_product.get("main_country", {}).get("name")
-    district = polet_product.get("district", {}).get("name")
-    price = polet_product.get("price", {}).get("value")
+PEER_MIN_SAMPLE = 5  # Under dette er en median ikke en median
 
-    if price is None or not category:
-        return None
 
-    if not peer_search_terms:
-        peer_search_terms = []
-        if district:
-            peer_search_terms.append(district)
-        if country:
-            peer_search_terms.append(country)
-        peer_search_terms.append(category)
-
-    seen_codes = set()
-    peers: list[float] = []
-    refresh_seen = False
-    for term in peer_search_terms or []:
-        try:
-            results = search(term, page_size=50)
-        except PoletRefreshRequired:
-            # Snapshotet mangler treff på dette søket — ikke svelg som om
-            # peer bare var tom. Marker, og prøv øvrige termer.
-            refresh_seen = True
+def _peer_prices(rows: list[dict], own_code: Optional[str]) -> list[float]:
+    """Priser fra `rows`, uten vinen selv og uten prisløse rader."""
+    out: list[float] = []
+    for r in rows:
+        if r.get("code") == own_code:
             continue
-        except Exception:
-            continue
-        for f_country in (country, None):
-            filtered = filter_results(results, category=category, country=f_country)
-            for p in filtered:
-                code = p.get("code")
-                if code and code != polet_product.get("code") and code not in seen_codes:
-                    seen_codes.add(code)
-                    v = p.get("price", {}).get("value")
-                    if v:
-                        peers.append(v)
-            if len(peers) >= 10:
-                break
-        if len(peers) >= 20:
-            break
-
-    if len(peers) < 5:
-        # Skill ekte tynn peer-pool (snapshot HAR noen treff) fra
-        # snapshot-miss (alt søk raiset refresh): kun det siste skal
-        # gi refresh-signal. Tynn pool → None (som før).
-        if refresh_seen and not peers:
-            return {"status": "refresh_required"}
-        return None
-
-    peers_sorted = sorted(peers)
-    below = sum(1 for p in peers_sorted if p < price)
-    percentile = below / len(peers_sorted)
-
-    return {
-        "percentile": round(percentile, 2),
-        "median_price": round(median(peers_sorted), 1),
-        "sample_size": len(peers_sorted),
-        "peer_terms": peer_search_terms,
-    }
+        v = (r.get("price") or {}).get("value")
+        if v:
+            out.append(v)
+    return out
 
 
-def _peer_percentile(
-    polet_product: dict,
-    peer_search_terms: Optional[list[str]] = None,
-) -> Optional[dict]:
+def _peer_percentile(polet_product: dict) -> Optional[dict]:
     """
-    Sammenlign pris med andre viner i samme kategori + land via Polets fasett-API.
+    Sammenlign pris med HELE peer-populasjonen (samme kategori + land) i snapshotet.
     Returnerer dict med median, percentile (0-1), sample_size.
     Percentile: 0.0 = billigst, 1.0 = dyrest.
 
-    Hvis caller passerer peer_search_terms (bakoverkompatibilitet): bruk gammel
-    fritekst-algoritme. Hvis ikke: ett strukturert fasett-kall (mainCategory +
-    mainCountry). Faller tilbake til legacy-algoritmen ved feil.
-    """
-    if peer_search_terms:
-        return _peer_percentile_legacy(polet_product, peer_search_terms)
+    Populasjonen leses direkte fra `polet_store.query` — ikke via
+    `vinmonopolet.search_with_facets`. Median og percentil er
+    populasjons-statistikk: et `page_size`-tak gjør dem ikke raskere (katalogen
+    leses uansett i sin helhet), bare feil. Katalogen er sortert leksikografisk
+    på varenummer, så et tak ga «de N laveste varenumrene i landet» — et
+    systematisk billigere utvalg, ikke et tilfeldig. Se avviket fra ADR-009.
 
+    Peer-gruppen er som default kun **aktive** varer: verdicten er en
+    kjøpsanbefaling, og en percentil mot hyller som ikke finnes er ikke en
+    prissammenligning. Utgåtte rader akkumuleres dessuten i snapshotet over tid
+    (ADR-024), så medianen ville drevet av seg selv uten at en eneste pris
+    endret seg. Er den aktive poolen for tynn, faller vi tilbake til hele
+    populasjonen — `peer_terms` sier alltid hvilket grunnlag som ble brukt.
+    """
     category_obj = polet_product.get("main_category") or {}
     country_obj = polet_product.get("main_country") or {}
     category_code = category_obj.get("code")
     country_code = country_obj.get("code")
-    price = polet_product.get("price", {}).get("value")
+    price = (polet_product.get("price") or {}).get("value")
 
     # Trenger minst pris + kategori for å sammenligne meningsfullt
     if price is None or not category_code:
-        return _peer_percentile_legacy(polet_product, peer_search_terms)
+        return None
 
-    facets: dict = {"mainCategory": category_code}
+    population = polet_store.query(category=category_code, country=country_code or None)
+
+    own_code = polet_product.get("code")
+    terms = [f"mainCategory:{category_code}"]
     if country_code:
-        facets["mainCountry"] = country_code
+        terms.append(f"mainCountry:{country_code}")
 
-    try:
-        results = search_with_facets(facets, page_size=50)
-    except PoletRefreshRequired:
-        # Snapshotet har ingen viner i denne kategori+land-kombinasjonen.
+    if not any(p.get("code") != own_code for p in population):
+        # Snapshotet har ingen andre viner i denne kategori+land-kombinasjonen.
         # IKKE svelg som om peer bare var None (det ga enhetsavhengig verdict
         # uten feilmelding). Signalisér eksplisitt at peer-data mangler så
         # compute_value_score kan si «refresh fra desktop for prissammenligning».
         return {"status": "refresh_required"}
-    except Exception:
-        return _peer_percentile_legacy(polet_product, peer_search_terms)
 
-    own_code = polet_product.get("code")
-    peers: list[float] = []
-    for p in results:
-        if p.get("code") == own_code:
-            continue
-        v = p.get("price", {}).get("value")
-        if v:
-            peers.append(v)
+    peers = _peer_prices([p for p in population if polet_store.is_active(p)], own_code)
+    peer_terms = terms + ["status:aktiv"]
 
-    if len(peers) < 5:
-        # Tynn peer-pool: snapshotet HAR kategorien, men få viner. Dette er en
-        # ekte tynn pool (ikke snapshot-miss) — prøv legacy som litt bredere
-        # fallback (fritekst matcher løsere). Legacy returnerer ev.
-        # refresh_required selv hvis fritekst-søkene også bommer i snapshotet.
-        return _peer_percentile_legacy(polet_product, peer_search_terms)
+    if len(peers) < PEER_MIN_SAMPLE:
+        # Ekte tynn aktiv-pool (snapshotet HAR kategorien). Utgåtte viner er
+        # dårligere peers enn aktive, men langt bedre enn ingen peers.
+        peers = _peer_prices(population, own_code)
+        peer_terms = terms + ["status:alle"]
 
-    peers_sorted = sorted(peers)
-    below = sum(1 for p in peers_sorted if p < price)
-    percentile = below / len(peers_sorted)
+    if len(peers) < PEER_MIN_SAMPLE:
+        # Polet har rett og slett få viner her — en refresh endrer ikke det.
+        return None
 
-    peer_terms = [f"{k}:{v}" for k, v in facets.items()]
+    peers.sort()
+    below = sum(1 for p in peers if p < price)
 
     return {
-        "percentile": round(percentile, 2),
-        "median_price": round(median(peers_sorted), 1),
-        "sample_size": len(peers_sorted),
+        "percentile": round(below / len(peers), 2),
+        "median_price": round(median(peers), 1),
+        "sample_size": len(peers),
         "peer_terms": peer_terms,
     }
 
@@ -351,7 +291,6 @@ def compute_value_score(
     polet_product: dict,
     *,
     vintage: Optional[int] = None,
-    peer_search_terms: Optional[list[str]] = None,
     fetch_vivino: bool = True,
     fetch_aperitif: bool = True,
     use_cache: bool = True,
@@ -362,7 +301,6 @@ def compute_value_score(
     Args:
         polet_product: dict fra tools.vinmonopolet.search()
         vintage: Valgfri årgang (for Vivino-vintage-match)
-        peer_search_terms: Override-søketermer for peer-gruppe
         fetch_vivino / fetch_aperitif: Sett False for å hoppe over
         use_cache: Bruk disk-cache på (polet_id, vintage) — TTL 24t
 
@@ -402,7 +340,7 @@ def compute_value_score(
             ex.submit(get_aperitif_score, polet_id, name)
             if fetch_aperitif else None
         )
-        fut_peer = ex.submit(_peer_percentile, polet_product, peer_search_terms)
+        fut_peer = ex.submit(_peer_percentile, polet_product)
 
         vivino_data = fut_vivino.result() if fut_vivino else None
         aperitif_data = fut_aperitif.result() if fut_aperitif else None
