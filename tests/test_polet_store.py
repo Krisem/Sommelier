@@ -147,6 +147,111 @@ def test_query_combined(_seeded):
     assert {p["code"] for p in res} == {"100"}
 
 
+# ─── query: active_only (B6) ─────────────────────────────────────────
+#
+# Katalogen bærer `buyable: true` på rader som for lengst er utgått eller
+# utsolgt (målt 2026-08-30: 1 264 rødviner). `active_only` skal luke dem bort
+# uten å endre default-oppførselen.
+
+# Ett produkt per status-verdi som faktisk forekommer i snapshotet, pluss én
+# rad helt uten `status` (kan oppstå i eldre/manuelt seedede rader).
+_STATUS_ROWS = {
+    "100": "aktiv",
+    "200": "utsolgt",
+    "300": "utgatt",
+    "400": "lanseres",
+    "500": "langtidsutsolgt",
+    "600": None,  # feltet mangler
+}
+
+
+@pytest.fixture
+def _seeded_statuses():
+    products = []
+    for code, status in _STATUS_ROWS.items():
+        prod = _product(
+            code, f"Rød {code}", "rødvin", "Rødvin", "italia", "Italia", 200
+        )
+        # Alle bærer buyable=True — nettopp poenget: flagget er upålitelig.
+        prod["buyable"] = True
+        if status is not None:
+            prod["status"] = status
+        products.append(prod)
+    polet_store.upsert_products(products, fetched_at="2026-06-08T00:00:00+00:00")
+
+
+def test_query_default_is_unchanged_by_b6(_seeded_statuses):
+    """Default må returnere HELE katalogen — tre andre fikser bygger på den."""
+    alle = {p["code"] for p in polet_store.read_catalog()}
+    assert {p["code"] for p in polet_store.query()} == alle
+    assert {p["code"] for p in polet_store.query(active_only=False)} == alle
+    assert len(polet_store.query(category="rødvin")) == len(_STATUS_ROWS)
+
+
+def test_query_active_only_keeps_exactly_the_active_row(_seeded_statuses):
+    """
+    Eksakt sett-likhet, ikke «færre enn før»: et filter som stille returnerte
+    hele katalogen (jf. fasetten `Garvestoffer`) ville passert en svakere
+    assertion.
+    """
+    res = polet_store.query(active_only=True)
+    assert {p["code"] for p in res} == {"100"}
+    assert len(res) < len(polet_store.query())
+
+
+def test_query_active_only_drops_buyable_but_inactive(_seeded_statuses):
+    """Hver bortfiltrert rad har buyable=True — det er hele bugen."""
+    droppet = [
+        p for p in polet_store.query()
+        if p["code"] not in {q["code"] for q in polet_store.query(active_only=True)}
+    ]
+    assert {p["code"] for p in droppet} == {"200", "300", "400", "500", "600"}
+    assert all(p.get("buyable") is True for p in droppet)
+
+
+def test_query_active_only_combines_with_other_filters(_seeded_statuses):
+    """active_only skal ikke kortslutte de øvrige filtrene."""
+    assert polet_store.query(category="hvitvin", active_only=True) == []
+    assert {p["code"] for p in polet_store.query(min_price=300, active_only=True)} == set()
+    res = polet_store.query(category="rødvin", max_price=250, active_only=True)
+    assert {p["code"] for p in res} == {"100"}
+
+
+def test_is_active_case_insensitive_and_missing_status():
+    assert polet_store.is_active({"status": "aktiv"})
+    assert polet_store.is_active({"status": "AKTIV"})
+    assert not polet_store.is_active({"status": "utgatt"})
+    assert not polet_store.is_active({"status": None})
+    assert not polet_store.is_active({})  # ubekreftet ⇒ ikke kjøpbar
+
+
+def test_query_active_only_against_real_catalog(monkeypatch):
+    """
+    Mot det EKTE snapshotet: fanger at status-verdiene i produksjonsdata ser ut
+    som vi tror. Ingen hardkodede tall (katalogen refreshes), men relasjonene
+    må holde — og filteret må faktisk fjerne noe.
+    """
+    repo_polet = Path(__file__).resolve().parent.parent / "data" / "polet"
+    catalog = repo_polet / "catalog.ndjson"
+    if not catalog.exists():
+        pytest.skip("Ingen repo-katalog å teste mot")
+    monkeypatch.setattr(polet_store, "POLET_DIR", repo_polet)
+    monkeypatch.setattr(polet_store, "CATALOG", catalog)
+
+    alle = polet_store.query(category="rødvin")
+    aktive = polet_store.query(category="rødvin", active_only=True)
+
+    assert aktive, "ingen aktive rødviner — filteret eller dataene er feil"
+    assert len(aktive) < len(alle), "filteret fjernet ingenting (no-op?)"
+    assert all(p.get("status") == "aktiv" for p in aktive)
+
+    aktive_koder = {p["code"] for p in aktive}
+    droppet = [p for p in alle if p["code"] not in aktive_koder]
+    assert droppet and all(p.get("status") != "aktiv" for p in droppet)
+    # Bugen slik den ble rapportert: inaktive rader som bærer buyable=True.
+    assert [p for p in droppet if p.get("buyable") is True]
+
+
 # ─── lookup ──────────────────────────────────────────────────────────
 
 def test_lookup_found_and_miss(_seeded):

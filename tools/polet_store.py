@@ -52,6 +52,16 @@ PRUNED_CATALOG_FIELDS = ("productAvailability", "images", "main_sub_category")
 # Lovlige fasett-bøtter for klokkene (Polets 1–12-skala i 2-trinns bøtter).
 CLOCK_BUCKETS = frozenset({"1-2", "3-4", "5-6", "7-8", "9-10", "11-12"})
 
+# Den ENESTE status-verdien som betyr «kan kjøpes nå». Målt på snapshotet
+# 2026-08-30 (14 081 rader): aktiv 11 884, utsolgt 968, utgatt 688,
+# lanseres 376, langtidsutsolgt 165.
+#
+# `buyable` kan IKKE brukes til dette: 1 264 rødviner bærer `buyable: true`
+# uten å være aktive (556 utgatt, 543 utsolgt, 165 langtidsutsolgt) — flagget
+# er stivnet fra den dagen raden sist ble hentet, samme mekanikk som ADR-024
+# beskriver for avregistrerte varer.
+ACTIVE_STATUS = "aktiv"
+
 
 class PoletRefreshRequired(Exception):
     """
@@ -109,6 +119,18 @@ def _matches_label(obj: object, wanted: str) -> bool:
     return w == code or w == name
 
 
+def is_active(product: dict) -> bool:
+    """
+    True bare hvis produktets `status` er `ACTIVE_STATUS` (case-insensitivt).
+
+    Rader UTEN `status` regnes som ikke-aktive: en rad vi ikke kan bekrefte er
+    kjøpbar, skal ikke anbefales som kjøpbar. Det er den konservative retningen
+    — en falsk «utsolgt» koster et manglende forslag, en falsk «aktiv» sender
+    brukeren til Polet etter en vin som ikke finnes.
+    """
+    return str(product.get("status", "")).casefold() == ACTIVE_STATUS
+
+
 def query(
     *,
     category: Optional[str] = None,
@@ -116,13 +138,21 @@ def query(
     max_price: Optional[float] = None,
     min_price: Optional[float] = None,
     name_contains: Optional[str] = None,
+    active_only: bool = False,
 ) -> list[dict]:
     """
     Filtrer katalogen. `category`/`country` matcher BÅDE .code og .name
     (case-insensitiv). Pris leses fra `p["price"]["value"]`.
+
+    `active_only=True` beholder kun rader med `status == "aktiv"` — bruk det
+    når resultatet skal presenteres som noe brukeren kan kjøpe NÅ. Default er
+    False (hele katalogen, historikk inkludert), fordi similarity-, value- og
+    dekningsanalyser trenger de utgåtte radene også.
     """
     out: list[dict] = []
     for p in read_catalog():
+        if active_only and not is_active(p):
+            continue
         if category is not None and not _matches_label(p.get("main_category"), category):
             continue
         if country is not None and not _matches_label(p.get("main_country"), country):
