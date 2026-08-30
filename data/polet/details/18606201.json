@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "18606201",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 6 prosent, Cabernet Sauvignon 71 prosent, Merlot 23 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 3463.33,
+  "lukt": "Aroma av mørke bær, sedertre og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Pichon Longueville Comtesse de Lalande 2019",
+  "parser": "json",
+  "pris": 2597.5,
+  "produsent": "Ch. Pichon Comtesse",
+  "smak": "Strukturert, mørke bær, god konsentrasjon.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Pichon-Longueville-Comtesse-de-Lalande-2019/p/18606201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18606201",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "17342701",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Granatrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 2
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Alba",
+  "literpris": 390.93,
+  "lukt": "Aroma av friske bær, bringebær, noe krydder og kirsebær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Pecanin-Benenti Barbera d'Alba",
+  "parser": "json",
+  "pris": 293.2,
+  "produsent": "Pecanin-Benenti",
+  "smak": "Bærpreget, frisk med noe kryddertoner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "8 g/l",
+  "underdistrikt": "Barbera d'Alba",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Alba/Pecanin-Benenti-Barbera-d%27Alba/p/17342701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17342701",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16984601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Chassagne-Montrachet",
+  "literpris": 733.2,
+  "lukt": "Syrlige røde bær, krydder og fat karakter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Bader-Mimeur Ch. de Chassagne-Montrachet 2021",
+  "parser": "json",
+  "pris": 549.9,
+  "produsent": "Bader-Mimeur",
+  "smak": "Tørr og fyldig. Saftig fruktighet, preg av kirsebær. Bløte tanniner, frisk.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Chassagne-Montrachet",
+  "url": "/Land/Frankrike/Burgund/Chassagne-Montrachet/Bader-Mimeur-Ch-de-Chassagne-Montrachet-2021/p/16984601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16984601",
+  "volum": 75,
+  "årgang": "2021"
+}

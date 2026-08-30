@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "9347601",
+  "distrikt": "Aconcagua",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Chile, Aconcagua, Valle de Casablanca",
+  "literpris": 173.2,
+  "lukt": "Aroma med preg av røde og mørke bær, innslag av blomst, lakris og svale urter.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Tradisjonell vinifikasjonsprosess. Lagret 8 md. på franske eikefat.",
+  "navn": "Casillero del Diablo Pinot Noir 2023",
+  "parser": "json",
+  "pris": 129.9,
+  "produsent": "Concha y Toro",
+  "smak": "Ung, myk og saftig, preg av jordbær, bringebær og litt grønne urter, hint av fat og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Valle de Casablanca",
+  "url": "/Land/Chile/Aconcagua/Valle-de-Casablanca/Casillero-del-Diablo-Pinot-Noir-2023/p/9347601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9347601",
+  "volum": 75,
+  "årgang": "2023"
+}

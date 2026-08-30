@@ -1,0 +1,39 @@
+{
+  "alkohol": "15,2%",
+  "code": "15540201",
+  "distrikt": "California",
+  "druer": "Zinfandel 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødblå.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Russian River Valley",
+  "literpris": 1599.87,
+  "lukt": "Krydret og frisk, moden frukt og sort pepper.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Williams Selyem Bacigalupi Vineyard Zinfandel 2020",
+  "parser": "json",
+  "pris": 1199.9,
+  "produsent": "Williams Selyem",
+  "smak": "Bringebær syltetøy, vaniljestang og einer. Toner av brent eik, godt balansert.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Russian River Valley",
+  "url": "/Land/USA/California/Russian-River-Valley/Williams-Selyem-Bacigalupi-Vineyard-Zinfandel-2020/p/15540201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15540201",
+  "volum": 75,
+  "årgang": "2020"
+}

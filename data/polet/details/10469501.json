@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "10469501",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Granatrød, klar.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 748.67,
+  "lukt": "Duft av kirsebær, lakris, appelsin, mentol, blomster og underskog.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket, fra Castiglione Falletto og La Morra. Spontangjæret. 4 uker maserasjon. 2 år i store fat og 9 md i sement.",
+  "navn": "Cascina Fontana Barolo 2017",
+  "parser": "json",
+  "pris": 561.5,
+  "produsent": "Az. Agr. Cascina Fontana",
+  "smak": "God dybde i frukten, appelsinskall, lang ettersmak med av bær, lakris og rose.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Cascina-Fontana-Barolo-2017/p/10469501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "10469501",
+  "volum": 75,
+  "årgang": "2017"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "9111501",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 399.87,
+  "lukt": "Sval aroma av bringebær, kirsebær og blomster, innslag av krydder, urter og litt fat.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Håndplukkede og selekterte druer. Gjæret temperaturkontrollert i ca. 3 uker i ståltanker.",
+  "navn": "Vincent Girardin Terroir Noble Bourgogne Pinot Noir 2024",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Vincent Girardin",
+  "smak": "Ung og saftig med god lengde, preg av friske røde og mørke bær, litt fat, grønn urt og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Vincent-Girardin-Terroir-Noble-Bourgogne-Pinot-Noir-2024/p/9111501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9111501",
+  "volum": 75,
+  "årgang": "2024"
+}

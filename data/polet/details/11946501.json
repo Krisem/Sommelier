@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "11946501",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød, klar.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 10,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 614.27,
+  "lukt": "Duft av røde og mørke bær, lakris, blomster og eksotisk krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket fra 0,61 ha parsell i Mosconi (420 m.o.h). Spontangjæring. 30 dager skallmaserasjon.",
+  "navn": "Piero Benevelli Barolo Mosconi 2016",
+  "parser": "json",
+  "pris": 460.7,
+  "produsent": "Piero Benevelli",
+  "smak": "Fyldig med fruktkonsentrasjon. Balansert og lang fruktdrevet ettersmak med struktur.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,2 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Piero-Benevelli-Barolo-Mosconi-2016/p/11946501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11946501",
+  "volum": 75,
+  "årgang": "2016"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "15073201",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Moulin-à-Vent",
+  "literpris": 666.53,
+  "lukt": "Duft av rød frukt og mineraler.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Dubost Moulin-à-Vent En Brenay",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Dom. Dubost",
+  "smak": "Smak av rød frukt og mineraler med god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Moulin-à-Vent",
+  "url": "/Land/Frankrike/Burgund/Moulin-%C3%A0-Vent/Dubost-Moulin-%C3%A0-Vent-En-Brenay/p/15073201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15073201",
+  "volum": 75,
+  "årgang": "2021"
+}

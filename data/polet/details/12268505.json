@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,9%",
+  "code": "12268505",
+  "distrikt": "California",
+  "druer": "Cabernet Franc 31 prosent, Merlot 6 prosent, Cabernet Sauvignon 46 prosent, Petit Verdot 17 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødlilla.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, California, Napa Valley",
+  "literpris": 3533.33,
+  "lukt": "Aroma av kakao, bjørnebær med hint av kardemomme og krydderurter.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Druene håndplukkes, sorteres og avstilkes. Lagres 22 md. på eikefat.",
+  "navn": "Continuum Sage Mountain Vineyard 2018",
+  "parser": "json",
+  "pris": 5300,
+  "produsent": "Continuum Estate",
+  "smak": "Rik, mineralsk og fyldig med modne tanniner med hint av sjokolade mørke bær.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Napa Valley",
+  "url": "/Land/USA/California/Napa-Valley/Continuum-Sage-Mountain-Vineyard-2018/p/12268505",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12268505",
+  "volum": 150,
+  "årgang": "2018"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16739101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Corton Les Bressandes",
+  "literpris": 1906,
+  "lukt": "Aroma av røde bær, moreller, pepper og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "La Pousse d'Or Corton Les Bressandes",
+  "parser": "json",
+  "pris": 1429.5,
+  "produsent": "Dom. de la Pousse d'Or",
+  "smak": "Mørke bær, kirsebær, krydder, urter og tanniner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Corton Les Bressandes",
+  "url": "/Land/Frankrike/Burgund/Corton-Les-Bressandes/La-Pousse-d%27Or-Corton-Les-Bressandes/p/16739101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16739101",
+  "volum": 75,
+  "årgang": "2021"
+}

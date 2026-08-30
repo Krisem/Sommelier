@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "9459801",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 333.2,
+  "lukt": "Aroma med ungdommelig preg av røde bær, blomst og svale urter, hint av lær, fat og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Fremstilling med manuell innhøsting. Gamle vinstokker (50år), bruker vertikal presse.",
+  "navn": "Roche de Bellene Bourgogne Pinot Noir Vieilles Vignes 2023",
+  "parser": "json",
+  "pris": 249.9,
+  "produsent": "Maison Roche de Bellene",
+  "smak": "Fruktig og saftig med god friskhet og lengde, preg av jordbær, bringebær, litt urter og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Roche-de-Bellene-Bourgogne-Pinot-Noir-Vieilles-Vignes-2023/p/9459801",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9459801",
+  "volum": 75,
+  "årgang": "2023"
+}

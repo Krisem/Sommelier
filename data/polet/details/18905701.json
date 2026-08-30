@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "18905701",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin",
+  "literpris": 1332.93,
+  "lukt": "Aroma av modne bær, plomme, krydder, fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Henri Rebourseau Gevrey-Chambertin La Brunelle 2021",
+  "parser": "json",
+  "pris": 999.7,
+  "produsent": "Henri Rebourseau",
+  "smak": "Konsentrert, strukturert, tannin, lang.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3 g/l",
+  "syre": "4,9 g/l",
+  "underdistrikt": "Gevrey-Chambertin",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin/Henri-Rebourseau-Gevrey-Chambertin-La-Brunelle-2021/p/18905701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18905701",
+  "volum": 75,
+  "årgang": "2021"
+}

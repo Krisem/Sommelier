@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "15887301",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 2 prosent, Cabernet Sauvignon 34 prosent, Merlot 58 prosent, Petit Verdot 6 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, St. Estèphe",
+  "literpris": 799.87,
+  "lukt": "Aroma av mørke bær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Tronquoy-Lalande 2016",
+  "parser": "json",
+  "pris": 599.9,
+  "produsent": "Ch. Tronquoy-Lalande",
+  "smak": "Konsentrert frukt, god struktur og lenge.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "St. Estèphe",
+  "url": "/Land/Frankrike/Bordeaux/St-Est%C3%A8phe/Ch-Tronquoy-Lalande-2016/p/15887301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15887301",
+  "volum": 75,
+  "årgang": "2016"
+}

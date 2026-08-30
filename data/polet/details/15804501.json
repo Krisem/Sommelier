@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "15804501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 6 prosent, Cabernet Sauvignon 61 prosent, Merlot 31 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 859.87,
+  "lukt": "Mørke bær, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Sarget de Gruaud Larose 2016",
+  "parser": "json",
+  "pris": 644.9,
+  "produsent": "Ch. Gruaud Larose",
+  "smak": "Konsentrert frukt, god struktur og lenge.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Sarget-de-Gruaud-Larose-2016/p/15804501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15804501",
+  "volum": 75,
+  "årgang": "2016"
+}

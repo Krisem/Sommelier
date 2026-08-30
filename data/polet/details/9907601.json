@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "9907601",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Monterey",
+  "literpris": 279.87,
+  "lukt": "Aroma preget av modne mørke og røde bær, litt plommesyltetøy, krydder og urter.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Svin"
+  ],
+  "metode": "Håndplukket, vinifikasjon i ståltanker, etter malolaktisk gjæring modnet min. 6 md. på fransk og am. eik.",
+  "navn": "Noble Vines 667 Pinot Noir 2022",
+  "parser": "json",
+  "pris": 209.9,
+  "produsent": "Noble Vines",
+  "smak": "Litt utviklet, myk og fyldig med sødmefullt preg av fullmodne bær, innslag av krydder og urter.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Monterey",
+  "url": "/Land/USA/California/Monterey/Noble-Vines-667-Pinot-Noir-2022/p/9907601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9907601",
+  "volum": 75,
+  "årgang": "2022"
+}

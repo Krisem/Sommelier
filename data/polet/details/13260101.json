@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13260101",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk, dyp lillarød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Saint-Joseph",
+  "literpris": 559.87,
+  "lukt": "Mørke og sorte kirsebær med tydelige aromaer av pepperkrydder. Hint av lær.",
+  "matparring": [
+    "Aperitiff",
+    "Storfe",
+    "Storvilt"
+  ],
+  "navn": "Dom. F. Merlin Saint Joseph",
+  "parser": "json",
+  "pris": 419.9,
+  "produsent": "Dom. Francois  Merlin",
+  "smak": "Ung frukt, merkbare tanniner, bra konsentrasjon og syre.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Saint-Joseph",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Saint-Joseph/Dom-F-Merlin-Saint-Joseph/p/13260101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13260101",
+  "volum": 75,
+  "årgang": "2021"
+}

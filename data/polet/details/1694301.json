@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1694301",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys burgunderrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne",
+  "literpris": 639.87,
+  "lukt": "Aroma av røde bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "Hele klaser spontangjæret i store fat. Lagret i brukte fat i 8 md.",
+  "navn": "Fanny Sabre Bourgogne Rouge 2024",
+  "parser": "json",
+  "pris": 479.9,
+  "produsent": "Fanny Sabre",
+  "smak": "Saftig, røde bær, lang.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Bourgogne",
+  "url": "/Land/Frankrike/Burgund/Bourgogne/Fanny-Sabre-Bourgogne-Rouge-2024/p/1694301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "1694301",
+  "volum": 75,
+  "årgang": "2024"
+}

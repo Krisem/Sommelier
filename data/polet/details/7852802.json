@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "7852802",
+  "distrikt": "Sicilia",
+  "druer": "Merlot 40 prosent, Syrah 60 prosent",
+  "emballasje": "Øvrig",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Sicilia, Terre Siciliane",
+  "literpris": 199.8,
+  "lukt": "Fruktig og litt krydret aroma, preg av skogsbær og solbær, litt lakris, pepper, urter og blomster.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Ost"
+  ],
+  "metode": "Tradisjonell rødvinsproduksjon. Lagret på ståltank.",
+  "navn": "San Crispino Syrah Merlot",
+  "parser": "json",
+  "pris": 99.9,
+  "produsent": "Gruppo Cevico Soc. Coop Agricola",
+  "smak": "Ung og saftig med god friskhet, preg av kirsebær, litt blåbær og solbær, litt grønn urt og lakris.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Terre Siciliane",
+  "url": "/Land/Italia/Sicilia/Terre-Siciliane/San-Crispino-Syrah-Merlot/p/7852802",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7852802",
+  "volum": 50
+}

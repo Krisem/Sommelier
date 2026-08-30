@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13980501",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Bonnes-Mares",
+  "literpris": 5675.6,
+  "lukt": "Duft av mørke røde bær og krydder.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Bruno Clair Bonnes-Mares Grand Cru 2019",
+  "parser": "json",
+  "pris": 4256.7,
+  "produsent": "Bruno Clair",
+  "smak": "Rikt anslag, mørke og røde bær, krydder, lang ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3 g/l",
+  "syre": "4,5 g/l",
+  "underdistrikt": "Bonnes-Mares",
+  "url": "/Land/Frankrike/Burgund/Bonnes-Mares/Bruno-Clair-Bonnes-Mares-Grand-Cru-2019/p/13980501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13980501",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "14480901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød, blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Chassagne-Montrachet",
+  "literpris": 546.4,
+  "lukt": "Røde og mørke bær, med innslag av urter og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Bader-Mimeur Ch. de Chassagne-Montrachet 2022",
+  "parser": "json",
+  "pris": 409.8,
+  "produsent": "Bader-Mimeur",
+  "smak": "Tørr med god fylde. Saftig fruktighet med preg av kirsebær. Bløte tanniner, frisk.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Chassagne-Montrachet",
+  "url": "/Land/Frankrike/Burgund/Chassagne-Montrachet/Bader-Mimeur-Ch-de-Chassagne-Montrachet-2022/p/14480901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14480901",
+  "volum": 75,
+  "årgang": "2022"
+}

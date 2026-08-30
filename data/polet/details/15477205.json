@@ -1,0 +1,36 @@
+{
+  "alkohol": "13,5%",
+  "code": "15477205",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Hermitage",
+  "literpris": 1299.93,
+  "lukt": "Aroma av mørke skogsbær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Dom. du Colombier Hermitage Rouge",
+  "parser": "json",
+  "pris": 1949.9,
+  "produsent": "Dom. du Colombier",
+  "smak": "Saftig, mineralsk, fruktig, integrert eik.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Hermitage",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Hermitage/Dom-du-Colombier-Hermitage-Rouge/p/15477205",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15477205",
+  "volum": 150
+}

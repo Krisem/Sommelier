@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "17877601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 5 prosent, Cabernet Sauvignon 80 prosent, Merlot 10 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 1346.13,
+  "lukt": "Aroma av mørke bær, sedertre og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Dom. de Chevalier 2021",
+  "parser": "json",
+  "pris": 1009.6,
+  "produsent": "Dom. de Chevalier",
+  "smak": "Mørke bær, gode tanniner, syre og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Dom-de-Chevalier-2021/p/17877601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17877601",
+  "volum": 75,
+  "årgang": "2021"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,1%",
+  "code": "16801801",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 11,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Russian River Valley",
+  "literpris": 2533.2,
+  "lukt": "Aroma av mørke og røde bær, fat og krydder, hint av blomst, anis og urt.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Williams Selyem Allen Vineyard Pinot Noir 2021",
+  "parser": "json",
+  "pris": 1899.9,
+  "produsent": "Williams Selyem",
+  "smak": "Saftig, litt krydret, mørke og røde bær, urter og anis, toner av jordbær og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Russian River Valley",
+  "url": "/Land/USA/California/Russian-River-Valley/Williams-Selyem-Allen-Vineyard-Pinot-Noir-2021/p/16801801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16801801",
+  "volum": 75,
+  "årgang": "2021"
+}

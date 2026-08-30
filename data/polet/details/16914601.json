@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "16914601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Klar rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Charmes-Chambertin",
+  "literpris": 5333.2,
+  "lukt": "Aroma av mørke bær og krydder, noe eik.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Lucien le Moine Charmes-Chambertin Grand Cru 2021",
+  "parser": "json",
+  "pris": 3999.9,
+  "produsent": "Lucien le Moine",
+  "smak": "Balansert, middels fyldig, frukt, lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,2 g/l",
+  "underdistrikt": "Charmes-Chambertin",
+  "url": "/Land/Frankrike/Burgund/Charmes-Chambertin/Lucien-le-Moine-Charmes-Chambertin-Grand-Cru-2021/p/16914601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16914601",
+  "volum": 75,
+  "årgang": "2021"
+}

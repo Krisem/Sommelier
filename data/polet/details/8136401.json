@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "8136401",
+  "distrikt": "Bekaa Valley",
+  "druer": "Cabernet Sauvignon 20 prosent, Syrah 67 prosent, Mourvèdre 8 prosent, Carignan 4 prosent, Cinsault 1 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 373.2,
+  "lukt": "Aroma preget av fullmodne mørke bær, lær, krydder, animalske toner, skogbunn og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer. Lagret 22 md, hvorav 40 % på nye fat.",
+  "navn": "Ch. Kefraya 2022",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "Ch. Kefraya",
+  "smak": "Lang, fyldig og krydret, litt utviklet preg av mørke bær, kamfer og svale urter, litt fat og tobakk.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,4 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Ch-Kefraya-2022/p/8136401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8136401",
+  "volum": 75,
+  "årgang": "2022"
+}

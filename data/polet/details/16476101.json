@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16476101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Klar, middels dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Échézeaux",
+  "literpris": 5533.2,
+  "lukt": "Aroma av røde bær og krydder.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Philippe Pacalet Echezeaux Grand Cru 2021",
+  "parser": "json",
+  "pris": 4149.9,
+  "produsent": "Philippe Pacalet",
+  "smak": "Røde bær, krydder og mineralske toner.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Échézeaux",
+  "url": "/Land/Frankrike/Burgund/%C3%89ch%C3%A9zeaux/Philippe-Pacalet-Echezeaux-Grand-Cru-2021/p/16476101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16476101",
+  "volum": 75,
+  "årgang": "2021"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "12409801",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 4 prosent, Cabernet Franc 38 prosent, Merlot 58 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion",
+  "literpris": 14183.33,
+  "lukt": "Mørke bær, floralt, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Cheval Blanc 2015",
+  "parser": "json",
+  "pris": 10637.5,
+  "produsent": "Ch. Cheval Blanc",
+  "smak": "Mørke og røde frukter, runde tanniner, fylding med god lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion/Ch-Cheval-Blanc-2015/p/12409801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12409801",
+  "volum": 75,
+  "årgang": "2015"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "8049601",
+  "distrikt": "Rhône",
+  "druer": "Mourvèdre 5 prosent, Syrah 60 prosent, Grenache 35 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Costières de Nîmes",
+  "literpris": 193.2,
+  "lukt": "Fruktig og ungdommelig preg av modne mørke bær, krydder, litt lakris og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "8 dagers maserasjon ved 20 C, tradisjonell gjæring.",
+  "navn": "Mas de Mas",
+  "parser": "json",
+  "pris": 144.9,
+  "produsent": "Dom. Paul Mas",
+  "smak": "Saftig og litt fast med preg av sødmerike mørke bær, innslag av krydder, lakris og urter.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Costières de Nîmes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Costi%C3%A8res-de-N%C3%AEmes/Mas-de-Mas/p/8049601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8049601",
+  "volum": 75,
+  "årgang": "2024"
+}

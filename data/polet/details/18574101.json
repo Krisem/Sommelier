@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "18574101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Monthélie",
+  "literpris": 924.8,
+  "lukt": "Aroma av røde bær, litt krydder.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Ost"
+  ],
+  "navn": "Mikulski Monthélie Les Troisières",
+  "parser": "json",
+  "pris": 693.6,
+  "produsent": "Dom. Fançois Mikulski",
+  "smak": "Modne røde bær, krydder, lang ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Monthélie",
+  "url": "/Land/Frankrike/Burgund/Month%C3%A9lie/Mikulski-Month%C3%A9lie-Les-Troisi%C3%A8res/p/18574101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18574101",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "14625501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 5 prosent, Cabernet Sauvignon 68 prosent, Merlot 27 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 5196.67,
+  "lukt": "Mørke bær, krydder, tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Carruades de Lafite 2019",
+  "parser": "json",
+  "pris": 3897.5,
+  "produsent": "Ch. Lafite-Rothschild",
+  "smak": "Kjølig frukt, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Carruades-de-Lafite-2019/p/14625501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14625501",
+  "volum": 75,
+  "årgang": "2019"
+}

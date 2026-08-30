@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,9%",
+  "code": "9965601",
+  "distrikt": "Patagonia",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Patagonia",
+  "literpris": 426.53,
+  "lukt": "Ungt preg av modne røde bær, innslag av jordbær, rips og kirsebær, litt svale urter, kamfer og fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "metode": "30 år gamle vinstokker. 40 % helklasefermentert. Spontanfermentert, uten bruk av kultivert gjær.",
+  "navn": "Chacra Barda Pinot Noir 2025",
+  "parser": "json",
+  "pris": 319.9,
+  "produsent": "Bod. Chacra SRL",
+  "smak": "Fruktig og nyansert preg av bringebær, jordbær, kirsebær og rips, litt fat, svale urter og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "url": "/Land/Argentina/Patagonia/Chacra-Barda-Pinot-Noir-2025/p/9965601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9965601",
+  "volum": 75,
+  "årgang": "2025"
+}

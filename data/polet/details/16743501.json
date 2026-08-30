@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16743501",
+  "distrikt": "California",
+  "druer": "Grenache 60 prosent, Syrah 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Santa Barbara County",
+  "literpris": 933.2,
+  "lukt": "Aroma av mørke bær, nyansert, balsam, overtoner.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Storvilt"
+  ],
+  "navn": "Whitcraft La Lie Fine Syrache 2021",
+  "parser": "json",
+  "pris": 699.9,
+  "produsent": "Whitcraft Winery",
+  "smak": "Smak av bær og krydder. Lang ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Santa Barbara County",
+  "url": "/Land/USA/California/Santa-Barbara-County/Whitcraft-La-Lie-Fine-Syrache-2021/p/16743501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16743501",
+  "volum": 75,
+  "årgang": "2021"
+}

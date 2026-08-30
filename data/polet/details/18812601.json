@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "18812601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Saint-Aubin Premier Cru",
+  "literpris": 732.93,
+  "lukt": "Fruktig, innslag av kjølige røde bær og rips.",
+  "matparring": [
+    "Aperitiff",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Au Pied du Mont Chauve Saint-Aubin 1er Cru Le Charmois Rouge 2017",
+  "parser": "json",
+  "pris": 549.7,
+  "produsent": "Au Pied du mont Chauve",
+  "smak": "Fruktig og frisk, lang fast ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "3 g/l",
+  "syre": "4,2 g/l",
+  "underdistrikt": "Saint-Aubin Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Saint-Aubin-Premier-Cru/Au-Pied-du-Mont-Chauve-Saint-Aubin-1er-Cru-Le-Charmois-Rouge-2017/p/18812601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18812601",
+  "volum": 75,
+  "årgang": "2017"
+}

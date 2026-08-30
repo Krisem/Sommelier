@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "857701",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 28 prosent, Cabernet Franc 30 prosent, Merlot 40 prosent, Malbec 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux",
+  "literpris": 239.87,
+  "lukt": "Aroma preget av mørke bær og litt tørket frukt, hint av tobakk, svale urter, lær, jord og fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon. Spontanfermenrtert på sementtank. Lagret på 80% sement og 20% fat.",
+  "navn": "Ch. Dudon 2020",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Ch. Dudon",
+  "smak": "Litt utviklet og fast, preg av mørke bær, tørket frukt og fat, innslag av tobakk, sevje og paprika.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,7 g/l",
+  "url": "/Land/Frankrike/Bordeaux/Ch-Dudon-2020/p/857701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "857701",
+  "volum": 75,
+  "årgang": "2020"
+}

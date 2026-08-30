@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "13502101",
+  "distrikt": "Castilla y León",
+  "druer": "Alicante Bouschet 15 prosent, Mencia 70 prosent, Palomino 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp burgunderrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Castilla y León",
+  "literpris": 333.33,
+  "lukt": "Aroma av modne røde bær, blomst, urter, mineral og integrert eik.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket fra over 100 år gamle druestokker, noen pre-phylloxera vinstokker fra høytliggende, kjølige marker.",
+  "navn": "Fuentes del Silencio La Gandara 2018",
+  "parser": "json",
+  "pris": 250,
+  "produsent": "Fuentes del Silencio",
+  "smak": "God konsentrasjon og struktur, tydelig tannin, lang avslutning.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Spania/Castilla-y-Le%C3%B3n/Fuentes-del-Silencio-La-Gandara-2018/p/13502101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13502101",
+  "volum": 75,
+  "årgang": "2018"
+}

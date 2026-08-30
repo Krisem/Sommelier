@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "11961701",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 33 prosent, Cabernet Sauvignon 62 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Julien",
+  "literpris": 3046.4,
+  "lukt": "Mørke frukter og bær, jordtoner.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Talbot 2010",
+  "parser": "json",
+  "pris": 2284.8,
+  "produsent": "Ch. Talbot",
+  "smak": "Mørke bær, fyldig, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Saint-Julien",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Julien/Ch-Talbot-2010/p/11961701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11961701",
+  "volum": 75,
+  "årgang": "2010"
+}

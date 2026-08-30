@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "9962001",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 10 prosent, Corvinone 5 prosent, Corvina 75 prosent, Molinara 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella Classico",
+  "literpris": 199.87,
+  "lukt": "Aroma med preg av modne røde og mørke bær, grønne urter, litt blomst og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Håndplukkede druer, skånsom pressing før temperaturkontrollert gjæring.",
+  "navn": "Vigna 800 Cesolina Valpolicella Classico 2021",
+  "parser": "json",
+  "pris": 149.9,
+  "produsent": "Vigna '800",
+  "smak": "Middels fyldig, ung og saftig med fruktig preg av friske røde bær og urter, hint av krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "5 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Classico/Vigna-800-Cesolina-Valpolicella-Classico-2021/p/9962001",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9962001",
+  "volum": 75,
+  "årgang": "2021"
+}

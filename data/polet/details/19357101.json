@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "19357101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Morey-Saint-Denis",
+  "literpris": 1667.6,
+  "lukt": "Duft av friske røde bær, bringebær og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Ost"
+  ],
+  "navn": "Bruno Clair Morey-Saint-Denis En la Rue de Vergy 2020",
+  "parser": "json",
+  "pris": 1250.7,
+  "produsent": "Bruno Clair",
+  "smak": "Saftig anslag, bløt tanninstruktur. Balansert. Saftig lang ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "4 g/l",
+  "syre": "4,5 g/l",
+  "underdistrikt": "Morey-Saint-Denis",
+  "url": "/Land/Frankrike/Burgund/Morey-Saint-Denis/Bruno-Clair-Morey-Saint-Denis-En-la-Rue-de-Vergy-2020/p/19357101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19357101",
+  "volum": 75,
+  "årgang": "2020"
+}

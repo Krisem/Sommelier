@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "17281801",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød, klar.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 5,
+    "Garvestoffer": 1
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Moulin-à-Vent",
+  "literpris": 679.87,
+  "lukt": "Aroma av modne bær, litt syltet frukt, blomst og urt, diskret fat.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "navn": "A.F. Gros Moulin-A-Vent Montperay 2023",
+  "parser": "json",
+  "pris": 509.9,
+  "produsent": "Dom. A.F. Gros",
+  "smak": "Frisk og fruktig. Balansert, røde bær, kirsebær, roser og krydder. Bløte tanniner.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Moulin-à-Vent",
+  "url": "/Land/Frankrike/Burgund/Moulin-%C3%A0-Vent/A-F-Gros-Moulin-A-Vent-Montperay-2023/p/17281801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17281801",
+  "volum": 75,
+  "årgang": "2023"
+}

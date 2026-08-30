@@ -1,0 +1,33 @@
+{
+  "alkohol": "12,5%",
+  "code": "18624501",
+  "druer": "Cinsault 30 prosent, Grenache 40 prosent, Syrah 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike",
+  "literpris": 422.53,
+  "lukt": "Sval aroma preget av røde og mørke bær, innslag av blomst og urter.",
+  "matparring": [
+    "Lyst kjøtt"
+  ],
+  "navn": "Yann Bertrand Tryptique 2023",
+  "parser": "json",
+  "pris": 316.9,
+  "produsent": "Yann Bertrand",
+  "smak": "Preg av røde og mørke bær, hint av urter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,5 g/l",
+  "url": "/Land/Frankrike/Yann-Bertrand-Tryptique-2023/p/18624501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18624501",
+  "volum": 75,
+  "årgang": "2023"
+}

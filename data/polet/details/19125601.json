@@ -1,0 +1,40 @@
+{
+  "alkohol": "14%",
+  "code": "19125601",
+  "distrikt": "Rhône",
+  "druer": "Syrah 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Purpur.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Saint-Joseph",
+  "literpris": 853.2,
+  "lukt": "Aroma av kirsebær, bjørnebær, krydder, balansert og god friskhet.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Manuell innhøstning, spontan gjæring og lagres i brukte fat i 2 år.",
+  "navn": "Gripa Saint-Joseph Rouge Parady 2022",
+  "parser": "json",
+  "pris": 639.9,
+  "produsent": "Dom. Bernard Gripa",
+  "smak": "Dyp frukt av røde og mørke bær, god friskhet, balansert og lang ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Saint-Joseph",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Saint-Joseph/Gripa-Saint-Joseph-Rouge-Parady-2022/p/19125601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19125601",
+  "volum": 75,
+  "årgang": "2022"
+}

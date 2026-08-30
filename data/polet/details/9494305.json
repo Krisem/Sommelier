@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,7%",
+  "code": "9494305",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza",
+  "literpris": 299.93,
+  "lukt": "Aroma preget av modne mørke bær, litt tørket frukt, tobakk, lær, lakris og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer. Temperaturkontrollert maserasjon og fermentering.",
+  "navn": "Weinert Malbec 2020",
+  "parser": "json",
+  "pris": 449.9,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Fyldig og utviklet med nyansert preg av modne mørke bær, rosin, krydder, urter og litt fat.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "3 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/Argentina/Mendoza/Weinert-Malbec-2020/p/9494305",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9494305",
+  "volum": 150,
+  "årgang": "2020"
+}

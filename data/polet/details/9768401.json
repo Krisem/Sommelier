@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "9768401",
+  "distrikt": "Aragon",
+  "druer": "Garnacha 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Aragon, Calatayud",
+  "literpris": 186.53,
+  "lukt": "Bærpreget og fruktig aroma med innslag av lakris, svale urter, litt blomst og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Kaldgjæret i ståltanker med flere dagers maserasjon, tankmodnet før tapping.",
+  "navn": "Marqués de Nombrevilla Old Vines Garnacha 2025",
+  "parser": "json",
+  "pris": 139.9,
+  "produsent": "Bod. San Alejandro",
+  "smak": "Ungdommelig, fruktig og litt krydret med preg av mørke og røde bær, grønne urter og lakris.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Calatayud",
+  "url": "/Land/Spania/Aragon/Calatayud/Marqu%C3%A9s-de-Nombrevilla-Old-Vines-Garnacha-2025/p/9768401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9768401",
+  "volum": 75,
+  "årgang": "2025"
+}

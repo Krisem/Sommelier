@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "16539101",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 453.33,
+  "lukt": "Aroma av roseblader, hint av plommer og bær, jordlige toner, sort pepper og mineraler.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Druene høstes for hånd, masereres i noen dager i stål og eikelagres deretter i ca. 6 md.",
+  "navn": "Moccagatta Langhe Nebbiolo 2024",
+  "parser": "json",
+  "pris": 340,
+  "produsent": "Moccagatta",
+  "smak": "Rik og balansert med myke tanniner og rund avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Moccagatta-Langhe-Nebbiolo-2024/p/16539101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16539101",
+  "volum": 75,
+  "årgang": "2024"
+}

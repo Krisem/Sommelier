@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "17363601",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pomerol",
+  "literpris": 759.33,
+  "lukt": "Aroma av røde bær og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Lafleur-Gazin 2019",
+  "parser": "json",
+  "pris": 569.5,
+  "produsent": "Ch. La Fleur Gazin",
+  "smak": "God konsentrasjon og struktur, god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Pomerol",
+  "url": "/Land/Frankrike/Bordeaux/Pomerol/Ch-Lafleur-Gazin-2019/p/17363601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17363601",
+  "volum": 75,
+  "årgang": "2019"
+}

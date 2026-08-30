@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "10166405",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti Classico",
+  "literpris": 326.6,
+  "lukt": "Aroma av modne røde bær og litt tørket frukt, innslag av te, kamfer, trevirke og svale urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "10-12 md. på slavonske botti.",
+  "navn": "Felsina Berardenga Chianti Classico",
+  "parser": "json",
+  "pris": 489.9,
+  "produsent": "Felsina Berardenga",
+  "smak": "Fast, sval og nyansert med litt utvikling, preg av kirsebær, tørket frukt, fat, kamfer, te og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Chianti Classico",
+  "url": "/Land/Italia/Toscana/Chianti-Classico/Felsina-Berardenga-Chianti-Classico/p/10166405",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "10166405",
+  "volum": 150,
+  "årgang": "2022"
+}

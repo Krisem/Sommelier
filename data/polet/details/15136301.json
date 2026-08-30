@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,9%",
+  "code": "15136301",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, St. Helena",
+  "literpris": 2799.87,
+  "lukt": "Aroma av moden frukt, solbær, krydder, tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Corison Sunbasket Cabernet Sauvignon 2019",
+  "parser": "json",
+  "pris": 2099.9,
+  "produsent": "Corison Winery",
+  "smak": "Fyldig, rund og krydret.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "St. Helena",
+  "url": "/Land/USA/California/St-Helena/Corison-Sunbasket-Cabernet-Sauvignon-2019/p/15136301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15136301",
+  "volum": 75,
+  "årgang": "2019"
+}

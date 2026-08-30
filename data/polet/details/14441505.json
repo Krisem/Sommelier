@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "14441505",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 68 prosent, Merlot 32 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 4091.67,
+  "lukt": "Mørke bær, krydder, tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Le Petit Mouton de Mouton Rothschild 2019",
+  "parser": "json",
+  "pris": 6137.5,
+  "produsent": "Ch. Mouton Rothschild",
+  "smak": "Kjølig frukt, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Le-Petit-Mouton-de-Mouton-Rothschild-2019/p/14441505",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14441505",
+  "volum": 150,
+  "årgang": "2019"
+}

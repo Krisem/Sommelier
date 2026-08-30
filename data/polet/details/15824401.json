@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "15824401",
+  "distrikt": "Dão",
+  "druer": "Pinot Noir 50 prosent, Touriga Nacional 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Dão",
+  "literpris": 559.87,
+  "lukt": "Fruktig duft av krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Quinta da Pellada Tounot",
+  "parser": "json",
+  "pris": 419.9,
+  "produsent": "Quinta da Pellada / Alvaro Castro",
+  "smak": "Rundt, saftig med lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,8 g/l",
+  "url": "/Land/Portugal/D%C3%A3o/Quinta-da-Pellada-Tounot/p/15824401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15824401",
+  "volum": 75,
+  "årgang": "2016"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "8041206",
+  "distrikt": "Douro e Porto",
+  "druer": "Touriga Franca 20 prosent, Touriga Nacional 50 prosent, Tinta Roriz 30 prosent",
+  "emballasje": "Bag-in-box",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Portugal, Douro e Porto",
+  "literpris": 154.95,
+  "lukt": "Litt utviklet preg av modne mørke bær, blå plommer og svale urter, hint av lakris og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Vinifisert av 100% avstilkede druer, gjæring og maserasjon i 6-8 dager.",
+  "navn": "Lavradores de Feitoria 2023",
+  "parser": "json",
+  "pris": 309.9,
+  "produsent": "Lavradores de Feitoria",
+  "smak": "Litt balsamisk og fast, fruktig preg av mørke bær, lakris og svale urter, hint av sevje og kamfer.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "url": "/Land/Portugal/Douro-e-Porto/Lavradores-de-Feitoria-2023/p/8041206",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8041206",
+  "volum": 200,
+  "årgang": "2023"
+}

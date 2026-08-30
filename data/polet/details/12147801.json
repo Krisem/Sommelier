@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "12147801",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Klar purpurrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1053.2,
+  "lukt": "Aroma av røde og mørke bær, krydder og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Giulia Negri Barolo Serradenari 2021",
+  "parser": "json",
+  "pris": 789.9,
+  "produsent": "Giulia Negri",
+  "smak": "Bærfrukt, lang avslutning.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Giulia-Negri-Barolo-Serradenari-2021/p/12147801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12147801",
+  "volum": 75,
+  "årgang": "2021"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "16765205",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 4 prosent, Merlot 96 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Saint-Emilion Grand Cru",
+  "literpris": 2688.33,
+  "lukt": "Aroma av mørke bær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Bélair-Monange 2019",
+  "parser": "json",
+  "pris": 4032.5,
+  "produsent": "Ch. Bélair-Monange",
+  "smak": "God konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Saint-Emilion Grand Cru",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion-Grand-Cru/Ch-B%C3%A9lair-Monange-2019/p/16765205",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16765205",
+  "volum": 150,
+  "årgang": "2019"
+}

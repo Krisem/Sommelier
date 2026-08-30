@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "15703601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 68 prosent, Merlot 32 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Margaux",
+  "literpris": 984.8,
+  "lukt": "Modne mørke bær. Diskret eik.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Dauzac",
+  "parser": "json",
+  "pris": 738.6,
+  "produsent": "Ch. Dauzac",
+  "smak": "Moden frukt, strukturert, lang ettersmak.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Margaux",
+  "url": "/Land/Frankrike/Bordeaux/Margaux/Ch-Dauzac/p/15703601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15703601",
+  "volum": 75,
+  "årgang": "2020"
+}

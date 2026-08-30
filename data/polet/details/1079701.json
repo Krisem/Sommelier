@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "1079701",
+  "distrikt": "Dão",
+  "druer": "Touriga Nacional 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Portugal, Dão",
+  "literpris": 306.53,
+  "lukt": "Rød frukt og innslag av krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "metode": "Temperaturkontrollert gjæring i 7 dager ved 25-28 C i ståltanker.",
+  "navn": "Quinta de Saes Touriga Nacional 2017",
+  "parser": "json",
+  "pris": 229.9,
+  "produsent": "Alvaro Castro",
+  "smak": "Frisk med saftig tanniner. Lang mineralsk ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "3,5 g/l",
+  "syre": "5,8 g/l",
+  "url": "/Land/Portugal/D%C3%A3o/Quinta-de-Saes-Touriga-Nacional-2017/p/1079701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "1079701",
+  "volum": 75,
+  "årgang": "2017"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13403201",
+  "distrikt": "Rhône",
+  "druer": "Grenache 80 prosent, Mourvèdre 10 prosent, Syrah 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Rhône, Châteauneuf-du-Pape",
+  "literpris": 933.2,
+  "lukt": "Aroma av mørke bær, krydret med noe eiketoner.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Rotem & Mounir Saouma Omnia Chateauneuf-du-Pape 2018",
+  "parser": "json",
+  "pris": 699.9,
+  "produsent": "Rotem & Mounir Saouma",
+  "smak": "Bærfrukt, lang.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Châteauneuf-du-Pape",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Ch%C3%A2teauneuf-du-Pape/Rotem-%26-Mounir-Saouma-Omnia-Chateauneuf-du-Pape-2018/p/13403201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13403201",
+  "volum": 75,
+  "årgang": "2018"
+}

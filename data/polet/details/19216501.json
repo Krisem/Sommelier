@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "19216501",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 932.67,
+  "lukt": "Aroma av røde bær, lakris, fioler og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukket, fatgjæret og lagret på små og store eikefat.",
+  "navn": "Franco Conterno Barolo Pietrin 2020",
+  "parser": "json",
+  "pris": 699.5,
+  "produsent": "Franco Conterno",
+  "smak": "God frukt, konsentrasjon og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Franco-Conterno-Barolo-Pietrin-2020/p/19216501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19216501",
+  "volum": 75,
+  "årgang": "2020"
+}

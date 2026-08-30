@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "19032201",
+  "distrikt": "Burgund",
+  "druer": "Gamay 20 prosent, Pinot Noir 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 4,
+    "Garvestoffer": 2
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne Passe-tout-grain",
+  "literpris": 477.73,
+  "lukt": "Duft av friske røde og mørke bær.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "metode": "Vinifiseringen foregår ved bruk av hele drueklaser og naturlige gjærsorter, med lagring i amforaer og fat. Det unngås bruk av svovel",
+  "navn": "Jean-Marc Millot Bourgogne Passetoutgrain Les Autrots 2023",
+  "parser": "json",
+  "pris": 358.3,
+  "produsent": "Dom. Jean-Marc Millot",
+  "smak": "Saftig, middels fyldig.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "1,0 g/l",
+  "underdistrikt": "Bourgogne Passe-tout-grain",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Passe-tout-grain/Jean-Marc-Millot-Bourgogne-Passetoutgrain-Les-Autrots-2023/p/19032201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19032201",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "9040301",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 10 prosent, Corvina 60 prosent, Corvinone 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 219.87,
+  "lukt": "Sval aroma av modne mørke og røde bær, litt tørket frukt, urter, lakris, te og kamfer.",
+  "matparring": [
+    "Storfe",
+    "Storvilt",
+    "Ost"
+  ],
+  "metode": "Ripasso-metoden, ferdig vin legges på restene av amaroneproduksjon.",
+  "navn": "Casalforte Valpolicella Ripasso 2023",
+  "parser": "json",
+  "pris": 164.9,
+  "produsent": "Cant. Riondo",
+  "smak": "Fyldig og balsamisk med ørlite sødme, preg av modne bær, tørket frukt, kamfer, lakris og urter.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "7 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Casalforte-Valpolicella-Ripasso-2023/p/9040301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9040301",
+  "volum": 75,
+  "årgang": "2023"
+}

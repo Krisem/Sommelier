@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "18896401",
+  "distrikt": "Coastal Region",
+  "druer": "Carignan 10 prosent, Cinsault 10 prosent, Grenache 25 prosent, Mourvèdre 15 prosent, Syrah 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Sør-Afrika, Coastal Region, Swartland",
+  "literpris": 1599.87,
+  "lukt": "Aroma av blomster, mineraler og bær, innslag av krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Høstet og sortert for hånd. Spontangjæret i åpne kar. To år lagring i store og små fat.",
+  "navn": "Sadie Columella 2023",
+  "parser": "json",
+  "pris": 1199.9,
+  "produsent": "The Sadie Family",
+  "smak": "Syrestruktur, balanserende tanniner. Fyldig, krydret bær.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,7 g/l",
+  "underdistrikt": "Swartland",
+  "url": "/Land/S%C3%B8r-Afrika/Coastal-Region/Swartland/Sadie-Columella-2023/p/18896401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18896401",
+  "volum": 75,
+  "årgang": "2023"
+}

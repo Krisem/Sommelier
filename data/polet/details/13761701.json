@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13761701",
+  "distrikt": "California",
+  "druer": "Merlot 7 prosent, Cabernet Franc 2 prosent, Cabernet Sauvignon 89 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 5,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, California, Rutherford",
+  "literpris": 2701.87,
+  "lukt": "Aroma av mørke bær, florale toner og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Freemark Abbey Sycamore 2016",
+  "parser": "json",
+  "pris": 2026.4,
+  "produsent": "Freemark Abbey Winery",
+  "smak": "Fyldig og fruktdreven, høy konsentrasjon.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,3 g/l",
+  "underdistrikt": "Rutherford",
+  "url": "/Land/USA/California/Rutherford/Freemark-Abbey-Sycamore-2016/p/13761701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13761701",
+  "volum": 75,
+  "årgang": "2016"
+}

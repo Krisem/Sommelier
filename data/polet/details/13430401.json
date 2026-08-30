@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13430401",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 52 prosent, Cabernet Sauvignon 39 prosent, Petit Verdot 4 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, St. Estèphe",
+  "literpris": 814.67,
+  "lukt": "Mørke bær, sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "La Dame de Montrose 2018",
+  "parser": "json",
+  "pris": 611,
+  "produsent": "Ch. Montrose",
+  "smak": "Mørke bær, fine tanniner, god struktur og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "St. Estèphe",
+  "url": "/Land/Frankrike/Bordeaux/St-Est%C3%A8phe/La-Dame-de-Montrose-2018/p/13430401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13430401",
+  "volum": 75,
+  "årgang": "2018"
+}

@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "8269301",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp mursteinsrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 319.87,
+  "lukt": "Nyansert og litt utviklet preg av røde bær og tørket frukt, innslag av blomst, urt, te og nype.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Tradisjonell vinifikasjon, lagret på kun gamle eikefat.",
+  "navn": "Fenocchio Langhe Nebbiolo 2023",
+  "parser": "json",
+  "pris": 239.9,
+  "produsent": "Fenocchio",
+  "smak": "Sammensatt, fast og lang, preg av modne røde bær, nype, litt te og rosin, hint av fat og urt.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Fenocchio-Langhe-Nebbiolo-2023/p/8269301",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8269301",
+  "volum": 75,
+  "årgang": "2023"
+}

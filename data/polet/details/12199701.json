@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "12199701",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød, oransje kant.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 1016.4,
+  "lukt": "Fokusert aroma av lyse og mørke bær, blomster, lakris, tobakk og underskog.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra 3 vinmarker vinifiseres sammen (spontangjæret). Totalt 45 dg maserasjon. Lagret 3 år i botti. 2608 fl.",
+  "navn": "Margherita Otto Barolo 2016",
+  "parser": "json",
+  "pris": 762.3,
+  "produsent": "Margherita Otto",
+  "smak": "Fyldig. Fruktkonsentrasjon, frisk. God lengde med balansert struktur.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Margherita-Otto-Barolo-2016/p/12199701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12199701",
+  "volum": 75,
+  "årgang": "2016"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "13530101",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 35 prosent, Cabernet Franc 19 prosent, Cabernet Sauvignon 46 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 7716.67,
+  "lukt": "Mørk frukt, mineralsk, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Haut-Brion 2011",
+  "parser": "json",
+  "pris": 5787.5,
+  "produsent": "Ch. Haut-Brion",
+  "smak": "God konsentrasjon, fyldig og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Haut-Brion-2011/p/13530101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13530101",
+  "volum": 75,
+  "årgang": "2011"
+}

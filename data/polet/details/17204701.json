@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "17204701",
+  "distrikt": "Toscana",
+  "druer": "Cabernet Franc 25 prosent, Cabernet Sauvignon 75 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Bolgheri",
+  "literpris": 6133.33,
+  "lukt": "Fokusert aroma av modne mørke bær, svale urter, lær, lakris og integrert fat.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Tenuta San Guido Sassicaia 2019",
+  "parser": "json",
+  "pris": 4600,
+  "produsent": "Ten. San Guido",
+  "smak": "Konsentrert og balansert, modne mørke bær, krydder, urter, fat. Lang, fast ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,8 g/l",
+  "underdistrikt": "Bolgheri",
+  "url": "/Land/Italia/Toscana/Bolgheri/Tenuta-San-Guido-Sassicaia-2019/p/17204701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17204701",
+  "volum": 75,
+  "årgang": "2019"
+}

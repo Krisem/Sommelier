@@ -1,0 +1,38 @@
+{
+  "alkohol": "12,5%",
+  "code": "11333201",
+  "druer": "Cabernet Sauvignon 20 prosent, Merlot 80 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania",
+  "literpris": 213.2,
+  "lukt": "Aroma av tørket frukt, røde og mørke bær, urter og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "3 md. i amerikansk eikefat.",
+  "navn": "Cristo de la Vega Gledelig Jul La Mancha",
+  "parser": "json",
+  "pris": 159.9,
+  "produsent": "Bod. Cristo de la Vega",
+  "smak": "Litt utviklet, fruktig, balansert med hint av røde mørke bær, urter og vanilje.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3,1 g/l",
+  "syre": "4,6 g/l",
+  "url": "/Land/Spania/Cristo-de-la-Vega-Gledelig-Jul-La-Mancha/p/11333201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11333201",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16403801",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 60 prosent, Merlot 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, St. Estèphe",
+  "literpris": 533.2,
+  "lukt": "Duft av mørk bære, jordtoner og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. St-Estéphe 2019",
+  "parser": "json",
+  "pris": 399.9,
+  "produsent": "Vignobles Arnaud",
+  "smak": "Mørke bær, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "St. Estèphe",
+  "url": "/Land/Frankrike/Bordeaux/St-Est%C3%A8phe/Ch-St-Est%C3%A9phe-2019/p/16403801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16403801",
+  "volum": 75,
+  "årgang": "2019"
+}

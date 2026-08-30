@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "15060501",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød, mørke reflekser.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Bourgogne Hautes-Côtes de Nuits",
+  "literpris": 666.53,
+  "lukt": "Røde og sorte bær, urter og sort pepper.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Dom. Michel Gros Bourgogne Hautes-Cotes de Nuits 2021",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Dom. Michel Gros",
+  "smak": "Mørk frukt og lakris, krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Bourgogne Hautes-Côtes de Nuits",
+  "url": "/Land/Frankrike/Burgund/Bourgogne-Hautes-C%C3%B4tes-de-Nuits/Dom-Michel-Gros-Bourgogne-Hautes-Cotes-de-Nuits-2021/p/15060501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15060501",
+  "volum": 75,
+  "årgang": "2021"
+}

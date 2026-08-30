@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "15703901",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 50 prosent, Merlot 50 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Saint-Emilion Grand Cru",
+  "literpris": 10650,
+  "lukt": "Mørke bær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Ausone",
+  "parser": "json",
+  "pris": 7987.5,
+  "produsent": "Ch. Ausone",
+  "smak": "Mørke bær, myke tanniner, god struktur samt lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Saint-Emilion Grand Cru",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion-Grand-Cru/Ch-Ausone/p/15703901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15703901",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13133701",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 55 prosent, Cabernet Franc 45 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pomerol",
+  "literpris": 3930.67,
+  "lukt": "Mørke bær, mineralsk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Les Pensées de Lafleur 2018",
+  "parser": "json",
+  "pris": 2948,
+  "produsent": "Ch. Lafleur",
+  "smak": "Strukturert, konsentrert, lang lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Pomerol",
+  "url": "/Land/Frankrike/Bordeaux/Pomerol/Les-Pens%C3%A9es-de-Lafleur-2018/p/13133701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13133701",
+  "volum": 75,
+  "årgang": "2018"
+}

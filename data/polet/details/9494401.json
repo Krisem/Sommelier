@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "9494401",
+  "distrikt": "Mendoza",
+  "druer": "Malbec 40 prosent, Merlot 15 prosent, Cabernet Sauvignon 45 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk brunrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Mendoza",
+  "literpris": 453.2,
+  "lukt": "Tydelig utviklet og kompleks, preg av moden solbær, tørket frukt, innslag av fat, lær og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer. Temperaturkontrollert maserasjon og fermentering. 36 md på fat.",
+  "navn": "Cavas de Weinert Gran Vino 2012",
+  "parser": "json",
+  "pris": 339.9,
+  "produsent": "Bod. y Cavas de Weinert",
+  "smak": "Fyldig, utviklet og kompleks, preg av tørket frukt, friske røde bær, solbær, fat, vanilje og tobakk.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Argentina/Mendoza/Cavas-de-Weinert-Gran-Vino-2012/p/9494401",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9494401",
+  "volum": 75,
+  "årgang": "2012"
+}

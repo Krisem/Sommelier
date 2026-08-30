@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "17159801",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 65 prosent, Merlot 32 prosent, Petit Verdot 2 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk purpurrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Margaux",
+  "literpris": 1267.47,
+  "lukt": "Aroma av bjørnebær, kirsebærtre, stjerneanis og sedertre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. Giscours 2021",
+  "parser": "json",
+  "pris": 950.6,
+  "produsent": "Ch. Giscours",
+  "smak": "Smak av lavendel, teblader og mørke bær.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Margaux",
+  "url": "/Land/Frankrike/Bordeaux/Margaux/Ch-Giscours-2021/p/17159801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17159801",
+  "volum": 75,
+  "årgang": "2021"
+}

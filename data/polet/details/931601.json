@@ -1,0 +1,40 @@
+{
+  "alkohol": "15%",
+  "code": "931601",
+  "distrikt": "Veneto",
+  "druer": "Rondinella 25 prosent, Molinara 10 prosent, Corvina 65 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Amarone della Valpolicella",
+  "literpris": 399.87,
+  "lukt": "Tydelig preg av modne mørke bær, tørket frukt og fat, litt vanilje, kamfer, skogbunn og lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druene høstes og legges på plastksser og tørkes 90 dager i tørkerom, før pressing.",
+  "navn": "Casalforte Amarone della Valpolicella 2021",
+  "parser": "json",
+  "pris": 299.9,
+  "produsent": "Cant. Riondo",
+  "smak": "Fyldig, fast og kompleks, søtlig preg av mørke bær, tørket frukt og fat, litt vanilje og kamfer.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "5,7 g/l",
+  "syre": "6,3 g/l",
+  "underdistrikt": "Amarone della Valpolicella",
+  "url": "/Land/Italia/Veneto/Amarone-della-Valpolicella/Casalforte-Amarone-della-Valpolicella-2021/p/931601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "931601",
+  "volum": 75,
+  "årgang": "2021"
+}

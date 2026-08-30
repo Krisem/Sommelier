@@ -1,0 +1,38 @@
+{
+  "alkohol": "13%",
+  "code": "17193201",
+  "distrikt": "Jura",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 1,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Jura, Côtes du Jura",
+  "literpris": 467.47,
+  "lukt": "Aroma av ferske jordbær, urter og integrert fat.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Jean-Claude Credoz Côtes du Jura Les Grivettes Pinot Noir",
+  "parser": "json",
+  "pris": 350.6,
+  "produsent": "Jean-Claude Credoz",
+  "smak": "Ren, fruktig og saftig. Preg av røde bær, urter i avslutningen.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "3 g/l",
+  "syre": "3,3 g/l",
+  "underdistrikt": "Côtes du Jura",
+  "url": "/Land/Frankrike/Jura/C%C3%B4tes-du-Jura/Jean-Claude-Credoz-C%C3%B4tes-du-Jura-Les-Grivettes-Pinot-Noir/p/17193201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17193201",
+  "volum": 75
+}

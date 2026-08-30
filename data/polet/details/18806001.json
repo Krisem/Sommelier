@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "18806001",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 10,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Italia, Toscana, Brunello di Montalcino",
+  "literpris": 4230,
+  "lukt": "Floral aroma, bær og urter.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Ost"
+  ],
+  "navn": "Casanova di Neri Giovanni Neri Brunello di Montalcino 2019",
+  "parser": "json",
+  "pris": 3172.5,
+  "produsent": "Casanova di Neri",
+  "smak": "Ren mørk frukt, friskhet og god balanse. Konsentrasjon og lang ettersmak.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Brunello di Montalcino",
+  "url": "/Land/Italia/Toscana/Brunello-di-Montalcino/Casanova-di-Neri-Giovanni-Neri-Brunello-di-Montalcino-2019/p/18806001",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18806001",
+  "volum": 75,
+  "årgang": "2019"
+}

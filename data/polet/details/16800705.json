@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16800705",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Klar dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Corton Les Bressandes",
+  "literpris": 1188.33,
+  "lukt": "Aroma av rød bær, hint av skogbunn og mineraler.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Martray-Dubreuil Corton Bressandes Grand Cru 2021",
+  "parser": "json",
+  "pris": 1782.5,
+  "produsent": "Maratray-Dubreuil",
+  "smak": "Fyldig smak av røde bær. God struktur og konsentrasjon.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,7 g/l",
+  "underdistrikt": "Corton Les Bressandes",
+  "url": "/Land/Frankrike/Burgund/Corton-Les-Bressandes/Martray-Dubreuil-Corton-Bressandes-Grand-Cru-2021/p/16800705",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16800705",
+  "volum": 150,
+  "årgang": "2021"
+}

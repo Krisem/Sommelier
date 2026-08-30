@@ -1,0 +1,39 @@
+{
+  "alkohol": "12%",
+  "code": "14327005",
+  "distrikt": "Patagonia",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Argentina, Patagonia",
+  "literpris": 1066.6,
+  "lukt": "Friske bringebær og skogsbær, lett krydret.",
+  "matparring": [
+    "Lam og sau",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "metode": "50% av lagret 11 md. i sementtank, 50% lagret i gamle franske eikefat.",
+  "navn": "Bod. Chacra Cincuenta y Cinco Pinot Noir 2021",
+  "parser": "json",
+  "pris": 1599.9,
+  "produsent": "Bod. Chacra SRL",
+  "smak": "Krydder og lyse bær, middels fylde og saftig struktur.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "url": "/Land/Argentina/Patagonia/Bod-Chacra-Cincuenta-y-Cinco-Pinot-Noir-2021/p/14327005",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14327005",
+  "volum": 150,
+  "årgang": "2021"
+}

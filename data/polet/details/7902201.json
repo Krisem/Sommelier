@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "7902201",
+  "distrikt": "Veneto",
+  "druer": "Merlot 60 prosent, Corvina 40 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto",
+  "literpris": 223.87,
+  "lukt": "Litt utviklet preg av fullmodne mørke bær, litt tørket frukt, krydder, svale urter, fat og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Sen innhøsting av druer. Modnet både i stål og eikefat.",
+  "navn": "Gran Passione 2025",
+  "parser": "json",
+  "pris": 167.9,
+  "produsent": "Casa Vin. Carlo Botter",
+  "smak": "Fyldig og myk munnfølelse, preg av sødmerike røde og mørke bær, tørket frukt, vanilje og fat.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "7,9 g/l",
+  "syre": "6,0 g/l",
+  "url": "/Land/Italia/Veneto/Gran-Passione-2025/p/7902201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7902201",
+  "volum": 75,
+  "årgang": "2025"
+}

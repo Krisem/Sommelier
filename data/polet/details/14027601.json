@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "14027601",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Clos de Vougeot",
+  "literpris": 5250,
+  "lukt": "Røde bær, krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Dom. d'Eugenie Clos-Vougeot Grand Cru 2014",
+  "parser": "json",
+  "pris": 3937.5,
+  "produsent": "Dom. d`Eugenie",
+  "smak": "Saftig. Røde bær, god fylde og lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,1 g/l",
+  "underdistrikt": "Clos de Vougeot",
+  "url": "/Land/Frankrike/Burgund/Clos-de-Vougeot/Dom-d%27Eugenie-Clos-Vougeot-Grand-Cru-2014/p/14027601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14027601",
+  "volum": 75,
+  "årgang": "2014"
+}

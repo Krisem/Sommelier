@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "19001801",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin Premier Cru",
+  "literpris": 4266.53,
+  "lukt": "Aroma av frisk frukt, modne røde bær og krydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Lagret på eikefat i 12md., 40% ny eik. Ufiltrert. Gamle vinstokker.",
+  "navn": "A.F. Gros Gevrey-Chambertin 1er Cru La Combe au Moine 2022",
+  "parser": "json",
+  "pris": 3199.9,
+  "produsent": "Dom. A.F. Gros",
+  "smak": "Fyldig, integrert tannin og fat. Røde bær og krydder.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Gevrey-Chambertin Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin-Premier-Cru/A-F-Gros-Gevrey-Chambertin-1er-Cru-La-Combe-au-Moine-2022/p/19001801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19001801",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19355801",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Auxey-Duresses Premier Cru",
+  "literpris": 719.6,
+  "lukt": "Duft av bringebær, moreller, bjørnebær, blomster og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Vincent Bouzereau Auxey-Duresses 1 Cru Les Bas de Duresses",
+  "parser": "json",
+  "pris": 539.7,
+  "produsent": "Dom. Vincent Bouzereau",
+  "smak": "Smak av bringebær, moreller, bjørnebær og kirsebærstein. Lang og mineralsk avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Auxey-Duresses Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Auxey-Duresses-Premier-Cru/Vincent-Bouzereau-Auxey-Duresses-1-Cru-Les-Bas-de-Duresses/p/19355801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19355801",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "12725701",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Pernand-Vergelesses",
+  "literpris": 666.53,
+  "lukt": "Aroma av mørke, røde bær, urter, lær og skogbunn.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Chanson Pernand-Vergelesses 1er Cru Les Vergelesses",
+  "parser": "json",
+  "pris": 499.9,
+  "produsent": "Chanson Pere & Fils",
+  "smak": "Mørke, røde bær, urter, lær og skogbunn, elegant og fruktig, konsentrert.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "2,1 g/l",
+  "underdistrikt": "Pernand-Vergelesses",
+  "url": "/Land/Frankrike/Burgund/Pernand-Vergelesses/Chanson-Pernand-Vergelesses-1er-Cru-Les-Vergelesses/p/12725701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12725701",
+  "volum": 75,
+  "årgang": "2019"
+}

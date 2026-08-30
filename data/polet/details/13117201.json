@@ -1,0 +1,37 @@
+{
+  "alkohol": "13,8%",
+  "code": "13117201",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Napa Valley",
+  "literpris": 2933.2,
+  "lukt": "Moden, kompleks frukt, solbær, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "navn": "Ch. Montelena Estate Cabernet Sauvignon 2003",
+  "parser": "json",
+  "pris": 2199.9,
+  "produsent": "Ch. Montelena",
+  "smak": "Rik og fyldig. Rund, kompleks og krydret.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Napa Valley",
+  "url": "/Land/USA/California/Napa-Valley/Ch-Montelena-Estate-Cabernet-Sauvignon-2003/p/13117201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13117201",
+  "volum": 75,
+  "årgang": "2003"
+}

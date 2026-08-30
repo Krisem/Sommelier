@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "8000601",
+  "distrikt": "Veneto",
+  "druer": "Molinara 5 prosent, Corvina 75 prosent, Rondinella 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød med blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "Italia, Veneto, Valpolicella Classico",
+  "literpris": 193.2,
+  "lukt": "Fruktig og ung aroma preget av røde bær, innslag av kirsebær, urter, lakris og mandel.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Svin"
+  ],
+  "metode": "Vinifikasjon med bl.a. temperaturkontrollert gjæring i ståltanker.",
+  "navn": "Righetti Valpolicella Classico",
+  "parser": "json",
+  "pris": 144.9,
+  "produsent": "Luigi Righetti",
+  "smak": "Ung, saftig og myk, preg av røde bær og urter, ettersmak med god friskhet og litt fasthet.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "6,5 g/l",
+  "syre": "6,0 g/l",
+  "underdistrikt": "Valpolicella Classico",
+  "url": "/Land/Italia/Veneto/Valpolicella-Classico/Righetti-Valpolicella-Classico/p/8000601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8000601",
+  "volum": 75,
+  "årgang": "2024"
+}

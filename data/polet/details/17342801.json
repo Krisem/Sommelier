@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "17342801",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 8,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 440.93,
+  "lukt": "Aroma av blomster og mørke bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Pecanin-Benenti Langhe Nebbiolo 2023",
+  "parser": "json",
+  "pris": 330.7,
+  "produsent": "Pecanin-Benenti",
+  "smak": "Lyse bær, syrlig frukt med lang ettersmak",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "7 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Pecanin-Benenti-Langhe-Nebbiolo-2023/p/17342801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17342801",
+  "volum": 75,
+  "årgang": "2023"
+}

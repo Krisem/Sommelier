@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "18812401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Chambolle-Musigny Premier Cru",
+  "literpris": 5683.33,
+  "lukt": "Duft av bringebær, rips, moreller, fiol og treverk.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Pousse d'Or Chambolle-Musigny 1er Cru Amoureuses",
+  "parser": "json",
+  "pris": 4262.5,
+  "produsent": "Dom. de la Pousse d'Or",
+  "smak": "Smak av bringebær, moreller, kirsebærstein. Saftig, mineralsk og lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,2 g/l",
+  "underdistrikt": "Chambolle-Musigny Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Chambolle-Musigny-Premier-Cru/Pousse-d%27Or-Chambolle-Musigny-1er-Cru-Amoureuses/p/18812401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18812401",
+  "volum": 75,
+  "årgang": "2021"
+}

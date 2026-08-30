@@ -1,0 +1,39 @@
+{
+  "alkohol": "12,5%",
+  "code": "18922901",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørkerød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Volnay Premier Cru",
+  "literpris": 1466.53,
+  "lukt": "Aroma av røde og mørke bær, urter og fatkrydder.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storvilt",
+    "Svin"
+  ],
+  "navn": "Armand Heitz Volnay 1er Cru Taillepieds 2022",
+  "parser": "json",
+  "pris": 1099.9,
+  "produsent": "Armand Heitz",
+  "smak": "Mørk frukt, ung og ren med lang ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,9 g/l",
+  "underdistrikt": "Volnay Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Volnay-Premier-Cru/Armand-Heitz-Volnay-1er-Cru-Taillepieds-2022/p/18922901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18922901",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,36 @@
+{
+  "alkohol": "12%",
+  "code": "8367006",
+  "distrikt": "California",
+  "druer": "Ruby Cabernet 100 prosent",
+  "emballasje": "Pouch",
+  "farge": "Dyp blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
+  "land": "USA, California",
+  "literpris": 173.27,
+  "lukt": "Aroma med preg av røde og mørke bær, hint av grønne urter og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Svin"
+  ],
+  "metode": "Temperaturkontrollert gjæring i ståltank.",
+  "navn": "Falling Feather Ruby Cabernet",
+  "parser": "json",
+  "pris": 259.9,
+  "produsent": "Arcus Wine Brands",
+  "smak": "Myk og fruktig med litt sødme, preg av røde bær, grønne urter og hint av vanilje og krydder.",
+  "sukker": "9,9 g/l",
+  "syre": "5,6 g/l",
+  "url": "/Land/USA/California/Falling-Feather-Ruby-Cabernet/p/8367006",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8367006",
+  "volum": 150
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16767001",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 4 prosent, Cabernet Sauvignon 60 prosent, Merlot 32 prosent, Petit Verdot 4 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 2752.8,
+  "lukt": "Aroma av mørke bær og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Pontet Canet 2020",
+  "parser": "json",
+  "pris": 2064.6,
+  "produsent": "Ch. Pontet-Canet",
+  "smak": "God konsentrasjon og struktur, god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Pontet-Canet-2020/p/16767001",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16767001",
+  "volum": 75,
+  "årgang": "2020"
+}

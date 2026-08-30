@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "13275901",
+  "distrikt": "Bekaa Valley",
+  "druer": "Cabernet Sauvignon 34 prosent, Carignan 33 prosent, Cinsault 33 prosent",
+  "emballasje": "Glass",
+  "farge": "Utviklet rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 2133.2,
+  "lukt": "Aroma av frukt, krydder og tre.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndhøstet, spontangjæret,modning i betong og franske fat 3 år og 4 år på flaske. Rekorket 2022.",
+  "navn": "Ch. Musar 1999",
+  "parser": "json",
+  "pris": 1599.9,
+  "produsent": "Ch. Musar",
+  "smak": "Frisk, fruktig, tærtiersmaker, lang lengde. Mineralsk og konsentrert.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Ch-Musar-1999/p/13275901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13275901",
+  "volum": 75,
+  "årgang": "1999"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "12390401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Gevrey-Chambertin",
+  "literpris": 1599.87,
+  "lukt": "Preg av røde og mørke bær, pepper, mineral og urter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Ost"
+  ],
+  "navn": "Dom. Geantet-Pansiot Gevrey-Chambertin",
+  "parser": "json",
+  "pris": 1199.9,
+  "produsent": "Dom. Geantet Pansoit",
+  "smak": "Tørr med frisk, lang krydder ettersmak",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Gevrey-Chambertin",
+  "url": "/Land/Frankrike/Burgund/Gevrey-Chambertin/Dom-Geantet-Pansiot-Gevrey-Chambertin/p/12390401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12390401",
+  "volum": 75,
+  "årgang": "2022"
+}

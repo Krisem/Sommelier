@@ -1,0 +1,40 @@
+{
+  "alkohol": "13,5%",
+  "code": "985101",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød med brunskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Langhe",
+  "literpris": 266.67,
+  "lukt": "Nyansert, litt utviklet og krydret, preg av kirsebær, tørket frukt, litt fat, kamfer, te og lær.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra flere vinmarker. Lavt utbytte. Håndarbeid. Druestein skilles ut.",
+  "navn": "Viberti Giovanni Langhe Nebbiolo 2024",
+  "parser": "json",
+  "pris": 200,
+  "produsent": "Viberti Giovanni",
+  "smak": "Fast, fyldig og sammensatt, preg av kirsebær, nype og tørket frukt, litt fat, kamfer, te og lakris.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,6 g/l",
+  "underdistrikt": "Langhe",
+  "url": "/Land/Italia/Piemonte/Langhe/Viberti-Giovanni-Langhe-Nebbiolo-2024/p/985101",
+  "utvalg": "Basisutvalget",
+  "varenummer": "985101",
+  "volum": 75,
+  "årgang": "2024"
+}

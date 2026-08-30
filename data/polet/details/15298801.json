@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "15298801",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 59 prosent, Merlot 41 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Bordeaux Supérieur",
+  "literpris": 1345.07,
+  "lukt": "Mørke bær, mineralsk, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Lafleur Les Perrierès 2019",
+  "parser": "json",
+  "pris": 1008.8,
+  "produsent": "Ch. Lafleur",
+  "smak": "Mørke bær, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Bordeaux Supérieur",
+  "url": "/Land/Frankrike/Bordeaux/Bordeaux-Sup%C3%A9rieur/Ch-Lafleur-Les-Perrier%C3%A8s-2019/p/15298801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15298801",
+  "volum": 75,
+  "årgang": "2019"
+}

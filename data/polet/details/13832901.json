@@ -1,0 +1,37 @@
+{
+  "alkohol": "15%",
+  "code": "13832901",
+  "distrikt": "California",
+  "druer": "Petit Verdot 6 prosent, Cabernet Sauvignon 79 prosent, Cabernet Franc 7 prosent, Malbec 2 prosent, Merlot 6 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 10,
+    "Garvestoffer": 10
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Napa Valley",
+  "literpris": 9916.67,
+  "lukt": "Frisk med aromatisk frukt.",
+  "matparring": [
+    "Storfe"
+  ],
+  "navn": "Opus One 2012",
+  "parser": "json",
+  "pris": 7437.5,
+  "produsent": "Opus One Winery",
+  "smak": "Rund og fyldig.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,8 g/l",
+  "underdistrikt": "Napa Valley",
+  "url": "/Land/USA/California/Napa-Valley/Opus-One-2012/p/13832901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13832901",
+  "volum": 75,
+  "årgang": "2012"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16345901",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 18 prosent, Cabernet Sauvignon 39 prosent, Merlot 43 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 9250,
+  "lukt": "Mørke bær og frukter, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Haut Brion 2020",
+  "parser": "json",
+  "pris": 6937.5,
+  "produsent": "Ch. Haut-Brion",
+  "smak": "Mørke bær, konsentrert, god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Haut-Brion-2020/p/16345901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16345901",
+  "volum": 75,
+  "årgang": "2020"
+}

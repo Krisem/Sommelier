@@ -1,0 +1,40 @@
+{
+  "alkohol": "13%",
+  "code": "15035101",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød, blåskjær.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 4,
+    "Garvestoffer": 3
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Chassagne-Montrachet",
+  "literpris": 852.93,
+  "lukt": "Duft av syrlige røde bær, krydder og fatkarakter.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Lam og sau"
+  ],
+  "metode": "Naturlig gjæring på 228L eikefat. Lagret i 12-18 md. på fat. 25%.",
+  "navn": "Jean Noël Gagnard L'Estimée Chassagne-Montrachet 2021",
+  "parser": "json",
+  "pris": 639.7,
+  "produsent": "Jean-Noël Gagnard",
+  "smak": "Tørr, middels fylde, bløt, saftig fruktighet av røde bær, god lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "underdistrikt": "Chassagne-Montrachet",
+  "url": "/Land/Frankrike/Burgund/Chassagne-Montrachet/Jean-No%C3%ABl-Gagnard-L%27Estim%C3%A9e-Chassagne-Montrachet-2021/p/15035101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15035101",
+  "volum": 75,
+  "årgang": "2021"
+}

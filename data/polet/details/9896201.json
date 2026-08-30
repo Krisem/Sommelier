@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "9896201",
+  "distrikt": "Toscana",
+  "druer": "Sangiovese 80 prosent, Canaiolo 10 prosent, Merlot 10 prosent",
+  "emballasje": "Glass",
+  "farge": "Middels dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Toscana, Chianti",
+  "literpris": 239.87,
+  "lukt": "Ung aroma av røde bær, litt blomst, grønn urt og lakris.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Svin"
+  ],
+  "metode": "Trad. vinifikasjon i temp.kontrollerte ståltanker, modnet 12 md. i store fat før tapping, 3 md. fl.",
+  "navn": "Vinetti de Fiorini Chianti 2022",
+  "parser": "json",
+  "pris": 179.9,
+  "produsent": "Winehouse Norway",
+  "smak": "Saftig, ungdommelig og fokusert, preg av kirsebær, litt jordbær, grønn urt og krydder.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Chianti",
+  "url": "/Land/Italia/Toscana/Chianti/Vinetti-de-Fiorini-Chianti-2022/p/9896201",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9896201",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "13590905",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 78 prosent, Merlot 22 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rødlilla.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 1525,
+  "lukt": "Mørke bær, sedertre, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Grand-Puy-Lacoste 2018",
+  "parser": "json",
+  "pris": 2287.5,
+  "produsent": "Ch. Grand-Puy-Lacoste",
+  "smak": "God fylde, konsentrert frukt, god lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Grand-Puy-Lacoste-2018/p/13590905",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13590905",
+  "volum": 150,
+  "årgang": "2018"
+}

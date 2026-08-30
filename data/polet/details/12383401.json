@@ -1,0 +1,38 @@
+{
+  "alkohol": "13,5%",
+  "code": "12383401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Corton Le Clos du Roi",
+  "literpris": 1867.73,
+  "lukt": "Duft av bringebær, kirsebær, bjørnebær, krydder og treverk.",
+  "matparring": [
+    "Storfe",
+    "Småvilt"
+  ],
+  "navn": "Buisson-Charles Corton Clos du Roi",
+  "parser": "json",
+  "pris": 1400.8,
+  "produsent": "Buisson-Charles",
+  "smak": "Smak av røde bær, moreller, kirsebærstein, krydder og treverk. God struktur og lang ettersmak.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,5 g/l",
+  "underdistrikt": "Corton Le Clos du Roi",
+  "url": "/Land/Frankrike/Burgund/Corton-Le-Clos-du-Roi/Buisson-Charles-Corton-Clos-du-Roi/p/12383401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12383401",
+  "volum": 75,
+  "årgang": "2017"
+}

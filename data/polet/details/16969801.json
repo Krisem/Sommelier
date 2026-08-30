@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "16969801",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 70 prosent, Merlot 30 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 1558.4,
+  "lukt": "Aroma av mørke røde bær, tobakk, krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Duhart-Milon 2019",
+  "parser": "json",
+  "pris": 1168.8,
+  "produsent": "Ch. Duhart Milon",
+  "smak": "Bær, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Ch-Duhart-Milon-2019/p/16969801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16969801",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "19129201",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 11,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Sta. Rita Hills",
+  "literpris": 1087.6,
+  "lukt": "Aroma av røde og mørke bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Whitcraft Donnachadh Vineyard Pinot Noir 2022",
+  "parser": "json",
+  "pris": 815.7,
+  "produsent": "Whitcraft Winery",
+  "smak": "God intensitet i frukt. Røde bær og mineraler. Lang og balansert ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Sta. Rita Hills",
+  "url": "/Land/USA/California/Sta-Rita-Hills/Whitcraft-Donnachadh-Vineyard-Pinot-Noir-2022/p/19129201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19129201",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "15704201",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 4 prosent, Cabernet Sauvignon 68 prosent, Merlot 23 prosent, Petit Verdot 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 6,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Haut-Médoc",
+  "literpris": 671.33,
+  "lukt": "Mørke bær. Krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Cantemerle",
+  "parser": "json",
+  "pris": 503.5,
+  "produsent": "Ch. Cantemerle",
+  "smak": "Mørke bær, god struktur og lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,2 g/l",
+  "underdistrikt": "Haut-Médoc",
+  "url": "/Land/Frankrike/Bordeaux/Haut-M%C3%A9doc/Ch-Cantemerle/p/15704201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15704201",
+  "volum": 75,
+  "årgang": "2022"
+}

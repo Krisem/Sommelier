@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16885301",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 6,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Vosne-Romanée",
+  "literpris": 1600,
+  "lukt": "Fruktig aroma av jordbær, moreller, krydder.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Dom. G. Roblot-Marchand Vosne-Romanée 1er Cru Les Rouges du Dessus",
+  "parser": "json",
+  "pris": 1200,
+  "produsent": "G. Roblot-Marchand et Fils",
+  "smak": "Saftig tanniner, frisk, frukt i ettersmak.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,6 g/l",
+  "underdistrikt": "Vosne-Romanée",
+  "url": "/Land/Frankrike/Burgund/Vosne-Roman%C3%A9e/Dom-G-Roblot-Marchand-Vosne-Roman%C3%A9e-1er-Cru-Les-Rouges-du-Dessus/p/16885301",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16885301",
+  "volum": 75,
+  "årgang": "2020"
+}

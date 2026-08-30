@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "9955601",
+  "distrikt": "Piemonte",
+  "druer": "Barbera 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbera d'Asti",
+  "literpris": 420,
+  "lukt": "Sammensatt aroma preget av modne røde og mørke bær, urter, litt tobakk, fat, lakris og skogbunn.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "metode": "Modnes i store botte laget av fransk Allier-eik 18-24 md.",
+  "navn": "Scarpa Barbera d'Asti I Bricchi 2023",
+  "parser": "json",
+  "pris": 315,
+  "produsent": "Scarpa",
+  "smak": "Litt utviklet, preg av sursøte røde bær, litt fat, krydder og tørket frukt, god friskhet og lengde.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Barbera d'Asti",
+  "url": "/Land/Italia/Piemonte/Barbera-d%27Asti/Scarpa-Barbera-d%27Asti-I-Bricchi-2023/p/9955601",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9955601",
+  "volum": 75,
+  "årgang": "2023"
+}

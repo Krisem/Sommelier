@@ -1,0 +1,38 @@
+{
+  "alkohol": "13,5%",
+  "code": "11265801",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 26 prosent, Cabernet Sauvignon 72 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Bordeaux, Pauillac",
+  "literpris": 5550,
+  "lukt": "Røde og mørke bær, mineralsk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Les Forts de Latour 2010",
+  "parser": "json",
+  "pris": 4162.5,
+  "produsent": "Ch. Latour",
+  "smak": "Mørke bær, mineralsk, god struktur og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,0 g/l",
+  "underdistrikt": "Pauillac",
+  "url": "/Land/Frankrike/Bordeaux/Pauillac/Les-Forts-de-Latour-2010/p/11265801",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11265801",
+  "volum": 75,
+  "årgang": "2010"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16739701",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 9,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Chambolle-Musigny Premier Cru",
+  "literpris": 2149.07,
+  "lukt": "Duft av bringebær, mørke bær, stenfrukt, fiol, skogbunn og treverk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "La Pousse d'Or Chambolle-Musigny 1er Cru Les Groseilles",
+  "parser": "json",
+  "pris": 1611.8,
+  "produsent": "Dom. de la Pousse d'Or",
+  "smak": "Smak av røde og mørke bær, kirsebærstein og noe treverk. Lang avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,8 g/l",
+  "underdistrikt": "Chambolle-Musigny Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Chambolle-Musigny-Premier-Cru/La-Pousse-d%27Or-Chambolle-Musigny-1er-Cru-Les-Groseilles/p/16739701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16739701",
+  "volum": 75,
+  "årgang": "2021"
+}

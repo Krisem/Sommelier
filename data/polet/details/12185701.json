@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "12185701",
+  "distrikt": "Bordeaux",
+  "druer": "Merlot 55 prosent, Cabernet Sauvignon 10 prosent, Cabernet Franc 35 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Saint-Emilion",
+  "literpris": 2230.27,
+  "lukt": "Aroma av mørke bær og plommer, florale toner, sedertre og tobakk.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Canon La Gaffelière 2016",
+  "parser": "json",
+  "pris": 1672.7,
+  "produsent": "Ch. Canon la Gaffeliere",
+  "smak": "Konsentrert frukt og lang lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,5 g/l",
+  "underdistrikt": "Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion/Ch-Canon-La-Gaffeli%C3%A8re-2016/p/12185701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "12185701",
+  "volum": 75,
+  "årgang": "2016"
+}

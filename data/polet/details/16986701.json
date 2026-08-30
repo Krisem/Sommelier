@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,1%",
+  "code": "16986701",
+  "distrikt": "California",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 11,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Edna Valley",
+  "literpris": 1039.73,
+  "lukt": "Aroma av røde frukter, fiol og bringebær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Småvilt",
+    "Svin"
+  ],
+  "navn": "Whitcraft Edna Valley Chene Vineyard Pinot Noir 2022",
+  "parser": "json",
+  "pris": 779.8,
+  "produsent": "Whitcraft Winery",
+  "smak": "Smak av kirsebær, blomster og mineralsk innslag.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Edna Valley",
+  "url": "/Land/USA/California/Edna-Valley/Whitcraft-Edna-Valley-Chene-Vineyard-Pinot-Noir-2022/p/16986701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16986701",
+  "volum": 75,
+  "årgang": "2022"
+}

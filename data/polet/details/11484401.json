@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "11484401",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 6,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Brouilly",
+  "literpris": 386.53,
+  "lukt": "Røde bær, bringebær, stenfrukt.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Ch. Thivin Reverdon Brouilly 2023",
+  "parser": "json",
+  "pris": 289.9,
+  "produsent": "Ch. Thivin",
+  "smak": "Saftig, frisk, ren, fruktdrevet.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,3 g/l",
+  "underdistrikt": "Brouilly",
+  "url": "/Land/Frankrike/Burgund/Brouilly/Ch-Thivin-Reverdon-Brouilly-2023/p/11484401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "11484401",
+  "volum": 75,
+  "årgang": "2023"
+}

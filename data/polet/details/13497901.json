@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "13497901",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rødbrun, klar.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 9
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barbaresco",
+  "literpris": 1900.8,
+  "lukt": "Aroma av modne mørke bær, jordsmonn, skog, tjære, trøffel og krydder.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Druer fra parsell på østsiden av Martinenga. Lagring 15 md. i brukte franske fat, deretter 18 md. i botti. Flaskelagring 26 md.",
+  "navn": "Marchesi di Gresy Camp Gros Martinenga Barbaresco Riserva 2015",
+  "parser": "json",
+  "pris": 1425.6,
+  "produsent": "Marchesi di Gresy",
+  "smak": "Fyldig.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Barbaresco",
+  "url": "/Land/Italia/Piemonte/Barbaresco/Marchesi-di-Gresy-Camp-Gros-Martinenga-Barbaresco-Riserva-2015/p/13497901",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "13497901",
+  "volum": 75,
+  "årgang": "2015"
+}

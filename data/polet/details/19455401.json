@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "19455401",
+  "distrikt": "Burgund",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 10,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Burgund, Volnay Premier Cru",
+  "literpris": 2458.13,
+  "lukt": "Duft av bringebær, jordbær, fiol og moreller.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Boillot Volnay 1er Cru Champans",
+  "parser": "json",
+  "pris": 1843.6,
+  "produsent": "C&G Boillot",
+  "smak": "Smak av bringebær, rips, moreller og kirsebærstein. Lang, mineralsk avslutning.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,2 g/l",
+  "underdistrikt": "Volnay Premier Cru",
+  "url": "/Land/Frankrike/Burgund/Volnay-Premier-Cru/Boillot-Volnay-1er-Cru-Champans/p/19455401",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "19455401",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "10918601",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Sauvignon 38 prosent, Cabernet Franc 6 prosent, Merlot 56 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Pessac-Léognan",
+  "literpris": 13016.67,
+  "lukt": "Ren, mørke bær, mørk sjokolade.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Haut-Brion 2016",
+  "parser": "json",
+  "pris": 9762.5,
+  "produsent": "Ch. Haut-Brion",
+  "smak": "Mørke bær, god struktur og lengde.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Pessac-Léognan",
+  "url": "/Land/Frankrike/Bordeaux/Pessac-L%C3%A9ognan/Ch-Haut-Brion-2016/p/10918601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "10918601",
+  "volum": 75,
+  "årgang": "2016"
+}

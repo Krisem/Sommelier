@@ -1,0 +1,40 @@
+{
+  "alkohol": "12,5%",
+  "code": "1653201",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød, klar.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 5,
+    "Garvestoffer": 4
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Morgon",
+  "literpris": 499.87,
+  "lukt": "Aroma av røde bær.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Svin",
+    "Grønnsaker"
+  ],
+  "metode": "Ufiltrert.",
+  "navn": "Marcel Lapierre Morgon 2025",
+  "parser": "json",
+  "pris": 374.9,
+  "produsent": "Marcel Lapierre",
+  "smak": "Ren, saftig, rød frukt, syre. Kjølig.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Morgon",
+  "url": "/Land/Frankrike/Burgund/Morgon/Marcel-Lapierre-Morgon-2025/p/1653201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "1653201",
+  "volum": 75,
+  "årgang": "2025"
+}

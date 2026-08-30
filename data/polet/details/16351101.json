@@ -1,0 +1,39 @@
+{
+  "alkohol": "13%",
+  "code": "16351101",
+  "distrikt": "Oregon",
+  "druer": "Pinot Noir 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Lys rubinrød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "USA, Oregon, Willamette valley",
+  "literpris": 1169.33,
+  "lukt": "Floral med røde bær, hint av fatkrydder.",
+  "matparring": [
+    "Fisk",
+    "Lyst kjøtt",
+    "Småvilt"
+  ],
+  "navn": "Nicolas Jay L'Ensemble Pinot Noir",
+  "parser": "json",
+  "pris": 877,
+  "produsent": "Dom. Nicolas-Jay",
+  "smak": "Kirsebær og rips, blomstereng og hint av søte fatkrydder. Lang.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,8 g/l",
+  "underdistrikt": "Willamette valley",
+  "url": "/Land/USA/Oregon/Willamette-valley/Nicolas-Jay-L%27Ensemble-Pinot-Noir/p/16351101",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "16351101",
+  "volum": 75,
+  "årgang": "2019"
+}

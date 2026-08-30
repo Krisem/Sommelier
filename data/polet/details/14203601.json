@@ -1,0 +1,38 @@
+{
+  "alkohol": "11,5%",
+  "code": "14203601",
+  "distrikt": "Burgund",
+  "druer": "Gamay 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 4,
+    "Fylde": 7,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Frankrike, Burgund, Chiroubles",
+  "literpris": 566.53,
+  "lukt": "Røde bær med frisk og klar frukt.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau"
+  ],
+  "navn": "Jules Métras Chiroubles Vieilles Vignes 2024",
+  "parser": "json",
+  "pris": 424.9,
+  "produsent": "Jules Métras",
+  "smak": "Frisk. Saftig og bæraktig med mineralitet.",
+  "stil": "Frisk og fruktig",
+  "stil_beskrivelse": "Lett til middels fyldig, leskende, god friskhet. Smak av røde bær, evt innslag av urter og blomster. Passer til lette matretter som pasta, pizza, taco og tapas.",
+  "sukker": "Under 3 g/l",
+  "syre": "4,4 g/l",
+  "underdistrikt": "Chiroubles",
+  "url": "/Land/Frankrike/Burgund/Chiroubles/Jules-M%C3%A9tras-Chiroubles-Vieilles-Vignes-2024/p/14203601",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "14203601",
+  "volum": 75,
+  "årgang": "2024"
+}

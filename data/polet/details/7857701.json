@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "7857701",
+  "distrikt": "California",
+  "druer": "Petite Sirah (Durif, P. Syrah) 12 prosent, Zinfandel 80 prosent, Pinot Noir 8 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 9,
+    "Garvestoffer": 7
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Mendocino",
+  "literpris": 246.53,
+  "lukt": "Tydelig og litt utviklet aroma av fullmodne mørke og røde bær, fat med vanilje, litt nellik og te.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Lagring på amerikanske og franske eikefat. Så i nye og brukte bourbonfat (opptil 13 år gml).",
+  "navn": "1000 Stories Bourbon Barrel Aged Zinfandel 2023",
+  "parser": "json",
+  "pris": 184.9,
+  "produsent": "Fetzer Vineyards",
+  "smak": "Fyldig med god lengde, preg av sødmerike bær og litt tørket frukt, røyk, pepper, vanilje og eik.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "8 g/l",
+  "syre": "6,5 g/l",
+  "underdistrikt": "Mendocino",
+  "url": "/Land/USA/California/Mendocino/1000-Stories-Bourbon-Barrel-Aged-Zinfandel-2023/p/7857701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "7857701",
+  "volum": 75,
+  "årgang": "2023"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "17060201",
+  "distrikt": "Rhône",
+  "druer": "Carignan 5 prosent, Grenache 60 prosent, Mourvèdre 20 prosent, Syrah 15 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Rhône, Costières de Nîmes",
+  "literpris": 1005.73,
+  "lukt": "Aroma av bjørnebær, moreller, krekling og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "navn": "Ch. de Nages Vox",
+  "parser": "json",
+  "pris": 754.3,
+  "produsent": "Ch. de Nages",
+  "smak": "Smak av mørke bær, vanilje og krydder. Fyldig med god mineralitet, lang ettersmak.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "3,9 g/l",
+  "underdistrikt": "Costières de Nîmes",
+  "url": "/Land/Frankrike/Rh%C3%B4ne/Costi%C3%A8res-de-N%C3%AEmes/Ch-de-Nages-Vox/p/17060201",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "17060201",
+  "volum": 75,
+  "årgang": "2019"
+}

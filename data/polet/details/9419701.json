@@ -1,0 +1,39 @@
+{
+  "alkohol": "14%",
+  "code": "9419701",
+  "distrikt": "Rioja",
+  "druer": "Tempranillo (Tinto del Pais) 85 prosent, Graciano (Bovale) 10 prosent, Mazuelo 5 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Spania, Rioja",
+  "literpris": 373.2,
+  "lukt": "Nyansert preg av modne mørke bær, tørket frukt, litt urt, te og lær over integrert fat og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Storvilt"
+  ],
+  "metode": "Håndplukkede druer, temp.kontrollert gjæring. 24 md. Lagring på eikefat.",
+  "navn": "Cune Gran Reserva 2018",
+  "parser": "json",
+  "pris": 279.9,
+  "produsent": "CVNE",
+  "smak": "Fyldig, litt utviklet og nyansert, preg av modne skogsbær, fat, tobakk og vanilje, litt rosin og te.",
+  "stil": "Utviklet og nyansert",
+  "stil_beskrivelse": "Utviklede og lagrede aromaer med smak av høst, steinsopp, skinke, nøtter og kjøttkraft. Passer til speket, innkokt og stekt mat, som lagrede oster, sopp og vilt.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,5 g/l",
+  "url": "/Land/Spania/Rioja/Cune-Gran-Reserva-2018/p/9419701",
+  "utvalg": "Basisutvalget",
+  "varenummer": "9419701",
+  "volum": 75,
+  "årgang": "2018"
+}

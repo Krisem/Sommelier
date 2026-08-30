@@ -1,0 +1,40 @@
+{
+  "alkohol": "14,5%",
+  "code": "18982501",
+  "distrikt": "Piemonte",
+  "druer": "Nebbiolo 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 7,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Piemonte, Barolo",
+  "literpris": 577.2,
+  "lukt": "Aroma av kirsebær og krydder, floral overtone.",
+  "matparring": [
+    "Lyst kjøtt",
+    "Storfe",
+    "Småvilt"
+  ],
+  "metode": "30 dagers maserasjon. Lagret 24 md. på Slovenske eikeliggere og 6 md. på sementtank. Modning 6 md. på flaske.",
+  "navn": "Diego Conterno Barolo del Commune di Monforte d'Alba 2021",
+  "parser": "json",
+  "pris": 432.9,
+  "produsent": "Diego Conterno",
+  "smak": "Konsentrert og fruktig. Moden tanninstruktur og god syrefriskhet.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Barolo",
+  "url": "/Land/Italia/Piemonte/Barolo/Diego-Conterno-Barolo-del-Commune-di-Monforte-d%27Alba-2021/p/18982501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "18982501",
+  "volum": 75,
+  "årgang": "2021"
+}

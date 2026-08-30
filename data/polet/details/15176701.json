@@ -1,0 +1,39 @@
+{
+  "alkohol": "14,5%",
+  "code": "15176701",
+  "distrikt": "California",
+  "druer": "Cabernet Sauvignon 100 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "USA, California, Napa Valley",
+  "literpris": 11933.33,
+  "lukt": "Frukt.",
+  "matparring": [
+    "Storfe",
+    "Småvilt",
+    "Storvilt"
+  ],
+  "navn": "Bond Estates Quella 2019",
+  "parser": "json",
+  "pris": 8950,
+  "produsent": "Bond Estates",
+  "smak": "Frukt.",
+  "stil": "Fyldig og saftig",
+  "stil_beskrivelse": "Fyldig med mye smak av blåbær, bjørnebær og krekling, evt innslag av mynte pepper, røyk og lakris. Passer til vilt, sopp og gryteretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,4 g/l",
+  "underdistrikt": "Napa Valley",
+  "url": "/Land/USA/California/Napa-Valley/Bond-Estates-Quella-2019/p/15176701",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "15176701",
+  "volum": 75,
+  "årgang": "2019"
+}

@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "8136501",
+  "distrikt": "Bekaa Valley",
+  "druer": "Cabernet Sauvignon 7 prosent, Tempranillo (Tinto del Pais) 20 prosent, Marselan 5 prosent, Syrah 50 prosent, Cinsault 18 prosent",
+  "emballasje": "Glass",
+  "farge": "Mørk blårød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 9,
+    "Garvestoffer": 6
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Libanon, Bekaa Valley",
+  "literpris": 226.53,
+  "lukt": "Aroma preget av modne mørke bær, tørket frukt, innslag av svale urter, krydder og vanilje.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "metode": "Håndplukket. Malolaktisk gjæring på sementtank. Minst 24 md lagring på tank. Flasketapping etter 28 md.",
+  "navn": "Ch. Kefraya Bretèches 2023",
+  "parser": "json",
+  "pris": 169.9,
+  "produsent": "Ch. Kefraya",
+  "smak": "Fruktig, krydret og myk med saftig preg av sødmerike mørke bær, tørket urt, vanilje og lakris.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "url": "/Land/Libanon/Bekaa-Valley/Ch-Kefraya-Bret%C3%A8ches-2023/p/8136501",
+  "utvalg": "Basisutvalget",
+  "varenummer": "8136501",
+  "volum": 75,
+  "årgang": "2023"
+}

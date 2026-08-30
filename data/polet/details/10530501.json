@@ -1,0 +1,39 @@
+{
+  "alkohol": "15%",
+  "code": "10530501",
+  "distrikt": "Bordeaux",
+  "druer": "Cabernet Franc 12 prosent, Merlot 88 prosent",
+  "emballasje": "Glass",
+  "farge": "Dyp rød.",
+  "fetched_at": "2026-08-30T06:01:16.440008+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 8,
+    "Fylde": 8,
+    "Garvestoffer": 8
+  },
+  "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
+  "land": "Frankrike, Bordeaux, Saint-Emilion",
+  "literpris": 3183.33,
+  "lukt": "Mørk rød, lakris.",
+  "matparring": [
+    "Storfe",
+    "Lam og sau",
+    "Småvilt"
+  ],
+  "navn": "Ch. Belair-Monange 2015",
+  "parser": "json",
+  "pris": 2387.5,
+  "produsent": "Ch. Bélair-Monange",
+  "smak": "God struktur, fyldig, mørke bær, lang lengde.",
+  "stil": "Fast og fruktig",
+  "stil_beskrivelse": "Middels fyldig, moderat med alkohol og en viss fasthet. Smak av morell, solbær, oliven og rød paprika. Passer til faste oster og stekte eller innkokte kjøttretter.",
+  "sukker": "Under 3 g/l",
+  "syre": "5,3 g/l",
+  "underdistrikt": "Saint-Emilion",
+  "url": "/Land/Frankrike/Bordeaux/Saint-Emilion/Ch-Belair-Monange-2015/p/10530501",
+  "utvalg": "Tilleggsutvalget",
+  "varenummer": "10530501",
+  "volum": 75,
+  "årgang": "2015"
+}
