@@ -5,13 +5,14 @@
   "druer": "Nero d'Avola 100 prosent",
   "emballasje": "Glass",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 7,
     "Fylde": 8,
     "Garvestoffer": 6
   },
+  "korktype": "Skrukapsel",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Italia, Sicilia, Terre Siciliane",
   "literpris": 210.53,
@@ -33,5 +34,6 @@
   "url": "/Land/Italia/Sicilia/Terre-Siciliane/Barone-Montalto-Passivento/p/106801",
   "utvalg": "Basisutvalget",
   "varenummer": "106801",
-  "volum": 75
+  "volum": 75,
+  "økologisk": true
 }

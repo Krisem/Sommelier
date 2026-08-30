@@ -216,7 +216,19 @@ def parse_product_json(html: str) -> dict | None:
     _put(result, "distrikt", distrikt)
     _put(result, "underdistrikt", underdistrikt)
     _put(result, "emballasje", _text(product.get("packageType")))
+    _put(result, "korktype", _text(product.get("cork")))
     _put(result, "grossist", _text(product.get("wholeSaler")))
+
+    # Sertifiseringsflagg. `eco` er den eneste med reell spredning (13 % av
+    # 1 187 målte produktsider) og finnes ikke noe annet sted i snapshotet —
+    # katalograden bærer `sustainable`, som er noe annet og bredere.
+    # Bare True lagres: fraværet av nøkkelen betyr «ikke merket», og det holder
+    # filene små. bioDynamic (10) og fairTrade (5) er sjeldne, men gratis å ta
+    # med når vi først står i blobben.
+    for nøkkel, felt in (("eco", "økologisk"), ("bioDynamic", "biodynamisk"),
+                         ("fairTrade", "fairtrade")):
+        if product.get(nøkkel) is True:
+            result[felt] = True
     _put(result, "pris", _number(product.get("price")))
     _put(result, "volum", _number(product.get("volume")))
     _put(result, "literpris", _number(product.get("litrePrice")))

@@ -5,13 +5,14 @@
   "druer": "Syrah 30 prosent, Tempranillo (Tinto del Pais) 70 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Mørk blålilla.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 5,
     "Fylde": 6,
     "Garvestoffer": 5
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Spania, Castilla La Mancha, Castilla",
   "literpris": 136.53,
@@ -36,5 +37,6 @@
   "utvalg": "Bestillingsutvalget",
   "varenummer": "16304906",
   "volum": 300,
-  "årgang": "2023"
+  "årgang": "2023",
+  "økologisk": true
 }

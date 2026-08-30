@@ -5,7 +5,7 @@
   "druer": "Montepulciano 20 prosent, Sangiovese 80 prosent",
   "emballasje": "Emballasje med pant",
   "farge": "Dyp rød med blåskjær.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
@@ -35,5 +35,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "20722901",
   "volum": 75,
-  "årgang": "2025"
+  "årgang": "2025",
+  "økologisk": true
 }

@@ -4,13 +4,14 @@
   "druer": "Cabernet Sauvignon 100 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Mørk rubinrød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 7,
     "Fylde": 8,
     "Garvestoffer": 6
   },
+  "korktype": "Plastkork",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Spania",
   "literpris": 133.3,
@@ -31,5 +32,6 @@
   "url": "/Land/Spania/Johan-Uten-Land-Red-Label-Cabernet-Sauvignon/p/20784906",
   "utvalg": "Bestillingsutvalget",
   "varenummer": "20784906",
-  "volum": 300
+  "volum": 300,
+  "økologisk": true
 }

@@ -1,17 +1,19 @@
 {
   "alkohol": "14%",
+  "biodynamisk": true,
   "code": "7774405",
   "distrikt": "Bordeaux",
   "druer": "Merlot 80 prosent, Cabernet Sauvignon 20 prosent",
   "emballasje": "Glass",
   "farge": "Mørk rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 9,
     "Garvestoffer": 9
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Frankrike, Bordeaux, Blaye-Côtes de Bordeaux",
   "literpris": 319.93,
@@ -36,5 +38,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "7774405",
   "volum": 150,
-  "årgang": "2020"
+  "årgang": "2020",
+  "økologisk": true
 }

@@ -5,13 +5,14 @@
   "druer": "Merlot 40 prosent, Cabernet Sauvignon 60 prosent",
   "emballasje": "Glass",
   "farge": "Mørk plommerød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 9,
     "Fylde": 10,
     "Garvestoffer": 8
   },
+  "korktype": "Naturkork",
   "lagringspotensial": "Kan drikkes nå, blir bedre ved lagring",
   "land": "Italia, Toscana, Bolgheri",
   "literpris": 773.2,

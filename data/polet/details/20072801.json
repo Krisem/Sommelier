@@ -1,17 +1,19 @@
 {
   "alkohol": "13%",
+  "biodynamisk": true,
   "code": "20072801",
   "distrikt": "Loire",
   "druer": "Cabernet Franc 100 prosent",
   "emballasje": "Glass",
   "farge": "Mørk rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 9,
     "Fylde": 9,
     "Garvestoffer": 7
   },
+  "korktype": "Naturkork",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Frankrike, Loire, Bourgueil",
   "literpris": 341.47,
@@ -36,5 +38,6 @@
   "utvalg": "Tilleggsutvalget",
   "varenummer": "20072801",
   "volum": 75,
-  "årgang": "2023"
+  "årgang": "2023",
+  "økologisk": true
 }

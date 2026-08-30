@@ -4,13 +4,14 @@
   "druer": "Tempranillo (Tinto del Pais) 100 prosent",
   "emballasje": "Øvrig",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 7,
     "Garvestoffer": 7
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Spania",
   "literpris": 134.9,
@@ -33,5 +34,6 @@
   "url": "/Land/Spania/Castillo-de-Gredos/p/11569901",
   "utvalg": "Basisutvalget",
   "varenummer": "11569901",
-  "volum": 100
+  "volum": 100,
+  "økologisk": true
 }

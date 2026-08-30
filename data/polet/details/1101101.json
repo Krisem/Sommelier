@@ -5,7 +5,7 @@
   "druer": "Syrah 37 prosent, Grenache 44 prosent, Mourvèdre 14 prosent, Cinsault 5 prosent",
   "emballasje": "Glass",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
@@ -36,5 +36,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "1101101",
   "volum": 75,
-  "årgang": "2022"
+  "årgang": "2022",
+  "økologisk": true
 }

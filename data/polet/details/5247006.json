@@ -5,13 +5,14 @@
   "druer": "Cabernet Sauvignon 52 prosent, Syrah 20 prosent, Merlot 28 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 7,
     "Fylde": 7,
     "Garvestoffer": 7
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Chile, Valle Central",
   "literpris": 179.63,
@@ -32,5 +33,6 @@
   "url": "/Land/Chile/Valle-Central/Odfjell-Armador/p/5247006",
   "utvalg": "Bestillingsutvalget",
   "varenummer": "5247006",
-  "volum": 300
+  "volum": 300,
+  "økologisk": true
 }

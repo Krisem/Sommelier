@@ -5,13 +5,14 @@
   "druer": "Zinfandel 100 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Dyp rød med blåskjær.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 7,
     "Fylde": 9,
     "Garvestoffer": 8
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Italia, Puglia",
   "literpris": 153.3,
@@ -34,5 +35,6 @@
   "utvalg": "Bestillingsutvalget",
   "varenummer": "14307406",
   "volum": 300,
-  "årgang": "2024"
+  "årgang": "2024",
+  "økologisk": true
 }

@@ -5,13 +5,14 @@
   "druer": "Pinot Noir 100 prosent",
   "emballasje": "Glass",
   "farge": "Lys rubinrød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 1,
     "Fylde": 6,
     "Garvestoffer": 7
   },
+  "korktype": "Naturkork",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Frankrike, Jura, Côtes du Jura",
   "literpris": 467.47,
@@ -34,5 +35,6 @@
   "url": "/Land/Frankrike/Jura/C%C3%B4tes-du-Jura/Jean-Claude-Credoz-C%C3%B4tes-du-Jura-Les-Grivettes-Pinot-Noir/p/17193201",
   "utvalg": "Tilleggsutvalget",
   "varenummer": "17193201",
-  "volum": 75
+  "volum": 75,
+  "økologisk": true
 }

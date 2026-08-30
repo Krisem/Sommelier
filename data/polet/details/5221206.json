@@ -5,13 +5,14 @@
   "druer": "Malbec 100 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Dyp rød med blåskjær.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 8,
     "Garvestoffer": 8
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Argentina, Mendoza",
   "literpris": 166.63,
@@ -35,5 +36,6 @@
   "utvalg": "Bestillingsutvalget",
   "varenummer": "5221206",
   "volum": 300,
-  "årgang": "2023"
+  "årgang": "2023",
+  "økologisk": true
 }

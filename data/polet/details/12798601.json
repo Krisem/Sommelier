@@ -1,17 +1,19 @@
 {
   "alkohol": "11,5%",
+  "biodynamisk": true,
   "code": "12798601",
   "distrikt": "Languedoc-Roussillon",
   "druer": "Cinsault 100 prosent",
   "emballasje": "Glass",
   "farge": "Dyp blårød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 6,
     "Garvestoffer": 7
   },
+  "korktype": "Skrukapsel",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Frankrike, Languedoc-Roussillon, Côtes Catalanes",
   "literpris": 226.53,
@@ -36,5 +38,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "12798601",
   "volum": 75,
-  "årgang": "2025"
+  "årgang": "2025",
+  "økologisk": true
 }

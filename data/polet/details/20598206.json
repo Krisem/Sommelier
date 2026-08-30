@@ -5,13 +5,14 @@
   "druer": "Gamay 100 prosent",
   "emballasje": "Pouch",
   "farge": "Dyp rød med blåskjær.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 6,
     "Garvestoffer": 7
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Frankrike, Burgund, Beaujolais-Villages",
   "literpris": 209.93,

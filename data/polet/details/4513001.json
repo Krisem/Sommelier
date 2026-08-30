@@ -5,13 +5,14 @@
   "druer": "Montepulciano 100 prosent",
   "emballasje": "Glass",
   "farge": "Mørk blårød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 7,
     "Garvestoffer": 8
   },
+  "korktype": "Syntetisk kork",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Italia, Abruzzo, Montepulciano d'Abruzzo",
   "literpris": 239.87,
@@ -36,5 +37,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "4513001",
   "volum": 75,
-  "årgang": "2024"
+  "årgang": "2024",
+  "økologisk": true
 }

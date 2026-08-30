@@ -5,7 +5,7 @@
   "druer": "Merlot 30 prosent, Sangiovese 70 prosent",
   "emballasje": "Bag-in-box",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
@@ -35,5 +35,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "15312806",
   "volum": 300,
-  "årgang": "2024"
+  "årgang": "2024",
+  "økologisk": true
 }

@@ -358,3 +358,35 @@ def test_compare_on_html_without_blob_reports_regex_only_fields():
     diff = compare_parsers("<html><body>ingen blob</body></html>")
     assert diff["json_funnet"] is False
     assert diff["kun_html"] == {"klokker": {}}
+
+
+# ─── Sertifisering og korktype (lagt til 2026-08-30) ─────────────────
+
+def _sert_blob(**over):
+    p = {"code": "1", "name": "X", "content": {}, "price": {"value": 1}}
+    p.update(over)
+    return '<script type="application/json">' + json.dumps({"product": p}) + "</script>"
+
+
+def test_eco_flag_only_present_when_true():
+    """Fraværet av nøkkelen betyr «ikke merket» — holder filene små."""
+    assert parse_product_json(_sert_blob(eco=True))["økologisk"] is True
+    assert "økologisk" not in parse_product_json(_sert_blob(eco=False))
+    assert "økologisk" not in parse_product_json(_sert_blob())
+
+
+def test_biodynamic_and_fairtrade_flags():
+    r = parse_product_json(_sert_blob(bioDynamic=True, fairTrade=True))
+    assert r["biodynamisk"] is True and r["fairtrade"] is True
+    assert "biodynamisk" not in parse_product_json(_sert_blob(bioDynamic=False))
+
+
+def test_cork_type_parsed_and_omitted_when_missing():
+    assert parse_product_json(_sert_blob(cork="Skrukapsel"))["korktype"] == "Skrukapsel"
+    assert "korktype" not in parse_product_json(_sert_blob())
+
+
+def test_truthy_but_not_true_is_not_treated_as_certified():
+    """Kun ekte True — en streng eller 1 skal ikke gi sertifiseringsmerke."""
+    assert "økologisk" not in parse_product_json(_sert_blob(eco="nei"))
+    assert "økologisk" not in parse_product_json(_sert_blob(eco=1))

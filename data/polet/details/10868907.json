@@ -5,7 +5,7 @@
   "druer": "Nerello Mascalese 100 prosent",
   "emballasje": "Glass",
   "farge": "Dyp rød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
@@ -33,5 +33,6 @@
   "utvalg": "Bestillingsutvalget",
   "varenummer": "10868907",
   "volum": 300,
-  "årgang": "2016"
+  "årgang": "2016",
+  "økologisk": true
 }

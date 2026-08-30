@@ -5,13 +5,14 @@
   "druer": "Syrah 100 prosent",
   "emballasje": "Glass",
   "farge": "Dyp blårød.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 7,
     "Fylde": 8,
     "Garvestoffer": 6
   },
+  "korktype": "Syntetisk kork",
   "lagringspotensial": "Drikkeklar nå, men kan også lagres",
   "land": "Frankrike, Rhône, Côtes du Rhône",
   "literpris": 333.2,
@@ -36,5 +37,6 @@
   "utvalg": "Basisutvalget",
   "varenummer": "132701",
   "volum": 75,
-  "årgang": "2024"
+  "årgang": "2024",
+  "økologisk": true
 }

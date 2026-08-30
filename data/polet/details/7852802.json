@@ -5,13 +5,14 @@
   "druer": "Merlot 40 prosent, Syrah 60 prosent",
   "emballasje": "Øvrig",
   "farge": "Dyp rød med blåskjær.",
-  "fetched_at": "2026-08-30T13:30:59.110086+00:00",
+  "fetched_at": "2026-08-30T14:46:44.133908+00:00",
   "kategori": "Rødvin",
   "klokker": {
     "Friskhet": 8,
     "Fylde": 8,
     "Garvestoffer": 7
   },
+  "korktype": "Annet",
   "lagringspotensial": "Drikkeklar, ikke egnet for lagring",
   "land": "Italia, Sicilia, Terre Siciliane",
   "literpris": 199.8,
@@ -35,5 +36,6 @@
   "url": "/Land/Italia/Sicilia/Terre-Siciliane/San-Crispino-Syrah-Merlot/p/7852802",
   "utvalg": "Basisutvalget",
   "varenummer": "7852802",
-  "volum": 50
+  "volum": 50,
+  "økologisk": true
 }
