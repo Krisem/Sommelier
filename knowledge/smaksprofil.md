@@ -2,8 +2,8 @@
 
 > **LEVENDE DOKUMENT.** Dette er den autoritative kilden til hva Kristoffer liker, ikke liker, og hva som er bevist vs hypotese.
 >
-> **Sist oppdatert:** 2026-05-12
-> **Datagrunnlag:** Vivino-eksport (172 viner, 104 med rating; 12 års historikk).
+> **Sist oppdatert:** 2026-08-30
+> **Datagrunnlag:** Vivino-eksport (182 rader, 117 med rating; 12 års historikk). Auto-derivert blokk er generert 2026-07-02 — kjør `tools/profile_stats.py` etter neste Vivino-sync.
 >
 > ## Oppdaterings-trigger (Claude må følge disse)
 >
