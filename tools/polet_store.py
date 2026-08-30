@@ -257,11 +257,32 @@ def _category_coverage(products: list[dict]) -> dict:
 
 
 def _write_meta(products: list[dict], *, generated_at: str) -> None:
-    meta = {
-        "generated_at": generated_at,
-        "count": len(products),
-        "category_coverage": _category_coverage(products),
-    }
+    """
+    Oppdatér de tre avledede nøklene og BEVAR alt annet som ligger i meta.
+
+    Tidligere bygde denne en fersk dict med kun de tre nøklene, slik at et
+    hvilket som helst kall til `upsert_products` eller `prune_delisted` stille
+    slettet felter andre hadde skrevet — f.eks. `category_completeness`, som er
+    kompletthets-beviset teknisk gjeld #11 hviler på, og som ikke kan
+    rekonstrueres i etterkant uten å betale timeskvoten om igjen.
+
+    Bevarte felter daterer seg selv (`completed_at`), så en foreldet påstand er
+    synlig. En slettet påstand er ikke.
+    """
+    try:
+        meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
+        if not isinstance(meta, dict):
+            meta = {}
+    except (json.JSONDecodeError, OSError):
+        meta = {}
+
+    meta.update(
+        {
+            "generated_at": generated_at,
+            "count": len(products),
+            "category_coverage": _category_coverage(products),
+        }
+    )
     _atomic_write_text(
         META, json.dumps(meta, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
     )

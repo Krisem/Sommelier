@@ -734,3 +734,50 @@ def test_prune_delisted_rejects_empty_and_unknown_category(_mixed_catalog):
     with pytest.raises(ValueError, match="feil kategorinavn"):
         polet_store.prune_delisted(
             {"r0"}, category="sider", generated_at="2026-08-29T00:00:00+00:00")
+
+
+# ─── _write_meta bevarer felter den ikke kjenner ──────────────────────────
+
+
+def test_write_meta_preserves_unknown_keys():
+    """
+    En skrivefunksjon som bygger en fersk struktur fra en fast mal, sletter alt
+    utenfor malen i stillhet. `category_completeness` er kompletthets-beviset
+    bak teknisk gjeld #11 og kan ikke rekonstrueres uten å betale timeskvoten
+    om igjen — det skal overleve enhver katalogskriving.
+    """
+    products = [
+        {"code": "1", "name": "A", "main_category": {"code": "rødvin"}},
+        {"code": "2", "name": "B", "main_category": {"code": "hvitvin"}},
+    ]
+    polet_store.upsert_products(products, fetched_at="2026-06-08T00:00:00+00:00")
+
+    meta = json.loads(polet_store.META.read_text(encoding="utf-8"))
+    meta["category_completeness"] = {"hvitvin": {"total_results": 9762, "unique_codes": 9762}}
+    meta["completeness_schema_note"] = "fravær betyr «ikke målt», ikke «ufullstendig»"
+    polet_store.META.write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
+
+    # En helt vanlig katalogskriving etterpå
+    polet_store.upsert_products(
+        [{"code": "3", "name": "C", "main_category": {"code": "rosévin"}}],
+        fetched_at="2026-06-09T00:00:00+00:00",
+    )
+
+    etter = json.loads(polet_store.META.read_text(encoding="utf-8"))
+    assert etter["category_completeness"]["hvitvin"]["total_results"] == 9762
+    assert etter["completeness_schema_note"].startswith("fravær")
+    # …og de avledede nøklene er faktisk oppdatert, ikke frosset med de bevarte
+    assert etter["count"] == 3
+    assert etter["category_coverage"]["rosévin"] == 1
+
+
+def test_write_meta_survives_corrupt_existing_meta():
+    """Uleselig meta skal ikke velte en katalogskriving — den skal bygges på nytt."""
+    polet_store.META.parent.mkdir(parents=True, exist_ok=True)
+    polet_store.META.write_text("{ ikke gyldig json", encoding="utf-8")
+    polet_store.upsert_products(
+        [{"code": "1", "name": "A", "main_category": {"code": "rødvin"}}],
+        fetched_at="2026-06-08T00:00:00+00:00",
+    )
+    meta = json.loads(polet_store.META.read_text(encoding="utf-8"))
+    assert meta["count"] == 1

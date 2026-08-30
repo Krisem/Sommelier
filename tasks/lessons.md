@@ -269,3 +269,31 @@ stedet for å slå opp konstanten**, og leste `FileNotFoundError` som bevis for 
 systemet, når det var bevis for at noe var galt med spørsmålet. Verifiser instrumentet før du
 rapporterer måleresultatet — i begge retninger. Det gjelder særlig ad-hoc-sjekker på siden av det
 man tester nøye; det var der den slapp gjennom.
+
+---
+
+## 2026-08-30 – Skrivefunksjoner som bygger fra en mal, sletter alt utenfor malen
+
+**Hva skjedde:** Tre varianter av samme feil dukket opp på én dag i `polet_store`:
+
+1. `upsert_products` erstatter raden i sin helhet (`existing[code] = entry`) og tar dermed
+   `clock_buckets` med seg. Rekkefølgen enumerering → prune → klokker er *påkrevd*, ikke en
+   preferanse.
+2. En `seed_polet_store`-kjøring utløste nettopp det og slettet klokkene på **61 rødviner** – usynlig,
+   fordi radene ble *tommere* og ikke *færre*. En radtelling ga 14 081 → 14 082 og så uskyldig ut.
+3. `_write_meta` bygde en fersk dict med tre nøkler, så ethvert katalogskriv ville slettet
+   `category_completeness` – kompletthets-beviset bak teknisk gjeld #11, som ikke kan
+   rekonstrueres uten å betale Polets timeskvote om igjen.
+
+**Hvorfor det er samme feil:** alle tre bygger en ny struktur fra en fast mal i stedet for å flette
+inn i den eksisterende. Malen er skrevet av den som eide feltet den gangen, og alt en senere
+forfatter la til, forsvinner uten spor. Ingen av dem feiler; de bare glemmer.
+
+**Hva jeg gjør annerledes nå:**
+- **En skrivefunksjon som ikke eier hele strukturen, skal flette – ikke erstatte.** `_write_meta`
+  leser nå eksisterende meta og oppdaterer kun sine tre avledede nøkler.
+- **Ikke løs det med en hviteliste over kjente ekstra-felter.** Den brekker neste gang noen legger
+  til et felt, altså nøyaktig feilen man prøver å fikse.
+- **Bevart data må datere seg selv.** `completed_at` gjør en foreldet påstand synlig; en slettet
+  påstand etterlater ingenting å oppdage.
+- **Ved tap av felter: diff felt for felt, aldri radantall.** «Tommere» er usynlig for en telling.
