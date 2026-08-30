@@ -139,6 +139,14 @@ Server: `python3 -m http.server`-variant som setter CORS-headeren (et 8-linjers 
 **`require` og `await import('node:fs')` virker IKKE** i den konteksten — `fs` er utilgjengelig, så
 fila må gå via HTTP selv om den ligger lokalt.
 
+**Deadline-vakt i hvert kall.** `browser_evaluate` har et tidstak (~60 s), og en lang sveip blir
+dessuten avbrutt av ting utenfor din kontroll — under rødvins-sveipen sovnet maskinen fem ganger.
+Bygg derfor hver løkke slik at den **skriver fila med regnskapet i behold før taket nås**, og hold en
+markør i browseren (`window.__next`) pluss et manifest som **regenereres fra disk**, ikke holdes som
+løpende tilstand. Da koster et avbrudd nøyaktig ett kall, uansett hvordan det inntreffer — og
+markøren overlever at maskinen sover natten over. Ikke stol på en rapportert fremdrift: **les
+alltid disk før du gjenopptar**, for et avbrutt kall kan ha skrevet mer enn det rakk å rapportere.
+
 Generell regel: **stort datasett inn i CSP-låst side = `page.request.get()` + `page.evaluate(fn, data)`.**
 Kontekstkostnad: null. Samme mønster gjelder motsatt vei — bruk `filename`-parameteren på
 `browser_evaluate` for å få store payloads UT uten å fylle konteksten. Merk at `filename` skriver til
