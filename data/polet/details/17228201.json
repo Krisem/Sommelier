@@ -1,0 +1,39 @@
+{
+  "alkohol": "13,5%",
+  "code": "17228201",
+  "distrikt": "Veneto",
+  "druer": "Corvina 65 prosent, Corvinone 15 prosent, Rondinella 20 prosent",
+  "emballasje": "Glass",
+  "farge": "Rød.",
+  "fetched_at": "2026-08-30T15:19:48.727299+00:00",
+  "kategori": "Rødvin",
+  "klokker": {
+    "Friskhet": 7,
+    "Fylde": 10,
+    "Garvestoffer": 5
+  },
+  "lagringspotensial": "Drikkeklar nå, men kan også lagres",
+  "land": "Italia, Veneto, Valpolicella Ripasso",
+  "literpris": 420,
+  "lukt": "Røde, mørke, friske bær og litt tørket frukt Urter og lette trekrydder.",
+  "matparring": [
+    "Aperitiff",
+    "Lyst kjøtt",
+    "Lam og sau"
+  ],
+  "navn": "Antiche Terre Venete Valpolicella Ripasso",
+  "parser": "json",
+  "pris": 315,
+  "produsent": "Antiche Terre Venete",
+  "smak": "Fruktig og lett sødmefull, preg av mørke bær, lakris og vanilje.",
+  "stil": "Krydret og sødmefull",
+  "stil_beskrivelse": "Sødmefull frukt, mye fylde. Smak av mørke bær, innslag av svisker, fiken, rosin, sjokolade og krydder. Passer til kraftige og smaksrike retter, krydret mat, sødmefulle sauser.",
+  "sukker": "5 g/l",
+  "syre": "5 g/l",
+  "underdistrikt": "Valpolicella Ripasso",
+  "url": "/Land/Italia/Veneto/Valpolicella-Ripasso/Antiche-Terre-Venete-Valpolicella-Ripasso/p/17228201",
+  "utvalg": "Bestillingsutvalget",
+  "varenummer": "17228201",
+  "volum": 75,
+  "årgang": "2022"
+}

@@ -1,11 +1,79 @@
 {
+  "category_completeness": {
+    "hvitvin": {
+      "clock_ceiling": 8348,
+      "clock_dims": [
+        "Fylde",
+        "Friskhet",
+        "Soedme"
+      ],
+      "clock_gap_partial_dims": 2,
+      "clock_method": "kartesisk 6x6x6 (216 celler)",
+      "clock_swept_at": "2026-08-30T18:50Z",
+      "clocked": 8346,
+      "completed_at": "2026-08-30T16:12:06Z",
+      "delisted_pruned": 3,
+      "details_removed": 3,
+      "enumerated": 9762,
+      "method": "name-asc full enumeration (407 sider a 24)",
+      "note": "Unike koder == totalResults. 0 avvikende HTTP-statuskoder. Skrevet i etterkant samme sesjon.",
+      "rows_returned": 9762,
+      "total_results": 9762,
+      "unique_codes": 9762
+    },
+    "musserende_vin": {
+      "clock_ceiling": 2794,
+      "clock_dims": [
+        "Fylde",
+        "Friskhet",
+        "Soedme"
+      ],
+      "clock_gap_partial_dims": 6,
+      "clock_method": "kartesisk 6x6x6 (216 celler)",
+      "clock_swept_at": "2026-08-30T18:50Z",
+      "clocked": 2788,
+      "completed_at": "2026-08-30T16:28:06Z",
+      "delisted_pruned": 1,
+      "details_removed": 1,
+      "enumerated": 3081,
+      "method": "name-asc full enumeration (129 sider) + malrettet gjenoppretting av 1 rad",
+      "note": "Pagineringen ga 3081 rader men 3080 unike: 17337801 ble returnert bade som siste rad pa side 78 og forste pa side 79, i en klynge Lilbert-Fils-champagner med identiske navn. name-asc har ustabil tie-breaking ved navnekollisjon. Den hoppede varen 19711701 ble funnet via malrettet produsentsok og upsertet. Skrevet i etterkant samme sesjon.",
+      "recovered_after_skip": 1,
+      "rows_returned": 3081,
+      "total_results": 3081,
+      "unique_codes": 3080
+    },
+    "rosévin": {
+      "clock_ceiling": 777,
+      "clock_dims": [
+        "Fylde",
+        "Friskhet",
+        "Soedme"
+      ],
+      "clock_gap_partial_dims": 0,
+      "clock_method": "3 x 1-dim (18 queries) — billigere enn kartesisk under ~2400 klokkede varer",
+      "clock_swept_at": "2026-08-30T20:01Z",
+      "clocked": 777,
+      "completed_at": "2026-08-30T16:28:06Z",
+      "delisted_pruned": 1,
+      "details_removed": 1,
+      "enumerated": 782,
+      "method": "name-asc full enumeration (33 sider a 24)",
+      "note": "Unike koder == totalResults. 0 avvikende HTTP-statuskoder. Skrevet i etterkant samme sesjon.",
+      "rows_returned": 782,
+      "total_results": 782,
+      "unique_codes": 782
+    }
+  },
   "category_coverage": {
     "brennevin": 2,
-    "hvitvin": 152,
-    "musserende_vin": 99,
-    "rosévin": 53,
+    "hvitvin": 9762,
+    "musserende_vin": 3081,
+    "rosévin": 782,
     "rødvin": 13775
   },
-  "count": 14081,
-  "generated_at": "2026-08-29T15:52:20.505761+00:00"
+  "clock_facet_note": "Klokke-fasettene er KATEGORI-AVHENGIGE (probet live 2026-08-30). hvitvin/musserende_vin/rosévin: Fylde, Friskhet, Soedme. rødvin: Fylde, Friskhet, Tannin(Sulfates) — Soedme og Bitterhet gir 0 der. Tannin(Sulfates) og Bitterhet gir 0 for de tre lyse. Garvestoffer filtrerer ALDRI: den ignoreres stille og returnerer hele kategorien (verifisert mot en oppdiktet kontrollkode som ga samme tall). clock_ceiling er den mest befolkede dimensjonens sum, altså det hoyeste antallet en trippel-basert sveip kan naa; clock_gap_partial_dims er varer som har noen klokker men ikke alle tre og derfor ikke fanges av en trippel.",
+  "completeness_schema_note": "category_completeness dokumenterer at en kategori er KOMPLETT enumerert. Beviset er unique_codes == total_results — IKKE rows_returned, som teller et duplikat med og derfor kan komme ut riktig for en sveip som stille hoppet over en vare (malt 2026-08-30 pa musserende_vin: 3081 rader, 3080 unike). enumerated er antallet som faktisk ligger i katalogen etter ev. gjenoppretting. Fravaer av en kategori her betyr IKKE ufullstendig, bare ikke malt. Kompletthet forvitrer — nye varer listes fortlopende, se completed_at.",
+  "count": 27402,
+  "generated_at": "2026-08-30T20:05:22.243637+00:00"
 }
