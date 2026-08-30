@@ -340,7 +340,19 @@ Bordeaux, Burgund, Champagne (vintage vs NV), Piemonte (Barolo/Barbaresco), Mose
 
 California (relativt stabilt klima), Australia varmt klima, Argentina basis, mest New World fra varmt klima, basis-Italia og basis-Spania (Rioja Crianza, Chianti DOCG, masseproduksjon).
 
-### Klassiske europeiske år de siste 15
+### Klassiske europeiske år (2008–2022)
+
+> Destillert fra The Wine Society, «Vintage Chart 2024» (`data/reference/tws_vintage_guide_2024.pdf`,
+> publisert 12.02.2024). Chartet dekker årgangene **2008–2022** for Bordeaux (Médoc/Graves,
+> St Emilion/Pomerol), Burgund, Rhône nord/sør, Toscana, Rioja, Port, Sauternes, Chablis, Alsace
+> og Tyskland. Mosel-radens 2023 og 2024, Piemonte 2021 og Champagne 2013/2019 ligger utenfor
+> chartet og har ingen kilde i repoet.
+>
+> **⚠ Tabellen er ikke komplett – årgangene 2023, 2024 og 2025 er ikke vurdert** for noen region
+> unntatt Mosel (som går t.o.m. 2024). Flere rader stopper tidligere enn 2022: Nord-Rhône,
+> Champagne og Port på 2019, Piemonte og Toscana på 2021. At en årgang mangler betyr **ikke** at
+> den er svak – den er bare ikke dekket av kilden. Slå opp annen kilde for 2023 og nyere; det er
+> disse årgangene som står i butikk nå.
 
 | Region | Sterke år | Vanskelige år |
 |---|---|---|

@@ -199,7 +199,9 @@ Den offisielle 2021-guiden har 34 hovedkategorier:
 8. **Amerikanske ales og IPA (Cat 12, 18, 19, 20, 21, 22, B-categories)** — Blonde Ale, American Pale Ale, American Amber/Brown/Porter/Stout, IPA (West Coast, English, Black, Brown, Red, Rye, White, Brut, NEIPA, Session, DIPA), Imperial IPA. Craft-hjertet.
 9. **Fruktede, krydrede, røkte, eksperimentelle (Cat 29–34)** — Fruit Beer, Spice/Herb/Vegetable Beer, Smoked Beer (Rauchbier), Wood-Aged Beer, Specialty Beer.
 
-Se BJCP 2021 PDF i `data/reference/bjcp_2021.pdf` (bjcp.org/bjcp-style-guidelines).
+De ni familiene over er en forenkling av de 34 hovedkategoriene i BJCP 2021 Style Guidelines
+(bjcp.org/bjcp-style-guidelines, se § Kilder). Guiden ligger ikke i repoet – slå opp på nett ved
+behov for de fullstendige stilbeskrivelsene.
 
 ### Hop-taksonomi (aromakategorier)
 

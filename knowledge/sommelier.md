@@ -126,10 +126,18 @@ Glem "hvit til fisk, rød til kjøtt". Dette er prinsippene som faktisk gjelder:
 4. **Fett trenger syre/tannin/bobler** – smørsaus + Chablis, fettribbe + Champagne
 5. **Salt + søtt = magisk** – Sauternes/Roquefort, Port/Stilton, PX/sjokolade
 6. **Salt gjør tannin mildere** – saltet biff tar ung Bordeaux bedre enn naken
-7. **Umami senker fruktighet** – sopp/parmesan trenger tertiær vin eller ung fruktig
+7. **Umami senker fruktighet**† – sopp/parmesan trenger tertiær vin eller ung fruktig
 8. **Sukker i mat trenger mer sukker i vin** – dessert > vin = vinen smaker tørr/sur
 9. **Chili + alkohol = brann** – jo høyere alkohol jo verre. Off-dry Riesling 8 % er trygt
 10. **Eddik er vinens fiende** – krever vin med veldig høy syre og lavt tannin, eller drikk vann
+
+> Destillert fra Court of Master Sommeliers Europe, «Food and Wine Matching»
+> (`data/reference/food_and_wine.pdf`) – lov 1–6, 8 og 9 – og Bruce Zoecklein, «Matching Table
+> Wines with Foods», Virginia Tech (`data/reference/zoecklein_matching.pdf`) – lov 9 og 10.
+>
+> † **Lov 7 står ikke i noen av de to kildene.** Opprinnelsen er ukjent og påstanden er ikke
+> verifisert mot primærkilde. Bruk den med forbehold til en kilde er funnet – ikke oppgi den
+> som et Court of Master Sommeliers-prinsipp.
 
 For klassiske parringer per matrett: se `deep-knowledge/servering-og-lagring.md`.
 
