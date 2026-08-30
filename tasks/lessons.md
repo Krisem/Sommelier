@@ -155,3 +155,117 @@ ha noe kraftig. Å hoppe rett til anbefaling føles hjelpsomt og er det motsatte
 **Hva jeg gjør annerledes nå:** Se «Utfordre vage briefer» i `CLAUDE.md`. Kort: 2–3 spørsmål i ÉN
 melding (mat/solo, lett/kraftig, hverdag/anledning), alltid med et default han kan si ja til, aldri
 om det briefen allerede besvarer. Ett presist spørsmål slår tre generiske.
+
+---
+
+## 2026-08-30 – Handlet på en filesing som var 20 sekunder gammel
+
+**Hva skjedde:** Under en sveip med fem parallelle agenter grep-et jeg `smaksprofil.md`, så seks
+foreldede tall, og skrev et skript for å rette dem. Da skriptet kjørte, hadde D-agenten allerede
+rettet alle seks. Skriptets `assert s.count(old) == 1` feilet på første substitusjon og avbrøt før
+`open(p,'w')` – ingen skade. Med en blind `sed`-erstatning hadde jeg ikke oppdaget det i det hele
+tatt, og med en «rett nye tall til enda nyere»-logikk kunne jeg ha korrumpert fila.
+
+Samme dag: D fikk tom liste fra Vivino-skrapingen fordi E hadde navigert den **delte** Chromium-
+instansen til vinmonopolet.no. Symptomet var identisk med «ingen nye ratinger».
+
+**Hvorfor det var feil:** Jeg hadde selv skrevet ned regelen om å re-lese artefaktet og notere
+revisjonen før man låser noe til et tall – og brøt den i samme sesjon. En lesning er et
+øyeblikksbilde, ikke en tilstand. Med parallelle agenter er vinduet mellom lesning og skriving
+sekunder, ikke minutter. Og jeg hadde serialisert D og E på browseren, men brøt serialiseringen
+selv da jeg ga D en verifiseringsoppgave mens E fortsatt kjørte.
+
+**Hva jeg gjør annerledes nå:**
+- Skriv aldri en erstatning uten `assert count == 1` på det gamle innholdet. Skriptet skal
+  nekte å kjøre hvis verden har endret seg, ikke gjette. Dette er billig og fanget feilen her.
+- Sjekk md5 + mtime rett før skriving, ikke bare rett etter at en agent meldte seg ferdig.
+- «Alt gjort» fra en agent er en påstand om intensjon, ikke om filtilstand – verifiser, men
+  verifiser *rett før* du handler, ikke ett tur-retur tidligere.
+- Én delt ressurs (browser, database, ekstern API) = én agent om gangen. Serialiseringen gjelder
+  også de små tilleggsoppgavene jeg selv deler ut underveis.
+
+---
+
+## 2026-08-30 – Kjørte et dokumentert skript for å teste det, og muterte ekte data
+
+**Hva skjedde:** Jeg oppdaget at to av fire kommandoer `CLAUDE.md` dokumenterer var ødelagte, fikset
+importfeilen, og verifiserte ved å **kjøre dem**. Én av dem – `tools/seed_polet_store.py` – leser
+`~/.cache/sommelier/` og skriver katalogen via `upsert_products`. Den la inn en rad fra mai-cachen
+(`3187405`, `fetched_at: 2026-05-20`) i `data/polet/catalog.ndjson` mens en agent var midt i en
+2–3 timers sveip mot samme fil.
+
+**Den fremmede raden var det minste av skaden, og jeg oppdaget resten først i gjennomgangen før
+commit — to timer senere.** `upsert_products` erstatter raden i sin helhet, så kjøringen slettet
+også **`clock_buckets` fra 61 rødvinsrader** (to av dem står i klokke-tabellen i `smaksprofil.md`)
+og overskrev **fire details-filer med eldre mai-data** — `fetched_at` gikk bakover og `url` byttet
+fra relativ til absolutt form. Ingen av delene ga feilmelding, ingen test falt, og diffen så ut som
+et normalt datasett i bevegelse blant 27 000 rader. Agenten oppdaget den fremmede raden, mistenkte en parallell skriver
+og stoppet for å varsle – berettiget, siden `_write_catalog` er read-modify-write og to skrivere
+gir stille tap.
+
+Min første hypotese var at testsuiten skrev til ekte data (jeg hadde kjørt `pytest` mange ganger).
+Den var feil: `tests/test_polet_store.py` har en autouse-fixture som peker `POLET_DIR` mot `tmp_path`.
+Riktig svar lå i `git show HEAD:...` – raden fantes ikke i HEAD, og `seed_polet_store` stempler
+`fetched_at` med cache-filas mtime.
+
+**Hvorfor det var feil:** «Virker kommandoen?» og «hva gjør kommandoen?» er to forskjellige spørsmål,
+og jeg svarte på det første ved å utløse det andre. Et skript med `upsert`, `seed`, `write`, `sync`
+eller `refresh` i navnet er ikke en smoke-test – det er en mutasjon. At det står i dokumentasjonen
+gjør det ikke trygt å kjøre; det gjør det bare dokumentert.
+
+**Hva jeg gjør annerledes nå:**
+- **Diff alltid mot `HEAD` før commit når flere skrivere har vært i en datafil.** «Filen er endret»
+  sier ingenting; `git show HEAD:<fil>` og en felt-for-felt-sammenligning sier hva som forsvant.
+  Det var slik de 61 radene ble funnet, og de ville ellers blitt committet som et tap ingen så.
+- **Les hva et skript gjør før du kjører det for å teste at det kjører.** `grep -n "write\|upsert\|
+  save\|unlink\|rmtree"` tar sekunder. `--help`/`--dry-run` først der det finnes.
+- Verifiser importfeil med `python3 -c "import tools.X"` eller `py_compile`, ikke ved å kjøre `main()`.
+- **Når du eier en delt ressurs ut til en agent, gjelder det deg selv også.** Jeg hadde nettopp
+  skrevet at `data/polet/` var E sitt område, og skrev så dit selv en time senere.
+- Ved fremmed skriving i en fil: `git show HEAD:<fil>` først for å avgjøre om raden er ny, og se på
+  metadata-stempelet (her `fetched_at`) – det navngir ofte kilden.
+
+---
+
+## 2026-08-30 – «Grønn av feil grunn» var sesjonens mest gjentatte feil (3 instanser)
+
+**Hva skjedde:** Tre ganger på én dag så en kontroll frisk ut mens den ikke kontrollerte noe:
+
+1. **Blindspot-regelen fyrte 422 ganger** og virket derfor i drift. Treffene kom fra tre land av
+   femten – Portugal, Chile, Uruguay – utelukkende fordi de staves likt på norsk og engelsk, pluss
+   én tysk vin med ordet «Germany» i merkenavnet. 367 andre tyske viner fikk ingenting.
+2. **En mutasjon som fjernet landoversettelsen overlevde testsuiten.** Assertions om at blindspot
+   fyrer for Tyskland og Spania ble oppfylt av *kuratert prosa* som aldri rørte landtabellen.
+3. **Unntakslista `UTEN_VARER` var foreldet** og undertrykte sjekken for fire regler. Sveipen hadde
+   gitt alle fire varer; lista fortsatte å tie.
+
+Beslektet: 291 tester var grønne gjennom seks reelle bugs, fordi de testet logikk på små fixtures
+og ikke oppførsel ved katalogskala.
+
+**Hvorfor det skjer:** Et treffantall, en bestått test og en tom feilliste er alle *fravær av
+alarm*. Fravær av alarm er ikke bevis for at alarmen virker. Feilen er alltid stille, og den
+overlever nettopp fordi den ser ut som suksess.
+
+**Hva jeg gjør annerledes nå:**
+- **Valider på fordeling, ikke på antall.** «422 treff» sier ingenting; «422 treff fordelt på 3 av
+  15 land» sier alt. Samme for tiers, regler, kategorier.
+- **Muteringstest hver fiks:** gjeninnfør feilen og krev at testen faller. En test som ikke faller
+  på den gjeninnførte buggen, tester ikke buggen. (Fanget 15/15 til slutt i user_fit, 5 i
+  value_score, 7 i vinmonopolet.)
+- **Velg testdata som bare kan bestå av riktig grunn.** En libanesisk rødvin uten prosa bak seg kan
+  kun treffe via landtabellen; en tysk vin kunne treffe via tre veier og beviste ingenting.
+- **Unntakslister skal være selv-utløpende.** En oppføring som ikke lenger gjelder, skal feile
+  testen og tvinges fjernet. Et unntak som ikke kan utløpe er en permanent blindsone med
+  vennlig navn.
+- **Skriv skalainvarianter, ikke tall.** `sample_size >= 0.9 * len(populasjon)` overlever at
+  datasettet tidobles; `sample_size == 50` bekrefter buggen.
+- **En kontroll som ikke rikker seg når du forventer at den skal, er et funn.** En uendret
+  sanity-sjekk avslørte at en regelendring bare hadde landet i den ene av to kodeveier.
+
+**Speilbildet, like viktig:** et NEGATIVT resultat fra et ukontrollert instrument er heller ikke et
+funn. Samme dag rapporterte en agent «`data/polet/_meta.json` mangler → aldersmerkingen er blind»
+som høyest prioriterte funn. Fila het `catalog_meta.json`; agenten hadde **gjettet filnavnet i
+stedet for å slå opp konstanten**, og leste `FileNotFoundError` som bevis for at noe var galt med
+systemet, når det var bevis for at noe var galt med spørsmålet. Verifiser instrumentet før du
+rapporterer måleresultatet — i begge retninger. Det gjelder særlig ad-hoc-sjekker på siden av det
+man tester nøye; det var der den slapp gjennom.

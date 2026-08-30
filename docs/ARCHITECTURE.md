@@ -736,7 +736,122 @@ MCP-serveren kobler seg til skybrowseren **lazily** — først ved første brows
 
 **Alternativer vurdert.** **Land-for-land-sveip** (som ADR-023) — forkastet: det var nettopp den metoden som ga skjevheten, og med et `pageSize`-tak på 24 avkortes hvert land stille. **Tre separate 1-dim klokke-sveip** — forkastet: ~1 370 sider mot 676 for kartesisk, og gir samme informasjon. **Details for hele katalogen** — forkastet på et målt tall, ikke en magefølelse: ~16 timer kvote. **Beholde uprunet shape** — forkastet: 46 % av bytene var felt ingen leste, og ved 13 775 rader er det 10 MB. **Fullføre `name-asc`-passeringen etter at unionen traff 13 775** — forkastet: 282 kall av en knapp kvote på et spørsmål som allerede var besvart.
 
+**Amendment 2026-08-30 — `name-asc` er ikke helt stabil den heller.** ADR-024 anbefalte `name-asc` som det deterministiske alternativet til `relevance`, som hopper over produkter under paginering. Det er bedre, men **ties i navnefeltet gir samme klasse feil.** Målt under musserende-sveipen: 3 081 rader hentet, **3 080 unike**. Duplikatet lå nøyaktig på sidegrensen 78/79, i en klynge på fjorten Lilbert-Fils-champagner med kolliderende navn, og én vare (`19711701`) ble hoppet over. Den ble funnet ved målrettet produsentsøk, ikke ved å paginere om igjen.
+
+**Konsekvens for metoden:** ingen sorteringsnøkkel med ties er trygg under paginering, og en avkortet sveip ser ut som en komplett. Den eneste pålitelige kontrollen er **`unike koder == totalResults`** — ikke antall rader, som teller duplikatet med og kommer ut riktig. Kjør den per kategori, og behandle avvik som en manglende vare å oppspore, ikke som en avrunding.
+
 **Relatert.** [ADR-023](#adr-023-live-facet-sweep--trait-filtrering--snapshot-ekspansjon) (superseder fasett-listen), [ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only) (snapshot-modellen), [ADR-011](#adr-011-html-fixture-test-for-polet-drift) (drift-vern; JSON-blobben reduserer eksponeringen), [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (kode ≠ navn — samme klasse feil), [`polet_refresh.md`](polet_refresh.md) (runbook), teknisk gjeld #1.
+
+---
+
+### ADR-025: Klokke-similarity degradert til grovfilter — målt null diskriminering
+
+**Status:** Accepted (2026-08-30). Presiserer og begrenser bruken av `find_similar_by_clocks`; supplerer [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score). Løser teknisk gjeld #6, men ikke slik posten forutsatte.
+
+**Kontekst.** Gjeld #6 sa at klokke-profil-tabellen i `smaksprofil.md` var «kvasi-teater med n=2» — altså at problemet var for lite data. Tabellen ble derfor utvidet fra Vivino-historikken mot Polet-snapshotet: 117 ratede viner → 32 ekte vin-nivå-treff i katalogen → **21 med klokker i `data/polet/details/`** → 19 nye rader, tabellen nå 25 rader. Hypotesen var at flere rader ville gjøre klokke-similarity brukbar.
+
+**Funn (n=20, målt 2026-08-30 mot `knowledge/smaksprofil.md` md5 `22ea47d5`).** Det motsatte.
+
+| Klokke | Korrelasjon med brukerens rating |
+|---|---|
+| Fylde | **+0,16** |
+| Friskhet | **+0,09** |
+| Garvestoffer | **−0,10** |
+
+Alle tre er støy. Verre: **alle seks gruppene med identiske klokker spenner over ratingskalaen.**
+
+- **Samme varenummer, to dommer.** 9111501 Vincent Girardin Terroir Noble er ratet **4.5** (årgang 2010) og **3.8** (2023). Klokkene er identiske per definisjon — det er samme produkt. Årgang og moden alder forklarer det klokkene ikke kan.
+- **8/8/8, den trippelen brukeren har flest av:** Patria Femina Etna Rosso **4.1**, Chapoutier Belleruche **3.0**, Dom. de la Janasse Côtes du Rhône **2.0**. **2,1 poengs spenn på identiske klokker.**
+- Fire tilsvarende grupper (8/9/8, 9/8/8, 8/8/6, og det opprinnelige 8/9/7 Fenocchio 4.6 vs Vespa «for lett»).
+
+**Vespa-bommen 2026-08-29 var altså ikke et uheldig enkelttilfelle — den var regelen.** Den ene observasjonen som utløste mistanken, viste seg å beskrive hele datasettet.
+
+**Andrehånds-svakhet, like viktig.** **Ingen av de 19 nye radene har klokker fra den årgangen som faktisk ble ratet.** Snapshotet fører dagens årganger; ratingene er 1–14 år eldre. Hver rad er derfor merket `[≠ a→b]` (rating fra årgang *a*, klokker fra årgang *b*) eller `[? →b]` når Vivino mangler årgang. Korrelasjonene over måler i praksis *dagens* klokker mot *fortidens* dom. Det svekker konklusjonen om at klokkene ikke diskriminerer — men det redder ikke klokkene, for motsigelse A er årgangs-uavhengig: der er det samme varenummer.
+
+**Beslutning.**
+
+1. `find_similar_by_clocks` er **et grovfilter for stil-slektskap**, ikke en rangerings- eller preferansemodell. Resultater skal presenteres som «smaker i samme retning», aldri som «noe like godt» eller «noe kraftigere».
+2. Backlog-posten om å kjøre similarity offline over 10 986 katalograder kan gjennomføres, men **kun** under merkelappen over. Skala fikser ikke et signal som er null.
+3. Rangering innenfor et klokke-treff skal skje på det som faktisk skilte i motsigelsene: appellasjonsnivå, fat/metode, literpris, årgang og drue.
+4. Tabellen beholder **alle** motsigelsene og det nye negative ankeret (Janasse 2.0, laveste rødvins-rating i settet, midt i klokke-skyen). En tabell som bare viste treff ville vært en filterboble og brutt [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score).
+
+**Alternativer vurdert.** **Fjerne klokke-similarity helt** — forkastet: stil-slektskap er reell nytte, og verktøyet er billig. **Vekte klokkene inn i user-fit-scoren** — forkastet på målingen: å vekte inn et signal med korrelasjon ~0 ville fortynnet de signalene som virker. **Vente på årgangsriktige klokker før konklusjon** — forkastet: de finnes ikke og kan ikke skaffes (Polet fører ikke historiske årganger), og motsigelse A avgjør spørsmålet uten dem. **Utvide tabellen videre for å få n opp** — forkastet: gjeld #6 antok at n var problemet; denne målingen viser at det ikke var det.
+
+**Amendment 2026-08-30 — «påkoblet i navnet, ikke i rangeringen».** Da `find_similar_by_clocks` ble koblet til katalogens `clock_buckets` (fra 13 til **718 av 771** vurderte kandidater), kom likevel **alle 8 topptreffene fra `details/`**. Årsaken er strukturell, ikke en bug: en bøtte-vin får midtpunkt 7,5 og kan aldri treffe en target på 8, mens en eksakt 8/9/7 treffer blink. De 615 bøtte-vinene var altså vurdert og deretter utestengt fra toppen — utvidelsen var reell i tellingen og illusorisk i resultatet. Fikset med `tolerance` (±0,5 for bøtter, som er hva et 2-intervall faktisk sier) og midtpunkt-avstand som sekundærnøkkel, så målte verdier beholder forrang. Toppsjiktet gikk fra 8 til 50 viner. Lærdommen generaliserer: **at en datakilde er koblet til er ikke det samme som at den påvirker utfallet** — tell begge deler.
+
+**Relatert.** [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score) (no-filter-bubble), [ADR-024](#adr-024-komplett-rødvins-snapshot--målt-api-sannhet-prunet-shape-klokker-via-fasett-sveip) (klokke-bøttene similarity leser fra), [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier) (rangeringen dette IKKE skal mates inn i), teknisk gjeld #5 og #6.
+
+---
+
+### ADR-026: Peer-percentil måles mot hele populasjonen, ikke et utvalg på 50
+
+**Status:** Accepted (2026-08-30). Avviker bevisst fra transportvalget i [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) og fjerner legacy-stien derfra. Hensikten i ADR-009 består: peer-gruppen skal være strukturert (kategori × land), ikke fritekst.
+
+**Kontekst.** `_peer_percentile` kalte `search_with_facets(facets, page_size=50)`, som gjør `query()[:50]`. Katalogen skrives sortert på `str(code)`, så «peer-gruppen» var i praksis **de 50 laveste varenumrene i landet**. `pageSize`-taket på 24 er *ikke* involvert — `search_with_facets` leser snapshotet på disk, ikke API-et; feilen er ren lokal sortering pluss avkorting.
+
+**Funn.**
+
+| Måling | Verdi |
+|---|---|
+| Pichon Baron (15690101, 709,30 kr) før | «72. percentil av 50 peers, median 362,4 kr» |
+| Samme vin etter | «**50. percentil av 4 938 peers, median 704,9 kr**» |
+| Uavhengig fasit | percentil 0,49–0,50, median 704,9–720,2 kr |
+| Verdict-endring, 400 rødviner (seed 7) | **28,2 %** (113/400) |
+
+**Skjevheten har fortegn — den er ikke støy.** Peer-utvalgets median mot gruppens sanne median: Frankrike 362 mot **720 kr**, Italia 387 mot 438, all rødvin 385 mot 500. De laveste varenumrene er systematisk billigere, så hver vin ble målt mot en kunstig billig referanse og verdict skjøvet ensrettet mot «dyr». Feilen midlet seg altså ikke ut over mange oppslag.
+
+**Feilen skalerte med katalogen.** Flip-raten var 7,5 % på det gamle snapshotet (1 543 rødviner) og 30,5 % på det nye (13 775) — ekspansjonen i [ADR-024](#adr-024-komplett-rødvins-snapshot--målt-api-sannhet-prunet-shape-klokker-via-fasett-sveip) firedoblet den. Målt per kategori er 98 % av rødvinene i land-pools over 50, mot 34 % av hvitvinene i dag; hvitvin vokser 64× i den pågående sveipen og går fra 33 % til 0,5 % dekning.
+
+**Beslutning.**
+
+1. `_peer_percentile` kaller **`polet_store.query` direkte** — den trenger populasjonen, ikke et søk. Avviket fra ADR-009s fasett-API er bevisst: fasett-API-et var riktig da alternativet var tre fritekstsøk mot et live-API; mot et komplett snapshot på disk er populasjonen tilgjengelig direkte.
+2. **Peer-gruppen er aktive varer** (`polet_store.is_active`), erklært i `peer_terms` som `status:aktiv` / `status:alle`. Avgjørende argument er drift, ikke smak: snapshotet akkumulerer avregistrerte rader, så andelen utgåtte vokser monotont mens den aktive hylla ikke gjør det — medianen ville drevet av seg selv uten at én pris endret seg. 2 196 av 13 775 rødviner er inaktive; 5 pools (36 viner) treffer fallbacken.
+3. **`_peer_percentile_legacy` og `peer_search_terms` er fjernet.** Ingen caller passerte parameteren (grep over `*.py`/`*.md`/`*.json`), og «bredere fallback» var en fiksjon mot snapshot-data: legacy gikk fritekst mot *produktnavn*, så `name_contains="frankrike"` ga 0 treff og `"rødvin"` ga 10 tilfeldige viner med ordet i navnet. Den var skrevet for et live-API som ikke lenger er der.
+4. Fallback-stigen er bevart: ingen andre viner i kategori × land → `refresh_required`; under 5 aktive peers → hele populasjonen; fortsatt under 5 → `None` (Polet har få viner der, og en refresh ville vært en usann instruks).
+
+**Test-lærdommen er like viktig som fiksen.** Suiten var 291 grønne gjennom hele buggen, fordi den tester logikk på små fixtures og ikke oppførsel ved katalogskala. En assertion på et *tall* (`sample_size == 50`) ville bekreftet feilen. Den som fanger den er et *forhold mellom det som ble sett og det som fantes*: `sample_size >= 0.9 * (len(query(kategori, land)) - 1)`. Nå dekket av `test_peer_pool_is_whole_population_at_any_scale` (parametrisert 12/60/500) og `test_peer_sample_equals_declared_population_for_every_pool`, som holder funksjonen til sin egen `peer_terms`-erklæring for **hver** kategori × land. Fiksen er mutasjonstestet: gjeninnført `[:50]` får fem tester til å falle, og fjernet aktiv-filter får fire til å falle.
+
+**En foreslått test ble målt bort — noter hvorfor, så den ikke gjeninnføres.** Siden skjevheten før fiksen hadde entydig fortegn (peer-medianen systematisk *lavere* enn populasjonens), lå det nær å asserte på fortegn. Målt på de 11 pools med ≥ 100 viner blir fortegnet imidlertid **mer** ensrettet etter fiksen, ikke mindre: 75 % → **82 % negative**. Årsaken er at aktiv-filteret selv er ensrettet — utgåtte varer er marginalt dyrere enn aktive, så medianen faller litt i nesten hver pool. En fortegns-assertion ville altså feilet på *riktig* kode. `test_peer_median_does_not_drift_from_population_median` asserter derfor på **magnitude**, med terskel 15 %: 3,5× klaring over største observerte avvik etter fiksen (4,2 %, Italia) og 2× under den minste B1-feilen. Største avvik før fiksen var −49,7 % (Frankrike), nå −2,1 %.
+
+**Alternativer vurdert.** **Heve `page_size` til et høyt tall** — forkastet: flytter taket i stedet for å fjerne det, og gjenskaper feilen ved neste ekspansjon. **Beholde legacy som fallback** — forkastet på måling: den ville bygget peer-grupper av urelaterte viner. **La inaktive varer bli i poolen** — forkastet på drift-argumentet over. **Gå via `search_with_facets` med større tak** — forkastet: den funksjonen endres samtidig av en annen fiks (B2), og percentilen trenger uansett populasjonen, ikke et søk.
+
+**Relatert.** [ADR-009](#adr-009-polet-fasett-api-i-_peer_percentile-ikke-3-fritekstsøk) (transportvalget dette avviker fra), [ADR-024](#adr-024-komplett-rødvins-snapshot--målt-api-sannhet-prunet-shape-klokker-via-fasett-sveip) (ekspansjonen som firedoblet feilen), [ADR-003](#adr-003-tre-tier-kvalitets-hierarki-i-value_score) (value-hierarkiet percentilen inngår i), teknisk gjeld #5.
+
+---
+
+### ADR-027: Spesifisitet slår generalitet i user-fit — og regler valideres på fordeling, ikke antall
+
+**Status:** Accepted (2026-08-30). Endrer early-exit-rekkefølgen i [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier); no-filter-bubble-prinsippet i [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score) står uendret og er begrunnelsen.
+
+**Kontekst.** `user_fit` klassifiserte 13 775 rødviner som **2 401 `fit`, 11 374 `neutral`, 0 `very_fit`, 0 `risky`, 0 `no_go`.** Reglene var skrevet på engelsk mot en norsk katalog. Konsekvensen var invertert: `risky` og `no_go` er ADR-016s vern mot filterboble, så et system som aldri kan advare blir stille optimistisk.
+
+**Fem lag, ikke ett.** (1) Namespace — needles matchet ikke norske felter. (2) **`sub_District` ble aldri lest**, og uten den er katalogen praktisk talt stum: distriktet sier «Veneto», appellasjonen «Valpolicella Ripasso» ligger i underdistriktet. (3) `_find_section` returnerte første treff, så den kuraterte prosa-blindsonen var død kode (og øl-blokka måtte klippes bort, ellers lekker «Kölsch / Altbier» inn som vinmønster). (4) Parse-feil: et helt avsnitt som én needle, uparet parentes. (5) `rule_fired` løy — alle `fit` het `bekreftet_drue`, også rene region-treff.
+
+**Beslutning 1 — spesifisitet slår generalitet.** 368 tyske rødviner ble `fit` fordi «Tyskland» står i *Regioner du dras mot*, og region-treffet (regel 4) fyrer før blindspot (regel 5). Men profilens egen parentes sier «(Mosel, Rheingau – **Riesling**)» — altså hvitt. Regelen leste land og ignorerte kategori. Ny presedens: **når en `<Land> <Kategori>`-blindspot navngir både land og kategori, og region-needelen bare navngir landet, vinner blindspot** — men kun når region er eneste regel-4-treff. En bekreftet drue eller stil er egen evidens og overstyres ikke. Resultat: 367 blindspot, 1 `fit` (den ene har en bekreftet drue i navnet). Blindspot-fordelingen gikk fra **3 land til 25**.
+
+**Beslutning 2 — en bekymring avledet fra instegsviner skal ikke arves oppover i appellasjonshierarkiet.** «Burgundy Red» hviler på tre ratinger som alle ligger på Bourgogne/Hautes-Côtes-nivå; en bred lesning ville stemplet 2 662 viner `risky` på n=3. Côte d'Or går derfor til `blindspot` med lav konfidens i stedet. **Samme korreksjon ble anvendt på Sør-Rhône etter gjennomgang:** de tre ratingene er Lirac 4.0, Chapoutier Belleruche Côtes-du-Rhône 3.0 og Janasse Côtes du Rhône 2.0 — to av tre er basisnivå, og den ene som ligger et hakk opp scoret høyest. Å la Châteauneuf-du-Pape arve `risky` derfra er samme feilslutning. Bekymringen bindes til basisnivået; høyere appellasjoner merkes blindspot med n og snitt synlig (ADR-016 — ingenting skjules, påstanden nedgraderes).
+
+**Beslutning 2c — fravær av nivåinformasjon er ikke bevis for at vinen ligger utenfor nivået.** Nivå-porten gjelder bare når en *annen* appellasjon faktisk er synlig i raden. En vin med `stil: "Provence Rosé"` og ingen appellasjon forblir `risky` — innsnevringen er en presisering av en regel, ikke et nytt krav om bevis for å advare.
+
+Innsnevringen ble anvendt på fire regler (Burgund, Sør-Rhône rød, Sør-Rhône hvit, Southern Italy Red) pluss Provence-rosé. Målte effekter: Sør-Rhône rød 317 → 141 treff (176 til blindsone); Southern Italy Red `very_fit` 498 → **413**, der de 85 som flyttet er nøyaktig Puglia 45 + Campania 33 + Calabria 4 + Basilicata 2 + Molise 1, og 81 av dem får `fit` med lav konfidens framfor å falle helt ut. **Merk at innsnevringen ble lagt inn to steder per regel:** både den kuraterte needelen og den auto-deriverte stilmerkelappen matchet uavhengig, og å fikse bare den ene lot regelen leve videre via engelsk substring.
+
+**Beslutning 3 — `no_go = 0` på katalogen er riktig, ikke stille.** Eksakt no-go krever årgang, og Polet fører bare gjeldende. Brukerens laveste rødvin (Janasse Côtes du Rhône, 2.0) finnes i ny årgang og får `risky` med grunnen «samme vin i en annen årgang». Testen for `no_go` går derfor på eksakt navn, ikke på frekvens.
+
+**Valideringslærdommen — den generaliserer utover denne modulen.** Blindspot-regelen fyrte 422 ganger og *så* derfor frisk ut. De 422 kom fra tre land av femten — Portugal, Chile, Uruguay — utelukkende fordi de staves likt på norsk og engelsk, pluss én tysk vin med ordet «Germany» i merkenavnet mens 367 andre fikk ingenting. **Treffantall duger ikke som helsesjekk på en regel; bare fordelingen avslører at den matcher på stavelsessammenfall i stedet for mening.**
+
+Samme linse avslørte en maskert test i selve fiksen: en mutasjon som fjernet landoversettelsen overlevde første runde, fordi assertions om at blindspot fyrer for Tyskland og Spania ble oppfylt av *kuratert prosa* som aldri rørte landtabellen — grønn av feil grunn. Fikset med en libanesisk rødvin (`1005301`) som verken har egen matcher eller prosa bak seg, så treffet kan bare gå via `Libanon → Lebanon`, og testen asserterer på hvilken needle som står i begrunnelsen.
+
+**Beslutning 2b — `classify()` har to innganger, og en regel må gjelde i begge.** Nivå-innsnevringen ble først lagt bare i den norske katalog-matcheren. Sanity-sjekken mot de 122 ratede kom da ut **helt uendret** — umulig hvis Lirac faktisk hadde flyttet seg, og dermed selv beviset på feilen. Årsak: `eval_fit` kjører `classify()` på Vivino-CSV, der `stil` er engelsk («Southern Rhône Red»), og der traff den gamle, ikke-innsnevrede regelen fortsatt. **Samme vin fikk ulik dom avhengig av kilde** — og eval-harnessen fra [ADR-017](#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling), som er beslutningsgrunnlaget for om user-fit v1 skal bygges, målte den regelen som *ikke* var i drift. Nivå-porten er derfor kryss-språklig (appellasjonsnavnene er like i begge kilder; kun bindestreker skiller), låst av to tester. Generelt: enhver regelendring må verifiseres mot begge innganger, og en sanity-sjekk som ikke rikker seg når den burde, er et funn — ikke en bekreftelse.
+
+Innsnevringen er implementert som en generell mekanisme (`_NIVA_INNSNEVRET`), ikke et engangsunntak, og Burgund er lagt inn i den. Grunnen: Côte d'Or havnet riktig i dag bare fordi «Pinot Noir generelt» tilfeldigvis dekket den — et sammentreff, ikke en mekanisme, og det ville ikke overlevd en redigering av den blindsone-linja.
+
+**Resultat (rødvin).** 498 `very_fit` · 2 839 `fit` · 10 031 `neutral` · 408 `risky` · 0 `no_go`. Sanity mot de 122 faktisk ratede vinene er monoton uten unntak, og **separasjonen ble skarpere av innsnevringen**: very_fit 4,10 → fit 4,01 → neutral 3,85 → risky **3,00** (var 3,08, fordi Lirac 4.0 forlot `risky`) → no_go 2,00. `tests/test_user_fit.py` gikk 56 → 90; åtte gjeninnføringer av de gamle feilene fanges nå alle.
+
+**B5 var oppslagsvei, ikke regenerering.** `classify_code(code)` / `classify_codes([...])` slår opp katalograden og klassifiserer direkte — 100 % dekning uten en derivert fil imellom. `data/user_fit/v0.json` dekket 66 av 14 081 varenumre (0,47 %), og CLAUDE.md steg 6b var dermed usann 99,5 % av gangene uten at noe sa fra.
+
+**Alternativer vurdert.** **Oversette hele profilen til engelsk** — forkastet: `smaksprofil.md` er source-of-truth og skrives av brukeren på norsk (ADR-015 prinsipp 2). **Beholde engelsk matching og oversette katalogen** — forkastet: 14 081 rader mot ~50 needles. **Regenerere `v0.json` for hele katalogen** — forkastet: en unødvendig stor derivert artefakt er sin egen gjeld når `classify()` virker direkte på en rad. **La region slå blindspot som før** — forkastet på målingen: 367 viner fikk positiv merkelapp på et signal som gjaldt en annen kategori.
+
+**Relatert.** [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier) (regel-rekkefølgen dette endrer), [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score) (vernet som aldri fyrte), [ADR-017](#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling) (`eval_fit` kjører `classify()` på engelsk Vivino-data — begge veier må virke), [ADR-025](#adr-025-klokke-similarity-degradert-til-grovfilter--målt-null-diskriminering) (samme lærdom: koblet til ≠ påvirker utfallet).
 
 ---
 
@@ -754,9 +869,13 @@ Ranket etter risiko × sannsynlighet.
 | 3 | Aperitif sitemap-bootstrap er 34 HTTP-kall | Cold path ved første kjøring eller etter 30 d | Når brukeren stiller første Aperitif-spørsmål på over en måned | Vurder lazy-pre-fetch i `tools/aperitif.py` |
 | 4 | `tools/scores.index()` re-parser 422 entries per prosess | `lru_cache` er prosess-lokal; Bash-call = ny prosess | Ved 5000+ entries (>500 ms parse-tid) | Bygg `knowledge/scores/_index.json` ved git pre-commit |
 | 5 | `find_similar_by_clocks` er sekvensiell | Henter detaljer N×M for kandidater | Ved bulk-similarity-søk | Parallellisér med ThreadPoolExecutor |
-| 6 | Klokke-profil-tabellen i `smaksprofil.md` har bare 2 oppføringer | Klokke-similarity er kvasi-teater med n=2 | Allerede et problem ved similarity-spørringer | Akkumulér klokker som biprodukt (per lessons 2026-05-12) |
-| 7 | Reference-PDFs i `data/reference/` brukes ikke i workflow | 11 MB død last | Aldri akutt, men tar opp repo-plass | Slett ved neste cleanup-runde |
+| ~~**6**~~ | ~~Klokke-profil-tabellen har bare 2 oppføringer~~ **AVKLART 2026-08-30 — premisset var feil** | Tabellen er nå 25 rader, og målingen viser at problemet ikke var n: klokkene korrelerer ~0 med brukerens rating (+0,16 / +0,09 / −0,10), og alle 6 grupper med identiske klokker spenner over ratingskalaen. Se [ADR-025](#adr-025-klokke-similarity-degradert-til-grovfilter--målt-null-diskriminering) | — (ikke lenger «for lite data»; nå en kjent grense for metoden) | Bruk klokkene kun som stil-grovfilter. Gjenstående reell svakhet: klokkene er fra dagens årgang, ratingene 1–14 år eldre |
+| 7 | **Kuratert innhold destillert fra `data/reference/*.pdf` uten kildehenvisning** (`knowledge/sommelier.md` §4, `deep-knowledge/norsk-marked.md` §10) *(omformulert 2026-08-30 — den gamle posten «11 MB død last, slett» hadde feil premiss)* | Provenansen finnes kun i selve PDF-ene. Uten attribusjon kan hverken påstandene verifiseres, opphavsretten respekteres eller kilden oppdateres — og PDF-ene ser ut som død last, som denne posten selv feilaktig konkluderte. `knowledge/cicerone.md:202` pekte på en `bjcp_2021.pdf` som **aldri har eksistert i repoet** (verifisert mot alle 60 commits — ingen blob, ingen sletting): en hallusinert filsti, ikke et opprydnings-etterslep. Innholdet er ekte destillat av BJCP 2021, så feilen var attribusjonsformen, ikke kunnskapen. Rettet 2026-08-30 til en ren kildehenvisning | Ved neste oppryddingsrunde: 11 MB ser slettbart ut, og sletting gjør kunnskapen usporbar permanent. Også når TWS-tabellen skal årsoppdateres og ingen vet hva den kom fra | Legg inn kildelinjer etter konvensjonen i `knowledge/wset_l2_sat.md:3`. Først deretter kan PDF-ene beholdes bevisst som arkiv — eller slettes trygt |
 | 8 | `~/.cache/sommelier/` har ingen GC | Vokser monotont | Ved >10 000 cache-filer (~50 MB) | Skriv `tools/cache_gc.py` med mtime-basert cleanup |
+| 9 | **Årgangstabellen i `deep-knowledge/norsk-marked.md` §10 er tre årganger bak** — kilden (TWS Vintage Chart 2024, publisert 12.02.2024) stopper på 2022 | Repoet brukes til å kjøpe vin nå. 2023/2024-hvitviner er hyllevare, 2023 Bordeaux og Burgund er i handelen, Barolo 2022 slippes i år — ingen har dekning. Nord-Rhône-raden stopper så tidlig som 2019. Champagne-radene 2013 og 2019 og Piemonte 2021 ligger dessuten utenfor chartet — supplert av kuratoren uten kilde. Overskriften «de siste 15» er selvmotsigende: fra 2026 skulle spennet vært 2011–2026, innholdet er 2008–2022 | Allerede et problem ved ethvert årgangsspørsmål om 2023+ | Skaff nyere årgangschart og utvid tabellen. Kortsiktig: eksplisitt varsel om udekkede årganger (gjort 2026-08-30) |
+| 10 | **Prosaen i `smaksprofil.md` er ikke koblet til `profile_stats` og glir fra den managed blokken ved hver synk** | Seks tallpåstander i prosaen (datagrunnlag, snitt per kategori, «Italia er hjemmebanen») vedlikeholdes for hånd mens blokka over dem regenereres automatisk. Avviket var 13 viner før Vivino-synken 2026-08-30 og 18 etter — det vokser hver gang noen synker | Allerede et problem: en leser som stoler på prosaen får 104 ratede når sannheten er 122. Påstandene er foreløpig fortsatt sanne, så feilen er stille | Tallene rettet 2026-08-30. Varig fiks: test som sammenligner prosaens tall mot managed blokk og feiler ved avvik |
+| 11 | **`PoletRefreshRequired` betyr ikke lenger det den sier for komplett enumererte kategorier** | `search()` kaster ved null treff med hintet «refresh katalogen fra desktop». Rødvin er nå enumerert eksakt (13 775), så null treff betyr **«Polet fører den ikke»** — ikke «snapshotet er utdatert». Koden sier fortsatt det siste, og sender brukeren på et tungt rate-limitet ritual der riktig svar er «den finnes ikke, her er et alternativ». Strider mot anti-hallusineringsregelen i `CLAUDE.md` | Allerede nå for rødvin; gjelder hvit/musserende/rosé straks sveipen 2026-08-30 lander | Krever kompletthets-felter i `catalog_meta.json` (`total_results`, `enumerated`, `method`, `completed_at` per kategori) — de skrives under sveipen, ikke etterpå. Deretter er fiksen ren kode. Påstanden må alders-degraderes som `SNAPSHOT_STALE_DAYS`; `prune_delisted` bygger på samme premiss og bør lese samme felt |
+| 12 | **Katalogen er doblet fra 12 til ~24 MB og committes i sin helhet ved hver refresh** | ADR-024 aksepterte 12 MB bevisst etter pruning til 849 B/rad. Sveipen 2026-08-30 tok snapshotet fra 14 081 til ~27 400 rader. Selve fila er håndterbar; problemet er at **hver full refresh legger ~24 MB til git-historikken permanent** | Ved noen få refresher: repoet blir tregt å klone og `.git` vokser monotont uten at noen ser det | Mål `.git`-størrelsen etter neste refresh. Alternativer: komprimér ndjson-en (taper lesbare differ), prune flere felter, eller vurder om katalogen skal committes i det hele tatt framfor å bygges av en runbook |
 
 ## Når du gjør en ny audit/refactor
 

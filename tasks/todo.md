@@ -2,9 +2,86 @@
 
 ## Aktivt
 
-*(ingen aktive tråder)*
+**Sveip 2026-08-30.** Ni agenter, disjunkt fileierskap. Utgangspunkt: 291 tester grønne, commit `b162d3e`.
+Status nå: **397 tester grønne**, ingenting committet (venter på at sveipen fullfører).
+
+| Agent | Oppdrag | Resultat |
+|---|---|---|
+| A | Klokke-tabell | ✅ 6 → 25 rader. **Klokkene diskriminerer ikke** (korr. +0,16/+0,09/−0,10; alle 6 grupper med identiske klokker spenner ratingskalaen) → ADR-025 |
+| B | 3 scenarier | ✅ Fant **8 bugs**. Osso buco klart bedre; B1 firedoblet av ekspansjonen |
+| C | `data/reference/` | ✅ **Ikke slettet** — var uattribuert kilde til `sommelier.md` §4 og `norsk-marked.md` §10. Gjeld #7 omskrevet, attribusjoner lagt inn, `bjcp_2021.pdf`-referansen var hallusinert |
+| D | Vivino-sync | ✅ 5 nye ratinger (117 → 122). Runbook rettet: DOM-en har eksakte UTC-tidsstempler, metadata må brace-matches |
+| E | Hvit/musserende/rosé | 🔄 Hvitvin **komplett: 9 765** (407 sider = `totalResults`). Musserende i gang, rosé gjenstår |
+| F0 | B6 statusfilter | ✅ `active_only` opt-in. Muteringstest beviste at default måtte stå (13 feil + 5 errors hvis snudd) |
+| F1 | B2 + B3 | ✅ Barbera 3 → 95, Etna 36 → 74, similarity 13 → **718 av 771**. Toleranse-funn: ADR-024 var «påkoblet i navnet, ikke i rangeringen» |
+| F2 | B4 + B5 | ✅ `risky` **0 → 408**, blindsoner 3 → 25 land. Fire nivå-innsnevringer. To-inngang-feil funnet via uendret sanity-sjekk |
+| F3 | B1 peer-percentil | ✅ Pichon Baron 0,72 → **0,50** percentil, 50 → 4 938 peers. **28,2 %** av 400 viner får korrigert verdict → ADR-026 |
+
+**Ikke fikset, bevisst:** B7 (samme vin på flere varenumre) — se Backlog, forbeholdene kan avlyse den.
+**Levert dokumentasjon:** ADR-025, ADR-026, ADR-027 (+ amendments), gjeld #7 omskrevet, #9/#10/#11 nye,
+`lessons.md` +3 poster, runbook-rettelser i `polet_refresh.md` og `vivino_refresh.md`.
+
+**Gjenstående gate:** ingen commit før E er ferdig — en commit midt i sveipen låser en halv katalog.
+
+### Beslutninger som venter (sveip 2026-08-30)
+
+- [ ] **Skal `active_only=True` bli default i `polet_store.query`?** F0 landet den bevisst som opt-in
+      med uendret default, fordi tre andre agenter jobbet i katalogen samtidig. Muteringstest viste at
+      å snu defaulten gir **13 feil + 5 errors** i `test_vinmonopolet.py` og `test_value_score.py` —
+      altså er det en reell atferdsendring, ikke en opprydding. Avgjøres etter at F1/F2/F3 har landet.
+      Argument for: 2 196 av 13 775 rødviner er ikke kjøpbare, hvorav 1 264 lyver med `buyable: true`.
+- [ ] **Hva gjør vi med `lanseres` (376 varer)?** De har `buyable: false` og fjernes av `active_only`,
+      men de er kommende lanseringer — potensielt interessante å *vise*, bare ikke som kjøpbare nå.
+- [ ] **Gjør oversettelsesfeilen umulig i stedet for testet mot** *(F2, 2026-08-30)*.
+      `tools/profile_stats.py::blindspots()` returnerer strengen `"Germany Red Wine (n=2)"`. Førte den
+      **land og kategori strukturert**, kunne `user_fit` droppet hele `_LAND_NO_TO_EN`-tabellen, og
+      oversettelsen ville vært eksakt i stedet for et oppslag — altså ville hele B4-feilklassen vært
+      umulig, ikke bare dekket av tester. F2 lot den stå bevisst: strengen rendres inn i den managed
+      blokka i `smaksprofil.md`, og `untappd_stats.py` speiler mønsteret. **Må tas samlet, ikke ensidig.**
+- [ ] **Prosaen i `smaksprofil.md` er feilkilden tre steder** *(F2, 2026-08-30)*.
+      (a) «Tyskland (Mosel, Rheingau – Riesling)» — parentesen er *bærende* (den sier hvitt), men
+      parseren stripper parenteser, så regelen ble «Tyskland». Hele spesifisitetsregelen i ADR-027
+      finnes på grunn av dette. **Rettes teksten til «Tysk Riesling», blir koden enklere.**
+      (b) «Sør-Rhône hvit (to lave på Lirac Blanc)» — n=2 er reelt n=1 vin i to årganger.
+      (c) **To seksjoner heter «Blindspots»** på samme nivå, og den kuraterte inneholder
+      `### New World rødvin` der bullets er *ratinger*, ikke regler. Krevde `stop_at_subheading`;
+      skjørt — en ny underseksjon med bullets lekker inn igjen.
+- [ ] **`tools/eval_fit.py::_csv_row_to_wine` setter ikke `underregion`** — Vivinos `Region` (som *er*
+      appellasjonen) havner i `region`. Fungerer, men tvinger nivåporten til å lese både `region` og
+      `navn`. Én linje ville gjort det eksplisitt.
+- [ ] **Flytt gjeld-#10-prosatesten til `tests/test_knowledge_content.py`** — den ligger i
+      `test_user_fit.py` § J kun fordi F2 ikke eide den andre fila.
+- [ ] **Årgangsspredning på samme vin er større enn profilen forutsetter — vurder å skrive det inn.**
+      Tre uavhengige funn 2026-08-30 peker samme vei: `9111501` Vincent Girardin Terroir Noble ratet
+      **4.5 (2010) og 3.8 (2023)**; Miraval Côtes de Provence **4.0 og 2.0**; Ségriés Lirac Blanc
+      **3,2 og 3,0**. Samme vin, ulik årgang, opptil **2,0 poengs spenn**. Konsekvenser: (a) klokke-
+      similarity kan per konstruksjon ikke forklare det (ADR-025 — klokkene er identiske); (b) «to lave
+      på Lirac Blanc» i prosaen er egentlig **n=1 vin i to årganger**, ikke n=2 — flere n-tall i
+      profilen kan være inflatert på samme måte; (c) en anbefaling som ignorerer årgang er svakere enn
+      profilen antyder. Tell opp hvor mange «n=»-påstander som er vin-duplikater før neste revisjon.
+- [ ] **Etterverifiser Bandol-innsnevringen når rosé-sveipen har landet.** Regelen er skrevet før
+      sveipen (bevisst — den skal være på plass *før* kategorien femtendobles), men treffantall er
+      ikke målbart på 53 juni-rader. Når rosé er ~782: mål hvor mange som flytter fra `risky` til
+      blindsone, og bekreft at Bandol faktisk ekskluderes.
+- [ ] **Re-mål user-fit-fordelingen mot ferdig katalog.** F2s tall er et øyeblikksbilde midt i
+      sveipen (`catalog.ndjson` md5 `6f5302e8`, hvitvin 4 616 av ~9 762, rosé/musserende før sveip).
+      Rødvinstallene står; hvit/musserende/rosé må måles på nytt.
+- [ ] **Fase 2 av hvit/musserende/rosé** (~3–4 t, 13 625 produkter) — klarsignal gis når fiksene har landet.
 
 ## Backlog
+- [ ] **B7: samme vin på flere varenummer til ulik pris — `value_score` ser det ikke.** Funnet
+      2026-08-30. Grupperer man rødvin på (navn × volum): **0 grupper i gammelt snapshot, 313 i
+      nytt** (792 rader, 142 med ≥10 % prisspredning). Verste: `ch. pichon longueville comtesse de
+      lalande 2016`, 75 cl, **fem aktive varenumre fra 2 113 til 3 950 kr**. `compute_value_score`
+      slår opp ett varenummer og sammenligner mot land-peers — den ser aldri at identisk vin ligger
+      989 kr billigere under et annet varenummer i samme snapshot.
+      **Riktig ramme er «manglende sjekk», ikke «bug»:** spørsmålet fantes ikke før ekspansjonen.
+      **Forbehold som kan avlyse posten — les dem før du måler:** 468 av 792 rader er `Spesialutvalg`
+      (Polets auksjonskanal, der separate partier til ulik pris er forventet og ikke feil); det er
+      *ikke* verifisert at identisk navn + volum betyr identisk produkt (kan skjule årgang i
+      navnefeltet, flasketilstand, importør — krever `details` for radene); og i hverdagssonen er
+      det 2 duplikat-rader av 1 448. Brukerpåvirkning i dag er nær null — det er «noe spesielt»-sonen
+      og peer-statistikken som rammes. Konfidens: middels.
 - [ ] **Hvit/musserende/rosé-ekspansjon** — de står fortsatt med gammel, `pageSize`-avkortet dekning
       (hvitvin 152, musserende 99, rosé 53). Samme oppskrift som rødvin: full enumerering + kartesisk
       klokke-sveip. Merk at klokke-dimensjonene er andre for hvitvin (`Soedme` og `Bitterhet` ga 0 treff

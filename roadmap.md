@@ -128,7 +128,7 @@ User-fit-score løser dette ved å gjøre smaksprofilen til en operativ funksjon
     "tier": "very_fit | fit | neutral | risky | no_go",
     "reasons": ["string", ...],
     "confidence": "high | medium | low",
-    "rule_fired": "no_go | bekymring | bekreftet_snitt | bekreftet_drue | blindspot | default"
+    "rule_fired": "no_go | bekymring | bekreftet_snitt | bekreftet_drue | bekreftet_stil | region_pluss | blindspot | blindspot_cap | default"
   }
 }
 ```

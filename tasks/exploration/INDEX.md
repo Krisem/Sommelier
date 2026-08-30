@@ -33,3 +33,5 @@ Ny frontier startes ved å kopiere [`_TEMPLATE.md`](_TEMPLATE.md) → `tasks/exp
 | Asiatisk mat (paring) | `planlagt` | Hvilke viner (og øl) parrer best til thai/indisk/kinesisk? Ingen ratinger sammen med asiatisk mat i dag. | ikke opprettet ennå |
 
 **Statuskoder:** `aktiv` = flight klar, ratings pågår · `delvis` = noen ratings, mønster ikke klart · `planlagt` = blindsone identifisert, flight ikke bygget ennå.
+
+> **Verifikasjon (ikke en frontier):** [`scenario_test_2026-08-30.md`](scenario_test_2026-08-30.md) — tre reelle scenarier kjørt mot det utvidede snapshotet (ADR-024). Katalogen ble klart bedre; seks bugs i lesesiden, rangert.
