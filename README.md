@@ -188,9 +188,11 @@ python3 -m pytest tests/test_vinmonopolet_html_fixture.py -v   # bare Polet-drif
 
 Pre-computet fit-klassifisering av alle viner i score-DB-en mot brukerens smaksprofil. Eliminerer behovet for at Claude per-vin resonnerer mot smaksprofilen på batch-spørringer.
 
-**Output:** `data/user_fit/v0.json` med tier (`very_fit / fit / neutral / risky / no_go`) per varenummer.
+**Oppslag for et vilkårlig varenummer:** `python3 -m tools.user_fit <varenr> [...]`, eller `from tools.user_fit import classify_code, classify_codes`. Klassifiserer katalograden direkte — full dekning, ingen derivert fil imellom.
 
-**Regenereres** automatisk når `profile_stats.py` kjører (etter Vivino-eksport), eller manuelt via `python3 -m tools.user_fit`.
+**Output-fila** `data/user_fit/v0.json` gir tier (`very_fit / fit / neutral / risky / no_go`) per varenummer, men **bare for viner som finnes i score-DB-en**: 409 av katalogens 27 402 varenumre (1,5 %, målt 2026-08-31). Den er et evaluerings-artefakt, ikke en oppslagstabell — bruk `classify_code` til oppslag.
+
+**Regenereres** automatisk når `profile_stats.py` kjører (etter Vivino-eksport), eller manuelt via `python3 -m tools.user_fit` uten argumenter.
 
 **Versjons-roadmap:** se [`roadmap.md`](roadmap.md). v0 er rule-based; v1/v2 planlagt for kontinuerlig rangering og lærte vekter.
 
