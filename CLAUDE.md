@@ -16,10 +16,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Evaluér fit-modeller:** `python3 -m tools.eval_fit` (modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines; `--stdout-only` dropper fil-skriving)
 - **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py` (leser snapshot i `data/polet/`)
 - **Refresh Polet-snapshot (device-agnostisk, Playwright-MCP + remote browser via CDP):** se runbook [`docs/polet_refresh.md`](docs/polet_refresh.md). Kan kjøres fra alle enheter (desktop/Android/web) når MCP peker på en remote browser (ADR-021). Engangs-seed fra gammel cache: `python3 tools/seed_polet_store.py`.
-- **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand (hopper over viner utenfor snapshot)
+- **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand (hopper over viner utenfor snapshot). **Den finner stil-slektninger, ikke «noe like godt».** Målt 2026-08-30 over 25 topp-viner korrelerer klokkene ~0 med brukerens egne ratinger (+0,16 / +0,09 / −0,10), og alle seks gruppene med identiske klokker spenner hele ratingskalaen — se [ADR-025](docs/ARCHITECTURE.md). Bruk den til «smaker i samme retning», aldri som argument for at han vil like noe.
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
 - **Polet-data:** repo-committet snapshot i `data/polet/` (ikke `requests`). Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d, value_score 24t caches fortsatt i `~/.cache/sommelier/`.
-- Ingen build/lint/test-suite — dette er et kunnskapsbase + helper-repo, ikke en app
+- **Kjør testene:** `python3 -m pytest -q` (411 tester per 2026-08-31, ~21 s, alle offline). Ingen build eller lint. Testene er innholds-baserte: de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. **Legger du til en test, muter antagelsen og bekreft at den faktisk feiler** — «grønn av feil grunn» var sveipens mest gjentatte feil (`tasks/lessons.md` 2026-08-30).
 
 ## Rolle
 
@@ -147,7 +147,8 @@ Følg denne rekkefølgen:
    - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
    - **Value er alders-merket** (verdict bærer `snapshot_age_days`/`snapshot_generated_at`). Når snapshotet er gammelt (>14 d), si det i anbefalingen — pris/lager kan ha endret seg, be brukeren verifisere på polet.no. `peer_status=refresh_required` betyr vinen mangler i snapshot: formidl at en refresh trengs.
 6b. **User-fit-sjekk (rask, alltid lov å gjøre):**
-   - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — slå opp `data/user_fit/v0.json` per varenummer
+   - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — kjør `python3 -m tools.user_fit <varenr> [<varenr> ...]`, eller `from tools.user_fit import classify_code, classify_codes`. Klassifiserer katalograden direkte, full dekning.
+   - **Ikke** slå opp `data/user_fit/v0.json` per varenummer. Fila dekker bare viner med kritiker-score — 409 av 27 402 varenumre (1,5 %) — så et oppslag der bommer i 98,5 % av tilfellene. Den er et evaluerings-artefakt, ikke en oppslagstabell.
    - **No-filter-bubble-prinsippet:** ALDRI auto-filtrér bort `no_go` eller `risky` fra default-rangering. Default = sortér etter objektiv kvalitet (kritiker-score), vis tier som *merke*. Tier er en advarsel, ikke en filter.
    - Bytt til tier-first-rangering KUN når brukeren eksplisitt ber om personalisering ("noe jeg garantert vil like", "trygge valg for selskapet")
    - Vis `risky` og `no_go` med tydelig flagg + grunn, men hold dem i listen
