@@ -10,10 +10,16 @@ seks faser. Full plan med begrunnelser, tall og verifiseringssteg:
 (rødvin 13 775 · hvitvin 9 762 · musserende 3 081 · rosé 782 · brennevin 2), 1 664 details
 (rødvin 1 379 · hvitvin 140 · musserende 95 · rosé 48 · brennevin 2).
 
-**Status ved sesjonsslutt 2026-08-31:** Fase 1 ferdig og merget til `main` (`387aa63`…`bbe9840`),
-**411 tester grønne**, arbeidstreet rent. Fase 2 er *sondert, ikke kjørt* — pagineringen og
-radformatet er verifisert live mot 13 sider (se fasen under), men ingen sveip er utført og
-`data/aperitif/` finnes ikke ennå. Neste økt starter med sveipen; ingenting annet er halvferdig.
+**Status 2026-08-31, andre økt:** Fase 3 og 4 er ferdige og committet
+(`4e2caae`…`b8490bb`), **461 tester grønne**, arbeidstreet rent.
+Måleomgangen ligger i [`maaling_2026-08-31.md`](maaling_2026-08-31.md), festet til
+revisjon `b8490bb` og katalog-md5 `429cce5f`.
+
+Fase 2 er **kodet, testet og under kjøring** — sveipen henter ~560 sider à ~12 s, altså
+et par timer veggtid. `data/aperitif/` skrives først når hele sveipen er ferdig (den skal
+avbryte framfor å skrive halvt). Første kjøring døde på side 222 fordi timeouten var
+kortere enn sidene; rettet i `27c1a1a`, og sidene mellomlagres nå så et fall ikke koster
+alt arbeid før det.
 
 **Styrende prinsipp:** mål én gang. Fase 3 (kodefiksene) kommer før Fase 4 (måleomgangen), fordi
 F2s tall er et øyeblikksbilde fra *midt* i sveipen.
@@ -124,40 +130,57 @@ Fase 6-gaten under.
 - [ ] Skriv prisbias-forbeholdet inn i snapshotet: Spearman(poeng, pris) = +0,65 (whisky) / +0,80
       (DN-vin). «Høyest score» ≈ «dyrest», så prissone-lås er en forutsetning, ikke pynt.
 
-### Fase 3 — rotårsaksklyngen: gjør feilklassen umulig (~5–7 t)
+### Fase 3 — rotårsaksklyngen: gjør feilklassen umulig ✅ FERDIG (`24685f0`, `b8490bb`)
 
-Tvingende rekkefølge: prosa → struktur → forenkling. Må tas samlet.
+Tatt samlet, i rekkefølgen prosa → struktur → forenkling. Round-trip-vernet kom først
+(`483c6ab`). **126 av 27 402 varer skifter dom** — se måledokumentet § 5.
 
-- [ ] **3.1 Prosaen i `knowledge/smaksprofil.md`.** «Tyskland (Mosel, Rheingau – Riesling)» →
+To feil funnet i mitt eget arbeid underveis, begge rettet og testdekket: (1) «er dette en
+`<Land> <Kategori>`-blindsone?» ble avgjort på needelens FORM, og «Aromatisk hvitvin»
+ble lest som land «Aromatisk» — sju italienske musserende mistet region-treffet sitt;
+(2) vokabular-byttet alene ville innført en ny feil, fordi «USA» finnes inni «Usatges»,
+«Sausal», «Sousa» og «Susana» — 15 hvitviner fra seks andre land ville blitt stemplet
+«USA Hvitvin». Derfor er eksakt matching forutsetningen for 3.3, ikke pynt på den.
+
+- [x] **3.1 Prosaen i `knowledge/smaksprofil.md`.** «Tyskland (Mosel, Rheingau – Riesling)» →
       «Tysk Riesling» (parentesen er bærende, men parseren stripper den — derfor finnes hele
       spesifisitetsregelen i ADR-027). «to lave på Lirac Blanc» er n=1 vin i to årganger, ikke n=2.
       Gi de to «Blindspots»-seksjonene distinkte navn.
       **Round-trip-test FØRST** (lesson 2026-08-30 om maler som sletter alt utenfor seg).
-- [ ] **3.2 Strukturér blindsonene.** `tools/profile_stats.py:87-99` returnerer
+- [x] **3.2 Strukturér blindsonene.** `tools/profile_stats.py:87-99` returnerer
       `"Germany Red Wine (n=2)"` → `{"land", "kategori", "n"}`, med rendringen i render-laget.
       `tools/untappd_stats.py` speiler mønsteret og endres i samme commit.
-- [ ] **3.3 Fjern `_LAND_NO_TO_EN`** (`tools/user_fit.py:368+`) og `_KATEGORI_NO_TO_EN`-bruken i
+- [x] **3.3 Fjern `_LAND_NO_TO_EN`** (`tools/user_fit.py:368+`) og `_KATEGORI_NO_TO_EN`-bruken i
       `_blindspot_hit` (linje 978-990). Da kan `stop_at_subheading` (linje 119-132, 299) også
       forsvinne. Sluttilstand: `grep -rn "_LAND_NO_TO_EN\|stop_at_subheading" tools/` → 0 treff.
-- [ ] **3.4 `active_only=True` som default + `lanseres` → `kommer_snart`** (godkjent 2026-08-31).
+- [x] **3.4 `active_only=True` som default + `lanseres` → `kommer_snart`** (godkjent 2026-08-31).
       2 196 av 13 775 rødviner er ikke kjøpbare, **1 264 av dem med `buyable: true`**. Koster 13 feil
       + 5 errors i `test_vinmonopolet.py` og `test_value_score.py` — **hver test leses og oppdateres
       enkeltvis med en begrunnelse**, ingen masseoppdatering. De 376 kommende lanseringene vises med
       flagg, ikke skjules (samme prinsipp som tier, ADR-016).
 
-### Fase 4 — én måleomgang på ferdig kode (~3–4 t)
+### Fase 4 — én måleomgang på ferdig kode ✅ FERDIG
 
-Hvert tall skrives med revisjon + `catalog.ndjson`-md5.
+Alt ligger i **[`maaling_2026-08-31.md`](maaling_2026-08-31.md)**, festet til revisjon
+`b8490bb` + katalog-md5 `429cce5f9fd73450d7817284f8c65377`.
 
-- [ ] Re-mål user-fit-fordelingen over hele katalogen. F2s tall er fra md5 `6f5302e8` (hvitvin
-      4 616 av 9 762, rosé/musserende før sveip). Rødvinstallene står.
-- [ ] Bandol-innsnevringen mot 782 rosé: hvor mange flytter `risky` → blindsone, og ekskluderes
-      Bandol faktisk?
-- [ ] Årgangsspredningen: tell hvor mange «n=»-påstander i `smaksprofil.md` som er vin-duplikater
-      i stedet for distinkte viner. `9111501` Vincent Girardin 4.5 (2010) vs 3.8 (2023), Miraval
-      4.0 vs 2.0, Ségriés 3,2 vs 3,0 — opptil 2,0 poengs spenn på samme vin. Legg fram tallet før
-      vi bestemmer om årgang skal skrives inn i profilen.
-- [ ] Rekjør `eval_fit` etter 3.3.
+- [x] User-fit-fordelingen over hele katalogen, både full katalog og kun kjøpbare.
+      **Rødvin 413 / 2 923 / 10 031 / 408** — merk at ADR-027s 498 og 2 839 er utdaterte,
+      og at avviket stammer fra sveipen 2026-08-30, ikke fra Fase 3.
+- [x] Bandol: **9 rader**, alle Bandol (ingen Palette/Bellet i katalogen), alle flytter
+      `risky` → blindsone. `risky` 162 → 153. **Bandol ekskluderes faktisk** — svaret er ja.
+- [x] Årgangsspredningen: 122 rader = **115 distinkte viner**, sju gjentak. Bare Miraval har
+      et stort spenn (2,0). **Planens Girardin-eksempel var feil** — det er to ulike cuvéer
+      fra samme produsent, ikke samme vin i to årganger. To påstander faller til n=1:
+      «Southern Rhône White» (rettet i 3.1) og **«Jura White» (ikke rettet)**.
+- [x] `eval_fit` rekjørt: **`v0_tier` +0,33 → +0,20**, forårsaket av inngangs-oversettelsen.
+      Ordningen over alle 122 er fortsatt monoton (4,09 · 3,95 · 3,88 · 3,00 · 2,00).
+
+**Til deg, to funn som ikke er handlinger ennå:**
+- «Jura (Chardonnay)» står som region du dras mot på grunnlag av **én vin i to årganger**.
+- Alle 218 `very_fit` i musserende er engelsk musserende — hver eneste Polet fører — på
+  grunnlag av **tre ratinger**. Hvitvin og rosé kan på sin side aldri nå `very_fit`, fordi
+  ingen av profilens fire bekreftede stiler er hvit eller rosé.
 
 ### Fase 5 — whisky, kritisk sti (~1 arbeidsdag)
 
