@@ -17,6 +17,26 @@ Format:
 
 ---
 
+## 2026-08-31 – Bær skillet fra der det er kjent, ikke utled det fra utseendet
+**Hva skjedde:** Da blindsonene ble skrevet om fra engelsk til norsk, trengte `_blindspot_hit` å vite hvilke needles som var auto-deriverte «<Land> <Kategori>» (matches eksakt) og hvilke som var kuratert prosa (matches som substring). Jeg avgjorde det på needelens FORM: ender den på en kategori, er den sammensatt. «Aromatisk hvitvin» ender også på en kategori, ble lest som land «Aromatisk», og spesifisitets-regelen fjernet dermed region-treffet til sju italienske musserende.
+**Hvorfor det var feil:** Informasjonen fantes allerede — needelen kom fra én av to navngitte seksjoner i `smaksprofil.md` — men jeg kastet den ved parsing og gjettet den tilbake senere. Et heuristikk-basert gjenkall av noe som var kjent eksakt er alltid et tap, og det feiler stille.
+**Hva jeg gjør annerledes nå:** Når to ting skal behandles ulikt, bær skillet fra der det er kjent (her: `rules["blindspots_land_kategori"]` fra parsingen). Utleder du det fra utseendet senere, gjetter du. Fanget fordi jeg diffet klassifiseringen av hele katalogen før og etter — 137 endrede varer der jeg forventet 126, og de 11 ekstra var funnet.
+
+## 2026-08-31 – Et vokabular-bytte kan innføre en feil den gamle formen skjulte
+**Hva skjedde:** Blindsonene gikk fra «United States White Wine» til «USA Hvitvin». Substring-matchingen som hadde fungert på den engelske formen ville med den norske stemplet 15 hvitviner fra Spania, Portugal, Østerrike, Italia, New Zealand og Argentina som «USA Hvitvin» — «USA» er tre bokstaver og finnes inni «Usatges», «Sausal», «Sousa» og «Susana».
+**Hvorfor det var feil å ikke se det først:** Den engelske formen hadde fire ledd og skjulte risikoen bak kravet om at alle måtte finnes. Jeg antok at et vokabular-bytte var nøytralt for matche-logikken. Det er det ikke: kortere tokens er farligere tokens.
+**Hva jeg gjør annerledes nå:** Ved bytte av vokabular, mål den gamle og den nye matche-veien mot hele datagrunnlaget og se på DIFFEN, ikke bare på at den nye virker. Her ga det 15 konkrete rader, som ble testen.
+
+## 2026-08-31 – Grønn av feil grunn, i begge retninger
+**Hva skjedde:** To ganger samme dag. (1) En test for «nettverksbom faller tilbake på snapshotet» passerte en mutasjon som fjernet fallback-en — den traff en tidligere gren (`if not wine_name`) og nådde aldri koden den skulle teste. (2) Da `active_only` ble snudd til default, falt fem filtertester fordi fixture-radene manglet `status` — de testet altså pris- og navnefiltre på rader som ble borte av en helt annen grunn.
+**Hvorfor det er samme feil:** En test kan være grønn fordi koden virker, eller fordi den aldri kom dit. Og en fixture som mangler et felt produksjonsdata alltid har, tester noe annet enn den later som.
+**Hva jeg gjør annerledes nå:** Muter alltid — men muter det NØYAKTIGE uttrykket testen påstår noe om, og sjekk at det er DEN testen som faller. Fixtures skal ligne produksjonsrader på de feltene koden faktisk leser.
+
+## 2026-08-31 – Timeouten var kortere enn siden, og drift-vernet meldte feil årsak
+**Hva skjedde:** Aperitif-sveipen avbrøt på side 222 etter 220 siders arbeid med «svarte ikke på 4 forsøk». Jeg antok rate-limiting. Sidene svarte 200 på tre forsøk rett etterpå — de tar bare 0,4–12 sekunder, mens `_http_get` har 15 sekunders default-timeout.
+**Hvorfor det var feil:** Jeg gjenbrukte en timeout kalibrert for produktsider på et helt annet arbeid (390 kB listesider), og lot drift-vernet rapportere «svarer ikke» om noe som i virkeligheten var «svarer for sakte for MIN grense». Feilmeldingen pekte utover, mot serveren, når årsaken lå i mitt eget kall.
+**Hva jeg gjør annerledes nå:** Mål responstiden FØR du setter en grense på den, og la den som starter en lang jobb eie sin egen timeout. Og: et vern som kaster to timers arbeid trenger mellomlagring, ellers er kostnaden ved å være forsiktig høyere enn feilen det verner mot.
+
 ## 2026-05-20 – Gjettet drueblanding i stedet for å sjekke
 **Hva skjedde:** OMA Piemonte Rosso 3L — parseren returnerte "Barbera 90 prosent". Jeg skrev "90 % Barbera + (sannsynligvis Nebbiolo/Dolcetto)" uten å åpne HTML-en. Faktisk blanding: 90 % Barbera + 5 % Dolcetto + 5 % Nebbiolo. Brukeren spurte hvorfor jeg ikke hadde sjekket.
 **Hvorfor det var feil:** To feil samtidig. (1) Parser-bug: `re.search` på `aria-label="... \d+ prosent"` returnerer kun første match — alle blendinger ble kuttet til hoveddrue. (2) Selv når output-en ser "rar" ut (90 % uten resten oppgitt), skrev jeg "sannsynligvis X" i stedet for å verifisere mot kilden. Det er hallusinasjon kamuflert som hedging.
