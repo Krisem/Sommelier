@@ -9,8 +9,19 @@ Strategi:
 2. Ved cache-miss: slå opp slug i Aperitif sitemap (cached 30 d), match mot navn
 3. Verifisér at varenummeret faktisk står på siden før vi cacher
 4. Cache score-resultat per varenummer i 14 dager
+5. Snapshot i `data/aperitif/scores.ndjson` som fallback (se under)
 
 Brukstilfelle: 2-5 oppslag per anbefaling. Per-vin on-demand, ikke bulk.
+
+**Snapshotet er fallback og bulk-kilde, ikke et lag FORAN nettverket.**
+`tools.refresh_aperitif` sveiper Pollistens listesider, og der står poengene —
+men ikke «godt kjøp»-flagget, som bare finnes på produktsiden (verifisert på
+sju listesider 2026-08-31, null treff). Flagget er ikke pynt: det kortslutter
+`_value_verdict` i `value_score.py`, og 5 av 9 cachede oppslag hadde det satt.
+Å lese snapshotet først ville derfor stille senket en `godt_kjop`-dom til
+peer-logikk. Snapshotet brukes i stedet der det er strengt bedre enn nettet:
+når nettoppslaget ikke fant vinen, når det bare fant en ANNEN årgang, og når
+kalleren eksplisitt ber om offline (bulk).
 """
 
 import html as html_lib
@@ -31,6 +42,10 @@ HEADERS = {
     ),
     "Accept-Language": "nb-NO,nb;q=0.9,no;q=0.8,en;q=0.7",
 }
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+SNAPSHOT = _REPO_ROOT / "data" / "aperitif" / "scores.ndjson"
+SNAPSHOT_META = _REPO_ROOT / "data" / "aperitif" / "meta.json"
 
 CACHE_DIR = Path.home() / ".cache" / "sommelier" / "aperitif"
 SCORE_TTL = 14 * 24 * 60 * 60       # 14 d for score
@@ -82,6 +97,65 @@ def _set_score_cache(polet_id: str, value) -> None:
         p.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
     except OSError:
         pass
+
+
+# ─── Snapshot (repo-committet, se tools/refresh_aperitif.py) ─────────
+
+_SNAPSHOT_CACHE: Optional[dict] = None
+
+
+def _load_snapshot() -> dict:
+    """Varenummer → rad. Tom dict hvis snapshotet ikke finnes ennå."""
+    global _SNAPSHOT_CACHE
+    if _SNAPSHOT_CACHE is not None:
+        return _SNAPSHOT_CACHE
+    rows: dict = {}
+    try:
+        with SNAPSHOT.open(encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    row = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                pid = row.get("polet_id")
+                if pid:
+                    rows[str(pid)] = row
+    except OSError:
+        pass
+    _SNAPSHOT_CACHE = rows
+    return rows
+
+
+def snapshot_score(polet_id: str) -> Optional[dict]:
+    """
+    Aperitif-poeng fra snapshotet, uten nettverk. None ved bom.
+
+    `value_flag` er alltid None her — listesiden bærer ikke flagget. Feltet er
+    med for at formen skal være lik nettverkssvaret, ikke fordi det er målt.
+    """
+    row = _load_snapshot().get(str(polet_id).strip())
+    if not row:
+        return None
+    return {
+        "polet_id": row["polet_id"],
+        "score": row.get("score"),
+        "wine_name": row.get("wine_name"),
+        "aperitif_url": row.get("aperitif_url"),
+        "value_flag": None,
+        "vintage_mismatch": False,
+        "source": "snapshot",
+        "fetched_at": snapshot_meta().get("generated_at"),
+    }
+
+
+def snapshot_meta() -> dict:
+    try:
+        return json.loads(SNAPSHOT_META.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
 
 
 def _http_get(url: str, timeout: int = 15) -> Optional[str]:
@@ -235,6 +309,7 @@ def get_aperitif_score(
     wine_name: Optional[str] = None,
     *,
     use_cache: bool = True,
+    offline: bool = False,
 ) -> Optional[dict]:
     """
     Slå opp Aperitif-score for en vin på Polet.
@@ -244,14 +319,23 @@ def get_aperitif_score(
         wine_name: Vinens navn — trengs for å finne URL første gang.
                    Ignoreres om vi allerede har URL i mapping.
         use_cache: Sett False for å tvinge ferskt kall.
+        offline: Bruk kun snapshotet — ingen HTTP. For bulk over katalogen.
 
     Returnerer dict med:
         - score (1-100), value_flag, wine_name, polet_id, aperitif_url,
           tasted_date, fetched_at
 
+    Snapshotet i `data/aperitif/` brukes der det er strengt bedre enn nettet:
+    når nettoppslaget ikke fant vinen, og når det bare fant en ANNEN årgang
+    (snapshotraden er matchet på varenummer, ikke på slug-likhet). Se
+    modul-docstringen for hvorfor det ikke leses FØRST.
+
     Returnerer None hvis ingen treff eller blokkert.
     """
     polet_id = str(polet_id).strip()
+
+    if offline:
+        return snapshot_score(polet_id)
 
     if use_cache:
         cached = _get_score_cache(polet_id)
@@ -265,7 +349,7 @@ def get_aperitif_score(
     parsed: dict = {}
     if url is None:
         if not wine_name:
-            return None
+            return snapshot_score(polet_id)
         candidates = _find_url_candidates(wine_name)
         # Pass 1: eksakt varenr-match (samme årgang)
         for candidate in candidates:
@@ -288,17 +372,26 @@ def get_aperitif_score(
                     url = candidates[0]
                     vintage_mismatch = True
         if url is None:
-            return None
+            return snapshot_score(polet_id)
     else:
         html = _http_get(url)
         if not html:
-            return None
+            return snapshot_score(polet_id)
         parsed = _parse_product_page(html)
         if parsed.get("polet_id") != polet_id:
             # Mapping stale — fjern og fall tilbake
             mapping.pop(polet_id, None)
             _save_mapping(mapping)
             return get_aperitif_score(polet_id, wine_name, use_cache=False)
+
+    if vintage_mismatch:
+        # Siden gjelder en annen årgang, så både poenget og «godt kjøp»-flagget
+        # der tilhører en annen vin. Har snapshotet raden, er den matchet på
+        # varenummer og dermed strengt bedre — bruk den i stedet for å sende en
+        # usann påstand videre (samme feilklasse som 5-sifret-varenummer-bommen).
+        exact = snapshot_score(polet_id)
+        if exact and exact.get("score"):
+            return exact
 
     result = {
         **parsed,

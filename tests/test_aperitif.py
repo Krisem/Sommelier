@@ -100,3 +100,129 @@ def test_score_is_parsed_independently_of_varenummer():
     parsed = _parse_product_page(page)
     assert parsed["score"] == 91
     assert "polet_id" not in parsed
+
+
+# ─── Snapshotet i data/aperitif/ ─────────────────────────────────────
+# Sveipen (tools/refresh_aperitif.py) gir varenummer → poeng for hele den
+# scorede delen av Pollisten. Den listen bærer IKKE «godt kjøp»-flagget, som
+# kortslutter `_value_verdict` i value_score. Derfor er snapshotet fallback og
+# bulk-kilde, ikke et lag foran nettverket — og disse testene fester nettopp
+# det skillet.
+
+import tools.aperitif as ap
+
+
+@pytest.fixture
+def snapshot(tmp_path, monkeypatch):
+    """Legg et snapshot med én vin på plass, og nullstill modul-cachen."""
+    rows = tmp_path / "scores.ndjson"
+    rows.write_text(
+        json.dumps(
+            {
+                "polet_id": "12345601",
+                "score": 91,
+                "wine_name": "Snapshotvin",
+                "aperitif_url": "https://www.aperitif.no/pollisten/produkt/x,1",
+            },
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    meta = tmp_path / "meta.json"
+    meta.write_text(json.dumps({"generated_at": "2026-08-31T12:00:00"}), encoding="utf-8")
+    monkeypatch.setattr(ap, "SNAPSHOT", rows)
+    monkeypatch.setattr(ap, "SNAPSHOT_META", meta)
+    monkeypatch.setattr(ap, "_SNAPSHOT_CACHE", None)
+    return rows
+
+
+def _no_network(monkeypatch):
+    def boom(*a, **k):
+        raise AssertionError("skulle ikke gjort HTTP-kall")
+    monkeypatch.setattr(ap, "_http_get", boom)
+
+
+def test_snapshot_score_reads_varenummer_without_network(snapshot, monkeypatch):
+    _no_network(monkeypatch)
+    r = ap.snapshot_score("12345601")
+    assert r["score"] == 91
+    assert r["source"] == "snapshot"
+    assert r["fetched_at"] == "2026-08-31T12:00:00"
+
+
+def test_snapshot_never_claims_a_buy_flag(snapshot):
+    """Listesiden har ikke flagget — snapshotet skal ikke late som."""
+    assert ap.snapshot_score("12345601")["value_flag"] is None
+
+
+def test_snapshot_miss_is_none(snapshot):
+    assert ap.snapshot_score("99999999") is None
+
+
+def test_offline_uses_snapshot_only(snapshot, monkeypatch):
+    _no_network(monkeypatch)
+    assert ap.get_aperitif_score("12345601", offline=True)["score"] == 91
+    assert ap.get_aperitif_score("11111101", offline=True) is None
+
+
+def test_lookup_without_a_name_falls_back_to_snapshot(snapshot, monkeypatch):
+    """Uten navn finner slug-matchingen ingenting — snapshotet gjør det."""
+    monkeypatch.setattr(ap, "_get_score_cache", lambda pid: None)
+    monkeypatch.setattr(ap, "_load_mapping", lambda: {})
+    r = ap.get_aperitif_score("12345601")
+    assert r["score"] == 91 and r["source"] == "snapshot"
+
+
+def test_exhausted_url_candidates_fall_back_to_snapshot(snapshot, monkeypatch):
+    """
+    Navnet gir kandidater, men ingen av sidene har verken riktig varenummer
+    eller poeng. Før snapshotet var svaret None — nå finnes poenget likevel.
+    """
+    monkeypatch.setattr(ap, "_get_score_cache", lambda pid: None)
+    monkeypatch.setattr(ap, "_load_mapping", lambda: {})
+    monkeypatch.setattr(ap, "_save_mapping", lambda m: None)
+    monkeypatch.setattr(ap, "_find_url_candidates", lambda name, **k: ["https://x/1"])
+    monkeypatch.setattr(
+        ap, "_http_get", lambda url, timeout=15: "<html><body><h1>Feil vin</h1></body></html>"
+    )
+    r = ap.get_aperitif_score("12345601", "Snapshotvin")
+    assert r["score"] == 91 and r["source"] == "snapshot"
+
+
+def test_dead_mapping_url_falls_back_to_snapshot(snapshot, monkeypatch):
+    """Kjent URL, men siden svarer ikke (nede/blokkert)."""
+    monkeypatch.setattr(ap, "_get_score_cache", lambda pid: None)
+    monkeypatch.setattr(ap, "_load_mapping", lambda: {"12345601": "https://x/1"})
+    monkeypatch.setattr(ap, "_http_get", lambda url, timeout=15: None)
+    r = ap.get_aperitif_score("12345601", "Snapshotvin")
+    assert r["score"] == 91 and r["source"] == "snapshot"
+
+
+def test_wrong_vintage_page_loses_to_the_exact_snapshot_row(snapshot, monkeypatch):
+    """
+    Pass 2 returnerer en side for en ANNEN årgang. Poeng og flagg der tilhører
+    en annen vin, mens snapshotraden er matchet på varenummer.
+    """
+    other_vintage_page = (
+        "<html><body><h1>Snapshotvin 1999</h1>"
+        '<span class="number">77</span> <span class="label">POENG'
+        "</span><p>Veldig godt kjøp</p></body></html>"
+    )
+    monkeypatch.setattr(ap, "_get_score_cache", lambda pid: None)
+    monkeypatch.setattr(ap, "_set_score_cache", lambda pid, v: None)
+    monkeypatch.setattr(ap, "_load_mapping", lambda: {})
+    monkeypatch.setattr(ap, "_save_mapping", lambda m: None)
+    monkeypatch.setattr(ap, "_find_url_candidates", lambda name, **k: ["https://x/y"])
+    monkeypatch.setattr(ap, "_http_get", lambda url, timeout=15: other_vintage_page)
+
+    r = ap.get_aperitif_score("12345601", "Snapshotvin")
+    assert r["score"] == 91
+    assert r["vintage_mismatch"] is False
+    assert r["value_flag"] is None
+
+
+def test_missing_snapshot_file_is_not_an_error(tmp_path, monkeypatch):
+    monkeypatch.setattr(ap, "SNAPSHOT", tmp_path / "finnes-ikke.ndjson")
+    monkeypatch.setattr(ap, "_SNAPSHOT_CACHE", None)
+    assert ap.snapshot_score("12345601") is None
