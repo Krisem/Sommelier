@@ -45,13 +45,6 @@ SMAKSPROFIL_PATH = REPO_ROOT / "knowledge" / "smaksprofil.md"
 DEFAULT_OUTPUT_PATH = REPO_ROOT / "data" / "user_fit" / "v0.json"
 
 # Terskler — eksplisitt navngitt for at en endring krever bevisst valg
-# Beholdt som dokumentert konstant, men IKKE lenger en port i `classify`.
-# Bekreftelsen avgjores ett sted — `profile_stats.confirmed_styles`, som er der
-# statistikken bor — og skrives til `bekreftet_stiler` i profilen. Da klassifisering
-# ogsa holdt en absolutt 4,0-grense, var det to porter for samme beslutning: en stil
-# kunne vaere bekreftet i profilen og likevel stoppes her. Det rammet «Northern Italy
-# Rose» (3,88), som er brukerens tydeligste rosemonster.
-_VERY_FIT_AVG_THRESHOLD = 4.0
 _RISKY_AVG_THRESHOLD = 3.3  # samme som "Bekymringer"-grensen i smaksprofil
 
 

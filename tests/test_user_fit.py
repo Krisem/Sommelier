@@ -20,7 +20,6 @@ import pytest
 from tools.user_fit import (
     DEFAULT_OUTPUT_PATH,
     SMAKSPROFIL_PATH,
-    _VERY_FIT_AVG_THRESHOLD,
     classify,
     classify_score_db,
     load_profile_rules,
@@ -496,11 +495,6 @@ def test_mock_rules_does_not_read_disk(mock_rules, monkeypatch):
     monkeypatch.setattr("tools.user_fit.load_profile_rules", fake_loader)
     classify({"stil": "Italian Ripasso"}, rules=mock_rules)
     assert not sentinel["called"], "classify(rules=...) skal ikke laste fra disk"
-
-
-def test_very_fit_threshold_constant():
-    """Sanity-check at terskelen ikke har endret seg utilsiktet."""
-    assert _VERY_FIT_AVG_THRESHOLD == 4.0
 
 
 def test_smaksprofil_path_exists():
