@@ -18,6 +18,7 @@ drift-vern»).
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -192,14 +193,51 @@ def test_sweep_aborts_on_a_page_with_zero_product_rows():
         sweep(fetch=_pager([scored]), delay=0, max_pages=5)
 
 
+def _med_poeng(html: str, poeng: list[int]) -> str:
+    """Sett poengene på fixture-radene, i rekkefølge."""
+    ut, i = [], 0
+    for bit in _rows_html(html):
+        ut.append(
+            re.sub(
+                r'<span class="number">\s*\d+\s*</span>',
+                f'<span class="number">{poeng[i % len(poeng)]}</span>',
+                bit,
+                count=1,
+            )
+        )
+        i += 1
+    return _page(ut)
+
+
 def test_sweep_aborts_when_sorting_is_no_longer_points_desc():
-    """Side 2 med høyere poeng enn side 1s laveste betyr endret sortering."""
-    low = _fixture("pollisten_side1.html").replace(
-        '<span class="number">99</span>', '<span class="number">70</span>'
-    ).replace('<span class="number">98</span>', '<span class="number">70</span>')
-    high = _fixture("pollisten_side1.html")
+    """Ekte drift: hele siden hopper opp, ikke én rad."""
+    html = _fixture("pollisten_side1.html")
+    lav = _med_poeng(html, [70])
+    høy = _med_poeng(html, [95])
     with pytest.raises(SweepAborted, match="points_desc"):
-        sweep(fetch=_pager([low, high]), delay=0, max_pages=5)
+        sweep(fetch=_pager([lav, høy]), delay=0, max_pages=5)
+
+
+def test_a_single_out_of_order_row_does_not_abort_the_sweep():
+    """
+    Ekte tilfelle fra sveipen 2026-08-31: side 132 hadde én 89 midt i tretti
+    90-ere, og side 133 var full av 90-ere igjen. Den første utgaven av vernet
+    sammenlignet sidens HØYESTE mot forrige sides LAVESTE og døde på side 133
+    av 560. Lista er monoton på sidenivå, ikke på radnivå.
+    """
+    html = _fixture("pollisten_side1.html")
+    med_avvik = _med_poeng(html, [90, 89, 90])   # én lavere midt i blokka
+    neste = _med_poeng(html, [90])
+    tom = _fixture("pollisten_side600.html")
+
+    rows, meta = sweep(
+        fetch=_pager([med_avvik, neste, tom, tom]),
+        stop_after_empty=2,
+        delay=0,
+        max_pages=10,
+    )
+    assert meta["pages_fetched"] == 4
+    assert meta["last_page_with_points"] == 2
 
 
 def test_sweep_aborts_when_a_page_never_answers(monkeypatch):

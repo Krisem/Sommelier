@@ -41,6 +41,7 @@ import argparse
 import html as html_lib
 import json
 import re
+import statistics
 import sys
 import time
 from pathlib import Path
@@ -60,6 +61,14 @@ PAGE_N = f"{BASE}/pollisten/pollisten,7,{{page}}"
 ROWS_PER_PAGE = 30          # observert konstant på alle sonderte sider
 DEFAULT_MAX_PAGES = 700     # taket: poengene tar slutt ~side 555
 STOP_AFTER_EMPTY = 3        # sammenhengende sider uten poeng før vi stopper
+
+# Sorterings-vernet sammenligner MEDIAN mot median, med slakk. Første utgave
+# sammenlignet sidens høyeste mot forrige sides laveste, og døde på side 133 av
+# 560: side 132 hadde én enkelt 89 midt i en blokk med tretti 90-ere, og da så
+# den neste siden ut som en oppadgående sortering. Lista er ikke strengt
+# monoton på radnivå — den er det på sidenivå. Ekte drift (lista sorterer om,
+# eller vi får side 1 tilbake) flytter medianen mange poeng, ikke ett.
+SORT_TOLERANCE = 2
 REQUEST_DELAY = 0.5         # sekunder mellom kall
 
 # Listesidene er store (~390 kB) og trege: målt 0,4-12 s per side 2026-08-31.
@@ -274,7 +283,7 @@ def sweep(
     rows: list[dict] = []
     seen_polet_ids: set[str] = set()
     prev_ids: Optional[set] = None
-    prev_min_score: Optional[int] = None
+    prev_median: Optional[float] = None
 
     pages_fetched = 0
     retries_used = 0
@@ -314,15 +323,16 @@ def sweep(
 
         scored = [r for r in page_rows if isinstance(r.get("score"), int)]
         page_scores = [r["score"] for r in scored]
-        if page_scores and prev_min_score is not None:
-            if max(page_scores) > prev_min_score:
+        page_median = statistics.median(page_scores) if page_scores else None
+        if page_median is not None and prev_median is not None:
+            if page_median > prev_median + SORT_TOLERANCE:
                 raise SweepAborted(
-                    f"Side {page} har poeng {max(page_scores)} over forrige sides "
-                    f"laveste ({prev_min_score}) — sorteringen er ikke lenger "
-                    "points_desc. Avbryter uten å skrive."
+                    f"Side {page} har median {page_median} mot forrige sides "
+                    f"{prev_median} — sorteringen er ikke lenger points_desc. "
+                    "Avbryter uten å skrive."
                 )
-        if page_scores:
-            prev_min_score = min(page_scores)
+        if page_median is not None:
+            prev_median = page_median
 
         rows_seen += len(page_rows)
         rows_scored += len(scored)
