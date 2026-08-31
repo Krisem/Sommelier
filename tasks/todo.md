@@ -81,6 +81,29 @@ Status nå: **397 tester grønne**, ingenting committet (venter på at sveipen f
       Rødvinstallene står; hvit/musserende/rosé må måles på nytt.
 - [ ] **Fase 2 av hvit/musserende/rosé** (~3–4 t, 13 625 produkter) — klarsignal gis når fiksene har landet.
 
+## Planer under vurdering (2026-08-31)
+
+To feature-forespørsler er researchet av fire agenter + to devil's advocate + QA (17 tall etterprøvd:
+14 bekreftet, 2 avvik, 1 delvis). Begge planene er **forslag, ikke besluttet** — åpne spørsmål står
+nederst i hver fil.
+
+- [ ] [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md) — objektiv anbefaling + prediksjon.
+  **Kort:** bobla sitter i retrieval (~22 % av feltet nås), kritiker-dekning er 1,4 %, og
+  «objektivt best» korrelerer +0,80 med pris. DA fant at bobla ikke er synlig i atferden (2026 er
+  bredeste år: HHI 0,156, 10 nye stiler) og at prediksjonsregelen ville sagt noe usant om
+  Provence-rosé. Anbefalt kjerne: mekanisme-sjekk før anbefalingen + eksponer `blindspot`
+  (6 654 varer, snitt 4,15, allerede beregnet) + Aperitif-sveip (~14 300 scorede varenumre).
+- [ ] [`plan_whisky.md`](plan_whisky.md) — whisky som tredje fagområde.
+  **Kort:** ølkanalen er død (siste check-in 2026-01-16; 2025: 29 → 2026: 1), fritekstnotat skrives
+  1,9 % av gangene, og en tier-modell trenger ~84 ratinger. Aperitif dekker likevel 81 % av det
+  praktiske whisky-universet, nøklet på varenummer. Anbefalt rekkefølge: **spør hva han har smakt**
+  → fiks `aperitif.py`-regexen → Aperitif-sveip → tynn `knowledge/whisky.md`. Utsett fit, bøtter,
+  fasettprobing og katalogsveip.
+
+**Funnet underveis, uavhengig av begge:** `tools/aperitif.py:200` matcher varenummer med `\d{7,8}`
+og bommer derfor på **587 av 27 402** varenumre (2,1 %) som er 5–6 siffer. Aperitif-score har
+manglet stille for de vinene hele tiden. 15 min å fikse.
+
 ## Backlog
 - [ ] **B7: samme vin på flere varenummer til ulik pris — `value_score` ser det ikke.** Funnet
       2026-08-30. Grupperer man rødvin på (navn × volum): **0 grupper i gammelt snapshot, 313 i
