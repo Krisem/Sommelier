@@ -297,6 +297,31 @@ def test_snapshot_is_written_sorted_and_deterministically(tmp_path):
     assert json.loads(lines[0]) == json.loads(json.dumps(json.loads(lines[0])))
 
 
+def test_a_crash_midway_leaves_the_forrige_snapshot_intact(tmp_path):
+    """Sveipen er to timer i minnet før første byte treffer disk.
+
+    Med `open("w")` ble den forrige fila trunkert før serialiseringen var
+    ferdig, så et krasj underveis ga en halv fil OG ødelagt forgjenger.
+    """
+    good = [{"polet_id": "1", "poeng": 90}]
+    write_snapshot(good, {"generated_at": "først"}, directory=tmp_path)
+    forrige = (tmp_path / "scores.ndjson").read_text(encoding="utf-8")
+
+    class Uskrivbar:
+        pass
+
+    sprengt = [{"polet_id": "2", "poeng": 91}, {"polet_id": "3", "poeng": Uskrivbar()}]
+    with pytest.raises(TypeError):
+        write_snapshot(sprengt, {"generated_at": "andre"}, directory=tmp_path)
+
+    assert (tmp_path / "scores.ndjson").read_text(encoding="utf-8") == forrige
+
+
+def test_no_tmp_file_survives_a_successful_write(tmp_path):
+    write_snapshot([{"polet_id": "1"}], {"generated_at": "x"}, directory=tmp_path)
+    assert list(tmp_path.glob("*.tmp")) == []
+
+
 def test_meta_carries_the_price_bias_caveat():
     """Forbeholdet skal ligge I snapshotet, ikke bare i en planfil."""
     scored = _fixture("pollisten_side1.html")

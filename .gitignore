@@ -16,3 +16,6 @@ polet-mcp.config.json
 node_modules/
 package.json
 package-lock.json
+
+# Atomisk skriving legger igjen .tmp hvis prosessen dør mellom write og replace.
+*.tmp

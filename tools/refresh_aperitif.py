@@ -40,6 +40,7 @@ from __future__ import annotations
 import argparse
 import html as html_lib
 import json
+import os
 import re
 import statistics
 import sys
@@ -393,15 +394,29 @@ def sweep(
     return rows, meta
 
 
+def _write_atomic(path: Path, text: str) -> None:
+    """Skriv via .tmp i SAMME mappe, så os.replace.
+
+    `sweep()` holder alle radene i minnet og skriver først til slutt, så
+    skrivevinduet er det ene sekundet der en to timers sveip kan bli til en
+    halv fil. `.tmp` må ligge i samme mappe fordi `os.replace` bare er atomisk
+    innenfor ett filsystem.
+    """
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
+
+
 def write_snapshot(rows: list[dict], meta: dict, *, directory: Path = APERITIF_DIR) -> None:
     """Deterministisk serialisering, sortert på varenummer (konfliktfrie merges)."""
     directory.mkdir(parents=True, exist_ok=True)
     ordered = sorted(rows, key=lambda r: int(r["polet_id"]))
-    with (directory / SCORES.name).open("w", encoding="utf-8") as f:
-        for r in ordered:
-            f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
-    (directory / META.name).write_text(
-        json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    _write_atomic(
+        directory / SCORES.name,
+        "".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in ordered),
+    )
+    _write_atomic(
+        directory / META.name, json.dumps(meta, ensure_ascii=False, indent=2) + "\n"
     )
 
 
