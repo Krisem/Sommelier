@@ -134,6 +134,40 @@ irsk Technical File (2014), JSLMA-reglene, Vinmonopolets klokke-artikkel.
 - **Den irske pot still-endringen** (foreslått 2021/2022) — ikke bekreftet vedtatt.
 - **Klyngeantallet hos whiskyanalysis.com** — kilden motsier seg selv (9 eller 10).
 
-**Ennå ikke skrevet, venter på data:** norsk og nordisk sortiment. Det skal bygges på
-Aperitif-snapshotet i `data/aperitif/scores.ndjson` (whisky ligger i samme liste som vin), ikke
-på hukommelse om hva Polet fører.
+## Norsk og nordisk sortiment
+
+> Bygget på `data/aperitif/scores.ndjson`, sveipet 31. august 2026 (557 sider, 15 672 rader).
+> Ikke på hukommelse om hva Polet fører. **316 whiskyer har Aperitif-poeng**; det er Aperitifs
+> dekning, ikke Polets sortiment — Polet fører flere enn Aperitif har vurdert.
+
+Fordelingen av de 316: Skottland 210, USA 36, Irland 18, Japan 16, **Norge 8**, Frankrike 5,
+Canada 4, Finland 3, Danmark 3, Sverige 2.
+
+**Hovedfunnet er priset, ikke poengene.** Median Aperitif-score er den samme for nordisk og
+skotsk whisky — 89 begge veier — men medianprisen er ikke:
+
+| Opphav | n | Median score | Spenn | Median pris |
+|---|---:|---:|---|---:|
+| Skottland | 210 | 89 | 76–97 | 1 201 kr |
+| Nordisk | 16 | 89 | 83–95 | 833 kr |
+| Norge | 8 | 89 | 85–90 | 870 kr |
+
+Samme poengsum, drøye 350 kroner billigere på medianen. Det er den eneste påstanden dette
+avsnittet bærer alene.
+
+**Forbeholdet må leses først.** Spearman(poeng, pris) er **+0,66** over alle 316 — «høyest score»
+er i praksis nær «dyrest», så poengene kan ikke brukes til rangering uten en prissone-lås.
+Innenfor det nordiske utvalget er sammenhengen langt svakere, **+0,38**, altså er poengene mer
+informative der enn i sortimentet som helhet. Det er en observasjon på 16 flasker, ikke en lov.
+
+De norske, sortert på poeng: Myken Hellstrøm à la Hellstrøm (90, 839,90), Feddie Single Malt
+(90, 759,90), Myken Sea Mist Arctic Island (90, 899,90), Myken Autumn Gale (89, 899,90), Myken
+Ocean Heart (89, 999,90), Gjoleid Mesterens Triple Cask (87, 924,90), Bivrost Yggdrasil (87,
+809,90), Haavaldsen Stiger Series 2020 (85, 799,90). Fem av åtte er Myken.
+
+Toppen av det nordiske er dansk og svensk, ikke norsk: DJ Nordic Series Mosgaard Peat & Port
+(Danmark, 95) og DJ Nordic Series Smögen 10yo (Sverige, 92).
+
+**Hva dette IKKE sier.** Ingenting om hva Kristoffer vil like — whisky står fortsatt på n=0, og
+Aperitif-poeng er andres dom. Seksjonen svarer på «hva finnes og hva koster det», ikke på
+«hva passer meg». Se `## Status: n=0` øverst.

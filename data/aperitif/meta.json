@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-08-31T14:48:25",
+  "source": "https://www.aperitif.no/pollisten (listesider, sortert points_desc)",
+  "pages_fetched": 557,
+  "page_retries": 2,
+  "last_page_with_points": 554,
+  "rows_seen": 16710,
+  "rows_scored": 16614,
+  "rows_written": 15672,
+  "rows_scored_without_varenummer": 184,
+  "duplicate_varenumre_skipped": 758,
+  "score_range": [
+    60,
+    99
+  ],
+  "forbehold": {
+    "prisbias": "Spearman(poeng, pris) = +0,65 for whisky og +0,80 for DN-vin. «Høyest score» ≈ «dyrest». Prissone-lås er en FORUTSETNING for å bruke disse poengene til rangering, ikke pynt.",
+    "ingen_kjopsflagg": "Listeraden bærer ikke «godt kjøp»/«veldig godt kjøp» — det flagget finnes bare på produktsiden. Snapshotet er derfor fallback og bulk-kilde i get_aperitif_score, ikke et lag foran nettverket.",
+    "dekning": "Rader uten varenummer i listeraden er utelatt — de kan ikke slås opp mot Polet. Se rows_scored_without_varenummer."
+  }
+}
