@@ -62,11 +62,19 @@ DEFAULT_MAX_PAGES = 700     # taket: poengene tar slutt ~side 555
 STOP_AFTER_EMPTY = 3        # sammenhengende sider uten poeng før vi stopper
 REQUEST_DELAY = 0.5         # sekunder mellom kall
 
+# Listesidene er store (~390 kB) og trege: målt 0,4-12 s per side 2026-08-31.
+# `_http_get` har 15 s default-timeout, og en side som er marginalt tregere
+# enn normalen ble derfor lest som «svarer ikke». Første fullskala-kjøring døde
+# på side 222 av den grunn, etter 220 siders arbeid. Timeouten er sveipens
+# eget valg, ikke aperitif-modulens.
+PAGE_TIMEOUT = 60
+
 # Enkeltsider faller sporadisk (side 3 svarte ikke i første kjøring 2026-08-31,
 # men svarte 200 på tre påfølgende forsøk rett etterpå). Et transient fall er
 # IKKE drift, og skal ikke drepe en 560-siders sveip — men et vedvarende fall
-# er en ekte feil vi ikke skal skrive halv data på toppen av.
-RETRY_BACKOFF = (2, 5, 15)  # sekunder mellom forsøk 1→2, 2→3, 3→4
+# er en ekte feil vi ikke skal skrive halv data på toppen av. Stigen er lang
+# nok til at en side må være borte i drøyt et minutt før vi gir opp.
+RETRY_BACKOFF = (5, 15, 60)  # sekunder mellom forsøk 1→2, 2→3, 3→4
 
 
 class SweepAborted(RuntimeError):
@@ -75,6 +83,34 @@ class SweepAborted(RuntimeError):
 
 def page_url(page: int) -> str:
     return PAGE_1 if page == 1 else PAGE_N.format(page=page)
+
+
+def _default_fetch(url: str) -> Optional[str]:
+    return _http_get(url, timeout=PAGE_TIMEOUT)
+
+
+def cached_fetch(cache_dir: Path):
+    """
+    Fetch som mellomlagrer hver side på disk.
+
+    En sveip er ~560 sider à ~12 s ≈ to timer. Uten mellomlagring koster ett
+    fall på side 222 alt som er hentet før den. Cachen ligger UTENFOR repoet
+    og er ren mellomlagring — snapshotet skrives fortsatt atomisk til slutt,
+    så «avbryt framfor å skrive halvt» står.
+    """
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    def fetch(url: str) -> Optional[str]:
+        side = "1" if url.endswith("/pollisten") else url.rsplit(",", 1)[1]
+        p = cache_dir / f"side-{int(side):04d}.html"
+        if p.exists():
+            return p.read_text(encoding="utf-8")
+        html = _default_fetch(url)
+        if html is not None:
+            p.write_text(html, encoding="utf-8")
+        return html
+
+    return fetch
 
 
 # ─── Parsing (ren funksjon, fixture-testet) ──────────────────────────
@@ -234,7 +270,7 @@ def sweep(
     ikke rykker) eller poeng som stiger på tvers av sider (sortering endret).
     Ingenting skrives før hele sveipen er ferdig.
     """
-    fetch = fetch or _http_get
+    fetch = fetch or _default_fetch
     rows: list[dict] = []
     seen_polet_ids: set[str] = set()
     prev_ids: Optional[set] = None
@@ -365,6 +401,10 @@ def main(argv: Optional[list[str]] = None) -> int:
     ap.add_argument("--delay", type=float, default=REQUEST_DELAY)
     ap.add_argument("--stop-after-empty", type=int, default=STOP_AFTER_EMPTY)
     ap.add_argument("--dry-run", action="store_true", help="ikke skriv til disk")
+    ap.add_argument(
+        "--cache-dir",
+        help="mellomlagre hentede sider her, så en avbrutt sveip kan gjenopptas",
+    )
     args = ap.parse_args(argv)
 
     def progress(page, n_rows, n_scored, total):
@@ -380,6 +420,7 @@ def main(argv: Optional[list[str]] = None) -> int:
             max_pages=args.max_pages,
             stop_after_empty=args.stop_after_empty,
             delay=args.delay,
+            fetch=cached_fetch(Path(args.cache_dir)) if args.cache_dir else None,
             progress=progress,
         )
     except SweepAborted as e:

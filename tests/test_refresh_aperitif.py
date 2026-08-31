@@ -266,3 +266,42 @@ def test_meta_carries_the_price_bias_caveat():
     _, meta = sweep(fetch=_pager([scored, empty, empty]), stop_after_empty=2, delay=0)
     assert "0,80" in meta["forbehold"]["prisbias"]
     assert "godt kjøp" in meta["forbehold"]["ingen_kjopsflagg"]
+
+
+# ─── Sidecache (gjenopptakelse) ──────────────────────────────────────
+
+def test_cached_fetch_only_hits_the_network_once_per_page(tmp_path, monkeypatch):
+    """
+    En sveip er ~560 sider à ~12 s. Uten mellomlagring koster ett fall på side
+    222 alt arbeid før den — som skjedde i første fullskala-kjøring 2026-08-31.
+    """
+    import tools.refresh_aperitif as m
+
+    kall = []
+    monkeypatch.setattr(m, "_default_fetch", lambda url: kall.append(url) or "<html>x</html>")
+    fetch = m.cached_fetch(tmp_path)
+
+    assert fetch(m.page_url(7)) == "<html>x</html>"
+    assert fetch(m.page_url(7)) == "<html>x</html>"   # nå fra disk
+    assert len(kall) == 1
+    assert (tmp_path / "side-0007.html").exists()
+
+
+def test_a_failed_page_is_not_cached(tmp_path, monkeypatch):
+    """Ellers ville et fall blitt permanent ved neste kjøring."""
+    import tools.refresh_aperitif as m
+
+    monkeypatch.setattr(m, "_default_fetch", lambda url: None)
+    assert m.cached_fetch(tmp_path)(m.page_url(9)) is None
+    assert not list(tmp_path.glob("*.html"))
+
+
+def test_page_timeout_is_longer_than_the_measured_page_time():
+    """
+    Sidene måtte 0,4–12 s 2026-08-31. `_http_get` sin default på 15 s lot en
+    marginalt treg side se ut som «svarer ikke», og fire slike på rad drepte
+    sveipen. Sveipen setter derfor sin egen timeout.
+    """
+    from tools.refresh_aperitif import PAGE_TIMEOUT
+
+    assert PAGE_TIMEOUT >= 45
