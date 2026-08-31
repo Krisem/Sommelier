@@ -10,16 +10,37 @@ seks faser. Full plan med begrunnelser, tall og verifiseringssteg:
 (rødvin 13 775 · hvitvin 9 762 · musserende 3 081 · rosé 782 · brennevin 2), 1 664 details
 (rødvin 1 379 · hvitvin 140 · musserende 95 · rosé 48 · brennevin 2).
 
-**Status 2026-08-31, andre økt:** Fase 3 og 4 er ferdige og committet
-(`4e2caae`…`b8490bb`), **461 tester grønne**, arbeidstreet rent.
-Måleomgangen ligger i [`maaling_2026-08-31.md`](maaling_2026-08-31.md), festet til
-revisjon `b8490bb` og katalog-md5 `429cce5f`.
+**Status ved sesjonsslutt 2026-08-31, andre økt.** Fase 3, 4 og 5 (alt som ikke krever
+ratinger) er ferdige og committet, **471 tester grønne**, arbeidstreet rent. Måleomgangen ligger
+i [`maaling_2026-08-31.md`](maaling_2026-08-31.md), festet til revisjon og katalog-md5.
+Dokumentasjonen er tatt igjen: ADR-028, ADR-029, ADR-030, amendment på ADR-017, README, roadmap
+og `deep-knowledge/INDEX.md`.
 
-Fase 2 er **kodet, testet og under kjøring** — sveipen henter ~560 sider à ~12 s, altså
-et par timer veggtid. `data/aperitif/` skrives først når hele sveipen er ferdig (den skal
-avbryte framfor å skrive halvt). Første kjøring døde på side 222 fordi timeouten var
-kortere enn sidene; rettet i `27c1a1a`, og sidene mellomlagres nå så et fall ikke koster
-alt arbeid før det.
+### ⚠️ Fase 2 kjører fortsatt — les dette først i neste økt
+
+Aperitif-sveipen ble startet i bakgrunnen og var på **~157 av ~560 sider** da økta ble avsluttet.
+
+- **`data/aperitif/` er tomt hvis sveipen ikke rakk å fullføre.** Det er by design: den avbryter
+  framfor å skrive halvt. Sjekk `ls data/aperitif/` — finnes `scores.ndjson`, er sveipen ferdig
+  og trenger bare å committes.
+- **Sidene er mellomlagret varig** i `~/.cache/sommelier/aperitif-pages/` (~157 filer, ~49 MB).
+  Cachen ligger UTENFOR repoet og utenfor sesjons-scratchpaden med vilje.
+- **Slik gjenopptar du — den leser cachen først og henter bare det som mangler:**
+
+  ```bash
+  python3 -m tools.refresh_aperitif --cache-dir ~/.cache/sommelier/aperitif-pages
+  ```
+
+- Regn **2–4 timer** for en full sveip fra bunn; fra dagens cache tilsvarende mindre.
+  Sidene er ~390 kB og svarer på 12–26 s under vedvarende last.
+- **Når den lander:** commit `data/aperitif/scores.ndjson` + `meta.json`, og fyll deretter inn
+  seksjonen om norsk/nordisk sortiment i `knowledge/whisky.md` — den står bevisst tom fordi den
+  skal bygges på snapshotet, ikke på hukommelse om hva Polet fører. Whisky ligger i samme liste
+  som vin, så én sveip dekker begge.
+- **To fallgruver er allerede betalt for, ikke gjenintroduser dem:** timeouten må være sveipens
+  egen (60 s, ikke `_http_get`s 15), og sorterings-vernet må sammenligne medianer, ikke
+  ytterpunkter. Begge meldte «nettstedet svikter» da feilen lå i terskelen min, og begge kastet
+  timevis av arbeid. Se ADR-030 og `lessons.md` 2026-08-31.
 
 **Styrende prinsipp:** mål én gang. Fase 3 (kodefiksene) kommer før Fase 4 (måleomgangen), fordi
 F2s tall er et øyeblikksbilde fra *midt* i sveipen.
@@ -63,9 +84,23 @@ Fase 6-gaten under.
       verdt å registrere, må vi finne en annen vei inn enn Untappd.
 
 - [ ] **To designspørsmål før Fase 6 kan starte** (fra
-      [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md), legges fram med målingene fra
-      Fase 4): skal den objektive delen kunne overprøve *rammen* i spørsmålet ditt, og aksepterer du
-      at prediksjonsdelen er taus mesteparten av tiden?
+      [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md)). Målingene fra Fase 4 er nå
+      klare, så de kan legges fram: skal den objektive delen kunne overprøve *rammen* i spørsmålet
+      ditt, og aksepterer du at prediksjonsdelen er taus mesteparten av tiden?
+
+- [ ] **Fire funn fra måleomgangen som er dine å avgjøre.** Ingen av dem er handlet på — se
+      [`maaling_2026-08-31.md`](maaling_2026-08-31.md) for tallene.
+
+      1. **«Jura (Chardonnay)» står som region du dras mot på grunnlag av én vin i to årganger**
+         (Rolet, 4,4 og 4,1). Skal den stå, nedgraderes til blindsone, eller merkes n=1?
+      2. **Alle 218 `very_fit` i musserende er engelsk musserende** — hver eneste Polet fører —
+         på grunnlag av tre ratinger. Skal terskelen for `bekreftet_snitt` heves over n=3?
+      3. **Hvitvin og rosé kan aldri nå `very_fit`**, fordi ingen av profilens fire bekreftede
+         stiler er hvit eller rosé. Er det riktig, eller skal toppkarakteren kunne nås per
+         kategori?
+      4. **B7: 24 viner der samme vin og årgang ligger på flere varenumre til ulik pris.**
+         Beychevelle 2019 koster 1 199,90 og 2 188,90 samtidig, og `value_score` sier ingenting.
+         Fiksen er en oppslagssjekk, ikke en modell — skal jeg bygge den?
 
 ---
 
@@ -98,9 +133,13 @@ Fase 6-gaten under.
 - [ ] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** Spurt 2026-08-31, han rater samme
       kveld. Detaljer og format: se **⬅ VENTER PÅ KRISTOFFER** øverst.
 
-### Fase 2 — Aperitif-snapshot: delt enabler for begge featurene (~4–5 t)
+### Fase 2 — Aperitif-snapshot ⏳ KODET OG TESTET, SVEIP UNDERVEIS (`4e2caae`, `5a7f13f`, `220cda5`, `3982f2d`)
 
-- [ ] Sveip vin **og** whisky i én kjøring. `robots.txt` verifisert 2026-08-31: `/pollisten`-stiene
+Verktøyet (`tools/refresh_aperitif.py`, 29 tester) og snapshot-lesingen i `aperitif.py` er
+ferdige og committet. Det som gjenstår er å la sveipen fullføre — se advarselen øverst i fila.
+Dokumentert i [ADR-030](../docs/ARCHITECTURE.md#adr-030-aperitif-snapshot-som-fallback-og-bulk-kilde--ikke-som-lag-foran-nettverket).
+
+- [x] Sveip vin **og** whisky i én kjøring. `robots.txt` verifisert 2026-08-31: `/pollisten`-stiene
       er tillatt, `?query=` / `/api/*` / `/ajax/*` / `/load` er blokkert (vi bruker ingen av dem).
 
   **Sondert live 2026-08-31 — fire rettelser til planfilenes tall:**
@@ -120,14 +159,18 @@ Fase 6-gaten under.
   - **Ikke alle scorede rader har varenummer.** Side 520 hadde 30 rader med poeng men bare **18**
     med `index`-span; side 540 hadde 25. Anslaget «~14 300 scorede varenumre» er derfor et tak —
     tell faktisk treff under sveipen framfor å regne 30 × sider.
-- [ ] **Output til `data/aperitif/scores.ndjson`, IKKE `knowledge/scores/`.** Begge planfilene sa
+- [x] **Output til `data/aperitif/scores.ndjson`, IKKE `knowledge/scores/`.** Begge planfilene sa
       `knowledge/scores/`; det ville brutt ADR-003, fordi `value_score._combine_quality`
       (`tools/value_score.py:152-158`) rangerer den mappen *over* Aperitif — 14 300 skrapede scorer
       der ville stille overkjørt de 384 kuraterte DN-scorene. Snapshot-mønsteret fra `data/polet/`
       (ADR-020) i stedet; leses av `get_aperitif_score` før nettverk, som også gjør Aperitif-score
       tilgjengelig offline.
-- [ ] Drift-vern: positiv validering per rad, assert på rader/side, avbryt framfor å skrive halvt.
-- [ ] Skriv prisbias-forbeholdet inn i snapshotet: Spearman(poeng, pris) = +0,65 (whisky) / +0,80
+- [x] Drift-vern: positiv validering per rad, assert på rader/side, avbryt framfor å skrive halvt.
+      **To justeringer måtte til i praksis:** timeouten var kortere enn sidene (drepte sveipen på
+      side 222 av 560), og sorterings-vernet sammenlignet ytterpunkter i stedet for medianer
+      (drepte den på side 133 fordi side 132 hadde én 89 blant tretti 90-ere). Begge meldte feil
+      årsak — de pekte på nettstedet da feilen lå i min egen terskel.
+- [x] Skriv prisbias-forbeholdet inn i snapshotet: Spearman(poeng, pris) = +0,65 (whisky) / +0,80
       (DN-vin). «Høyest score» ≈ «dyrest», så prissone-lås er en forutsetning, ikke pynt.
 
 ### Fase 3 — rotårsaksklyngen: gjør feilklassen umulig ✅ FERDIG (`24685f0`, `b8490bb`)
@@ -182,20 +225,26 @@ Alt ligger i **[`maaling_2026-08-31.md`](maaling_2026-08-31.md)**, festet til re
   grunnlag av **tre ratinger**. Hvitvin og rosé kan på sin side aldri nå `very_fit`, fordi
   ingen av profilens fire bekreftede stiler er hvit eller rosé.
 
-### Fase 5 — whisky, kritisk sti (~1 arbeidsdag)
+### Fase 5 — whisky, kritisk sti ⏳ ALT UNNTATT RATINGENE ER FERDIG (`44787f3`)
 
-- [ ] `knowledge/whisky.md`, **tynn: 150–220 linjer**. Juridisk kategori som anker (Scotch Whisky
+- [x] `knowledge/whisky.md` — **139 linjer**, litt under målet fordi seksjonen om norsk/nordisk
+      sortiment venter på Aperitif-snapshotet. Tre påstander er testdekket: n=0, ADR-025-forbeholdet
+      på klokkene, og at det uverifiserte (WSETs SAT, irsk pot still, klyngeantallet) ikke står
+      der som fakta. Opprinnelig formulering: Juridisk kategori som anker (Scotch Whisky
       Regulations 2009, 27 CFR § 5.143 inkl. American Single Malt fra 19.01.2025, EU 2019/787, irsk
       Technical File, JSLMA), Polets Fylde/Fat/Røyk + varetype, Brooms flavour camps som *språk*,
       servering, norsk/nordisk sortiment, workflow.
       **Ikke** WSETs SAT for Spirits fra hukommelsen (403 på begge PDF-URL-ene — presedensen er den
       hallusinerte `bjcp_2021.pdf`-referansen), **ikke** irsk pot still-endringen, **ikke**
       klyngeantallet fra whiskyanalysis.com (selvmotsigende kilde).
-- [ ] `data/whisky/ratings.csv`, 5-punkt med kvart-trinn. **Kristoffer dikterer i chat, Claude
+- [x] `data/whisky/ratings.csv` opprettet med header + README. **Venter på at du dikterer.**
+      Opprinnelig formulering: **Kristoffer dikterer i chat, Claude
       skriver raden** — ølkanalen døde fordi innføring var manuelt filarbeid (siste check-in
       2026-01-16; 2025: 29 → 2026: 1). Notat valgfritt: fritekst ble skrevet 4 av 211 ganger (1,9 %).
-- [ ] `CLAUDE.md`-routing (trepart, men **betinget** — whisky kun når nevnt, eller ved
-      dessert/ost/digestif/kveldsdram) + `deep-knowledge/INDEX.md` + tester.
+- [x] `CLAUDE.md`-routing lagt inn, betinget. `deep-knowledge/INDEX.md` sier eksplisitt at whisky
+      IKKE får en deep-knowledge-fil, og hvorfor. Opprinnelig formulering:
+- [x] ~~`CLAUDE.md`-routing (trepart, men **betinget** — whisky kun når nevnt, eller ved
+      dessert/ost/digestif/kveldsdram) + `deep-knowledge/INDEX.md` + tester.~~
 - [ ] **Utsatt, eksplisitt:** fit-modell og tier-stige til n ≈ 84 (SD 0,61 mot tier-stige 0,65 poeng
       — ved n=3 per bøtte er 95 % KI ±0,69, bredere enn hele stigen); ADR-025-målingen på
       Fylde/Fat/Røyk til n ≥ 15–20; katalogsveip av brennevin og fasettprobing kanskje for alltid.
