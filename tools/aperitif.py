@@ -197,9 +197,15 @@ def _parse_product_page(html: str) -> dict:
     if m:
         result["score"] = int(m.group(1))
 
-    m = re.search(r'"sku"\s*:\s*"?(\d{7,8})"?', html)
+    # Varenumre er 5-8 siffer (målt 2026-08-31 mot catalog.ndjson: 44 stk med 5,
+    # 543 med 6, 4 302 med 7, 22 513 med 8). Den gamle `\d{7,8}` bommet på de
+    # 587 korte — de fikk aldri `polet_id`, og da slår BÅDE årgangs-
+    # verifiseringen i pass 1 og stale-sjekken på mapping-treffet feil ut.
+    # `(?!\d)` hindrer at et 9-sifret tall trunkeres til et gyldig-utseende
+    # varenummer.
+    m = re.search(r'"sku"\s*:\s*"?(\d{5,8})(?!\d)', html)
     if not m:
-        m = re.search(r'[Vv]arenummer[^\d]{0,30}(\d{7,8})', html)
+        m = re.search(r'[Vv]arenummer[^\d]{0,30}(\d{5,8})(?!\d)', html)
     if m:
         result["polet_id"] = m.group(1)
 
