@@ -235,19 +235,41 @@ prediksjonsdelen er taus mesteparten av tiden? Legges fram med målingene fra Fa
 - **Rekkefølge:** delt slice — fiks + sveip først, så måling.
 
 ## Backlog
-- [ ] **B7: samme vin på flere varenummer til ulik pris — `value_score` ser det ikke.** Funnet
-      2026-08-30. Grupperer man rødvin på (navn × volum): **0 grupper i gammelt snapshot, 313 i
-      nytt** (792 rader, 142 med ≥10 % prisspredning). Verste: `ch. pichon longueville comtesse de
-      lalande 2016`, 75 cl, **fem aktive varenumre fra 2 113 til 3 950 kr**. `compute_value_score`
-      slår opp ett varenummer og sammenligner mot land-peers — den ser aldri at identisk vin ligger
-      989 kr billigere under et annet varenummer i samme snapshot.
-      **Riktig ramme er «manglende sjekk», ikke «bug»:** spørsmålet fantes ikke før ekspansjonen.
-      **Forbehold som kan avlyse posten — les dem før du måler:** 468 av 792 rader er `Spesialutvalg`
-      (Polets auksjonskanal, der separate partier til ulik pris er forventet og ikke feil); det er
-      *ikke* verifisert at identisk navn + volum betyr identisk produkt (kan skjule årgang i
-      navnefeltet, flasketilstand, importør — krever `details` for radene); og i hverdagssonen er
-      det 2 duplikat-rader av 1 448. Brukerpåvirkning i dag er nær null — det er «noe spesielt»-sonen
-      og peer-statistikken som rammes. Konfidens: middels.
+- [ ] **B7: samme vin på flere varenummer til ulik pris — `value_score` ser det ikke.**
+      **Målt 2026-08-31 mot revisjon `44787f3`, katalog-md5 `429cce5f`. Posten er reell, men
+      mye smalere enn den så ut — og ett av de tre forbeholdene er avkreftet.**
+
+      Rødvin gruppert på (navn × volum): **313 grupper, 792 rader**, hvorav 142 med ≥10 %
+      prisspredning. Så snevrer forbeholdene den inn:
+
+      - **Spesialutvalg-forbeholdet holder:** 468 av de 792 radene er Spesialutvalg, altså
+        Polets auksjonskanal, der separate partier til ulik pris er forventet.
+      - **Årgangs-forbeholdet er AVKREFTET:** 293 av 313 grupper har årstallet i selve navnet
+        («Ch. Beychevelle 2019»), så identisk navn + volum er i praksis identisk vin OG årgang.
+        Det styrker posten i stedet for å svekke den.
+      - **Hverdagssonen er praktisk talt uberørt:** 3 duplikatgrupper av 1 785 under 250 kr.
+
+      **Kjernen: 24 grupper** — aktive, utenfor Spesialutvalg, ≥10 % spredning. Alle ligger i
+      «noe spesielt»-sonen, og de er ekte:
+
+      | Spredning | Vin | Priser |
+      |---:|---|---|
+      | 82 % | Ch. Beychevelle 2019 | 1 199,90 og 2 188,90 |
+      | 55 % | Ch. Bellefont-Belcier 2021 | 489,90 og 760,50 |
+      | 39 % | Ch. Grand-Puy-Lacoste 2021 | 799,90 · 999,90 · 1 012,90 · 1 110 (fire i Bestillingsutvalget alene) |
+
+      **Mekanismen er verifisert, ikke antatt.** `compute_value_score("14837601")` — Beychevelle
+      til 2 188,90 — svarer «Usikkert, for lite data. Pris i 86. percentil av 4 939 peers
+      (median 704,90 kr)». Den sammenligner altså mot alle franske rødviner, og nevner ikke med
+      ett ord at **nøyaktig samme vin og årgang ligger 989 kr billigere** på et annet varenummer
+      i samme snapshot. Grand-Puy-Lacoste viser at Spesialutvalg-forklaringen ikke dekker det:
+      310 kroners spredning innenfor Bestillingsutvalget alene.
+
+      **Anbefaling (ikke bygget — dette er beslutningsgrunnlaget):** ikke en modell, bare en
+      oppslagssjekk i `compute_value_score` — finnes samme navn + volum på et annet aktivt
+      varenummer til lavere pris, si det. ~24 viner berøres i dag, alle i den sonen der en
+      feil koster mest i kroner. Konfidens: høy på mekanismen, lav på at det haster.
+
 - [ ] **Details for hvit/musserende/rosé i det prioriterte utsnittet — 942 rader, ~2 t veggtid.**
       Enumereringen og klokke-sveipen er ferdig (`7ba0f4d`); det som mangler er dybden. Målt
       2026-08-31: hvitvin Basis 338 + Tillegg 299, musserende Basis 145 + Tillegg 83, rosé Basis 61 +
