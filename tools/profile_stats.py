@@ -193,8 +193,14 @@ def render(rows: list[dict]) -> str:
     return "\n".join(p for p in parts if p is not None)
 
 
-def update_profile(block: str) -> None:
-    text = PROFILE_PATH.read_text(encoding="utf-8")
+def splice(text: str, block: str) -> str:
+    """
+    Sett `block` inn mellom sentinelene og la ALT annet stå urørt.
+
+    Ren funksjon med vilje: dette er skrivestien inn i en fil som for
+    det meste er håndskrevet prosa, og round-trip-testen kan bare feste
+    «resten er bit-identisk» hvis spleisingen kan kjøres uten disk.
+    """
     if BEGIN in text and END in text:
         start = text.index(BEGIN)
         end = text.index(END) + len(END)
@@ -206,7 +212,14 @@ def update_profile(block: str) -> None:
             new_text = text[:idx] + block + "\n\n" + text[idx:]
         else:
             new_text = text.rstrip() + "\n\n" + block + "\n"
-    PROFILE_PATH.write_text(new_text, encoding="utf-8")
+    return new_text
+
+
+
+def update_profile(block: str) -> None:
+    PROFILE_PATH.write_text(
+        splice(PROFILE_PATH.read_text(encoding="utf-8"), block), encoding="utf-8"
+    )
 
 
 def main() -> None:
