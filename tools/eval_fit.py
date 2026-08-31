@@ -67,7 +67,15 @@ def _csv_row_to_wine(r: dict) -> dict:
     return {
         "navn": navn,
         "produsent": (r.get("Winery") or "").strip(),
+        # Vivino har ÉTT regionfelt, og granulariteten varierer: noen ganger er
+        # det appellasjonen («Crémant de Bourgogne», «Côtes du Jura»), noen
+        # ganger distriktet («Rheingau», «Franken»). Polet skiller de to
+        # (`district` mot `sub_District`), så feltet mates inn på begge akser
+        # framfor å gjette hvilken det er. Uten `underregion` leste nivåporten
+        # i `user_fit` appellasjonen via `region` og `navn` — det virket, men
+        # bare tilfeldig.
         "region": (r.get("Region") or "").strip(),
+        "underregion": (r.get("Region") or "").strip(),
         "land": (r.get("Country") or "").strip(),
         "stil": (r.get("Regional wine style") or "").strip(),
         "kategori": (r.get("Wine type") or "").strip(),
