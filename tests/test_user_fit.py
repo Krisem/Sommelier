@@ -49,7 +49,11 @@ def mock_rules() -> dict:
         "bekreftet_stiler": ["Italian Ripasso", "Southern Italy Red"],
         "bekreftede_druer": ["Barbera", "Nebbiolo"],
         "regioner_pluss": ["Nord-Italia", "Champagne"],
-        "blindspots": ["Lebanon Red Wine"],
+        # Blindsonene er på norsk, samme språk som Polet-raden. `blindspots_land_kategori`
+        # er delmengden som er auto-derivert «<Land> <Kategori>» — den matches
+        # eksakt på begge ledd, mens kuratert prosa matches som substring.
+        "blindspots": ["Libanon Rødvin"],
+        "blindspots_land_kategori": ["Libanon Rødvin"],
         "stil_snitt": {
             "Italian Ripasso": 4.10,
             "Southern Italy Red": 4.05,
@@ -160,15 +164,53 @@ def test_classify_rule_bekreftet_region_piemonte():
 
 
 def test_classify_rule_blindspot_us_hvitvin():
-    """Spec: norsk kategori 'Hvitvin' + land 'United States' → blindspot."""
-    r = classify({"kategori": "Hvitvin", "land": "United States"})
+    """
+    Spec: «USA Hvitvin» (n=2) → blindspot.
+
+    Regelen og raden skriver nå samme språk. Den engelske formen fra Vivino
+    oversettes ved inngangen i `eval_fit._csv_row_to_wine`, ikke her — se
+    `test_eval_fit.py`.
+    """
+    r = classify({"kategori": "Hvitvin", "land": "USA"})
     assert r["tier"] == "neutral"
     assert r["confidence"] == "low"
     assert r["rule_fired"] == "blindspot", (
-        f"Forventet blindspot, fikk {r['rule_fired']}. "
-        "Reell bug: blindspot-streng er 'United States White Wine' (engelsk) — "
-        "matcher ikke norsk 'Hvitvin'."
+        f"Forventet blindspot, fikk {r['rule_fired']}. Reasons: {r['reasons']}"
     )
+
+
+def test_short_country_names_do_not_match_inside_words(rules):
+    """
+    «USA» er tre bokstaver og finnes inni «Usatges», «Sausal», «Sousa»,
+    «Susana». En substring-vei for sammensatte blindsoner ville stemplet 15
+    hvitviner fra Spania, Portugal, Østerrike, Italia, New Zealand og
+    Argentina som «USA Hvitvin» (målt over hele katalogen 2026-08-31).
+
+    Den engelske formen «United States White Wine» skjulte dette bak fire
+    ledd — vokabular-byttet ville altså innført en NY feil hvis matchingen
+    ikke samtidig ble eksakt. Derfor hører de to endringene sammen.
+    """
+    for code in ("14698001", "13328901"):   # Usatges Blanco · Branco da Gaivosa
+        r = classify_code(code, rules)
+        if r is None:
+            pytest.skip(f"{code} ikke i snapshot")
+        assert not any("USA" in x for x in r["reasons"]), r["reasons"]
+
+
+def test_composite_blindspot_requires_both_land_and_kategori():
+    """
+    Den eksakte matchingen erstatter en substring-vei som traff halvveis.
+
+    Målt 2026-08-31: «Portugal Red Wine» stemplet to portugisiske HVITviner
+    som rødvins-blindsone, fordi «Redoma» inneholder «Red», og «Germany Red
+    Wine» tok en tysk Riesling med «Red Label» i navnet. Alle tre er nå ute.
+    """
+    hvit = classify({"kategori": "Hvitvin", "land": "Portugal",
+                     "navn": "Niepoort Redoma Branco"})
+    assert hvit["rule_fired"] != "blindspot", hvit["reasons"]
+
+    rød = classify({"kategori": "Rødvin", "land": "Portugal", "navn": "Testvin"})
+    assert rød["rule_fired"] == "blindspot", rød["reasons"]
 
 
 def test_classify_rule_default():
@@ -498,8 +540,6 @@ def test_smaksprofil_path_exists():
 from collections import Counter  # noqa: E402
 
 from tools.user_fit import (  # noqa: E402
-    _KATEGORI_NO_TO_EN,
-    _LAND_NO_TO_EN,
     _NO_MATCHERS,
     _UNTRANSLATED,
     _no_matcher_hit,
@@ -523,20 +563,17 @@ NEEDLE_KEYS = [
 ]
 
 
-def _kan_bygges_generisk(needle: str) -> bool:
+def _kan_bygges_generisk(needle: str, rules: dict) -> bool:
     """
-    True for auto-deriverte «<Land> <Kategori>»-blindspots («Germany Red Wine»).
+    True for auto-deriverte «<Land> <Kategori>»-blindsoner («Tyskland Rødvin»).
 
-    Disse trenger ingen egen matcher: `classify` bygger den engelske strengen
-    fra den norske raden via `_LAND_NO_TO_EN` + `_KATEGORI_NO_TO_EN`. Men
-    begge halvdelene MÅ finnes i tabellene — mangler landet, fyrer regelen
-    aldri, og det var nettopp derfor kun Chile/Portugal/Uruguay traff.
+    Disse trenger ingen egen matcher: `classify` sammenligner land og kategori
+    direkte mot raden. Det forutsetter at begge kilder skriver samme språk —
+    oversettelsen skjer nå ved generering i `profile_stats`, ikke ved matching.
+    Skillet mot kuratert prosa bæres av regelsettet, ikke av needelens form:
+    «Aromatisk hvitvin» ender også på en kategori.
     """
-    return any(
-        needle == f"{land} {kat}"
-        for land in set(_LAND_NO_TO_EN.values())
-        for kat in set(_KATEGORI_NO_TO_EN.values())
-    )
+    return needle in rules.get("blindspots_land_kategori", [])
 
 
 @pytest.fixture(scope="module")
@@ -579,7 +616,7 @@ def test_every_needle_is_translated_or_documented(rules):
         for needle in rules[key]:
             if needle in _NO_MATCHERS or needle in _UNTRANSLATED:
                 continue
-            if key == "blindspots" and _kan_bygges_generisk(needle):
+            if key == "blindspots" and _kan_bygges_generisk(needle, rules):
                 continue
             udekket.append(f"{key}: {needle!r}")
     assert not udekket, (
@@ -741,8 +778,8 @@ def test_blindspot_never_yields_very_fit(mock_rules):
     implementert — den holdt bare fordi ingen kollisjon fantes i dataene.
     """
     r = classify(
-        {"navn": "Testvin", "stil": "Italian Ripasso", "land": "Lebanon",
-         "kategori": "Red Wine"},
+        {"navn": "Testvin", "stil": "Italian Ripasso", "land": "Libanon",
+         "kategori": "Rødvin"},
         rules=mock_rules,
     )
     assert r["tier"] == "fit", r
@@ -824,18 +861,53 @@ def test_region_needles_have_balanced_parens(rules):
     """«Tyskland (Mosel, Rheingau» — uparet parentes fra en dash-kutting."""
     for needle in rules["regioner_pluss"]:
         assert needle.count("(") == needle.count(")"), f"Uparet parentes: {needle!r}"
-    assert "Tyskland" in rules["regioner_pluss"]
+    # Needelen het «Tyskland» fram til 2026-08-31. Profilens parentes sa
+    # «(Mosel, Rheingau – Riesling)» — altså hvitt — men bullet-parseren
+    # stripper parenteser, så 368 tyske RØDviner ble `fit` på evidens om
+    # hvitvin. Prosaen sier nå det den mener.
+    assert "Tysk Riesling" in rules["regioner_pluss"]
+    assert "Tyskland" not in rules["regioner_pluss"]
 
 
 def test_both_blindspot_sections_are_read(rules):
     """
-    `smaksprofil.md` har to Blindspots-seksjoner. Parseren leste bare den
+    `smaksprofil.md` har to blindsone-seksjoner. Parseren leste bare den
     første, så halvparten av blindsonene var stille døde — inkludert «Pinot
     Noir generelt», den som dekker Côte d'Or.
+
+    Seksjonene har distinkte navn siden 2026-08-31, og parses hver for seg
+    nettopp for å holde de to formene fra hverandre.
     """
     bs = rules["blindspots"]
-    assert any("Red Wine" in x or "White Wine" in x for x in bs), "auto-derivert mangler"
+    assert rules["blindspots_land_kategori"], "auto-derivert seksjon mangler"
+    assert all(b in bs for b in rules["blindspots_land_kategori"])
     assert "Pinot Noir generelt" in bs, "kuratert prosa-blindsone mangler"
+    assert "Pinot Noir generelt" not in rules["blindspots_land_kategori"], (
+        "kuratert prosa skal ikke merkes som auto-derivert «<Land> <Kategori>»"
+    )
+
+
+def test_curated_needle_ending_in_a_category_is_not_treated_as_composite(rules):
+    """
+    «Aromatisk hvitvin» ender på en kategori, men er kuratert prosa.
+
+    En form-basert test leste den som land «Aromatisk» + kategori «Hvitvin»,
+    og da slo spesifisitets-regelen inn og fjernet region-treffet til sju
+    italienske musserende (målt 2026-08-31). Skillet må komme fra hvilken
+    seksjon needelen sto i, ikke fra hvordan den ser ut.
+    """
+    assert "Aromatisk hvitvin" in rules["blindspots"]
+    assert "Aromatisk hvitvin" not in rules["blindspots_land_kategori"]
+
+    # Og virkningen, ikke bare tilstanden: en Moscato Spumante fra Piemonte
+    # skal beholde region-treffet sitt. Da «Aromatisk hvitvin» ble lest som
+    # sammensatt, slo spesifisitets-regelen inn og fjernet det.
+    r = classify(
+        {"navn": "Sprintoso Moscato Spumante", "land": "Italia",
+         "region": "Piemonte", "kategori": "Musserende vin"},
+        rules,
+    )
+    assert r["rule_fired"] == "region_pluss", r["reasons"]
 
 
 def test_beer_rules_do_not_leak_into_wine(rules):
@@ -884,22 +956,24 @@ def test_blindspot_fires_across_many_countries(catalog):
         )
 
 
-def test_composite_blindspot_needs_country_translation(rules):
+def test_composite_blindspot_fires_on_the_exact_pair(rules):
     """
-    Den ENE veien som *bare* kan gå via norsk→engelsk landnavn.
+    `1005301` er en libanesisk rødvin uten egen matcher og uten kuratert
+    prosa-blindsone bak seg — treffet kan bare komme fra den sammensatte
+    «Libanon Rødvin». Testen asserterer på hvilken needle som står i
+    begrunnelsen, ikke på at *en eller annen* blindsone traff: uten det
+    maskerer «Pinot Noir generelt» feilen.
 
-    `1005301` er en libanesisk rødvin. «Lebanon Red Wine» har ingen egen
-    matcher og ingen kuratert prosa-blindsone bak seg — treffet krever at
-    `Libanon` oversettes til `Lebanon` på bruksstedet. Testen asserterer på
-    hvilken needle som står i begrunnelsen, ikke på at *en eller annen*
-    blindsone traff: uten det maskerer «Pinot Noir generelt» feilen.
+    Fram til 2026-08-31 gikk denne veien via en norsk→engelsk landtabell, og
+    regelen fyrte i praksis bare for land som staves likt på begge språk
+    (ADR-027). Tabellen er borte; begge sider skriver norsk.
     """
     r = classify_code("1005301", rules)
     if r is None:
         pytest.skip("1005301 ikke i snapshot")
     assert r["rule_fired"] == "blindspot", r["reasons"]
-    assert any("Lebanon Red Wine" in x for x in r["reasons"]), (
-        f"Forventet at «Lebanon Red Wine» navngis. Fikk: {r['reasons']}"
+    assert any("Libanon Rødvin" in x for x in r["reasons"]), (
+        f"Forventet at «Libanon Rødvin» navngis. Fikk: {r['reasons']}"
     )
 
 

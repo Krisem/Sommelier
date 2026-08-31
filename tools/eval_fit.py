@@ -34,7 +34,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Callable, Optional
 
-from tools.profile_stats import load_rated
+from tools.profile_stats import KATEGORI_EN_TO_NO, LAND_EN_TO_NO, load_rated
 from tools.user_fit import classify, load_profile_rules
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -76,9 +76,20 @@ def _csv_row_to_wine(r: dict) -> dict:
         # bare tilfeldig.
         "region": (r.get("Region") or "").strip(),
         "underregion": (r.get("Region") or "").strip(),
-        "land": (r.get("Country") or "").strip(),
+        # Land og kategori oversettes til Polets norske vokabular HER, ved
+        # inngangen. `classify()` har to innganger — Polet-katalogen og denne
+        # Vivino-CSV-en — og ADR-027 (beslutning 2b) sier at samme vin må få
+        # samme dom uansett hvilken. Da må begge inngangene snakke samme
+        # språk før matchingen, ikke oversettes underveis i den.
+        # `stil` forblir engelsk: den ER Vivinos taksonomi, og needlene
+        # («Burgundy Red») er hentet fra samme sted.
+        "land": LAND_EN_TO_NO.get(
+            (r.get("Country") or "").strip(), (r.get("Country") or "").strip()
+        ),
         "stil": (r.get("Regional wine style") or "").strip(),
-        "kategori": (r.get("Wine type") or "").strip(),
+        "kategori": KATEGORI_EN_TO_NO.get(
+            (r.get("Wine type") or "").strip(), (r.get("Wine type") or "").strip()
+        ),
     }
 
 

@@ -178,3 +178,60 @@ def test_render_report_runs():
     text = eval_fit.render_report(rep)
     assert "eval-harness" in text
     assert "v0_tier" in text
+
+
+# ─── Inngangs-oversettelse (ADR-027 beslutning 2b) ───────────────────
+# `classify()` har to innganger: Polet-katalogen (norsk) og denne Vivino-CSV-en
+# (engelsk). Samme vin må få samme dom uansett hvilken vei den kom inn. Fram
+# til 2026-08-31 ble den norske raden oversatt til engelsk ved MATCHING; nå
+# oversettes den engelske raden til norsk ved INNGANGEN, én gang.
+
+def test_csv_row_land_and_kategori_are_translated_to_the_catalog_vocabulary():
+    from tools.eval_fit import _csv_row_to_wine
+
+    w = _csv_row_to_wine(
+        {"Winery": "Château Kefraya", "Wine name": "Les Bretèches",
+         "Country": "Lebanon", "Wine type": "Red Wine", "Region": "Bekaa Valley"}
+    )
+    assert w["land"] == "Libanon"
+    assert w["kategori"] == "Rødvin"
+
+
+def test_style_stays_in_vivinos_own_taxonomy():
+    """`stil` skal IKKE oversettes — needlene («Burgundy Red») er derfra."""
+    from tools.eval_fit import _csv_row_to_wine
+
+    w = _csv_row_to_wine({"Regional wine style": "Burgundy Red", "Country": "France"})
+    assert w["stil"] == "Burgundy Red"
+    assert w["land"] == "Frankrike"
+
+
+def test_an_unknown_country_passes_through_unchanged():
+    """Ukjent verdi skal ikke bli tom — da forsvinner regelen stille."""
+    from tools.eval_fit import _csv_row_to_wine
+
+    w = _csv_row_to_wine({"Country": "Atlantis", "Wine type": "Orange Wine"})
+    assert w["land"] == "Atlantis"
+    assert w["kategori"] == "Orange Wine"
+
+
+def test_the_same_wine_gets_the_same_verdict_from_both_inputs():
+    """
+    Den libanesiske rødvinen finnes både i katalogen (`1005301`) og i
+    Vivino-historikken. ADR-027 beslutning 2b: samme vin, samme dom.
+    """
+    from tools.eval_fit import _csv_row_to_wine
+    from tools.user_fit import classify, classify_code, load_profile_rules
+
+    rules = load_profile_rules()
+    fra_katalog = classify_code("1005301", rules)
+    if fra_katalog is None:
+        pytest.skip("1005301 ikke i snapshot")
+    fra_vivino = classify(
+        _csv_row_to_wine(
+            {"Winery": "Château Kefraya", "Wine name": "Les Bretèches",
+             "Country": "Lebanon", "Wine type": "Red Wine"}
+        ),
+        rules,
+    )
+    assert fra_vivino["rule_fired"] == fra_katalog["rule_fired"] == "blindspot"

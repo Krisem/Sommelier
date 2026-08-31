@@ -232,6 +232,11 @@ def adventurousness(rows: list[dict]) -> dict:
     }
 
 
+def fmt_blindspot(b: dict) -> str:
+    """Render-laget: struktur → linja som havner i smaksprofil.md."""
+    return f"{b['familie']} (n={b['n']})"
+
+
 def render(rows: list[dict]) -> str:
     today = datetime.now().date().isoformat()
     n = len(rows)
@@ -250,7 +255,12 @@ def render(rows: list[dict]) -> str:
     confirmed = [(l, n_, a, a_r) for l, n_, a, a_r in by_family if n_ >= MIN_N_FOR_PATTERN and a >= 3.8]
     flagged = [(l, n_, a, a_r) for l, n_, a, a_r in by_family if n_ >= MIN_N_FOR_PATTERN and a < 3.2]
 
-    blindspot_families = [l for l, n_, _, _ in by_family if n_ <= BLINDSPOT_MAX_N]
+    # Struktur, ikke ferdig streng — samme mønster som `profile_stats.blindspots()`.
+    # Render-laget bygger linja; da kan n bæres med uten at en parser må grave
+    # den ut av teksten igjen.
+    blindspot_families = [
+        {"familie": l, "n": n_} for l, n_, _, _ in by_family if n_ <= BLINDSPOT_MAX_N
+    ]
 
     parts = [
         BEGIN,
@@ -296,12 +306,12 @@ def render(rows: list[dict]) -> str:
         parts.append("_Ingen familier under terskelen._")
     parts.append("")
 
-    parts.append("### Blindspots (familier med n ≤ 1)")
+    parts.append("### Blindsoner, auto-derivert (stilfamilier, n ≤ 1)")
     parts.append("")
     if blindspot_families:
-        parts.append("\n".join(f"- {b}" for b in blindspot_families))
+        parts.append("\n".join(f"- {fmt_blindspot(b)}" for b in blindspot_families))
     else:
-        parts.append("_Ingen åpenbare blindspots på familienivå._")
+        parts.append("_Ingen åpenbare blindsoner på familienivå._")
     parts.append("")
 
     parts.append("### Sesong-mønster (snitt rating per måned)")

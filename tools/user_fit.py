@@ -116,21 +116,15 @@ def _clean_needle(raw: str) -> str:
     return raw.rstrip(",.;:").strip()
 
 
-def _bullet_items(section_text: str, stop_at_subheading: bool = False) -> list[str]:
+def _bullet_items(section_text: str) -> list[str]:
     """
     Trekk ut bullet-items fra en seksjon. Renser bold-syntax og parantetiske notater.
 
     "- **Italian Ripasso** – n=5, snitt 4.10"  →  "Italian Ripasso"
     "- Domaine de Sulauze Pomponette Rosé (din eneste 1.0)" → "Domaine de Sulauze Pomponette Rosé"
-
-    `stop_at_subheading` stopper ved første `###`-heading i seksjonen. Brukes på
-    prosa-seksjoner som har underseksjoner med bullets som IKKE er regler
-    (f.eks. «### New World rødvin – under aktiv utforskning» under Blindspots).
     """
     items: list[str] = []
     for line in section_text.splitlines():
-        if stop_at_subheading and re.match(r"^#{3,6}\s+\S", line):
-            break
         m = re.match(r"^\s*[-*]\s+(.+)$", line)
         if not m:
             continue
@@ -232,6 +226,7 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
             "bekreftede_druer": [],
             "regioner_pluss": [],
             "blindspots": [],
+            "blindspots_land_kategori": [],
             "stil_snitt": {},
             "stil_n": {},
         }
@@ -291,15 +286,25 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
             if raw and len(raw) <= _MAX_NEEDLE_LEN:
                 regioner_pluss.append(raw)
 
-    # Blindspots — BEGGE seksjonene: den auto-deriverte tabellen
-    # («kategori-kombinasjoner med n ≤ 2») og den kuraterte prosaen
-    # («eksplisitt mangel på data»). Før leste vi bare den første.
+    # Blindsoner — BEGGE seksjonene: den auto-deriverte («land × kategori»)
+    # og den kuraterte prosaen («eksplisitt mangel på data»). Før leste vi
+    # bare den første. Seksjonene har nå distinkte navn, og «New World
+    # rødvin» er løftet UT av den kuraterte blindsonen — den var en
+    # underseksjon med ratinger, ikke regler, og krevde derfor et eget
+    # stoppevilkår i bullet-parseren.
     blindspots: list[str] = []
-    for blind_sec in _find_sections(text, [r"Blindspots.*"]):
-        for raw in _bullet_items(blind_sec, stop_at_subheading=True):
-            # "(n=1)"-suffix er allerede strippet av _clean_needle
-            if raw not in blindspots:
-                blindspots.append(raw)
+    blindspots_land_kategori: list[str] = []
+    for pat, er_auto in [
+        (r"Blindsoner,\s*auto-derivert.*", True),
+        (r"Blindsoner,\s*kuratert.*", False),
+    ]:
+        for blind_sec in _find_sections(text, [pat]):
+            for raw in _bullet_items(blind_sec):
+                # "(n=1)"-suffix er allerede strippet av _clean_needle
+                if raw not in blindspots:
+                    blindspots.append(raw)
+                if er_auto and raw not in blindspots_land_kategori:
+                    blindspots_land_kategori.append(raw)
 
     # Stil-snitt-tabell (auto-derivert "Per regional stil")
     stil_sec = _find_section(text, [
@@ -317,6 +322,12 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
         "bekreftede_druer": bekreftede_druer,
         "regioner_pluss": regioner_pluss,
         "blindspots": blindspots,
+        # Delmengden som er auto-derivert «<Land> <Kategori>». Skillet bæres
+        # fra parsingen i stedet for å gjettes på formen: «Aromatisk hvitvin»
+        # er kuratert prosa som TILFELDIGVIS ender på en kategori, og en
+        # form-basert test leste den som land «Aromatisk» (målt: 7 italienske
+        # musserende mistet region-treffet sitt av den grunn).
+        "blindspots_land_kategori": blindspots_land_kategori,
         "stil_snitt": stil_snitt,
         "stil_n": stil_n,
     }
@@ -343,66 +354,37 @@ def _ci_substring_match(needle: str, haystack: str) -> bool:
     return needle.lower() in haystack.lower()
 
 
-# Norsk Polet-kategori → engelsk Vivino-stil. Brukes for blindspot-matching
-# fordi blindspots er på engelsk ("United States White Wine") men Polet-data
-# er på norsk ("Hvitvin"). Uten denne mappingen fyrer aldri blindspot-rule på
-# norsk input — fatalt for batch over Polet-DB.
-_KATEGORI_NO_TO_EN: dict[str, str] = {
-    "Hvitvin": "White Wine",
-    "Rødvin": "Red Wine",
-    "Rosévin": "Rosé Wine",
-    "Rose": "Rosé Wine",
-    "Musserende vin": "Sparkling",
-    "Musserende": "Sparkling",
-    "Sterkvin": "Fortified Wine",
-    "Hetvin": "Fortified Wine",
-    "Dessertvin": "Dessert Wine",
-    "Perlende vin": "Sparkling",
-    "Champagne": "Sparkling",
-}
+# Polets kategori-vokabular. Blindsonene fra `profile_stats.blindspots()` er
+# nå på norsk («Tyskland Rødvin»), samme språk som katalogen, så matchingen er
+# eksakt i stedet for et oppslag i en oversettelses-tabell. De to tabellene
+# `_KATEGORI_NO_TO_EN`/`_LAND_NO_TO_EN` som sto her er borte: de gjorde
+# blindsone-regelen avhengig av at et land staves likt på begge språk, og
+# reduserte den stille til Chile/Portugal/Uruguay (ADR-027).
+_KATEGORIER: tuple[str, ...] = (
+    "Musserende vin",   # to ord — må prøves før «vin»-suffiksene
+    "Rødvin",
+    "Hvitvin",
+    "Rosévin",
+    "Dessertvin",
+    "Sterkvin",
+    "Perlende vin",
+)
 
-# Norsk Polet-land → engelsk Vivino-land. Samme grunn som kategori-tabellen:
-# blindspots er "Germany Red Wine", katalogen sier "Tyskland". Før denne
-# tabellen fyrte blindspot-regelen kun for land som staves likt på begge språk
-# (Chile, Portugal, Uruguay) — 422 av 13 775 rødviner.
-_LAND_NO_TO_EN: dict[str, str] = {
-    "Argentina": "Argentina",
-    "Australia": "Australia",
-    "Bulgaria": "Bulgaria",
-    "Canada": "Canada",
-    "Chile": "Chile",
-    "England": "United Kingdom",
-    "Frankrike": "France",
-    "Georgia": "Georgia",
-    "Hellas": "Greece",
-    "Israel": "Israel",
-    "Italia": "Italy",
-    "Japan": "Japan",
-    "Kina": "China",
-    "Kroatia": "Croatia",
-    "Kypros": "Cyprus",
-    "Libanon": "Lebanon",
-    "Marokko": "Morocco",
-    "New Zealand": "New Zealand",
-    "Portugal": "Portugal",
-    "Republikken Moldova": "Moldova",
-    "Romania": "Romania",
-    "Serbia": "Serbia",
-    "Slovakia": "Slovakia",
-    "Slovenia": "Slovenia",
-    "Spania": "Spain",
-    "Sveits": "Switzerland",
-    "Sverige": "Sweden",
-    "Sør-Afrika": "South Africa",
-    "Tsjekkia": "Czech Republic",
-    "Tyrkia": "Turkey",
-    "Tyskland": "Germany",
-    "USA": "United States",
-    "Ukraina": "Ukraine",
-    "Ungarn": "Hungary",
-    "Uruguay": "Uruguay",
-    "Østerrike": "Austria",
-}
+
+def _split_land_kategori(needle: str) -> Optional[tuple[str, str]]:
+    """
+    «Tyskland Rødvin» → («Tyskland», «Rødvin»). None for alt annet.
+
+    Kalles KUN på needles som parsingen har merket som auto-deriverte — se
+    `blindspots_land_kategori`. Formen alene holder ikke: den kuraterte
+    linja «Aromatisk hvitvin» ender også på en kategori.
+    """
+    for kat in _KATEGORIER:
+        if needle.lower().endswith(" " + kat.lower()):
+            land = needle[: -len(kat)].strip()
+            if land:
+                return land, kat
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -582,7 +564,11 @@ _NO_MATCHERS: dict[str, list[dict]] = {
 
     # --- Regioner du dras mot ----------------------------------------------
     "Nord-Italia": [{"land": "Italia", "distrikt": _NORD_ITALIA}],
-    "Tyskland": [{"land": "Tyskland"}],
+    # Profilen sa «Tyskland (Mosel, Rheingau – Riesling)». Parentesen bar hele
+    # meningen — hvitt — men bullet-parseren stripper parenteser, så needelen
+    # ble «Tyskland» og gjorde 368 tyske RØDviner til `fit` på evidens om
+    # hvitvin. Prosaen sier nå «Tysk Riesling», og matcheren sier det samme.
+    "Tysk Riesling": [{"land": "Tyskland", "kategori": "Hvitvin"}],
     "Champagne": [{"land": "Frankrike", "distrikt": ["Champagne"]}],
     "Jura": [{"land": "Frankrike", "distrikt": ["Jura"]}],
 
@@ -962,44 +948,32 @@ def _konfidens_fra_n(needles: list[str], rules: dict) -> str:
     return "low"
 
 
-def _er_land_kategori_blindspot(needle: str) -> bool:
+def _er_land_kategori_blindspot(needle: str, rules: dict) -> bool:
     """
-    True for auto-deriverte blindspots på formen «<Land> <Kategori>»
-    («Germany Red Wine»). Disse er strengere evidens enn en region-preferanse
+    True for auto-deriverte blindsoner på formen «<Land> <Kategori>»
+    («Tyskland Rødvin»). Disse er strengere evidens enn en region-preferanse
     som bare navngir landet — se `classify` regel 4.
+
+    Avgjøres av HVILKEN seksjon needelen kom fra, ikke av hvordan den ser ut.
     """
-    return any(
-        needle == f"{land} {kat}"
-        for land in set(_LAND_NO_TO_EN.values())
-        for kat in set(_KATEGORI_NO_TO_EN.values())
-    )
+    return needle in rules.get("blindspots_land_kategori", [])
 
 
 def _blindspot_hit(f: dict, rules: dict) -> Optional[tuple[str, str]]:
     """
     Første blindspot som treffer vinen som `(needle, beskrivelse)`, ellers None.
 
-    Blindspots kommer i to former: auto-deriverte «Land Kategori»-strenger på
-    engelsk («Germany Red Wine») og kuratert norsk prosa («Pinot Noir
-    generelt»). Den engelske formen krever at BÅDE land og kategori er
-    oversatt fra norsk — ellers fyrer den bare for land som staves likt på
-    begge språk.
+    Blindsoner kommer i to former: auto-deriverte «<Land> <Kategori>»
+    («Tyskland Rødvin») og kuratert prosa («Pinot Noir generelt»). Den
+    sammensatte formen matches EKSAKT på begge ledd — begge kilder skriver nå
+    norsk, så det finnes ikke lenger en oversettelse som kan svikte, og det
+    finnes ikke lenger en substring-vei som kan treffe halvveis.
     """
-    kategori_en = _KATEGORI_NO_TO_EN.get(f["kategori"], "")
-    land_en = _LAND_NO_TO_EN.get(f["land"], "")
     haystacks = [
         f["land"], f["kategori"], f["stil"], f["produsent"], f["navn"],
-        f["region"], f["underregion"], kategori_en, land_en,
+        f["region"], f["underregion"],
     ]
-    if f["land"] and f["kategori"]:
-        haystacks.append(f"{f['land']} {f['kategori']}")
-    if land_en and kategori_en:
-        haystacks.append(f"{land_en} {kategori_en}")
     haystacks = [h for h in haystacks if h]
-    combined = " ".join(haystacks).lower()
-
-    _TYPEORD = ("wine", "vin", "red", "white", "rosé", "rose", "sparkling",
-                "fortified", "dessert")
     # Nivå-innsnevrede bekymringer først: «regionen matcher, nivået i
     # historikken gjør det ikke» er en mer presis begrunnelse enn en generisk
     # blindsone som tilfeldigvis dekker samme vin.
@@ -1011,15 +985,25 @@ def _blindspot_hit(f: dict, rules: dict) -> Optional[tuple[str, str]]:
         desc = _no_matcher_hit(bs, f)
         if desc is not None:
             return bs, f"«{bs}» ({desc})"
-        parts = bs.split()
-        if len(parts) >= 2 and any(p.lower() in _TYPEORD for p in parts):
-            # Sammensatt "Land Kategori": alle ledd må finnes
-            if all(p.lower() in combined for p in parts if len(p) > 2):
+        land_kat = (
+            _split_land_kategori(bs)
+            if bs in rules.get("blindspots_land_kategori", [])
+            else None
+        )
+        if land_kat:
+            # Sammensatt «<Land> <Kategori>»: begge ledd må stemme eksakt.
+            # Ingen substring-vei — «Spania Musserende vin» skal ikke kunne
+            # treffe en spansk rødvin fordi ordet «vin» finnes i raden.
+            land, kat = land_kat
+            if (
+                f["land"].lower() == land.lower()
+                and f["kategori"].lower() == kat.lower()
+            ):
                 return bs, f"«{bs}»"
-        else:
-            for hay in haystacks:
-                if _ci_substring_match(bs, hay):
-                    return bs, f"«{bs}» i «{hay}»"
+            continue
+        for hay in haystacks:
+            if _ci_substring_match(bs, hay):
+                return bs, f"«{bs}» i «{hay}»"
     return None
 
 
@@ -1180,7 +1164,7 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         and not drue_hits
         and not stil_hits
         and bs_needle
-        and _er_land_kategori_blindspot(bs_needle)
+        and _er_land_kategori_blindspot(bs_needle, rules)
     ):
         region_hits = []
 

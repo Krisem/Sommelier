@@ -1,13 +1,13 @@
 {
   "_meta": {
     "version": "v0",
-    "generated_at": "2026-08-30T16:00:15+00:00",
+    "generated_at": "2026-08-31T09:54:26+00:00",
     "n_classified": 409,
     "tier_counts": {
-      "fit": 221,
-      "neutral": 175,
-      "very_fit": 5,
-      "risky": 8
+      "fit": 195,
+      "neutral": 180,
+      "very_fit": 7,
+      "risky": 27
     },
     "source": "knowledge/scores/",
     "scope": "Kun viner med kritiker-score (~400 av katalogens 14 000+). For et vilkårlig varenummer: bruk tools.user_fit.classify_code(code), som klassifiserer Polet-katalograden direkte."
@@ -15,7 +15,8 @@
   "10017701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -23,7 +24,8 @@
   "10038101": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -31,7 +33,9 @@
   "10043501": {
     "tier": "risky",
     "reasons": [
-      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Rigouline Coteaux d'Aix en Provence Rosé 2025»."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekymring"
@@ -39,7 +43,8 @@
   "10100001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -47,16 +52,18 @@
   "1010201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Provence Rosé» er dokumentert på det generiske sjiktet (Côtes de Provence, Coteaux d'Aix) (4.0 og 2.0 Miraval Côtes de Provence (samme vin), 2.5 Whispering Angel, 1.0 Sulauze Coteaux d'Aix), men ikke på dette nivået — udokumentert, ikke trygt.",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "10129501": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -73,23 +80,27 @@
   "10307001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "10353701": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "10434901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -97,23 +108,27 @@
   "10435001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "10457701": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "1049101": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -121,7 +136,8 @@
   "10702501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -129,7 +145,8 @@
   "10760501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -147,7 +164,8 @@
   "10902101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -155,7 +173,8 @@
   "10939101": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -163,7 +182,8 @@
   "10985405": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -209,7 +229,8 @@
   "11519306": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -217,7 +238,8 @@
   "11703301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -225,7 +247,8 @@
   "11728401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+      "Foretrukket region «Nord-Italia» matcher «Lombardia».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -233,7 +256,8 @@
   "11801101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -241,7 +265,8 @@
   "11814401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -249,7 +274,8 @@
   "11886401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -257,7 +283,8 @@
   "11894701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -265,7 +292,8 @@
   "11907601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -273,7 +301,8 @@
   "11910602": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -289,7 +318,8 @@
   "11929206": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -297,7 +327,8 @@
   "11937401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -305,7 +336,8 @@
   "11998101": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -313,7 +345,8 @@
   "12204401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -321,7 +354,8 @@
   "12412701": {
     "tier": "fit",
     "reasons": [
-      "Bekreftet drue «Chardonnay» matcher «Chardonnay»."
+      "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -329,7 +363,8 @@
   "125301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -337,7 +372,8 @@
   "12563701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -362,17 +398,20 @@
     "rule_fired": "default"
   },
   "12670201": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Méditerranée».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Méditerranée».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "1274606": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Veneto»."
+      "Foretrukket region «Nord-Italia» matcher «Veneto».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -380,7 +419,8 @@
   "12786401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -388,7 +428,8 @@
   "12786501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -396,7 +437,8 @@
   "1282201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -404,7 +446,8 @@
   "12865106": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -412,7 +455,7 @@
   "13015901": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Greece Rosé Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Hellas Rosévin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -421,24 +464,27 @@
   "13061101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "13124601": {
-    "tier": "neutral",
+    "tier": "fit",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "region_pluss"
   },
   "13124801": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -446,7 +492,8 @@
   "13218101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -454,15 +501,17 @@
   "13275301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Hellas Rosévin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "13474402": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -479,7 +528,8 @@
   "14082401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+      "Foretrukket region «Nord-Italia» matcher «Lombardia».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -487,23 +537,26 @@
   "14146301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Italia Hvitvin».",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot"
+  },
+  "14219301": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
-  "14219301": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "medium",
-    "rule_fired": "region_pluss"
-  },
   "14355201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -511,39 +564,44 @@
   "14373301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "14375601": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "low",
-    "rule_fired": "region_pluss"
-  },
-  "14394701": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "medium",
-    "rule_fired": "region_pluss"
-  },
-  "14400201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot"
+  },
+  "14394701": {
+    "tier": "neutral",
+    "reasons": [
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
+  "14400201": {
+    "tier": "risky",
+    "reasons": [
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekymring"
+  },
   "14449801": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -561,7 +619,8 @@
   "14665101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -578,7 +637,8 @@
   "14954101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -586,7 +646,8 @@
   "14954201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -594,7 +655,8 @@
   "14969001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "region_pluss"
@@ -603,7 +665,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Chardonnay»."
+      "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -611,7 +674,8 @@
   "15070201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -619,7 +683,8 @@
   "15172801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -637,7 +702,8 @@
   "15215501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -645,39 +711,44 @@
   "15237901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "15375301": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Spätburgunder).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "15375401": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "15377801": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "15377901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -685,7 +756,8 @@
   "15387601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Jura» matcher «Jura»."
+      "Foretrukket region «Jura» matcher «Jura».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -693,7 +765,8 @@
   "15438201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -701,7 +774,8 @@
   "15505101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Jura» matcher «Jura»."
+      "Foretrukket region «Jura» matcher «Jura».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -709,7 +783,7 @@
   "15522601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -719,7 +793,7 @@
   "15523201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -729,7 +803,7 @@
   "15523801": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -738,7 +812,8 @@
   "15561601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -764,7 +839,8 @@
   "15727901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Jura» matcher «Jura»."
+      "Foretrukket region «Jura» matcher «Jura».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -772,7 +848,8 @@
   "15825001": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
@@ -788,8 +865,9 @@
   "16349301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -797,8 +875,9 @@
   "16349401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -806,7 +885,8 @@
   "16466101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -847,7 +927,8 @@
   "16845106": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -855,7 +936,7 @@
   "16896701": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -864,23 +945,26 @@
   "16917701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
-    ],
-    "confidence": "medium",
-    "rule_fired": "default"
-  },
-  "16925906": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Hellas Rosévin».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
+  },
+  "16925906": {
+    "tier": "neutral",
+    "reasons": [
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "16983301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -896,7 +980,8 @@
   "17071201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -904,7 +989,8 @@
   "17071301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -912,7 +998,8 @@
   "17076001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -920,7 +1007,8 @@
   "17189601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -928,7 +1016,8 @@
   "17338701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -936,7 +1025,8 @@
   "17462501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -952,7 +1042,8 @@
   "18940901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -960,7 +1051,7 @@
   "19015201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -970,7 +1061,8 @@
   "19093501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -978,7 +1070,7 @@
   "19095901": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -987,7 +1079,7 @@
   "19096001": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -996,7 +1088,7 @@
   "19096301": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -1005,7 +1097,8 @@
   "19142001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1013,7 +1106,8 @@
   "19146201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1021,24 +1115,28 @@
   "19152301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "19245801": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "19291501": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Chardonnay»."
+      "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1047,7 +1145,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Chardonnay»."
+      "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1055,8 +1154,9 @@
   "19316901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1072,7 +1172,8 @@
   "19355201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1080,7 +1181,8 @@
   "19355301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1088,23 +1190,26 @@
   "19355601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "19360902": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "19396501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1112,7 +1217,8 @@
   "19405601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1128,15 +1234,17 @@
   "1942301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Spania Musserende vin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "19432201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1144,7 +1252,8 @@
   "19467501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1152,18 +1261,20 @@
   "19483301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "19565006": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "19577502": {
     "tier": "neutral",
@@ -1176,23 +1287,26 @@
   "19941301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "20049001": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20072201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1200,8 +1314,9 @@
   "20090201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1209,7 +1324,7 @@
   "20090301": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -1226,7 +1341,8 @@
   "20137401": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
@@ -1234,7 +1350,7 @@
   "20228501": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -1243,7 +1359,8 @@
   "20254201": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
@@ -1252,7 +1369,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1278,7 +1396,8 @@
   "20287401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1286,7 +1405,8 @@
   "20291901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1294,18 +1414,20 @@
   "20301301": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
   },
   "20314101": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20314601": {
     "tier": "fit",
@@ -1319,7 +1441,8 @@
   "2032401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1336,7 +1459,8 @@
   "20360401": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «South Africa Rosé Wine»."
+      "Blindsone — profilen har lite eller ingen data: «Sør-Afrika Rosévin».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
@@ -1344,23 +1468,27 @@
   "20360406": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «South Africa Rosé Wine»."
+      "Blindsone — profilen har lite eller ingen data: «Sør-Afrika Rosévin».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
   },
   "20360801": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20362101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1368,7 +1496,8 @@
   "20370901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1376,7 +1505,8 @@
   "20371106": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1384,7 +1514,8 @@
   "20380801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1409,7 +1540,8 @@
   "20385901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1418,32 +1550,36 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
   },
   "20388101": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20389706": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "20405901": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1458,34 +1594,40 @@
     "rule_fired": "default"
   },
   "20412801": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20413101": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20413201": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20422401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1493,7 +1635,8 @@
   "20426401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1501,7 +1644,8 @@
   "20428101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1509,23 +1653,27 @@
   "20428601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "20430101": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20430201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1533,7 +1681,9 @@
   "20432001": {
     "tier": "risky",
     "reasons": [
-      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Boheme Cotes du Provence rosé 2025»."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekymring"
@@ -1541,34 +1691,38 @@
   "20432801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Hellas Rosévin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "20436301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "2044001": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Spätburgunder).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "20440501": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Chardonnay» matcher «Chardonnay»."
+      "Bekreftet drue «Chardonnay» matcher «Chardonnay».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
+    "confidence": "low",
     "rule_fired": "bekreftet_drue"
   },
   "20469601": {
@@ -1600,7 +1754,8 @@
   "20485201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1626,34 +1781,38 @@
   "20505501": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
   },
   "20507001": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20507501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "20510101": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "20511201": {
     "tier": "fit",
@@ -1725,17 +1884,19 @@
     "rule_fired": "region_pluss"
   },
   "20519401": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20520601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1762,15 +1923,17 @@
   "20531401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Spania Musserende vin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "20535301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1778,7 +1941,8 @@
   "20535401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1786,7 +1950,7 @@
   "20535801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -1795,7 +1959,8 @@
   "20536201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1803,26 +1968,29 @@
   "20536301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "20541501": {
-    "tier": "neutral",
+    "tier": "very_fit",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — snitt ≥ 4.0. Treff: «England».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekreftet_snitt"
   },
   "20541601": {
-    "tier": "neutral",
+    "tier": "very_fit",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — snitt ≥ 4.0. Treff: «England».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekreftet_snitt"
   },
   "20543901": {
     "tier": "fit",
@@ -1836,7 +2004,7 @@
   "20544001": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Austria White Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Østerrike Hvitvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -1845,7 +2013,7 @@
   "20544101": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Austria White Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Østerrike Hvitvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -1863,7 +2031,8 @@
   "20553801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1871,8 +2040,9 @@
   "20554901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1880,7 +2050,8 @@
   "20555501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -1888,24 +2059,26 @@
   "20555701": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
   },
   "20555901": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "20558601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -1915,7 +2088,7 @@
   "20558701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -1925,8 +2098,9 @@
   "20558801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1934,7 +2108,7 @@
   "20558901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -1944,8 +2118,9 @@
   "20559001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1953,7 +2128,7 @@
   "20559101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -1962,7 +2137,7 @@
   "20559201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -1972,7 +2147,8 @@
   "20559301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1980,8 +2156,9 @@
   "20559401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -1989,7 +2166,8 @@
   "20559501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -1997,8 +2175,9 @@
   "20561601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2006,8 +2185,9 @@
   "20561801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2015,7 +2195,7 @@
   "20561901": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2024,8 +2204,9 @@
   "20562001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2033,8 +2214,9 @@
   "20562101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2042,8 +2224,9 @@
   "20562201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2051,7 +2234,9 @@
   "20564401": {
     "tier": "risky",
     "reasons": [
-      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Dom. Oddo Provence Rosé 2025»."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekymring"
@@ -2059,8 +2244,9 @@
   "20565601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2077,7 +2263,8 @@
   "20566501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2093,7 +2280,7 @@
   "20573601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2122,7 +2309,7 @@
   "20574901": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2131,8 +2318,9 @@
   "20575201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2140,7 +2328,7 @@
   "20575401": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2149,7 +2337,8 @@
   "20579001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2157,7 +2346,8 @@
   "20579801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2165,8 +2355,9 @@
   "20579901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2174,23 +2365,26 @@
   "20580001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "20580301": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20581401": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir)."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
     "rule_fired": "blindspot"
@@ -2216,27 +2410,31 @@
   "20583301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
   },
   "20583401": {
+    "tier": "risky",
+    "reasons": [
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Méditerranée».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Méditerranée».",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekymring"
+  },
+  "20585001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
-  },
-  "20585001": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "medium",
-    "rule_fired": "region_pluss"
   },
   "20585701": {
     "tier": "neutral",
@@ -2250,7 +2448,8 @@
   "20588301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2258,7 +2457,8 @@
   "20588501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2266,7 +2466,6 @@
   "20588601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling»."
     ],
     "confidence": "medium",
@@ -2283,7 +2482,7 @@
   "20588801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2292,7 +2491,8 @@
   "20591401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2300,7 +2500,8 @@
   "20595001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2308,8 +2509,9 @@
   "20595101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2317,7 +2519,7 @@
   "20595401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2326,27 +2528,30 @@
   "20595501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
   },
   "20596001": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "20596101": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "region_pluss"
+    "rule_fired": "default"
   },
   "20599001": {
     "tier": "neutral",
@@ -2360,7 +2565,8 @@
   "20599201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2368,7 +2574,8 @@
   "20599301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2394,7 +2601,7 @@
   "20607201": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2403,7 +2610,7 @@
   "20609801": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2412,7 +2619,8 @@
   "20619501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2420,7 +2628,8 @@
   "20630101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2428,8 +2637,9 @@
   "20630901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2437,8 +2647,9 @@
   "20631001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2446,7 +2657,8 @@
   "20631101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2454,8 +2666,9 @@
   "20631201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2463,8 +2676,9 @@
   "20631301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2472,8 +2686,9 @@
   "20631401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2481,7 +2696,7 @@
   "20631901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2490,7 +2705,7 @@
   "20632001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2500,7 +2715,7 @@
   "20632101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2510,7 +2725,7 @@
   "20632301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2520,7 +2735,7 @@
   "20632401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2530,7 +2745,7 @@
   "20632601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2540,7 +2755,7 @@
   "20632701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2550,7 +2765,7 @@
   "20632801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2560,7 +2775,7 @@
   "20632901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2570,7 +2785,7 @@
   "20633001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2580,7 +2795,7 @@
   "20633101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2589,7 +2804,7 @@
   "20633201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2599,7 +2814,7 @@
   "20633301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2609,7 +2824,7 @@
   "20633401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2619,7 +2834,7 @@
   "20633801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2629,7 +2844,7 @@
   "20634601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2638,7 +2853,7 @@
   "20634701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2647,7 +2862,7 @@
   "20634801": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2656,7 +2871,7 @@
   "20634901": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2665,7 +2880,7 @@
   "20635001": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2674,7 +2889,7 @@
   "20635701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2683,7 +2898,8 @@
   "20636401": {
     "tier": "risky",
     "reasons": [
-      "Drue/region har bommet før: «Sauvignon Blanc» matcher «Sauvignon Blanc»."
+      "Drue/region har bommet før: «Sauvignon Blanc» matcher «Sauvignon Blanc».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekymring"
@@ -2700,7 +2916,7 @@
   "20637301": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Austria White Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Østerrike Hvitvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2709,8 +2925,9 @@
   "20637601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2718,8 +2935,9 @@
   "20637801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2727,8 +2945,9 @@
   "20637901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2736,8 +2955,9 @@
   "20638101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2745,8 +2965,9 @@
   "20638401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2754,8 +2975,9 @@
   "20638501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2763,8 +2985,9 @@
   "20639001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2772,8 +2995,9 @@
   "20639301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2781,8 +3005,9 @@
   "20639401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2790,7 +3015,8 @@
   "20639601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2798,7 +3024,7 @@
   "20640101": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2807,8 +3033,9 @@
   "20640201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2816,7 +3043,7 @@
   "20640601": {
     "tier": "neutral",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Germany Red Wine».",
+      "Blindsone — profilen har lite eller ingen data: «Tyskland Rødvin».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
@@ -2825,7 +3052,7 @@
   "20640701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2835,7 +3062,7 @@
   "20641501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2845,7 +3072,8 @@
   "20642201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2853,8 +3081,9 @@
   "20642401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
-      "Bekreftet drue «Riesling» matcher «Riesling»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Bekreftet drue «Riesling» matcher «Riesling».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2862,7 +3091,7 @@
   "20642801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2879,7 +3108,7 @@
   "20643601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2888,7 +3117,8 @@
   "20644901": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2896,7 +3126,7 @@
   "20645501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2905,7 +3135,7 @@
   "20650201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -2915,32 +3145,37 @@
   "20650301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "2115201": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "2150401": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "2178901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2949,7 +3184,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Jura» matcher «Jura».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -2957,7 +3193,8 @@
   "2197701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -2965,7 +3202,8 @@
   "2252001": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -2973,55 +3211,62 @@
   "2262901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "2265301": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "232101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "2844201": {
+    "tier": "risky",
+    "reasons": [
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "medium",
+    "rule_fired": "bekymring"
+  },
+  "2895001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
-  "2895001": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "medium",
-    "rule_fired": "region_pluss"
-  },
   "3267701": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Blindsone — profilen har lite eller ingen data: «Aromatisk hvitvin» (Moscato)."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "3310601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+      "Foretrukket region «Nord-Italia» matcher «Lombardia».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3030,7 +3275,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Champagne» matcher «Champagne».",
-      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs»."
+      "Bekreftet drue «Chardonnay» matcher «Blanc de Blancs».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -3038,7 +3284,8 @@
   "3456101": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3056,7 +3303,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo»."
+      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -3064,18 +3312,20 @@
   "3962701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "3965601": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "3981201": {
     "tier": "fit",
@@ -3089,7 +3339,8 @@
   "4369105": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3097,7 +3348,8 @@
   "4398201": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3105,7 +3357,8 @@
   "4410401": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3113,7 +3366,8 @@
   "4416401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3121,7 +3375,8 @@
   "4561601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige»."
+      "Foretrukket region «Nord-Italia» matcher «Trentino-Alto Adige».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3138,15 +3393,19 @@
   "4963201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Spania Musserende vin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "496601": {
     "tier": "risky",
     "reasons": [
-      "Samme vin står på no-go-listen i en annen årgang: «Domaine de Sulauze Pomponette Rosé». Ny årgang kan være annerledes — men dette er ikke ukjent terreng."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Samme vin står på no-go-listen i en annen årgang: «Domaine de Sulauze Pomponette Rosé». Ny årgang kan være annerledes — men dette er ikke ukjent terreng.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekymring"
@@ -3154,7 +3413,8 @@
   "507501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3162,7 +3422,8 @@
   "5089301": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3170,7 +3431,8 @@
   "511501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3196,7 +3458,8 @@
   "5518401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3204,7 +3467,8 @@
   "5540901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3212,7 +3476,8 @@
   "5556801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3220,7 +3485,8 @@
   "5579001": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3228,7 +3494,8 @@
   "5673901": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3236,7 +3503,8 @@
   "5694501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3244,7 +3512,8 @@
   "5737401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3252,7 +3521,8 @@
   "5737501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3260,7 +3530,8 @@
   "5771401": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3268,7 +3539,8 @@
   "5873701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3284,7 +3556,8 @@
   "5904501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+      "Foretrukket region «Nord-Italia» matcher «Lombardia».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3292,7 +3565,8 @@
   "5972301": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3300,7 +3574,8 @@
   "6693501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Champagne» matcher «Champagne»."
+      "Foretrukket region «Champagne» matcher «Champagne».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3308,7 +3583,7 @@
   "6854801": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland».",
+      "Foretrukket region «Tysk Riesling» matcher «Tyskland».",
       "Bekreftet drue «Riesling» matcher «Riesling».",
       "Mangler felt: stil — best-effort match."
     ],
@@ -3318,7 +3593,8 @@
   "7104501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3326,7 +3602,8 @@
   "7311701": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3335,7 +3612,8 @@
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo»."
+      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -3343,31 +3621,36 @@
   "7603601": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
   },
   "7635301": {
-    "tier": "fit",
-    "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
-    ],
-    "confidence": "low",
-    "rule_fired": "region_pluss"
-  },
-  "7703801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
+    ],
+    "confidence": "low",
+    "rule_fired": "blindspot"
+  },
+  "7703801": {
+    "tier": "risky",
+    "reasons": [
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "7817701": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Jura» matcher «Jura»."
+      "Foretrukket region «Jura» matcher «Jura».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3375,7 +3658,8 @@
   "7829501": {
     "tier": "fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Lombardia»."
+      "Foretrukket region «Nord-Italia» matcher «Lombardia».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "region_pluss"
@@ -3383,39 +3667,45 @@
   "7910201": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Blindsone — profilen har lite eller ingen data: «Spania Musserende vin».",
+      "Mangler felt: stil — best-effort match."
     ],
-    "confidence": "medium",
-    "rule_fired": "default"
+    "confidence": "low",
+    "rule_fired": "blindspot"
   },
   "8051501": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "9099801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "9120201": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   },
   "9186801": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
@@ -3441,24 +3731,28 @@
   "9745501": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "9746001": {
-    "tier": "neutral",
+    "tier": "risky",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Drue/region har bommet før: «Generisk Provence-rosé» matcher «Provence».",
+      "Stil-snitt under bekymrings-terskelen: «Provence Rosé» (n=4, snitt 2.38) matcher «Provence».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "default"
+    "rule_fired": "bekymring"
   },
   "9747601": {
     "tier": "fit",
     "reasons": [
       "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo»."
+      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "bekreftet_drue"
@@ -3466,17 +3760,19 @@
   "9749601": {
     "tier": "neutral",
     "reasons": [
-      "Ingen regler traff — default nøytral."
+      "Ingen regler traff — default nøytral.",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
     "rule_fired": "default"
   },
   "9838401": {
-    "tier": "fit",
+    "tier": "neutral",
     "reasons": [
-      "Foretrukket region «Tyskland» matcher «Tyskland»."
+      "Blindsone — profilen har lite eller ingen data: «Pinot Noir generelt» (Pinot Noir).",
+      "Mangler felt: stil — best-effort match."
     ],
     "confidence": "low",
-    "rule_fired": "region_pluss"
+    "rule_fired": "blindspot"
   }
 }

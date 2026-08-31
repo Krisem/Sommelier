@@ -8,7 +8,7 @@
 > ## Oppdaterings-trigger (Claude må følge disse)
 >
 > Filen skal oppdateres umiddelbart når:
-> 1. **Brukeren bekrefter ny preferanse** – legg til i "Druer du vet du liker" eller "Regioner du dras mot". Hvis blindspot bekreftet, oppdater "Blindspots".
+> 1. **Brukeren bekrefter ny preferanse** – legg til i "Druer du vet du liker" eller "Regioner du dras mot". Hvis blindsone bekreftet, oppdater "Blindsoner, kuratert".
 > 2. **Brukeren rapporterer dårlig opplevelse** – spesifikk vin → "No-go-liste"; mønster → "Druer/regioner som har bommet".
 > 3. **Klokke-profil hentet for en topp-rated vin** – legg til i tabellen under "Klokke-profil for topp-viner".
 > 4. **Ny Vivino-eksport** – re-analyser mønstre, oppdater snitt og sterke trender. Vekt nyere ratings tyngre.
@@ -21,7 +21,7 @@
 <!-- BEGIN AUTO-DERIVED (profile_stats.py) -->
 ## Auto-derivert statistikk
 
-> Generert 2026-08-30 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
+> Generert 2026-08-31 av `tools/profile_stats.py`. Ikke rediger manuelt – kjør scriptet på nytt etter Vivino-eksport.
 > Grunnlag: 122 ratede viner, snitt 3.82.
 > Nyere ratings (2024-01-01+): 35 viner, snitt 3.99.
 > Eldre ratings (før 2024): 86 viner, snitt 3.76.
@@ -90,23 +90,23 @@
 - **Burgundy Red** – n=3, snitt 3.27
 - **Southern Rhône Red** – n=3, snitt 3.00
 
-### Blindspots (kategori-kombinasjoner med n ≤ 2)
+### Blindsoner, auto-derivert (land × kategori, n ≤ 2)
 
-- Italy White Wine (n=1)
-- Austria White Wine (n=1)
-- Lebanon Red Wine (n=1)
-- France Dessert Wine (n=1)
-- Portugal Red Wine (n=1)
-- Uruguay Red Wine (n=1)
-- Chile Red Wine (n=1)
-- New Zealand White Wine (n=1)
-- Austria Sparkling (n=1)
-- Spain Sparkling (n=1)
-- Portugal Fortified Wine (n=1)
-- South Africa Rosé Wine (n=1)
-- Greece Rosé Wine (n=1)
-- Germany Red Wine (n=2)
-- United States White Wine (n=2)
+- Italia Hvitvin (n=1)
+- Østerrike Hvitvin (n=1)
+- Libanon Rødvin (n=1)
+- Frankrike Dessertvin (n=1)
+- Portugal Rødvin (n=1)
+- Uruguay Rødvin (n=1)
+- Chile Rødvin (n=1)
+- New Zealand Hvitvin (n=1)
+- Østerrike Musserende vin (n=1)
+- Spania Musserende vin (n=1)
+- Portugal Sterkvin (n=1)
+- Sør-Afrika Rosévin (n=1)
+- Hellas Rosévin (n=1)
+- Tyskland Rødvin (n=2)
+- USA Hvitvin (n=2)
 
 ### Topp 5 ratede viner
 
@@ -182,14 +182,14 @@
 - **Helles / Lager** – n=6, snitt 3.08
 - **Saison / Farmhouse** – n=4, snitt 3.00
 
-### Blindspots (familier med n ≤ 1)
+### Blindsoner, auto-derivert (stilfamilier, n ≤ 1)
 
-- Märzen / Festbier / Vienna
-- Barleywine / Old Ale / Wee Heavy
-- Kölsch / Altbier
-- Schwarzbier / Dunkel
-- Rauchbier / Smoked
-- Fruit / Spice / Specialty
+- Märzen / Festbier / Vienna (n=1)
+- Barleywine / Old Ale / Wee Heavy (n=1)
+- Kölsch / Altbier (n=1)
+- Schwarzbier / Dunkel (n=1)
+- Rauchbier / Smoked (n=1)
+- Fruit / Spice / Specialty (n=1)
 
 ### Sesong-mønster (snitt rating per måned)
 
@@ -338,7 +338,7 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 - **Off-dry/halvtørt fungerer faktisk:** 4.0 Stephan Ehlen Spätlese (off-dry), 4.1 Auslese (søt). Du tåler restsødme i tysk hvitvin når den er balansert av syre. Ikke avskriv off-dry-stilene.
 - **Jura-Chardonnay treffer deg** – 4.4 og 4.1 på Rolet, to forskjellige årganger
 - **Cloudy Bay 4.5** – men dette er en 2015-rating. Smaken har modnet siden da, så ikke vekt denne tungt.
-- **Sør-Rhône hvit fungerer ikke** – 3.0 og 3.2 på Lirac Blanc fra Ségriés, to årganger på rad
+- **Sør-Rhône hvit fungerer ikke** – 3.0 og 3.2 på Lirac Blanc fra Ségriés, to årganger av SAMME vin (n=1 vin, ikke n=2)
 - **Beaujolais Blanc (Chardonnay) kan funke:** Famille Morel Les Pierres Dorées 2024 → 4.1 (2026-06-13, restaurant). Biodynamisk kalkstein-Chardonnay. Overrasket positivt — lett og frisk, men med nok substans. Ikke avskriv lettere Chardonnay-stiler for tidlig.
 
 **Antatte preferanser:**
@@ -431,7 +431,7 @@ Verre: **hver eneste gruppe med identiske klokker spenner over ratingskalaen.**
 
 > **Les tabellen med det negative ankeret i bånn.** Vespa-raden er ikke en topp-vin – den står der fordi den beviser at klokke-similarity alene er utilstrekkelig: to viner med identisk 8/9/7 fikk 4.6 og «for lett». Bruk klokkene til å finne *stil-slektninger*, ikke til å rangere kraft eller kvalitet. Se «Kraftigere kan IKKE søkes på Fylde-klokka» under Stilpreferanser.
 
-## Blindspots (eksplisitt mangel på data)
+## Blindsoner, kuratert (eksplisitt mangel på data)
 
 Disse områdene har for lite eller ingen data til å gi sikre anbefalinger.
 Claude bør markere [NYTT] og lavere konfidens:
@@ -442,7 +442,7 @@ Claude bør markere [NYTT] og lavere konfidens:
 - **Spanske rødviner** – kun 4 viner, ingen klart mønster
 - **Pinot Noir generelt** – stor varians (1.5 til 4.5), vanskelig å forutsi
 
-### New World rødvin – under aktiv utforskning (oppgradert fra blindsone 2026-07-02)
+## New World rødvin – under aktiv utforskning (oppgradert fra blindsone 2026-07-02)
 
 **Hypotese (styrket, ikke bekreftet):** Du liker **frisk, høyde-/kjølig-preget, strukturert og savory** New World-rødvin – ikke den syltete, høy-alkohol, eik-tunge varmklima-stereotypien.
 
@@ -468,7 +468,7 @@ Evidens så langt:
 ## Druer/regioner som har bommet
 
 - **Generisk Provence-rosé** (gjentakende skuffelse)
-- **Sør-Rhône hvit** (to lave på Lirac Blanc)
+- **Sør-Rhône hvit** – én vin, Ségriés Lirac Blanc, lav i to årganger (3,2 og 3,0). Ikke to uavhengige viner.
 - **Billig Burgund** (Labouré-Roi 1.5)
 - **Argentinsk Bonarda** (3.0 Chakana)
 - **Sauvignon Blanc:** Bare én i hele dataene (Cloudy Bay 4.5 fra 2015). Ukjent om dette er bevisst fravalg eller bare ikke prøvd. Ikke foreslå klassisk gress/stikkelsbær-SB uten å sjekke først; bedre å gå Sancerre/Pouilly-Fumé hvis SB skal med (mer mineralsk, matcher din hvitvin-profil).
@@ -476,7 +476,7 @@ Evidens så langt:
 ## Regioner du dras mot (basert på frekvens og rating)
 
 1. **Nord-Italia** (Piemonte, Veneto) – tyngdepunktet ditt
-2. **Tyskland** (Mosel, Rheingau – Riesling)
+2. **Tysk Riesling** – Mosel og Rheingau. Hvitt, ikke tysk rødvin: den er blindsone (n=2).
 3. **Champagne**
 4. **Jura** (Chardonnay)
 

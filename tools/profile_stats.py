@@ -27,6 +27,36 @@ PROFILE_PATH = ROOT / "knowledge" / "smaksprofil.md"
 BEGIN = "<!-- BEGIN AUTO-DERIVED (profile_stats.py) -->"
 END = "<!-- END AUTO-DERIVED -->"
 
+# Vivinos engelske vokabular → norsk, slik Polet-katalogen skriver det.
+# Oversettelsen skjer her, ved generering, og ikke ved matching i `user_fit`:
+# der var den en oppslags-tabell som stille reduserte blindsone-regelen til
+# «land som staves likt på norsk og engelsk» (ADR-027).
+LAND_EN_TO_NO: dict[str, str] = {
+    "Argentina": "Argentina", "Australia": "Australia", "Austria": "Østerrike",
+    "Brazil": "Brasil", "Bulgaria": "Bulgaria", "Canada": "Canada",
+    "Chile": "Chile", "China": "Kina", "Croatia": "Kroatia",
+    "Cyprus": "Kypros", "Czech Republic": "Tsjekkia", "England": "England",
+    "France": "Frankrike", "Georgia": "Georgia", "Germany": "Tyskland",
+    "Greece": "Hellas", "Hungary": "Ungarn", "Israel": "Israel",
+    "Italy": "Italia", "Japan": "Japan", "Lebanon": "Libanon",
+    "Moldova": "Republikken Moldova", "Morocco": "Marokko",
+    "New Zealand": "New Zealand", "Portugal": "Portugal", "Romania": "Romania",
+    "Serbia": "Serbia", "Slovakia": "Slovakia", "Slovenia": "Slovenia",
+    "South Africa": "Sør-Afrika", "Spain": "Spania", "Sweden": "Sverige",
+    "Switzerland": "Sveits", "Turkey": "Tyrkia",
+    "United Kingdom": "England", "United States": "USA", "Uruguay": "Uruguay",
+}
+
+KATEGORI_EN_TO_NO: dict[str, str] = {
+    "Red Wine": "Rødvin",
+    "White Wine": "Hvitvin",
+    "Rosé Wine": "Rosévin",
+    "Sparkling": "Musserende vin",
+    "Sparkling Wine": "Musserende vin",
+    "Dessert Wine": "Dessertvin",
+    "Fortified Wine": "Sterkvin",
+}
+
 RECENT_CUTOFF = datetime(2024, 1, 1)
 MIN_N_FOR_PATTERN = 3
 BLINDSPOT_MAX_N = 2
@@ -84,8 +114,17 @@ def fmt_table(rows: list[tuple[str, int, float, float | None]], min_n: int = 1) 
     return "\n".join(lines)
 
 
-def blindspots(rows: list[dict]) -> list[str]:
-    """Kategorier (Country + Wine type) med få datapunkter."""
+def blindspots(rows: list[dict]) -> list[dict]:
+    """
+    Land × kategori med få datapunkter, som STRUKTUR — ikke som ferdig streng.
+
+    Vivino skriver på engelsk («Germany», «Red Wine»), Polet-katalogen på norsk
+    («Tyskland», «Rødvin»). Så lenge denne funksjonen returnerte
+    «Germany Red Wine (n=2)» måtte `user_fit` oversette tilbake ved hver
+    matching, og fyrte i praksis bare for land som staves likt på begge språk
+    (ADR-027). Oversettelsen hører hjemme HER, én gang, der vokabularet er
+    kjent og lukket — ikke i matchingen.
+    """
     buckets: dict[tuple[str, str], int] = defaultdict(int)
     for r in rows:
         country = (r.get("Country") or "").strip()
@@ -93,10 +132,21 @@ def blindspots(rows: list[dict]) -> list[str]:
         if country and wtype:
             buckets[(country, wtype)] += 1
     return [
-        f"{country} {wtype} (n={n})"
+        {
+            "land": LAND_EN_TO_NO.get(country, country),
+            "kategori": KATEGORI_EN_TO_NO.get(wtype, wtype),
+            "n": n,
+            "land_kilde": country,
+            "kategori_kilde": wtype,
+        }
         for (country, wtype), n in sorted(buckets.items(), key=lambda x: x[1])
         if n <= BLINDSPOT_MAX_N
     ]
+
+
+def fmt_blindspot(b: dict) -> str:
+    """Render-laget: struktur → linja som havner i smaksprofil.md."""
+    return f"{b['land']} {b['kategori']} (n={b['n']})"
 
 
 def top_and_bottom(rows: list[dict], k: int = 5) -> tuple[list[dict], list[dict]]:
@@ -176,9 +226,9 @@ def render(rows: list[dict]) -> str:
     else:
         parts.append("_Ingen stiler under terskelen._")
     parts.append("")
-    parts.append("### Blindspots (kategori-kombinasjoner med n ≤ 2)")
+    parts.append("### Blindsoner, auto-derivert (land × kategori, n ≤ 2)")
     parts.append("")
-    parts.append("\n".join(f"- {b}" for b in bs[:15]) or "_Ingen._")
+    parts.append("\n".join(f"- {fmt_blindspot(b)}" for b in bs[:15]) or "_Ingen._")
     parts.append("")
     parts.append("### Topp 5 ratede viner")
     parts.append("")
