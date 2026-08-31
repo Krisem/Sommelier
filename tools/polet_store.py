@@ -62,6 +62,13 @@ CLOCK_BUCKETS = frozenset({"1-2", "3-4", "5-6", "7-8", "9-10", "11-12"})
 # beskriver for avregistrerte varer.
 ACTIVE_STATUS = "aktiv"
 
+# Tredje tilstand: varen er annonsert, men ikke i hyllene ennå. Den er hverken
+# kjøpbar nå eller historikk, og skal derfor vises MED flagg framfor å skjules
+# — samme no-filter-bubble-prinsipp som tier (ADR-016). Målt på snapshotet
+# 2026-08-31 (27 402 rader): aktiv 22 921 · utsolgt 2 083 · utgatt 1 305 ·
+# lanseres 796 · langtidsutsolgt 297.
+KOMMENDE_STATUS = "lanseres"
+
 
 class PoletRefreshRequired(Exception):
     """
@@ -131,6 +138,11 @@ def is_active(product: dict) -> bool:
     return str(product.get("status", "")).casefold() == ACTIVE_STATUS
 
 
+def is_kommer_snart(product: dict) -> bool:
+    """True for varer som er annonsert, men ikke i salg ennå (`lanseres`)."""
+    return str(product.get("status", "")).casefold() == KOMMENDE_STATUS
+
+
 def query(
     *,
     category: Optional[str] = None,
@@ -138,20 +150,27 @@ def query(
     max_price: Optional[float] = None,
     min_price: Optional[float] = None,
     name_contains: Optional[str] = None,
-    active_only: bool = False,
+    active_only: bool = True,
 ) -> list[dict]:
     """
     Filtrer katalogen. `category`/`country` matcher BÅDE .code og .name
     (case-insensitiv). Pris leses fra `p["price"]["value"]`.
 
-    `active_only=True` beholder kun rader med `status == "aktiv"` — bruk det
-    når resultatet skal presenteres som noe brukeren kan kjøpe NÅ. Default er
-    False (hele katalogen, historikk inkludert), fordi similarity-, value- og
-    dekningsanalyser trenger de utgåtte radene også.
+    **Default er `active_only=True`.** Den var False, og det gjorde 4 481 av
+    27 402 rader (utsolgt, utgått, langtidsutsolgt) til gyldige treff i et søk
+    som presenteres som kjøpbare viner. `buyable` kan ikke redde det: 1 264
+    rødviner bærer `buyable: true` uten å være aktive.
+
+    Rader med `status == "lanseres"` beholdes, men merkes `kommer_snart: True`
+    i den returnerte kopien. De skjules ikke — de er ekte treff brukeren kan
+    forholde seg til — men de telles heller ikke som kjøpbare nå (ADR-016).
+
+    Sett `active_only=False` for analyser som TRENGER historikken: similarity,
+    peer-dekning, katalog-statistikk. Da returneres radene urørt.
     """
     out: list[dict] = []
     for p in read_catalog():
-        if active_only and not is_active(p):
+        if active_only and not (is_active(p) or is_kommer_snart(p)):
             continue
         if category is not None and not _matches_label(p.get("main_category"), category):
             continue
@@ -164,7 +183,8 @@ def query(
             continue
         if name_contains is not None and name_contains.casefold() not in str(p.get("name", "")).casefold():
             continue
-        out.append(p)
+        # Kopi, ikke mutasjon: katalograden deles av alle kallere i prosessen.
+        out.append({**p, "kommer_snart": True} if is_kommer_snart(p) else p)
     return out
 
 

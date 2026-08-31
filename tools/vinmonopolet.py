@@ -95,6 +95,7 @@ def search(
     category: Optional[str] = None,
     country: Optional[str] = None,
     fields: Iterable[str] = SEARCH_FIELDS,
+    active_only: bool = True,
 ) -> list[dict]:
     """
     Søk etter produkter i repo-snapshotet (fritekst mot navn + distrikt).
@@ -121,6 +122,13 @@ def search(
     `SEARCH_FIELDS` = navn + distrikt + underdistrikt). Sett den til
     `("name",)` for gammel, ren navne-oppførsel.
 
+    `active_only` defaulter til True, samme som `polet_store.query` — de to er
+    to veier til samme spørsmål, og skal svare likt (ADR-009-fella i miniatyr:
+    to filtre som mener ulike ting om samme katalog). Utgåtte og utsolgte
+    treff faller bort; `lanseres` blir med, merket `kommer_snart`. Status-
+    filteret legges på ETTER fritekst-matchingen, slik at en utgått vin gir
+    tom liste og ikke et falskt «refresh katalogen»-råd.
+
     `use_cache` beholdes for bakoverkompat (no-op — snapshotet ER cachen).
 
     Ingen fritekst-treff → `PoletRefreshRequired` (vinen mangler i snapshotet).
@@ -137,6 +145,12 @@ def search(
                 "desktop (se docs/polet_refresh.md)"
             ),
         )
+    if active_only:
+        matched = [
+            {**p, "kommer_snart": True} if polet_store.is_kommer_snart(p) else p
+            for p in matched
+            if polet_store.is_active(p) or polet_store.is_kommer_snart(p)
+        ]
     filtered = filter_results(
         matched,
         max_price=max_price,
@@ -550,6 +564,11 @@ def find_similar_by_clocks(
                 min_price=min_price,
                 category=category,
                 country=country,
+                # Similarity er en ANALYSE over klokke-populasjonen, ikke et
+                # kjøpsforslag: ADR-023-fiksen var nettopp å la den se hele
+                # populasjonen (13 → 718 av 771 kandidater). Kjøpbarhet
+                # avgjøres der resultatet presenteres.
+                active_only=False,
             )
         except PoletRefreshRequired:
             # Søkestrengen ga ingen snapshot-treff — hopp over, fortsett med

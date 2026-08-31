@@ -26,10 +26,16 @@ import pytest
 
 
 # ─── FIXTURE: liten snapshot-katalog i tmp ───────────────────────────
+#
+# Alle radene bærer `status: "aktiv"`. Det er ikke pynt: `search` og
+# `polet_store.query` defaulter til kjøpbare varer siden 2026-08-31, og en
+# fixture uten status ville testet fritekst- og prisfiltrene på rader som
+# filtreres bort av en helt annen grunn — grønt av feil grunn.
 
 _CATALOG = [
     {
         "code": "10267301",
+        "status": "aktiv",
         "name": "Contra Soarda Breganze Vespaiolo 2023",
         "price": {"value": 299.9, "formattedValue": "Kr 299,90"},
         "main_category": {"code": "hvitvin", "name": "Hvitvin"},
@@ -38,6 +44,7 @@ _CATALOG = [
     },
     {
         "code": "11156601",
+        "status": "aktiv",
         "name": "Thibault Liger-Belair Bourgogne Rouge Les Grands Chaillots",
         "price": {"value": 495.5, "formattedValue": "Kr 495,50"},
         "main_category": {"code": "rødvin", "name": "Rødvin"},
@@ -46,6 +53,7 @@ _CATALOG = [
     },
     {
         "code": "15012201",
+        "status": "aktiv",
         "name": "Tornatore Etna Rosso 2022",
         "price": {"value": 289.0, "formattedValue": "Kr 289,00"},
         "main_category": {"code": "rødvin", "name": "Rødvin"},
@@ -679,7 +687,13 @@ def test_search_page_size_n_returns_n_when_n_matches_exist(ekte_katalog):
 
 def test_search_sees_wines_that_have_the_term_only_in_the_district(ekte_katalog):
     """38 av 74 Etna-rødviner har ikke «Etna» i navnet. Et navne-bare-søk gjør
-    dem usynlige; assertionen er formulert som dekning, ikke som et tall."""
+    dem usynlige; assertionen er formulert som dekning, ikke som et tall.
+
+    Målt mot HELE katalogen (`active_only=False`) med vilje: testen handler om
+    hvilke FELTER fritekst leser, og skal ikke kunne bli grønn fordi de
+    savnede radene tilfeldigvis er utgått. Statusfilteret har sin egen test
+    rett under.
+    """
     from tools.vinmonopolet import search
 
     i_distrikt = [
@@ -691,12 +705,34 @@ def test_search_sees_wines_that_have_the_term_only_in_the_district(ekte_katalog)
     if not i_distrikt:
         pytest.skip("ingen Etna-distriktsrader i dette snapshotet")
 
-    funnet = {p["code"] for p in search("Etna", page_size=None)}
+    funnet = {p["code"] for p in search("Etna", page_size=None, active_only=False)}
     mangler = [p["code"] for p in i_distrikt if p["code"] not in funnet]
     assert not mangler, f"{len(mangler)} Etna-viner er usynlige for fritekstsøket"
 
     kun_navn = {p["code"] for p in _navnetreff(ekte_katalog, "Etna")}
     assert len(funnet) > len(kun_navn), "bredden ga ingenting — er fields riktig?"
+
+
+def test_search_and_query_agree_on_what_is_buyable(ekte_katalog):
+    """
+    To veier til samme spørsmål skal svare likt. `search` filtrerte ikke på
+    status mens `polet_store.query` gjorde det — samme klasse feil som
+    ADR-009 (kode ≠ navn), bare på en annen akse.
+    """
+    from tools import polet_store
+    from tools.vinmonopolet import search
+
+    via_search = {p["code"] for p in search("Etna", page_size=None)}
+    hele = {p["code"] for p in search("Etna", page_size=None, active_only=False)}
+    assert via_search < hele, "statusfilteret fjernet ingenting (no-op?)"
+
+    kjopbare = {
+        p["code"]
+        for p in ekte_katalog
+        if p["code"] in hele
+        and (polet_store.is_active(p) or polet_store.is_kommer_snart(p))
+    }
+    assert via_search == kjopbare
 
 
 def test_catalog_clock_namespace_has_not_drifted(ekte_katalog):

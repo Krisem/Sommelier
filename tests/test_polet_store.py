@@ -33,10 +33,18 @@ def _tmp_store(tmp_path, monkeypatch):
     return polet_dir
 
 
-def _product(code, name, cat_code, cat_name, country_code, country_name, price):
+def _product(code, name, cat_code, cat_name, country_code, country_name, price,
+             status="aktiv"):
+    """
+    En katalograd. `status` defaulter til «aktiv» fordi det er det en ekte rad
+    stort sett er (22 921 av 27 402 målt 2026-08-31) — og fordi `query` siden
+    2026-08-31 defaulter til `active_only=True`. En fixture uten status ville
+    ellers testet filtrene på rader som filtreres bort av en annen grunn.
+    """
     return {
         "code": code,
         "name": name,
+        "status": status,
         "main_category": {"code": cat_code, "name": cat_name},
         "main_country": {"code": country_code, "name": country_name},
         "price": {"value": price},
@@ -147,11 +155,16 @@ def test_query_combined(_seeded):
     assert {p["code"] for p in res} == {"100"}
 
 
-# ─── query: active_only (B6) ─────────────────────────────────────────
+# ─── query: active_only + kommer_snart ───────────────────────────────
 #
 # Katalogen bærer `buyable: true` på rader som for lengst er utgått eller
-# utsolgt (målt 2026-08-30: 1 264 rødviner). `active_only` skal luke dem bort
-# uten å endre default-oppførselen.
+# utsolgt (målt 2026-08-30: 1 264 rødviner). `active_only` luker dem bort, og
+# er siden 2026-08-31 DEFAULT — et søk som presenteres som kjøpbar vin skal
+# ikke ha 4 481 av 27 402 rader som gyldige treff.
+#
+# `lanseres` er en tredje tilstand: annonsert, ikke i hyllene. Den skjules
+# ikke (ADR-016, ingenting skjules), men merkes `kommer_snart` og telles ikke
+# som kjøpbar.
 
 # Ett produkt per status-verdi som faktisk forekommer i snapshotet, pluss én
 # rad helt uten `status` (kan oppstå i eldre/manuelt seedede rader).
@@ -174,18 +187,40 @@ def _seeded_statuses():
         )
         # Alle bærer buyable=True — nettopp poenget: flagget er upålitelig.
         prod["buyable"] = True
-        if status is not None:
+        if status is None:
+            prod.pop("status", None)   # rad helt uten status-felt
+        else:
             prod["status"] = status
         products.append(prod)
     polet_store.upsert_products(products, fetched_at="2026-06-08T00:00:00+00:00")
 
 
-def test_query_default_is_unchanged_by_b6(_seeded_statuses):
-    """Default må returnere HELE katalogen — tre andre fikser bygger på den."""
+def test_query_default_keeps_only_buyable_and_upcoming(_seeded_statuses):
+    """
+    Defaulten er snudd (2026-08-31). Den var False, og gjorde utsolgt, utgått
+    og langtidsutsolgt til gyldige treff i søk som presenteres som kjøpbare.
+
+    `active_only=False` må fortsatt gi HELE katalogen — value_score og
+    dekningsanalysene bygger på den.
+    """
     alle = {p["code"] for p in polet_store.read_catalog()}
-    assert {p["code"] for p in polet_store.query()} == alle
+    assert {p["code"] for p in polet_store.query()} == {"100", "400"}  # aktiv + lanseres
     assert {p["code"] for p in polet_store.query(active_only=False)} == alle
-    assert len(polet_store.query(category="rødvin")) == len(_STATUS_ROWS)
+
+
+def test_upcoming_rows_are_flagged_not_hidden(_seeded_statuses):
+    """`lanseres` skal med, men merket — ikke telles som kjøpbar nå."""
+    res = {p["code"]: p for p in polet_store.query()}
+    assert res["400"].get("kommer_snart") is True
+    assert "kommer_snart" not in res["100"]
+    assert not polet_store.is_active(res["400"])
+
+
+def test_flagging_does_not_mutate_the_catalog_row(_seeded_statuses):
+    """Raden deles av alle kallere i prosessen — flagget settes på en kopi."""
+    polet_store.query()
+    rå = {p["code"]: p for p in polet_store.read_catalog()}
+    assert "kommer_snart" not in rå["400"]
 
 
 def test_query_active_only_keeps_exactly_the_active_row(_seeded_statuses):
@@ -195,17 +230,18 @@ def test_query_active_only_keeps_exactly_the_active_row(_seeded_statuses):
     assertion.
     """
     res = polet_store.query(active_only=True)
-    assert {p["code"] for p in res} == {"100"}
-    assert len(res) < len(polet_store.query())
+    assert {p["code"] for p in res} == {"100", "400"}
+    assert len(res) < len(polet_store.query(active_only=False))
 
 
 def test_query_active_only_drops_buyable_but_inactive(_seeded_statuses):
     """Hver bortfiltrert rad har buyable=True — det er hele bugen."""
     droppet = [
-        p for p in polet_store.query()
+        p for p in polet_store.query(active_only=False)
         if p["code"] not in {q["code"] for q in polet_store.query(active_only=True)}
     ]
-    assert {p["code"] for p in droppet} == {"200", "300", "400", "500", "600"}
+    # «400» (lanseres) er IKKE med i de droppede lenger — den vises med flagg.
+    assert {p["code"] for p in droppet} == {"200", "300", "500", "600"}
     assert all(p.get("buyable") is True for p in droppet)
 
 
@@ -214,7 +250,8 @@ def test_query_active_only_combines_with_other_filters(_seeded_statuses):
     assert polet_store.query(category="hvitvin", active_only=True) == []
     assert {p["code"] for p in polet_store.query(min_price=300, active_only=True)} == set()
     res = polet_store.query(category="rødvin", max_price=250, active_only=True)
-    assert {p["code"] for p in res} == {"100"}
+    assert {p["code"] for p in res} == {"100", "400"}   # aktiv + kommende
+    assert [p["code"] for p in res if p.get("kommer_snart")] == ["400"]
 
 
 def test_is_active_case_insensitive_and_missing_status():
@@ -238,12 +275,15 @@ def test_query_active_only_against_real_catalog(monkeypatch):
     monkeypatch.setattr(polet_store, "POLET_DIR", repo_polet)
     monkeypatch.setattr(polet_store, "CATALOG", catalog)
 
-    alle = polet_store.query(category="rødvin")
+    alle = polet_store.query(category="rødvin", active_only=False)
     aktive = polet_store.query(category="rødvin", active_only=True)
 
     assert aktive, "ingen aktive rødviner — filteret eller dataene er feil"
     assert len(aktive) < len(alle), "filteret fjernet ingenting (no-op?)"
-    assert all(p.get("status") == "aktiv" for p in aktive)
+    assert all(
+        p.get("status") in ("aktiv", "lanseres") for p in aktive
+    ), "kun kjøpbare og kommende skal passere"
+    assert any(p.get("kommer_snart") for p in aktive), "ingen lanseres-rader flagget"
 
     aktive_koder = {p["code"] for p in aktive}
     droppet = [p for p in alle if p["code"] not in aktive_koder]

@@ -203,7 +203,14 @@ def _peer_percentile(polet_product: dict) -> Optional[dict]:
     if price is None or not category_code:
         return None
 
-    population = polet_store.query(category=category_code, country=country_code or None)
+    # Eksplisitt `active_only=False`: peer-analysen TRENGER historikken.
+    # Dekningssjekken under skiller «snapshotet mangler kategorien» fra
+    # «kategorien finnes, men har for få aktive», og med bare aktive rader
+    # ville de to kollapset til samme svar. Prisene filtreres på `is_active`
+    # ett hakk lenger ned, der det faktisk hører hjemme.
+    population = polet_store.query(
+        category=category_code, country=country_code or None, active_only=False
+    )
 
     own_code = polet_product.get("code")
     terms = [f"mainCategory:{category_code}"]

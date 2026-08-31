@@ -381,7 +381,13 @@ def test_peer_sample_equals_declared_population_for_every_pool(real_catalog):
         if peer is None or "percentile" not in peer:
             continue  # tynn pool — egen test dekker den grenen
 
-        population = polet_store.query(category=category, country=country or None)
+        # `active_only=False` med vilje: peer-populasjonen i `_peer_percentile`
+        # er hele katalogen, og statusfilteret legges på ETTERPÅ, kun når
+        # `peer_terms` sier `status:aktiv`. Testen må speile den rekkefølgen,
+        # ellers måler den mot en annen nevner enn funksjonen erklærer.
+        population = polet_store.query(
+            category=category, country=country or None, active_only=False
+        )
         if "status:aktiv" in peer["peer_terms"]:
             population = [r for r in population if polet_store.is_active(r)]
         expected = len([
