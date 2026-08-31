@@ -1,108 +1,154 @@
 # Todo
 
-## Aktivt
+## Aktivt — plan godkjent 2026-08-31
 
-**Sveip 2026-08-30.** Ni agenter, disjunkt fileierskap. Utgangspunkt: 291 tester grønne, commit `b162d3e`.
-Status nå: **397 tester grønne**, ingenting committet (venter på at sveipen fullfører).
+Sveipen 2026-08-30 er landet og committet (`7ba0f4d`…`49ce241`). Restansen etter den er sekvensert i
+seks faser. Full plan med begrunnelser, tall og verifiseringssteg:
+`~/.claude/plans/imperative-spinning-hare.md`.
 
-| Agent | Oppdrag | Resultat |
-|---|---|---|
-| A | Klokke-tabell | ✅ 6 → 25 rader. **Klokkene diskriminerer ikke** (korr. +0,16/+0,09/−0,10; alle 6 grupper med identiske klokker spenner ratingskalaen) → ADR-025 |
-| B | 3 scenarier | ✅ Fant **8 bugs**. Osso buco klart bedre; B1 firedoblet av ekspansjonen |
-| C | `data/reference/` | ✅ **Ikke slettet** — var uattribuert kilde til `sommelier.md` §4 og `norsk-marked.md` §10. Gjeld #7 omskrevet, attribusjoner lagt inn, `bjcp_2021.pdf`-referansen var hallusinert |
-| D | Vivino-sync | ✅ 5 nye ratinger (117 → 122). Runbook rettet: DOM-en har eksakte UTC-tidsstempler, metadata må brace-matches |
-| E | Hvit/musserende/rosé | 🔄 Hvitvin **komplett: 9 765** (407 sider = `totalResults`). Musserende i gang, rosé gjenstår |
-| F0 | B6 statusfilter | ✅ `active_only` opt-in. Muteringstest beviste at default måtte stå (13 feil + 5 errors hvis snudd) |
-| F1 | B2 + B3 | ✅ Barbera 3 → 95, Etna 36 → 74, similarity 13 → **718 av 771**. Toleranse-funn: ADR-024 var «påkoblet i navnet, ikke i rangeringen» |
-| F2 | B4 + B5 | ✅ `risky` **0 → 408**, blindsoner 3 → 25 land. Fire nivå-innsnevringer. To-inngang-feil funnet via uendret sanity-sjekk |
-| F3 | B1 peer-percentil | ✅ Pichon Baron 0,72 → **0,50** percentil, 50 → 4 938 peers. **28,2 %** av 400 viner får korrigert verdict → ADR-026 |
+**Utgangspunkt målt 2026-08-31:** HEAD `49ce241`, 399 tester grønne, katalog 27 402
+(rødvin 13 775 · hvitvin 9 762 · musserende 3 081 · rosé 782 · brennevin 2), 1 664 details
+(rødvin 1 379 · hvitvin 140 · musserende 95 · rosé 48 · brennevin 2).
 
-**Ikke fikset, bevisst:** B7 (samme vin på flere varenumre) — se Backlog, forbeholdene kan avlyse den.
-**Levert dokumentasjon:** ADR-025, ADR-026, ADR-027 (+ amendments), gjeld #7 omskrevet, #9/#10/#11 nye,
-`lessons.md` +3 poster, runbook-rettelser i `polet_refresh.md` og `vivino_refresh.md`.
+**Styrende prinsipp:** mål én gang. Fase 3 (kodefiksene) kommer før Fase 4 (måleomgangen), fordi
+F2s tall er et øyeblikksbilde fra *midt* i sveipen.
 
-**Gjenstående gate:** ingen commit før E er ferdig — en commit midt i sveipen låser en halv katalog.
+**Underlag for Fase 5 og 6** — researchet 2026-08-31, med målinger og forbehold:
+[`plan_whisky.md`](plan_whisky.md) · [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md).
+Begge er nå besluttet i den grad Fase 5/6 beskriver; de gjenstående åpne spørsmålene står i
+Fase 6-gaten under.
 
-### Beslutninger som venter (sveip 2026-08-30)
+### Fase 1 — nullkost-fikser (~1,5 t)
 
-- [ ] **`CLAUDE.md` har to påstander som ikke lenger stemmer med koden.** Krever Kristoffers ja —
-      instruksfila redigeres ikke på agent-anbefaling.
-      (a) **Steg 6b (linje ~150)** foreskriver oppslag i `data/user_fit/v0.json` per varenummer.
-      Fila dekker **0,59 %** av katalogen, så instruksen er usann i 99,4 % av tilfellene.
-      Erstatning finnes ferdig: `python3 -m tools.user_fit <varenr>` / `classify_code`, 100 % dekning.
-      (b) **Linje 19** beskriver `find_similar_by_clocks` som «sortert liste etter euklidsk avstand»
-      uten ADR-025-forbeholdet — at klokkene korrelerer ~0 med brukerens ratinger (+0,16 / +0,09 /
-      −0,10) og at verktøyet finner **stil-slektninger**, ikke «noe like godt». README er allerede
-      oppdatert; `CLAUDE.md` står igjen som eneste sted som beskriver den gamle forståelsen.
-- [ ] **Slette `data/vivino/full_wine_list.csv.pre-sync-2026-08-30`?** Backup D tok før synken.
-      Redundant nå som synken ligger i historikken (`df85d42`), men ligger utracket i arbeidstreet.
-      Merk at `full_wine_list.csv.bak` er tracket fra før — konvensjonen er uklar.
+- [x] **1.2 `aperitif.py` varenummer-regex** `\d{7,8}` → `\d{5,8}` + `(?!\d)` i begge mønstrene.
+      Rammet 587 av 27 402 varenumre (44 med 5 siffer, 543 med 6). **Feilen var verre enn «score
+      mangler»:** uten `polet_id` feiler både årgangs-verifiseringen i pass 1 og stale-sjekken på
+      mapping-treffet i `get_aperitif_score`, så de vinene fikk `vintage_mismatch=True` selv når
+      siden gjaldt akkurat den vinen — altså en usann påstand videre til brukeren via CLAUDE.md
+      steg 6. Ny `tests/test_aperitif.py`, 12 tester, muteringssjekket (gammel regex → 6 feil).
+- [x] **1.3 `eval_fit._csv_row_to_wine` setter `underregion`.** Vivino har ett regionfelt med
+      varierende granularitet (appellasjon «Côtes du Jura» *eller* distrikt «Rheingau»), så det
+      mates inn på begge akser framfor å gjette. **Verifisert null atferdsendring:** eval-harnessen
+      gir identiske tall, og 0 av 122 viner skifter tier eller regel.
+- [x] **1.4 Flyttet gjeld-#10-prosatesten** fra `test_user_fit.py` § J til
+      `test_knowledge_content.py`. Tre tester, ingen endring i innhold.
+- [x] **1.5 Slettet backup-filene** og utvidet `.gitignore` med `*.pre-sync-*`.
+      **Todo-posten var feil på ett punkt:** `full_wine_list.csv.bak` var *ikke* tracket — `*.bak`
+      har ligget i `.gitignore` hele tiden, så konvensjonen var allerede klar. Begge slettet etter
+      verifisering: `.pre-sync-2026-08-30` er bit-identisk med `df85d42^`, og `.bak` er en streng
+      delmengde av dagens fil (0 rader og 0 ratinger unike for den).
+- [x] **1.6 `CLAUDE.md`, tre avvik rettet** (godkjent av Kristoffer 2026-08-31).
+      (a) steg 6b peker nå på `python3 -m tools.user_fit <varenr>` / `classify_code`, med eksplisitt
+      «ikke slå opp `v0.json`». **NB: dekningstallet i den gamle todo-posten var feil** — v0.json har
+      409 varenumre, altså 1,5 % av 27 402, ikke 0,59 %.
+      (b) `find_similar_by_clocks` bærer nå ADR-025-forbeholdet.
+      (c) «Ingen build/lint/test-suite» erstattet med `python3 -m pytest -q` + muteringskravet.
+- [x] **1.7 Ryddet denne fila.** Sveip-tabellen flyttet til `## Ferdig`.
+- [ ] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** Venter på svar. Grovt holder
+      («Lagavulin 16, likte godt» / «Jameson, kjedelig»). Billigste datainnsamling i hele
+      prosjektet, og det eneste som flytter whisky fra n=0.
 
-- [ ] **Skal `active_only=True` bli default i `polet_store.query`?** F0 landet den bevisst som opt-in
-      med uendret default, fordi tre andre agenter jobbet i katalogen samtidig. Muteringstest viste at
-      å snu defaulten gir **13 feil + 5 errors** i `test_vinmonopolet.py` og `test_value_score.py` —
-      altså er det en reell atferdsendring, ikke en opprydding. Avgjøres etter at F1/F2/F3 har landet.
-      Argument for: 2 196 av 13 775 rødviner er ikke kjøpbare, hvorav 1 264 lyver med `buyable: true`.
-- [ ] **Hva gjør vi med `lanseres` (376 varer)?** De har `buyable: false` og fjernes av `active_only`,
-      men de er kommende lanseringer — potensielt interessante å *vise*, bare ikke som kjøpbare nå.
-- [ ] **Gjør oversettelsesfeilen umulig i stedet for testet mot** *(F2, 2026-08-30)*.
-      `tools/profile_stats.py::blindspots()` returnerer strengen `"Germany Red Wine (n=2)"`. Førte den
-      **land og kategori strukturert**, kunne `user_fit` droppet hele `_LAND_NO_TO_EN`-tabellen, og
-      oversettelsen ville vært eksakt i stedet for et oppslag — altså ville hele B4-feilklassen vært
-      umulig, ikke bare dekket av tester. F2 lot den stå bevisst: strengen rendres inn i den managed
-      blokka i `smaksprofil.md`, og `untappd_stats.py` speiler mønsteret. **Må tas samlet, ikke ensidig.**
-- [ ] **Prosaen i `smaksprofil.md` er feilkilden tre steder** *(F2, 2026-08-30)*.
-      (a) «Tyskland (Mosel, Rheingau – Riesling)» — parentesen er *bærende* (den sier hvitt), men
-      parseren stripper parenteser, så regelen ble «Tyskland». Hele spesifisitetsregelen i ADR-027
-      finnes på grunn av dette. **Rettes teksten til «Tysk Riesling», blir koden enklere.**
-      (b) «Sør-Rhône hvit (to lave på Lirac Blanc)» — n=2 er reelt n=1 vin i to årganger.
-      (c) **To seksjoner heter «Blindspots»** på samme nivå, og den kuraterte inneholder
-      `### New World rødvin` der bullets er *ratinger*, ikke regler. Krevde `stop_at_subheading`;
-      skjørt — en ny underseksjon med bullets lekker inn igjen.
-- [ ] **`tools/eval_fit.py::_csv_row_to_wine` setter ikke `underregion`** — Vivinos `Region` (som *er*
-      appellasjonen) havner i `region`. Fungerer, men tvinger nivåporten til å lese både `region` og
-      `navn`. Én linje ville gjort det eksplisitt.
-- [ ] **Flytt gjeld-#10-prosatesten til `tests/test_knowledge_content.py`** — den ligger i
-      `test_user_fit.py` § J kun fordi F2 ikke eide den andre fila.
-- [ ] **Årgangsspredning på samme vin er større enn profilen forutsetter — vurder å skrive det inn.**
-      Tre uavhengige funn 2026-08-30 peker samme vei: `9111501` Vincent Girardin Terroir Noble ratet
-      **4.5 (2010) og 3.8 (2023)**; Miraval Côtes de Provence **4.0 og 2.0**; Ségriés Lirac Blanc
-      **3,2 og 3,0**. Samme vin, ulik årgang, opptil **2,0 poengs spenn**. Konsekvenser: (a) klokke-
-      similarity kan per konstruksjon ikke forklare det (ADR-025 — klokkene er identiske); (b) «to lave
-      på Lirac Blanc» i prosaen er egentlig **n=1 vin i to årganger**, ikke n=2 — flere n-tall i
-      profilen kan være inflatert på samme måte; (c) en anbefaling som ignorerer årgang er svakere enn
-      profilen antyder. Tell opp hvor mange «n=»-påstander som er vin-duplikater før neste revisjon.
-- [ ] **Etterverifiser Bandol-innsnevringen når rosé-sveipen har landet.** Regelen er skrevet før
-      sveipen (bevisst — den skal være på plass *før* kategorien femtendobles), men treffantall er
-      ikke målbart på 53 juni-rader. Når rosé er ~782: mål hvor mange som flytter fra `risky` til
-      blindsone, og bekreft at Bandol faktisk ekskluderes.
-- [ ] **Re-mål user-fit-fordelingen mot ferdig katalog.** F2s tall er et øyeblikksbilde midt i
-      sveipen (`catalog.ndjson` md5 `6f5302e8`, hvitvin 4 616 av ~9 762, rosé/musserende før sveip).
-      Rødvinstallene står; hvit/musserende/rosé må måles på nytt.
-- [ ] **Fase 2 av hvit/musserende/rosé** (~3–4 t, 13 625 produkter) — klarsignal gis når fiksene har landet.
+### Fase 2 — Aperitif-snapshot: delt enabler for begge featurene (~4–5 t)
 
-## Planer under vurdering (2026-08-31)
+- [ ] Sveip vin (856 sider × 30 rader ⇒ ~14 300 scorede varenumre, ~52 % av katalogen) **og** whisky
+      (32 sider, 939 rader, 337 med poeng) i én kjøring. `robots.txt`: listestiene er tillatt,
+      `?query=` / `/api/` / `/ajax/*` / `/load` er blokkert.
+- [ ] **Output til `data/aperitif/scores.ndjson`, IKKE `knowledge/scores/`.** Begge planfilene sa
+      `knowledge/scores/`; det ville brutt ADR-003, fordi `value_score._combine_quality`
+      (`tools/value_score.py:152-158`) rangerer den mappen *over* Aperitif — 14 300 skrapede scorer
+      der ville stille overkjørt de 384 kuraterte DN-scorene. Snapshot-mønsteret fra `data/polet/`
+      (ADR-020) i stedet; leses av `get_aperitif_score` før nettverk, som også gjør Aperitif-score
+      tilgjengelig offline.
+- [ ] Drift-vern: positiv validering per rad, assert på rader/side, avbryt framfor å skrive halvt.
+- [ ] Skriv prisbias-forbeholdet inn i snapshotet: Spearman(poeng, pris) = +0,65 (whisky) / +0,80
+      (DN-vin). «Høyest score» ≈ «dyrest», så prissone-lås er en forutsetning, ikke pynt.
 
-To feature-forespørsler er researchet av fire agenter + to devil's advocate + QA (17 tall etterprøvd:
-14 bekreftet, 2 avvik, 1 delvis). Begge planene er **forslag, ikke besluttet** — åpne spørsmål står
-nederst i hver fil.
+### Fase 3 — rotårsaksklyngen: gjør feilklassen umulig (~5–7 t)
 
-- [ ] [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md) — objektiv anbefaling + prediksjon.
-  **Kort:** bobla sitter i retrieval (~22 % av feltet nås), kritiker-dekning er 1,4 %, og
-  «objektivt best» korrelerer +0,80 med pris. DA fant at bobla ikke er synlig i atferden (2026 er
-  bredeste år: HHI 0,156, 10 nye stiler) og at prediksjonsregelen ville sagt noe usant om
-  Provence-rosé. Anbefalt kjerne: mekanisme-sjekk før anbefalingen + eksponer `blindspot`
-  (6 654 varer, snitt 4,15, allerede beregnet) + Aperitif-sveip (~14 300 scorede varenumre).
-- [ ] [`plan_whisky.md`](plan_whisky.md) — whisky som tredje fagområde.
-  **Kort:** ølkanalen er død (siste check-in 2026-01-16; 2025: 29 → 2026: 1), fritekstnotat skrives
-  1,9 % av gangene, og en tier-modell trenger ~84 ratinger. Aperitif dekker likevel 81 % av det
-  praktiske whisky-universet, nøklet på varenummer. Anbefalt rekkefølge: **spør hva han har smakt**
-  → fiks `aperitif.py`-regexen → Aperitif-sveip → tynn `knowledge/whisky.md`. Utsett fit, bøtter,
-  fasettprobing og katalogsveip.
+Tvingende rekkefølge: prosa → struktur → forenkling. Må tas samlet.
 
-**Funnet underveis, uavhengig av begge:** `tools/aperitif.py:200` matcher varenummer med `\d{7,8}`
-og bommer derfor på **587 av 27 402** varenumre (2,1 %) som er 5–6 siffer. Aperitif-score har
-manglet stille for de vinene hele tiden. 15 min å fikse.
+- [ ] **3.1 Prosaen i `knowledge/smaksprofil.md`.** «Tyskland (Mosel, Rheingau – Riesling)» →
+      «Tysk Riesling» (parentesen er bærende, men parseren stripper den — derfor finnes hele
+      spesifisitetsregelen i ADR-027). «to lave på Lirac Blanc» er n=1 vin i to årganger, ikke n=2.
+      Gi de to «Blindspots»-seksjonene distinkte navn.
+      **Round-trip-test FØRST** (lesson 2026-08-30 om maler som sletter alt utenfor seg).
+- [ ] **3.2 Strukturér blindsonene.** `tools/profile_stats.py:87-99` returnerer
+      `"Germany Red Wine (n=2)"` → `{"land", "kategori", "n"}`, med rendringen i render-laget.
+      `tools/untappd_stats.py` speiler mønsteret og endres i samme commit.
+- [ ] **3.3 Fjern `_LAND_NO_TO_EN`** (`tools/user_fit.py:368+`) og `_KATEGORI_NO_TO_EN`-bruken i
+      `_blindspot_hit` (linje 978-990). Da kan `stop_at_subheading` (linje 119-132, 299) også
+      forsvinne. Sluttilstand: `grep -rn "_LAND_NO_TO_EN\|stop_at_subheading" tools/` → 0 treff.
+- [ ] **3.4 `active_only=True` som default + `lanseres` → `kommer_snart`** (godkjent 2026-08-31).
+      2 196 av 13 775 rødviner er ikke kjøpbare, **1 264 av dem med `buyable: true`**. Koster 13 feil
+      + 5 errors i `test_vinmonopolet.py` og `test_value_score.py` — **hver test leses og oppdateres
+      enkeltvis med en begrunnelse**, ingen masseoppdatering. De 376 kommende lanseringene vises med
+      flagg, ikke skjules (samme prinsipp som tier, ADR-016).
+
+### Fase 4 — én måleomgang på ferdig kode (~3–4 t)
+
+Hvert tall skrives med revisjon + `catalog.ndjson`-md5.
+
+- [ ] Re-mål user-fit-fordelingen over hele katalogen. F2s tall er fra md5 `6f5302e8` (hvitvin
+      4 616 av 9 762, rosé/musserende før sveip). Rødvinstallene står.
+- [ ] Bandol-innsnevringen mot 782 rosé: hvor mange flytter `risky` → blindsone, og ekskluderes
+      Bandol faktisk?
+- [ ] Årgangsspredningen: tell hvor mange «n=»-påstander i `smaksprofil.md` som er vin-duplikater
+      i stedet for distinkte viner. `9111501` Vincent Girardin 4.5 (2010) vs 3.8 (2023), Miraval
+      4.0 vs 2.0, Ségriés 3,2 vs 3,0 — opptil 2,0 poengs spenn på samme vin. Legg fram tallet før
+      vi bestemmer om årgang skal skrives inn i profilen.
+- [ ] Rekjør `eval_fit` etter 3.3.
+
+### Fase 5 — whisky, kritisk sti (~1 arbeidsdag)
+
+- [ ] `knowledge/whisky.md`, **tynn: 150–220 linjer**. Juridisk kategori som anker (Scotch Whisky
+      Regulations 2009, 27 CFR § 5.143 inkl. American Single Malt fra 19.01.2025, EU 2019/787, irsk
+      Technical File, JSLMA), Polets Fylde/Fat/Røyk + varetype, Brooms flavour camps som *språk*,
+      servering, norsk/nordisk sortiment, workflow.
+      **Ikke** WSETs SAT for Spirits fra hukommelsen (403 på begge PDF-URL-ene — presedensen er den
+      hallusinerte `bjcp_2021.pdf`-referansen), **ikke** irsk pot still-endringen, **ikke**
+      klyngeantallet fra whiskyanalysis.com (selvmotsigende kilde).
+- [ ] `data/whisky/ratings.csv`, 5-punkt med kvart-trinn. **Kristoffer dikterer i chat, Claude
+      skriver raden** — ølkanalen døde fordi innføring var manuelt filarbeid (siste check-in
+      2026-01-16; 2025: 29 → 2026: 1). Notat valgfritt: fritekst ble skrevet 4 av 211 ganger (1,9 %).
+- [ ] `CLAUDE.md`-routing (trepart, men **betinget** — whisky kun når nevnt, eller ved
+      dessert/ost/digestif/kveldsdram) + `deep-knowledge/INDEX.md` + tester.
+- [ ] **Utsatt, eksplisitt:** fit-modell og tier-stige til n ≈ 84 (SD 0,61 mot tier-stige 0,65 poeng
+      — ved n=3 per bøtte er 95 % KI ±0,69, bredere enn hele stigen); ADR-025-målingen på
+      Fylde/Fat/Røyk til n ≥ 15–20; katalogsveip av brennevin og fasettprobing kanskje for alltid.
+
+### Fase 6 — objektiv anbefaling (~8–11 t)
+
+**Gate:** to åpne spørsmål i [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md) må
+besvares først — skal den objektive delen kunne overprøve *rammen*, og aksepterer du at
+prediksjonsdelen er taus mesteparten av tiden? Legges fram med målingene fra Fase 4.
+
+- [ ] Eksponer `blindspot` som eget signal i output (~1 t). 6 654 varer er klassifisert, snitt
+      **4,15** — over `bekreftet_snitt` 4,10 og `bekreftet_drue` 4,00. Ingen ny modell.
+- [ ] Mekanisme-sjekk før anbefalingen (~2–3 t). **3–4 reelle utløsere, ikke 13.** Asymmetrien er
+      poenget: rødvin til torsk bryter en mekanisme (jod × tannin) og lisensierer overprøving;
+      hvitvin til biff bryter ingen, den underleverer bare.
+- [ ] `sub_district_in` i `polet_store.query` + prissone-lås som test (~2–3 t). `sub_District`
+      dekker 72,5 %, 1 212 unike, η² 0,473 mot null-median ~0,17. **Mål på rødvin først** — de 137
+      vinene i testen er 51 hvit / 48 musserende / 32 rosé / 6 rød.
+- [ ] Prediksjonslag med effektkrav ≥ 2,5 SE fra 3,82 (~2 t). Historikk, ikke spådom. Sies ved
+      kjøpsbeslutningen, ikke når flaska åpnes. Taus når den ikke slår ut.
+- [ ] ADR-arbeid: ADR-016 fra filtrering til retrieval, ADR-017 amenderes med `v0_tier`
+      +0,588 → +0,332, ny ADR for mekanisme-overprøving.
+- [ ] **Ikke bygg:** nivåmarkører som objektivt signal (+2,5 / +1,1 / **−0,8** innenfor prissone —
+      en prismarkør, ikke en kvalitetsmarkør); «vis uenigheten mellom kilder» (snittavvik 1,2 poeng
+      på de fem vinene med både DN og Aperitif — de er ikke uavhengige meninger).
+
+## Avklart 2026-08-31 — var åpne beslutninger
+
+- **`CLAUDE.md`-avvikene:** ja til alle tre. Utført i 1.6.
+- **Backup-fila:** slettet, sammen med `.bak`. Utført i 1.5.
+- **`active_only=True` som default:** ja, med `lanseres` som tredje tilstand. Planlagt i 3.4.
+- **`lanseres` (376 varer):** vises med `kommer_snart`-flagg, telles ikke som kjøpbare.
+- **Strukturerte blindsoner + prosafiksen:** ja, tas samlet. Planlagt i 3.1–3.3.
+- **`eval_fit` `underregion`:** utført i 1.3, verifisert null atferdsendring.
+- **Prosatesten:** flyttet i 1.4.
+- **Whisky:** hele kritiske stien (steg 0→3). Fase 5.
+- **Rekkefølge:** delt slice — fiks + sveip først, så måling.
 
 ## Backlog
 - [ ] **B7: samme vin på flere varenummer til ulik pris — `value_score` ser det ikke.** Funnet
@@ -118,10 +164,12 @@ manglet stille for de vinene hele tiden. 15 min å fikse.
       navnefeltet, flasketilstand, importør — krever `details` for radene); og i hverdagssonen er
       det 2 duplikat-rader av 1 448. Brukerpåvirkning i dag er nær null — det er «noe spesielt»-sonen
       og peer-statistikken som rammes. Konfidens: middels.
-- [ ] **Hvit/musserende/rosé-ekspansjon** — de står fortsatt med gammel, `pageSize`-avkortet dekning
-      (hvitvin 152, musserende 99, rosé 53). Samme oppskrift som rødvin: full enumerering + kartesisk
-      klokke-sveip. Merk at klokke-dimensjonene er andre for hvitvin (`Soedme` og `Bitterhet` ga 0 treff
-      for rødvin, men kan være gyldige der) — probe før du planlegger.
+- [ ] **Details for hvit/musserende/rosé i det prioriterte utsnittet — 942 rader, ~2 t veggtid.**
+      Enumereringen og klokke-sveipen er ferdig (`7ba0f4d`); det som mangler er dybden. Målt
+      2026-08-31: hvitvin Basis 338 + Tillegg 299, musserende Basis 145 + Tillegg 83, rosé Basis 61 +
+      Tillegg 13, pluss 3 i Spesial/Test. Ved kjent kvote (~65–85 sider/syklus, 7,5 min pause) er det
+      ~12–15 sykluser. **Merk:** todo-posten sa tidligere «~3–4 t, 13 625 produkter» — det tallet var
+      enumereringen, som er levert. Ingenting i fasene over blokkeres av denne.
 - [ ] **43 rødviner har Fylde uten Friskhet** og faller ut av trippel-basert klokke-ingest. Krever
       1-dim marginalsveip (~1 370 sider) for 0,3 % av basen. Ikke prioritert.
 - [ ] **`find_similar_by_clocks` kan nå kjøre offline over 10 986 katalograder** i stedet for kun de med
@@ -133,7 +181,27 @@ manglet stille for de vinene hele tiden. 15 min å fikse.
 - [ ] Vurder å legge til et drueblending-kompendium for druer brukeren liker (Barbera, Nebbiolo, Riesling, Sangiovese, Tannat, Corvina-blend)
 - [ ] Test mot 3 reelle scenarier etter strukturskifte: hverdagsrød under 250 kr, osso buco-paring, Etna-utvidelse
 
+
 ## Ferdig
+
+- [x] **2026-08-30: Sveip med ni agenter, disjunkt fileierskap.** Utgangspunkt 291 tester,
+  commit `b162d3e`; resultat 397 grønne, committet i `4a7eead`…`1c43728`.
+
+  | Agent | Oppdrag | Resultat |
+  |---|---|---|
+  | A | Klokke-tabell | 6 → 25 rader. **Klokkene diskriminerer ikke** (korr. +0,16/+0,09/−0,10; alle 6 grupper med identiske klokker spenner ratingskalaen) → ADR-025 |
+  | B | 3 scenarier | Fant **8 bugs**. Osso buco klart bedre; B1 firedoblet av ekspansjonen |
+  | C | `data/reference/` | **Ikke slettet** — var uattribuert kilde til `sommelier.md` §4 og `norsk-marked.md` §10. Gjeld #7 omskrevet, attribusjoner lagt inn, `bjcp_2021.pdf`-referansen var hallusinert |
+  | D | Vivino-sync | 5 nye ratinger (117 → 122). Runbook rettet: DOM-en har eksakte UTC-tidsstempler, metadata må brace-matches |
+  | E | Hvit/musserende/rosé | Komplett enumerert: 304 → **13 625** produkter (hvitvin 9 762, musserende 3 081, rosé 782) |
+  | F0 | B6 statusfilter | `active_only` opt-in. Muteringstest beviste at default måtte stå (13 feil + 5 errors hvis snudd) |
+  | F1 | B2 + B3 | Barbera 3 → 95, Etna 36 → 74, similarity 13 → **718 av 771**. Toleranse-funn: ADR-024 var «påkoblet i navnet, ikke i rangeringen» |
+  | F2 | B4 + B5 | `risky` **0 → 408**, blindsoner 3 → 25 land. Fire nivå-innsnevringer. To-inngang-feil funnet via uendret sanity-sjekk |
+  | F3 | B1 peer-percentil | Pichon Baron 0,72 → **0,50** percentil, 50 → 4 938 peers. **28,2 %** av 400 viner får korrigert verdict → ADR-026 |
+
+  **Levert dokumentasjon:** ADR-025, ADR-026, ADR-027 (+ amendments), gjeld #7 omskrevet,
+  #9/#10/#11 nye, `lessons.md` +3 poster, runbook-rettelser i `polet_refresh.md` og
+  `vivino_refresh.md`. **Ikke fikset, bevisst:** B7 — se Backlog.
 - [x] 2026-08-29/30: **Komplett rødvins-snapshot med klokker og dybde.** Rødvin 1 543 → **13 775**
   (hele Polets sortiment), 3 l 62 → **313**, Basisutvalget 121 → **468**. Klokke-bøtter på **10 986
   (79,8 %)** via kartesisk fasett-sveip. Details for hele det prioriterte utsnittet: 3 l 313/313,
