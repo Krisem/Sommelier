@@ -20,8 +20,8 @@ og `deep-knowledge/INDEX.md`.
 
 Aperitif-sveipen fullførte. **557 sider, 2 retries i hele kjøringen, 0 feil.**
 `data/aperitif/scores.ndjson` har **15 672 rader** (5,7 MB) + `meta.json`. Siste side med poeng
-var 554. Sidecachen ligger fortsatt i `~/.cache/sommelier/aperitif-pages/` (557 filer) og kan
-slettes når snapshotet er pushet.
+var 554. Sidecachen er **slettet** (31. august, 207 MB frigjort) etter at snapshotet var pushet til
+origin. Trengs den igjen, bygges den opp på nytt av en full sveip — regn 2–4 timer.
 
 Prosessen **overlevde at sesjonen ble stengt** fordi stdout/stderr pekte på en vanlig fil, ikke en
 pipe fra den døde terminalen. Hadde det vært en pipe, ville den dødd på `BrokenPipeError`.
