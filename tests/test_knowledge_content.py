@@ -196,3 +196,74 @@ def test_prosa_tyngdepunkt_matcher_tallene(profil_tekst, vivino_stats):
         assert int(n_str) == n_fasit, (
             f"Tyngdepunkt sier {kategori} ({n_str}), profile_stats sier {n_fasit}"
         )
+
+
+# ─── whisky.md ───────────────────────────────────────────────────────
+# Fagfilen er skrevet før brukeren har ratet én eneste whisky. Testene her
+# bevokter derfor ikke fagkunnskapen, men de tre påstandene som er FARLIGE å
+# miste: at n=0, at klokkene ikke er en preferanse-påstand, og at det som ikke
+# er verifisert ikke står der som fakta.
+
+WHISKY = KNOWLEDGE / "whisky.md"
+
+
+@pytest.fixture
+def whisky_tekst() -> str:
+    if not WHISKY.exists():
+        pytest.skip("knowledge/whisky.md finnes ikke ennå")
+    return WHISKY.read_text(encoding="utf-8")
+
+
+def test_whisky_states_that_there_are_no_ratings_yet(whisky_tekst):
+    """
+    Uten denne setningen er filen et fundament som ser ut som en
+    preferanse-modell. Whisky står på n=0, og det må stå i filen selv — ikke
+    bare i en planfil ingen leser under en anbefaling.
+    """
+    assert "n=0" in whisky_tekst
+    assert "84" in whisky_tekst, "terskelen for når en modell kan si noe mangler"
+
+
+def test_whisky_carries_the_adr025_caveat_on_the_clocks(whisky_tekst):
+    """Fylde/Fat/Røyk er stil-slektskap, aldri «du vil like denne»."""
+    lav = whisky_tekst.lower()
+    assert "adr-025" in lav
+    assert "grovfilter" in lav
+
+
+def test_whisky_does_not_present_wset_sat_content_as_fact(whisky_tekst):
+    """
+    Begge PDF-URL-ene ga 403. Presedensen er `bjcp_2021.pdf`-referansen i
+    cicerone.md, som viste seg hallusinert. Nevnes SAT-en, skal den nevnes
+    som noe vi IKKE har.
+    """
+    lav = whisky_tekst.lower()
+    if "systematic approach to tasting" in lav or "wset" in lav:
+        assert "403" in whisky_tekst, (
+            "WSETs SAT nevnes uten forbeholdet om at kilden ikke er hentet"
+        )
+
+
+def test_whisky_flags_the_empty_spirits_catalog(whisky_tekst):
+    """
+    Katalogen har to brennevinsrader, begge grappa. Et tomt whisky-søk betyr
+    «ikke enumerert», ikke «Polet fører den ikke» — og brukeren skal ikke
+    sendes på et refresh-ritual for det (gjeld #11).
+    """
+    lav = whisky_tekst.lower()
+    assert "grappa" in lav
+    assert "refresh" in lav
+
+
+def test_whisky_names_the_legal_sources_it_rests_on(whisky_tekst):
+    """Juridisk kategori er ankeret — da må hjemlene stå der."""
+    for kilde in ("2009", "27 CFR", "2019/787", "JSLMA", "Technical File"):
+        assert kilde in whisky_tekst, f"mangler hjemmel: {kilde}"
+
+
+def test_whisky_marks_the_japanese_rules_as_non_binding(whisky_tekst):
+    """
+    JSLMA er en bransjestandard uten lovhjemmel. Skrives den som lov, blir
+    «japansk whisky» presentert som en garanti den ikke er.
+    """
+    assert "uten lovhjemmel" in whisky_tekst.lower()

@@ -32,10 +32,13 @@ Brukeren er én person (eieren). Ingen team, ingen klientleveranser.
 
 **Vin vs øl:** Samme person, samme smaksprofil, mange parringer går på tvers. Når brukeren spør "hva drikker jeg til X" uten å spesifisere, vurder *begge* og foreslå det som passer best. Når det er åpenbart (sjømat-tartar → tørr Riesling eller Berliner Weisse; biff → Bordeaux eller Imperial Stout), gi alternativer fra begge fag der relevant.
 
+**Whisky er et tredje fag, men ikke et tredje standardsvar.** Fagfilen er [`knowledge/whisky.md`](knowledge/whisky.md). Vurder whisky **kun** når brukeren nevner det selv, eller ved dessert, ost, digestif og kveldsdram. Ikke ved «hva drikker jeg til middagen» — der er vin og øl riktig svar, og whisky ville vært et påtvunget alternativ. **Whisky står på n=0:** ingen fit-score, ingen tier, ingen «du vil like denne» — si hva flasken *er*, ikke hva han vil synes om den. Rater han en whisky i chat, skriv raden inn i `data/whisky/ratings.csv` selv; han skal ikke redigere noen fil.
+
 ## Presisering – vin eller øl?
 
 Når brukeren ikke spesifiserer fagområde:
 - **Gå direkte** hvis forespørselen har en åpenbar lean (drue/stil nevnt, klassisk parring, eller scenario som naturlig hører hjemme i ett fag — osso buco, lammelår, østers, Wienerschnitzel, etter joggetur).
+- **Trepart kun der whisky er reelt aktuelt** — dessert, ost, digestif, kveldsdram. Ellers er valget fortsatt vin vs øl. Å legge whisky til som fast tredje alternativ er samme friksjon som å spørre «vin eller øl?» hver gang (lærdom 2026-05-12: betinget presisering, ikke blanket).
 - **Spør én rask oppfølger** ved ekte tvetydighet (pizza, BBQ, sushi, hverdagsmiddag, brunch, asiatisk mat, "noe til film-kvelden", "noe til kvelden"). Hold spørsmålet kort. Eksempel: *"vin eller øl her? begge funker — vin gir mer kompleksitet, øl er mer hverdagslig."*
 - **Foreslå begge fag side om side** kun når begge er reelle alternativer og brukeren har sagt han er åpen, ellers velg én vei og forklar valget.
 - **Aldri spør hver gang** — det blir friksjon. Standardspørsmålet "vin eller øl?" hører bare hjemme der svaret ikke er gitt fra konteksten.
@@ -76,7 +79,7 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse)
 
 ## Filer du har tilgang til
 
-**Alltid lastet (`knowledge/`):** `sommelier.md` (vin-kjerne + drueprofiler + Vinmonopolets rammeverk + deep-knowledge-router), `cicerone.md` (øl-kjerne + BJCP-rammeverk), `smaksprofil.md` (levende bruker-profil — autoritativ for preferanser, blindspots, no-go), `wset_l2_sat.md` (smaksnotater).
+**Alltid lastet (`knowledge/`):** `sommelier.md` (vin-kjerne + drueprofiler + Vinmonopolets rammeverk + deep-knowledge-router), `cicerone.md` (øl-kjerne + BJCP-rammeverk), `smaksprofil.md` (levende bruker-profil — autoritativ for preferanser, blindsoner, no-go), `wset_l2_sat.md` (smaksnotater), `whisky.md` (whisky-kjerne — juridiske kategorier, Polets Fylde/Fat/Røyk, servering; n=0, altså fag uten preferansedata).
 
 **On-demand fag-referanse (`deep-knowledge/`):** Kanonisk router er [`deep-knowledge/INDEX.md`](deep-knowledge/INDEX.md) — les den ved region-/fag-oppslag.
 
