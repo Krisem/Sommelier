@@ -9,16 +9,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 - **Oppdater Vivino-ratings (Playwright-MCP, DEFAULT):** når brukeren ber om «oppdater Vivino / de siste vinene jeg har ratet» — skrap innlogget profil-feed og merge nye viner inn i CSV. Runbook: [`docs/vivino_refresh.md`](docs/vivino_refresh.md). Merge-helper: `python3 -m tools.vivino_sync <rows.json>` (idempotent, dedup på winery+wine+vintage). Kjør `profile_stats.py` etterpå.
-- **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` (kjør etter ny Vivino-eksport/-sync — oppdaterer managed blokk i `knowledge/smaksprofil.md`)
-- **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md` + regenererer `beer_v0.json`)
-- **Regenerér øl-fit-klassifisering:** `python3 -m tools.beer_fit` (stilfamilie→tier-tabell; kjøres også automatisk av `untappd_stats.py`). For batch: `from tools.beer_fit import classify_beer` på innlimte øl.
-- **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` (eller kjør `profile_stats.py` som inkluderer det)
-- **Evaluér fit-modeller:** `python3 -m tools.eval_fit` (modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines; `--stdout-only` dropper fil-skriving)
-- **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py` (leser snapshot i `data/polet/`)
+- **Auto-derivér vin-statistikk:** `python3 tools/profile_stats.py` ✍️ (kjør etter ny Vivino-eksport/-sync — oppdaterer managed blokk i `knowledge/smaksprofil.md` + `data/user_fit/v0.json`)
+- **Auto-derivér øl-statistikk:** `python3 tools/untappd_stats.py` ✍️ (kjør etter ny Untappd-scrape — oppdaterer øl-blokk i `smaksprofil.md` + regenererer `beer_v0.json`)
+- **Regenerér øl-fit-klassifisering:** `python3 -m tools.beer_fit` ✍️ (stilfamilie→tier-tabell; kjøres også automatisk av `untappd_stats.py`). For batch: `from tools.beer_fit import classify_beer` på innlimte øl — det leser bare.
+- **Regenerér user-fit-klassifisering:** `python3 -m tools.user_fit` ✍️ uten argumenter (eller kjør `profile_stats.py` som inkluderer det). **Med** varenumre — `python3 -m tools.user_fit <varenr> ...` — er den ren lesing og trygg å kjøre.
+- **Evaluér fit-modeller:** `python3 -m tools.eval_fit` ✍️ (skriver `data/user_fit/eval_v0.json`; **bruk `--stdout-only`** for å bare måle). Modell-agnostisk rangerings-eval mot brukerens egne ratings — v0 vs baselines.
+- **Smoke-test Polet-helper:** `python3 tools/vinmonopolet.py` (ren lesing av snapshot i `data/polet/` — trygg å kjøre for å sjekke at ting virker)
 - **Refresh Polet-snapshot (device-agnostisk, Playwright-MCP + remote browser via CDP):** se runbook [`docs/polet_refresh.md`](docs/polet_refresh.md). Kan kjøres fra alle enheter (desktop/Android/web) når MCP peker på en remote browser (ADR-021). Engangs-seed fra gammel cache: `python3 tools/seed_polet_store.py`.
 - **Klokke-profil similarity (vin):** `from tools.vinmonopolet import find_similar_by_clocks` — gi target-klokker (Fylde/Friskhet/Garvestoffer) + søkestrenger, få sortert liste etter euklidsk avstand (hopper over viner utenfor snapshot). **Den finner stil-slektninger, ikke «noe like godt».** Målt 2026-08-30 over 25 topp-viner korrelerer klokkene ~0 med brukerens egne ratinger (+0,16 / +0,09 / −0,10), og alle seks gruppene med identiske klokker spenner hele ratingskalaen — se [ADR-025](docs/ARCHITECTURE.md). Bruk den til «smaker i samme retning», aldri som argument for at han vil like noe.
 - **Aroma wheel:** Åpne `tools/aroma_wheel.html` i nettleser (D3-sunburst med brukerens preferanser markert)
 - **Polet-data:** repo-committet snapshot i `data/polet/` (ikke `requests`). Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d, value_score 24t caches fortsatt i `~/.cache/sommelier/`.
+- **✍️ = kommandoen SKRIVER til sporede filer.** Ikke kjør en ✍️-kommando for å «sjekke at den virker» — bruk import eller `--stdout-only`, eller les koden. `beer_fit` og `untappd_stats` setter et ferskt `generated_at` selv når klassifiseringen er uendret, og et ferskt tidsstempel på gammelt datagrunnlag er en falsk ferskhets-påstand (Untappds siste check-in er 2026-01-16). Presedens: `tasks/lessons.md` 2026-08-30 og 2026-08-31.
 - **Kjør testene:** `python3 -m pytest -q` (411 tester per 2026-08-31, ~21 s, alle offline). Ingen build eller lint. Testene er innholds-baserte: de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. **Legger du til en test, muter antagelsen og bekreft at den faktisk feiler** — «grønn av feil grunn» var sveipens mest gjentatte feil (`tasks/lessons.md` 2026-08-30).
 
 ## Rolle

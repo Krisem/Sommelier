@@ -341,3 +341,34 @@ belegg.
 - **Når et tall spriker, si det høyt i dokumentet** — ikke rett det stille. Alle sju står nå i
   `todo.md` med både den gamle og den nye verdien, fordi «hvorfor endret dette seg» er et
   legitimt spørsmål neste gang.
+
+---
+
+## 2026-08-31 – Gjentok mutasjons-feilen fra dagen før, på en kommando merket som «sjekk»
+
+**Hva skjedde:** Som siste close-out-sjekk kjørte jeg de dokumenterte kommandoene i `CLAUDE.md` for
+å bekrefte at de virker — presedensen var `e664747`, der to av fire feilet på import.
+`python3 -m tools.beer_fit` **skriver**, og satte `generated_at` i `data/user_fit/beer_v0.json`
+fra `2026-06-08` til `2026-08-31`. Klassifiseringen var bit-identisk; kun tidsstempelet flyttet seg.
+Oppdaget umiddelbart via `git status`, og tilbakestilt.
+
+**Hvorfor det var feil:** Untappds siste check-in er `2026-01-16`. Et ferskt `generated_at` på
+uendret januar-data er en **falsk ferskhets-påstand** — det neste noen leser er «øl-modellen ble
+regenerert 31. august», og da ser en død datakanal levende ut. Skaden er ikke tapte data, den er
+et villedende metadatafelt.
+
+Dette er nøyaktig lærdommen fra 2026-08-30 («Kjørte et dokumentert skript for å teste det, og
+muterte ekte data»), gjentatt 24 timer senere. **Grunnen til at hukommelsen ikke holdt:** lærdommen
+sa *at* det kunne skje, men ikke *hvilke* kommandoer som skriver. Kommandolista i `CLAUDE.md`
+skilte ikke mellom «regenerér» og «smoke-test» på en måte som var synlig i det øyeblikket man
+kopierer en linje.
+
+**Hva jeg gjør annerledes nå — strukturelt, ikke ved å huske bedre:**
+
+- **Kommandolista i `CLAUDE.md` er nå merket med ✍️** på hver kommando som skriver til sporede
+  filer, med én linje som forklarer merket. `user_fit` og `eval_fit` har trygge lesevarianter
+  (`<varenr>`-argumenter, `--stdout-only`), og de står nå eksplisitt ved siden av.
+- **Vil du bekrefte at et skrivende skript «virker», importér det** — `importlib.import_module`
+  fanger den faktiske feilklassen fra `e664747` (import-feil) uten å røre data.
+- **`git status` etter enhver verifiseringsrunde**, ikke bare etter redigering. Det var det som
+  fanget dette; uten den sjekken hadde tidsstempelet blitt committet i neste `git add`.
