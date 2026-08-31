@@ -499,6 +499,25 @@ Personalisert (kun ved eksplisitt request):
 
 **Alternativer vurdert.** Bygge v1 direkte og evaluere etterpå — forkastet: da har man ingen baseline å vurdere v1 mot, og fristelsen til å rasjonalisere et dårlig resultat er stor. p-verdier — forkastet: meningsløst på n=24 uten scipy.
 
+> **Amendment 2026-08-31 — `v0_tier` er målt tre ganger, og alle tre tallene beskriver ulike modeller.**
+> `+0,588` (2026-06-08, n=111) → `+0,332` (2026-08-30, n=122) → **`+0,201`** (2026-08-31, revisjon
+> `b8490bb`, n=122, test∖lockbox = 29). Det siste fallet har én navngitt årsak: fram til
+> [ADR-028](#adr-028-ett-vokabular-i-stedet-for-to--norsk-på-begge-sider-av-matchingen) fyrte
+> reglene knapt på Vivino-inngangen — **22 av de 122 ratede vinene fikk `default` der katalogen
+> gir en regel**. `+0,332` målte altså en modell som ikke var i drift, nøyaktig den feilen
+> beslutning 2b i [ADR-027](#adr-027-spesifisitet-slår-generalitet-i-user-fit--og-regler-valideres-på-fordeling-ikke-antall)
+> beskriver. **`+0,201` er den første målingen av modellen slik den faktisk kjører.**
+>
+> Fallet er heller ikke uforklart: blindsone-regelen koster rangeringsevne fordi blindsone betyr
+> «lite data», ikke «dårlig», og vinene som *definerer* blindsonene er nettopp de brukeren har
+> utforsket — seks av dem ratet 4,5. Det er [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score)s
+> avveining, nå synlig i tallet. Ordningen over alle 122 er fortsatt monoton uten unntak:
+> very_fit 4,09 · fit 3,95 · neutral 3,88 · risky 3,00 · no_go 2,00.
+>
+> **v1-triggeren er fortsatt ikke oppfylt** — men begrunnelsen er nå en annen enn i 2026-06: det er
+> ikke lenger «v0 er sterk», det er «v0 er svakere enn vi trodde, og `vivino_avg` (+0,61) leder
+> fortsatt klart». Full måleomgang: [`tasks/maaling_2026-08-31.md`](../tasks/maaling_2026-08-31.md).
+
 ---
 
 ### ADR-018: Øl-fit deriverer fra Untappd-CSV, ikke fra smaksprofil-markdown
@@ -823,6 +842,8 @@ Alle tre er støy. Verre: **alle seks gruppene med identiske klokker spenner ove
 
 **Status:** Accepted (2026-08-30). Endrer early-exit-rekkefølgen i [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier); no-filter-bubble-prinsippet i [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score) står uendret og er begrunnelsen.
 
+> **Delvis superseded 2026-08-31 av [ADR-028](#adr-028-ett-vokabular-i-stedet-for-to--norsk-på-begge-sider-av-matchingen).** Selve beslutningene står — spesifisitet slår generalitet, bekymringer arves ikke oppover i appellasjonshierarkiet, regler valideres på fordeling — men **mekanismen er byttet ut**. Oversettelses-tabellene `_LAND_NO_TO_EN` og `_KATEGORI_NO_TO_EN` som beskrives under finnes ikke lenger; oversettelsen skjer nå ved generering, og matchingen sammenligner norsk mot norsk. Les avsnittene om «norsk→engelsk på bruksstedet» som historikk, ikke som dagens kode.
+
 **Kontekst.** `user_fit` klassifiserte 13 775 rødviner som **2 401 `fit`, 11 374 `neutral`, 0 `very_fit`, 0 `risky`, 0 `no_go`.** Reglene var skrevet på engelsk mot en norsk katalog. Konsekvensen var invertert: `risky` og `no_go` er ADR-016s vern mot filterboble, så et system som aldri kan advare blir stille optimistisk.
 
 **Fem lag, ikke ett.** (1) Namespace — needles matchet ikke norske felter. (2) **`sub_District` ble aldri lest**, og uten den er katalogen praktisk talt stum: distriktet sier «Veneto», appellasjonen «Valpolicella Ripasso» ligger i underdistriktet. (3) `_find_section` returnerte første treff, så den kuraterte prosa-blindsonen var død kode (og øl-blokka måtte klippes bort, ellers lekker «Kölsch / Altbier» inn som vinmønster). (4) Parse-feil: et helt avsnitt som én needle, uparet parentes. (5) `rule_fired` løy — alle `fit` het `bekreftet_drue`, også rene region-treff.
@@ -856,6 +877,51 @@ Innsnevringen er implementert som en generell mekanisme (`_NIVA_INNSNEVRET`), ik
 **Relatert.** [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier) (regel-rekkefølgen dette endrer), [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score) (vernet som aldri fyrte), [ADR-017](#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling) (`eval_fit` kjører `classify()` på engelsk Vivino-data — begge veier må virke), [ADR-025](#adr-025-klokke-similarity-degradert-til-grovfilter--målt-null-diskriminering) (samme lærdom: koblet til ≠ påvirker utfallet).
 
 ---
+
+---
+
+### ADR-028: Ett vokabular i stedet for to — norsk på begge sider av matchingen
+
+**Status:** Accepted (2026-08-31). Superseder oversettelses-mekanismen i [ADR-027](#adr-027-spesifisitet-slår-generalitet-i-user-fit--og-regler-valideres-på-fordeling-ikke-antall) beslutning 1; spesifisitets-regelen selv står uendret.
+
+**Kontekst.** ADR-027 løste namespace-problemet ved å oversette *ved matching*: den norske Polet-raden ble bygget om til engelske strenger («Tyskland» + «Hvitvin» → «Germany White Wine») for å møte blindsoner hentet fra Vivinos engelske taksonomi. Det virket, men gjorde regelens rekkevidde til en funksjon av hvor komplett to oversettelses-tabeller var — og en manglende rad ga stillhet, ikke feil. ADR-027 dokumenterte selv symptomet: regelen fyrte 422 ganger og *så* frisk ut, mens treffene kom fra tre land som staves likt på begge språk.
+
+**Beslutning. Oversettelsen flyttes fra matchingen til genereringen.** `profile_stats.blindspots()` returnerer nå `{land, kategori, n}` og oversetter Vivinos engelske vokabular til Polets norske der — én gang, der vokabularet er kjent og lukket — og render-laget bygger linja som havner i `smaksprofil.md`. Matchingen sammenligner deretter norsk mot norsk. `_LAND_NO_TO_EN` og `_KATEGORI_NO_TO_EN` er slettet.
+
+Den andre inngangen må følge med: `eval_fit._csv_row_to_wine` oversetter `land` og `kategori` til Polets vokabular **ved inngangen**. `stil` forblir engelsk — den ER Vivinos taksonomi, og needlene («Burgundy Red») er hentet derfra. Dette er beslutning 2b i ADR-027 gjennomført til bunns: begge innganger snakker samme språk før matchingen, i stedet for at matchingen forhandler mellom to.
+
+**Sammensatte blindsoner matches eksakt, ikke som substring.** «Tyskland Rødvin» krever at både land og kategori stemmer på raden. Den gamle veien — alle ledd finnes et sted i en sammenslått streng — var ikke bare upresis, den ville blitt **farligere** av vokabular-byttet: «USA» er tre bokstaver og finnes inni «Usatges», «Sausal», «Sousa» og «Susana». Målt over katalogen ville substring-veien stemplet **15 hvitviner fra Spania, Portugal, Østerrike, Italia, New Zealand og Argentina som «USA Hvitvin»**. Den engelske formen «United States White Wine» skjulte risikoen bak fire ledd. Eksakt matching er derfor forutsetningen for vokabular-byttet, ikke en separat opprydding.
+
+**Skillet mellom auto-derivert og kuratert bæres fra parsingen, ikke fra formen.** Første utgave avgjorde «er dette en `<Land> <Kategori>`-blindsone?» ved å se om needelen endte på en kategori. Den kuraterte linja «Aromatisk hvitvin» gjør også det, ble lest som land «Aromatisk», og spesifisitets-regelen fjernet dermed region-treffet til sju italienske musserende. De to blindsone-seksjonene i `smaksprofil.md` har nå distinkte navn og parses hver for seg; `rules["blindspots_land_kategori"]` er delmengden som skal matches eksakt. **Generelt: når to ting skal behandles ulikt, bær skillet fra der det er kjent — å utlede det fra utseendet senere er å gjette.**
+
+**Målt effekt (revisjon `483c6ab` → `b8490bb`, katalog-md5 `429cce5f`).** 126 av 27 402 varer skifter dom. 123 er tyske musserende og roséer som mister et `fit` de hadde fordi profilens region-needle het «Tyskland» mens parentesen — som bullet-parseren stripper — sa «Riesling», altså hvitt. De tre siste er substring-bommer som forsvinner: «Niepoort Redoma Branco» og «Redoma Reserva Branco» var stemplet «Portugal Red Wine» fordi *Redoma* inneholder «Red», og en tysk Riesling med «Red Label» i navnet var stemplet «Germany Red Wine». Rødvin er uendret.
+
+**Prisen, sagt rett ut.** `eval_fit` faller `v0_tier` +0,332 → +0,201, fordi reglene nå faktisk fyrer på Vivino-inngangen. Se amendmentet i [ADR-017](#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling).
+
+**Alternativer vurdert.** **Beholde tabellene og fylle hullene** — forkastet: en regel hvis rekkevidde avhenger av tabell-kompletthet feiler stille, og ADR-027 viste at treffantall ikke avslører det. **Oversette hele profilen til engelsk** — forkastet av samme grunn som i ADR-027: `smaksprofil.md` skrives av brukeren, på norsk. **La blindsonene forbli engelske og oversette katalogen ved lesing** — forkastet: 27 402 rader mot ~20 needles, og oversettelsen ville fortsatt ligget i den varme stien.
+
+**Relatert.** [ADR-015](#adr-015-user-fit-score-v0--rule-based-tier-classifier), [ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score), [ADR-017](#adr-017-eval-harness-før-v1--modell-agnostisk-rangerings-måling), [ADR-027](#adr-027-spesifisitet-slår-generalitet-i-user-fit--og-regler-valideres-på-fordeling-ikke-antall).
+
+---
+
+### ADR-029: Kjøpbarhet er default, «lanseres» er en tredje tilstand
+
+**Status:** Accepted (2026-08-31).
+
+**Kontekst.** `polet_store.query` hadde `active_only=False` som default, og `vinmonopolet.search` filtrerte ikke på status i det hele tatt. Katalogen har 27 402 rader, hvorav **3 685 er utsolgt, utgått eller langtidsutsolgt**. De var gyldige treff i søk som presenteres for brukeren som viner å kjøpe. `buyable` redder ikke dette: **2 564 inaktive rader bærer `buyable: true`**, stivnet fra dagen raden sist ble hentet.
+
+**Beslutning.** `active_only=True` er default i `query`, og `search` fikk samme default. To veier til samme spørsmål skal svare likt — at de ikke gjorde det er ADR-009-fella (kode ≠ navn) på en annen akse.
+
+**`lanseres` (796 varer) skjules ikke.** De kommer med, merket `kommer_snart` på en **kopi** av raden — katalograden deles av alle kallere i prosessen — men regnes ikke som kjøpbare. Samme no-filter-bubble-prinsipp som tier ([ADR-016](#adr-016-no-filter-bubble-prinsippet-for-user-fit-score)): informasjonen nedgraderes, den fjernes ikke.
+
+**Statusfilteret legges på ETTER fritekst-matchingen** i `search`. En utgått vin gir da tom liste, ikke `PoletRefreshRequired` — et refresh-hint ville vært feil råd når snapshotet er komplett og vinen bare ikke selges lenger (gjeld #11).
+
+**To kallere ber eksplisitt om hele katalogen**, hver med sin grunn skrevet inn: `value_score._peer_percentile` (dekningssjekken må kunne skille «snapshotet mangler kategorien» fra «kategorien har for få aktive» — med bare aktive rader kollapser de to til samme svar), og `find_similar_by_clocks` (similarity er en analyse over klokke-populasjonen, ikke et kjøpsforslag; ADR-023-fiksen var nettopp å la den se hele populasjonen).
+
+**Målt effekt.** Rødvin 13 775 → 11 956 · hvitvin 9 762 → 8 367 · musserende 3 081 → 2 718 · rosé 782 → 674. Totalt 23 717 av 27 402 passerer.
+
+**Konsekvens for testene.** 15 tester falt. Fem av dem falt fordi fixture-radene manglet `status` og dermed ble filtrert bort av en helt annen grunn enn den de testet — grønt av feil grunn i motsatt retning. `_product` setter nå «aktiv», som er det en ekte rad stort sett er (22 921 av 27 402). Hver test er lest og oppdatert enkeltvis; ingen masseoppdatering.
+
 
 ## Kjent teknisk gjeld
 
