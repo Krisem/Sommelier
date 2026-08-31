@@ -34,7 +34,14 @@ from datetime import datetime
 from pathlib import Path
 from typing import Callable, Optional
 
-from tools.profile_stats import KATEGORI_EN_TO_NO, LAND_EN_TO_NO, load_rated
+# `_csv_row_to_wine` bor i profile_stats sammen med oversettelsestabellene den
+# bruker. Re-eksportert her fordi kallere (og tester) kjenner den herfra.
+from tools.profile_stats import (
+    KATEGORI_EN_TO_NO,
+    LAND_EN_TO_NO,
+    _csv_row_to_wine,
+    load_rated,
+)
 from tools.user_fit import classify, load_profile_rules
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -59,38 +66,6 @@ _TIER_SCORE = {
 # ---------------------------------------------------------------------------
 # Datalasting & split
 # ---------------------------------------------------------------------------
-
-
-def _csv_row_to_wine(r: dict) -> dict:
-    """Map en Vivino-CSV-rad til wine-dict som classify() forstår."""
-    navn = f"{(r.get('Winery') or '').strip()} {(r.get('Wine name') or '').strip()}".strip()
-    return {
-        "navn": navn,
-        "produsent": (r.get("Winery") or "").strip(),
-        # Vivino har ÉTT regionfelt, og granulariteten varierer: noen ganger er
-        # det appellasjonen («Crémant de Bourgogne», «Côtes du Jura»), noen
-        # ganger distriktet («Rheingau», «Franken»). Polet skiller de to
-        # (`district` mot `sub_District`), så feltet mates inn på begge akser
-        # framfor å gjette hvilken det er. Uten `underregion` leste nivåporten
-        # i `user_fit` appellasjonen via `region` og `navn` — det virket, men
-        # bare tilfeldig.
-        "region": (r.get("Region") or "").strip(),
-        "underregion": (r.get("Region") or "").strip(),
-        # Land og kategori oversettes til Polets norske vokabular HER, ved
-        # inngangen. `classify()` har to innganger — Polet-katalogen og denne
-        # Vivino-CSV-en — og ADR-027 (beslutning 2b) sier at samme vin må få
-        # samme dom uansett hvilken. Da må begge inngangene snakke samme
-        # språk før matchingen, ikke oversettes underveis i den.
-        # `stil` forblir engelsk: den ER Vivinos taksonomi, og needlene
-        # («Burgundy Red») er hentet fra samme sted.
-        "land": LAND_EN_TO_NO.get(
-            (r.get("Country") or "").strip(), (r.get("Country") or "").strip()
-        ),
-        "stil": (r.get("Regional wine style") or "").strip(),
-        "kategori": KATEGORI_EN_TO_NO.get(
-            (r.get("Wine type") or "").strip(), (r.get("Wine type") or "").strip()
-        ),
-    }
 
 
 def load_eval_rows() -> list[dict]:

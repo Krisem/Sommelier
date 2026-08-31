@@ -77,12 +77,29 @@
 | Californian Santa Barbara County Chardonnay White | 2 | 4.00 | 4.00 |
 | Californian Zinfandel | 2 | 4.00 | – |
 
-### Bekreftede mønstre (n ≥ 3, snitt ≥ 4.0)
+### Bekreftede mønstre (n ≥ 3, minst 1 SE over eget kategorisnitt)
 
-- **Italian Ripasso** – n=6, snitt 4.03, nyere 3.70
-- **Southern Italy Red** – n=4, snitt 4.05, nyere 4.07
 - **English Sparkling** – n=3, snitt 4.27, nyere 4.27
 - **Italian Amarone** – n=3, snitt 4.13, nyere 4.20
+- **Italian Ripasso** – n=6, snitt 4.03, nyere 3.70
+- **Northern Italy Rosé** – n=4, snitt 3.88, nyere 3.50
+
+### Evidens bak regionene
+
+| Region | N | Snitt | Distinkte viner |
+|---|---|---|---|
+| Champagne | 11 | 3.98 | 10 |
+| Tysk Riesling | 6 | 3.82 | 6 |
+| Nord-Italia | 5 | 3.56 | 4 |
+| Jura | 2 | 4.25 | 1 |
+
+### Positive mønstre (n ≥ 3, over totalsnitt, under 1 SE)
+
+- **Southern Italy Red** – n=4, snitt 4.05
+- **French Champagne** – n=10, snitt 3.91
+- **Italian Barbera** – n=6, snitt 3.90
+- **Spanish Rioja Red** – n=6, snitt 3.90
+- **French Crémant** – n=4, snitt 3.88
 
 ### Bekymringer (n ≥ 3, snitt < 3.3)
 

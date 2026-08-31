@@ -739,7 +739,10 @@ def test_tier_distribution_is_not_degenerate(catalog_tiers):
         # Repro fra scenario_test_2026-08-30.md § B4 — ga `neutral`/`default`.
         ("1013801", "risky", "Dom. Dupasquier Bourgogne Pinot Noir — «Billig Burgund»"),
         ("10614501", "very_fit", "Casteloro Valpolicella Ripasso — bekreftet stil"),
-        ("10064801", "very_fit", "Benanti Etna Rosso — «Southern Italy Red»"),
+        # 2026-08-31: `very_fit` -> `fit`. «Southern Italy Red» er ikke lenger
+        # bekreftet (+0,91 SE, under CONFIRM_MIN_SE 1,0), men staar som
+        # positivt moenster (n=4, snitt 4,05) og gir derfor `fit`, ikke stillhet.
+        ("10064801", "fit", "Benanti Etna Rosso \u2014 positivt moenster, ikke bekreftet"),
         ("10100701", "fit", "Luigi Pira Barolo — Nebbiolo + Nord-Italia"),
         # Beaujolais ligger under Polets distrikt «Burgund», men er Gamay og
         # en egen Vivino-stil. Skal IKKE dras med av Burgundy Red-regelen.
@@ -1120,22 +1123,28 @@ def test_sor_rhone_hvit_bound_to_lirac(rules):
     assert r["tier"] == "neutral" and r["rule_fired"] == "blindspot"
 
 
-def test_southern_italy_very_fit_bound_to_sicilia(rules):
+def test_southern_italy_is_positive_but_no_longer_confirmed(rules):
     """
-    Plussiden. 3 av 4 ratede er sicilianske, men matcheren ga `very_fit` til
-    hele Syd-Italia. En falsk `very_fit` er like mye en filterboble som en
-    manglende `risky` (ADR-016) — den sender brukeren mot Taurasi på
-    grunnlag av Etna. Resten av Syd-Italia skal ha positivt merke ett hakk
-    ned, ikke stillhet.
+    Plussiden, omskrevet 2026-08-31.
+
+    Historikk: stilen VAR bekreftet under den absolutte 4,0-regelen, og var
+    innsnevret til Sicilia fordi 3 av 4 ratede er sicilianske — en falsk
+    `very_fit` er like mye en filterboble som en manglende `risky` (ADR-016).
+
+    Da bekreftelsen ble kategori-relativ, landet stilen paa +0,91 SE over
+    roedvinssnittet — under 1,0 — og falt ut av `bekreftet_stiler`. Den skal
+    likevel ikke gi stillhet: fire ratinger paa 4,1 / 4,1 / 4,0 / 4,0 ligger
+    over brukerens totalsnitt, saa stilen staar som positivt moenster og gir
+    `fit`. Toppkarakteren er stengt, evidensen er ikke slettet.
     """
-    etna = {"land": "Italia", "kategori": "Rødvin",
+    etna = {"land": "Italia", "kategori": "Roedvin".replace("oe", "\u00f8"),
             "region": "Sicilia", "underregion": "Etna"}
-    campania = {"land": "Italia", "kategori": "Rødvin", "region": "Campania"}
-    assert classify(etna, rules)["tier"] == "very_fit"
-    r = classify(campania, rules)
-    assert r["tier"] == "fit", r["reasons"]
-    assert r["confidence"] == "low"
-    assert any("dokumentert på Sicilia" in x for x in r["reasons"]), r["reasons"]
+    d = classify(etna, rules)
+    assert d["tier"] == "fit", d["reasons"]
+    assert "Southern Italy Red" not in rules["bekreftet_stiler"]
+    assert "Southern Italy Red" in rules["stiler_positive"]
+    assert any("Positivt m" in x for x in d["reasons"]), d["reasons"]
+    assert not any("Bekreftet stil" in x for x in d["reasons"]), d["reasons"]
 
 
 def test_bandol_rose_is_not_generic_provence(rules):
@@ -1160,8 +1169,6 @@ def test_narrowing_applies_on_both_paths(rules):
     språklige porten ville de beholdt den brede regelen.
     """
     par = [
-        ({"land": "Italia", "kategori": "Rødvin", "region": "Campania"},
-         {"stil": "Southern Italy Red", "land": "Italy", "region": "Taurasi"}),
         ({"land": "Frankrike", "kategori": "Rosévin", "region": "Provence",
           "underregion": "Bandol"},
          {"stil": "Provence Rosé", "land": "France", "region": "Bandol",
@@ -1188,3 +1195,64 @@ def test_niva_innsnevret_is_wellformed(rules):
         assert spec["utenfor"] in {"blindspot", "fit"}, f"{needle!r}: ugyldig utfall"
         assert spec["smal"] and spec["bredere"], f"{needle!r}: ufullstendig"
         assert spec["nivå"] and spec["evidens"], f"{needle!r}: mangler begrunnelse"
+
+
+# ─── Kategori-relativ bekreftelse og n på regionene (2026-08-31) ──────
+
+def test_confirmed_styles_are_category_relative():
+    """Toppkarakteren skal ikke være stengt for en kategori av en absolutt grense.
+
+    Den gamle regelen var n>=3 og snitt >= 4,0. Brukeren rater rosé 3,30 i
+    snitt, så ingen rosé kunne nå 4,0 uansett hvor godt den gjorde det
+    innenfor sin egen kategori.
+    """
+    from tools.profile_stats import confirmed_styles, load_rated
+
+    stiler = {label for label, _, _, _ in confirmed_styles(load_rated())}
+    assert "Northern Italy Rosé" in stiler, (
+        "rosé-mønsteret ligger +1,04 SE over brukerens eget rosésnitt og skal bekreftes"
+    )
+    # 3,88 ville aldri passert den gamle absolutte 4,0-grensen.
+    assert "Southern Italy Red" not in stiler, "+0,91 SE er under CONFIRM_MIN_SE"
+
+
+def test_rose_can_reach_very_fit(rules):
+    """Taket var strukturelt: ingen bekreftet stil var hvit eller rosé."""
+    nebbiolo_rose = {
+        "land": "Italia", "kategori": "Rosévin", "region": "Piemonte",
+        "navn": "Ioppa Colline Novaresi Rusin Nebbiolo",
+    }
+    assert classify(nebbiolo_rose, rules)["tier"] == "very_fit"
+
+
+def test_generic_piemonte_rose_is_not_crowned(rules):
+    """Signalet er Nebbiolo, ikke Piemonte.
+
+    Den generiske Piemonte-rosatoen i historikken er ratet 3,5 — under
+    brukerens totalsnitt. Å binde very_fit til distriktet ville kronet nettopp
+    den vinen.
+    """
+    generisk = {"land": "Italia", "kategori": "Rosévin", "region": "Piemonte",
+                "navn": "Dal Nostro Giardino Rosato"}
+    assert classify(generisk, rules)["tier"] != "very_fit"
+
+
+def test_positive_style_gives_fit_not_silence(rules):
+    """Fire ratinger over eget snitt skal ikke gi «ingen regler traff»."""
+    etna = {"land": "Italia", "kategori": "Rødvin", "region": "Sicilia",
+            "underregion": "Etna"}
+    d = classify(etna, rules)
+    assert d["tier"] == "fit"
+    assert d["rule_fired"] != "default"
+
+
+def test_regions_carry_n_in_reasons(rules):
+    """«Jura» hviler på én vin i to årganger og skal ikke se ut som «Nord-Italia».
+
+    Regionene er kuratert prosa uten stil-rad, så uten region_n-fallbacket i
+    `_evidens` sto de helt uten tall.
+    """
+    assert rules["region_n"]["Jura"] == 2
+    jura = {"land": "Frankrike", "kategori": "Hvitvin", "region": "Jura"}
+    grunner = " ".join(classify(jura, rules)["reasons"])
+    assert "n=2" in grunner, grunner

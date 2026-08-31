@@ -59,6 +59,7 @@ KATEGORI_EN_TO_NO: dict[str, str] = {
 
 RECENT_CUTOFF = datetime(2024, 1, 1)
 MIN_N_FOR_PATTERN = 3
+CONFIRM_MIN_SE = 1.0
 BLINDSPOT_MAX_N = 2
 
 
@@ -169,6 +170,163 @@ def fmt_wine(r: dict) -> str:
     return f"{r['_rating']:.1f} – {name}{year}"
 
 
+def _csv_row_to_wine(r: dict) -> dict:
+    """Map en Vivino-CSV-rad til wine-dict som classify() forstår."""
+    navn = f"{(r.get('Winery') or '').strip()} {(r.get('Wine name') or '').strip()}".strip()
+    return {
+        "navn": navn,
+        "produsent": (r.get("Winery") or "").strip(),
+        # Vivino har ÉTT regionfelt, og granulariteten varierer: noen ganger er
+        # det appellasjonen («Crémant de Bourgogne», «Côtes du Jura»), noen
+        # ganger distriktet («Rheingau», «Franken»). Polet skiller de to
+        # (`district` mot `sub_District`), så feltet mates inn på begge akser
+        # framfor å gjette hvilken det er. Uten `underregion` leste nivåporten
+        # i `user_fit` appellasjonen via `region` og `navn` — det virket, men
+        # bare tilfeldig.
+        "region": (r.get("Region") or "").strip(),
+        "underregion": (r.get("Region") or "").strip(),
+        # Land og kategori oversettes til Polets norske vokabular HER, ved
+        # inngangen. `classify()` har to innganger — Polet-katalogen og denne
+        # Vivino-CSV-en — og ADR-027 (beslutning 2b) sier at samme vin må få
+        # samme dom uansett hvilken. Da må begge inngangene snakke samme
+        # språk før matchingen, ikke oversettes underveis i den.
+        # `stil` forblir engelsk: den ER Vivinos taksonomi, og needlene
+        # («Burgundy Red») er hentet fra samme sted.
+        "land": LAND_EN_TO_NO.get(
+            (r.get("Country") or "").strip(), (r.get("Country") or "").strip()
+        ),
+        "stil": (r.get("Regional wine style") or "").strip(),
+        "kategori": KATEGORI_EN_TO_NO.get(
+            (r.get("Wine type") or "").strip(), (r.get("Wine type") or "").strip()
+        ),
+    }
+
+
+def confirmed_styles(rows: list[dict]) -> list[tuple[str, int, float, float | None]]:
+    """Stiler som er bekreftet RELATIVT til hvordan brukeren rater kategorien.
+
+    Den gamle regelen var absolutt: n>=3 og snitt >= 4,0. Den var ikke
+    kategorinoytral. Brukeren rater ros\u00e9 3,30 og musserende 4,03 i snitt, sa en
+    fast 4,0-grense stengte ros\u00e9 og hvitvin ute uansett hvor godt en stil gjorde
+    det innenfor sin egen kategori — «Northern Italy Ros\u00e9» ligger +0,58 over
+    brukerens eget ros\u00e9sitt pa tre distinkte viner og falt likevel.
+
+    Ny regel, tre krav:
+
+    1. `n >= MIN_N_FOR_PATTERN` — uendret.
+    2. Stilsnittet ligger minst `CONFIRM_MIN_SE` standardfeil over snittet for
+       SIN EGEN kategori. Standardfeilen skalerer med n, sa fa observasjoner ma
+       sla kraftigere ut for a telle.
+    3. Gulv pa brukerens totalsnitt, sa en svak kategori ikke kan kron\u00e9 middelmadighet:
+       +1 SE over et lavt kategorisnitt er ikke nok alene.
+
+    `CONFIRM_MIN_SE` er 1,0 og ikke 0,9 med vilje. 0,9 ville bevart dagens fire
+    stiler uendret — det er kurvetilpasning til svaret man allerede har.
+    Ved 1,0 faller «Southern Italy Red» ut pa +0,91 SE (fire viner, 0,26 over
+    rodvinssnittet), og det er riktig: det er innenfor stoyen.
+    """
+    if not rows:
+        return []
+    overall = statistics.mean(r["_rating"] for r in rows)
+
+    per_type: dict[str, list[float]] = defaultdict(list)
+    for r in rows:
+        t = (r.get("Wine type") or "").strip()
+        if t:
+            per_type[t].append(r["_rating"])
+
+    out = []
+    for label, n_, avg, avg_recent in agg_by(rows, "Regional wine style"):
+        if n_ < MIN_N_FOR_PATTERN:
+            continue
+        kat = next(
+            ((r.get("Wine type") or "").strip() for r in rows
+             if (r.get("Regional wine style") or "").strip() == label), ""
+        )
+        basis = per_type.get(kat, [])
+        if len(basis) < MIN_N_FOR_PATTERN:
+            continue
+        se = statistics.stdev(basis) / (n_ ** 0.5)
+        if se <= 0:
+            continue
+        if (avg - statistics.mean(basis)) / se < CONFIRM_MIN_SE:
+            continue
+        if avg < overall:
+            continue
+        out.append((label, n_, avg, avg_recent))
+    out.sort(key=lambda t: (-t[2], -t[1]))
+    return out
+
+
+def positive_styles(rows: list[dict]) -> list[tuple[str, int, float, float | None]]:
+    """Stiler med reell positiv evidens som likevel ikke naar toppkarakter.
+
+    Uten dette nivaaet er profilen binaer: en stil er enten bekreftet eller
+    usynlig. Da regelen ble kategori-relativ falt «Southern Italy Red» ut paa
+    +0,91 SE — og 186 sicilianske rodviner gikk fra `very_fit` rett til
+    «ingen regler traff», enda brukeren har ratet fire av dem 4,1 · 4,1 ·
+    4,0 · 4,0. Fire ratinger over eget snitt skal ikke gi null signal.
+
+    Krav: `n >= MIN_N_FOR_PATTERN`, snitt over brukerens totalsnitt, og IKKE
+    allerede bekreftet. Disse gir `fit`, aldri `very_fit` — toppkarakteren
+    forblir like streng.
+    """
+    if not rows:
+        return []
+    overall = statistics.mean(r["_rating"] for r in rows)
+    bekreftet = {label for label, _, _, _ in confirmed_styles(rows)}
+    out = [
+        (label, n_, avg, avg_recent)
+        for label, n_, avg, avg_recent in agg_by(rows, "Regional wine style")
+        if n_ >= MIN_N_FOR_PATTERN and avg >= overall and label not in bekreftet
+    ]
+    out.sort(key=lambda t: (-t[2], -t[1]))
+    return out
+
+
+def region_evidence(rows: list[dict]) -> list[tuple[str, int, float, int]]:
+    """Hvor mange ratede viner staar faktisk bak hver «region du dras mot»?
+
+    Regionene er KURATERT prosa, ikke auto-derivert, saa de har aldri baaret
+    tall. Det lot «Jura (Chardonnay)» staa som et moenster paa linje med
+    «Nord-Italia» — enda Jura hviler paa \u00e9n vin i to aargangor og Nord-Italia
+    paa titalls. Uten n kan ikke leseren skille de to.
+
+    Tellingen gaar gjennom `user_fit._needle_hits` — den EKTE matcheren, med
+    samme haystacks som `classify` bruker for regioner. En egen
+    gjenimplementering her ville kunnet gi et annet svar enn regelen den skal
+    beskrive, og da er tallet verre enn ingen tall.
+
+    Returnerer [(region, n_rader, snitt, n_distinkte_viner)].
+    """
+    from tools.user_fit import _extract_wine_fields, _needle_hits, load_profile_rules
+
+    regioner = load_profile_rules().get("regioner_pluss", [])
+    out = []
+    for needle in regioner:
+        treff = []
+        for r in rows:
+            f = _extract_wine_fields(_csv_row_to_wine(r))
+            hays = [f["region"], f["underregion"], f["produsent"], f["land"], f["navn"]]
+            if _needle_hits([needle], hays, f):
+                treff.append(r)
+        if not treff:
+            out.append((needle, 0, 0.0, 0))
+            continue
+        distinkte = {
+            ((r.get("Winery") or "").strip(), (r.get("Wine name") or "").strip())
+            for r in treff
+        }
+        out.append((
+            needle,
+            len(treff),
+            statistics.mean(r["_rating"] for r in treff),
+            len(distinkte),
+        ))
+    out.sort(key=lambda t: -t[1])
+    return out
+
+
 def render(rows: list[dict]) -> str:
     today = datetime.now().date().isoformat()
     n = len(rows)
@@ -182,7 +340,7 @@ def render(rows: list[dict]) -> str:
 
     top, bottom = top_and_bottom(rows, k=5)
 
-    confirmed = [(l, n_, a, a_r) for l, n_, a, a_r in by_style if n_ >= MIN_N_FOR_PATTERN and a >= 4.0]
+    confirmed = confirmed_styles(rows)
     flagged = [(l, n_, a, a_r) for l, n_, a, a_r in by_style if n_ >= MIN_N_FOR_PATTERN and a < 3.3]
 
     bs = blindspots(rows)
@@ -208,7 +366,7 @@ def render(rows: list[dict]) -> str:
         "",
         fmt_table([r for r in by_style if r[1] >= 2][:20]),
         "",
-        "### Bekreftede mønstre (n ≥ 3, snitt ≥ 4.0)",
+        "### Bekreftede mønstre (n ≥ 3, minst 1 SE over eget kategorisnitt)",
         "",
     ]
     if confirmed:
@@ -217,6 +375,22 @@ def render(rows: list[dict]) -> str:
             parts.append(f"- **{label}** – n={n_}, snitt {avg:.2f}{recent_str}")
     else:
         parts.append("_Ingen kategorier med tilstrekkelig datagrunnlag._")
+    parts.append("")
+    parts.append("### Evidens bak regionene")
+    parts.append("")
+    parts.append("| Region | N | Snitt | Distinkte viner |")
+    parts.append("|---|---|---|---|")
+    for navn_, n_, avg, dist in region_evidence(rows):
+        parts.append(f"| {navn_} | {n_} | {avg:.2f} | {dist} |")
+    parts.append("")
+    parts.append("### Positive mønstre (n ≥ 3, over totalsnitt, under 1 SE)")
+    parts.append("")
+    positive = positive_styles(rows)
+    if positive:
+        for label, n_, avg, _ in positive:
+            parts.append(f"- **{label}** – n={n_}, snitt {avg:.2f}")
+    else:
+        parts.append("_Ingen._")
     parts.append("")
     parts.append("### Bekymringer (n ≥ 3, snitt < 3.3)")
     parts.append("")

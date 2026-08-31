@@ -1,12 +1,12 @@
 {
   "_meta": {
     "version": "v0",
-    "generated_at": "2026-08-31T09:54:26+00:00",
+    "generated_at": "2026-08-31T12:49:47+00:00",
     "n_classified": 409,
     "tier_counts": {
-      "fit": 195,
-      "neutral": 180,
+      "fit": 196,
       "very_fit": 7,
+      "neutral": 179,
       "risky": 27
     },
     "source": "knowledge/scores/",
@@ -69,13 +69,13 @@
     "rule_fired": "bekreftet_drue"
   },
   "10205001": {
-    "tier": "very_fit",
+    "tier": "fit",
     "reasons": [
-      "Bekreftet stil «Southern Italy Red» (n=4, snitt 4.05) — snitt ≥ 4.0. Treff: «Sicilia».",
+      "Positivt mønster «Southern Italy Red» (n=4, snitt 4.05) matcher «Sicilia».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_snitt"
+    "rule_fired": "bekreftet_stil"
   },
   "10307001": {
     "tier": "fit",
@@ -610,7 +610,7 @@
   "14489401": {
     "tier": "very_fit",
     "reasons": [
-      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — snitt ≥ 4.0. Treff: «England».",
+      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — minst 1 SE over ditt eget snitt for kategorien. Treff: «England».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -892,13 +892,13 @@
     "rule_fired": "region_pluss"
   },
   "1657001": {
-    "tier": "very_fit",
+    "tier": "fit",
     "reasons": [
-      "Bekreftet stil «Southern Italy Red» (n=4, snitt 4.05) — snitt ≥ 4.0. Treff: «Sicilia».",
+      "Positivt mønster «Southern Italy Red» (n=4, snitt 4.05) matcher «Sicilia».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_snitt"
+    "rule_fired": "bekreftet_stil"
   },
   "1661201": {
     "tier": "neutral",
@@ -1977,7 +1977,7 @@
   "20541501": {
     "tier": "very_fit",
     "reasons": [
-      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — snitt ≥ 4.0. Treff: «England».",
+      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — minst 1 SE over ditt eget snitt for kategorien. Treff: «England».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -1986,7 +1986,7 @@
   "20541601": {
     "tier": "very_fit",
     "reasons": [
-      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — snitt ≥ 4.0. Treff: «England».",
+      "Bekreftet stil «English Sparkling» (n=3, snitt 4.27) — minst 1 SE over ditt eget snitt for kategorien. Treff: «England».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
@@ -2297,14 +2297,13 @@
     "rule_fired": "default"
   },
   "20574601": {
-    "tier": "fit",
+    "tier": "very_fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Bekreftet stil «Northern Italy Rosé» (n=4, snitt 3.88) — minst 1 SE over ditt eget snitt for kategorien. Treff: «Nebbiolo».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_drue"
+    "rule_fired": "bekreftet_snitt"
   },
   "20574901": {
     "tier": "neutral",
@@ -3255,12 +3254,12 @@
     "rule_fired": "default"
   },
   "3267701": {
-    "tier": "neutral",
+    "tier": "fit",
     "reasons": [
-      "Blindsone — profilen har lite eller ingen data: «Aromatisk hvitvin» (Moscato)."
+      "Foretrukket region «Nord-Italia» matcher «Piemonte»."
     ],
     "confidence": "low",
-    "rule_fired": "blindspot"
+    "rule_fired": "region_pluss"
   },
   "3310601": {
     "tier": "fit",
@@ -3300,14 +3299,13 @@
     "rule_fired": "region_pluss"
   },
   "3872205": {
-    "tier": "fit",
+    "tier": "very_fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Bekreftet stil «Northern Italy Rosé» (n=4, snitt 3.88) — minst 1 SE over ditt eget snitt for kategorien. Treff: «Nebbiolo».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_drue"
+    "rule_fired": "bekreftet_snitt"
   },
   "3962701": {
     "tier": "neutral",
@@ -3382,13 +3380,13 @@
     "rule_fired": "region_pluss"
   },
   "4723001": {
-    "tier": "very_fit",
+    "tier": "fit",
     "reasons": [
-      "Bekreftet stil «Southern Italy Red» (n=4, snitt 4.05) — snitt ≥ 4.0. Treff: «Sicilia».",
+      "Positivt mønster «Southern Italy Red» (n=4, snitt 4.05) matcher «Sicilia».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_snitt"
+    "rule_fired": "bekreftet_stil"
   },
   "4963201": {
     "tier": "neutral",
@@ -3438,13 +3436,13 @@
     "rule_fired": "default"
   },
   "5178901": {
-    "tier": "very_fit",
+    "tier": "fit",
     "reasons": [
-      "Bekreftet stil «Southern Italy Red» (n=4, snitt 4.05) — snitt ≥ 4.0. Treff: «Sicilia».",
+      "Positivt mønster «Southern Italy Red» (n=4, snitt 4.05) matcher «Sicilia».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_snitt"
+    "rule_fired": "bekreftet_stil"
   },
   "5264201": {
     "tier": "neutral",
@@ -3609,14 +3607,13 @@
     "rule_fired": "default"
   },
   "7425107": {
-    "tier": "fit",
+    "tier": "very_fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Bekreftet stil «Northern Italy Rosé» (n=4, snitt 3.88) — minst 1 SE over ditt eget snitt for kategorien. Treff: «Nebbiolo».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_drue"
+    "rule_fired": "bekreftet_snitt"
   },
   "7603601": {
     "tier": "fit",
@@ -3748,14 +3745,13 @@
     "rule_fired": "bekymring"
   },
   "9747601": {
-    "tier": "fit",
+    "tier": "very_fit",
     "reasons": [
-      "Foretrukket region «Nord-Italia» matcher «Piemonte».",
-      "Bekreftet drue «Nebbiolo» matcher «Nebbiolo».",
+      "Bekreftet stil «Northern Italy Rosé» (n=4, snitt 3.88) — minst 1 SE over ditt eget snitt for kategorien. Treff: «Nebbiolo».",
       "Mangler felt: stil — best-effort match."
     ],
     "confidence": "medium",
-    "rule_fired": "bekreftet_drue"
+    "rule_fired": "bekreftet_snitt"
   },
   "9749601": {
     "tier": "neutral",

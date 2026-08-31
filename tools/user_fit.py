@@ -45,6 +45,12 @@ SMAKSPROFIL_PATH = REPO_ROOT / "knowledge" / "smaksprofil.md"
 DEFAULT_OUTPUT_PATH = REPO_ROOT / "data" / "user_fit" / "v0.json"
 
 # Terskler — eksplisitt navngitt for at en endring krever bevisst valg
+# Beholdt som dokumentert konstant, men IKKE lenger en port i `classify`.
+# Bekreftelsen avgjores ett sted — `profile_stats.confirmed_styles`, som er der
+# statistikken bor — og skrives til `bekreftet_stiler` i profilen. Da klassifisering
+# ogsa holdt en absolutt 4,0-grense, var det to porter for samme beslutning: en stil
+# kunne vaere bekreftet i profilen og likevel stoppes her. Det rammet «Northern Italy
+# Rose» (3,88), som er brukerens tydeligste rosemonster.
 _VERY_FIT_AVG_THRESHOLD = 4.0
 _RISKY_AVG_THRESHOLD = 3.3  # samme som "Bekymringer"-grensen i smaksprofil
 
@@ -223,12 +229,15 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
             "bekymringer": [],
             "bommet_druer_regioner": [],
             "bekreftet_stiler": [],
+            "stiler_positive": [],
             "bekreftede_druer": [],
             "regioner_pluss": [],
             "blindspots": [],
             "blindspots_land_kategori": [],
             "stil_snitt": {},
             "stil_n": {},
+            "region_n": {},
+            "region_snitt": {},
         }
 
     text = smaksprofil_path.read_text(encoding="utf-8")
@@ -262,6 +271,12 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
     # Bekreftede mønstre — stil-navn med n≥3, snitt≥4.0
     bekreftet_sec = _find_section(text, [r"Bekreftede\s+m[øo]nstre.*"])
     bekreftet_stiler = _bullet_items(bekreftet_sec) if bekreftet_sec else []
+
+    # Positive mønstre — reell evidens, men under terskelen for very_fit.
+    # Gir `fit`, aldri `very_fit`. Uten denne listen falt en stil med n=4 og
+    # snitt 4,05 rett til «ingen regler traff».
+    positive_sec = _find_section(text, [r"Positive\s+m[øo]nstre.*"])
+    stiler_positive = _bullet_items(positive_sec) if positive_sec else []
 
     # Druer du vet du liker
     druer_sec = _find_section(text, [
@@ -306,6 +321,12 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
                 if er_auto and raw not in blindspots_land_kategori:
                     blindspots_land_kategori.append(raw)
 
+    # Evidens bak regionene — samme tabellform som stil-tabellen, saa begge
+    # parserne gjenbrukes uendret.
+    reg_ev_sec = _find_section(text, [r"Evidens\s+bak\s+regionene.*"])
+    region_n = _parse_style_n_table(reg_ev_sec) if reg_ev_sec else {}
+    region_snitt = _parse_style_avg_table(reg_ev_sec) if reg_ev_sec else {}
+
     # Stil-snitt-tabell (auto-derivert "Per regional stil")
     stil_sec = _find_section(text, [
         r"Per\s+regional\s+stil.*",
@@ -319,6 +340,7 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
         "bekymringer": bekymringer,
         "bommet_druer_regioner": bommet,
         "bekreftet_stiler": bekreftet_stiler,
+        "stiler_positive": stiler_positive,
         "bekreftede_druer": bekreftede_druer,
         "regioner_pluss": regioner_pluss,
         "blindspots": blindspots,
@@ -330,6 +352,8 @@ def load_profile_rules(path: Optional[str] = None) -> dict:
         "blindspots_land_kategori": blindspots_land_kategori,
         "stil_snitt": stil_snitt,
         "stil_n": stil_n,
+        "region_n": region_n,
+        "region_snitt": region_snitt,
     }
 
     # Sanity-check — log uvanlig tilstand
@@ -496,6 +520,22 @@ _NO_MATCHERS: dict[str, list[dict]] = {
     ],
 
     # --- Bekreftede stiler --------------------------------------------------
+    # «Northern Italy Rose», n=4, snitt 3.88 — bekreftet fra 2026-08-31 fordi
+    # regelen ble kategori-relativ: +1,04 SE over brukerens eget rosesnitt
+    # (3,30). Fire rader, TRE distinkte viner, alle fra Piemonte:
+    #   4.5 Ioppa Rusin Colline Novaresi Nebbiolo Rose (2020)
+    #   4.0 Cantalupo Il Mimo Nebbiolo Colline Novaresi (2015)
+    #   3.5 Dal Nostro Giardino Rosato, Piemonte (2021 OG 2022 — samme vin)
+    # Signalet er Nebbiolo, ikke Piemonte: de to Nebbiolo-rosene ligger pa 4,25
+    # i snitt, mens den generiske Piemonte-rosatoen ligger pa 3,5 — UNDER
+    # brukerens totalsnitt (3,82). Bindes derfor til Nebbiolo, ikke til
+    # distriktet. Samme avveining som «Southern Italy Red» bundet til Sicilia:
+    # a generalisere fra to Nebbiolo-roser til alle 31 Piemonte-roseer ville
+    # kronet nettopp den vinen historikken rater lavest.
+    "Northern Italy Rosé": [
+        {"land": "Italia", "kategori": "Rosévin", "distrikt": ["Piemonte"],
+         "tekst": ["Nebbiolo"]},
+    ],
     "Italian Ripasso": [{"land": "Italia", "tekst": ["Ripasso"]}],
     "Italian Amarone": [{"land": "Italia", "tekst": ["Amarone"]}],
     # Vivinos «Southern Italy Red» dekker Sicilia i denne brukerens data:
@@ -664,19 +704,20 @@ _NIVA_INNSNEVRET: dict[str, dict] = {
         "evidens": "4.0 og 2.0 Miraval Côtes de Provence (samme vin), "
                    "2.5 Whispering Angel, 1.0 Sulauze Coteaux d'Aix",
     },
-    "Southern Italy Red": {
-        "kilde": "bekreftet_stiler",
-        "smal": ["Sicilia", "Sicily", "Etna", "Cerasuolo di Vittoria",
-                 "Terre Siciliane", "Nero d'Avola", "Frappato", "Nerello"],
-        "bredere": [
-            {"land": "Italia", "kategori": "Rødvin",
-             "distrikt": ["Puglia", "Campania", "Basilicata", "Calabria", "Molise"]},
-        ],
-        "utenfor": "fit",
-        "nivå": "Sicilia",
-        "evidens": "4.1 og 4.1 Etna, 4.0 Cerasuolo di Vittoria, 4.0 Terre Siciliane "
-                   "— 3 av 4 ratede er sicilianske",
-    },
+    # «Southern Italy Red» STOD her til 2026-08-31, bundet til Sicilia med
+    # evidensen «4.1 og 4.1 Etna, 4.0 Cerasuolo di Vittoria, 4.0 Terre
+    # Siciliane — 3 av 4 ratede er sicilianske».
+    #
+    # Den er fjernet fordi stilen ikke lenger er bekreftet: da regelen ble
+    # kategori-relativ (`profile_stats.confirmed_styles`), landet den på
+    # +0,91 SE over rødvinssnittet — under CONFIRM_MIN_SE på 1,0. En
+    # innsnevring av en stil som ikke er bekreftet har ingenting å snevre inn,
+    # og testen `test_niva_innsnevret_is_wellformed` håndhever nettopp det.
+    #
+    # Kunnskapen er ikke forkastet, bare uten grunnlag akkurat nå: matcheren
+    # i `_NO_MATCHERS["Southern Italy Red"]` står urørt med sin begrunnelse.
+    # To–tre nye sicilianske ratinger over rødvinssnittet løfter stilen over
+    # 1,0 SE igjen, og da skal denne blokka tilbake slik den sto.
 }
 
 
@@ -918,6 +959,11 @@ def _evidens(needle: str, rules: dict) -> str:
     """«(n=3, snitt 3.27)» når profilen har tall for stilen, ellers tom streng."""
     n = rules.get("stil_n", {}).get(needle)
     avg = rules.get("stil_snitt", {}).get(needle)
+    # Regionene er kuratert prosa og har ingen stil-rad. Uten dette fallbacket
+    # sto «Jura» naken, som om den veide like mye som «Nord-Italia».
+    if n is None and avg is None:
+        n = rules.get("region_n", {}).get(needle)
+        avg = rules.get("region_snitt", {}).get(needle)
     if n is None and avg is None:
         return ""
     bits = []
@@ -1113,13 +1159,10 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         hit = _needle_hits([bekr_stil], style_region_haystacks, f)
         if not hit:
             continue
-        avg = stil_snitt.get(bekr_stil)
-        if avg is None or avg < _VERY_FIT_AVG_THRESHOLD:
-            continue
         reasons.insert(
             0,
             f"Bekreftet stil «{bekr_stil}»{_evidens(bekr_stil, rules)} "
-            f"— snitt ≥ {_VERY_FIT_AVG_THRESHOLD}. Treff: «{hit[0][1]}».",
+            f"— minst 1 SE over ditt eget snitt for kategorien. Treff: «{hit[0][1]}».",
         )
         if blindspot:
             # Prinsipp 4: stil-evidensen er ekte, men kategori-evidensen er tynn.
@@ -1146,7 +1189,11 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         [f["druer_str"], f["navn"], f["stil"], f["underregion"]],
         f,
     )
-    stil_hits = _needle_hits(rules.get("bekreftet_stiler", []), style_region_haystacks, f)
+    stil_hits = _needle_hits(
+        list(rules.get("bekreftet_stiler", [])) + list(rules.get("stiler_positive", [])),
+        style_region_haystacks,
+        f,
+    )
     region_hits = _needle_hits(
         rules.get("regioner_pluss", []),
         [f["region"], f["underregion"], f["produsent"], f["land"], f["navn"]],
@@ -1177,12 +1224,24 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         for needle, hay in drue_hits:
             reasons.insert(0, f"Bekreftet drue «{needle}» matcher «{hay}».")
         for needle, hay in stil_hits:
+            # «Bekreftet» er forbeholdt stiler som faktisk ER bekreftet. En
+            # positiv-men-ubekreftet stil er ekte evidens, men svakere, og skal
+            # ikke presenteres som noe annet enn den er.
+            merkelapp = (
+                "Bekreftet stil"
+                if needle in rules.get("bekreftet_stiler", [])
+                else "Positivt mønster"
+            )
             reasons.insert(
                 0,
-                f"Bekreftet stil «{needle}»{_evidens(needle, rules)} matcher «{hay}».",
+                f"{merkelapp} «{needle}»{_evidens(needle, rules)} matcher «{hay}».",
             )
         for needle, hay in region_hits:
-            reasons.insert(0, f"Foretrukket region «{needle}» matcher «{hay}».")
+            reasons.insert(
+                0,
+                f"Foretrukket region «{needle}»{_evidens(needle, rules)} "
+                f"matcher «{hay}».",
+            )
         if niva_fit:
             reasons.insert(
                 0,
