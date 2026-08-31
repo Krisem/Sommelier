@@ -50,9 +50,26 @@ Fase 6-gaten under.
 
 ### Fase 2 — Aperitif-snapshot: delt enabler for begge featurene (~4–5 t)
 
-- [ ] Sveip vin (856 sider × 30 rader ⇒ ~14 300 scorede varenumre, ~52 % av katalogen) **og** whisky
-      (32 sider, 939 rader, 337 med poeng) i én kjøring. `robots.txt`: listestiene er tillatt,
-      `?query=` / `/api/` / `/ajax/*` / `/load` er blokkert.
+- [ ] Sveip vin **og** whisky i én kjøring. `robots.txt` verifisert 2026-08-31: `/pollisten`-stiene
+      er tillatt, `?query=` / `/api/*` / `/ajax/*` / `/load` er blokkert (vi bruker ingen av dem).
+
+  **Sondert live 2026-08-31 — fire rettelser til planfilenes tall:**
+  - **Pagineringen er `?side=N` — men den virker ikke.** `/pollisten?side=2` returnerer samme 30
+    produkter som side 1. Den fungerende formen er stibasert: `/pollisten/pollisten,7,<side>`
+    (side 1 = `/pollisten`). Verifisert disjunkte produkter på side 1, 2, 100, 400, 475, 476, 500,
+    520, 540, 600, 856, 1000.
+  - **Listeraden har alt vi trenger — ingen produktsider nødvendig.** Per
+    `<li class="product-list-element">`: `data-product-id`, navn + årgang, `country-area`
+    (appellasjon), `class` (Rødvin/Hvitvin/…), `country-name`, `price`, `volume`, `assortment`,
+    **`<span class="index">(18971701)</span>` = Polet-varenummer**, og poeng i **samme markup som
+    `_parse_product_page` alt matcher** (`<span class="number">99</span><span class="label">POENG`).
+  - **Default-sortering er `points_desc`.** Poengene faller monotont: side 1 = 97–99, side 100 = 91,
+    side 400 = 86, side 475 = 83, side 500 = 82, side 520 = 80, side 540 = 76–77, side 600 = **ingen
+    poeng**. Sveip til poengene tar slutt (et sted mellom 540 og 600) pluss margin — ~560 kall, ikke
+    480. Lista fortsetter forbi side 1 000 uten poeng; de sidene er verdiløse for dette.
+  - **Ikke alle scorede rader har varenummer.** Side 520 hadde 30 rader med poeng men bare **18**
+    med `index`-span; side 540 hadde 25. Anslaget «~14 300 scorede varenumre» er derfor et tak —
+    tell faktisk treff under sveipen framfor å regne 30 × sider.
 - [ ] **Output til `data/aperitif/scores.ndjson`, IKKE `knowledge/scores/`.** Begge planfilene sa
       `knowledge/scores/`; det ville brutt ADR-003, fordi `value_score._combine_quality`
       (`tools/value_score.py:152-158`) rangerer den mappen *over* Aperitif — 14 300 skrapede scorer
