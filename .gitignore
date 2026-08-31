@@ -1,6 +1,11 @@
 __pycache__/
 *.pyc
+# Backup-kopier av datafiler. Git ER backupen — en kopi ved siden av fila
+# blir bare en andre sannhet ingen vedlikeholder. Slettet 2026-08-31:
+# `full_wine_list.csv.bak` var en delmengde av dagens fil (0 rader unike),
+# og `.pre-sync-2026-08-30` var bit-identisk med df85d42^.
 *.bak
+*.pre-sync-*
 
 # Remote-browser refresh (ADR-021): per-device config med CDP-URL + token er en
 # hemmelighet — committes ALDRI. Bare *.example.json sjekkes inn.
