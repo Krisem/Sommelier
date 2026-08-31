@@ -25,6 +25,19 @@ Status nå: **397 tester grønne**, ingenting committet (venter på at sveipen f
 
 ### Beslutninger som venter (sveip 2026-08-30)
 
+- [ ] **`CLAUDE.md` har to påstander som ikke lenger stemmer med koden.** Krever Kristoffers ja —
+      instruksfila redigeres ikke på agent-anbefaling.
+      (a) **Steg 6b (linje ~150)** foreskriver oppslag i `data/user_fit/v0.json` per varenummer.
+      Fila dekker **0,59 %** av katalogen, så instruksen er usann i 99,4 % av tilfellene.
+      Erstatning finnes ferdig: `python3 -m tools.user_fit <varenr>` / `classify_code`, 100 % dekning.
+      (b) **Linje 19** beskriver `find_similar_by_clocks` som «sortert liste etter euklidsk avstand»
+      uten ADR-025-forbeholdet — at klokkene korrelerer ~0 med brukerens ratinger (+0,16 / +0,09 /
+      −0,10) og at verktøyet finner **stil-slektninger**, ikke «noe like godt». README er allerede
+      oppdatert; `CLAUDE.md` står igjen som eneste sted som beskriver den gamle forståelsen.
+- [ ] **Slette `data/vivino/full_wine_list.csv.pre-sync-2026-08-30`?** Backup D tok før synken.
+      Redundant nå som synken ligger i historikken (`df85d42`), men ligger utracket i arbeidstreet.
+      Merk at `full_wine_list.csv.bak` er tracket fra før — konvensjonen er uklar.
+
 - [ ] **Skal `active_only=True` bli default i `polet_store.query`?** F0 landet den bevisst som opt-in
       med uendret default, fordi tre andre agenter jobbet i katalogen samtidig. Muteringstest viste at
       å snu defaulten gir **13 feil + 5 errors** i `test_vinmonopolet.py` og `test_value_score.py` —
