@@ -297,3 +297,47 @@ forfatter la til, forsvinner uten spor. Ingen av dem feiler; de bare glemmer.
 - **Bevart data må datere seg selv.** `completed_at` gjør en foreldet påstand synlig; en slettet
   påstand etterlater ingenting å oppdage.
 - **Ved tap av felter: diff felt for felt, aldri radantall.** «Tommere» er usynlig for en telling.
+
+---
+
+## 2026-08-31 – Sju tall i egne planfiler og todo-poster viste seg feil ved etterprøving
+
+**Hva skjedde:** Jeg sekvenserte restansen etter sveipen og etterprøvde hvert tall før jeg brukte
+det. Sju av dem holdt ikke — alle fra dokumenter *dette prosjektet* hadde skrevet dagen før,
+etter grundig research med QA-agent:
+
+| Påstand | Faktisk |
+|---|---|
+| `v0.json` dekker 0,59 % av katalogen | **1,5 %** (409 av 27 402) |
+| `full_wine_list.csv.bak` er tracket, konvensjonen er uklar | Ikke tracket. `*.bak` har ligget i `.gitignore` hele tiden |
+| «Fase 2 av hvit/musserende/rosé: ~3–4 t, 13 625 produkter» | 13 625 var enumereringen, som var levert. Det som manglet var **942 details** |
+| Aperitif-sveipen «skriver rett inn i `knowledge/scores/`-formatet» | Ville brutt ADR-003: `_combine_quality` rangerer den mappen over Aperitif, så 14 300 skrapede scorer hadde overkjørt 384 kuraterte |
+| Aperitif-pagineringen | `?side=N` returnerer side 1 uansett. Fungerende form er `/pollisten/pollisten,7,<side>` |
+| «Poeng t.o.m. ~side 475» | Poeng finnes t.o.m. minst side 540; slutter mellom 540 og 600 |
+| «≈14 300 scorede varenumre» | Tak, ikke anslag: side 520 hadde 30 rader med poeng men 18 med varenummer |
+
+Tre av dem ville kostet reelt arbeid: `knowledge/scores/`-feilen hadde stille degradert
+value_score-hierarkiet, pagineringsfeilen hadde gitt 560 identiske sider, og hvis sveipen hadde
+gått til produktsidene i stedet for listeradene var det 25 000 kall i stedet for 560.
+
+**Hvorfor det skjer:** Et dokument skrevet av en grundig prosess *føles* som en målt kilde, særlig
+når det sier «alle tall er målt i repoet, ikke anslått» og har en QA-linje øverst. Men et tall
+arver ikke tilliten fra prosessen som produserte det — det var korrekt mot en tilstand som
+tallet selv ikke navngir, og tilstanden har flyttet seg. Fire av de sju var korrekte da de ble
+skrevet; de tre andre var aldri korrekte.
+
+Beslektet, og verdt å se sammen: dette er samme feilklasse som «grønn av feil grunn» (2026-08-30).
+Der var det en kontroll som ikke kontrollerte; her er det et tall som ikke måler. Begge ser ut som
+belegg.
+
+**Hva jeg gjør annerledes nå:**
+
+- **Mål tallet på nytt før du bygger på det, også når kilden er egen dokumentasjon fra i går.**
+  Kostnaden er sekunder; de sju feilene tok under ti minutter å avdekke til sammen.
+- **Sonder et eksternt format med 3–5 kall før du planlegger et sveip på hundrevis.** Hele
+  pagineringsfeilen og radformat-funnet kom fra 13 forespørsler.
+- **Et tall uten revisjon er en påstand, ikke en måling.** Skriv `catalog.ndjson`-md5 eller
+  commit-SHA ved siden av tallet, ellers kan neste leser ikke vite om det gjelder.
+- **Når et tall spriker, si det høyt i dokumentet** — ikke rett det stille. Alle sju står nå i
+  `todo.md` med både den gamle og den nye verdien, fordi «hvorfor endret dette seg» er et
+  legitimt spørsmål neste gang.

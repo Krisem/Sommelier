@@ -10,6 +10,11 @@ seks faser. Full plan med begrunnelser, tall og verifiseringssteg:
 (rødvin 13 775 · hvitvin 9 762 · musserende 3 081 · rosé 782 · brennevin 2), 1 664 details
 (rødvin 1 379 · hvitvin 140 · musserende 95 · rosé 48 · brennevin 2).
 
+**Status ved sesjonsslutt 2026-08-31:** Fase 1 ferdig og merget til `main` (`387aa63`…`bbe9840`),
+**411 tester grønne**, arbeidstreet rent. Fase 2 er *sondert, ikke kjørt* — pagineringen og
+radformatet er verifisert live mot 13 sider (se fasen under), men ingen sveip er utført og
+`data/aperitif/` finnes ikke ennå. Neste økt starter med sveipen; ingenting annet er halvferdig.
+
 **Styrende prinsipp:** mål én gang. Fase 3 (kodefiksene) kommer før Fase 4 (måleomgangen), fordi
 F2s tall er et øyeblikksbilde fra *midt* i sveipen.
 
@@ -17,6 +22,46 @@ F2s tall er et øyeblikksbilde fra *midt* i sveipen.
 [`plan_whisky.md`](plan_whisky.md) · [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md).
 Begge er nå besluttet i den grad Fase 5/6 beskriver; de gjenstående åpne spørsmålene står i
 Fase 6-gaten under.
+
+---
+
+## ⬅ VENTER PÅ KRISTOFFER
+
+- [ ] **Rate whiskyen du har drukket.** *(sa 2026-08-31 at han gjør det samme kveld)*
+      Dette er den eneste posten i hele planen som ikke kan gjøres uten deg, og den blokkerer Fase 5.
+      Whisky står på **n=0** i dag; alt annet i planen er kode og måling.
+
+      **Slik gjør du det:** bare skriv det i chat, én linje per flaske, i vilkårlig rekkefølge.
+      Claude skriver radene inn i `data/whisky/ratings.csv` — du skal ikke redigere noen fil.
+      Format som holder:
+
+      > Lagavulin 16 – 4,5, røyk og tørr avslutning
+      > Jameson – 2,75, kjedelig
+      > Nikka From The Barrel – 4,25
+
+      **Skalaen er 5-punkt med kvart-trinn** (1,0–5,0), samme som Vivino og Untappd — tersklene i
+      `beer_fit.py` og `user_fit` er kalibrert på den, så en annen skala ødelegger sammenlignbarheten.
+      **Notat er valgfritt.** Fritekst ble skrevet 4 av 211 ganger (1,9 %) på vin og øl, så
+      karakteren må klare seg alene — ikke la et manglende notat stoppe deg fra å ta med en flaske.
+      **Husker du ikke navnet presist, ta det du husker** — Claude slår opp varenummer, destilleri,
+      juridisk kategori, ABV, alder og torv mot Polet og Aperitif.
+
+      **Hvorfor det haster mer enn det ser ut:** en tier-modell trenger ~84 ratinger (SD 0,61 mot en
+      tier-stige som spenner 0,65 poeng). 10–20 flasker i kveld er ikke nok til en modell, men det er
+      mer enn hele byggeplanen leverer på et år uten deg — og det avgjør om Fase 5 skal bygge
+      anbefalinger eller bare lesestoff.
+
+- [ ] **Vin og øl: er det noe uratet?** Ikke etterspurt, bare flagget. Vin går via en Vivino-sync
+      (`docs/vivino_refresh.md`), ikke chat — si ifra om du har ratet noe i appen siden 30. august, da
+      kjører jeg synken. Ølkanalen er død (siste Untappd-check-in 2026-01-16), så har du drukket øl
+      verdt å registrere, må vi finne en annen vei inn enn Untappd.
+
+- [ ] **To designspørsmål før Fase 6 kan starte** (fra
+      [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md), legges fram med målingene fra
+      Fase 4): skal den objektive delen kunne overprøve *rammen* i spørsmålet ditt, og aksepterer du
+      at prediksjonsdelen er taus mesteparten av tiden?
+
+---
 
 ### Fase 1 — nullkost-fikser (~1,5 t)
 
@@ -44,9 +89,8 @@ Fase 6-gaten under.
       (b) `find_similar_by_clocks` bærer nå ADR-025-forbeholdet.
       (c) «Ingen build/lint/test-suite» erstattet med `python3 -m pytest -q` + muteringskravet.
 - [x] **1.7 Ryddet denne fila.** Sveip-tabellen flyttet til `## Ferdig`.
-- [ ] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** Venter på svar. Grovt holder
-      («Lagavulin 16, likte godt» / «Jameson, kjedelig»). Billigste datainnsamling i hele
-      prosjektet, og det eneste som flytter whisky fra n=0.
+- [ ] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** Spurt 2026-08-31, han rater samme
+      kveld. Detaljer og format: se **⬅ VENTER PÅ KRISTOFFER** øverst.
 
 ### Fase 2 — Aperitif-snapshot: delt enabler for begge featurene (~4–5 t)
 
