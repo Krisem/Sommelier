@@ -953,6 +953,47 @@ Den andre inngangen må følge med: `eval_fit._csv_row_to_wine` oversetter `land
 **Alternativer vurdert.** **Hente produktsidene for hver vin** — forkastet: ~14 000 kall for felter listeraden allerede har. **Skrive til `get_aperitif_score`s diskcache** — forkastet: titusener av småfiler, ikke committbart, og ingen lesbar diff.
 
 
+### ADR-031: Bekreftelse er kategori-relativ, og evidens under terskelen gir `fit`
+
+**Status:** Accepted (2026-08-31). Besluttet av Kristoffer etter måling.
+
+**Kontekst.** `very_fit` krevde en stil i `bekreftet_stiler`, utledet med en **absolutt** regel: n ≥ 3 og snitt ≥ 4,0. Måleomgangen viste to konsekvenser av den grensen. **Hvitvin og rosé kunne aldri nå toppkarakter** — 0 av 8 367 hvitviner og 0 av 674 roséer — fordi ingen hvit eller rosé stil nådde 4,0. Og **alle 218 `very_fit` i musserende var engelsk musserende**, på grunnlag av tre ratinger.
+
+Årsaken er at 4,0 ikke er kategorinøytral. Brukeren bruker skalaen ulikt per kategori: rødvin 3,79 i snitt, musserende 4,03, hvitvin 3,88, **rosé 3,30**. En fast grense i absolutt karakterrom er derfor en strengere prøve for rosé enn for musserende, uten at noe ved dataene rettferdiggjør det.
+
+**Beslutning.** `profile_stats.confirmed_styles` avgjør bekreftelse **relativt til kategorien**: n ≥ 3, stilsnittet minst `CONFIRM_MIN_SE` = **1,0 standardfeil** over snittet for stilens egen kategori, og et gulv på brukerens totalsnitt (3,82) så en svak kategori ikke kan krone middelmådighet.
+
+`CONFIRM_MIN_SE` er 1,0 og ikke 0,9 med vilje, og det er en dyr avgjørelse: ved 0,9 endres **3** varer, ved 1,0 endres **262**. Forskjellen mellom «Southern Italy Red» (+0,91 SE) og «Italian Amarone» (+1,04 SE) er 0,13 SE — statistisk ikke skillbart. 0,9 ble likevel forkastet fordi det er valgt *etter* å ha sett hvilket svar 1,0 gir; det er kurvetilpasning til status quo, ikke en terskel.
+
+**Bekreftelsen avgjøres ett sted.** `classify` holdt en egen absolutt 4,0-port i regel 3, altså to porter for samme beslutning — en stil kunne være bekreftet i profilen og likevel stoppes ved klassifisering. Porten er fjernet; `classify` stoler på `bekreftet_stiler`.
+
+**Evidens under terskelen gir `fit`, ikke stillhet.** Uten dette falt «Southern Italy Red» (n=4, snitt 4,05) ut av alle regler, og 186 sicilianske rødviner gikk fra `very_fit` rett til «ingen regler traff» — enda de fire ratingene bak (4,1 · 4,1 · 4,0 · 4,0) alle ligger over brukerens snitt. `profile_stats.positive_styles` fanger stiler med n ≥ 3 over totalsnittet som ikke er bekreftet, og de gir `fit`. Begrunnelsen skriver **«Positivt mønster»**, aldri «Bekreftet stil» — merkelappen skal ikke påstå mer enn evidensen bærer.
+
+**Resultat, målt over 23 717 kjøpbare varer.** `very_fit` 575 → 392. Rødvin 379 → 193, musserende 196 uendret, **rosé 0 → 3**. 186 sicilianske går `very_fit` → `fit`, 73 sør-italienske utenfor Sicilia `fit` → `neutral`, 3 roséer `fit` → `very_fit`. Taket er ikke lenger strukturelt: rosé nås nå, og hvitvin åpner automatisk når evidensen finnes.
+
+**Rosé-matcheren er bundet til druen, ikke distriktet.** «Northern Italy Rosé» hviler på fire rader / tre viner, alle Piemonte — men de to høyeste (4,5 og 4,0) er Nebbiolo-rosé fra Colline Novaresi, mens den generiske Piemonte-rosatoen ligger på 3,5, under totalsnittet. Å binde til distriktet ville gitt 31 viner toppkarakter, inkludert nettopp den historikken rater lavest. Bundet til Nebbiolo gir det 3. Samme avveining som «Southern Italy Red» bundet til Sicilia.
+
+**Alternativer vurdert.** **Beholde 4,0 og bare gjøre taket per kategori** — forkastet: rent strukturelt, hvitvin og rosé ville stått på 0 også etterpå. **Senke n til 2 innenfor kategori** — forkastet: det ville gitt hvitvin toppkarakter via «Jura White», som er *én vin* i to årganger.
+
+### ADR-032: `n=x` på regionene, og et oppslag for samme vin til to priser
+
+**Status:** Accepted (2026-08-31).
+
+**Kontekst, del 1.** `regioner_pluss` er kuratert prosa, ikke auto-derivert, og bar derfor aldri tall. Det lot «Jura» stå som et mønster på linje med «Nord-Italia» i begrunnelsene. Målt gjennom den ekte matcheren er de ikke i nærheten: **Champagne n=11 (10 viner), Tysk Riesling n=6, Nord-Italia n=5 (4 viner), Jura n=2 (1 vin)**. Jura løfter 202 kjøpbare varer fra `neutral` til `fit` på grunnlag av to ratinger av samme Rolet.
+
+**Beslutning, del 1.** `profile_stats.region_evidence` teller ratede viner per regionnedle **gjennom `user_fit._needle_hits`** — den samme matcheren regelen selv bruker. En egen gjenimplementering kunne gitt et annet svar enn regelen den beskriver, og da er tallet verre enn ingen tall. Resultatet skrives som tabell i den auto-deriverte blokka, i samme form som stil-tabellen, så begge de eksisterende parserne gjenbrukes uendret. `_evidens` faller tilbake på regiontallene, og begrunnelsen sier nå «Foretrukket region «Jura» (n=2, snitt 4.25)».
+
+**Kontekst, del 2 (gjeld B7).** Polet fører samme vin på flere varenumre til ulik pris. Ch. Beychevelle 2019 lå målt 2026-08-31 på `17062901` til 1 199,90 **og** `14837601` til 2 188,90 — samme vin, samme årgang, 82 % forskjell. `value_score` sa ingenting, fordi begge rader er normale mot peer-medianen for sin kategori.
+
+**Beslutning, del 2.** `value_score.billigere_duplikat` er et **oppslag, ikke en modell**: samme normaliserte navn, samme volum, lavere pris, blant aktive varer. Funnet legges først i sammendraget, fordi det gjelder uansett hva verdicten ellers lander på — en «dyrt for kvaliteten» til halv pris er fortsatt samme vin til halv pris.
+
+Tre porter, alle målt over 247 rødvinsgrupper: **volum må være likt** (ellers sammenlignes 375 ml med 750 ml), **Spesialutvalget holdes utenfor** (Polets auksjonskanal, der separate partier til ulik pris er forventet — 468 av 792 duplikatrader lå der), og **bare aktive varer** (en billigere rad som ikke kan kjøpes er støy). Årgangs-forbeholdet er **avkreftet, ikke antatt**: 293 av 313 grupper bærer årstallet i selve navnet.
+
+Oppslaget koster 0,19 s — samme størrelsesorden som `_peer_percentile` allerede bruker, siden `polet_store.read_catalog` ikke er memoisert. Akseptert framfor å bygge om cachingen i `polet_store`.
+
+**Alternativer vurdert.** **Forhåndsberegnet duplikat-indeks i `data/`** — forkastet: enda et artefakt som kan bli utdatert mot katalogen. **Uskarpt navnematch på tvers av produsenter** — forkastet: inviterer falske treff, og eksakt navn + volum er allerede pålitelig fordi årstallet står i navnet.
+
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.

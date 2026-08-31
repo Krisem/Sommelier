@@ -16,31 +16,24 @@ i [`maaling_2026-08-31.md`](maaling_2026-08-31.md), festet til revisjon og katal
 Dokumentasjonen er tatt igjen: ADR-028, ADR-029, ADR-030, amendment på ADR-017, README, roadmap
 og `deep-knowledge/INDEX.md`.
 
-### ⚠️ Fase 2 kjører fortsatt — les dette først i neste økt
+### ✅ Fase 2 LANDET 2026-08-31 kl. 14:48
 
-Aperitif-sveipen ble startet i bakgrunnen og var på **~157 av ~560 sider** da økta ble avsluttet.
+Aperitif-sveipen fullførte. **557 sider, 2 retries i hele kjøringen, 0 feil.**
+`data/aperitif/scores.ndjson` har **15 672 rader** (5,7 MB) + `meta.json`. Siste side med poeng
+var 554. Sidecachen ligger fortsatt i `~/.cache/sommelier/aperitif-pages/` (557 filer) og kan
+slettes når snapshotet er pushet.
 
-- **`data/aperitif/` er tomt hvis sveipen ikke rakk å fullføre.** Det er by design: den avbryter
-  framfor å skrive halvt. Sjekk `ls data/aperitif/` — finnes `scores.ndjson`, er sveipen ferdig
-  og trenger bare å committes.
-- **Sidene er mellomlagret varig** i `~/.cache/sommelier/aperitif-pages/` (~157 filer, ~49 MB).
-  Cachen ligger UTENFOR repoet og utenfor sesjons-scratchpaden med vilje.
-- **Slik gjenopptar du — den leser cachen først og henter bare det som mangler:**
+Prosessen **overlevde at sesjonen ble stengt** fordi stdout/stderr pekte på en vanlig fil, ikke en
+pipe fra den døde terminalen. Hadde det vært en pipe, ville den dødd på `BrokenPipeError`.
+Merk for neste gang: **at en prosess finnes i `ps` er ikke bevis for at den arbeider** — sammenlign
+mtime på nyeste `side-*.html` mot klokka i samme kommando.
 
-  ```bash
-  python3 -m tools.refresh_aperitif --cache-dir ~/.cache/sommelier/aperitif-pages
-  ```
+Whisky-seksjonen i `knowledge/whisky.md` er nå skrevet på snapshotet: 316 whiskyer har
+Aperitif-poeng, 16 nordiske, 8 norske. Hovedfunnet er priset — nordisk og skotsk har **samme
+medianscore (89)**, men medianprisen er 833 mot 1 201 kr.
 
-- Regn **2–4 timer** for en full sveip fra bunn; fra dagens cache tilsvarende mindre.
-  Sidene er ~390 kB og svarer på 12–26 s under vedvarende last.
-- **Når den lander:** commit `data/aperitif/scores.ndjson` + `meta.json`, og fyll deretter inn
-  seksjonen om norsk/nordisk sortiment i `knowledge/whisky.md` — den står bevisst tom fordi den
-  skal bygges på snapshotet, ikke på hukommelse om hva Polet fører. Whisky ligger i samme liste
-  som vin, så én sveip dekker begge.
-- **To fallgruver er allerede betalt for, ikke gjenintroduser dem:** timeouten må være sveipens
-  egen (60 s, ikke `_http_get`s 15), og sorterings-vernet må sammenligne medianer, ikke
-  ytterpunkter. Begge meldte «nettstedet svikter» da feilen lå i terskelen min, og begge kastet
-  timevis av arbeid. Se ADR-030 og `lessons.md` 2026-08-31.
+**To fallgruver er allerede betalt for, ikke gjeninnfør dem:** sveipens egen timeout (60 s, ikke
+`_http_get`s 15) og sorterings-vernet som sammenligner medianer, ikke ytterpunkter.
 
 **Styrende prinsipp:** mål én gang. Fase 3 (kodefiksene) kommer før Fase 4 (måleomgangen), fordi
 F2s tall er et øyeblikksbilde fra *midt* i sveipen.
@@ -83,12 +76,15 @@ Fase 6-gaten under.
       kjører jeg synken. Ølkanalen er død (siste Untappd-check-in 2026-01-16), så har du drukket øl
       verdt å registrere, må vi finne en annen vei inn enn Untappd.
 
-- [ ] **To designspørsmål før Fase 6 kan starte** (fra
+- [x] **To designspørsmål før Fase 6 kan starte** — BESVART 2026-08-31: **ja til begge.**
+      Den objektive delen får overprøve rammen i spørsmålet, og prediksjonsdelen får være taus
+      mesteparten av tiden. Fase 6 er dermed ulåst (~8–11 t, ikke påbegynt). (fra
       [`plan_objektiv_anbefaling.md`](plan_objektiv_anbefaling.md)). Målingene fra Fase 4 er nå
       klare, så de kan legges fram: skal den objektive delen kunne overprøve *rammen* i spørsmålet
       ditt, og aksepterer du at prediksjonsdelen er taus mesteparten av tiden?
 
-- [ ] **Fire funn fra måleomgangen som er dine å avgjøre.** Ingen av dem er handlet på — se
+- [x] **Fire funn fra måleomgangen — ALLE AVGJORT 2026-08-31.** Se «Avgjort» under.
+      Opprinnelig formulering: Ingen av dem er handlet på — se
       [`maaling_2026-08-31.md`](maaling_2026-08-31.md) for tallene.
 
       1. **«Jura (Chardonnay)» står som region du dras mot på grunnlag av én vin i to årganger**
@@ -98,6 +94,17 @@ Fase 6-gaten under.
       3. **Hvitvin og rosé kan aldri nå `very_fit`**, fordi ingen av profilens fire bekreftede
          stiler er hvit eller rosé. Er det riktig, eller skal toppkarakteren kunne nås per
          kategori?
+      5. **NYTT, funnet 2026-08-31 tredje økt: «Jura» treffer «Jurançon».** Regelen løfter 202
+         kjøpbare varer fra `neutral` til `fit`. **196 er ekte Jura; 6 er det ikke** — fem
+         Jurançon (en sørvest-appellasjon uten slektskap til Jura) og én «Jurassique».
+         Målt gjennom `classify()` selv, ikke en gjenimplementering.
+         **Dette er samme feilklasse som «Redoma»→«Red», som Fase 3 mente den hadde gjort
+         umulig** — den overlever på `regioner_pluss`-stien fordi `_ci_substring_match` er en
+         naken substring uten ordgrense, og navnefeltet er en av haystackene. Fiksen er ikke
+         gratis: `_ci_substring_match` brukes av alle needle-typene, så en ordgrense der må
+         måles mot hele katalogen før den lander. **Avventer spørsmål 1** — ryker «Jura», ryker
+         fem av de seks av seg selv.
+
       4. **B7: 24 viner der samme vin og årgang ligger på flere varenumre til ulik pris.**
          Beychevelle 2019 koster 1 199,90 og 2 188,90 samtidig, og `value_score` sier ingenting.
          Fiksen er en oppslagssjekk, ikke en modell — skal jeg bygge den?
@@ -270,6 +277,33 @@ prediksjonsdelen er taus mesteparten av tiden? Legges fram med målingene fra Fa
 - [ ] **Ikke bygg:** nivåmarkører som objektivt signal (+2,5 / +1,1 / **−0,8** innenfor prissone —
       en prismarkør, ikke en kvalitetsmarkør); «vis uenigheten mellom kilder» (snittavvik 1,2 poeng
       på de fem vinene med både DN og Aperitif — de er ikke uavhengige meninger).
+
+## Avgjort 2026-08-31, tredje økt — de fire funnene + designporten
+
+Alle besluttet av Kristoffer, implementert og målt. Dokumentert i
+[ADR-031](../docs/ARCHITECTURE.md) og [ADR-032](../docs/ARCHITECTURE.md).
+
+1. **Jura n=1 → «merk alltid n=x ved få reviews».** Generalisert, ikke punktfikset:
+   `profile_stats.region_evidence` teller ratede viner per regionnedle gjennom den EKTE
+   matcheren (`user_fit._needle_hits`), ikke en gjenimplementering. Målt: Champagne n=11
+   (10 viner), Tysk Riesling n=6, Nord-Italia n=5 (4 viner), **Jura n=2 (1 vin)**.
+   Begrunnelsen sier nå «Foretrukket region «Jura» (n=2, snitt 4.25)».
+2. **+ 3. Toppkarakter per kategori, kategori-relativ terskel.** `CONFIRM_MIN_SE` = 1,0 SE over
+   eget kategorisnitt, gulv på totalsnittet. **very_fit 575 → 392; rosé 0 → 3.** Southern Italy
+   Red falt ut (+0,91 SE) og ble fanget av det nye `positive_styles`-nivået → `fit`, ikke stillhet.
+   Kristoffer valgte 1,0 framfor 0,9 selv om 1,0 koster 262 varer mot 3 — 0,9 var kurvetilpasning.
+4. **B7 bygget.** `value_score.billigere_duplikat`. Beychevelle 2019: 2 188,90 → finner
+   1 199,90 på annet varenummer, sparer 989 kr. Tre porter (volum, Spesialutvalget, aktive),
+   alle muteringssjekket.
+5. **Fase 6-porten: ja til begge.** Overprøving av rammen tillatt; taus prediksjonsdel akseptert.
+
+**Ett nytt funn, ikke handlet på:** «Jura» treffer «Jurançon» — 6 av 202 varer er falske treff
+(fem Jurançon, én «Jurassique»). Samme feilklasse som «Redoma»→«Red» som Fase 3 mente den hadde
+gjort umulig; den overlever fordi `_ci_substring_match` mangler ordgrense og vinnavnet er en
+haystack. **Ikke fikset:** endringen treffer alle needle-typer og må måles mot hele katalogen først.
+
+**Ikke bygget, med vilje:** memoisering av `polet_store.read_catalog`. `billigere_duplikat` koster
+0,19 s per oppslag, samme størrelsesorden som `_peer_percentile` allerede bruker.
 
 ## Avklart 2026-08-31 — var åpne beslutninger
 
