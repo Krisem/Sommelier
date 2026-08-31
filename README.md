@@ -11,11 +11,13 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 - Verifisere mot Polet (pris, lager, klokker, drueblanding, stil for både vin og øl) – betinget, ikke automatisk: bare ved kjøp, value-spørsmål, eller når klokker faktisk hjelper.
 - Finne lignende viner via klokke-profil-similarity (euklidsk avstand på fylde/friskhet/garvestoff).
 - Be om presisering ("vin eller øl?") kun ved ekte tvetydighet — gå direkte når lean er åpenbar.
+- **Vise det som faktisk kan kjøpes.** Søk filtrerer bort utsolgt, utgått og langtidsutsolgt (3 685 av 27 402 rader); kommende lanseringer vises med `kommer_snart`-flagg i stedet for å skjules ([ADR-029](docs/ARCHITECTURE.md#adr-029-kjøpbarhet-er-default-lanseres-er-en-tredje-tilstand)).
+- **Svare på whisky** — juridisk kategori, Polets Fylde/Fat/Røyk, servering. Betinget: kun når whisky nevnes, eller ved dessert, ost, digestif og kveldsdram. Whisky står på n=0, så systemet sier hva flasken *er*, aldri hva du vil synes om den.
 
 **Vurdere value**
 - `tools/value_score.py` kombinerer tre signaler til én vurdering:
   1. **Kuratert kritiker-score** (`knowledge/scores/` — DN m.fl., per varenummer) — høyeste tillit
-  2. **Aperitif.no** — faglig norsk vurdering (1–100 + "godt kjøp"-flagg)
+  2. **Aperitif.no** — faglig norsk vurdering (1–100 + "godt kjøp"-flagg). Snapshot i `data/aperitif/` gir poeng offline; produktsiden hentes for «godt kjøp»-flagget, som ikke finnes i lista
   3. **Vivino** — crowd-rating (1–5 + antall ratings)
   4. **Peer-percentile** — hvor prisen ligger relativt til lignende viner på Polet (via fasett-API)
 - Output: `value_verdict` (veldig_godt_kjop / godt_kjop / akseptabelt / dyrt_for_kvaliteten / usikkert) + kort begrunnelse.
@@ -51,6 +53,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 │   ├── sommelier.md                   vin-kjerne: drueprofiler, parring-lover, workflow + Vinmonopolets rammeverk (klokker, stiler, matfarger)
 │   ├── cicerone.md                    øl-kjerne: tre akser, stilfamilier, friskhet, workflow + BJCP-rammeverk (ABV/IBU/SRM, hop/malt/gjær, glass)
 │   ├── smaksprofil.md                 felles profil + auto-derivert vin- og øl-statistikk
+│   ├── whisky.md                      whisky-kjerne: juridiske kategorier, Polets Fylde/Fat/Røyk, servering (n=0 — fag uten preferansedata)
 │   ├── wset_l2_sat.md                 WSET tasting-vokabular
 │   ├── scores/                        kuratert kritiker-score-DB (varenr-indeksert)
 │   │   ├── INDEX.md                   skjema + liste over kilder
@@ -73,34 +76,48 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 │   ├── ol-servering-parring.md, ol-norge-norden.md
 │
 ├── data/
-│   ├── vivino/                        Vivino-eksport (CSV) – 172 viner, 104 ratet
+│   ├── polet/                         repo-committet Polet-snapshot: catalog.ndjson (27 402 varer) + details/ (1 664 sider)
+│   ├── aperitif/                      Aperitif-snapshot: varenr → poeng, sveipet fra Pollisten
+│   ├── vivino/                        Vivino-eksport (CSV) – 172 viner, 122 ratet (115 distinkte)
 │   ├── untappd/checkins.csv           Untappd-scrape (90 check-ins, 2019–2026)
+│   ├── whisky/                        ratings.csv + README (tom — Kristoffer dikterer i chat)
 │   ├── reference/                     PDF-er (Food&Wine, Zoecklein, TWS Vintage)
 │   └── user_fit/                      pre-computet fit-klassifisering (regenereres av profile_stats.py)
 │
 ├── tools/
-│   ├── vinmonopolet.py                Polet-API (search, search_with_facets, get_product_details, parse_product_html, find_similar_by_clocks) + diskcache
-│   ├── aperitif.py                    Aperitif.no score-scraper + diskcache
+│   ├── vinmonopolet.py                Polet-søk mot snapshot (search, search_with_facets, get_product_details, parse_product_html, find_similar_by_clocks)
+│   ├── polet_store.py                 lese/skrive-lag for data/polet/ (query, lookup, details, statusfilter)
+│   ├── polet_facets.py, polet_live.py, polet_details.py, refresh_polet.py, seed_polet_store.py
+│   ├── aperitif.py                    Aperitif-score: snapshot + on-demand scraping
+│   ├── refresh_aperitif.py            sveiper Pollistens listesider → data/aperitif/scores.ndjson
 │   ├── vivino.py                      Vivino lookup + diskcache
 │   ├── scores.py                      Indekserer knowledge/scores/*.md per varenummer
 │   ├── value_score.py                 Kombinerer kuratert + Aperitif + Vivino + peer-percentile (parallell I/O, 24t cache)
 │   ├── profile_stats.py               auto-derivér vin-statistikk fra Vivino-CSV
 │   ├── untappd_stats.py               auto-derivér øl-statistikk fra Untappd-CSV
 │   ├── user_fit.py                    rule-based fit-classifier mot smaksprofil (v0)
+│   ├── beer_fit.py                    stilfamilie → tier for øl
+│   ├── eval_fit.py                    modell-agnostisk rangerings-eval mot brukerens egne ratinger
+│   ├── vivino_sync.py                 merger nye Vivino-ratinger inn i CSV (idempotent)
 │   └── aroma_wheel.html               D3-sunburst med Davis/Noble-hjul
 │
-├── tests/                             pytest-suite (31 tester, ~1s warm)
+├── tests/                             pytest-suite (471 tester, ~21s, alle offline)
 │   ├── conftest.py                    legger repo-roten på sys.path
-│   ├── test_knowledge_content.py      innholds-basert (fil-agnostisk)
-│   ├── test_scores_index.py           score-DB parser-kontrakt
-│   ├── test_value_score.py            end-to-end smoke + cache-treff
-│   ├── test_vinmonopolet.py           Polet search-kontrakt
+│   ├── test_knowledge_content.py      innholds-basert (fil-agnostisk) + whisky-forbeholdene
+│   ├── test_user_fit.py               regel-parsing, matching og fordelings-assertions mot ekte katalog
+│   ├── test_polet_store.py            query/statusfilter/round-trip
+│   ├── test_refresh_aperitif.py       parsing av listesider + drift-vernet i sveipen
+│   ├── test_managed_block_roundtrip.py   alt utenfor sentinelene skal være bit-identisk
+│   ├── test_scores_index.py, test_value_score.py, test_vinmonopolet.py, test_eval_fit.py, …
 │   ├── test_vinmonopolet_html_fixture.py   drift-vern mot Polet DOM-endringer
-│   └── fixtures/vinmonopolet/         pinnet HTML for parse_product_html
+│   └── fixtures/                      pinnet HTML for Polet-produktside og Aperitif-listesider
 │
 └── tasks/
     ├── todo.md                        aktive oppgaver
-    └── lessons.md                     læring fra korreksjoner (vin og øl)
+    ├── lessons.md                     læring fra korreksjoner og egne feil
+    ├── maaling_2026-08-31.md          måleomgang, festet til revisjon + katalog-md5
+    ├── plan_whisky.md, plan_objektiv_anbefaling.md
+    └── exploration/                   utforsknings-frontier per blindsone
 ```
 
 ## Bruk
@@ -174,7 +191,9 @@ python3 -m pytest tests/ -v
 
 ## Test-suite
 
-31 tester på ~1 sekund (warm cache). Bygd som innholds-baserte kontrakt-tester, ikke implementasjonsdetaljer — overlever refactors. Tester med `@pytest.mark.network` krever Polet/Aperitif/Vivino-tilgang.
+**471 tester på ~21 sekunder, alle offline** (per 2026-08-31). Bygd som innholds-baserte kontrakt-tester, ikke implementasjonsdetaljer — de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. Tester med `@pytest.mark.network` krever Polet/Aperitif/Vivino-tilgang.
+
+**Legger du til en test: muter antagelsen og bekreft at den faktisk feiler.** «Grønn av feil grunn» er den mest gjentatte feilen i dette repoet, og den går begge veier — en test som aldri når koden den påstår å teste, og en fixture som mangler et felt produksjonsdata alltid har. Muter det *nøyaktige* uttrykket testen påstår noe om, og sjekk at det er den testen som faller.
 
 ```bash
 python3 -m pytest tests/ -v                   # alle
@@ -208,7 +227,8 @@ Alt eksternt caches på disk i `~/.cache/sommelier/`:
 | Polet fasett-søk | 24t | `search_facets_*.json` |
 | Polet produktdetaljer | 7d | `details_*.json` |
 | Vivino | 7d | `vivino/*.json` |
-| Aperitif score | 14d | `aperitif/score_*.json` |
+| Aperitif score (per vin) | 14d | `aperitif/score_*.json` |
+| Aperitif listesider (sveip) | permanent, manuell | `aperitif-pages/side-NNNN.html` |
 | Aperitif sitemap | 30d | `aperitif/sitemap_index.json` |
 | value_score (full pipeline) | 24t | `value_score/v1_*.json` |
 
@@ -223,7 +243,7 @@ Etter optimaliserings-økten 2026-05-14:
 | `compute_value_score` | ~10s | <50ms |
 | `_peer_percentile` (fasett-API) | 160ms | <1ms |
 | `tools.scores.index()` (422 entries) | 50ms | <1ms |
-| Full test-suite | ~2s | 0.9s |
+| Full test-suite (471 tester) | ~21s | ~21s |
 
 ## Vedlikehold
 
@@ -237,6 +257,12 @@ Etter optimaliserings-økten 2026-05-14:
 1. Untappd har ingen åpen eksport — full historikk krever autentisert Playwright-scrape (Claude kan kjøre det). Etter at `data/untappd/checkins.csv` er oppdatert:
 2. Kjør `python3 tools/untappd_stats.py` – øl-blokken i `smaksprofil.md` regenereres.
 3. Be Claude om å gjennomgå nye stiler / bryggerier / sesongmønstre.
+
+**Etter refresh av Aperitif-snapshotet:**
+1. `python3 -m tools.refresh_aperitif --cache-dir ~/.cache/sommelier/aperitif-pages` ✍️
+2. Sveipen tar ~560 sider à 12–26 s, altså 2–4 timer. Den **avbryter framfor å skrive halvt** ved tom side, paginering som ikke rykker, eller sortering som endrer seg — så `data/aperitif/` er enten komplett eller urørt.
+3. `--cache-dir` gjør en avbrutt sveip gjenopptagbar: allerede hentede sider leses fra disk. Bruk alltid flagget.
+4. Commit `data/aperitif/scores.ndjson` + `meta.json`.
 
 **Etter nytt Polet-slipp med kritiker-test:**
 1. Be Claude om å parse PDF-en (eller artikkelen) inn i `knowledge/scores/<kilde-slug>.md` etter skjemaet i `INDEX.md`.
@@ -257,8 +283,11 @@ Etter optimaliserings-økten 2026-05-14:
 
 Alle vesentlige designvalg er dokumentert som ADR-er (Architecture Decision Records) i [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). Bla gjennom for kontekst på hvorfor ting er gjort som de er — særlig:
 
-- Hvorfor score-DB er markdown og ikke SQLite
-- Hvorfor tre-tier kvalitets-hierarki (kuratert > Aperitif > Vivino)
-- Hvorfor Polet-helper er strukturert som den er
+- Hvorfor score-DB er markdown og ikke SQLite ([ADR-002](docs/ARCHITECTURE.md#adr-002-knowledgescores-som-markdown-ikke-sqlite))
+- Hvorfor tre-tier kvalitets-hierarki (kuratert > Aperitif > Vivino) ([ADR-003](docs/ARCHITECTURE.md#adr-003-tre-tier-kvalitets-hierarki-i-value_score))
+- Hvorfor Polet-data ligger som repo-committet snapshot ([ADR-020](docs/ARCHITECTURE.md#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only), [ADR-021](docs/ARCHITECTURE.md#adr-021-remote-browser-via-cdp--device-agnostisk-refresh))
+- Hvorfor klokke-similarity er degradert til grovfilter ([ADR-025](docs/ARCHITECTURE.md#adr-025-klokke-similarity-degradert-til-grovfilter--målt-null-diskriminering)) — klokkene korrelerer ~0 med brukerens egne ratinger
+- Hvorfor reglene og katalogen skriver samme språk ([ADR-028](docs/ARCHITECTURE.md#adr-028-ett-vokabular-i-stedet-for-to--norsk-på-begge-sider-av-matchingen)) — og hva det kostet i målt rangeringsevne
+- Hvorfor kjøpbarhet er default i søk ([ADR-029](docs/ARCHITECTURE.md#adr-029-kjøpbarhet-er-default-lanseres-er-en-tredje-tilstand))
 - Hvorfor knowledge-filer ble slått sammen
 - Hvilken teknisk gjeld vi kjenner og når den blir kritisk

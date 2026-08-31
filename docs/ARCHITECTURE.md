@@ -923,6 +923,36 @@ Den andre inngangen må følge med: `eval_fit._csv_row_to_wine` oversetter `land
 **Konsekvens for testene.** 15 tester falt. Fem av dem falt fordi fixture-radene manglet `status` og dermed ble filtrert bort av en helt annen grunn enn den de testet — grønt av feil grunn i motsatt retning. `_product` setter nå «aktiv», som er det en ekte rad stort sett er (22 921 av 27 402). Hver test er lest og oppdatert enkeltvis; ingen masseoppdatering.
 
 
+---
+
+### ADR-030: Aperitif-snapshot som fallback og bulk-kilde — ikke som lag foran nettverket
+
+**Status:** Accepted (2026-08-31).
+
+**Kontekst.** `tools/aperitif.py` slo opp én vin av gangen: finn slug i sitemap (34 HTTP-kall ved cold start), gjett URL på token-overlapp mot navnet, verifiser varenummeret på siden. To til fem oppslag per anbefaling, med et heuristisk navnematch som kan lande på feil årgang. Aperitif rangerer samtidig **hele** Polets sortiment på egne poeng, i en liste som er åpen for skraping (`robots.txt` tillater `/pollisten`-stiene; `?query=`, `/api/*`, `/ajax/*` og `/load` er blokkert, og vi bruker ingen av dem).
+
+**Beslutning.** `tools/refresh_aperitif.py` sveiper listesidene til `data/aperitif/scores.ndjson` — samme snapshot-mønster som `data/polet/` ([ADR-020](#adr-020-repo-committet-polet-snapshot--cross-device-desktop-refresh--android-read-only)). Listeraden bærer varenummer i `<span class="index">` og poeng i **nøyaktig samme markup som `_parse_product_page` allerede matcher**, så sveipen henter ingen produktsider. Én kjøring dekker både vin og whisky: begge ligger i samme points_desc-sorterte liste.
+
+**Snapshotet skrives IKKE til `knowledge/scores/`.** Begge planfilene foreslo det. Det ville brutt [ADR-003](#adr-003-tre-tier-kvalitets-hierarki-i-value_score): `value_score._combine_quality` rangerer `knowledge/scores/` **over** Aperitif, så ~14 000 maskinskrapede scorer ville forfremmet seg selv til tier 1 og stille overkjørt de 384 kuraterte DN-scorene. Formatet tåler det heller ikke — mappen er markdown, ~8 linjer per vin.
+
+**Og snapshotet leses ikke FØR nettverket.** Planen sa det, og det ville vært en stille nedgradering: **listesiden bærer ikke «godt kjøp»-flagget** (verifisert på sju listesider — null treff). Flagget er ikke pynt, det kortslutter `_value_verdict`, og 5 av 9 cachede oppslag hadde det satt. Snapshotet brukes derfor der det er *strengt bedre* enn nettet:
+
+- `offline=True` for bulk over katalogen, uten HTTP i det hele tatt.
+- Når nettoppslaget ikke fant vinen — uten navn, med oppbrukte kandidater, eller med død mapping-URL. Der var svaret `None` før.
+- Når nettoppslaget bare fant en **annen årgang**. Poeng og flagg på den siden tilhører en annen vin, mens snapshotraden er matchet på varenummer.
+
+**Drift-vernet avbryter framfor å skrive halvt** ved tom side, paginering som ikke rykker, eller sortering som endrer seg. To justeringer måtte til før det var brukbart, og begge er lærdom i seg selv:
+
+1. **Timeouten var kortere enn sidene.** Sidene er ~390 kB og måler 0,4–12 s; `_http_get` hadde 15 s default. Første kjøring døde på side 222 etter 220 siders arbeid, og meldte «svarer ikke» om noe som var «svarer for sakte for min egen grense». Sveipen eier nå sin egen timeout (60 s), og sidene mellomlagres så et fall ikke koster alt.
+2. **Sorterings-vernet var for strengt.** Det sammenlignet sidens høyeste poeng mot forrige sides laveste, og døde på side 133: side 132 hadde én enkelt 89 midt i tretti 90-ere. Lista er monoton på **sidenivå**, ikke på radnivå. Vernet sammenligner nå median mot median med to poengs slakk — ekte drift flytter medianen mange poeng, ikke ett.
+
+> **Generelt: et vern som melder feil årsak er verre enn ingen vern.** Begge feilene pekte utover — mot nettstedet — mens årsaken lå i mine egne terskler, og begge kastet timevis av arbeid på veien.
+
+**Forbehold som er skrevet inn i selve snapshotet, ikke bare her:** Spearman(poeng, pris) er **+0,65** for whisky og **+0,80** for DN-vin. «Høyest score» ≈ «dyrest». Prissone-lås er en forutsetning for å bruke disse poengene til rangering, ikke en pynt. Rader uten varenummer i lista er utelatt — de kan ikke slås opp mot Polet.
+
+**Alternativer vurdert.** **Hente produktsidene for hver vin** — forkastet: ~14 000 kall for felter listeraden allerede har. **Skrive til `get_aperitif_score`s diskcache** — forkastet: titusener av småfiler, ikke committbart, og ingen lesbar diff.
+
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.
@@ -934,7 +964,7 @@ Ranket etter risiko × sannsynlighet.
 | **0b** | **118 orphan-details venter re-knytting** | Rekonstruerte klokkedata uten code-mapping i `_orphan_details.json` (gamle cache-URL-er overskrevet av TTL) | Similarity/dybde mangler for disse vinene til de re-hentes med varenr | Re-hent details for finalister via desktop-refresh; matchede orphans flyttes til `details/<varenr>.json` |
 | 1 | Polet HTML-scraping i `parse_product_html` | 12 regex over Polets DOM — sårbar for redesign | Når Polet kommer med ny webshop (sannsynlig <12 mnd) | Fixture-test feiler (allerede på plass — ADR-011); supplert av positiv validering i `save_details` (ADR-020) |
 | 2 | `knowledge/scores/` krysser data/knowledge-grensen (ADR-002) | Strukturelt data, lagret som knowledge | Ved 2000+ entries eller behov for sekundær-indeks | Manuell vurdering hver 6. mnd |
-| 3 | Aperitif sitemap-bootstrap er 34 HTTP-kall | Cold path ved første kjøring eller etter 30 d | Når brukeren stiller første Aperitif-spørsmål på over en måned | Vurder lazy-pre-fetch i `tools/aperitif.py` |
+| ~~**3**~~ | ~~Aperitif sitemap-bootstrap er 34 HTTP-kall~~ **DELVIS ADRESSERT 2026-08-31** | Snapshotet i `data/aperitif/` ([ADR-030](#adr-030-aperitif-snapshot-som-fallback-og-bulk-kilde--ikke-som-lag-foran-nettverket)) gir poeng uten nettverk, så sitemap-stien treffes bare når «godt kjøp»-flagget faktisk trengs | Gjenstår for flagg-oppslag på en vin som ikke er cachet | Ingen — restrisikoen er akseptert |
 | 4 | `tools/scores.index()` re-parser 422 entries per prosess | `lru_cache` er prosess-lokal; Bash-call = ny prosess | Ved 5000+ entries (>500 ms parse-tid) | Bygg `knowledge/scores/_index.json` ved git pre-commit |
 | 5 | `find_similar_by_clocks` er sekvensiell | Henter detaljer N×M for kandidater | Ved bulk-similarity-søk | Parallellisér med ThreadPoolExecutor |
 | ~~**6**~~ | ~~Klokke-profil-tabellen har bare 2 oppføringer~~ **AVKLART 2026-08-30 — premisset var feil** | Tabellen er nå 25 rader, og målingen viser at problemet ikke var n: klokkene korrelerer ~0 med brukerens rating (+0,16 / +0,09 / −0,10), og alle 6 grupper med identiske klokker spenner over ratingskalaen. Se [ADR-025](#adr-025-klokke-similarity-degradert-til-grovfilter--målt-null-diskriminering) | — (ikke lenger «for lite data»; nå en kjent grense for metoden) | Bruk klokkene kun som stil-grovfilter. Gjenstående reell svakhet: klokkene er fra dagens årgang, ratingene 1–14 år eldre |

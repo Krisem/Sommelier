@@ -5,6 +5,12 @@
 >
 > **Ikke bruker-spesifikk.** For bruker-preferanser og no-go-liste: `../knowledge/smaksprofil.md`.
 > **Ikke operasjonell.** For arbeidsflyt og kjerneregler: `../knowledge/sommelier.md`.
+>
+> **Whisky har ingen deep-knowledge-fil, og det er et valg.** Hele fagfundamentet ligger i
+> `../knowledge/whisky.md` (139 linjer). Øl fikk 3 646 linjer deep-knowledge bygget rundt en
+> manuell datakanal som døde sju måneder senere (siste Untappd-check-in 2026-01-16); whisky står
+> på n=0 ratinger, og skal ikke gjenta det løpet. Deep-knowledge for whisky bygges først når det
+> finnes ratinger som viser hvor kunnskapen trengs.
 
 ## Filer og innhold
 
@@ -44,6 +50,7 @@ Vanlige forespørsler og passende deep-dive:
 - "Bør jeg dekantere?" → `servering-og-lagring.md` § 7.3 (tabell per stil)
 - "Hvilken årgang er best?" → `norsk-marked.md` (vintage-tabell) + region-fil for klimakontekst
 - "Hva med tilberedningsmetoden?" → `servering-og-lagring.md` § 7.6, tilberedningsmetode-tabellen (rå/dampet/stekt/grillet/braisert/røkt/friert)
+- "Hva er forskjellen på bourbon og Scotch?" / dram, torv, Islay, single malt → `../knowledge/whisky.md`. **Ingen deep-knowledge-fil for whisky** — kjernefilen er hele fundamentet
 
 **Trigger-ord → fil:**
 
