@@ -551,3 +551,54 @@ def test_peer_median_does_not_drift_from_population_median(real_catalog):
         checked += 1
 
     assert checked >= 5, f"Bare {checked} store pools testet — snapshotet ser feil ut"
+
+
+# ─── B7: samme vin på flere varenumre til ulik pris (2026-08-31) ──────
+
+def _rad(code, navn, pris, vol=75.0, utvalg="Bestillingsutvalget", status="aktiv"):
+    return {
+        "code": code, "name": navn, "status": status,
+        "price": {"value": pris}, "volume": {"value": vol},
+        "product_selection": utvalg,
+        "main_category": {"name": "Rødvin", "code": "rodvin"},
+        "main_country": {"name": "Frankrike", "code": "frankrike"},
+    }
+
+
+def test_billigere_duplikat_finner_samme_vin_til_lavere_pris(monkeypatch):
+    """Beychevelle 2019 lå 2026-08-31 på 1 199,90 OG 2 188,90 samtidig."""
+    from tools import value_score
+
+    katalog = [_rad("A", "Ch. Beychevelle 2019", 2188.9),
+               _rad("B", "Ch. Beychevelle 2019", 1199.9)]
+    monkeypatch.setattr(value_score.polet_store, "query", lambda **k: katalog)
+
+    funn = value_score.billigere_duplikat(katalog[0])
+    assert funn["varenummer"] == "B"
+    assert funn["du_sparer"] == 989.0
+    # Asymmetrisk: den billigste raden har ingenting billigere å peke på.
+    assert value_score.billigere_duplikat(katalog[1]) is None
+
+
+def test_ulikt_volum_er_ikke_samme_flaske(monkeypatch):
+    """Uten volum-porten sammenlignes 375 ml med 750 ml."""
+    from tools import value_score
+
+    katalog = [_rad("A", "Ch. Beychevelle 2019", 2188.9, vol=75.0),
+               _rad("B", "Ch. Beychevelle 2019", 1199.9, vol=37.5)]
+    monkeypatch.setattr(value_score.polet_store, "query", lambda **k: katalog)
+    assert value_score.billigere_duplikat(katalog[0]) is None
+
+
+def test_spesialutvalget_er_ikke_en_prisfeil(monkeypatch):
+    """Polets auksjonskanal — separate partier til ulik pris er forventet.
+
+    468 av 792 duplikatrader lå der 2026-08-31; uten porten ville de dominert
+    funnene med noe som ikke er en feil.
+    """
+    from tools import value_score
+
+    katalog = [_rad("A", "Ch. Beychevelle 2019", 2188.9),
+               _rad("B", "Ch. Beychevelle 2019", 1199.9, utvalg="Spesialutvalget")]
+    monkeypatch.setattr(value_score.polet_store, "query", lambda **k: katalog)
+    assert value_score.billigere_duplikat(katalog[0]) is None

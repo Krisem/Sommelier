@@ -173,6 +173,69 @@ def _peer_prices(rows: list[dict], own_code: Optional[str]) -> list[float]:
     return out
 
 
+def _normaliser_duplikatnavn(navn: str) -> str:
+    """Navn til sammenligningsform: små bokstaver, kollapset whitespace."""
+    return " ".join(str(navn or "").lower().split())
+
+
+def billigere_duplikat(polet_product: dict) -> Optional[dict]:
+    """Samme vin, samme aargang, samme volum — men et annet varenummer til lavere pris.
+
+    Polet forer samme vin paa flere varenumre. Ch. Beychevelle 2019 laa
+    2026-08-31 paa 17062901 til 1 199,90 OG paa 14837601 til 2 188,90: samme
+    vin, samme aargang, 82 % prisforskjell. `value_score` sammenlignet mot
+    peer-medianen og sa ingenting, fordi begge radene er «normale» for sin
+    kategori. Dette er et OPPSLAG, ikke en modell — spoersmaalet er ikke om
+    vinen er verdt prisen, men om NOEYAKTIG samme flaske står billigere i
+    samme hylle.
+
+    Tre porter, alle maalt fram 2026-08-31 over 247 rodvinsgrupper:
+
+    - **Volum maa vaere likt.** Ellers sammenlignes 375 ml med 750 ml.
+    - **Spesialutvalget holdes utenfor.** Det er Polets auksjonskanal, der
+      separate partier til ulik pris er forventet og ikke en feil. 468 av 792
+      duplikatrader laa der.
+    - **Bare aktive varer.** En billigere rad som ikke kan kjopes er stoy.
+
+    Aargangs-forbeholdet er AVKREFTET, ikke antatt: 293 av 313 grupper baerer
+    aarstallet i selve navnet, saa identisk navn + volum er i praksis identisk
+    vin OG aargang.
+    """
+    navn = _normaliser_duplikatnavn(polet_product.get("name"))
+    pris = (polet_product.get("price") or {}).get("value")
+    vol = (polet_product.get("volume") or {}).get("value")
+    egen_kode = polet_product.get("code")
+    if not navn or pris is None or vol is None:
+        return None
+    if "spesial" in str(polet_product.get("product_selection", "")).lower():
+        return None
+
+    billigst = None
+    for rad in polet_store.query(active_only=True):
+        if rad.get("code") == egen_kode:
+            continue
+        if _normaliser_duplikatnavn(rad.get("name")) != navn:
+            continue
+        if (rad.get("volume") or {}).get("value") != vol:
+            continue
+        if "spesial" in str(rad.get("product_selection", "")).lower():
+            continue
+        annen_pris = (rad.get("price") or {}).get("value")
+        if annen_pris is None or annen_pris >= pris:
+            continue
+        if billigst is None or annen_pris < billigst["pris"]:
+            billigst = {
+                "varenummer": rad.get("code"),
+                "pris": annen_pris,
+                "utvalg": rad.get("product_selection"),
+            }
+    if billigst is None:
+        return None
+    billigst["du_sparer"] = round(pris - billigst["pris"], 2)
+    billigst["andel"] = round(1 - billigst["pris"] / pris, 3)
+    return billigst
+
+
 def _peer_percentile(polet_product: dict) -> Optional[dict]:
     """
     Sammenlign pris med HELE peer-populasjonen (samme kategori + land) i snapshotet.
@@ -404,6 +467,19 @@ def compute_value_score(
             "peer-data mangler i snapshot — refresh fra desktop for prissammenligning"
         )
 
+    # Duplikat-funnet legges FØRST i parts: det er den eneste linja her som kan
+    # spare brukeren et firesifret beløp, og den gjelder uansett hva verdicten
+    # ellers lander paa — en «dyrt for kvaliteten» til halv pris er fortsatt
+    # samme vin til halv pris.
+    _dup = billigere_duplikat(polet_product)
+    if _dup:
+        parts.insert(
+            0,
+            f"SAMME vin st\u00e5r p\u00e5 varenummer {_dup['varenummer']} til "
+            f"{_dup['pris']:.2f} kr \u2014 du sparer {_dup['du_sparer']:.0f} kr "
+            f"({_dup['andel'] * 100:.0f} %)",
+        )
+
     # Base-summary uten aldersmerking. Unngå dobbelt-punktum når parts er tom.
     verdict_text_map = {
         "veldig_godt_kjop": "Veldig godt kjøp",
@@ -425,6 +501,7 @@ def compute_value_score(
         "peer_status": "refresh_required" if peer_refresh_required else "ok",
         "quality_tier": quality,
         "value_verdict": verdict,
+        "billigere_duplikat": _dup,
         "_base_summary": base_summary,
     }
     # Aldersmerking regnes ved hvert retur (også cache-treff) — se _apply_snapshot_age.
