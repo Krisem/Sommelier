@@ -1,1 +1,8 @@
-varenummer,navn,destilleri,rating,dato,land,region,juridisk_kategori,abv,alder,torv,fattype,pris,notat
+varenummer,navn,destilleri,rating,dato,drukket_dato,anledning,land,region,juridisk_kategori,abv,alder,torv,fattype,pris,notat
+464401,Lagavulin 16 YO Single Malt,Lagavulin,4.00,2026-08-31,,,Skottland,Islay,Scotch single malt,43,16,ja,ex-bourbon/refill,1099.90,
+1975701,Nikka Coffey Grain,Nikka (Miyagikyo),4.50,2026-08-31,,,Japan,,Japansk single grain,45,,nei,ex-bourbon,699.90,
+11356801,Glenmorangie Quinta Ruban 14 YO,Glenmorangie,3.75,2026-08-31,,,Skottland,Highland,Scotch single malt,46,14,nei,ex-bourbon + portfat-finish,879.90,
+12701,Highland Park 12 YO,Highland Park,4.25,2026-08-31,,,Skottland,Highland,Scotch single malt,40,12,lett,ex-sherry,599.90,
+3021801,Balvenie Doublewood 12 YO,Balvenie,4.25,2026-08-31,,,Skottland,Speyside,Scotch single malt,40,12,nei,ex-bourbon + oloroso-finish,799.90,
+468001,Talisker Single Malt 10 Years Old,Talisker,4.25,2026-08-31,,,Skottland,Highland,Scotch single malt,45.8,10,ja,ex-bourbon/refill,629.90,
+579401,Laphroaig Single Malt 10 Years Old,Laphroaig,4.00,2026-08-31,,,Skottland,Islay,Scotch single malt,40,10,ja,ex-bourbon,664.90,

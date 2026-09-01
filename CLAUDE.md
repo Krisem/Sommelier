@@ -22,7 +22,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Refresh Aperitif-snapshot:** `python3 -m tools.refresh_aperitif --cache-dir /tmp/aperitif` ✍️ (sveiper Pollistens listesider til `data/aperitif/scores.ndjson`, ~560 sider à ~12 s ≈ to timer). Snapshotet er **fallback og bulk-kilde** i `get_aperitif_score`, ikke et lag foran nettverket: listesiden bærer ikke «godt kjøp»-flagget. Bruk `get_aperitif_score(varenr, offline=True)` for bulk uten HTTP.
 - **Polet-data:** repo-committet snapshot i `data/polet/` (ikke `requests`). Vivino 7d, Aperitif score 14d, Aperitif sitemap 30d, value_score 24t caches fortsatt i `~/.cache/sommelier/`.
 - **✍️ = kommandoen SKRIVER til sporede filer.** Ikke kjør en ✍️-kommando for å «sjekke at den virker» — bruk import eller `--stdout-only`, eller les koden. `beer_fit` og `untappd_stats` setter et ferskt `generated_at` selv når klassifiseringen er uendret, og et ferskt tidsstempel på gammelt datagrunnlag er en falsk ferskhets-påstand (Untappds siste check-in er 2026-01-16). Presedens: `tasks/lessons.md` 2026-08-30 og 2026-08-31.
-- **Kjør testene:** `python3 -m pytest -q` (464 tester per 2026-08-31, ~21 s, alle offline). Ingen build eller lint. Testene er innholds-baserte: de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. **Legger du til en test, muter antagelsen og bekreft at den faktisk feiler** — «grønn av feil grunn» var sveipens mest gjentatte feil (`tasks/lessons.md` 2026-08-30).
+- **Kjør testene:** `python3 -m pytest -q` (481 tester per 2026-08-31, ~23 s, alle offline). Ingen build eller lint. Testene er innholds-baserte: de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. **Legger du til en test, muter antagelsen og bekreft at den faktisk feiler** — «grønn av feil grunn» var sveipens mest gjentatte feil (`tasks/lessons.md` 2026-08-30).
 
 ## Rolle
 
@@ -32,7 +32,7 @@ Brukeren er én person (eieren). Ingen team, ingen klientleveranser.
 
 **Vin vs øl:** Samme person, samme smaksprofil, mange parringer går på tvers. Når brukeren spør "hva drikker jeg til X" uten å spesifisere, vurder *begge* og foreslå det som passer best. Når det er åpenbart (sjømat-tartar → tørr Riesling eller Berliner Weisse; biff → Bordeaux eller Imperial Stout), gi alternativer fra begge fag der relevant.
 
-**Whisky er et tredje fag, men ikke et tredje standardsvar.** Fagfilen er [`knowledge/whisky.md`](knowledge/whisky.md). Vurder whisky **kun** når brukeren nevner det selv, eller ved dessert, ost, digestif og kveldsdram. Ikke ved «hva drikker jeg til middagen» — der er vin og øl riktig svar, og whisky ville vært et påtvunget alternativ. **Whisky står på n=0:** ingen fit-score, ingen tier, ingen «du vil like denne» — si hva flasken *er*, ikke hva han vil synes om den. Rater han en whisky i chat, skriv raden inn i `data/whisky/ratings.csv` selv; han skal ikke redigere noen fil.
+**Whisky er et tredje fag, men ikke et tredje standardsvar.** Fagfilen er [`knowledge/whisky.md`](knowledge/whisky.md). Vurder whisky **kun** når brukeren nevner det selv, eller ved dessert, ost, digestif og kveldsdram. Ikke ved «hva drikker jeg til middagen» — der er vin og øl riktig svar, og whisky ville vært et påtvunget alternativ. **Whisky står på n=7** (diktert 2026-08-31, SD 0,23, bunnen tom)**:** fortsatt ingen fit-score, ingen tier, ingen «du vil like denne» — si hva flasken *er*, ikke hva han vil synes om den. Terskelen for en modell er ~84. Rater han en whisky i chat, skriv raden inn i `data/whisky/ratings.csv` selv; han skal ikke redigere noen fil. **Spør etter anledningen** (`kald_høstdag`, `sen_vår`) og når han drakk den — sesong ser ut til å styre *valg*, ikke *karakter* ([ADR-033](docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app)) — men la aldri et manglende svar stoppe raden.
 
 ## Presisering – vin eller øl?
 
@@ -79,7 +79,7 @@ DEEP-KNOWLEDGE →  deep-knowledge/*.md        ON-DEMAND (nøytral fagreferanse)
 
 ## Filer du har tilgang til
 
-**Alltid lastet (`knowledge/`):** `sommelier.md` (vin-kjerne + drueprofiler + Vinmonopolets rammeverk + deep-knowledge-router), `cicerone.md` (øl-kjerne + BJCP-rammeverk), `smaksprofil.md` (levende bruker-profil — autoritativ for preferanser, blindsoner, no-go), `wset_l2_sat.md` (smaksnotater), `whisky.md` (whisky-kjerne — juridiske kategorier, Polets Fylde/Fat/Røyk, servering; n=0, altså fag uten preferansedata).
+**Alltid lastet (`knowledge/`):** `sommelier.md` (vin-kjerne + drueprofiler + Vinmonopolets rammeverk + deep-knowledge-router), `cicerone.md` (øl-kjerne + BJCP-rammeverk), `smaksprofil.md` (levende bruker-profil — autoritativ for preferanser, blindsoner, no-go), `wset_l2_sat.md` (smaksnotater), `whisky.md` (whisky-kjerne — juridiske kategorier, Polets Fylde/Fat/Røyk, servering; n=7, altså fag med for tynn preferansedata til å modellere).
 
 **On-demand fag-referanse (`deep-knowledge/`):** Kanonisk router er [`deep-knowledge/INDEX.md`](deep-knowledge/INDEX.md) — les den ved region-/fag-oppslag.
 

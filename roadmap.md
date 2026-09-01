@@ -274,7 +274,7 @@ Parser øl-blokken i `smaksprofil.md` → klassifiserer hver BJCP-stilfamilie i 
 | Ett vokabular i regler og katalog | 2026-08-31 | `tools/user_fit.py`, `profile_stats.py`, `eval_fit.py` | [ADR-028](docs/ARCHITECTURE.md#adr-028-ett-vokabular-i-stedet-for-to--norsk-på-begge-sider-av-matchingen) | Oversettelses-tabellene fjernet; matching er eksakt. 126 varer skifter dom. **`v0_tier` +0,33 → +0,20** — første måling av modellen slik den faktisk kjører. |
 | Kjøpbarhet som default | 2026-08-31 | `tools/polet_store.py`, `vinmonopolet.py` | [ADR-029](docs/ARCHITECTURE.md#adr-029-kjøpbarhet-er-default-lanseres-er-en-tredje-tilstand) | 3 685 ikke-kjøpbare rader ute av søk; 796 `lanseres` vises med flagg. |
 | Aperitif-snapshot | 2026-08-31 | `tools/refresh_aperitif.py` (29 tester) | [ADR-030](docs/ARCHITECTURE.md#adr-030-aperitif-snapshot-som-fallback-og-bulk-kilde--ikke-som-lag-foran-nettverket) | Poeng for hele Pollisten offline. Fallback og bulk-kilde, ikke lag foran nettverket — listesiden mangler «godt kjøp»-flagget. |
-| Whisky-fundament | 2026-08-31 | `knowledge/whisky.md`, `data/whisky/` | — (se [`tasks/plan_whisky.md`](tasks/plan_whisky.md)) | 139 linjer, ikke 2 700. Betinget routing. **n=0 ratinger — ingen fit-modell før n ≈ 84.** |
+| Whisky-fundament | 2026-08-31 | `knowledge/whisky.md`, `data/whisky/` | — (se [`tasks/plan_whisky.md`](tasks/plan_whisky.md)) | 139 linjer, ikke 2 700. Betinget routing. **n=7 ratinger (2026-08-31) — ingen fit-modell før n ≈ 84.** Kontekstfelter `drukket_dato`/`anledning` lagt til ([ADR-033](docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app)). |
 
 > User-fit og øl-fit har fortsatt fremtidige versjoner beskrevet i seksjonene over (user-fit v1/v2, øl-fit utvidelser) — kun v0/harness er levert.
 >

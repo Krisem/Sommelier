@@ -6,23 +6,70 @@
 > ikke lærebokkjemi den allerede kan. Målt anslag: av et foreslått 2 700-linjers fundament var
 > 150–250 linjer reelt tilført ([`tasks/plan_whisky.md`](../tasks/plan_whisky.md) funn 11).
 
-## Status: n=0
+## Status: n=7
 
-**Brukeren har ingen registrerte whisky-ratinger.** Alt under er fagkunnskap, ikke
-preferanse-kunnskap. Så lenge `data/whisky/ratings.csv` er tom eller tynn:
+**Brukeren har syv registrerte whisky-ratinger** (`data/whisky/ratings.csv`, diktert
+2026-08-31). Det er nok til å slå opp og sammenligne, og altfor lite til å modellere:
 
-- **Ingen fit-score, ingen tier, ingen «du vil like denne».** Tier-stigen spenner 0,65 poeng
-  mens SD på brukerens egne ratinger er 0,61; ved n=3 per bøtte er 95 % KI ±0,69 — bredere enn
-  hele stigen. Det trengs ~84 ratinger før en modell kan si noe. Til da: si hva flasken *er*,
-  ikke hva han vil synes om den.
+| Flaske | Rating | Pris | Aperitif | Torv (Polets Røyk) |
+|---|---:|---:|---:|---|
+| Nikka Coffey Grain | 4,50 | 700 | 85 | nei (1/12) |
+| Talisker 10 | 4,25 | 630 | 88 | ja (7/12) |
+| Highland Park 12 | 4,25 | 600 | 87 | lett (5/12) |
+| Balvenie DoubleWood 12 | 4,25 | 800 | 88 | nei (2/12) |
+| Lagavulin 16 | 4,00 | 1 100 | 92 | ja (10/12) |
+| Laphroaig 10 | 4,00 | 665 | 89 | ja (9/12) |
+| Glenmorangie Quinta Ruban 14 | 3,75 | 880 | — | nei (ingen klokker) |
+
+- **Fortsatt ingen fit-score, ingen tier, ingen «du vil like denne».** Tier-stigen spenner 0,65
+  poeng mens SD på brukerens egne ratinger er 0,61; ved n=3 per bøtte er 95 % KI ±0,69 — bredere
+  enn hele stigen. Det trengs ~84 ratinger før en modell kan si noe. Ved n=7 er SD **0,23** og
+  seks av sju ligger mellom 4,00 og 4,50. Si hva flasken *er*, ikke hva han vil synes om den.
+- **Bunnen er tom.** Ingen rating under 3,75. Utvalget er flasker han valgte å kjøpe, så det
+  bærer et seleksjonsbias som gjør høye snitt uinformative. Det som mangler er flaskene han
+  ikke likte.
+- **Det eneste som skiller seg ut, er uenighet med kritikerne, ikke et smaksmønster.** Nikka
+  Coffey Grain er hans topp (4,50) og utvalgets laveste Aperitif-poeng (85); Lagavulin 16 har
+  høyest Aperitif-poeng (92) og ligger nederst blant de fire torvede. Aperitif-poeng korrelerer
+  +0,66 med pris, så dette er en prisobservasjon like mye som en smaksobservasjon.
+- **Torv skiller ikke i tallene — men det er sannsynligvis fordi konteksten mangler, ikke
+  fordi preferansen mangler.** Se neste avsnitt. Ikke presenter «torv betyr ingenting for deg»
+  som et funn.
 - **Vin- og øl-profilen overføres ikke uten videre.** Den ene broen som er rimelig å anta er
   røyk/fenol: brukeren har ratet Rauchbier-familien som blindsone (n=1), altså ukjent — ikke som
   en preferanse. Ikke antatt torv-toleranse fra noe som helst.
 
+## Kontekst er en del av dommen, ikke metadata rundt den
+
+Kristoffer sa 2026-08-31, om at torv ikke skilte i de sju tallene:
+
+> «Jeg tror ikke det er støy, det er kontekst. En whisky med mye torv er nydelig på en kald
+> høstdag eller vinterdag, mens en highland park passer seg mye bedre sen vår.»
+
+Det er en korreksjon av hvordan tallene skal leses, og den er delvis testbar på de 89
+ølratingene som har dato:
+
+| | n | snitt rating | median ABV |
+|---|---:|---:|---:|
+| Kald sesong (okt–mar) | 53 | 3,41 | **6,5 %** |
+| Varm sesong (apr–sep) | 36 | 3,37 | **5,4 %** |
+
+Sterke øl (ABV ≥ 7) får 3,51 om vinteren og 3,55 om sommeren. **Sesongen endrer altså ikke hvordan
+han dømmer — den endrer hva han strekker seg etter.** Signalet ligger i valget, ikke i scoren, og
+en modell som bare ser karakterer vil aldri finne det uansett hvor mange flasker som rates.
+
+Forbeholdet: n=36 i den varme halvdelen, det er øl og ikke whisky, og Polets sesongutvalg er i seg
+selv sesongstyrt. **Behandle dette som en hypotese med retning, ikke som et etablert mønster.**
+
+Konsekvensen for filen du skriver til: `drukket_dato` og `anledning` er egne felter, og de sju
+første radene har begge tomme — den konteksten er ikke rekonstruerbar. Spør etter anledningen når
+han rater, men **la aldri et manglende svar stoppe raden.**
+
 **Fangst av ratinger: han dikterer i chat, Claude skriver raden.** Ølkanalen døde nettopp fordi
 innføring var manuelt filarbeid (siste Untappd-check-in 2026-01-16; 2025: 29 → 2026: 1). Skalaen
 er 5-punkt med kvart-trinn, samme som Vivino og Untappd. Notat er valgfritt — fritekst ble
-skrevet 4 av 211 ganger (1,9 %), så karakteren må klare seg alene.
+skrevet 4 av 211 ganger (1,9 %), så karakteren må klare seg alene. Ingen app:
+[ADR-033](../docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app).
 
 ## Anker 1: juridisk kategori
 
@@ -168,6 +215,6 @@ Ocean Heart (89, 999,90), Gjoleid Mesterens Triple Cask (87, 924,90), Bivrost Yg
 Toppen av det nordiske er dansk og svensk, ikke norsk: DJ Nordic Series Mosgaard Peat & Port
 (Danmark, 95) og DJ Nordic Series Smögen 10yo (Sverige, 92).
 
-**Hva dette IKKE sier.** Ingenting om hva Kristoffer vil like — whisky står fortsatt på n=0, og
+**Hva dette IKKE sier.** Nesten ingenting om hva Kristoffer vil like — whisky står på n=7, og
 Aperitif-poeng er andres dom. Seksjonen svarer på «hva finnes og hva koster det», ikke på
-«hva passer meg». Se `## Status: n=0` øverst.
+«hva passer meg». Se `## Status: n=7` øverst.

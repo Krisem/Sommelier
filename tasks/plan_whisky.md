@@ -1,7 +1,11 @@
 # Plan — whisky som tredje fagområde
 
-> **Status:** forslag, ikke besluttet. Skrevet 2026-08-31 etter research av to agenter, én devil's
-> advocate og én QA-agent.
+> **Status:** BESLUTTET og steg 0–4 gjennomført 2026-08-31. Skrevet samme dag etter research av to
+> agenter, én devil's advocate og én QA-agent. **Whisky står nå på n=7, ikke n=0** — «i dag» i
+> teksten under betyr 31. august før dikteringen. Steg 4 fikk to felter til (`drukket_dato`,
+> `anledning`) etter en brukerkorreksjon planen ikke forutså:
+> [ADR-033](../docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app).
+> Åpent spørsmål 1 er besvart; 2–4 står fortsatt.
 > **Målt mot:** HEAD `c901b8b`, `catalog.ndjson` `count` 27 402, `data/untappd/checkins.csv`,
 > `data/vivino/full_wine_list.csv` (122 ratede).
 > Alle tall er målt i repoet eller verifisert mot kilde. Underlagsrapportene lå i en scratchpad som

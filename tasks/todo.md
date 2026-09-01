@@ -11,7 +11,7 @@ seks faser. Full plan med begrunnelser, tall og verifiseringssteg:
 (rødvin 1 379 · hvitvin 140 · musserende 95 · rosé 48 · brennevin 2).
 
 **Status ved sesjonsslutt 2026-08-31, andre økt.** Fase 3, 4 og 5 (alt som ikke krever
-ratinger) er ferdige og committet, **471 tester grønne**, arbeidstreet rent. Måleomgangen ligger
+ratinger) er ferdige og committet, **481 tester grønne** (471 ved forrige økt). Måleomgangen ligger
 i [`maaling_2026-08-31.md`](maaling_2026-08-31.md), festet til revisjon og katalog-md5.
 Dokumentasjonen er tatt igjen: ADR-028, ADR-029, ADR-030, amendment på ADR-017, README, roadmap
 og `deep-knowledge/INDEX.md`.
@@ -47,29 +47,33 @@ Fase 6-gaten under.
 
 ## ⬅ VENTER PÅ KRISTOFFER
 
-- [ ] **Rate whiskyen du har drukket.** *(sa 2026-08-31 at han gjør det samme kveld)*
-      Dette er den eneste posten i hele planen som ikke kan gjøres uten deg, og den blokkerer Fase 5.
-      Whisky står på **n=0** i dag; alt annet i planen er kode og måling.
+- [x] **Rate whiskyen du har drukket — LEVERT 2026-08-31.** Sju flasker diktert i chat, alle
+      slått opp og skrevet inn i `data/whisky/ratings.csv` med varenummer, pris, ABV, alder og
+      torv verifisert mot Polets produktsider samme dag.
 
-      **Slik gjør du det:** bare skriv det i chat, én linje per flaske, i vilkårlig rekkefølge.
-      Claude skriver radene inn i `data/whisky/ratings.csv` — du skal ikke redigere noen fil.
-      Format som holder:
+      Talisker 10 (4,25) · Lagavulin 16 (4,00) · Nikka Coffey Grain (4,50) · Laphroaig 10 (4,00) ·
+      Glenmorangie Quinta Ruban 14 (3,75) · Highland Park 12 (4,25) · Balvenie DoubleWood 12 (4,25).
 
-      > Lagavulin 16 – 4,5, røyk og tørr avslutning
-      > Jameson – 2,75, kjedelig
-      > Nikka From The Barrel – 4,25
+      **Tre oppslag verdt å huske:** «highland park 10/12» → Polet fører ingen HP 10, så raden er
+      HP 12; Quinta Ruban er den eneste av de sju **uten Aperitif-poeng**; Talisker og Laphroaig ble
+      bekreftet som 10-åringene av Kristoffer (begge finnes i fire varianter).
 
-      **Skalaen er 5-punkt med kvart-trinn** (1,0–5,0), samme som Vivino og Untappd — tersklene i
-      `beer_fit.py` og `user_fit` er kalibrert på den, så en annen skala ødelegger sammenlignbarheten.
-      **Notat er valgfritt.** Fritekst ble skrevet 4 av 211 ganger (1,9 %) på vin og øl, så
-      karakteren må klare seg alene — ikke la et manglende notat stoppe deg fra å ta med en flaske.
-      **Husker du ikke navnet presist, ta det du husker** — Claude slår opp varenummer, destilleri,
-      juridisk kategori, ABV, alder og torv mot Polet og Aperitif.
+      **Hva n=7 gir og ikke gir:** SD er 0,23, seks av sju ligger mellom 4,00 og 4,50, og **bunnen
+      er tom** — ingen rating under 3,75. Fase 5 kan bygge oppslag og søk, men ingen fit-modell;
+      terskelen på ~84 står uendret. Det mest verdifulle neste bidraget er flasker han *ikke* likte.
 
-      **Hvorfor det haster mer enn det ser ut:** en tier-modell trenger ~84 ratinger (SD 0,61 mot en
-      tier-stige som spenner 0,65 poeng). 10–20 flasker i kveld er ikke nok til en modell, men det er
-      mer enn hele byggeplanen leverer på et år uten deg — og det avgjør om Fase 5 skal bygge
-      anbefalinger eller bare lesestoff.
+- [ ] **⬅ Whisky: når drakk du de sju, og i hvilken anledning?** *(nytt 2026-08-31)*
+      `drukket_dato` og `anledning` er lagt til i skjemaet
+      ([ADR-033](../docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app)), men
+      **alle sju radene har begge feltene tomme** — `dato` er dikteringsdatoen 2026-08-31, ikke da
+      de ble drukket, og den konteksten er ikke rekonstruerbar uten deg.
+
+      Grovt holder: «Lagavulin i fjor vinter», «Highland Park i mai». `2026-vinter` er en gyldig
+      verdi. **Ikke gjett** — et tomt felt er bedre enn dikteringsdatoen én gang til.
+
+      Hvorfor det er verdt å svare på: målt på de 89 ølratingene endrer sesongen **hva han velger,
+      ikke hvordan han dømmer** (median-ABV 6,5 % kaldt mot 5,4 % varmt; snittrating 3,41 mot 3,37).
+      Uten `anledning` kan whisky-dataene aldri bære det funnet.
 
 - [ ] **Vin og øl: er det noe uratet?** Ikke etterspurt, bare flagget. Vin går via en Vivino-sync
       (`docs/vivino_refresh.md`), ikke chat — si ifra om du har ratet noe i appen siden 30. august, da
@@ -137,8 +141,8 @@ Fase 6-gaten under.
       (b) `find_similar_by_clocks` bærer nå ADR-025-forbeholdet.
       (c) «Ingen build/lint/test-suite» erstattet med `python3 -m pytest -q` + muteringskravet.
 - [x] **1.7 Ryddet denne fila.** Sveip-tabellen flyttet til `## Ferdig`.
-- [ ] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** Spurt 2026-08-31, han rater samme
-      kveld. Detaljer og format: se **⬅ VENTER PÅ KRISTOFFER** øverst.
+- [x] **1.1 Whisky steg 0: hva har Kristoffer allerede smakt?** LEVERT 2026-08-31 — sju flasker,
+      n=0 → n=7. Detaljer: se **⬅ VENTER PÅ KRISTOFFER** øverst.
 
 ### Fase 2 — Aperitif-snapshot ⏳ KODET OG TESTET, SVEIP UNDERVEIS (`4e2caae`, `5a7f13f`, `220cda5`, `3982f2d`)
 
@@ -235,7 +239,7 @@ Alt ligger i **[`maaling_2026-08-31.md`](maaling_2026-08-31.md)**, festet til re
 ### Fase 5 — whisky, kritisk sti ⏳ ALT UNNTATT RATINGENE ER FERDIG (`44787f3`)
 
 - [x] `knowledge/whisky.md` — **139 linjer**, litt under målet fordi seksjonen om norsk/nordisk
-      sortiment venter på Aperitif-snapshotet. Tre påstander er testdekket: n=0, ADR-025-forbeholdet
+      sortiment venter på Aperitif-snapshotet. Tre påstander er testdekket: at oppgitt n stemmer med `ratings.csv`, ADR-025-forbeholdet
       på klokkene, og at det uverifiserte (WSETs SAT, irsk pot still, klyngeantallet) ikke står
       der som fakta. Opprinnelig formulering: Juridisk kategori som anker (Scotch Whisky
       Regulations 2009, 27 CFR § 5.143 inkl. American Single Malt fra 19.01.2025, EU 2019/787, irsk

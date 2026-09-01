@@ -994,6 +994,31 @@ Oppslaget koster 0,19 s — samme størrelsesorden som `_peer_percentile` allere
 **Alternativer vurdert.** **Forhåndsberegnet duplikat-indeks i `data/`** — forkastet: enda et artefakt som kan bli utdatert mot katalogen. **Uskarpt navnematch på tvers av produsenter** — forkastet: inviterer falske treff, og eksakt navn + volum er allerede pålitelig fordi årstallet står i navnet.
 
 
+### ADR-033: Kontekst fanges i dikteringen, ikke i en app
+
+**Status:** Accepted (2026-08-31).
+
+**Kontekst.** Ved n=7 whisky-ratinger skilte ikke torv i tallene: 4,00/4,00/4,25 for de torvede mot 3,75/4,25/4,25/4,50 for de utorvede. Jeg kalte det støy. Kristoffer avviste framstillingen: «Jeg tror ikke det er støy, det er kontekst. En whisky med mye torv er nydelig på en kald høstdag eller vinterdag, mens en highland park passer seg mye bedre sen vår.» Han foreslo samtidig å finne en rating-app, fordi dato og situasjon ikke lot seg fange i skjemaet.
+
+Han har rett i premisset, og «støy» var feil ord: med bare flaske + karakter er kontekst **umålt**, ikke fraværende. En variabel som ikke er registrert kan ikke avvises som støy.
+
+**Målingen som styrer beslutningen.** Hypotesen er delvis testbar på de 89 ølratingene som har dato. Kald sesong (okt–mar, n=53): snitt 3,41, median ABV 6,5 %. Varm sesong (apr–sep, n=36): snitt 3,37, median ABV 5,4 %. Sterke øl (ABV ≥ 7) får 3,51 om vinteren og 3,55 om sommeren.
+
+**Sesongen endrer altså hva han strekker seg etter, ikke hvordan han dømmer.** Det er en viktigere designopplysning enn den ser ut: en modell som bare ser karakterer vil aldri finne mønsteret, uansett n. Signalet ligger i valget. Forbehold: n=36 i den varme halvdelen, det er øl og ikke whisky, og Polets sesongutvalg er selv sesongstyrt — retning, ikke lov.
+
+**Beslutning, del 1: to felter, ikke et notatskjema.** `data/whisky/ratings.csv` får `drukket_dato` og `anledning`. `anledning` er ett ord med understrek (`kald_høstdag`, `sen_vår`, `etter_middag`), ikke fritekst — [`plan_whisky.md`](../tasks/plan_whisky.md) funn 2 står fortsatt: fritekst ble skrevet 4 av 211 ganger (1,9 %), så et notatfelt kan ikke bære signalet. `drukket_dato` tar grov presisjon (`2026-11`, `2026-vinter`), fordi en tvungen ISO-dato inviterer til å gjette.
+
+`dato` er samtidig redusert til «når raden ble skrevet». Den gamle definisjonen — «når den ble ratet, ikke når flasken ble kjøpt» — slo sammen to ting som nå må skilles.
+
+**Beslutning, del 2: ingen rating-app.** Untappd *var* den appen. Den fanget dato og sted automatisk, altså nøyaktig de to feltene som etterlyses, og kanalen døde: siste check-in 2026-01-16, 29 check-ins i 2025 mot 1 i 2026. Av 75 stedsmerkede check-ins var **72 «Untappd at Home»** — stedsfeltet fanget ingenting. Appen løste fangst-problemet og døde likevel, fordi den la et steg mellom brukeren og glasset.
+
+Dikteringen har den egenskapen appen manglet: han holder allerede på med samtalen. Konteksten kom da også uoppfordret — «kald høstdag», «sen vår» sto i hans egen melding før noe felt fantes.
+
+**Alternativer vurdert.** **Whisky-app med eksport (Distiller, Whizzky)** — forkastet på Untappd-presedensen, med dyrere flasker og lavere frekvens enn øl. **Fritekst-notatfelt** — forkastet på 1,9 %-målingen. **Utlede sesong fra `dato`** — forkastet, og det var den fristende feilen: de sju første radene har alle dikteringsdatoen 2026-08-31, så en avledning ville produsert «alle sju drukket i august» av ingenting. Feltene står tomme i stedet. **Enum-validering av `anledning`** — utsatt: vokabularet bør vokse av det han faktisk sier, ikke låses ved n=7.
+
+**Konsekvens for modellbygging.** Sesongen er nå en registrert variabel, ikke en umålt. Det flytter ikke ~84-terskelen for en fit-modell — den følger av SD 0,61 mot en tier-stige på 0,65 poeng — men det avgjør om dataene i det hele tatt *kan* bære et kontekstfunn når n en gang kommer dit.
+
+
 ## Kjent teknisk gjeld
 
 Ranket etter risiko × sannsynlighet.

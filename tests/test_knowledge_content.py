@@ -199,10 +199,10 @@ def test_prosa_tyngdepunkt_matcher_tallene(profil_tekst, vivino_stats):
 
 
 # ─── whisky.md ───────────────────────────────────────────────────────
-# Fagfilen er skrevet før brukeren har ratet én eneste whisky. Testene her
+# Fagfilen har langt flere fagpåstander enn preferansepåstander. Testene her
 # bevokter derfor ikke fagkunnskapen, men de tre påstandene som er FARLIGE å
-# miste: at n=0, at klokkene ikke er en preferanse-påstand, og at det som ikke
-# er verifisert ikke står der som fakta.
+# miste: at ratinggrunnlaget er for tynt til en modell, at klokkene ikke er en
+# preferanse-påstand, og at det som ikke er verifisert ikke står der som fakta.
 
 WHISKY = KNOWLEDGE / "whisky.md"
 
@@ -214,14 +214,47 @@ def whisky_tekst() -> str:
     return WHISKY.read_text(encoding="utf-8")
 
 
-def test_whisky_states_that_there_are_no_ratings_yet(whisky_tekst):
+RATINGS_CSV = REPO_ROOT / "data" / "whisky" / "ratings.csv"
+
+
+def _antall_whiskyratinger() -> int:
+    import csv
+
+    if not RATINGS_CSV.exists():
+        pytest.skip("data/whisky/ratings.csv finnes ikke ennå")
+    with RATINGS_CSV.open(encoding="utf-8") as f:
+        return sum(1 for _ in csv.DictReader(f))
+
+
+def test_whisky_states_the_actual_rating_count(whisky_tekst):
     """
-    Uten denne setningen er filen et fundament som ser ut som en
-    preferanse-modell. Whisky står på n=0, og det må stå i filen selv — ikke
-    bare i en planfil ingen leser under en anbefaling.
+    Uten dette tallet er filen et fundament som ser ut som en preferanse-modell.
+    Tallet leses fra CSV-en framfor å hardkodes, slik at prosaen ikke kan gli fra
+    dataene stille — det var nettopp det som skjedde da n gikk fra 0 til 7.
     """
-    assert "n=0" in whisky_tekst
+    import re
+
+    n = _antall_whiskyratinger()
+    # Ordgrense, ikke naken delstreng: uten `(?!\d)` matcher "n=7" inni "n=70",
+    # og testen ville vært grønn for en fil som påstår ti ganger for mange
+    # ratinger. Samme feilklasse som «Jura»→«Jurançon» (ADR-032).
+    assert re.search(rf"n={n}(?!\d)", whisky_tekst), (
+        f"ratings.csv har {n} rader; whisky.md sier noe annet eller ingenting"
+    )
     assert "84" in whisky_tekst, "terskelen for når en modell kan si noe mangler"
+
+
+def test_whisky_keeps_the_context_caveat_on_season(whisky_tekst):
+    """
+    Sesong styrer VALG, ikke KARAKTER (ADR-033). Mister filen det, står den
+    igjen med «torv skiller ikke» — en påstand om smaken hans som målingene
+    ikke bærer.
+    """
+    lav = whisky_tekst.lower()
+    assert "adr-033" in lav, "koblingen til ADR-033 mangler"
+    assert "strekker seg etter" in lav or "valget, ikke i scoren" in lav, (
+        "poenget om at sesong styrer valg og ikke karakter er borte"
+    )
 
 
 def test_whisky_carries_the_adr025_caveat_on_the_clocks(whisky_tekst):

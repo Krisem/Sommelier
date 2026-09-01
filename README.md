@@ -12,7 +12,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 - Finne lignende viner via klokke-profil-similarity (euklidsk avstand på fylde/friskhet/garvestoff).
 - Be om presisering ("vin eller øl?") kun ved ekte tvetydighet — gå direkte når lean er åpenbar.
 - **Vise det som faktisk kan kjøpes.** Søk filtrerer bort utsolgt, utgått og langtidsutsolgt (3 685 av 27 402 rader); kommende lanseringer vises med `kommer_snart`-flagg i stedet for å skjules ([ADR-029](docs/ARCHITECTURE.md#adr-029-kjøpbarhet-er-default-lanseres-er-en-tredje-tilstand)).
-- **Svare på whisky** — juridisk kategori, Polets Fylde/Fat/Røyk, servering. Betinget: kun når whisky nevnes, eller ved dessert, ost, digestif og kveldsdram. Whisky står på n=0, så systemet sier hva flasken *er*, aldri hva du vil synes om den.
+- **Svare på whisky** — juridisk kategori, Polets Fylde/Fat/Røyk, servering. Betinget: kun når whisky nevnes, eller ved dessert, ost, digestif og kveldsdram. Whisky står på n=7, altså for tynt til en modell (~84 trengs) — systemet sier hva flasken *er*, aldri hva du vil synes om den.
 
 **Vurdere value**
 - `tools/value_score.py` kombinerer tre signaler til én vurdering:
@@ -53,7 +53,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 │   ├── sommelier.md                   vin-kjerne: drueprofiler, parring-lover, workflow + Vinmonopolets rammeverk (klokker, stiler, matfarger)
 │   ├── cicerone.md                    øl-kjerne: tre akser, stilfamilier, friskhet, workflow + BJCP-rammeverk (ABV/IBU/SRM, hop/malt/gjær, glass)
 │   ├── smaksprofil.md                 felles profil + auto-derivert vin- og øl-statistikk
-│   ├── whisky.md                      whisky-kjerne: juridiske kategorier, Polets Fylde/Fat/Røyk, servering (n=0 — fag uten preferansedata)
+│   ├── whisky.md                      whisky-kjerne: juridiske kategorier, Polets Fylde/Fat/Røyk, servering (n=7 — for tynt til modell)
 │   ├── wset_l2_sat.md                 WSET tasting-vokabular
 │   ├── scores/                        kuratert kritiker-score-DB (varenr-indeksert)
 │   │   ├── INDEX.md                   skjema + liste over kilder
@@ -101,7 +101,7 @@ Personlig digital sommelier OG cicerone som Claude Code-prosjekt. Anbefaler båd
 │   ├── vivino_sync.py                 merger nye Vivino-ratinger inn i CSV (idempotent)
 │   └── aroma_wheel.html               D3-sunburst med Davis/Noble-hjul
 │
-├── tests/                             pytest-suite (471 tester, ~21s, alle offline)
+├── tests/                             pytest-suite (481 tester, ~23s, alle offline)
 │   ├── conftest.py                    legger repo-roten på sys.path
 │   ├── test_knowledge_content.py      innholds-basert (fil-agnostisk) + whisky-forbeholdene
 │   ├── test_user_fit.py               regel-parsing, matching og fordelings-assertions mot ekte katalog
@@ -191,7 +191,7 @@ python3 -m pytest tests/ -v
 
 ## Test-suite
 
-**471 tester på ~21 sekunder, alle offline** (per 2026-08-31). Bygd som innholds-baserte kontrakt-tester, ikke implementasjonsdetaljer — de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. Tester med `@pytest.mark.network` krever Polet/Aperitif/Vivino-tilgang.
+**481 tester på ~23 sekunder, alle offline** (per 2026-08-31). Bygd som innholds-baserte kontrakt-tester, ikke implementasjonsdetaljer — de bevokter påstander i `knowledge/`-filene og oppførselen til `tools/`, så de faller når prosaen og tallene glir fra hverandre. Tester med `@pytest.mark.network` krever Polet/Aperitif/Vivino-tilgang.
 
 **Legger du til en test: muter antagelsen og bekreft at den faktisk feiler.** «Grønn av feil grunn» er den mest gjentatte feilen i dette repoet, og den går begge veier — en test som aldri når koden den påstår å teste, og en fixture som mangler et felt produksjonsdata alltid har. Muter det *nøyaktige* uttrykket testen påstår noe om, og sjekk at det er den testen som faller.
 
@@ -243,7 +243,7 @@ Etter optimaliserings-økten 2026-05-14:
 | `compute_value_score` | ~10s | <50ms |
 | `_peer_percentile` (fasett-API) | 160ms | <1ms |
 | `tools.scores.index()` (422 entries) | 50ms | <1ms |
-| Full test-suite (471 tester) | ~21s | ~21s |
+| Full test-suite (481 tester) | ~23s | ~23s |
 
 ## Vedlikehold
 

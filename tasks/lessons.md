@@ -392,3 +392,57 @@ kopierer en linje.
   fanger den faktiske feilklassen fra `e664747` (import-feil) uten å røre data.
 - **`git status` etter enhver verifiseringsrunde**, ikke bare etter redigering. Det var det som
   fanget dette; uten den sjekken hadde tidsstempelet blitt committet i neste `git add`.
+
+---
+
+## 2026-08-31 – Kalte en umålt variabel for «støy», og lukket en hypotese som var brukerens egen
+
+**Hva skjedde:** Ved n=7 whisky-ratinger skilte ikke torv i tallene (4,00/4,00/4,25 torvet mot
+3,75/4,25/4,25/4,50 utorvet). Jeg skrev: «Det er ikke et signal, det er støy.» Kristoffer avviste
+framstillingen: *«Jeg tror ikke det er støy, det er kontekst. En whisky med mye torv er nydelig på
+en kald høstdag eller vinterdag, mens en highland park passer seg mye bedre sen vår.»*
+
+**Hvorfor det var feil:** «Støy» er en påstand om at variabelen er målt og ikke forklarer noe. Torv
+var *målt*; **konteksten var det ikke**. Riktig ord var «umålt» eller «konfundert», og forskjellen
+er ikke semantisk — «støy» lukker hypotesen, «umålt» peker på et felt som mangler. Jeg brukte
+fraværet av et felt jeg selv hadde designet bort som bevis mot brukerens egen observasjon.
+
+Verre: hypotesen var testbar hele tiden. De 89 ølratingene har dato. Da jeg endelig målte, viste
+det seg at **sesong styrer valg, ikke karakter** — median-ABV går fra 6,5 % i kalde måneder til
+5,4 % i varme mens snittratingen står stille (3,41 mot 3,37). Det er et funn som verken jeg eller
+brukeren hadde formulert, og som en ren karakter-modell aldri kan finne. Det lå én spørring unna,
+og jeg hadde allerede konkludert.
+
+**Hva jeg gjør annerledes nå:**
+
+- **Skill «målt og forklarer ingenting» fra «ikke registrert».** Før jeg kaller noe støy, sjekk om
+  variabelen faktisk finnes i dataene. Er den ikke registrert, er riktig setning «dette kan ikke
+  avgjøres med feltene vi har» — og neste handling er å foreslå feltet, ikke å avvise mønsteret.
+- **Når brukeren beskriver et mønster fra egen erfaring, er det en hypotese med data bak, ikke en
+  innvending.** Han har drukket flaskene; jeg har sju rader. Let etter en måling som kan teste den
+  før jeg svarer, ikke etter at han har protestert.
+- **Sjekk om et tilstøtende datasett kan teste påstanden.** Whisky sto på n=7, men vin og øl har
+  211 ratinger med dato. Naboen bar svaret.
+
+## 2026-08-31 – Erklærte en test verdiløs på grunnlag av en ufullstendig mutasjon
+
+**Hva skjedde:** Ny test asserter at `whisky.md` oppgir samme n som `ratings.csv`. Jeg
+mutasjonstestet den ved å endre `## Status: n=7` → `n=70`. Testen passerte, og jeg konkluderte
+«grønn av feil grunn» og skrev om assertionen med en `(?!\d)`-ordgrense. Andre mutasjon: passerte
+fortsatt. Først da telte jeg forekomstene — `n=7` står **fire** steder i filen, og jeg hadde bare
+mutert den ene.
+
+**Hvorfor det var feil:** Testen var riktig hele tiden. Det var *instrumentet* som var feil, og jeg
+handlet på instrumentets svar to ganger før jeg validerte det. Dette er lærdommen fra 2026-08-30
+(«Validér en negativ-evidens-sjekk før du stoler på den») anvendt på en positiv sjekk, der den
+gjelder like fullt: en mutasjon som ikke fjerner *alle* forekomster av påstanden tester ingenting.
+
+**Hva jeg gjør annerledes nå:**
+
+- **Tell forekomstene før du muterer.** `grep -c` på strengen tar fem sekunder og er forskjellen på
+  en gyldig og en ugyldig mutasjonstest.
+- **Muter med regex over hele filen**, ikke med en enkelt `replace(..., 1)` på det stedet jeg tror
+  bærer påstanden.
+- **Ordgrensen ble stående likevel** — `(?!\d)` er riktig uansett, fordi `n=7` *er* en delstreng av
+  `n=70`. Rett fiks, feil begrunnelse: den beskyttet mot en ekte feilklasse (samme som
+  «Jura»→«Jurançon», ADR-032), bare ikke mot den jeg trodde jeg hadde observert.
