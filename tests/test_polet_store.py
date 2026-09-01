@@ -453,6 +453,31 @@ def test_upsert_preserves_everything_else():
         assert felt in rad
 
 
+def test_upsert_preserves_main_sub_category_for_spirits():
+    """
+    `main_sub_category` er det ENESTE feltet som skiller whisky fra gin, rom og
+    akevitt. Det sto i PRUNED_CATALOG_FIELDS fram til 2026-09-01, begrunnet i en
+    måling gjort da katalogen bare inneholdt vin (`{}` for 1 748 av 1 849 rader).
+    Konsekvensen var at whisky ikke kunne enumereres i det hele tatt — stille.
+
+    Denne testen finnes for at feltet ikke skal prunes bort igjen neste gang noen
+    måler tomvekt på en vin-tung katalog.
+    """
+    whisky = _fat_product(
+        "464401",
+        name="Lagavulin 16 YO Single Malt",
+        main_category={"code": "brennevin", "name": "Brennevin"},
+        main_sub_category={"code": "whisky", "name": "Whisky"},
+    )
+    polet_store.upsert_products(
+        [whisky], fetched_at="2026-09-01T00:00:00+00:00"
+    )
+    rad = polet_store.lookup("464401")
+
+    assert rad["main_sub_category"] == {"code": "whisky", "name": "Whisky"}
+    assert "main_sub_category" not in polet_store.PRUNED_CATALOG_FIELDS
+
+
 def test_upsert_does_not_mutate_callers_product():
     # Refresh-ritualet leser lagerstatus fra sitt eget LIVE søkesvar
     # (polet_live.store_stock) — pruningen skal ikke tømme kallerens dict.

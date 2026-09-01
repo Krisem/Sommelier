@@ -277,15 +277,33 @@ def test_whisky_does_not_present_wset_sat_content_as_fact(whisky_tekst):
         )
 
 
-def test_whisky_flags_the_empty_spirits_catalog(whisky_tekst):
+def test_whisky_states_catalog_coverage_and_its_gap(whisky_tekst):
     """
-    Katalogen har to brennevinsrader, begge grappa. Et tomt whisky-søk betyr
-    «ikke enumerert», ikke «Polet fører den ikke» — og brukeren skal ikke
-    sendes på et refresh-ritual for det (gjeld #11).
+    Fram til 2026-09-01 krevde denne testen at filen ADVARTE om at katalogen
+    var tom for whisky. Den tilstanden er borte — 1 104 rader er sveipet inn —
+    så kravet er snudd, ikke slettet: filen må nå oppgi dekningen OG at den er
+    ufullstendig.
+
+    Sveipen er nå komplett (1 132 av 1 132, avstemt mot API-ets totalResults),
+    men kravet består: dekningen skal stå som TALL, avstemt mot en kilde, ikke
+    som «katalogen dekker whisky». Uten et avstemt tall kan «finnes ikke i
+    katalogen» leses som «Polet fører den ikke».
     """
     lav = whisky_tekst.lower()
-    assert "grappa" in lav
-    assert "refresh" in lav
+    assert "brennevin_whisky" in lav, "underkategori-koden må stå der sveipen kan gjenfinnes"
+    assert "1 132" in whisky_tekst, "dekningen må oppgis som avstemt tall"
+    assert "totalresults" in lav, "tallet må være avstemt mot kilden, ikke bare påstått"
+
+
+def test_whisky_does_not_claim_clocks_it_lacks(whisky_tekst):
+    """
+    Fylde/Fat/Røyk ligger i details-JSON, ikke i søkeresultatet, og
+    klokke-fasettene for brennevin er ikke probet. Filen skal si det, ikke la
+    leseren anta at klokkene fulgte med katalogsveipen.
+    """
+    lav = whisky_tekst.lower()
+    assert "klokker" in lav
+    assert "ikke probet" in lav or "ikke hentet" in lav
 
 
 def test_whisky_names_the_legal_sources_it_rests_on(whisky_tekst):

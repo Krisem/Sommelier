@@ -42,12 +42,20 @@ DETAILS_DIR = POLET_DIR / "details"
 #   images               15,4 % av bytene. Fem URL-varianter per vin, alle
 #                        rent avledbare fra varenummeret
 #                        (bilder.vinmonopolet.no/cache/300x300-0/<code>-1.jpg).
-#   main_sub_category     1,8 % av bytene, og `{}` for 1 748 av 1 849 rader
-#                        (alle 1 543 rødviner). Ren tomvekt.
+# `main_sub_category` STO her fram til 2026-09-01, begrunnet med at det var
+# 1,8 % av bytene og `{}` for 1 748 av 1 849 rader (alle 1 543 rødviner).
+# Den målingen var sann og konklusjonen likevel feil: den ble gjort på en
+# katalog som bare inneholdt vin. For brennevin er dette feltet det ENESTE som
+# skiller whisky fra gin, rom og akevitt — uten det er whisky ikke
+# identifiserbar i katalogen i det hele tatt. Å prune det gjorde whisky
+# uenumererbar, stille, og `knowledge/whisky.md` måtte skrive at «et katalogsøk
+# på whisky vil komme tomt tilbake». Feltet beholdes nå for ALLE kategorier:
+# 1,8 % er billig, og betinget pruning per kategori ville gitt to skrivestier
+# å holde i synk for å spare under to prosent.
 #
 # IKKE prun `url` (dybdehenting), `district`, `sub_District`,
 # `product_selection` eller `volume` — de leses av query/similarity/value.
-PRUNED_CATALOG_FIELDS = ("productAvailability", "images", "main_sub_category")
+PRUNED_CATALOG_FIELDS = ("productAvailability", "images")
 
 # Lovlige fasett-bøtter for klokkene (Polets 1–12-skala i 2-trinns bøtter).
 CLOCK_BUCKETS = frozenset({"1-2", "3-4", "5-6", "7-8", "9-10", "11-12"})

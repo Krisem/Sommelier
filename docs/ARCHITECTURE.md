@@ -733,6 +733,21 @@ MCP-serveren kobler seg til skybrowseren **lazily** — først ved første brows
 **Beslutning.**
 
 - **(a) Prun katalog-shapen.** `productAvailability` (30,5 % av bytene), `images` (15,4 %) og `main_sub_category` (alltid `{}`) strippes ved ingest. Ingen kode leste dem fra snapshotet; bilde-URL-er er avledbare fra varenr, og lagerstatus er ferskvare som et snapshot uansett ikke kan holde. Målt på de 1 849 gamle radene: 1 631 → 849 B/rad, **47,6 % spart**. Migrering er idempotent, atomisk og radbevarende (1 849 inn → 1 849 ut, 0 avvik utover prune-lista).
+> **Amendment 2026-09-01 — `main_sub_category` er ikke tomvekt, den var bare tom for vin.**
+> Punkt (a) prunet feltet med den korrekte målingen «`{}` for 1 748 av 1 849 rader». Målingen
+> ble gjort på en katalog som utelukkende inneholdt vin, og generaliserte derfor en
+> kategori-egenskap til en katalog-egenskap. For brennevin er `main_sub_category` det ENESTE
+> feltet som skiller whisky fra gin, rom og akevitt — pruningen gjorde whisky uenumererbar,
+> stille, og `knowledge/whisky.md` måtte i august skrive at «et katalogsøk på whisky vil komme
+> tomt tilbake». Feltet er fjernet fra `PRUNED_CATALOG_FIELDS` og beholdes nå for alle
+> kategorier; 1,8 % av bytene er billigere enn to skrivestier å holde i synk. Vernet av
+> `test_upsert_preserves_main_sub_category_for_spirits`, som feiler under den gamle
+> konfigurasjonen (verifisert, ikke antatt).
+>
+> Lærdommen er ikke «prun mindre», men: **en måling av hva som er tomt gjelder bare
+> populasjonen den ble gjort på.** Katalogen var 100 % vin da tallet ble målt, og det stod
+> ingen steder.
+
 - **(b) Full enumerering som ryggrad**, ikke land-for-land-sveip. Volum ligger på raden, så 3 l faller ut gratis — ingen egen 3 l-sveip.
 - **(c) Klokker via kartesisk fasett-sveip** Fylde × Friskhet × Tannin(Sulfates) — 216 celler gir alle tre klokkene i én passering (~460 sider) mot ~1 370 for tre 1-dim-sveip. Oppløsningen er bøtte (±1), ikke eksakt heltall; eksakte klokker kommer fra dybde for det utsnittet som får details.
 - **(d) Dybde foretrekker JSON-blobben**, med regex som fallback. `save_details` stempler `parser`-proveniens og avviser en blobb hvis produktobjektets varenr ikke er det vi ba om — den gamle valideringen så bare at koden fantes *et sted* i HTML-en.

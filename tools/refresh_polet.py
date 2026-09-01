@@ -77,6 +77,48 @@ den ekte nettleseren.
    la den boble (det er signalet om at WAF slo til; naviger på nytt og prøv
    igjen, IKKE skriv søppel til snapshot).
 
+3b. WHISKY (`mainCategory:brennevin:mainSubCategory:brennevin_whisky`) — se
+   `whisky_queries()`. Live-målt 2026-09-01: **1 132 treff, 48 sider.**
+
+   Underkategori-fasetten heter `mainSubCategory` og tar en PREFIKSET kode:
+   `brennevin_whisky`, ikke `whisky`. Probet samtidig (alle mot brennevin,
+   totalen er 4 400):
+
+       mainSubCategory:brennevin_whisky   →  1 132   ← filtrerer
+       mainSubCategory:whisky             →      0   ← gjenkjent, feil verdi
+       main_sub_category:whisky           →  4 400   ← IGNORERT STILLE
+       subCategory:whisky                 →  4 400   ← IGNORERT STILLE
+       Xyzzy:whisky (kontroll)            →  4 400   ← IGNORERT STILLE
+
+   De tre siste er den farlige sorten: queryen «filtrerer» og gir hele
+   brennevin-katalogen tilbake. Kontrollkoden `Xyzzy` skiller dem fra `0`,
+   som betyr gjenkjent-men-tom. Kjør alltid kontrollen ved siden av.
+
+   Vokabularet ellers (stikkprøve, 240 rader): `brennevin_likør`,
+   `brennevin_gin`, `brennevin_druebrennevin`, `brennevin_akevitt`,
+   `brennevin_brennevin_annet`, `brennevin_rom`, `brennevin_fruktbrennevin`,
+   `brennevin_vodka`, `brennevin_bitter`.
+
+   ⚠ **RATE-LIMIT — les dette FØR du sveiper.** ADR-024 har målt den:
+   `429` med **`Retry-After: 3399`**, altså en **timeskvote på ~800–900 kall**,
+   ikke en kort throttle. Den står i ARCHITECTURE.md, men har aldri stått i
+   denne runbooken — og en kvote man ikke vet om, oppdages først som et hull i
+   dataene.
+
+   Slik så det ut 2026-09-01: 48 sider med 120 ms pause ga 429 på side **46 og
+   47**, altså helt på slutten. 1 104 av 1 132 rader kom inn, og sveipen så
+   vellykket ut. Retries hjalp ikke — etterpå 429-et også side 0, fordi kvoten
+   er global og allerede var brukt opp.
+
+   To regler følger:
+     - **Sammenlign alltid antall hentede rader mot `pagination.totalResults`
+       fra side 0.** Et sveip som mangler rader ser ellers helt normalt ut.
+       Dette er den eneste sjekken som faktisk fanger et kvote-avbrudd.
+     - **Ved 429: les `Retry-After` og VENT den tiden.** Ikke retry i loop —
+       hvert forsøk er et kall til, og med tom kvote forlenger de bare køen.
+       Å senke takten hjelper ikke mot en timeskvote; å dele sveipen over
+       flere timer gjør det.
+
 4. VERIFISER at git-diffen er linjebasert og ren (NDJSON er sortert på code,
    details er sort_keys+indent) — `git diff --stat data/polet/`. Commit
    gjøres som et eget, bevisst steg (ikke av denne modulen).
@@ -283,6 +325,10 @@ def peer_pool_queries() -> list[dict]:
 
 # ─── SVEIP-PLAN (komplett rødvin + klokker) ──────────────────────────
 
+# Live-målt 2026-09-01: `mainSubCategory:brennevin_whisky` ga 1 132 treff.
+_WHISKY_TOTAL_RESULTS = 1132
+
+
 def spine_queries(total_results: int = _SPINE_TOTAL_RESULTS) -> Iterator[dict]:
     """
     RYGGRADEN: full enumerering av `mainCategory:rødvin`, én entry per side.
@@ -302,6 +348,25 @@ def spine_queries(total_results: int = _SPINE_TOTAL_RESULTS) -> Iterator[dict]:
     midtveis uten å ha materialisert resten.
     """
     query = polet_facets.build_facet_query(category=_SPINE_CATEGORY)
+    for page in polet_facets.page_numbers(total_results):
+        yield {"page": page, "query": query, "url": polet_facets.search_url(query, page=page)}
+
+
+def whisky_queries(total_results: int = _WHISKY_TOTAL_RESULTS) -> Iterator[dict]:
+    """
+    WHISKY: full enumerering av `mainSubCategory:brennevin_whisky`, én entry
+    per side. Live-målt 2026-09-01: 1 132 treff → 48 sider a 24.
+
+    `main_sub_category` er det ENESTE feltet som skiller whisky fra gin, rom og
+    akevitt, og det sto i `polet_store.PRUNED_CATALOG_FIELDS` fram til
+    2026-09-01 — sveip kjørt før den datoen ga rader som ikke kunne
+    identifiseres som whisky i ettertid.
+
+    Se punkt 3b i modul-docstringen for fasett-probingen og for rate-limiten.
+    """
+    query = (
+        ":relevance:mainCategory:brennevin:mainSubCategory:brennevin_whisky"
+    )
     for page in polet_facets.page_numbers(total_results):
         yield {"page": page, "query": query, "url": polet_facets.search_url(query, page=page)}
 

@@ -112,10 +112,27 @@ produksjonsbestemt, er **utestet**. Merk motargumentet før noen tester den: hvi
 nær-binær, koder den trolig bare «Islay eller ikke» — noe han kan lese av etiketten uten modell.
 Målingen er utsatt til n ≥ 15–20.
 
-**Katalogen dekker ikke whisky.** `data/polet/catalog.ndjson` har to brennevinsrader, begge
-grappa. Feltet som skiller whisky fra gin og rom (`main_sub_category`) er prunet bort og finnes i
-0 rader. Et katalogsøk på whisky vil altså komme tomt tilbake — det betyr «ikke enumerert», ikke
-«Polet fører den ikke». Ikke send brukeren på et refresh-ritual for det.
+**Katalogen dekker whisky fra 1. september 2026.** `data/polet/catalog.ndjson` har
+**1 132 whiskyrader** (`main_sub_category.code == "brennevin_whisky"`) — hele Polets
+whisky-sortiment, sveipet fra `mainSubCategory:brennevin_whisky` og avstemt mot API-ets eget
+`totalResults` på 1 132. Av dem er 902 aktive, 40 lanseres, resten utsolgt eller utgått.
+
+Fram til denne datoen hadde katalogen to brennevinsrader, begge grappa, fordi
+`main_sub_category` — det eneste feltet som skiller whisky fra gin og rom — ble prunet bort ved
+ingest. Sveipen krevde derfor en kodeendring først, ikke bare et refresh-ritual.
+
+Ett forbehold står igjen:
+
+- **Ingen klokker.** Fylde/Fat/Røyk ligger i produktsidens detalj-JSON, ikke i søkeresultatet,
+  og `details/` er ikke hentet for whisky. Klokke-fasettene for brennevin er heller ikke probet —
+  `polet_facets.clock_dims_for_category("brennevin")` kaster fortsatt `ValueError`, og det er
+  riktig oppførsel: vi vet ikke hvilke koder som filtrerer der, og en ugyldig fasettkode feiler
+  STILLE ved å returnere hele kategorien (bekreftet på nytt 2026-09-01 med kontrollkoden
+  `Xyzzy`, som ga 4 400 — hele brennevin-totalen).
+
+**Sveipen traff en timeskvote** (HTTP 429, `Retry-After: 3399` per ADR-024) på de to siste sidene
+og måtte fullføres i to omganger. Det er dokumentert i `tools/refresh_polet.py` punkt 3b, og er
+verdt å vite før noen sveiper en ny kategori.
 
 ## Anker 3: Brooms flavour camps — som språk, ikke som taksonomi
 

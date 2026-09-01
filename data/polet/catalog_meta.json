@@ -66,7 +66,7 @@
     }
   },
   "category_coverage": {
-    "brennevin": 2,
+    "brennevin": 1134,
     "hvitvin": 9762,
     "musserende_vin": 3081,
     "rosévin": 782,
@@ -74,6 +74,6 @@
   },
   "clock_facet_note": "Klokke-fasettene er KATEGORI-AVHENGIGE (probet live 2026-08-30). hvitvin/musserende_vin/rosévin: Fylde, Friskhet, Soedme. rødvin: Fylde, Friskhet, Tannin(Sulfates) — Soedme og Bitterhet gir 0 der. Tannin(Sulfates) og Bitterhet gir 0 for de tre lyse. Garvestoffer filtrerer ALDRI: den ignoreres stille og returnerer hele kategorien (verifisert mot en oppdiktet kontrollkode som ga samme tall). clock_ceiling er den mest befolkede dimensjonens sum, altså det hoyeste antallet en trippel-basert sveip kan naa; clock_gap_partial_dims er varer som har noen klokker men ikke alle tre og derfor ikke fanges av en trippel.",
   "completeness_schema_note": "category_completeness dokumenterer at en kategori er KOMPLETT enumerert. Beviset er unique_codes == total_results — IKKE rows_returned, som teller et duplikat med og derfor kan komme ut riktig for en sveip som stille hoppet over en vare (malt 2026-08-30 pa musserende_vin: 3081 rader, 3080 unike). enumerated er antallet som faktisk ligger i katalogen etter ev. gjenoppretting. Fravaer av en kategori her betyr IKKE ufullstendig, bare ikke malt. Kompletthet forvitrer — nye varer listes fortlopende, se completed_at.",
-  "count": 27402,
-  "generated_at": "2026-08-30T20:05:22.243637+00:00"
+  "count": 28534,
+  "generated_at": "2026-09-01T07:59:52.254480+00:00"
 }
