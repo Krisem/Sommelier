@@ -1,5 +1,49 @@
 # Todo
 
+## LEVERT 2026-09-01 — whisky-univers + Meta-Critic
+
+Plan: `~/.claude/plans/jazzy-stargazing-spark.md`. **509 tester grønne** (481 før).
+Ikke committet — ligger i arbeidstreet.
+
+**Utgangspunkt:** Kristoffer spurte om Whiskybase som kilde til «et utvidet univers med rating».
+
+### Hva som ble gjort
+
+- **Whiskybase forkastet, med grunn.** Cloudflare-sperret (`robots.txt` svarer ikke uten JS),
+  scraping i strid med vilkårene, API-et er en kommersiell partneravtale. ADR-034.
+- **Polets whisky enumerert: 2 → 1 132 rader.** Krevde en kodeendring først —
+  `main_sub_category` sto i `PRUNED_CATALOG_FIELDS` og er det eneste feltet som skiller whisky
+  fra gin og rom. Fasetten heter `mainSubCategory:brennevin_whisky` (prefikset kode).
+- **Meta-Critic-snapshot:** 1 812 whiskyer, median 9 anmeldere, STDEV per flaske.
+- **Tiered join:** 201 A + 37 B auto, 193 C venter på bekreftelse, 701 uten match.
+- **`value_score`:** Meta-Critic vises med score/STDEV/n + uenighetsflagg, men styrer **ikke**
+  `value_verdict`. Verifisert bit-identisk verdict før/etter på tre flasker.
+
+### Det som ble motbevist underveis
+
+**Antagelsen om at Meta-Critic ville løse prisbiasen var feil.** Spearman(score, prisbånd)
+= **+0,64** mot Aperitifs +0,66 — praktisk talt identisk. Og kildene er ikke uavhengige:
++0,90 med hverandre på hans flasker, mens begge går motsatt vei av ham. Det er grunnen til at
+kilden vises og ikke vektes; hadde målingen ikke blitt gjort, ville den blitt et fjerde signal
+i `_combine_quality` som talte samme prisbias to ganger.
+
+**To vakuøse tester ble fanget av mutasjonstesting, ikke av at de var grønne.** Merke-regel-testen
+brukte «Glenfiddich» mot «Glenlivet» — navn uten ett felles token — og var grønn med og uten
+regelen. Drift-testen hadde en `if`-fallback som skjulte at første gren aldri traff.
+
+### Åpne tråder
+
+- [ ] **193 tier C-kandidater venter på ja/nei.** `python3 -m tools.whisky_match --pending`.
+      Ta dem i puljer i chat; ubekreftet tier C teller som ingen match.
+- [ ] **Klokke-fasettene for brennevin er ikke probet.** Fylde/Fat/Røyk ligger i details-JSON,
+      ikke i søkeresultatet. `clock_dims_for_category("brennevin")` kaster fortsatt `ValueError`,
+      og det er riktig til noen har målt hvilke koder som filtrerer.
+- [ ] **`details/` er ikke hentet for whisky** — 1 132 produktsider. Krever browser + tåler
+      timeskvoten (ADR-024: 429 med `Retry-After: 3399`, ~800–900 kall/time).
+- [ ] **n=7 står urørt.** Ingenting over flytter den. Terskelen er fortsatt ~84.
+
+---
+
 ## Aktivt — plan godkjent 2026-08-31
 
 Sveipen 2026-08-30 er landet og committet (`7ba0f4d`…`49ce241`). Restansen etter den er sekvensert i

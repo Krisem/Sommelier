@@ -30,10 +30,13 @@ from tools.aperitif import get_aperitif_score
 from tools.polet_store import PoletRefreshRequired
 from tools.scores import get_user_scores
 from tools.vivino import get_vivino_rating
+from tools import whisky_match, whiskyanalysis
 
 VALUE_CACHE_DIR = Path.home() / ".cache" / "sommelier" / "value_score"
 VALUE_CACHE_TTL = 24 * 60 * 60  # 24 t — Polet-priser kan endres dag-til-dag
-LOGIC_VERSION = "v3"  # Bump for å invalidere all cache når scoring-logikken endres
+LOGIC_VERSION = "v4"  # Bump for å invalidere all cache når scoring-logikken endres
+#   v4 (2026-09-01): Meta-Critic-blokk lagt på resultatet. Den endrer IKKE
+#   verdict, men den endrer `summary`, og cachen holder summary.
 SNAPSHOT_STALE_DAYS = 14  # Eldre snapshot → degradér value-språket (pris/lager kan ha endret seg)
 
 
@@ -357,6 +360,102 @@ def _value_verdict(
     return "dyrt_for_kvaliteten"
 
 
+# ─── META-CRITIC (whisky) — VIST, IKKE VEKTET ────────────────────────
+#
+# Meta-Critic går bevisst UTENOM `_combine_quality` og `_value_verdict`. Målt
+# 2026-09-01: den korrelerer +0,64 med prisbånd (Aperitif: +0,66) og +0,90 med
+# Aperitif på brukerens egne flasker. Å gi den vekt ville telt den samme
+# prisbiasen to ganger og kalt det to uavhengige kilder.
+#
+# Det den tilfører, og som Aperitifs ene tall ikke kan: UENIGHET — mellom
+# anmelderne (STDEV over median 9 anmeldere) og mellom kildene.
+
+_MC_CACHE: dict = {}
+
+
+def _mc_rows() -> list[dict]:
+    if "rows" not in _MC_CACHE:
+        _MC_CACHE["rows"] = whiskyanalysis.read_snapshot()
+    return _MC_CACHE["rows"]
+
+
+def _mc_stdev_high_threshold() -> Optional[float]:
+    """
+    STDEV-grensa for «anmelderne er uenige»: øverste desil i snapshotet.
+
+    Regnes fra dataene i stedet for å hardkodes, slik at grensa følger kilden
+    hvis den noen gang oppdateres — en hardkodet terskel ville stille blitt feil.
+    """
+    if "stdev_p90" not in _MC_CACHE:
+        vals = sorted(r["stdev"] for r in _mc_rows() if r.get("stdev") is not None)
+        _MC_CACHE["stdev_p90"] = vals[int(len(vals) * 0.9)] if vals else None
+    return _MC_CACHE["stdev_p90"]
+
+
+def _aperitif_whisky_percentile(score: Optional[float]) -> Optional[float]:
+    """Hvor en Aperitif-score ligger blant Aperitifs EGNE whiskyer, 0–1."""
+    if score is None:
+        return None
+    if "apr_whisky" not in _MC_CACHE:
+        path = polet_store._REPO_ROOT / "data" / "aperitif" / "scores.ndjson"
+        vals = []
+        if path.exists():
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                d = json.loads(line)
+                if d.get("category") == "Whisky" and d.get("score") is not None:
+                    vals.append(float(d["score"]))
+        _MC_CACHE["apr_whisky"] = sorted(vals)
+    alle = _MC_CACHE["apr_whisky"]
+    if not alle:
+        return None
+    under = sum(1 for v in alle if v < score)
+    lik = sum(1 for v in alle if v == score)
+    return (under + lik / 2) / len(alle)
+
+
+# Persentil-avstand som teller som reell uenighet mellom kildene. 0,30 er valgt
+# som «en tredjedel av fordelingen fra hverandre» — stort nok til at det ikke
+# er støy, lite nok til å fange Nikka-tilfellet (hans favoritt, kildenes bunn).
+_SOURCE_DISAGREEMENT_GAP = 0.30
+
+
+def _metacritic_block(polet_id: str, aperitif_score: Optional[float]) -> Optional[dict]:
+    """
+    Meta-Critic-data for et varenummer, eller None.
+
+    None betyr «ingen bekreftet join» — enten fordi flasken ikke er i
+    Meta-Critic (62 % av Polets whisky), eller fordi joinen er en ubekreftet
+    tier C. En ubekreftet tier C er ikke en svak match; den er ingen match.
+    """
+    rad = whisky_match.resolve(polet_id)
+    if not rad or rad.get("meta_critic") is None:
+        return None
+
+    score = rad["meta_critic"]
+    stdev = rad.get("stdev")
+    pct = whiskyanalysis.percentile_rank(score, _mc_rows())
+    terskel = _mc_stdev_high_threshold()
+
+    blokk = {
+        "score": score,
+        "stdev": stdev,
+        "n_reviewers": rad.get("n_reviewers"),
+        "whisky": rad.get("wa_whisky"),
+        "join_tier": rad.get("tier"),
+        "percentile": round(pct, 3) if pct is not None else None,
+        "kilde_sist_oppdatert": whiskyanalysis.source_updated(),
+        "anmelder_uenighet": bool(stdev is not None and terskel is not None and stdev >= terskel),
+    }
+
+    apr_pct = _aperitif_whisky_percentile(aperitif_score)
+    if pct is not None and apr_pct is not None:
+        blokk["aperitif_percentile"] = round(apr_pct, 3)
+        blokk["kilde_uenighet"] = abs(pct - apr_pct) >= _SOURCE_DISAGREEMENT_GAP
+    return blokk
+
+
 def compute_value_score(
     polet_product: dict,
     *,
@@ -435,6 +534,12 @@ def compute_value_score(
     quality = _combine_quality(user_tier, apr_tier, viv_tier)
     verdict = _value_verdict(quality, apr_flag, peer, price)
 
+    # Meta-Critic hentes ETTER at verdict er avgjort, med vilje: den skal ikke
+    # kunne påvirke den, og rekkefølgen gjør det synlig i koden. Oppslaget er
+    # lokalt (join.ndjson + snapshot), ikke nettverk, så det hører ikke hjemme
+    # i ThreadPoolExecutor-en over.
+    metacritic = _metacritic_block(polet_id, apr_score)
+
     parts = []
     if user_score_data:
         kilde = user_score_data.get("kilde", "intern").split("/")[0].strip()
@@ -455,6 +560,25 @@ def compute_value_score(
         )
     elif vivino_data and vivino_data.get("_discarded"):
         parts.append("Vivino-treff forkastet (feil vin)")
+
+    if metacritic:
+        mc_bits = [f"Meta-Critic {metacritic['score']:.2f}/10"]
+        if metacritic.get("n_reviewers"):
+            mc_bits.append(f"{metacritic['n_reviewers']} anmeldere")
+        if metacritic.get("anmelder_uenighet"):
+            mc_bits.append(f"anmelderne er uenige (SD {metacritic['stdev']:.2f})")
+        if metacritic.get("join_tier") == "B":
+            mc_bits.append("navne-match sterk, ikke eksakt")
+        parts.append(f"{mc_bits[0]} ({', '.join(mc_bits[1:])})" if len(mc_bits) > 1 else mc_bits[0])
+
+        # Uenighet mellom kildene er det ENESTE Meta-Critic tilfører som
+        # Aperitifs ene tall ikke kan. Den sier ikke hvem som har rett.
+        if metacritic.get("kilde_uenighet"):
+            parts.append(
+                "Meta-Critic og Aperitif er uenige om denne — "
+                f"{int(metacritic['percentile'] * 100)}. mot "
+                f"{int(metacritic['aperitif_percentile'] * 100)}. percentil i hver sin kilde"
+            )
 
     peer_refresh_required = bool(peer) and peer.get("status") == "refresh_required"
     if _peer_has_percentile(peer):
@@ -497,6 +621,7 @@ def compute_value_score(
         "user_scores": user_scores,
         "vivino": vivino_data,
         "aperitif": aperitif_data,
+        "metacritic": metacritic,
         "peer": peer,
         "peer_status": "refresh_required" if peer_refresh_required else "ok",
         "quality_tier": quality,

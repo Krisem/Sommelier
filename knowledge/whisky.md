@@ -185,6 +185,35 @@ middagen» — der er vin og øl riktig svar, og whisky ville vært et påtvunge
 | Røkt laks, østers | Islay — den ene sjømatparringen som virker |
 | Etter måltid, alene | Det han har lyst på. Dette er ikke en parringsøvelse |
 
+## Meta-Critic — hva andre mener, ikke hva du vil mene
+
+`data/whiskyanalysis/` bærer **1 812 whiskyer** fra whiskyanalysis.com: én score aggregert over
+**median 9 anmeldere** (min 3, maks 34), med standardavvik. Slå opp via
+`tools.whisky_match.resolve(varenr)`; `value_score` legger den på automatisk der den finnes.
+
+**Dekning:** 201 av Polets 1 132 whiskyer er auto-joint (tier A), 37 til på sterk match (tier B).
+193 er svake kandidater som venter på at du bekrefter dem —
+`python3 -m tools.whisky_match --pending`. 701 har ingen match, og det er stort sett norske
+hyllevare-blends og uavhengige fattappinger som ingen kritiker har vurdert.
+
+**Tre forbehold, alle målt:**
+
+- **Samme prisbias som Aperitif.** Spearman(score, prisbånd) = **+0,64** mot Aperitifs +0,66.
+  «Høyest Meta-Critic» er i praksis nær «dyrest». Ingen rangering uten prissone-lås.
+- **Ikke en uavhengig kilde.** På dine sju flasker korrelerer Meta-Critic **+0,90 med Aperitif**,
+  mens begge går motsatt vei av deg (−0,26 og −0,95). To kritikerkilder som er enige med hverandre
+  og uenige med deg er ikke to bekreftelser — det er én observasjon, to ganger.
+- **Sist oppdatert januar 2023.** Standarduttrykk er dekket; alt lansert etter det finnes ikke.
+
+**Derfor styrer den ikke `value_verdict`** ([ADR-034](../docs/ARCHITECTURE.md#adr-034-whiskybase-er-utilgjengelig--meta-critic-er-kilden-og-den-vektes-ikke)).
+Det den faktisk tilfører er **uenighet**: `anmelder_uenighet` når spredningen mellom anmelderne er
+i øverste desil, og `kilde_uenighet` når Meta-Critic og Aperitif plasserer flaska minst 30
+persentilpoeng fra hverandre. Talisker 10 er et eksempel — 73. percentil hos Meta-Critic, 42. hos
+Aperitif. Si at kildene er uenige; ikke velg en vinner på hans vegne.
+
+**Whiskybase ble vurdert og forkastet:** Cloudflare-sperret, scraping i strid med vilkårene, og
+API-et er en kommersiell partneravtale. Ikke foreslå den på nytt — se ADR-034.
+
 ## Kilder og hva som IKKE står her
 
 Verifisert mot primærkilde: SWR 2009, 27 CFR § 5.143 + TTB final rule 18.12.2024, EU 2019/787,

@@ -1063,3 +1063,69 @@ Ranket etter risiko × sannsynlighet.
 3. Hvis nei: vurder om endringen er stor nok til å fortjene sin egen ADR
 4. Kjør `python3 -m pytest tests/ -v` før og etter — fang regressioner umiddelbart
 5. Hvis du endrer fundamentalt på et lag (knowledge-struktur, cache-strategi): oppdater både denne fila OG `README.md`
+
+
+### ADR-034: Whiskybase er utilgjengelig — Meta-Critic er kilden, og den vektes ikke
+
+**Status:** Accepted (2026-09-01).
+
+**Kontekst.** Whisky manglet det vin har: `knowledge/scores/` er varenummer-indeksert og bruker-kuratert, og å laste opp testlister for hånd skalerer ikke. Kristoffer foreslo [whiskybase.com](https://www.whiskybase.com/) som kilde til «et utvidet univers med rating å ta utgangspunkt i».
+
+**Whiskybase kan ikke brukes.** Hele domenet ligger bak Cloudflare-challenge — `robots.txt` svarer ikke uten JS. [API-siden](https://www.whiskybase.com/wp/api) sier at scraping bryter vilkårene, og at API-tilgang er partner-scoped og forhandles per integrasjon; det er en kommersiell avtale, ikke en datakilde. Granulariteten er dessuten feil vei: Whiskybase er en samlerdatabase på fatnivå med hundretusener av oppføringer, mot Polets 1 132 whiskyvarer.
+
+**Beslutning, del 1: kilden er [whiskyanalysis.com](https://whiskyanalysis.com/index.php/database/) Meta-Critic.** Åpen `robots.txt`, hele datasettet i én HTML-tabell. Hentet 2026-09-01: **1 812 whiskyer**, score 6,47–9,58, normalisert over **median 9 anmeldere** (min 3, maks 34), med STDEV per flaske.
+
+**Beslutning, del 2: den vises, men styrer ikke `value_verdict`.** Dette er den viktigere halvdelen, og den hviler på to målinger — ikke på en magefølelse om kildekvalitet:
+
+| Måling | Resultat |
+|---|---:|
+| Spearman(Meta-Critic, prisbånd), n=1 809 | **+0,64** |
+| Spearman(Aperitif, pris), whisky (ADR-030) | +0,66 |
+| Spearman(Meta-Critic, Aperitif), hans flasker, n=5 | **+0,90** |
+| Spearman(Meta-Critic, Kristoffer), n=6 | −0,26 |
+| Spearman(Aperitif, Kristoffer), n=5 | −0,95 |
+
+**Antagelsen som ble motbevist:** at Meta-Critic ville være prisuavhengig der Aperitif ikke er. Den arver prisbiasen praktisk talt uendret. Og de to kildene er ikke uavhengige — de korrelerer +0,90 med hverandre, mens begge går motsatt vei av Kristoffer. Å gi Meta-Critic vekt i `_combine_quality` ville telt den samme prisbiasen to ganger og kalt det to kilder.
+
+Det den tilfører, som Aperitifs ene tall ikke kan, er **uenighet**: STDEV over median 9 anmeldere (`anmelder_uenighet`, terskel = øverste desil, regnet fra dataene) og avstand mellom kildenes persentiler (`kilde_uenighet`, ≥ 0,30). `_metacritic_block` kalles derfor **etter** at `verdict` er beregnet — rekkefølgen i koden er valgt for å gjøre uavhengigheten synlig, og `test_value_score`-verifiseringen krever at verdicten er bit-identisk før og etter.
+
+**Alternativer vurdert.** **Skrive Meta-Critic inn i `knowledge/scores/*.md`** for å gjenbruke `tools/scores.py` gratis — forkastet: den mappa er definert som bruker-kuratert og *høyeste* tillit, og ville gitt kilden forrang over Aperitif, stikk i strid med målingene over. **Distiller.com** (åpen `robots.txt`) — ikke forfulgt: crowd-rating uten anmelder-antall eller spredning, altså Vivino for whisky, og vi har allerede vist at et enkelt aggregat ikke er problemet. **La være å hente noe** — forkastet: universet manglet uansett, og «hva er denne flasken, og hva mener andre» er et legitimt spørsmål selv når svaret ikke er «du vil like den».
+
+**Kjent svakhet, permanent.** Databasen er **sist oppdatert 20. januar 2023** og står stille. Standarduttrykk er dekket; lanseringer etter 2023 finnes ikke. `meta.json` bærer `source_updated` separat fra `generated_at`, slik at kildens alder aldri kan leses av hentetidspunktet — det var den enkleste måten å presentere 3,5 år gamle tall som ferske på.
+
+**Dette løser ikke n=7.** Meta-Critic sier hva andre mener, ikke hva Kristoffer vil mene. Målingene styrker tvert imot forbeholdet: to uavhengige kritikerkilder er enige med hverandre og uenige med ham.
+
+
+### ADR-035: Join på navn er tiered, og tier C bekreftes av et menneske
+
+**Status:** Accepted (2026-09-01).
+
+**Kontekst.** Polet har varenummer, Meta-Critic har et flaskenavn skrevet av en nordamerikansk anmelder. Det finnes ingen felles nøkkel — alt som binder dem er strenger som «Talisker Single Malt 10 Years Old» og «Talisker 10yo».
+
+**Målingen.** En regelbasert matcher (merke må stemme, alder må ikke motsi, Jaccard på resten) mot Aperitifs 316 whiskyer, som allerede har varenummer:
+
+| Tier | Regel | n | Andel |
+|---|---|---:|---:|
+| **A** | Jaccard = 1,0 og alder enig | 82 | 26 % |
+| **B** | score ≥ 0,75 | 12 | 4 % |
+| **C** | 0,30 ≤ score < 0,75 | 61 | 19 % |
+| **D** | ingen kandidat | 161 | 51 % |
+
+Mot hele Polet-katalogen (1 132 rader) blir fordelingen 201 / 37 / 193 / 701 — lavere treffrate, fordi katalogen inneholder mange uavhengige fattappinger som ingen kritiker har vurdert.
+
+**Beslutning: tier C auto-godtas aldri.** Terskelen kan ikke løse den, og det er verdt å vise hvorfor — alle fire ligger i samme score-intervall:
+
+```
+FEIL:    Jack Daniel's Tennessee     → Jack Daniel's Gentleman Jack
+FEIL:    Aberlour 12 YO              → Aberlour A'Bunadh
+RIKTIG:  Glenmorangie The Original   → Glenmorangie 10yo
+RIKTIG:  Michter's US 1 Bourbon      → Michter's Small Batch US*1 Bourbon
+```
+
+Skillet er kunnskap om hva flaskene *er*, ikke en tallgrense. Tier C går derfor til Kristoffer i chat — samme kanal som whisky-ratingene (ADR-033) — og `resolve()` returnerer `None` for ubekreftet tier C. **En ubekreftet tier C er ingen match, ikke en svak match**: en feil join ser normal ut i `value_score`, og ingenting varsler om den.
+
+`write_join` bevarer eksisterende `bekreftet`-svar ved regenerering, men **kun når kandidaten er den samme** — peker matcheren på en ny kandidat, gjaldt ikke det gamle ja-et den.
+
+**Tier D er et tak, ikke en feil.** De 701 er i stor grad norske hyllevare-blends (Inverness Cream, Lord Elcho, Glen Scanlan) og uavhengige fattappinger som ingen kritikerdatabase dekker. Forvent at Meta-Critic dekker rundt en femtedel av Polets whisky auto-joint, skjevt mot de kjente flaskene.
+
+**Verifisert, ikke antatt.** Alle fire designreglene er mutasjonstestet: senket tier-B-gulv, fjernet alders-motsigelse, fjernet merke-regel og «godta ubekreftet tier C» får hver sin test til å feile. Den første versjonen av merke-testen brukte «Glenfiddich» mot «Glenlivet» — navn uten ett felles token — og var grønn med og uten regelen. Mutasjonstesten fanget at den ikke testet noe.

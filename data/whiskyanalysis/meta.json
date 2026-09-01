@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-01T07:47:23+00:00",
+  "source": "https://whiskyanalysis.com/index.php/database/",
+  "source_updated": "January 20, 2023",
+  "rows_written": 1812,
+  "score_range": [
+    6.47,
+    9.58
+  ],
+  "score_median": 8.61,
+  "reviewers_median": 9.0,
+  "reviewers_min": 3,
+  "prisbias_spearman": 0.643,
+  "forbehold": {
+    "prisbias": "Spearman(score, prisbånd) ≈ +0,64 — praktisk talt identisk med Aperitifs +0,66. Meta-Critic arver prisbiasen, den løser den ikke. Rangering uten prissone-lås er ugyldig.",
+    "ikke_uavhengig": "Meta-Critic og Aperitif korrelerer +0,90 på brukerens egne flasker, og begge går motsatt vei av ham (−0,26 / −0,95). Verdien ligger i STDEV og antall anmeldere (uenighet), ikke i en bedre dom. Derfor styrer den ikke value_verdict — se ADR-034.",
+    "alder": "Kilden er sist oppdatert 20. januar 2023 og står stille. Standarduttrykk er dekket; lanseringer etter 2023 finnes ikke. Et ferskt generated_at sier bare når VI hentet, ikke hvor ferske tallene er.",
+    "dekning": "Målt mot Aperitifs 316 whiskyer: 26 % eksakt join, 4 % sterk, 19 % må bekreftes, 51 % ingen match. Det manglende halve er i stor grad norske hyllevare-blends som ingen kritiker har vurdert — et tak, ikke en feil."
+  }
+}
