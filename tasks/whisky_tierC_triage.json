@@ -1,0 +1,1175 @@
+{
+  "_meta": {
+    "kilde": "triage i sesjon 2026-09-01",
+    "join_rader": 1132,
+    "pending": 193,
+    "status": "FORSLAG — ikke skrevet til join.ndjson; venter på Kristoffer",
+    "regel": "resolve() teller kun 'ja'; 'nei' == null, så avvisning er gratis og bekreftelse er den eneste konsekvensielle handlingen"
+  },
+  "ja_mekanisk": [
+    {
+      "polet_id": "7179801",
+      "polet_navn": "Redbreast 12 YO Single Pot Still Irish Whiskey",
+      "wa": "Redbreast 12yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "12409301",
+      "polet_navn": "Redbreast 15 YO Single Pot Still Irish Whiskey",
+      "wa": "Redbreast 15yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "8256201",
+      "polet_navn": "Redbreast 21 YO Single Pot Still Irish Whiskey",
+      "wa": "Redbreast 21yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "12313201",
+      "polet_navn": "Redbreast 12 YO Single Pot Still Cask Strength",
+      "wa": "Redbreast 12yo Cask Strength",
+      "score": 0.6
+    },
+    {
+      "polet_id": "8256101",
+      "polet_navn": "Yellow Spot 12YO Single Pot Still Irish Whiskey",
+      "wa": "Yellow Spot 12yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "10869601",
+      "polet_navn": "Green Spot Single Pot Still Irish Whiskey",
+      "wa": "Green Spot",
+      "score": 0.5
+    },
+    {
+      "polet_id": "16101",
+      "polet_navn": "Chivas Regal 12 YO Blended Scotch",
+      "wa": "Chivas Regal 12yo",
+      "score": 0.667
+    },
+    {
+      "polet_id": "4510801",
+      "polet_navn": "Chivas Regal 18 YO Blended Scotch",
+      "wa": "Chivas Regal 18yo",
+      "score": 0.667
+    },
+    {
+      "polet_id": "10858401",
+      "polet_navn": "Whistlepig Straight Rye Whiskey 10 YO",
+      "wa": "Whistlepig 10yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "1114201",
+      "polet_navn": "Bulleit 95 Rye",
+      "wa": "Bulleit Rye",
+      "score": 0.667
+    },
+    {
+      "polet_id": "9224601",
+      "polet_navn": "Eagle Rare Single Barrel 10 Y.O.",
+      "wa": "Eagle Rare 10yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17481201",
+      "polet_navn": "Scapa 16 Years Old Orkney Single Malt",
+      "wa": "Scapa 16yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "9924801",
+      "polet_navn": "Glendronach 12yo Single Malt",
+      "wa": "GlenDronach 12yo Original",
+      "score": 0.5
+    },
+    {
+      "polet_id": "9053601",
+      "polet_navn": "The Ileach Islay Single Malt Scotch Whisky",
+      "wa": "Ileach Peated Islay",
+      "score": 0.5
+    },
+    {
+      "polet_id": "8166601",
+      "polet_navn": "Michter's 10 YO Straight Rye",
+      "wa": "Michter's 10yo Single Barrel Rye",
+      "score": 0.667
+    },
+    {
+      "polet_id": "10636001",
+      "polet_navn": "Bruichladdich Islay Barley 2014",
+      "wa": "Bruichladdich Islay Barley (all vintages)",
+      "score": 0.667
+    },
+    {
+      "polet_id": "7337201",
+      "polet_navn": "Bruichladdich Port Charlotte 10 YO Heavy Peated Islay Single Malt",
+      "wa": "Bruichladdich Port Charlotte 10yo Heavily Peated (First Edition)",
+      "score": 0.667
+    },
+    {
+      "polet_id": "18740701",
+      "polet_navn": "Kilchoman 100% Islay 2024 Single Malt Whisky",
+      "wa": "Kilchoman 100% Islay (all editions)",
+      "score": 0.667
+    },
+    {
+      "polet_id": "19945401",
+      "polet_navn": "Kilchoman 100% Islay Single Malt Whisky 2025",
+      "wa": "Kilchoman 100% Islay (all editions)",
+      "score": 0.667
+    },
+    {
+      "polet_id": "12597801",
+      "polet_navn": "Tamdhu Batch Strength 005 Single Malt Whisky",
+      "wa": "Tamdhu Batch Strength (all batches)",
+      "score": 0.667
+    },
+    {
+      "polet_id": "18733101",
+      "polet_navn": "Talisker Single Malt Scotch Whisky 8 YO SR 2024",
+      "wa": "Talisker 8yo (Special Releases)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "14900701",
+      "polet_navn": "Dalwhinnie Distillers Edition 2022",
+      "wa": "Dalwhinnie Distillers Edition",
+      "score": 0.667
+    },
+    {
+      "polet_id": "10982101",
+      "polet_navn": "Glenfiddich Fire & Cane",
+      "wa": "Glenfiddich Fire & Cane Experimental Series No. 4",
+      "score": 0.5
+    },
+    {
+      "polet_id": "6868201",
+      "polet_navn": "Glenfiddich Project XX",
+      "wa": "Glenfiddich Project XX Experimental Series No. 2",
+      "score": 0.5
+    },
+    {
+      "polet_id": "16561801",
+      "polet_navn": "Ichiro's Malt Double Distilleries 2021 Chichibu x Komagatake",
+      "wa": "Ichiro's Malt Double Distilleries",
+      "score": 0.5
+    },
+    {
+      "polet_id": "3957701",
+      "polet_navn": "Michter's US 1 Bourbon Whiskey",
+      "wa": "Michter's Small Batch US*1 Bourbon",
+      "score": 0.667
+    }
+  ],
+  "ja_kunnskap": [
+    {
+      "polet_id": "10506901",
+      "polet_navn": "Glen Scotia Victoriana Cask Strength",
+      "wa": "Glen Scotia Victoriana",
+      "score": 0.6
+    },
+    {
+      "polet_id": "3224901",
+      "polet_navn": "Glenfiddich Ancient Reserve 18 YO",
+      "wa": "Glenfiddich 18yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "5747201",
+      "polet_navn": "Connemara Single Malt Whiskey",
+      "wa": "Connemara Peated Single Malt",
+      "score": 0.5
+    },
+    {
+      "polet_id": "7873601",
+      "polet_navn": "Mellow Corn Whiskey",
+      "wa": "Mellow Corn BiB",
+      "score": 0.667
+    },
+    {
+      "polet_id": "16623801",
+      "polet_navn": "The Glenlivet 12 YO 200 Year Anniversary Edition",
+      "wa": "Glenlivet 12yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "18875101",
+      "polet_navn": "Dewar's 12YO Double Aged",
+      "wa": "Dewar's 12yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "19205101",
+      "polet_navn": "Benromach Contrasts Organic Speyside",
+      "wa": "Benromach Organic",
+      "score": 0.667
+    },
+    {
+      "polet_id": "11103701",
+      "polet_navn": "Wolfburn Northland Single Malt Scotch Whisky",
+      "wa": "Wolfburn (NAS)",
+      "score": 0.5
+    },
+    {
+      "polet_id": "652701",
+      "polet_navn": "Glenmorangie The Original",
+      "wa": "Glenmorangie 10yo",
+      "score": 0.35
+    }
+  ],
+  "usikker_venter_pa_kristoffer": [
+    {
+      "polet_id": "12399801",
+      "polet_navn": "Tobermory 12 YO Single Malt",
+      "wa": "Tobermory 12yo Bourbon-matured",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19717701",
+      "polet_navn": "Deanston Virgin Oak Cask Strenght",
+      "wa": "Deanston Virgin Oak",
+      "score": 0.6
+    },
+    {
+      "polet_id": "20311201",
+      "polet_navn": "Edradour 10YO The Distillery Edition",
+      "wa": "Edradour 10yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19586501",
+      "polet_navn": "Glendalough Single Grain Double Barrel Oloroso Finish",
+      "wa": "Glendalough Double Barrel",
+      "score": 0.6
+    },
+    {
+      "polet_id": "10847301",
+      "polet_navn": "Highland Park OWF 15 YO",
+      "wa": "Highland Park 15yo",
+      "score": 0.5
+    }
+  ],
+  "avvis": [
+    {
+      "polet_id": "10092001",
+      "polet_navn": "Bruichladdich Bere Barley 2013",
+      "wa": "Bruichladdich Islay Barley (all vintages)",
+      "score": 0.5
+    },
+    {
+      "polet_id": "10272101",
+      "polet_navn": "Finlaggan Eilean Mor",
+      "wa": "Finlaggan Old Reserve",
+      "score": 0.333
+    },
+    {
+      "polet_id": "10272301",
+      "polet_navn": "Finlaggan Sherry Finished",
+      "wa": "Finlaggan Old Reserve",
+      "score": 0.333
+    },
+    {
+      "polet_id": "10328501",
+      "polet_navn": "Jura 12 YO",
+      "wa": "Jura 12yo Elixir",
+      "score": 0.5
+    },
+    {
+      "polet_id": "10554801",
+      "polet_navn": "Ichiro's Malt & Grain",
+      "wa": "Ichiro's Malt The Joker",
+      "score": 0.5
+    },
+    {
+      "polet_id": "10580601",
+      "polet_navn": "Kentucky Jack Straight Bourbon Whiskey",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.333
+    },
+    {
+      "polet_id": "11149901",
+      "polet_navn": "Wemyss The Hive Batch Strength Batch No. 02",
+      "wa": "Wemyss Malts The Hive",
+      "score": 0.333
+    },
+    {
+      "polet_id": "11164601",
+      "polet_navn": "Fettercairn 12 YO",
+      "wa": "Fettercairn Fior",
+      "score": 0.35
+    },
+    {
+      "polet_id": "11224801",
+      "polet_navn": "Millstone 92 Rye Whisky",
+      "wa": "Millstone 100 Rye",
+      "score": 0.5
+    },
+    {
+      "polet_id": "11337004",
+      "polet_navn": "Jura Journey",
+      "wa": "Jura 16yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "11357308",
+      "polet_navn": "The Matsui Whisky Collection (3x20cl)",
+      "wa": "Matsui The Peated",
+      "score": 0.333
+    },
+    {
+      "polet_id": "11557901",
+      "polet_navn": "Loch Lomond 12 YO Single Malt",
+      "wa": "Loch Lomond NAS",
+      "score": 0.517
+    },
+    {
+      "polet_id": "11558001",
+      "polet_navn": "Loch Lomond 18 YO Single Malt",
+      "wa": "Loch Lomond NAS",
+      "score": 0.517
+    },
+    {
+      "polet_id": "12165601",
+      "polet_navn": "The Macallan Double Cask 18 YO",
+      "wa": "Macallan Gold Double Cask",
+      "score": 0.6
+    },
+    {
+      "polet_id": "12166001",
+      "polet_navn": "The Macallan Double Cask 15 YO",
+      "wa": "Macallan Gold Double Cask",
+      "score": 0.6
+    },
+    {
+      "polet_id": "12307301",
+      "polet_navn": "The Nikka Tailored",
+      "wa": "Nikka All Malt",
+      "score": 0.5
+    },
+    {
+      "polet_id": "12372901",
+      "polet_navn": "BenRiach The Smokey Twelve 12 YO",
+      "wa": "BenRiach 12yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "12379302",
+      "polet_navn": "Spirit of Hven Mercurious Corn Whisky",
+      "wa": "Spirit of Hven Urania",
+      "score": 0.4
+    },
+    {
+      "polet_id": "12379402",
+      "polet_navn": "Spirit of Hven Charlies Wagon Single Malt Whisky",
+      "wa": "Spirit of Hven Urania",
+      "score": 0.4
+    },
+    {
+      "polet_id": "12382102",
+      "polet_navn": "Spirit of Hven Seven Stars No.7 Alkaid Single Malt Whisky",
+      "wa": "Spirit of Hven Seven Stars No. 1 Dubhe",
+      "score": 0.714
+    },
+    {
+      "polet_id": "12435001",
+      "polet_navn": "Michter's Shenk's Homestead Sour Mash Whiskey",
+      "wa": "Michter's Sour Mash",
+      "score": 0.6
+    },
+    {
+      "polet_id": "12447601",
+      "polet_navn": "West Cork Black Cask",
+      "wa": "West Cork Original Bourbon Cask",
+      "score": 0.6
+    },
+    {
+      "polet_id": "12461501",
+      "polet_navn": "Nikka Taketsuru Pure Malt",
+      "wa": "Nikka Taketsuru 12yo",
+      "score": 0.517
+    },
+    {
+      "polet_id": "12598001",
+      "polet_navn": "Tamdhu 12 YO Speyside Single Malt Scotch Whisky",
+      "wa": "Tamdhu Batch Strength (all batches)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "12633301",
+      "polet_navn": "Benriach 21 YO",
+      "wa": "BenRiach Heart of Speyside",
+      "score": 0.35
+    },
+    {
+      "polet_id": "12800801",
+      "polet_navn": "Black Bull Himinjod",
+      "wa": "Black Bull 12yo",
+      "score": 0.517
+    },
+    {
+      "polet_id": "12800901",
+      "polet_navn": "Compass Box Glasgow Blend",
+      "wa": "Compass Box The Lost Blend",
+      "score": 0.6
+    },
+    {
+      "polet_id": "12818502",
+      "polet_navn": "Spirit of Hven x Smögen Bländande",
+      "wa": "Spirit of Hven Urania",
+      "score": 0.4
+    },
+    {
+      "polet_id": "1284301",
+      "polet_navn": "Aberlour 12 YO Single Malt",
+      "wa": "Aberlour A'Bunadh (all batches)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "13089301",
+      "polet_navn": "Loch Lomond The Open Special Edition",
+      "wa": "Loch Lomond NAS",
+      "score": 0.4
+    },
+    {
+      "polet_id": "13277701",
+      "polet_navn": "Redemption Bourbon",
+      "wa": "Redemption High Rye Bourbon",
+      "score": 0.333
+    },
+    {
+      "polet_id": "13456001",
+      "polet_navn": "Redemption Rye",
+      "wa": "Redemption High Rye Bourbon",
+      "score": 0.667
+    },
+    {
+      "polet_id": "13601001",
+      "polet_navn": "Aberlour 14 YO Single Malt",
+      "wa": "Aberlour A'Bunadh (all batches)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "13706902",
+      "polet_navn": "Spirit of Hven The Nose",
+      "wa": "Spirit of Hven Urania",
+      "score": 0.5
+    },
+    {
+      "polet_id": "13709901",
+      "polet_navn": "Bunnahabhain Artist #9 1979 40 YO",
+      "wa": "Bunnahabhain 40yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "14088301",
+      "polet_navn": "Compass Box Artist #11 Pentalogy Confidence",
+      "wa": "Compass Box Great King St Artist's Blend",
+      "score": 0.3
+    },
+    {
+      "polet_id": "14089701",
+      "polet_navn": "Amrut Naidhal Single Malts of India Peated",
+      "wa": "Amrut Peated",
+      "score": 0.4
+    },
+    {
+      "polet_id": "14090001",
+      "polet_navn": "Amrut LMDW Lightly Peated Ex-Bourbon 2014",
+      "wa": "Amrut Peated",
+      "score": 0.333
+    },
+    {
+      "polet_id": "14105801",
+      "polet_navn": "Monkey Shoulder Smokey Monkey",
+      "wa": "Monkey Shoulder",
+      "score": 0.667
+    },
+    {
+      "polet_id": "14226301",
+      "polet_navn": "Arran Quarter Cask",
+      "wa": "Arran Malt Bourbon Single Cask",
+      "score": 0.667
+    },
+    {
+      "polet_id": "14349001",
+      "polet_navn": "Compass Box Ethereal",
+      "wa": "Compass Box Affinity",
+      "score": 0.5
+    },
+    {
+      "polet_id": "14556501",
+      "polet_navn": "Yellowstone Kentucky Straight Bourbon",
+      "wa": "Yellowstone Limited Edition (all vintages)",
+      "score": 0.5
+    },
+    {
+      "polet_id": "14601",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "14602",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "14607",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "14607801",
+      "polet_navn": "Compass Box Experimental Grain Whisky",
+      "wa": "Compass Box Affinity",
+      "score": 0.5
+    },
+    {
+      "polet_id": "14664001",
+      "polet_navn": "Glen Scotia 10 YO Single Malt",
+      "wa": "Glen Scotia Victoriana",
+      "score": 0.517
+    },
+    {
+      "polet_id": "14739501",
+      "polet_navn": "The Famous Grouse Sherry Cask Finish",
+      "wa": "Famous Grouse",
+      "score": 0.4
+    },
+    {
+      "polet_id": "14761701",
+      "polet_navn": "Ardbeg 25 YO Single Malt Whisky",
+      "wa": "Ardbeg Alligator",
+      "score": 0.35
+    },
+    {
+      "polet_id": "14781601",
+      "polet_navn": "The Macallan 30 YO Sherry Oak",
+      "wa": "Macallan 30yo Fine Oak",
+      "score": 0.5
+    },
+    {
+      "polet_id": "14870901",
+      "polet_navn": "Elements of Islay Bourbon Cask",
+      "wa": "Elements of Islay \"Peat\"",
+      "score": 0.333
+    },
+    {
+      "polet_id": "14900001",
+      "polet_navn": "Mortlach Special Release 2022",
+      "wa": "Mortlach Special Strength",
+      "score": 0.4
+    },
+    {
+      "polet_id": "14900601",
+      "polet_navn": "Glenkinchie The Distillers Edition",
+      "wa": "Glenkinchie 12yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "14978801",
+      "polet_navn": "The Macallan 30 YO Double Cask",
+      "wa": "Macallan Gold Double Cask",
+      "score": 0.6
+    },
+    {
+      "polet_id": "15151801",
+      "polet_navn": "Kilchoman Casado Single Malt",
+      "wa": "Kilchoman 100% Islay (all editions)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "15152201",
+      "polet_navn": "Nikka Yoichi Discovery Non-Peated Single Malt",
+      "wa": "Nikka Yoichi NAS",
+      "score": 0.333
+    },
+    {
+      "polet_id": "15152301",
+      "polet_navn": "Kilchoman Machir Bay Cask Strenght Single Malt",
+      "wa": "Kilchoman Machir Bay (all vintages)",
+      "score": 0.6
+    },
+    {
+      "polet_id": "15277901",
+      "polet_navn": "Nikka Miyagikyo Discovery Peated Single Malt Whisky",
+      "wa": "Nikka Miyagikyo NAS",
+      "score": 0.4
+    },
+    {
+      "polet_id": "15379801",
+      "polet_navn": "Tomintoul Cigar Malt Oloroso Sherry Cask",
+      "wa": "Tomintoul 12yo Oloroso Sherry",
+      "score": 0.45
+    },
+    {
+      "polet_id": "15435601",
+      "polet_navn": "Talisker 41 YO",
+      "wa": "Talisker Distiller's Edition (all editions)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "15436301",
+      "polet_navn": "The Macallan M Decanter",
+      "wa": "Macallan Amber",
+      "score": 0.333
+    },
+    {
+      "polet_id": "15702801",
+      "polet_navn": "Loch Lomond 151st Royal Liverpool",
+      "wa": "Loch Lomond NAS",
+      "score": 0.333
+    },
+    {
+      "polet_id": "16330601",
+      "polet_navn": "Bladnoch 19",
+      "wa": "Bladnoch 10yo (F&F)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "16439901",
+      "polet_navn": "Bruichladdich Black Art 11.1",
+      "wa": "Bruichladdich Black Art 1989",
+      "score": 0.6
+    },
+    {
+      "polet_id": "16598401",
+      "polet_navn": "Rebel Kentucky Straight Bourbon Whiskey",
+      "wa": "Rebel Yell Kentucky Bourbon",
+      "score": 0.5
+    },
+    {
+      "polet_id": "16601",
+      "polet_navn": "Jim Beam Bourbon",
+      "wa": "Jim Beam Bonded",
+      "score": 0.667
+    },
+    {
+      "polet_id": "16604",
+      "polet_navn": "Jim Beam Bourbon",
+      "wa": "Jim Beam Bonded",
+      "score": 0.667
+    },
+    {
+      "polet_id": "16604702",
+      "polet_navn": "Mortlach 25 YO",
+      "wa": "Mortlach Rare Old",
+      "score": 0.35
+    },
+    {
+      "polet_id": "16706103",
+      "polet_navn": "Willett Bourbon Whiskey",
+      "wa": "Willett Family Estate Bourbon (all ages)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "16827301",
+      "polet_navn": "Glen Scotia Double Cask Rum Finish",
+      "wa": "Glen Scotia Double Cask",
+      "score": 0.667
+    },
+    {
+      "polet_id": "16827501",
+      "polet_navn": "Loch Lomond Original Single malt",
+      "wa": "Loch Lomond NAS",
+      "score": 0.5
+    },
+    {
+      "polet_id": "16827701",
+      "polet_navn": "Glen Scotia Campbeltown Harbour",
+      "wa": "Glen Scotia Victoriana",
+      "score": 0.4
+    },
+    {
+      "polet_id": "16931401",
+      "polet_navn": "Yellowstone American Single Malt Whiskey",
+      "wa": "Yellowstone Limited Edition (all vintages)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "16982401",
+      "polet_navn": "Tullibardine 15 YO Single Malt",
+      "wa": "Tullibardine Sovereign",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17021301",
+      "polet_navn": "Loch Lomond 21YO",
+      "wa": "Loch Lomond NAS",
+      "score": 0.517
+    },
+    {
+      "polet_id": "17033301",
+      "polet_navn": "Glenkinchie 27 YO",
+      "wa": "Glenkinchie Distiller's Edition (all editions)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17077001",
+      "polet_navn": "Bib & Tucker Small Batch Bourbon",
+      "wa": "Bib & Tucker 6yo Bourbon",
+      "score": 0.517
+    },
+    {
+      "polet_id": "17180801",
+      "polet_navn": "Kilchoman Batch Strength Single Malt Whisky",
+      "wa": "Kilchoman Original Cask Strength",
+      "score": 0.5
+    },
+    {
+      "polet_id": "17189901",
+      "polet_navn": "Tullibardine 18 YO Single Malt",
+      "wa": "Tullibardine Sovereign",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17322401",
+      "polet_navn": "Bruichladdich 30 YO",
+      "wa": "Bruichladdich Islay Barley (all vintages)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17322501",
+      "polet_navn": "Bruichladdich 18 YO",
+      "wa": "Bruichladdich Islay Barley (all vintages)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "17481101",
+      "polet_navn": "Powers John's Lane 12YO Cask Strength Single Pot Still Irish Whiskey",
+      "wa": "Powers 12yo John's Lane",
+      "score": 0.429
+    },
+    {
+      "polet_id": "18541401",
+      "polet_navn": "Willett Family Estate Bottled Single Barrel Bourbon 8 YO No.2314",
+      "wa": "Willett Family Estate 8yo Bourbon",
+      "score": 0.429
+    },
+    {
+      "polet_id": "18637601",
+      "polet_navn": "Scapa 10 YO Single Malt",
+      "wa": "Scapa Skiren",
+      "score": 0.35
+    },
+    {
+      "polet_id": "18662301",
+      "polet_navn": "Bruichladdich Octomore 15.1",
+      "wa": "Bruichladdich Octomore 6.1",
+      "score": 0.667
+    },
+    {
+      "polet_id": "18662401",
+      "polet_navn": "Bruichladdich Octomore 15.2",
+      "wa": "Bruichladdich Octomore 6.1",
+      "score": 0.667
+    },
+    {
+      "polet_id": "18676301",
+      "polet_navn": "Bruichladdich Port Charlotte SYC:01 2013",
+      "wa": "Bruichladdich Port Charlotte 2007 CC:01",
+      "score": 0.5
+    },
+    {
+      "polet_id": "187201",
+      "polet_navn": "Jameson Black Barrel Irish Whiskey",
+      "wa": "Jameson Irish Whiskey",
+      "score": 0.333
+    },
+    {
+      "polet_id": "18732501",
+      "polet_navn": "Singleton of Glen Ord 14 YO SR 2024",
+      "wa": "Singleton of Glen Ord Signature",
+      "score": 0.35
+    },
+    {
+      "polet_id": "18746901",
+      "polet_navn": "Jack Daniel's Tennessee Triple Mash",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.4
+    },
+    {
+      "polet_id": "18925401",
+      "polet_navn": "Loch Lomond 16YO Waypoint",
+      "wa": "Loch Lomond NAS",
+      "score": 0.35
+    },
+    {
+      "polet_id": "18944301",
+      "polet_navn": "Nikka 9 Decades Premimum Blended Whisky",
+      "wa": "Nikka Blended",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19196501",
+      "polet_navn": "Ben Nevis 18 YO Cane and Grain",
+      "wa": "Ben Nevis 18yo The Maltman",
+      "score": 0.4
+    },
+    {
+      "polet_id": "19218501",
+      "polet_navn": "Kavalan Solist Madeira Cask",
+      "wa": "Kavalan Solist Amontillado Cask",
+      "score": 0.6
+    },
+    {
+      "polet_id": "19219901",
+      "polet_navn": "Arran 25 YO",
+      "wa": "Arran Malt Bourbon Single Cask",
+      "score": 0.35
+    },
+    {
+      "polet_id": "19232401",
+      "polet_navn": "Willett Family Estate Bottled Small Batch Rye 4 YO",
+      "wa": "Willett Family Estate 4yo Rye",
+      "score": 0.667
+    },
+    {
+      "polet_id": "19321101",
+      "polet_navn": "Glenfiddich Archive 1990 Cask 47701 1990",
+      "wa": "Glenfiddich Reserve Cask",
+      "score": 0.4
+    },
+    {
+      "polet_id": "19321401",
+      "polet_navn": "Ardbeg Smokiverse",
+      "wa": "Ardbeg 10yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "19438101",
+      "polet_navn": "Elijah Craig Straight Rye Whiskey",
+      "wa": "Elijah Craig 12yo",
+      "score": 0.517
+    },
+    {
+      "polet_id": "19515901",
+      "polet_navn": "High West Bourbon",
+      "wa": "High West Bourye",
+      "score": 0.667
+    },
+    {
+      "polet_id": "19630601",
+      "polet_navn": "Glenmorangie The Nectar 16 YO",
+      "wa": "Glenmorangie Nectar d'Or",
+      "score": 0.517
+    },
+    {
+      "polet_id": "19696101",
+      "polet_navn": "Arran Barrel Reserve",
+      "wa": "Arran Malt 10yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "19786301",
+      "polet_navn": "Johnnie Walker Black Ruby",
+      "wa": "Johnnie Walker Double Black",
+      "score": 0.6
+    },
+    {
+      "polet_id": "19812101",
+      "polet_navn": "Glengoyne Marius Cask #3 Single Cask Whisky",
+      "wa": "Glengoyne Cask Strength (all batches)",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19812201",
+      "polet_navn": "Glengoyne Single Cask #423 Single Malt Whisky",
+      "wa": "Glengoyne Cask Strength (all batches)",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19817301",
+      "polet_navn": "Glendalough 7 YO Single Malt Mizunara Finish",
+      "wa": "Glendalough 7yo Single Malt",
+      "score": 0.333
+    },
+    {
+      "polet_id": "19935301",
+      "polet_navn": "Bruichladdich Octomore 16.1",
+      "wa": "Bruichladdich Octomore 6.1",
+      "score": 0.667
+    },
+    {
+      "polet_id": "19935401",
+      "polet_navn": "Bruichladdich Octomore 16.2",
+      "wa": "Bruichladdich Octomore 6.1",
+      "score": 0.667
+    },
+    {
+      "polet_id": "19935701",
+      "polet_navn": "Black Ram Whisky",
+      "wa": "Black Bottle (after 2013 re-launch)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "19940401",
+      "polet_navn": "Arran 10 YO Arran Barley",
+      "wa": "Arran Malt 10yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "19986201",
+      "polet_navn": "The Glenrothes 15 YO",
+      "wa": "Glenrothes Alba Reserve",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20040401",
+      "polet_navn": "Benriach Single Cask 8744",
+      "wa": "BenRiach Cask Strength",
+      "score": 0.5
+    },
+    {
+      "polet_id": "20040701",
+      "polet_navn": "Bruichladdich Port Charlotte 18",
+      "wa": "Bruichladdich Port Charlotte PC10 (Second Edition)",
+      "score": 0.6
+    },
+    {
+      "polet_id": "20041201",
+      "polet_navn": "Kilkerran H.P Batch 12",
+      "wa": "Kilkerran 12yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20041301",
+      "polet_navn": "Kilkerran H.P Batch 11",
+      "wa": "Kilkerran 12yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20041701",
+      "polet_navn": "Arran Rare Batch French Cask 2009",
+      "wa": "Arran Malt Bourbon Single Cask",
+      "score": 0.4
+    },
+    {
+      "polet_id": "20041801",
+      "polet_navn": "Springbank 12 YO CS Batch#2",
+      "wa": "Springbank 12yo Green",
+      "score": 0.333
+    },
+    {
+      "polet_id": "20042001",
+      "polet_navn": "Springbank 12 YO CS Batch#1",
+      "wa": "Springbank 12yo Green",
+      "score": 0.333
+    },
+    {
+      "polet_id": "20042101",
+      "polet_navn": "Hazelburn 8 YO Sherry Wood",
+      "wa": "Hazelburn 8yo (Springbank)",
+      "score": 0.333
+    },
+    {
+      "polet_id": "20160301",
+      "polet_navn": "Jack Daniel's Bonded Rye",
+      "wa": "Jack Daniel's Rested Tennessee Rye (Batch 1/2)",
+      "score": 0.6
+    },
+    {
+      "polet_id": "20160501",
+      "polet_navn": "Jack Daniel's Sinatra Select",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.4
+    },
+    {
+      "polet_id": "20172301",
+      "polet_navn": "Laphroaig 10 YO Sherry Oak",
+      "wa": "Laphroaig 10yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "20172401",
+      "polet_navn": "The Glenrothes 42 YO",
+      "wa": "Glenrothes Alba Reserve",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20172501",
+      "polet_navn": "The Glenrothes 32 YO",
+      "wa": "Glenrothes Alba Reserve",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20185001",
+      "polet_navn": "Springbank 30 YO",
+      "wa": "Springbank CV",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20185101",
+      "polet_navn": "Springbank 10 YO Amontillado",
+      "wa": "Springbank 10yo",
+      "score": 0.5
+    },
+    {
+      "polet_id": "20277901",
+      "polet_navn": "The Glenlivet Small Batch 17YO Single Malt Cask Strength",
+      "wa": "Glenlivet Nadurra Cask Strength (NAS)",
+      "score": 0.45
+    },
+    {
+      "polet_id": "20285901",
+      "polet_navn": "The Glenlivet Small Batch 20YO Single Malt Cask Strength",
+      "wa": "Glenlivet Nadurra Cask Strength (NAS)",
+      "score": 0.45
+    },
+    {
+      "polet_id": "20361301",
+      "polet_navn": "Laphroaig Elements 3.0",
+      "wa": "Laphroaig 10yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20373801",
+      "polet_navn": "Glen Scotia Icons #3",
+      "wa": "Glen Scotia 12yo",
+      "score": 0.517
+    },
+    {
+      "polet_id": "20389601",
+      "polet_navn": "The Macallan M Copper",
+      "wa": "Macallan Amber",
+      "score": 0.333
+    },
+    {
+      "polet_id": "20400201",
+      "polet_navn": "Kilchoman Mezcal Matured Single Malt Whisky",
+      "wa": "Kilchoman Madeira Cask Matured",
+      "score": 0.4
+    },
+    {
+      "polet_id": "20592701",
+      "polet_navn": "Ardbeg Dolce",
+      "wa": "Ardbeg 10yo",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20860601",
+      "polet_navn": "Bowmore 9 YO",
+      "wa": "Bowmore Legend",
+      "score": 0.35
+    },
+    {
+      "polet_id": "20862101",
+      "polet_navn": "Jim Beam Pineapple",
+      "wa": "Jim Beam Bonded",
+      "score": 0.5
+    },
+    {
+      "polet_id": "20866501",
+      "polet_navn": "Jack Daniel's 10 YO",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.517
+    },
+    {
+      "polet_id": "20948101",
+      "polet_navn": "Kilchoman Family Cask 18 YO Single Malt Whisky",
+      "wa": "Kilchoman Bourbon Single Cask",
+      "score": 0.517
+    },
+    {
+      "polet_id": "20948201",
+      "polet_navn": "Kilchoman Family Cask 20 YO Single Malt Whisky",
+      "wa": "Kilchoman Bourbon Single Cask",
+      "score": 0.517
+    },
+    {
+      "polet_id": "20948301",
+      "polet_navn": "Kilchoman Family Cask 11 YO Single Malt Whisky",
+      "wa": "Kilchoman Bourbon Single Cask",
+      "score": 0.517
+    },
+    {
+      "polet_id": "20948501",
+      "polet_navn": "Kilchoman Family Cask 14 YO Single Malt Whisky",
+      "wa": "Kilchoman Bourbon Single Cask",
+      "score": 0.517
+    },
+    {
+      "polet_id": "21006601",
+      "polet_navn": "Dalmore 17 YO",
+      "wa": "Dalmore Cigar Malt",
+      "score": 0.35
+    },
+    {
+      "polet_id": "3440001",
+      "polet_navn": "Glenfiddich 21 YO Reserva Rum Cask Finish",
+      "wa": "Glenfiddich 21yo Gran Reserva",
+      "score": 0.333
+    },
+    {
+      "polet_id": "3958201",
+      "polet_navn": "Michter's US*1 Unblended American Whiskey",
+      "wa": "Michter's Small Batch US*1 Bourbon",
+      "score": 0.4
+    },
+    {
+      "polet_id": "4479601",
+      "polet_navn": "Jack Daniel's Tennessee Whiskey",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "4995701",
+      "polet_navn": "The BenRiach 16 YO Single Malt",
+      "wa": "BenRiach Heart of Speyside",
+      "score": 0.35
+    },
+    {
+      "polet_id": "4995901",
+      "polet_navn": "BenRiach 10 YO The Smoky Ten",
+      "wa": "BenRiach 10yo",
+      "score": 0.333
+    },
+    {
+      "polet_id": "5884102",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "5929801",
+      "polet_navn": "Aberlour 16 YO Single Malt",
+      "wa": "Aberlour A'Bunadh (all batches)",
+      "score": 0.35
+    },
+    {
+      "polet_id": "6830501",
+      "polet_navn": "Glenfarclas 30 YO",
+      "wa": "Glenfarclas 105",
+      "score": 0.35
+    },
+    {
+      "polet_id": "7686401",
+      "polet_navn": "Finlaggan Cask Strength",
+      "wa": "Finlaggan Old Reserve",
+      "score": 0.333
+    },
+    {
+      "polet_id": "7855803",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "8135204",
+      "polet_navn": "Jack Daniel's Tennessee",
+      "wa": "Jack Daniel's Gentleman Jack",
+      "score": 0.667
+    },
+    {
+      "polet_id": "884801",
+      "polet_navn": "Hankey Bannister",
+      "wa": "Hankey Bannister Heritage",
+      "score": 0.667
+    }
+  ]
+}

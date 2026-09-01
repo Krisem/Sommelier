@@ -33,8 +33,27 @@ regelen. Drift-testen hadde en `if`-fallback som skjulte at første gren aldri t
 
 ### Åpne tråder
 
-- [ ] **193 tier C-kandidater venter på ja/nei.** `python3 -m tools.whisky_match --pending`.
-      Ta dem i puljer i chat; ubekreftet tier C teller som ingen match.
+- [ ] **193 tier C-kandidater — TRIAGERT 2026-09-01, venter på ja/nei fra Kristoffer.**
+      Forslaget ligger i **[`whisky_tierC_triage.json`](whisky_tierC_triage.json)** med `polet_id`
+      per rad, slått opp mot join-fila (ikke avskrevet). **Ingenting er skrevet til
+      `join.ndjson` ennå.** Regenerer køen med `python3 -m tools.whisky_match --pending --limit 200`.
+
+      | Pulje | n | Hva |
+      |---|---:|---|
+      | `ja_mekanisk` | 26 | Samme flaske, bare Polets lengre juridiske navn («Redbreast 12 YO Single Pot Still Irish Whiskey» → «Redbreast 12yo»). Ikke ulike ekspresjoner |
+      | `ja_kunnskap` | 9 | Krever produktkunnskap, men jeg er trygg: Victoriana *er* fatstyrke, «Ancient Reserve» var 18-åringens gamle navn, Connemara-kjernen *er* torvet, Mellow Corn *er* bottled-in-bond |
+      | `usikker_venter_pa_kristoffer` | 5 | Tobermory 12, Deanston Virgin Oak CS, Edradour 10 Distillery Ed., Glendalough Double Barrel Oloroso, Highland Park OWF 15 |
+      | `avvis` | 153 | Nesten alle samme mønster: Polet fører en **annen ekspresjon** fra samme destilleri. Octomore 15.1/16.1 → 6.1, Loch Lomond 12/18/21 → NAS, Jim Beam Bourbon → Bonded, Redemption **Rye** → High Rye **Bourbon** |
+
+      **Hvorfor bare accept-siden trenger deg:** `resolve()` teller kun `"ja"`
+      (`whisky_match.py:186`), så `"nei"` og `null` er funksjonelt identiske. Å avvise endrer
+      ingenting og er gratis; å bekrefte er den eneste handlingen med konsekvens.
+
+      **Funn: ADR-035 hadde allerede avgjort 12 av de 193, og svarene var aldri påført.**
+      ADR-ens fire eksempler sto fortsatt i køen som ubesvarte — «Jack Daniel's Tennessee →
+      Gentleman Jack» (FEIL) i **sju** rader, «Aberlour 12 → A'Bunadh» (FEIL) i tre (12/14/16 YO),
+      «Glenmorangie The Original → 10yo» (RIKTIG) og «Michter's US 1 → Small Batch US*1» (RIKTIG).
+      En avgjørelse som bare står i en ADR blir ikke påført av seg selv.
 - [ ] **Klokke-fasettene for brennevin er ikke probet.** Fylde/Fat/Røyk ligger i details-JSON,
       ikke i søkeresultatet. `clock_dims_for_category("brennevin")` kaster fortsatt `ValueError`,
       og det er riktig til noen har målt hvilke koder som filtrerer.
