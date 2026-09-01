@@ -1059,7 +1059,20 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         rules: Optional dict fra `load_profile_rules()`. Hvis None, lastes default.
 
     Returns:
-        dict med keys: tier, reasons, confidence, rule_fired.
+        dict med keys: tier, reasons, confidence, rule_fired, explore.
+
+        `explore` er True når vinen ligger i en blindsone — uavhengig av tier.
+        Det er et EGET signal fra `tier` og `confidence`, ikke en avledning:
+        `tier` sier hvor godt vinen passer profilen, `confidence` hvor mye
+        data den dommen hviler på, og `explore` at terrenget er ukjent OG at
+        ukjent terreng historisk har levert. Målt over de 122 ratede
+        (ADR-036): blindsone-viner snitt 4,11 (n=16) mot default 3,76 (n=29),
+        t=+2,88 — og ikke skillbart fra de bekreftede reglene (t 0,5–1,6).
+
+        **`explore` er ikke en anbefaling.** De 16 er viner Kristoffer valgte
+        å drikke, ofte gjennom en bevisst flight; katalogens blindsone-varer
+        er ikke samme populasjon. Feltet sier «her er det verdt å lete», ikke
+        «denne blir god».
 
     Regelprioritet (early-exit):
         1. no_go          — navn-substring i no_go-liste
@@ -1105,6 +1118,7 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
                     "reasons": reasons,
                     "confidence": "high",
                     "rule_fired": "no_go",
+                    "explore": False,
                 }
             if nogo_annen_argang is None:
                 nogo_norm = _normalize_name(nogo_wine)
@@ -1139,6 +1153,7 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
                 [n for n, _ in bek_hits] + [n for n, _ in bommet_hits], rules
             ),
             "rule_fired": "bekymring",
+            "explore": False,
         }
 
     # Blindspot beregnes FØR regel 3 fordi den kan kappe `very_fit`
@@ -1168,12 +1183,14 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
                 "reasons": reasons,
                 "confidence": "low",
                 "rule_fired": "blindspot_cap",
+                "explore": True,
             }
         return {
             "tier": "very_fit",
             "reasons": reasons,
             "confidence": _konfidens_fra_n([bekr_stil], rules),
             "rule_fired": "bekreftet_snitt",
+            "explore": False,
         }
 
     # --- Regel 4: fit — drue ELLER stil ELLER region ------------------------
@@ -1254,16 +1271,23 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
             "reasons": reasons,
             "confidence": "low" if (blindspot or niva_fit) else "medium",
             "rule_fired": fired,
+            "explore": bool(blindspot),
         }
 
     # --- Regel 5: blindspot --------------------------------------------------
     if blindspot:
-        reasons.insert(0, f"Blindsone — profilen har lite eller ingen data: {blindspot}.")
+        reasons.insert(
+            0,
+            f"Blindsone — profilen har lite eller ingen data: {blindspot}. "
+            f"Blindsoner har historisk levert på linje med de bekreftede reglene "
+            f"(ADR-036), så dette er utforskningsverdi, ikke en advarsel.",
+        )
         return {
             "tier": "neutral",
             "reasons": reasons,
             "confidence": "low",
             "rule_fired": "blindspot",
+            "explore": True,
         }
 
     # --- Regel 6: default ----------------------------------------------------
@@ -1273,6 +1297,7 @@ def classify(wine: dict, rules: Optional[dict] = None) -> dict:
         "reasons": reasons,
         "confidence": "medium",
         "rule_fired": "default",
+        "explore": False,
     }
 
 
@@ -1488,7 +1513,11 @@ def _print_codes(codes: list[str]) -> None:
             print(f"{code}: ikke i snapshot — kjør refresh (docs/polet_refresh.md)")
             continue
         print(f"{code}  {res['navn']}")
-        print(f"  {res['tier']} · {res['rule_fired']} · konfidens {res['confidence']}")
+        merke = " · UTFORSK" if res.get("explore") else ""
+        print(
+            f"  {res['tier']} · {res['rule_fired']} · "
+            f"konfidens {res['confidence']}{merke}"
+        )
         for r in res["reasons"]:
             print(f"    - {r}")
 

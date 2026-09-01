@@ -3,7 +3,7 @@
 ## LEVERT 2026-09-01 — whisky-univers + Meta-Critic
 
 Plan: `~/.claude/plans/jazzy-stargazing-spark.md`. **509 tester grønne** (481 før).
-Ikke committet — ligger i arbeidstreet.
+Committet og pushet 2026-09-01 (`74e6449`, `f1c3f77`, `4928fcb`); `main` er i sync med `origin/main`.
 
 **Utgangspunkt:** Kristoffer spurte om Whiskybase som kilde til «et utvidet univers med rating».
 
@@ -106,23 +106,19 @@ Fase 6-gaten under.
       er tom** — ingen rating under 3,75. Fase 5 kan bygge oppslag og søk, men ingen fit-modell;
       terskelen på ~84 står uendret. Det mest verdifulle neste bidraget er flasker han *ikke* likte.
 
-- [ ] **⬅ Whisky: når drakk du de sju, og i hvilken anledning?** *(nytt 2026-08-31)*
-      `drukket_dato` og `anledning` er lagt til i skjemaet
-      ([ADR-033](../docs/ARCHITECTURE.md#adr-033-kontekst-fanges-i-dikteringen-ikke-i-en-app)), men
-      **alle sju radene har begge feltene tomme** — `dato` er dikteringsdatoen 2026-08-31, ikke da
-      de ble drukket, og den konteksten er ikke rekonstruerbar uten deg.
+- [x] **⬅ Whisky: når drakk du de sju, og i hvilken anledning? — LUKKET 2026-09-01.**
+      Kristoffer husker det ikke. `drukket_dato` og `anledning` forblir **tomme** for alle sju —
+      det er det riktige utfallet, ikke et savn: ADR-033 sier eksplisitt at et tomt felt er bedre
+      enn dikteringsdatoen én gang til. Feltene består i skjemaet for flasker som ratesd framover.
 
-      Grovt holder: «Lagavulin i fjor vinter», «Highland Park i mai». `2026-vinter` er en gyldig
-      verdi. **Ikke gjett** — et tomt felt er bedre enn dikteringsdatoen én gang til.
+      **Konsekvens, så den ikke må gjenoppdages:** sesong-analysen fra de 89 ølratingene
+      (median-ABV 6,5 % kaldt mot 5,4 % varmt) kan **aldri** replikeres på whisky-dataene som de
+      står nå. Ikke still dette spørsmålet om de sju igjen.
 
-      Hvorfor det er verdt å svare på: målt på de 89 ølratingene endrer sesongen **hva han velger,
-      ikke hvordan han dømmer** (median-ABV 6,5 % kaldt mot 5,4 % varmt; snittrating 3,41 mot 3,37).
-      Uten `anledning` kan whisky-dataene aldri bære det funnet.
-
-- [ ] **Vin og øl: er det noe uratet?** Ikke etterspurt, bare flagget. Vin går via en Vivino-sync
-      (`docs/vivino_refresh.md`), ikke chat — si ifra om du har ratet noe i appen siden 30. august, da
-      kjører jeg synken. Ølkanalen er død (siste Untappd-check-in 2026-01-16), så har du drukket øl
-      verdt å registrere, må vi finne en annen vei inn enn Untappd.
+- [x] **Vin og øl: er det noe uratet? — BESVART 2026-09-01: nei.** Ingen vin ratet siden 30. august,
+      så Vivino-synken (`docs/vivino_refresh.md`) trengs ikke — datagrunnlaget står på 122 ratede
+      viner. Ølkanalen er fortsatt død (siste Untappd-check-in 2026-01-16); den trenger en annen vei
+      inn enn Untappd før den kan gjenopplives.
 
 - [x] **To designspørsmål før Fase 6 kan starte** — BESVART 2026-08-31: **ja til begge.**
       Den objektive delen får overprøve rammen i spørsmålet, og prediksjonsdelen får være taus
@@ -310,8 +306,25 @@ Alt ligger i **[`maaling_2026-08-31.md`](maaling_2026-08-31.md)**, festet til re
 besvares først — skal den objektive delen kunne overprøve *rammen*, og aksepterer du at
 prediksjonsdelen er taus mesteparten av tiden? Legges fram med målingene fra Fase 4.
 
-- [ ] Eksponer `blindspot` som eget signal i output (~1 t). 6 654 varer er klassifisert, snitt
-      **4,15** — over `bekreftet_snitt` 4,10 og `bekreftet_drue` 4,00. Ingen ny modell.
+- [x] **Eksponer `blindspot` som eget signal i output — LEVERT 2026-09-01** ([ADR-036](../docs/ARCHITECTURE.md)).
+      `classify()` returnerer nå `explore: bool` på alle syv return-stier; CLI-en skriver `UTFORSK`.
+      **7 487 av 28 534 varer (26,2 %)**, hvorav 6 695 rene blindsoner og **792 som bærer `fit` OG
+      ukjent terreng samtidig** — de 792 hadde ingen representasjon i noe felt før dette.
+      **Null atferdsendring verifisert:** 0 av 28 534 varer skifter tier, regel eller konfidens,
+      målt ved å kjøre HEAD-versjonen av `classify` side om side med den nye.
+
+      **Planens tall var feil på premisset, ikke bare på desimalene.** Ny måling gjennom
+      `classify()` selv: blindspot 4,11 (n=16) · bekreftet_snitt 4,05 · bekreftet_drue 3,98 ·
+      default 3,76. Welch: blindsone mot **default t=+2,88**, men mot de bekreftede reglene
+      **t = 0,5–1,6 — ikke skillbart**. «Blindsonene er de han har likt best» holder altså ikke;
+      «ukjent terreng har levert på linje med kjent, og klart bedre enn ingenting» holder.
+
+      **Følgefiks:** CLAUDE.md § Blindspots sa «markér `[NYTT]` med **lavere konfidens**» — den
+      instruksjonen fikk anbefalingene til å nedtone nettopp det som traff best, og er fjernet.
+      Merket består, nedtoningen ikke.
+
+      **Forbeholdet som må følge tallet videre:** de 16 er viner Kristoffer *valgte* å drikke,
+      ofte gjennom en flight. Katalogens 7 487 er ikke samme populasjon.
 - [ ] Mekanisme-sjekk før anbefalingen (~2–3 t). **3–4 reelle utløsere, ikke 13.** Asymmetrien er
       poenget: rødvin til torsk bryter en mekanisme (jod × tannin) og lisensierer overprøving;
       hvitvin til biff bryter ingen, den underleverer bare.

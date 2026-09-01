@@ -1,129 +1,128 @@
 {
   "_meta": {
-    "generated_at": "2026-06-08T20:41:27+02:00",
+    "generated_at": "2026-09-01T20:25:51+02:00",
     "seed": 42,
     "split_cutoff": "2024-01-01",
     "ground_truth_field": "Your rating",
-    "n_rated_total": 111,
+    "n_rated_total": 122,
     "n_train": 87,
-    "n_test": 24,
-    "n_test_ex_lockbox": 19,
+    "n_test": 35,
+    "n_test_ex_lockbox": 29,
     "lockbox_k": 15,
     "lockbox_wines": [
       "Alexandre Bonnet Grande Réserve Brut Champagne||2019-05-16 15:33:34",
-      "Boekenhoutskloof The Chocolate Block|2021|2024-10-14 19:14:21",
-      "Cantalupo Il Mimo Nebbiolo Colline Novaresi|2015|2016-05-14 19:25:35",
-      "Chakana Bonarda Estate|2014|2016-08-27 16:40:58",
-      "Château de Ségriés Lirac Rouge|2014|2017-12-31 18:43:06",
-      "Domaine des Deux Roches Plants du Carré Mâcon-Village|2020|2022-06-18 15:07:46",
-      "Fritz Haag Brauneberger Juffer Riesling GG|2016|2018-07-24 19:54:57",
-      "José Pariente Verdejo|2016|2017-12-31 18:44:42",
-      "Louis Roederer Collection 243 Champagne||2022-09-15 17:37:16",
-      "Meinklang Prosa Rosé|2015|2016-05-14 19:26:26",
-      "Patria Femina Rosso||2025-11-09 12:32:23",
-      "Presqu'ile Chardonnay|2020|2025-05-16 17:47:16",
-      "Rolet La Dent de Charnet Côtes du Jura Chardonnay|2024|2026-03-13 23:46:48",
-      "Thymiopoulos Rosé de Xinomavro|2024|2026-05-14 16:04:54",
+      "Bernard Pitois Brut Réserve|N.V.|2026-06-13 20:10:00",
+      "Bottega Gold||2014-10-31 18:39:01",
+      "Castelmondo Valpolicella Ripasso Superiore|2017|2026-05-21 18:03:14",
+      "Château d'Esclans Whispering Angel Rosé|2013|2014-10-03 19:50:46",
+      "Domaine J. Laurens Les Graimenous Crémant de Limoux Brut||2021-08-13 19:22:35",
+      "Famille Morel Les Pierres Dorées|2024|2026-06-13 20:05:00",
+      "Hattingley Valley Classic Reserve|N.V.|2026-06-08 17:49:53",
+      "Ladybird Vineyards The Ladybird Cape Blend|2020|2022-09-04 07:04:20",
+      "Malvirà Roero Arneis|2023|2025-07-23 17:55:34",
+      "Montecillo Rioja Gran Reserva|2006|2014-10-18 09:09:02",
+      "Pietro di Campo Silenzio Barbera|2012|2026-05-15 14:40:37",
+      "Rolet La Dent de Charnet Côtes du Jura Chardonnay|2016|2022-04-22 18:37:45",
+      "Thomas-Collardot Crémant de Bourgogne Brut Blanc||2021-11-13 15:31:23",
       "Zabu Nero d'Avola|2013|2015-08-28 20:28:43"
     ],
     "rating_min": 1.0,
     "rating_max": 4.7,
-    "rating_std": 0.633
+    "rating_std": 0.61
   },
   "results": {
     "critic": {
       "test_full": {
         "n_scored": 1,
-        "coverage": 0.042,
+        "coverage": 0.029,
         "spearman": null,
         "ndcg5": null,
         "n_distinct_scores": 1,
         "note": "for få scorede viner for metrikk"
       },
       "test_ex_lockbox": {
-        "n_scored": 0,
-        "coverage": 0.0,
+        "n_scored": 1,
+        "coverage": 0.034,
         "spearman": null,
         "ndcg5": null,
-        "n_distinct_scores": 0,
+        "n_distinct_scores": 1,
         "note": "for få scorede viner for metrikk"
       }
     },
     "random": {
       "test_full": {
-        "n_scored": 24,
+        "n_scored": 35,
         "coverage": 1.0,
-        "spearman": 0.305,
-        "ndcg5": 0.91,
-        "n_distinct_scores": 24,
+        "spearman": 0.147,
+        "ndcg5": 0.879,
+        "n_distinct_scores": 35,
         "note": null
       },
       "test_ex_lockbox": {
-        "n_scored": 19,
+        "n_scored": 29,
         "coverage": 1.0,
-        "spearman": 0.39,
-        "ndcg5": 0.913,
-        "n_distinct_scores": 19,
+        "spearman": 0.177,
+        "ndcg5": 0.92,
+        "n_distinct_scores": 29,
         "note": null
       }
     },
     "style_avg": {
       "test_full": {
-        "n_scored": 20,
-        "coverage": 0.833,
-        "spearman": 0.06,
-        "ndcg5": 0.878,
-        "n_distinct_scores": 8,
+        "n_scored": 31,
+        "coverage": 0.886,
+        "spearman": -0.161,
+        "ndcg5": 0.884,
+        "n_distinct_scores": 13,
         "note": null
       },
       "test_ex_lockbox": {
-        "n_scored": 16,
-        "coverage": 0.842,
-        "spearman": 0.037,
-        "ndcg5": 0.849,
-        "n_distinct_scores": 6,
+        "n_scored": 26,
+        "coverage": 0.897,
+        "spearman": -0.127,
+        "ndcg5": 0.894,
+        "n_distinct_scores": 11,
         "note": null
       }
     },
     "v0_tier": {
       "test_full": {
-        "n_scored": 24,
+        "n_scored": 35,
         "coverage": 1.0,
-        "spearman": 0.588,
-        "ndcg5": 0.91,
+        "spearman": 0.097,
+        "ndcg5": 0.841,
         "n_distinct_scores": 4,
         "note": null
       },
       "test_ex_lockbox": {
-        "n_scored": 19,
+        "n_scored": 29,
         "coverage": 1.0,
-        "spearman": 0.68,
-        "ndcg5": 0.916,
+        "spearman": 0.119,
+        "ndcg5": 0.863,
         "n_distinct_scores": 4,
         "note": null
       }
     },
     "vivino_avg": {
       "test_full": {
-        "n_scored": 24,
-        "coverage": 1.0,
-        "spearman": 0.632,
-        "ndcg5": 0.97,
+        "n_scored": 31,
+        "coverage": 0.886,
+        "spearman": 0.607,
+        "ndcg5": 0.961,
         "n_distinct_scores": 9,
         "note": null
       },
       "test_ex_lockbox": {
-        "n_scored": 19,
-        "coverage": 1.0,
-        "spearman": 0.597,
-        "ndcg5": 0.961,
+        "n_scored": 27,
+        "coverage": 0.931,
+        "spearman": 0.576,
+        "ndcg5": 0.968,
         "n_distinct_scores": 9,
         "note": null
       }
     }
   },
   "warnings": [
-    "Test-sett n=24 er for lite for stabil Spearman — behandle metrikker som indikative, ikke konklusive.",
-    "critic-baseline coverage 0.042 — kritiker-DB dekker nær null av brukerens drukne viner (varenr-DB ⟂ Vivino-historikk)."
+    "critic-baseline coverage 0.029 — kritiker-DB dekker nær null av brukerens drukne viner (varenr-DB ⟂ Vivino-historikk)."
   ]
 }

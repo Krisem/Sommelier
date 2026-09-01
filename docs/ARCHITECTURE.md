@@ -1129,3 +1129,55 @@ Skillet er kunnskap om hva flaskene *er*, ikke en tallgrense. Tier C går derfor
 **Tier D er et tak, ikke en feil.** De 701 er i stor grad norske hyllevare-blends (Inverness Cream, Lord Elcho, Glen Scanlan) og uavhengige fattappinger som ingen kritikerdatabase dekker. Forvent at Meta-Critic dekker rundt en femtedel av Polets whisky auto-joint, skjevt mot de kjente flaskene.
 
 **Verifisert, ikke antatt.** Alle fire designreglene er mutasjonstestet: senket tier-B-gulv, fjernet alders-motsigelse, fjernet merke-regel og «godta ubekreftet tier C» får hver sin test til å feile. Den første versjonen av merke-testen brukte «Glenfiddich» mot «Glenlivet» — navn uten ett felles token — og var grønn med og uten regelen. Mutasjonstesten fanget at den ikke testet noe.
+
+
+### ADR-036: Blindsone er et eget signal, ikke et tier-trinn og ikke lav konfidens
+
+**Status:** Accepted (2026-09-01).
+
+**Kontekst.** `classify()` har alltid visst hvilke varer som ligger i en blindsone — `rule_fired == "blindspot"` har stått der siden v0. Men signalet døde på vei til beslutningen: `tier` la de **6 695** rene blindsone-varene i samme `neutral`-bøtte som de **11 578** default-varene, og `confidence` satte dem til `low`. Leser man bare de to feltene, er en blindsone ikke til å skille fra «ingen regler traff».
+
+**Målingen som snudde tolkningen.** Kjørt gjennom `classify()` selv mot de 122 ratede vinene, ikke gjennom en gjenimplementering:
+
+| `rule_fired` | n | snitt | SD |
+|---|---:|---:|---:|
+| **blindspot** | 16 | **4,11** | 0,39 |
+| bekreftet_snitt | 17 | 4,05 | 0,30 |
+| bekreftet_drue | 23 | 3,98 | 0,43 |
+| bekreftet_stil | 21 | 3,94 | 0,24 |
+| region_pluss | 3 | 3,83 | 0,85 |
+| default | 29 | 3,76 | 0,42 |
+| bekymring | 11 | 3,00 | 1,12 |
+| no_go | 2 | 2,00 | 0,71 |
+
+Welch mot blindsonen: **default +0,36 (t = +2,88)**, bekreftet_snitt +0,07 (t = +0,54), bekreftet_drue +0,13 (t = +1,02), bekreftet_stil +0,17 (t = +1,59).
+
+**Påstanden er derfor ikke «blindsonene er best».** Det var formuleringen i `plan_objektiv_anbefaling.md` funn 6, og den holder ikke: blindsone er ikke skillbar fra de tre bekreftede reglene. Det som er skillbart er **blindsone mot default**. Den korrekte påstanden er at *ukjent terreng har levert på linje med kjent terreng, og klart bedre enn ingenting* — som er nok til at det er verdt å lete der, og for lite til å love noe.
+
+*(Planens tall var 4,15 / 4,10 / 4,00. Avviket skyldes at de ble målt før Fase 3 og før `region_pluss` ble skilt ut fra `bekreftet_drue`; rangeringen er uendret.)*
+
+**Beslutning: et eget boolsk felt `explore` på hver return-sti i `classify()`.** Tre felt, tre spørsmål:
+
+| Felt | Svarer på |
+|---|---|
+| `tier` | Hvor godt passer varen profilen? |
+| `confidence` | Hvor mye data hviler den dommen på? |
+| `explore` | Er terrenget ukjent — og er det verdt å gå inn i? |
+
+`explore` er sann når `_blindspot_hit` treffer, **uavhengig av hvilken regel som vant prioriteten**. Over katalogen: 7 487 av 28 534 varer (26,2 %), hvorav 6 695 er rene blindsoner og **792 bærer begge signalene samtidig** — `fit` på bekreftet drue eller region, og samtidig ukjent kategori. De 792 var usynlige før dette feltet, og de er grunnen til at signalet ikke kunne bli et tier-trinn.
+
+**Unntaket: `no_go` og `bekymring` gir alltid `explore = False`,** selv når varen treffer en blindsone. Der har profilen ekte negativ evidens, og «ukjent terreng» er ikke det interessante ved varen. Bekymring snitter 3,00 og no_go 2,00 — å invitere til utforskning der ville vært å bruke fravær av data til å overkjøre nærvær av data.
+
+**Alternativer vurdert.**
+
+**Et nytt tier-trinn mellom `fit` og `neutral`.** Forkastet: `tier` er en ordnet stige som `eval_fit`s `v0_tier`-scorer rangerer på, og Fase 4 dokumenterte at ordningen over alle 122 er monoton (4,09 · 3,95 · 3,88 · 3,00 · 2,00). Et innskutt trinn endrer rangsemantikken og gjør den målingen ugyldig. Verre: de 792 varene har allerede et tier de har fortjent på egen evidens — de kan ikke flyttes til et utforsknings-trinn uten å miste det.
+
+**Løfte `confidence` fra `low` til `medium` for blindsoner.** Forkastet: konfidens handler om hvor mye data dommen hviler på, og der er blindsonen genuint tynn. At utfallet har vært godt er et *annet* faktum. Å slå dem sammen ville gjort begge uleselige.
+
+**Sortere eller rangere på `explore`.** Ikke gjort, med vilje — det er retrieval, og hører til i steg 3 og 5 av `plan_objektiv_anbefaling.md`.
+
+**Forbeholdet som må følge tallet.** De 16 er viner Kristoffer **valgte å drikke**, flere av dem gjennom en bevisst flight (`tasks/exploration/`). Katalogens 7 487 blindsone-varer er ikke samme populasjon: å anbefale en tilfeldig blindsone-vare og forvente 4,11 er å lese et seleksjonsutvalg som et tilfeldig utvalg. `explore` sier «her er det verdt å lete», ikke «denne blir god». n = 16 tåler heller ingen oppdeling på land eller kategori.
+
+**Følgeendring i `CLAUDE.md`.** Instruksjonen «markér `[NYTT]` med **lavere konfidens**» ble skrevet før målingen fantes og er delvis motbevist: den fikk anbefalingene til å nedtone nettopp det området som har truffet best. `[NYTT]` består som merke — usikkerheten er reell — men uten nedtoningen. Et felt som er bygget mens instruksjonen over det motarbeider det, er verre enn ingen av delene.
+
+**Verifisert.** Fem tester i `tests/test_user_fit.py` § L, alle mutasjonstestet: `explore` som alias for `tier`, som alias for `rule_fired == "blindspot"`, fjernet undertrykkelse på no_go/bekymring, glemt felt på én return-sti, og konstant `True` — hver mutasjon feller minst to tester. Sannheten hentes fra `_blindspot_hit` selv, ikke fra en gjenskrevet blindsone-sjekk i testen.

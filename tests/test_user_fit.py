@@ -1250,3 +1250,139 @@ def test_regions_carry_n_in_reasons(rules):
     jura = {"land": "Frankrike", "kategori": "Hvitvin", "region": "Jura"}
     grunner = " ".join(classify(jura, rules)["reasons"])
     assert "n=2" in grunner, grunner
+
+
+# ---------------------------------------------------------------------------
+# L — `explore`: blindsone som eget signal (ADR-036)
+#
+# Blindsone var synlig som `rule_fired`, men usynlig der beslutningen tas:
+# `tier` la de 6 695 rene blindsone-varene i samme «neutral»-bøtte som de
+# 11 578 default-varene, enda de to gruppene skiller seg med t=+2,88 på de
+# ratede. Og 792 varer bar begge signalene samtidig — `fit` PLUSS ukjent
+# terreng — uten at noe felt sa det.
+#
+# Testene under er behavioural og skal fange de tre måtene feltet kan råtne
+# på: at en ny return-sti glemmer det, at det degenererer til et alias for
+# `tier`, og at det degenererer til et alias for `rule_fired == "blindspot"`.
+# ---------------------------------------------------------------------------
+
+
+def test_every_rule_emits_explore_as_bool(catalog_tiers):
+    """
+    Kontrakt: `explore` finnes på HVER return-sti, ikke bare blindsone-stien.
+
+    En ny regel som returnerer uten feltet ville ellers gitt `KeyError` hos
+    konsumenten først i produksjon. Testen krever også at sveipen faktisk
+    traff mer enn én regel — ellers ville den vært grønn på en katalog der
+    bare `default` fyrer.
+    """
+    fired = set()
+    for code, r in catalog_tiers.items():
+        assert "explore" in r, f"{code} ({r['rule_fired']}) mangler `explore`"
+        assert isinstance(r["explore"], bool), (
+            f"{code}: `explore` er {type(r['explore'])}, ikke bool"
+        )
+        fired.add(r["rule_fired"])
+    assert len(fired) >= 5, f"Sveipen traff bare {sorted(fired)} — for tynt grunnlag"
+
+
+def test_explore_is_not_an_alias_for_tier(catalog_tiers):
+    """
+    Kjernen i hvorfor feltet finnes: utforskningsverdi er ORTOGONAL på tier.
+
+    Hadde `explore` vært avledet av `tier`, ville én av de to gruppene under
+    vært tom. `fit`+explore er de 792 som bærer begge signalene — de var
+    usynlige før dette feltet, og de er hele grunnen til at signalet ikke
+    kunne bli et nytt tier-trinn.
+    """
+    fit_og_ukjent = [c for c, r in catalog_tiers.items()
+                     if r["tier"] == "fit" and r["explore"]]
+    neutral_og_kjent = [c for c, r in catalog_tiers.items()
+                        if r["tier"] == "neutral" and not r["explore"]]
+    assert fit_og_ukjent, (
+        "Ingen vare er både `fit` og blindsone. Da er `explore` en funksjon "
+        "av `tier`, og feltet har ingen egen informasjon."
+    )
+    assert neutral_og_kjent, (
+        "Alle `neutral` er blindsoner. Da er `explore` en funksjon av `tier` "
+        "andre veien."
+    )
+
+
+def test_explore_is_not_an_alias_for_the_blindspot_rule(catalog_tiers):
+    """
+    `explore` skal spore blindsone-TREFFET, ikke regel-navnet. Regel 3 og 4
+    fyrer på sterkere evidens og vinner prioriteten, men blindsonen er der
+    fortsatt — den er nettopp da den er verdt å vite om.
+    """
+    utenfor_regel_5 = [c for c, r in catalog_tiers.items()
+                       if r["explore"] and r["rule_fired"] != "blindspot"]
+    assert utenfor_regel_5, (
+        "Ingen `explore` utenfor regel 5 — feltet er et alias for "
+        "`rule_fired == 'blindspot'` og tilfører ingenting."
+    )
+
+
+def test_explore_matches_the_real_blindspot_matcher(catalog_tiers, rules):
+    """
+    Sannheten hentes fra `_blindspot_hit` selv — samme matcher `classify`
+    bruker — ikke fra en gjenimplementering av blindsone-logikken her.
+    Lesson 2026-08-06: en gjenskrevet scorer i testen ga fire falske negativer.
+
+    `no_go` og `bekymring` er unntatt med vilje: der har profilen ekte,
+    negativ evidens, og «ukjent terreng» er ikke det interessante ved varen.
+    """
+    from tools.polet_store import read_catalog
+    from tools.user_fit import _blindspot_hit, _extract_wine_fields
+
+    undertrykt = 0
+    for p in read_catalog():
+        code = str(p.get("code") or "")
+        r = catalog_tiers.get(code)
+        if r is None:
+            continue
+        traff = _blindspot_hit(_extract_wine_fields(p), rules) is not None
+        if r["rule_fired"] in ("no_go", "bekymring"):
+            assert not r["explore"], f"{code}: {r['rule_fired']} skal aldri utforskes"
+            undertrykt += traff
+            continue
+        assert r["explore"] == traff, (
+            f"{code} ({r['rule_fired']}): explore={r['explore']} men "
+            f"_blindspot_hit sier {traff}"
+        )
+    assert undertrykt > 0, (
+        "Ingen no_go/bekymring-vare traff en blindsone, så undertrykkelsen "
+        "over ble aldri utøvd — assertionen er vakuøs på dette snapshotet."
+    )
+
+
+def test_negative_evidence_suppresses_explore(mock_rules):
+    """
+    Deterministisk speiling av undertrykkelsen over, uten å hvile på at
+    snapshotet tilfeldigvis inneholder en slik vare.
+
+    Begge vinene ligger i den sammensatte blindsonen «Libanon Rødvin». Den
+    ene er no-go på navn, den andre bærer en drue som har bommet før. Ingen
+    av dem skal inviteres til utforskning.
+
+    Bekymringen kommer via `bommet_druer_regioner`, ikke via stil: mock-ens
+    «Provence Rosé» er kategori-innsnevret og fyrer med rette IKKE på en
+    rødvin, så den ville gitt en test som målte noe annet enn den trodde.
+    """
+    felles = {"land": "Libanon", "kategori": "Rødvin"}
+
+    nogo = classify({**felles, "navn": "FakeBadWine 2020"}, mock_rules)
+    assert nogo["rule_fired"] == "no_go"
+    assert nogo["explore"] is False
+
+    bekymring = classify(
+        {**felles, "navn": "Ukjent Libaneser", "druer": ["Argentinsk Bonarda"]},
+        mock_rules,
+    )
+    assert bekymring["rule_fired"] == "bekymring"
+    assert bekymring["explore"] is False
+
+    # Kontroll: uten den negative evidensen ER samme land/kategori utforskning.
+    ren = classify({**felles, "navn": "Ukjent Libaneser"}, mock_rules)
+    assert ren["rule_fired"] == "blindspot"
+    assert ren["explore"] is True

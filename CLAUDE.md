@@ -266,6 +266,8 @@ Flag dårlig value i alle prisklasser.
 
 ## Blindspots
 
-Markér `[NYTT]` med lavere konfidens når du anbefaler i et område hvor brukeren har lite data. Autoritativ liste: `knowledge/smaksprofil.md` § Blindspots.
+Markér `[NYTT]` når du anbefaler i et område hvor brukeren har lite data. Autoritativ liste: `knowledge/smaksprofil.md` § Blindspots. `python3 -m tools.user_fit <varenr>` skriver `UTFORSK` på varen, og `classify()` returnerer `explore: True` — sant uansett tier, så en `fit`-vin kan også være ukjent terreng (792 varer er begge deler).
+
+**Ikke nedton dem.** Målt over de 122 ratede vinene ligger blindsone-viner på snitt 4,11 — på linje med de bekreftede reglene (t = 0,5–1,6, ikke skillbart) og klart over default på 3,76 (t = +2,88). `[NYTT]` betyr «tynt grunnlag», ikke «sannsynligvis dårligere». Forbeholdet som skal med: de 16 er viner han *valgte* å drikke, så tallet sier «verdt å lete her», ikke «denne blir god» ([ADR-036](docs/ARCHITECTURE.md#adr-036-blindsone-er-et-eget-signal-ikke-et-tier-trinn-og-ikke-lav-konfidens)).
 
 Skal en blindsone utforskes aktivt, følg flight-mønsteret (hypotese → verifisert flight på Polet → rate → oppdater smaksprofil + tracking) og se `tasks/exploration/INDEX.md`.
