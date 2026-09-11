@@ -322,6 +322,18 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 
 **Forbehold:** n=1. Per vektingsprinsippene er dette en **hypotese**, ikke et bekreftet mønster – og det motsier ikke at han elsker Barbera (topp-rødvinen hans *er* en Barbera). Signalet gjelder format og kvalitetsnivå, ikke druen. Bekreftes eller avkreftes ved neste kartong.
 
+**Situasjonen gjentar seg (2026-09-11).** Han spurte på nytt om «litt kraftigere rødvin 3 l … til å
+drikke på kveldstid nå på høsten uten mat», og kandidaten han selv pekte på var *Monte Luzzo
+Piemonte Barbera 2025* (11042806) – altså samme drue, samme format og samme literklasse (160 kr/L)
+som Vespa. **Kraftig rødvin på kartong til solo-kvelder i høst-/vintersesongen er dermed et stående
+behov, ikke en engangsforespørsel.** Skal han få noe som faktisk treffer, må stilfamilien byttes
+(Monastrell, appassimento/Corvina, Shiraz med lang maserasjon), ikke bare produsenten.
+
+Monte Luzzo er likevel *ikke* en gjentakelse av Vespa-bommen: 7–8 mnd brukt eikefat mot Vespas rene
+ståltank, syre 5,0 mot 6,1 g/l, 3,8 g/l restsukker. Rundere, men fortsatt generisk Piemonte Barbera
+DOC på 160 kr/L – middels kropp per konstruksjon. Dommen hans på den er verdt å skrive inn når den
+faller: den skiller «for lett = format/kvalitetsnivå» fra «for lett = druen».
+
 ### Rødvin (klart hovedkategorien – 67 viner, snitt 3.79)
 
 **Sterke mønstre i dataene:**
