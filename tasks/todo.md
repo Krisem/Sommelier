@@ -61,6 +61,24 @@ regelen. Drift-testen hadde en `if`-fallback som skjulte at første gren aldri t
       timeskvoten (ADR-024: 429 med `Retry-After: 3399`, ~800–900 kall/time).
 - [ ] **n=7 står urørt.** Ingenting over flytter den. Terskelen er fortsatt ~84.
 
+### Funnet og rettet 2026-09-11 — `tasted_date` var boilerplate
+
+`_parse_product_page` tok **første** dato-lignende streng i HTML-en. Den strengen er i18n-tabellen
+som ligger på hver Aperitif-side («Dette kortet ble utstedt 20.07.2020. Gyldig i 1 år»), så
+`tasted_date` var **20.07.2020 for alle viner** — målt på fire ulike produkter. Alle 22 cachede
+score-filer bar datoen; cachen er slettet.
+
+Rettet: ankret på «Smakt», og `tasted_vintage` lagt til fra «2017-årgang»-linja. To tester, begge
+mutasjonsverifisert (de feiler når ankeret fjernes). 516 tester grønne.
+
+- [ ] **Beslutning: skal `tasted_vintage` styre `vintage_mismatch`?** Monte Luzzo (11042806) får
+      82 poeng + «godt kjøp» fra en smaking av **2017-årgangen, 27. juni 2019** — kartongen på Polet
+      er 2025. `vintage_mismatch` er fortsatt `False`, fordi den sammenligner navn, ikke smakt
+      årgang. Alternativene: (a) sett `vintage_mismatch=True` når `tasted_vintage` avviker fra
+      produktets årgang — treffer mange rader, og verdict-teksten endres; (b) la den stå og bare
+      *vise* smakt årgang i sammendraget; (c) nytt felt `vintage_stale` som ikke rører verdict.
+      Konsekvensen for antall berørte rader er **ANTATT** — ikke målt, krever ett kall per side.
+
 ---
 
 ## Aktivt — plan godkjent 2026-08-31

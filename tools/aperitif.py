@@ -294,10 +294,25 @@ def _parse_product_page(html: str) -> dict:
     if m:
         result["wine_name"] = html_lib.unescape(m.group(1).strip())
 
-    # Smaket-dato
-    m = re.search(r"(\d{1,2}\.\d{1,2}\.\d{4})", html)
+    # Smaket-dato + hvilken årgang som ble smakt. Aperitif skriver dette rett
+    # under poengsummen: «2017-årgang  Smakt 27. juni 2019».
+    #
+    # Den gamle regexen tok FØRSTE dato-lignende streng i HTML-en. Det er
+    # i18n-boilerplate — «Dette kortet ble utstedt 20.07.2020. Gyldig i 1 år.»
+    # ligger i en oversettelsestabell på hver side — så `tasted_date` var
+    # **20.07.2020 for alle viner** (målt 2026-09-11 på fire ulike produkter).
+    # Anker derfor på ordet «Smakt», og la feltet være fraværende når det ikke
+    # står der, framfor å oppgi en dato som ikke er en smaksdato.
+    m = re.search(r"Smakt\s+([^<\n]{4,40}?)\s*(?:<|\n)", html)
     if m:
-        result["tasted_date"] = m.group(1)
+        result["tasted_date"] = m.group(1).strip()
+
+    # Årgangen som faktisk ble smakt. Uten den er det usynlig at en score kan
+    # gjelde en annen årgang enn flaska i hylla (Monte Luzzo: 82 poeng gitt
+    # 2017-årgangen, kartongen på Polet er 2025).
+    m = re.search(r"(\d{4})-årgang", html)
+    if m:
+        result["tasted_vintage"] = m.group(1)
 
     return result
 

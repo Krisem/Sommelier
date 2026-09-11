@@ -226,3 +226,37 @@ def test_missing_snapshot_file_is_not_an_error(tmp_path, monkeypatch):
     monkeypatch.setattr(ap, "SNAPSHOT", tmp_path / "finnes-ikke.ndjson")
     monkeypatch.setattr(ap, "_SNAPSHOT_CACHE", None)
     assert ap.snapshot_score("12345601") is None
+
+
+# ─── Smaksdato: anker på «Smakt», ikke på første dato i HTML-en ──────
+# Funn 2026-09-11: `tasted_date` var 20.07.2020 for FIRE ulike viner. Datoen
+# kom fra i18n-tabellen som ligger på hver side («Dette kortet ble utstedt
+# 20.07.2020. Gyldig i 1 år.»), ikke fra vurderingen. Den ekte dataen står som
+# «2017-årgang  Smakt 27. juni 2019» under poengsummen — og avslører at scoren
+# kan gjelde en annen årgang enn kartongen i hylla.
+
+_I18N_BOILERPLATE = (
+    '<script>{"This card was issued on 20.07.2020. Valid for 1 year.":'
+    '"Dette kortet ble utstedt 20.07.2020. Gyldig i 1 \\u00e5r."}</script>'
+)
+
+
+def test_i18n_boilerplate_date_is_not_a_tasting_date():
+    page = (
+        "<html><body>" + _I18N_BOILERPLATE + "<h1>Testvin</h1>"
+        '<span class="number">82</span> <span class="label">POENG</span>'
+        "</body></html>"
+    )
+    assert "tasted_date" not in _parse_product_page(page)
+
+
+def test_real_tasting_date_and_vintage_are_parsed_past_the_boilerplate():
+    page = (
+        "<html><body>" + _I18N_BOILERPLATE + "<h1>Testvin</h1>"
+        '<span class="number">82</span> <span class="label">POENG</span>'
+        "<div>2017-årgang\n        Smakt 27. juni 2019    </div>"
+        "</body></html>"
+    )
+    parsed = _parse_product_page(page)
+    assert parsed["tasted_date"] == "27. juni 2019"
+    assert parsed["tasted_vintage"] == "2017"
