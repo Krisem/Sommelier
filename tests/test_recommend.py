@@ -51,7 +51,24 @@ KATALOG = [
 
 
 @pytest.fixture
-def katalog(monkeypatch):
+def kritiker(monkeypatch):
+    """
+    Kritiker-score er HERMETISK i tester — aldri det ekte snapshotet.
+
+    `_kritiker()` leser `knowledge/scores/` og `data/aperitif/scores.ndjson` fra
+    disk via modul-cacher. Uten denne patchen ville sorteringstestene målt
+    datatilstand i stedet for kode: fixturens 10037906 og 10059006 er ekte
+    varenumre som ligger i snapshotet med 84 og 83 poeng, så rekkefølgen hadde
+    endret seg neste gang noen sveipet. Samme feilen som subprocess-CLI-testene
+    hadde. Returner dict-en fra en test for å gi poeng til utvalgte varenumre.
+    """
+    poeng: dict[str, float] = {}
+    monkeypatch.setattr(recommend, "_kritiker", lambda varenr: poeng.get(str(varenr)))
+    return poeng
+
+
+@pytest.fixture
+def katalog(monkeypatch, kritiker):
     monkeypatch.setattr(polet_store, "read_catalog", lambda: list(KATALOG))
     monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
     user_fit._catalog_index.cache_clear()
@@ -367,3 +384,164 @@ def test_emballasjefilter_skiller_kartong_fra_dobbeltmagnum(katalog, ingen_value
     # Filteret leser emballasje, ikke størrelse — det er hele poenget.
     assert koder == {"10037906", "10059006"}
     assert all(r["emballasje"] == "kartong" for r in kartong)
+
+
+# ─── KRITIKER-SCORE: TO KILDER, VEDTATT REKKEFØLGE ───────────────────
+
+def test_kritiker_faller_tilbake_paa_aperitif_snapshot(monkeypatch):
+    """`knowledge/scores/` bommer på 99,8 % av rødvinene — snapshotet tar over."""
+    from tools import aperitif, scores
+    monkeypatch.setattr(scores, "best_score", lambda v: None)
+    monkeypatch.setattr(aperitif, "snapshot_score",
+                        lambda v: {"score": 84} if v == "10037906" else None)
+    assert recommend._kritiker("10037906") == 84.0
+    assert recommend._kritiker("99999999") is None
+
+
+def test_kuratert_score_slaar_aperitif(monkeypatch):
+    """
+    value_score._combine_quality()s presedens: kuratert > Aperitif > crowd.
+
+    Aperitif-poenget er satt HØYERE (99) enn det kuraterte (91). Med en lavere
+    verdi ville testen også bestått en `max(begge)`-implementasjon, som ikke er
+    presedens men en ny sammenslåingsregel. Nå faller den både på byttet
+    rekkefølge og på max().
+    """
+    from tools import aperitif, scores
+    monkeypatch.setattr(scores, "best_score", lambda v: {"score": 91.0})
+    monkeypatch.setattr(aperitif, "snapshot_score", lambda v: {"score": 99})
+    assert recommend._kritiker("5518401") == 91.0
+
+
+def test_kritiker_gjor_ingen_nettverkskall(monkeypatch):
+    """A er verdiløs hvis den koster HTTP per vin. `_http_get` skal aldri kalles."""
+    from tools import aperitif
+    def eksploder(*a, **kw):
+        raise AssertionError("nettverkskall fra _kritiker")
+    monkeypatch.setattr(aperitif, "_http_get", eksploder)
+    recommend._kritiker("10037906")
+
+
+# ─── PRISSONE-LÅS ────────────────────────────────────────────────────
+
+# Smal sone: 5 kartonger, 400-600 kr (p5-p95-forhold 1,4x < 4x).
+SMAL = [
+    _rad("10000106", "Smal Billig", 400.0, volum=300),
+    _rad("10000206", "Smal Nest", 450.0, volum=300),
+    _rad("10000306", "Smal Midt", 500.0, volum=300),
+    _rad("10000406", "Smal Dyr", 550.0, volum=300),
+    _rad("10000506", "Smal Dyrest", 600.0, volum=300),
+]
+# Bred sone: samme 5 pluss en Musigny-analog. Rått spenn 400-21750 = 54x.
+# Med p5-p95 målte dette settet 1,5x og LÅSTE — outlieren falt utenfor vinduet.
+# Testen under er regresjonsvernet for nettopp det.
+BRED = SMAL + [_rad("10000601", "Dyr Burgunder", 21750.0, volum=75)]
+
+
+def test_poeng_er_noekkel_i_laast_sone(monkeypatch, kritiker, ingen_value):
+    """Smal sone → den høyest scorede vinnen på topp, ikke den billigste."""
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(SMAL))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    kritiker.update({"10000506": 88, "10000106": 80})
+    rader = recommend.recommend(antall=5, value=False)
+    assert rader[0]["varenummer"] == "10000506", "høyest poeng skal på topp"
+    assert rader[0]["sok"]["prissone_last"] is True
+    user_fit._catalog_index.cache_clear()
+
+
+def test_poeng_er_ikke_noekkel_i_ulaast_sone(monkeypatch, kritiker, ingen_value):
+    """
+    Bred sone → poengene står HELT utenfor nøkkelen.
+
+    Musigny-analogen har høyest poeng og høyest pris. Med rå poeng som nøkkel
+    ville den ligget først; det er rangering etter pris med en score som alibi.
+    """
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(BRED))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    kritiker.update({"10000601": 99, "10000106": 80})
+    rader = recommend.recommend(antall=6, value=False)
+    assert rader[0]["sok"]["prissone_last"] is False
+    assert rader[0]["varenummer"] != "10000601", "Musigny skal ikke løftes av poeng"
+    assert [r["varenummer"] for r in rader][:2] == ["10000106", "10000206"], \
+        "ulåst sone sorterer på literpris stigende alene"
+    user_fit._catalog_index.cache_clear()
+
+
+def test_headeren_navngir_aarsaken_i_begge_soner(monkeypatch, kritiker, ingen_value):
+    """Ingen stille degradering — outputen skal si hvorfor, med tallene."""
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(SMAL))
+    user_fit._catalog_index.cache_clear()
+    kritiker.update({"10000506": 88})
+    laast = recommend.recommend(antall=5, value=False)[0]["sok"]["sortering"]
+    assert "kritiker-score desc" in laast
+    assert "prissone låst" in laast and "1.5x" in laast
+    assert "1/5 dekning" in laast, "dekningen skal regnes ut av dataene"
+
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(BRED))
+    user_fit._catalog_index.cache_clear()
+    ulaast = recommend.recommend(antall=6, value=False)[0]["sok"]["sortering"]
+    assert "IKKE nøkkel" in ulaast
+    assert "ulåst" in ulaast
+    assert "Spearman" in ulaast and "0.74" in ulaast, "forklar hvorfor, med tallet"
+    user_fit._catalog_index.cache_clear()
+
+
+def test_dekningen_er_ikke_hardkodet(monkeypatch, kritiker, ingen_value):
+    """
+    `21/11956` sto hardkodet i headeren og løy i to ledd.
+
+    Kjøres på den LÅSTE sonen med vilje. Første utgave av testen brukte
+    `katalog`-fixturen, som har 4 aktive rader og derfor er ulåst — da traff
+    den den ulåste header-grenen, som aldri bar det hardkodede tallet. Den
+    besto mutasjonen den var oppkalt etter, altså voktet den ingenting.
+    """
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(SMAL))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    kritiker.update({"10000506": 88})
+    sok = recommend.recommend(antall=5, value=False)[0]["sok"]
+    assert sok["prissone_last"] is True, "testen må treffe den låste grenen"
+    assert "11956" not in sok["sortering"] and "21/" not in sok["sortering"]
+    assert "1/5 dekning" in sok["sortering"]
+    user_fit._catalog_index.cache_clear()
+
+
+def test_pristak_alene_laaser_ikke_sonen(monkeypatch, kritiker, ingen_value):
+    """
+    Målt: `--maks-pris 30000` gir 17,5x spenn på ekte katalog — like ulåst som
+    ingen filter. En regel som lot et tak i seg selv låse sonen ville lagt
+    Musigny på topp. Låsen måler kandidatsettets EGET spenn.
+    """
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(BRED))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    rader = recommend.recommend(antall=6, maks_pris=30000, value=False)
+    assert rader[0]["sok"]["prissone_last"] is False
+    user_fit._catalog_index.cache_clear()
+
+
+def test_for_faa_priser_laaser_ikke(monkeypatch, kritiker, ingen_value):
+    """Under 5 priser er «spennet» to tilfeldige priser — da låser vi ikke."""
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(SMAL[:3]))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    sok = recommend.recommend(antall=3, value=False)[0]["sok"]
+    assert sok["prissone_last"] is False
+    assert "under 5 priser" in sok["prissone"]["aarsak"]
+    user_fit._catalog_index.cache_clear()
+
+
+def test_uten_poeng_sorteres_sist_i_laast_sone(monkeypatch, kritiker, ingen_value):
+    """«Ukjent» er ikke «høy» — også når poeng er primærnøkkel."""
+    monkeypatch.setattr(polet_store, "read_catalog", lambda: list(SMAL))
+    monkeypatch.setattr(polet_store, "catalog_age_days", lambda: 11.0)
+    user_fit._catalog_index.cache_clear()
+    kritiker.update({"10000506": 88, "10000406": 70})
+    rader = recommend.recommend(antall=5, value=False)
+    assert [r["varenummer"] for r in rader][:2] == ["10000506", "10000406"]
+    assert [r["varenummer"] for r in rader][2:] == ["10000106", "10000206", "10000306"]
+    user_fit._catalog_index.cache_clear()

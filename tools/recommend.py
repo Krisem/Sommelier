@@ -29,12 +29,23 @@ noe emballasjefelt, og navnet sier ingenting. Det som skiller er
 Prisbruddet er rent: på 3 l ligger alle …06 mellom 340 og 780 kr, alle …07
 mellom 756 kr og 29 412 — 24 kroners overlapp. Derfor `--emballasje kartong`.
 
-**Kritiker-score dekker nesten ingenting.** 21 av 11 956 aktive rødviner har en
-rad i `knowledge/scores/` (0 av 284 på 3 l). ADR-016s implementerings-linje
-`sorted(wines, key=-critic_score)` gir derfor ingen reell orden i et bredt
-katalogsøk. Løsningen her er å ikke lyve om det: sortér på kritiker-score der
-den finnes, literpris som tie-break for resten, oppgi sorteringsnøkkelen i
-outputen, og alltid vise hvor mange treff som ble kappet bort.
+**Kritiker-score kommer fra TO kilder, og den kuraterte dekker nesten ingenting.**
+Målt 2026-09-12: `knowledge/scores/` (håndkuratert DN) har 21 av **11 580
+aktive** rødviner — 0 av de 269 på 3 l. Aperitif-snapshotet i `data/aperitif/`
+har **5 965 av 11 580** (51,5 %), og **156 av 211** 3-liters kartonger.
+`_kritiker()` leser derfor begge, i `value_score._combine_quality()`s vedtatte
+rekkefølge: kuratert > Aperitif > crowd.
+
+Tallene 11 956 og 284 sto tidligere her som «aktive». De er aktive **pluss 376
+`kommer_snart`** (11 580 + 376 = 11 956; 269 + 15 = 284), og `kommer_snart` er
+per ADR-030 ikke kjøpbare. Dekningen i sorterings-headeren regnes nå ut av
+kandidatsettet i stedet for å bære et hardkodet tall.
+
+**Poeng rangerer bare i en låst prissone.** Spearman(poeng, pris) = +0,74 målt
+over alle 5 965 scorede rødviner, så rå poeng på et bredt søk gir Musigny til
+21 750 kr på topp — rangering etter pris med en score som alibi. Se
+`PRISSONE_MAKS_FORHOLD` for terskelen og målingene bak den. Er sonen ulåst, står
+poengene HELT utenfor nøkkelen, og outputen sier hvorfor.
 
 **Årgang har ikke noe felt** — den må hentes ut av navnet. Den er ikke bare
 pynt: `value_score` trenger den til Vivino-vintage-match.
@@ -69,6 +80,56 @@ REFRESH_DOK = "docs/polet_refresh.md"
 
 # Sorterings-tie-breaks. Kun objektive tallfelt fra raden — ingen ny score.
 SORTERINGSNØKLER = ("literpris", "pris")
+
+# ─── PRISSONE-LÅS ────────────────────────────────────────────────────
+# ADR-024s forbehold: «Spearman(poeng, pris) er +0,65 for whisky og +0,80 for
+# DN-vin. Høyest score ≈ dyrest. Prissone-lås er en FORUTSETNING for å bruke
+# disse poengene til rangering, ikke en pynt.» Målt på denne katalogen
+# 2026-09-12: +0,74 over alle 5 965 aktive rødviner med poeng.
+#
+# Terskelen er MÅLT, ikke valgt. Spennet er RÅ maks/min over kandidatsettets
+# priser, målt 2026-09-12:
+#
+#     rødvin 300-500 kr         1,7x        LÅST
+#     rødvin 150-250 kr         1,7x        LÅST
+#     rødvin 1,5 l kartong      1,8x        LÅST
+#     rødvin 3 l kartong        2,3x        LÅST   topp 5: 540-780 kr
+#     ─────────────── terskel 4,0x ───────────────
+#     --maks-pris 200           5,0x       ULÅST   (gulvet er 40 kr)
+#     --maks-pris 300           7,5x       ULÅST
+#     --maks-pris 500          12,5x       ULÅST
+#     --maks-pris 30000       737,2x       ULÅST
+#     all rødvin             1371,2x       ULÅST   topp 1 ville vært
+#                                                  Musigny, 21 750 kr
+#
+# 4,0 ligger i det målte tomrommet mellom 2,3 og 5,0. Under terskelen kan poeng
+# i verste fall løfte toppen av et smalt band; over den velger poengene en annen
+# PRISKLASSE, og det er rangering etter pris med en score som alibi.
+#
+# **Rått spenn, ikke persentiler.** Første utgave brukte p5-p95 «så én outlier
+# ikke definerer sonen». Det var feil vern: med n=6 kastet p95 nettopp den
+# outlieren, så fem billige viner pluss én Musigny målte 1,5x og LÅSTE — og da
+# gikk Musigny-en til topps, altså akkurat det låsen finnes for å hindre.
+# Persentilen skjulte raden som betyr noe. Rått spenn kan ikke lures slik, og
+# separasjonen er dessuten bredere (2,3 → 5,0 mot 3,1 → 5,1).
+#
+# Prisen for å være konservativ: et tak ALENE låser ikke lenger, fordi gulvet
+# på 40 kr står. `--maks-pris 300` er 7,5x og forblir ulåst — sonen låses ved å
+# feste begge ender (`--min-pris 150 --maks-pris 250` → 1,7x). Det er den
+# trygge retningen: den nekter å rangere etter poeng framfor å rangere feil.
+#
+# Låsen fjerner IKKE korrelasjonen — rho er +0,52 selv i 3-liters-sonen, og
+# topp 5 ligger i 86. prispersentil der. Den binder KONSEKVENSEN i kroner:
+# 540-780 kr i stedet for 21 750. Det er påstanden, ikke mer.
+#
+# `--maks-pris` er bevisst IKKE en lås i seg selv: `--maks-pris 30000` gir 9,7x
+# og legger Musigny på topp. Det målte spennet fanger opp et ekte pristak av
+# seg selv (`--maks-pris 300` → 2,1x) og kan ikke lures.
+PRISSONE_MAKS_FORHOLD = 4.0
+PRISSONE_MIN_UTVALG = 5     # under dette er «spennet» to tilfeldige priser
+SPEARMAN_POENG_PRIS = 0.74  # målt 2026-09-12: rho=+0,743 over de 5 965
+                            # AKTIVE rødvinene som har poeng (uendret på
+                            # 3. desimal om kommer_snart tas med: n=5 966)
 
 # Varenummer-suffiks → emballasje. Se modul-docstringen for målingen.
 EMBALLASJE_SUFFIKS = {"01": "flaske", "05": "flaske", "06": "kartong", "07": "flaske"}
@@ -235,13 +296,66 @@ def _kandidat(rad: dict, vivino: list[dict], regler: dict) -> dict:
 
 
 def _kritiker(varenr: str) -> Optional[float]:
-    from tools import scores
+    """
+    Kritiker-score for ett varenummer, eller None.
+
+    Rekkefølgen er `value_score._combine_quality()`s vedtatte presedens —
+    *kuratert > Aperitif (faglig) > crowd* — anvendt på et andre kallsted:
+
+    1. `knowledge/scores/` (håndkuratert DN-materiale, 409 viner)
+    2. Aperitif-snapshotet i `data/aperitif/` (15 672 rader)
+
+    Begge er 0-100 og sammenlignbare direkte (se `knowledge/scores/INDEX.md`s
+    skala-tabell), så de kan dele én sorteringsnøkkel.
+
+    `snapshot_score` er OFFLINE — rent diskoppslag mot en cachet dict, matchet
+    på varenummer, ikke på navnelikhet. Ingen nettverkskall her; det er hele
+    poenget med å lese snapshotet framfor å slå opp produktsider.
+    """
+    from tools import aperitif, scores
+
     e = scores.best_score(varenr)
-    return e["score"] if e else None
+    if e:
+        return e["score"]
+    a = aperitif.snapshot_score(varenr)
+    if a and isinstance(a.get("score"), (int, float)):
+        return float(a["score"])
+    return None
+
+
+def _prissone(kandidater: list[dict]) -> dict:
+    """
+    Er kandidatsettets prissone smal nok til at poeng kan rangere?
+
+    Spennet er RÅTT maks/min — ikke persentiler. Se `PRISSONE_MAKS_FORHOLD`
+    for de målte tallene og for hvorfor persentilene ble forkastet.
+    """
+    priser = sorted(k["pris"] for k in kandidater if k.get("pris"))
+    if len(priser) < PRISSONE_MIN_UTVALG:
+        return {"last": False, "n": len(priser), "forhold": None,
+                "aarsak": f"under {PRISSONE_MIN_UTVALG} priser å måle på"}
+    lo, hi = priser[0], priser[-1]
+    if lo <= 0:
+        return {"last": False, "n": len(priser), "forhold": None,
+                "aarsak": "pris 0 i utvalget"}
+    forhold = hi / lo
+    return {
+        "last": forhold <= PRISSONE_MAKS_FORHOLD,
+        "n": len(priser),
+        "forhold": forhold,
+        "lo": lo,
+        "hi": hi,
+        "aarsak": (
+            f"prisspenn {forhold:.1f}x ({lo:.0f}-{hi:.0f} kr)"
+            if forhold <= PRISSONE_MAKS_FORHOLD else
+            f"prisspenn {forhold:.1f}x > {PRISSONE_MAKS_FORHOLD:.0f}x "
+            f"({lo:.0f}-{hi:.0f} kr)"
+        ),
+    }
 
 
 def _sorter(kandidater: list[dict], nokkel: str = "literpris",
-            synkende: bool = False) -> list[dict]:
+            synkende: bool = False, *, bruk_kritiker: bool = True) -> list[dict]:
     """
     Kritiker-score synkende der den finnes, så `nokkel` som tie-break.
 
@@ -256,6 +370,12 @@ def _sorter(kandidater: list[dict], nokkel: str = "literpris",
     fortsatt et vilkårlig utsnitt. Default er uendret.
 
     Rader uten verdi sorteres sist i BEGGE retninger — «ukjent» er ikke «høy».
+
+    `bruk_kritiker=False` tar poengene HELT ut av nøkkelen — de degraderes ikke
+    til et svakere ledd. Med rho = +0,74 mellom poeng og pris ville rå poeng i
+    en ulåst sone vært rangering etter pris med en score som alibi, og det er
+    nettopp det ADR-024s prissone-forbehold forbyr. Kalleren låser sonen
+    (`_prissone`) og sier i outputen hvorfor — aldri stille.
     """
     if nokkel not in SORTERINGSNØKLER:
         raise ValueError(f"Ukjent sorteringsnøkkel {nokkel!r} — lovlige: {SORTERINGSNØKLER}")
@@ -263,10 +383,39 @@ def _sorter(kandidater: list[dict], nokkel: str = "literpris",
     return sorted(
         kandidater,
         key=lambda k: (
-            -(_kritiker(k["varenummer"]) or -1e9),
+            -(_kritiker(k["varenummer"]) or -1e9) if bruk_kritiker else 0.0,
             retning * k[nokkel] if k[nokkel] is not None else float("inf"),
             k["varenummer"],
         ),
+    )
+
+
+def _sortering_tekst(kandidater: list[dict], sone: dict, nokkel: str,
+                     synkende: bool) -> str:
+    """
+    Sorteringsnøkkelen i klartekst, med MÅLT dekning og sonens status.
+
+    Dekningen regnes ut av kandidatsettet her og nå. Den var tidligere
+    hardkodet som «21/11956», som løy i to ledd: tallet fulgte ikke dataene, og
+    11 956 var aktive PLUSS 376 `kommer_snart` — som per ADR-030 ikke er
+    kjøpbare.
+    """
+    retning = "desc" if synkende else "asc"
+    n = len(kandidater)
+    dekning = sum(1 for k in kandidater if _kritiker(k["varenummer"]) is not None)
+    if sone["last"]:
+        return (
+            f"kritiker-score desc ({dekning}/{n} dekning, prissone låst: "
+            f"{sone['aarsak']}), {nokkel} {retning} som tie-break"
+        )
+    return (
+        f"{nokkel} {retning} — kritiker-score er IKKE nøkkel: prissonen er "
+        f"ulåst ({sone['aarsak']}), og Spearman(poeng, pris) = "
+        f"+{SPEARMAN_POENG_PRIS:.2f}, så rå poeng ville rangert etter pris. "
+        f"Dekning {dekning}/{n}. Snevre prisspennet inn under "
+        f"{PRISSONE_MAKS_FORHOLD:.0f}x med --maks-pris/--min-pris for å låse "
+        f"sonen — et tak alene er ikke nok, gulvet på 40 kr står "
+        f"(--maks-pris 300 gir 7,5x)."
     )
 
 
@@ -404,7 +553,9 @@ def recommend(
 
     vivino = _les_vivino(vivino_csv)
     regler = user_fit.load_profile_rules()
-    kandidater = _sorter([_kandidat(r, vivino, regler) for r in rader], sorter, synkende)
+    kandidater = [_kandidat(r, vivino, regler) for r in rader]
+    sone = _prissone(kandidater)
+    kandidater = _sorter(kandidater, sorter, synkende, bruk_kritiker=sone["last"])
     vist = kandidater[: max(0, antall)]
 
     if value and vist:
@@ -413,10 +564,9 @@ def recommend(
     sok = {
         "treff_totalt": len(kandidater),
         "viser": len(vist),
-        "sortering": (
-            f"kritiker-score desc (21/11956 dekning), "
-            f"{sorter} {'desc' if synkende else 'asc'} som tie-break"
-        ),
+        "sortering": _sortering_tekst(kandidater, sone, sorter, synkende),
+        "prissone_last": sone["last"],
+        "prissone": sone,
         "mangler_i_snapshot": mangler,
         "ikke_kjopbar": ikke_kjopbar,
         "snapshot_alder_dager": polet_store.catalog_age_days(),

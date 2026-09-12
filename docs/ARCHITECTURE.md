@@ -999,6 +999,32 @@ Den andre inngangen må følge med: `eval_fit._csv_row_to_wine` oversetter `land
 
 > **Generelt: et vern som melder feil årsak er verre enn ingen vern.** Begge feilene pekte utover — mot nettstedet — mens årsaken lå i mine egne terskler, og begge kastet timevis av arbeid på veien.
 
+> **Amendment 2026-09-12 — forbeholdet har nå et kallsted som håndhever det.**
+> Prissone-låsen var en forutsetning på papiret i to måneder. `tools/recommend._prissone()` er det
+> første stedet som faktisk nekter: Aperitif-poeng blir sorteringsnøkkel bare når kandidatsettets
+> **rå** prisspenn (maks/min) er under **4,0x**. Terskelen ligger i et målt tomrom — 300-500 kr
+> 1,7x · 150-250 kr 1,7x · 1,5 l kartong 1,8x · 3 l kartong 2,3x er låst, mens 200 kr-tak 5,0x ·
+> 300 kr-tak 7,5x · hele rødvinskatalogen 1 371x er ulåst.
+>
+> **Et pristak er ikke en lås.** `--maks-pris 30000` gir 737x spenn og ville lagt en Musigny til
+> 21 750 kr på topp — nettopp det forbeholdet finnes for. Bare det målte spennet teller, og sonen
+> låses ved å feste begge ender (`--min-pris 150 --maks-pris 250` → 1,7x). Gulvet på 40 kr står
+> ellers igjen.
+>
+> **Rått spenn, ikke persentiler.** p5-p95 ble forsøkt først, «så én outlier ikke definerer sonen».
+> Det var feil vern: med n=6 kastet p95 nettopp outlieren, fem billige viner pluss én Musigny målte
+> 1,5x og **låste** — hvorpå Musigny gikk til topps. Persentilen skjulte raden som betyr noe.
+> Fanget av en test som falt, ikke ved gjennomlesing.
+>
+> **Låsen fjerner ikke prisbiasen, den binder konsekvensen i kroner.** Rho er fortsatt +0,52 inne i
+> 3-liters-sonen og topp 5 ligger i 86. prispersentil der. Forskjellen er 540-780 kr i stedet for
+> 21 750. Målt på hele populasjonen: Spearman(poeng, pris) = **+0,744** for 5 965 aktive rødviner
+> med poeng — samme mønster som +0,65 whisky og +0,80 DN-vin over.
+>
+> Effekt på det utsnittet som utløste arbeidet: 3 l kartong gikk fra **0 av 226** til **156 av 226**
+> med kvalitetssignal i rangeringen. Poenget ble hentet og vist i value-linja fra før — det var
+> rangeringen som ikke leste det.
+
 **Forbehold som er skrevet inn i selve snapshotet, ikke bare her:** Spearman(poeng, pris) er **+0,65** for whisky og **+0,80** for DN-vin. «Høyest score» ≈ «dyrest». Prissone-lås er en forutsetning for å bruke disse poengene til rangering, ikke en pynt. Rader uten varenummer i lista er utelatt — de kan ikke slås opp mot Polet.
 
 **Alternativer vurdert.** **Hente produktsidene for hver vin** — forkastet: ~14 000 kall for felter listeraden allerede har. **Skrive til `get_aperitif_score`s diskcache** — forkastet: titusener av småfiler, ikke committbart, og ingen lesbar diff.
