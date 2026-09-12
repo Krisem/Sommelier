@@ -2,22 +2,21 @@
 Tester for tools/recommend.py — syntetisk katalog, ingen nettverkskall.
 
 Alle tester patcher `polet_store.read_catalog` og `value_score.compute_value_score`.
+Ingen test treffer den ekte katalogen: CLI-laget kjøres via `recommend.main(argv)` i
+prosess, ikke som subprocess. De to første CLI-testene gjorde det sistnevnte og
+forutsatte ≥2 aktive 3-liters rødviner i snapshotet — en grønn port som målte
+datatilstand, ikke kode.
 `user_fit._catalog_index` er `lru_cache`-et og MÅ tømmes, ellers måler testen
 den ekte 14k-katalogen i stedet for fixturen.
 """
 
 import csv
 import json
-import subprocess
-import sys
 from pathlib import Path
 
 import pytest
 
 from tools import polet_store, recommend, user_fit
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-
 
 def _rad(code, navn, pris, volum=75, land=("italia", "Italia"), kategori=("rødvin", "Rødvin"),
          status="aktiv", klokker=None, distrikt=("italia_piemonte", "Piemonte")):
@@ -287,26 +286,27 @@ def test_sok_meta_viser_hva_som_ble_kappet(katalog, ingen_value):
     assert sok["snapshot_alder_dager"] == 11.0
 
 
-def test_cli_json_er_gyldig_json():
-    r = subprocess.run(
-        [sys.executable, "-m", "tools.recommend", "--kategori", "rødvin",
-         "--volum-min", "2.9", "--volum-maks", "3.1", "--antall", "2",
-         "--ingen-value", "--json"],
-        cwd=REPO_ROOT, capture_output=True, text=True,
-    )
-    assert r.returncode == 0, r.stderr
-    rader = json.loads(r.stdout)
+def test_cli_json_er_gyldig_json(katalog, ingen_value, capsys):
+    """CLI-laget mot fixturen, ikke mot snapshotet — se kommentaren under."""
+    kode = recommend.main(["--kategori", "rødvin", "--volum-min", "2.9",
+                           "--volum-maks", "3.1", "--antall", "2",
+                           "--ingen-value", "--json"])
+    assert kode == 0
+    rader = json.loads(capsys.readouterr().out)
     assert len(rader) == 2
     assert all(r_["volum_liter"] == 3.0 for r_ in rader)
 
 
-def test_cli_0_treff_gir_exit_1_og_forklaring():
-    r = subprocess.run(
-        [sys.executable, "-m", "tools.recommend", "--varenr", "99999999", "--ingen-value"],
-        cwd=REPO_ROOT, capture_output=True, text=True,
-    )
-    assert r.returncode == 1
-    assert "0 treff" in r.stderr and "polet_refresh" in r.stderr
+def test_cli_0_treff_gir_exit_1_og_forklaring(katalog, ingen_value, capsys):
+    kode = recommend.main(["--varenr", "99999999", "--ingen-value"])
+    assert kode == 1
+    assert "0 treff" in capsys.readouterr().err
+
+
+def test_cli_0_treff_peker_paa_refresh_naar_varenr_mangler(katalog, ingen_value, capsys):
+    """Årsaken skal navngis, ikke bare antallet. `--varenr` som mangler → refresh."""
+    recommend.main(["--varenr", "99999999", "--ingen-value"])
+    assert "polet_refresh" in capsys.readouterr().err
 
 
 # ─── SORTERINGS-RETNING ──────────────────────────────────────────────

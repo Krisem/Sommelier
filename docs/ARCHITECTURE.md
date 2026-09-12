@@ -447,6 +447,28 @@ Hver ADR har: **Status** (Accepted / Superseded / Deprecated), **Kontekst**, **B
 - Tier-first-rangering tillates **kun** når brukeren eksplisitt signaliserer det: "noe jeg garantert vil like", "trygge valg", "ingen risk", "filtrér bort risky" — disse aktiverer en sekundær view
 - Eksplisitt no-go-flagg får aldri skjule en vin fra default-output, men må vises tydelig (`⚠ no_go: matcher no-go-listen`)
 
+> **Amendment 2026-09-12 — implementeringslinja bar ikke. Prinsippet står uendret.**
+> `sorted(wines, key=lambda w: -w.critic_score)` forutsetter at kritiker-score finnes. Målt mot
+> katalogen 2026-09-12, **før** dekningssveipen samme dag: **21 av 11 956 aktive rødviner** har en
+> rad i `knowledge/scores/`, og **0 av 284** på 3 liter. På et bredt katalogsøk ga default-nøkkelen
+> dermed ingen reell orden for 99,8 % av radene — utfallet ble avgjort av en tie-break ADR-en ikke
+> navnga. Tallet bærer dato fordi både teller og nevner flytter seg (samme fallgruve som
+> amendmentet til ADR-015).
+>
+> Default er derfor en **navngitt fallback-kjede**, ikke ett felt:
+> 1. kritiker-score der den finnes
+> 2. value-percentil (`value_score`s peer-persentil) der den finnes
+> 3. valgt objektivt tallfelt — literpris eller pris — som siste ledd
+>
+> `tools/recommend` skriver nøkkelen og dekningen i output-headeren (`sortert: kritiker-score desc
+> (21/11956 dekning), literpris desc som tie-break`) og har alltid `treff_totalt` med, så
+> ingenting kappes i stillhet. Ingen vekting, ingen penalty: leddene er objektive tall som allerede
+> ligger på raden, og rekkefølgen mellom dem er navngitt i outputen framfor implisitt i koden.
+>
+> Prinsippet er uberørt: tier er merke, aldri filter. Det som endres er hva «objektiv kvalitet»
+> faller tilbake på når kritikerne ikke har uttalt seg. Dekningen utvides parallelt — se
+> `tasks/maaling_2026-09-12_dekning.md` for før/etter.
+
 **Konsekvenser.**
 - ✅ Brukeren ser hele kataloget med tier-veiledning, beholder agency
 - ✅ Naturlig utforsknings-vektor — høy-score-blindspot-viner forblir synlige
