@@ -449,8 +449,10 @@ Hver ADR har: **Status** (Accepted / Superseded / Deprecated), **Kontekst**, **B
 
 > **Amendment 2026-09-12 — implementeringslinja bar ikke. Prinsippet står uendret.**
 > `sorted(wines, key=lambda w: -w.critic_score)` forutsetter at kritiker-score finnes. Målt mot
-> katalogen 2026-09-12, **før** dekningssveipen samme dag: **21 av 11 956 aktive rødviner** har en
-> rad i `knowledge/scores/`, og **0 av 284** på 3 liter. På et bredt katalogsøk ga default-nøkkelen
+> katalogen 2026-09-12: **21 av 11 580 aktive rødviner** har en rad i `knowledge/scores/`, og
+> **0 av 269** på 3 liter — 0 av 211 på 3 l kartong. (Tallene 11 956 og 284 har vært i omløp for
+> samme populasjon; de legger 376 respektive 15 `kommer_snart` til de aktive, og per ADR-030 er de
+> ikke kjøpbare. Ordet «aktive» om 11 956 var feil.) På et bredt katalogsøk ga default-nøkkelen
 > dermed ingen reell orden for 99,8 % av radene — utfallet ble avgjort av en tie-break ADR-en ikke
 > navnga. Tallet bærer dato fordi både teller og nevner flytter seg (samme fallgruve som
 > amendmentet til ADR-015).
@@ -466,8 +468,20 @@ Hver ADR har: **Status** (Accepted / Superseded / Deprecated), **Kontekst**, **B
 > ligger på raden, og rekkefølgen mellom dem er navngitt i outputen framfor implisitt i koden.
 >
 > Prinsippet er uberørt: tier er merke, aldri filter. Det som endres er hva «objektiv kvalitet»
-> faller tilbake på når kritikerne ikke har uttalt seg. Dekningen utvides parallelt — se
-> `tasks/maaling_2026-09-12_dekning.md` for før/etter.
+> faller tilbake på når kritikerne ikke har uttalt seg.
+>
+> **Dekningen manglet ikke data — den manglet en ledning.** `aperitif.snapshot_score()` er offline,
+> matchet på varenummer, og dekker **5 965 av 11 580** aktive rødviner (51,5 %) og **156 av 211**
+> på 3 l kartong. `_kritiker()` leste bare `knowledge/scores/`, som er seks DN-artikler lagt inn
+> for hånd og ikke har noen maskinell kilde til nummer sju. Poenget ble hentet, vist i value-linja
+> og forkastet i samme kjøring — rangeringen leste det ikke. Ingen sveip ble kjørt; det var ikke
+> det som manglet. Se `tasks/maaling_2026-09-12_dekning.md`.
+>
+> **Bruken er betinget av prissone-lås, per ADR-030.** Målt på alle 5 965 aktive rødviner med
+> poeng: Spearman(poeng, pris) = **+0,744**, og topp 20 ligger i 91. prispersentil — rå
+> poengrangering på et bredt søk setter en Musigny til 21 750 kr på topp. Det er samme mønster som
+> alt står registrert (+0,65 whisky, +0,80 DN-vin), så poeng er primærnøkkel **bare innenfor en
+> låst prissone**; ellers navngir headeren hvorfor nøkkelen ikke ble brukt.
 
 **Konsekvenser.**
 - ✅ Brukeren ser hele kataloget med tier-veiledning, beholder agency

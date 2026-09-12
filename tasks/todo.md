@@ -26,11 +26,21 @@ Verifisert av hovedtråden mot begge agentenes ferdigskrevne filer, ikke mot der
 
 ### Åpen beslutning til Kristoffer — ADR-016s default-rangering
 
-`docs/ARCHITECTURE.md` ADR-016 foreskriver `sorted(wines, key=lambda w: -w.critic_score)` som
-default. **Målt: 21 av 11 956 aktive rødviner har kritiker-score. 0 av 284 på 3 liter.**
-Prinsippet (tier er merke, ikke filter) står — det er implementeringslinja som ikke bærer.
-`recommend` navngir sorteringsnøkkelen i outputen og viser dekningen i stedet for å late som.
-Se alternativene i sesjonssvaret.
+**Avgjort 2026-09-12: b (fallback-kjede) + c (utvid dekningen).** ADR-016 amendert.
+
+Målt: **21 av 11 580 aktive rødviner** har kritiker-score, **0 av 269** på 3 liter.
+(11 956/284 teller 376+15 `kommer_snart` med — ordet «aktive» var feil, rettet i ADR-016,
+`maaling_2026-08-31.md` og her.)
+
+**c ga et annet svar enn bestilt, og et bedre:** dekningen manglet ikke data, den manglet en
+ledning. `aperitif.snapshot_score()` er offline og dekker **5 965 av 11 580** (51,5 %) og
+**156 av 211** på 3 l kartong. Ingen sveip kjørt — `refresh_aperitif.py` sveiper listesider til
+`data/aperitif/` og var alt kjørt 31.08, og `knowledge/scores/` er seks håndlagte DN-artikler
+uten maskinell kilde til nummer sju.
+
+**Bruken er betinget:** Spearman(poeng, pris) = **+0,744** på alle 5 965 med poeng, topp 20 i
+91. prispersentil. `ARCHITECTURE.md:988` hadde alt vedtatt kravet — prissone-lås er en
+forutsetning for å rangere på disse poengene. Poeng er primærnøkkel bare i låst sone.
 
 **Forkastede spak, med tallet:** trimme dokumentene (kontekst var cachet — 0 gevinst);
 raskere kommandoer (verktøytid var 16 % — feil flaskehals); kutte steg i prosedyren
