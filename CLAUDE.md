@@ -154,6 +154,18 @@ Følg denne rekkefølgen:
    - Kjør: `python3 -m tools.value_score "<navn>" <årgang>`. Bruk verdict + summary i svaret. Flag når Vivino name-match er "partial"/"weak" eller Aperitif `vintage_mismatch=True` — sier "Aperitif vurderte 2022-årgangen, men score er en proxy".
    - Hvis Aperitif har "godt kjøp"-flagg: vekt det høyere enn Vivino. Aperitif er faglig vurdering; Vivino er crowd.
    - **Value er alders-merket** (verdict bærer `snapshot_age_days`/`snapshot_generated_at`). Når snapshotet er gammelt (>14 d), si det i anbefalingen — pris/lager kan ha endret seg, be brukeren verifisere på polet.no. `peer_status=refresh_required` betyr vinen mangler i snapshot: formidl at en refresh trengs.
+6a. **Én kommando i stedet for stegene 1, 3, 5, 6 og 6b:**
+   `python3 -m tools.recommend --kategori rødvin --volum-min 2.9 --volum-maks 3.1 --emballasje kartong --antall 5 [--synkende] [--json]`
+   Kjeder katalogfilter → user_fit → value_score (kun topp-N) → Vivino-historikk og returnerer
+   klokker, tier, value-verdict, literpris og familiaritets-flagg på én rad per kandidat.
+   Bygget fordi 21 av 27 verktøykall på et vinspørsmål 11.09 var håndskrevne snutter mot nettopp
+   disse fem kildene. Bruk den som inngang; fall tilbake på enkeltstegene når du trenger noe den
+   ikke returnerer.
+   - **Emballasje ligger i varenummerets to siste siffer, ikke i et felt.** `…06` = kartong,
+     `…05`/`…07` = storformatflaske, `…01` = 75 cl. Volum står i **centiliter** (3 l = 300).
+     Uten `--emballasje` gir «3 liter» også dobbeltmagnum i glass — målt: 241 kartonger og
+     72 storformatflasker deler volumet 300.
+
 6b. **User-fit-sjekk (rask, alltid lov å gjøre):**
    - For batch-spørringer (topp-N fra slipp, sammenligning av flere kandidater) — kjør `python3 -m tools.user_fit <varenr> [<varenr> ...]`, eller `from tools.user_fit import classify_code, classify_codes`. Klassifiserer katalograden direkte, full dekning.
    - **Ikke** slå opp `data/user_fit/v0.json` per varenummer. Fila dekker bare viner med kritiker-score — 409 av 27 402 varenumre (1,5 %) — så et oppslag der bommer i 98,5 % av tilfellene. Den er et evaluerings-artefakt, ikke en oppslagstabell.

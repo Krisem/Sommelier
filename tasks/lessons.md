@@ -446,3 +446,28 @@ gjelder like fullt: en mutasjon som ikke fjerner *alle* forekomster av påstande
 - **Ordgrensen ble stående likevel** — `(?!\d)` er riktig uansett, fordi `n=7` *er* en delstreng av
   `n=70`. Rett fiks, feil begrunnelse: den beskyttet mot en ekte feilklasse (samme som
   «Jura»→«Jurançon», ADR-032), bare ikke mot den jeg trodde jeg hadde observert.
+
+## 2026-09-12 – Briefen instruerte mot feil feil, og agenten måtte rette meg
+**Hva skjedde:** Jeg ba en agent gjøre måleskriptene mine committerbare, og skrev i briefen at
+`split.py` «dobbelttalte» gap-intervaller. Agenten målte: overlappende sekunder = 0. Intervallene
+var disjunkte. Den virkelige feilen var at gap-ene ikke ble klippet mot vindusgrensene — 217 av
+494 s lå helt utenfor vinduet, hovedsakelig 122 s før vinduet åpnet og 102 s ren sidespor-tid.
+I samme økt ba jeg en annen agent la `--volum-min/--volum-maks` treffe 3-liters kartong. Volum
+alene skiller ikke kartong fra dobbeltmagnum; første kjøring ga en Haut-Brion til 29 412 kr.
+**Hvorfor det var feil:** En presis instruksjon rettet mot nest-vanligste feil stjeler oppmerksomhet
+fra den vanligste. Begge briefene var konkrete og etterprøvbare — og begge pekte feil vei. En agent
+som følger en gal instruksjon lojalt er dyrere enn en som ikke svarer.
+**Hva jeg gjør annerledes nå:** Diagnosen i en brief skal merkes som hypotese når den ikke er målt
+(«jeg tror X — mål det først»), ikke leveres som premiss. Og rettelsen logges der neste person ser
+den, med både instruksjonen og tilbaketrekkingen.
+
+## 2026-09-12 – Et tall som ser validert ut kan være to feil som nullet hverandre ut
+**Hva skjedde:** `split.py` rapporterte 338 s modelltid på svarsporet. Det er nøyaktig riktig
+(394 − 56). Men tallet kom fra en sum av uklippede gap som også inkluderte 217 s utenfor vinduet —
+og som summerte til 495 s i et vindu på 394 s. Jeg så uoverensstemmelsen, forkastet gap-målingen og
+rapporterte 338 fra en annen, korrekt linje. Riktig handling, men jeg forsto ikke hvorfor før
+agenten målte det.
+**Hvorfor det var farlig:** Et tall som stemmer med fasiten leses som bekreftelse på metoden. Her
+var metoden gal og svaret riktig, som er den vanskeligste kombinasjonen å oppdage.
+**Hva jeg gjør annerledes nå:** Når to beregningsveier mot samme tall spriker, er ikke jobben å
+velge den som ser riktig ut — det er å finne ut hvorfor de spriker. Sprik er funnet, ikke støy.

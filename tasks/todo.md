@@ -12,10 +12,25 @@ samme fem kildene: `polet_store`, `user_fit`, `value_score`, `aperitif`, `full_w
 **Vedtak (alternativ b, 2026-09-12):** sekvensering + én pipeline-inngang.
 
 - [x] **Sekvenseringsregel** i `CLAUDE.md` § «Rekkefølge: svaret først, defekter og dokumentasjon etter»
-- [ ] **`tools/recommend.py`** — kjeder katalogfilter → user_fit → value_score (topp-N) → Vivino-historikk
-- [ ] **`tools/session_timing.py`** — måleinstrumentet, fra engangsskript til committert verktøy
-- [ ] CLAUDE.md steg 6b peker på `recommend` når CLI-en er verifisert
-- [ ] `tasks/lessons.md` — lærdommen, etter at portene er grønne
+- [x] **`tools/recommend.py`** (516 l) + 35 tester — kjeder katalogfilter → user_fit → value_score (topp-N) → Vivino-historikk
+- [x] **`tools/session_timing.py`** (254 l) + 16 tester — måleinstrumentet, committet i `5c70116`
+- [x] CLAUDE.md steg 6a peker på `recommend`, med emballasjekoden dokumentert
+- [x] `tasks/lessons.md` — to lærdommer, begge om mine egne briefer
+
+**Port:** `python3 -m pytest -q; echo $?` → `563 passed`, `EXIT=0` (baseline før bølgen: 516).
+Verifisert av hovedtråden mot begge agentenes ferdigskrevne filer, ikke mot deres rapporter.
+
+**Målt effekt på gårsdagens spørsmål:** ett kall, `EXIT=0`, 0,45 s med varm value-cache /
+5,9 s med live oppslag — mot 27 kall og 394 s på svarsporet i går. At et ferdig svar krever
+1–2 kall og ikke 27 er `ANTATT` fram til neste ekte vinspørsmål måles.
+
+### Åpen beslutning til Kristoffer — ADR-016s default-rangering
+
+`docs/ARCHITECTURE.md` ADR-016 foreskriver `sorted(wines, key=lambda w: -w.critic_score)` som
+default. **Målt: 21 av 11 956 aktive rødviner har kritiker-score. 0 av 284 på 3 liter.**
+Prinsippet (tier er merke, ikke filter) står — det er implementeringslinja som ikke bærer.
+`recommend` navngir sorteringsnøkkelen i outputen og viser dekningen i stedet for å late som.
+Se alternativene i sesjonssvaret.
 
 **Forkastede spak, med tallet:** trimme dokumentene (kontekst var cachet — 0 gevinst);
 raskere kommandoer (verktøytid var 16 % — feil flaskehals); kutte steg i prosedyren
