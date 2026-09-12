@@ -1,6 +1,6 @@
 # Todo
 
-## PÅGÅR 2026-09-12 — svartid på vinspørsmål
+## LEVERT 2026-09-12 — svartid på vinspørsmål
 
 **Utgangspunkt:** Kristoffer spurte hvorfor «kraftigere rødvin 3 l» tok ~15 min i går.
 
@@ -41,6 +41,22 @@ uten maskinell kilde til nummer sju.
 **Bruken er betinget:** Spearman(poeng, pris) = **+0,744** på alle 5 965 med poeng, topp 20 i
 91. prispersentil. `ARCHITECTURE.md:988` hadde alt vedtatt kravet — prissone-lås er en
 forutsetning for å rangere på disse poengene. Poeng er primærnøkkel bare i låst sone.
+
+**Gjennomført.** `recommend._prissone()` er det første kallstedet som håndhever ADR-030s
+prissone-forbehold: poeng er nøkkel bare når rått prisspenn (maks/min) er under **4,0x**.
+Terskelen ligger i et målt tomrom — 1,7 / 1,7 / 1,8 / 2,3x låser, 5,0 / 7,5 / 12,5 / 737 / 1371x
+låser ikke. **Et pristak er ikke en lås:** `--maks-pris 30000` gir 737x. Sonen låses ved å feste
+begge ender. Låsen fjerner ikke prisbiasen (rho er +0,52 inne i sonen) — den binder konsekvensen
+i kroner: 540-780 kr i stedet for 21 750.
+
+**Bevegelsen, målt:** 3 l kartong 0 av 226 → **156 av 226** rader med kvalitetssignal i
+rangeringen. Bredt søk uendret — med vilje; låsen legger ingen orden der den ikke kan forsvares.
+Port: `574 passed`, `EXIT=0` (516 ved øktstart). Fem mutasjoner, alle fanget.
+
+**Commits:** `5c70116` · `eb5cb8c` · `decf1c1` · `2c0a49d` · `65748aa`. Alt pushet.
+
+**Uferdig:** ingenting i dette oppdraget. `--maks-pris` alene låser ikke sonen — det er en
+dokumentert konsekvens, ikke en åpen post, og headeren sier det til brukeren.
 
 **Forkastede spak, med tallet:** trimme dokumentene (kontekst var cachet — 0 gevinst);
 raskere kommandoer (verktøytid var 16 % — feil flaskehals); kutte steg i prosedyren

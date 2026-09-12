@@ -471,3 +471,28 @@ agenten målte det.
 var metoden gal og svaret riktig, som er den vanskeligste kombinasjonen å oppdage.
 **Hva jeg gjør annerledes nå:** Når to beregningsveier mot samme tall spriker, er ikke jobben å
 velge den som ser riktig ut — det er å finne ut hvorfor de spriker. Sprik er funnet, ikke støy.
+
+## 2026-09-12 – En test kan bestå nettopp den mutasjonen den er oppkalt etter
+**Hva skjedde:** `test_dekningen_er_ikke_hardkodet` og presedens-testen for «kuratert > Aperitif»
+bestod begge sin egen mutasjon. Den første kjørte på en fixture med fire aktive rader, som gir
+ulåst prissone, og traff dermed en header-gren som aldri bar det hardkodede tallet. Den andre
+bestod en `max(begge kilder)`-implementasjon fordi Aperitif-poenget i fixturen var satt *lavere*
+enn det kuraterte — da gir max() og presedens samme svar.
+**Hvorfor det var farlig:** Begge testene var grønne, navngitt etter kravet de skulle vokte, og
+voktet ingenting. Et testnavn er en påstand om dekning på linje med et tall.
+**Hva jeg gjør annerledes nå:** Mutér kravet bort og krev at testen som *bærer navnet* faller.
+Faller en annen test i stedet, er navnet feilplassert. Og sjekk at fixturen treffer den grenen
+testen påstår å måle — en fixture som havner i feil gren gjør testen til en tautologi.
+
+## 2026-09-12 – Tre briefer, tre gale premisser, og målingen reddet alle tre
+**Hva skjedde:** I én økt ga jeg tre agent-instruksjoner som ikke bar: (1) «`split.py` dobbelttalte»
+— den klippet ikke mot vindusgrenser; (2) «la `--volum-min/--volum-maks` treffe 3-liters kartong»
+— volum skiller ikke kartong fra dobbeltmagnum, emballasjen ligger i varenummerets to siste siffer;
+(3) «lås = `--maks-pris` satt, eller smalt prisspenn» — et pristak er ingen lås, `--maks-pris 30000`
+gir 737x spenn. Alle tre ble målt fram av agenten og rettet.
+**Hvorfor det gjentok seg:** Jeg leverte diagnosen som premiss, ikke som hypotese. En konkret,
+etterprøvbar instruksjon føles som presisjon, men presisjon rettet mot feil feil er dyrere enn en
+åpen formulering — agenten bruker budsjett på å bekrefte min gjetning før den finner sin egen.
+**Hva jeg gjør annerledes nå:** Skriv diagnosen i briefen som «jeg tror X — mål det først, og si
+fra hvis det ikke bærer», og gi agenten eksplisitt mandat til å avvike når målingen sier noe annet.
+Alle tre avvikene her kom fordi briefen ba om måling; ingen av dem kom fordi jeg hadde rett.
