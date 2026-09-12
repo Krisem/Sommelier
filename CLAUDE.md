@@ -173,6 +173,25 @@ Følg denne rekkefølgen:
    - `[USA]` – amerikansk produkt. Brukeren ønsker å unngå disse, men vil bli eksponert med tydelig flagg, ikke filtreres bort. Samme no-filter-bubble-prinsipp som tier (ADR-016).
 9. **Forklar grundig** – brukeren vil ha researchdybde. Inkluder drue(r), region, produsent (kort), årgangskommentar når relevant, klokke-profil hvis hentet, hvorfor det passer akkurat denne situasjonen.
 
+## Rekkefølge: svaret først, defekter og dokumentasjon etter
+
+Målt 2026-09-11 (økt `56a9b9c3`, «litt kraftigere rødvin 3 l»): spørsmål 22:04:54, svar 22:17:47 —
+**12 min 53 s** og 48 verktøykall. Selve svarsporet var 394 s av dem. Resten gikk til en defekt
+funnet underveis (`tasted_date` var boilerplate fra i18n-tabellen) og til dokumentoppdatering.
+Begge deler **skal** gjøres — § «Feedback-løkken» under krever det — men de kjørte *før* svaret.
+
+Rekkefølgen er derfor:
+
+1. **Lever anbefalingen.** Når stegene 0–9 over har det de trenger, skriv svaret. Ikke utsett det
+   for å rydde noe du fant på veien.
+2. **Så defekten.** En feil funnet underveis rettes i samme økt, ikke noteres — men etter at
+   brukeren har svaret sitt. Unntaket: gjør defekten selve anbefalingen feil, sier du det *i*
+   svaret og retter først.
+3. **Så dokumentasjonen** (`tasks/lessons.md`, `knowledge/smaksprofil.md`, `tasks/todo.md`).
+
+At svaret kunne vært skrevet ved 394 s er `ANTATT` — de to sporene var flettet, ikke sekvensielle.
+Det målte er fordelingen: 49 % av veggklokka lå på arbeid som ikke var anbefalingen.
+
 ## Feedback-løkken – kritisk for at systemet skal lære
 
 Smaksprofilen og lessons er **levende dokumenter**. Oppdater dem aktivt:

@@ -1,5 +1,27 @@
 # Todo
 
+## PÅGÅR 2026-09-12 — svartid på vinspørsmål
+
+**Utgangspunkt:** Kristoffer spurte hvorfor «kraftigere rødvin 3 l» tok ~15 min i går.
+
+**Målt** på transkriptet (økt `56a9b9c3`, `--fra 22:04:54`): 12 min 53 s, 48 verktøykall.
+Verktøykjøring 120 s (16 %), modelltid 653 s (84 %). Kontekst var cachet (`cache_read=68265`,
+`cache_write=980`) — dokumentstørrelse kostet ingenting. **21 av 27 kall på svarsporet** traff de
+samme fem kildene: `polet_store`, `user_fit`, `value_score`, `aperitif`, `full_wine_list.csv`.
+
+**Vedtak (alternativ b, 2026-09-12):** sekvensering + én pipeline-inngang.
+
+- [x] **Sekvenseringsregel** i `CLAUDE.md` § «Rekkefølge: svaret først, defekter og dokumentasjon etter»
+- [ ] **`tools/recommend.py`** — kjeder katalogfilter → user_fit → value_score (topp-N) → Vivino-historikk
+- [ ] **`tools/session_timing.py`** — måleinstrumentet, fra engangsskript til committert verktøy
+- [ ] CLAUDE.md steg 6b peker på `recommend` når CLI-en er verifisert
+- [ ] `tasks/lessons.md` — lærdommen, etter at portene er grønne
+
+**Forkastede spak, med tallet:** trimme dokumentene (kontekst var cachet — 0 gevinst);
+raskere kommandoer (verktøytid var 16 % — feil flaskehals); kutte steg i prosedyren
+(steg 6b bærer ADR-016, endrer *hva* systemet svarer, ikke bare hvor fort).
+
+
 ## LEVERT 2026-09-01 — whisky-univers + Meta-Critic
 
 Plan: `~/.claude/plans/jazzy-stargazing-spark.md`. **509 tester grønne** (481 før).
