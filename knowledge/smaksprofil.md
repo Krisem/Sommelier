@@ -318,7 +318,8 @@ Samme drue (Barbera 100 %), samme klokker, samme stilmerkelapp – motsatt dom. 
 2. **Les `metode`- og `stil`-feltet i details** – fatlagring, appassimento, ripasso, lang gjæring er signalene.
 3. **Bruk appellasjonsnivå som proxy:** Superiore/Riserva/DOCG over generisk regional DOC.
 4. **Literpris er en reell indikator i lavprisenden**, særlig på 3 l der nesten alt ligger 145–200 kr/L.
-5. **Ikke kjemp mot druen.** Barbera er konstitusjonelt syrerik og lett-til-middels i kropp – det er stilen. Vil han ha kropp, bytt drue/stil, ikke bare produsent: appassimento, ripasso, Primitivo, Nero d'Avola, Aglianico, Montepulciano. Det stemmer med profilen hans allerede (Ripasso 4.5, Amarone 4.2 × 2, «struktur og modenhet»).
+5. **Kritiker-score før kropps-proxyer (2026-10-09).** Fylde, alkohol og restsukker er samme mål i ulike klær. Amicale hadde alle tre og ble «platt» (2,5). Bytt stilfamilie, men velg innen den på score.
+6. **Ikke kjemp mot druen.** Barbera er konstitusjonelt syrerik og lett-til-middels i kropp – det er stilen. Vil han ha kropp, bytt drue/stil, ikke bare produsent: appassimento, ripasso, Primitivo, Nero d'Avola, Aglianico, Montepulciano. Det stemmer med profilen hans allerede (Ripasso 4.5, Amarone 4.2 × 2, «struktur og modenhet»).
 
 **Forbehold:** n=1. Per vektingsprinsippene er dette en **hypotese**, ikke et bekreftet mønster – og det motsier ikke at han elsker Barbera (topp-rødvinen hans *er* en Barbera). Signalet gjelder format og kvalitetsnivå, ikke druen. Bekreftes eller avkreftes ved neste kartong.
 
@@ -572,7 +573,7 @@ Avklares per spørsmål – det er en del av samtaleflyten. Når brukeren spør 
 - Miraval Provence Rosé 2014 (2.0) – men ny årgang kan være annerledes
 - Schloss Vollrads Riesling Kabinett Trocken 2014 (2.7)
 - Francisco Gomez Eco Rojo 2014 (2.5)
-- Cantine di Ora Amicale Veneto Rosso 2021, 3 l (5472406) (2.5, diktert 2026-10-09: «kjedelig, platt»)
+- Amicale Veneto Rosso 2021 (Cantine di Ora, 2.5, 3 l, varenr 5472406, diktert 2026-10-09: «kjedelig, platt»)
 
 ## Notater til Claude
 

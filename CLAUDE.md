@@ -105,8 +105,11 @@ De tre som snevrer søket mest, i prioritert rekkefølge:
 1. **Til mat eller solo?** Hans egen bekreftede akse (se «Kontekst-avhengig syrepreferanse» i
    `smaksprofil.md`): mer syre til mat, rundere og mer fruktdrevet solo.
 2. **Lett eller kraftig?** Aksen som bommet. **NB:** «kraftig» oversettes *ikke* til høy Fylde –
-   se «Kraftigere kan IKKE søkes på Fylde-klokka». Oversett til fatlagring/appassimento/ripasso,
-   appellasjonsnivå (Superiore/Riserva > generisk DOC) og literpris.
+   se «Kraftigere kan IKKE søkes på Fylde-klokka». For ham betyr det **karakter og intensitet**,
+   ikke kropp: Amicale (Fylde 9–10, 14 %, 11,9 g/l, Aperitif 74) fikk 2,5 – «platt» ([lessons
+   2026-10-09](tasks/lessons.md)). Ranger på kritiker-score først; bruk deretter fatlagring,
+   appellasjonsnivå (Superiore/Riserva > generisk DOC) og literpris. Fylde, alkohol og sødme
+   skiller bare mellom kandidater som allerede har god score – under ~80 blir ingen hovedforslag.
 3. **Hverdag eller anledning?** Setter prissonen (se Pris-soner).
 
 Et fjerde, kun når det er relevant og ikke oppgitt: **flaske eller kartong?** Snapshotet har 313
