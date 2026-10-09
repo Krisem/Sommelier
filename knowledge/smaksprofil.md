@@ -334,6 +334,16 @@ ståltank, syre 5,0 mot 6,1 g/l, 3,8 g/l restsukker. Rundere, men fortsatt gener
 DOC på 160 kr/L – middels kropp per konstruksjon. Dommen hans på den er verdt å skrive inn når den
 faller: den skiller «for lett = format/kvalitetsnivå» fra «for lett = druen».
 
+**Tredje datapunkt (2026-10-09): Amicale Veneto Rosso 2021, 3 l (5472406) — 2,5, «kjedelig, platt,
+ikke noe spennende smak».** Anbefalt som «mest kraft på Røa» ut fra Fylde 9–10, 14 % alkohol og
+11,9 g/l restsukker (rosin, tørket frukt, vanilje). Aperitif hadde den på **74 – dyrt for
+kvaliteten**. At det var Amicale han drakk, ikke en av de to andre forslagene, er `ANTATT` (den var
+hovedvalget for solo). Det viktige er hva klagen *er*: ikke «for lett» som Vespa, men **flat og uten
+karakter**. Så «kraftig» betyr for ham **intensitet og karakter i smaken**, ikke myk, søtlig fylde.
+Kropp laget av restsukker og alkohol er ikke kraft. Hypotese (n=1 på denne aksen): på 3 l er
+kritiker-score et bedre signal for det han vil ha enn Fylde, alkohol og sødme. Lav score (< 80) var
+advarselen, og den ble overstyrt.
+
 ### Rødvin (klart hovedkategorien – 67 viner, snitt 3.79)
 
 **Sterke mønstre i dataene:**
@@ -562,6 +572,7 @@ Avklares per spørsmål – det er en del av samtaleflyten. Når brukeren spør 
 - Miraval Provence Rosé 2014 (2.0) – men ny årgang kan være annerledes
 - Schloss Vollrads Riesling Kabinett Trocken 2014 (2.7)
 - Francisco Gomez Eco Rojo 2014 (2.5)
+- Cantine di Ora Amicale Veneto Rosso 2021, 3 l (5472406) (2.5, diktert 2026-10-09: «kjedelig, platt»)
 
 ## Notater til Claude
 

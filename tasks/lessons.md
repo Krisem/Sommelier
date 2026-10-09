@@ -496,3 +496,8 @@ etterprøvbar instruksjon føles som presisjon, men presisjon rettet mot feil fe
 **Hva jeg gjør annerledes nå:** Skriv diagnosen i briefen som «jeg tror X — mål det først, og si
 fra hvis det ikke bærer», og gi agenten eksplisitt mandat til å avvike når målingen sier noe annet.
 Alle tre avvikene her kom fordi briefen ba om måling; ingen av dem kom fordi jeg hadde rett.
+
+## 2026-10-09 – Overstyrte lav kritiker-score med kropps-proxyer, og fikk en flat vin
+**Hva skjedde:** Kristoffer ba om en «kraftig 3 l rødvin til kveldskos» på Røa. Jeg valgte Amicale Veneto Rosso 2021 (5472406) som hovedforslag for solo-drikking, fordi den hadde mest kropp på papiret: Fylde 9–10, 14 %, 11,9 g/l restsukker, rosin/fat. Han ga den 2,5: «kjedelig, platt, ikke noe spennende smak». Gura Saperavi (Aperitif 87) lå på listen som nummer to.
+**Hvorfor det var feil:** Etter Vespa-bommen hadde jeg lært at Fylde-klokka ikke måler kraft. Likevel byttet jeg bare til andre kropps-proxyer (alkohol, sødme, «tørket frukt»), som måler det samme. Aperitif 74 og «dyrt for kvaliteten» var det eneste signalet om *kvaliteten* på smaken, og jeg nevnte det som et forbehold i stedet for å la det avgjøre. Søtlig, glyserolrik kommersiell rødvin gir fylde uten intensitet, og det er nettopp «platt».
+**Hva jeg gjør annerledes nå:** Når han ber om «kraftig», oversetter jeg det til **karakter og intensitet**, ikke kropp. På 3 l rangerer jeg på kritiker-score først og bruker fylde, sødme og alkohol bare til å skille mellom kandidater med ok score. En kandidat under ~80 hos Aperitif blir ikke hovedforslag, uansett hvor fyldig den ser ut. Restsukker over ~8 g/l i en tørr rødvin er et varselflagg for «myk og flat», ikke et pluss.
